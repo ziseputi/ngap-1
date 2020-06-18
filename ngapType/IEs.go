@@ -442,6 +442,11 @@ type AssociatedQosFlowList struct {
 	List []AssociatedQosFlowItem `vht:"sizeMin:1,sizeMax:MaxnoofQosFlows"`
 }
 
+const (
+	QosFlowMappingIndicationUl Enumerated = 0
+	QosFlowMappingIndicationDl Enumerated = 1
+)
+
 type AssociatedQosFlowItem struct {
 	QosFlowIdentifier        QosFlowIdentifier
 	QosFlowMappingIndication *Enumerated `vht:"valueExt,valueMin:0,valueMax:2"`
@@ -1040,6 +1045,11 @@ type CNAssistedRANTuningExtIEsExtensionValue struct {
 type CNTypeRestrictionsForEquivalent struct {
 	List []CNTypeRestrictionsForEquivalentItem `vht:"sizeMin:1,sizeMax:MaxnoofEPLMNs"`
 }
+
+const (
+	CnTypeEpcForbidden    Enumerated = 0
+	CnTypeFiveGCForbidden Enumerated = 1
+)
 
 type CNTypeRestrictionsForEquivalentItem struct {
 	PlmnIdentity PLMNIdentity
@@ -3886,7 +3896,7 @@ type PDUSessionResourceModifyRequestTransfer struct {
 	ProtocolIEs ProtocolIEContainerPDUSessionResourceModifyRequestTransferIEs
 }
 
-type ProtocolIESingleContainerPDUSessionResourceModifyRequestTransferIEs struct {
+type ProtocolIEContainerPDUSessionResourceModifyRequestTransferIEs struct {
 	List []PDUSessionResourceModifyRequestTransferIEs `vht:"valueMin:0,valueMax:MaxProtocolIEs"`
 }
 
@@ -4522,7 +4532,7 @@ type PDUSessionResourceSetupRequestTransfer struct {
 	ProtocolIEs ProtocolIEContainerPDUSessionResourceSetupRequestTransferIEs
 }
 
-type ProtocolIESingleContainerPDUSessionResourceSetupRequestTransferIEs struct {
+type ProtocolIEContainerPDUSessionResourceSetupRequestTransferIEs struct {
 	List []PDUSessionResourceSetupRequestTransferIEs `vht:"valueMin:0,valueMax:MaxProtocolIEs"`
 }
 
@@ -4732,6 +4742,13 @@ const (
 type PDUSessionType struct {
 	Value Enumerated `vht:"valueMin:0,valueMax:4"`
 }
+
+const (
+	RATTypeNr              Enumerated = 0
+	RATTypeEutra           Enumerated = 1
+	RATTypeNrUnlicensed    Enumerated = 2
+	RATTypeEUtraUnlicensed Enumerated = 3
+)
 
 type PDUSessionUsageReport struct {
 	RATType                   Enumerated `vht:"valueExt,valueMin:0,valueMax:4"`
@@ -5608,6 +5625,11 @@ const (
 type RIMInformationTransferExtIEsExtensionValue struct {
 	Choice int
 }
+
+const (
+	RIMRSDetectionRsDetected    Enumerated = 0
+	RIMRSDetectionRsDisappeared Enumerated = 1
+)
 
 type RIMInformation struct {
 	TargetgNBSetID GNBSetID
@@ -7300,32 +7322,3 @@ const (
 type XnTNLConfigurationInfoExtIEsExtensionValue struct {
 	Choice int
 }
-
-const (
-	QosFlowMappingIndicationUl Enumerated = 0
-	QosFlowMappingIndicationDl Enumerated = 1
-)
-
-const (
-	CnTypeEpcForbidden    Enumerated = 0
-	CnTypeFiveGCForbidden Enumerated = 1
-)
-
-const (
-	RATTypeNr              Enumerated = 0
-	RATTypeEutra           Enumerated = 1
-	RATTypeNrUnlicensed    Enumerated = 2
-	RATTypeEUtraUnlicensed Enumerated = 3
-)
-
-const (
-	RATTypeNr              Enumerated = 0
-	RATTypeEutra           Enumerated = 1
-	RATTypeNrUnlicensed    Enumerated = 2
-	RATTypeEUtraUnlicensed Enumerated = 3
-)
-
-const (
-	RIMRSDetectionRsDetected    Enumerated = 0
-	RIMRSDetectionRsDisappeared Enumerated = 1
-)
