@@ -1,3 +1,5 @@
+// Created By HaoDHH-245789 VHT2020
+
 package ngapType
 
 type AdditionalDLUPTNLInformationForHOList struct {
@@ -22,11 +24,11 @@ type AdditionalDLUPTNLInformationForHOItemExtIEs struct {
 }
 
 const (
-	AdditionalDLUPTNLInformationForHOItemExtIEsExtensionValueChoiceNothing int = 0
+	AdditionalDLUPTNLInformationForHOItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type AdditionalDLUPTNLInformationForHOItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 const (
@@ -55,11 +57,11 @@ type AllocationAndRetentionPriorityExtIEs struct {
 }
 
 const (
-	AllocationAndRetentionPriorityExtIEsExtensionValueChoiceNothing int = 0
+	AllocationAndRetentionPriorityExtIEsExtensionValuePresentNothing int = 0
 )
 
 type AllocationAndRetentionPriorityExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type AllowedNSSAI struct {
@@ -82,11 +84,11 @@ type AllowedNSSAIItemExtIEs struct {
 }
 
 const (
-	AllowedNSSAIItemExtIEsExtensionValueChoiceNothing int = 0
+	AllowedNSSAIItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type AllowedNSSAIItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type AllowedTACs struct {
@@ -98,16 +100,16 @@ type AMFName struct {
 }
 
 const (
-	AMFPagingTargetChoiceGlobalRANNodeID  int = 0
-	AMFPagingTargetChoiceTAI              int = 1
-	AMFPagingTargetChoiceChoiceExtensions int = 2
+	AMFPagingTargetPresentGlobalRANNodeID  int = 0
+	AMFPagingTargetPresentTAI              int = 1
+	AMFPagingTargetPresentPresentExtensions int = 2
 )
 
 type AMFPagingTarget struct {
-	Choice           int
+	Present           int
 	GlobalRANNodeID  *GlobalRANNodeID
 	TAI              *TAI
-	ChoiceExtensions *ProtocolIESingleContainerAMFPagingTargetExtIEs
+	PresentExtensions *ProtocolIESingleContainerAMFPagingTargetExtIEs
 }
 
 type ProtocolIESingleContainerAMFPagingTargetExtIEs struct {
@@ -121,11 +123,11 @@ type AMFPagingTargetExtIEs struct {
 }
 
 const (
-	AMFPagingTargetExtIEsTypeValueChoiceNothing int = 0
+	AMFPagingTargetExtIEsTypeValuePresentNothing int = 0
 )
 
 type AMFPagingTargetExtIEsTypeValue struct {
-	Choice int
+	Present int
 }
 
 type AMFPointer struct {
@@ -160,11 +162,11 @@ type AMFTNLAssociationSetupItemExtIEs struct {
 }
 
 const (
-	AMFTNLAssociationSetupItemExtIEsExtensionValueChoiceNothing int = 0
+	AMFTNLAssociationSetupItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type AMFTNLAssociationSetupItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type AMFTNLAssociationToAddList struct {
@@ -189,11 +191,11 @@ type AMFTNLAssociationToAddItemExtIEs struct {
 }
 
 const (
-	AMFTNLAssociationToAddItemExtIEsExtensionValueChoiceNothing int = 0
+	AMFTNLAssociationToAddItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type AMFTNLAssociationToAddItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type AMFTNLAssociationToRemoveList struct {
@@ -216,11 +218,11 @@ type AMFTNLAssociationToRemoveItemExtIEs struct {
 }
 
 const (
-	AMFTNLAssociationToRemoveItemExtIEsExtensionValueChoiceTNLAssociationTransportLayerAddressNGRAN int = 0
+	AMFTNLAssociationToRemoveItemExtIEsExtensionValuePresentTNLAssociationTransportLayerAddressNGRAN int = 0
 )
 
 type AMFTNLAssociationToRemoveItemExtIEsExtensionValue struct {
-	Choice                                   int
+	Present                                   int
 	TNLAssociationTransportLayerAddressNGRAN *CPTransportLayerInformation `vht:"Presence:PresenceOptional,Criticality:CriticalityReject,ProtocolExtensionID:ProtocolExtensionIDTNLAssociationTransportLayerAddressNGRAN"`
 }
 
@@ -246,11 +248,11 @@ type AMFTNLAssociationToUpdateItemExtIEs struct {
 }
 
 const (
-	AMFTNLAssociationToUpdateItemExtIEsExtensionValueChoiceNothing int = 0
+	AMFTNLAssociationToUpdateItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type AMFTNLAssociationToUpdateItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type AMFUENGAPID struct {
@@ -275,11 +277,11 @@ type AreaOfInterestExtIEs struct {
 }
 
 const (
-	AreaOfInterestExtIEsExtensionValueChoiceNothing int = 0
+	AreaOfInterestExtIEsExtensionValuePresentNothing int = 0
 )
 
 type AreaOfInterestExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type AreaOfInterestCellList struct {
@@ -302,11 +304,11 @@ type AreaOfInterestCellItemExtIEs struct {
 }
 
 const (
-	AreaOfInterestCellItemExtIEsExtensionValueChoiceNothing int = 0
+	AreaOfInterestCellItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type AreaOfInterestCellItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type AreaOfInterestList struct {
@@ -330,11 +332,11 @@ type AreaOfInterestItemExtIEs struct {
 }
 
 const (
-	AreaOfInterestItemExtIEsExtensionValueChoiceNothing int = 0
+	AreaOfInterestItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type AreaOfInterestItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type AreaOfInterestRANNodeList struct {
@@ -357,11 +359,11 @@ type AreaOfInterestRANNodeItemExtIEs struct {
 }
 
 const (
-	AreaOfInterestRANNodeItemExtIEsExtensionValueChoiceNothing int = 0
+	AreaOfInterestRANNodeItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type AreaOfInterestRANNodeItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type AreaOfInterestTAIList struct {
@@ -384,11 +386,11 @@ type AreaOfInterestTAIItemExtIEs struct {
 }
 
 const (
-	AreaOfInterestTAIItemExtIEsExtensionValueChoiceNothing int = 0
+	AreaOfInterestTAIItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type AreaOfInterestTAIItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type AssistanceDataForPaging struct {
@@ -408,11 +410,11 @@ type AssistanceDataForPagingExtIEs struct {
 }
 
 const (
-	AssistanceDataForPagingExtIEsExtensionValueChoiceNothing int = 0
+	AssistanceDataForPagingExtIEsExtensionValuePresentNothing int = 0
 )
 
 type AssistanceDataForPagingExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type AssistanceDataForRecommendedCells struct {
@@ -431,11 +433,11 @@ type AssistanceDataForRecommendedCellsExtIEs struct {
 }
 
 const (
-	AssistanceDataForRecommendedCellsExtIEsExtensionValueChoiceNothing int = 0
+	AssistanceDataForRecommendedCellsExtIEsExtensionValuePresentNothing int = 0
 )
 
 type AssistanceDataForRecommendedCellsExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type AssociatedQosFlowList struct {
@@ -464,11 +466,11 @@ type AssociatedQosFlowItemExtIEs struct {
 }
 
 const (
-	AssociatedQosFlowItemExtIEsExtensionValueChoiceNothing int = 0
+	AssociatedQosFlowItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type AssociatedQosFlowItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type AveragingWindow struct {
@@ -480,24 +482,24 @@ type BitRate struct {
 }
 
 const (
-	BroadcastCancelledAreaListChoiceCellIDCancelledEUTRA          int = 0
-	BroadcastCancelledAreaListChoiceTAICancelledEUTRA             int = 1
-	BroadcastCancelledAreaListChoiceEmergencyAreaIDCancelledEUTRA int = 2
-	BroadcastCancelledAreaListChoiceCellIDCancelledNR             int = 3
-	BroadcastCancelledAreaListChoiceTAICancelledNR                int = 4
-	BroadcastCancelledAreaListChoiceEmergencyAreaIDCancelledNR    int = 5
-	BroadcastCancelledAreaListChoiceChoiceExtensions              int = 6
+	BroadcastCancelledAreaListPresentCellIDCancelledEUTRA          int = 0
+	BroadcastCancelledAreaListPresentTAICancelledEUTRA             int = 1
+	BroadcastCancelledAreaListPresentEmergencyAreaIDCancelledEUTRA int = 2
+	BroadcastCancelledAreaListPresentCellIDCancelledNR             int = 3
+	BroadcastCancelledAreaListPresentTAICancelledNR                int = 4
+	BroadcastCancelledAreaListPresentEmergencyAreaIDCancelledNR    int = 5
+	BroadcastCancelledAreaListPresentPresentExtensions              int = 6
 )
 
 type BroadcastCancelledAreaList struct {
-	Choice                        int
+	Present                        int
 	CellIDCancelledEUTRA          *CellIDCancelledEUTRA
 	TAICancelledEUTRA             *TAICancelledEUTRA
 	EmergencyAreaIDCancelledEUTRA *EmergencyAreaIDCancelledEUTRA
 	CellIDCancelledNR             *CellIDCancelledNR
 	TAICancelledNR                *TAICancelledNR
 	EmergencyAreaIDCancelledNR    *EmergencyAreaIDCancelledNR
-	ChoiceExtensions              *ProtocolIESingleContainerBroadcastCancelledAreaListExtIEs
+	PresentExtensions              *ProtocolIESingleContainerBroadcastCancelledAreaListExtIEs
 }
 
 type ProtocolIESingleContainerBroadcastCancelledAreaListExtIEs struct {
@@ -511,32 +513,32 @@ type BroadcastCancelledAreaListExtIEs struct {
 }
 
 const (
-	BroadcastCancelledAreaListExtIEsTypeValueChoiceNothing int = 0
+	BroadcastCancelledAreaListExtIEsTypeValuePresentNothing int = 0
 )
 
 type BroadcastCancelledAreaListExtIEsTypeValue struct {
-	Choice int
+	Present int
 }
 
 const (
-	BroadcastCompletedAreaListChoiceCellIDBroadcastEUTRA          int = 0
-	BroadcastCompletedAreaListChoiceTAIBroadcastEUTRA             int = 1
-	BroadcastCompletedAreaListChoiceEmergencyAreaIDBroadcastEUTRA int = 2
-	BroadcastCompletedAreaListChoiceCellIDBroadcastNR             int = 3
-	BroadcastCompletedAreaListChoiceTAIBroadcastNR                int = 4
-	BroadcastCompletedAreaListChoiceEmergencyAreaIDBroadcastNR    int = 5
-	BroadcastCompletedAreaListChoiceChoiceExtensions              int = 6
+	BroadcastCompletedAreaListPresentCellIDBroadcastEUTRA          int = 0
+	BroadcastCompletedAreaListPresentTAIBroadcastEUTRA             int = 1
+	BroadcastCompletedAreaListPresentEmergencyAreaIDBroadcastEUTRA int = 2
+	BroadcastCompletedAreaListPresentCellIDBroadcastNR             int = 3
+	BroadcastCompletedAreaListPresentTAIBroadcastNR                int = 4
+	BroadcastCompletedAreaListPresentEmergencyAreaIDBroadcastNR    int = 5
+	BroadcastCompletedAreaListPresentPresentExtensions              int = 6
 )
 
 type BroadcastCompletedAreaList struct {
-	Choice                        int
+	Present                        int
 	CellIDBroadcastEUTRA          *CellIDBroadcastEUTRA
 	TAIBroadcastEUTRA             *TAIBroadcastEUTRA
 	EmergencyAreaIDBroadcastEUTRA *EmergencyAreaIDBroadcastEUTRA
 	CellIDBroadcastNR             *CellIDBroadcastNR
 	TAIBroadcastNR                *TAIBroadcastNR
 	EmergencyAreaIDBroadcastNR    *EmergencyAreaIDBroadcastNR
-	ChoiceExtensions              *ProtocolIESingleContainerBroadcastCompletedAreaListExtIEs
+	PresentExtensions              *ProtocolIESingleContainerBroadcastCompletedAreaListExtIEs
 }
 
 type ProtocolIESingleContainerBroadcastCompletedAreaListExtIEs struct {
@@ -550,11 +552,11 @@ type BroadcastCompletedAreaListExtIEs struct {
 }
 
 const (
-	BroadcastCompletedAreaListExtIEsTypeValueChoiceNothing int = 0
+	BroadcastCompletedAreaListExtIEsTypeValuePresentNothing int = 0
 )
 
 type BroadcastCompletedAreaListExtIEsTypeValue struct {
-	Choice int
+	Present int
 }
 
 type BroadcastPLMNList struct {
@@ -578,11 +580,11 @@ type BroadcastPLMNItemExtIEs struct {
 }
 
 const (
-	BroadcastPLMNItemExtIEsExtensionValueChoiceNothing int = 0
+	BroadcastPLMNItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type BroadcastPLMNItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 const (
@@ -614,11 +616,11 @@ type CancelledCellsInEAIEUTRAItemExtIEs struct {
 }
 
 const (
-	CancelledCellsInEAIEUTRAItemExtIEsExtensionValueChoiceNothing int = 0
+	CancelledCellsInEAIEUTRAItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type CancelledCellsInEAIEUTRAItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type CancelledCellsInEAINR struct {
@@ -642,11 +644,11 @@ type CancelledCellsInEAINRItemExtIEs struct {
 }
 
 const (
-	CancelledCellsInEAINRItemExtIEsExtensionValueChoiceNothing int = 0
+	CancelledCellsInEAINRItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type CancelledCellsInEAINRItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type CancelledCellsInTAIEUTRA struct {
@@ -670,11 +672,11 @@ type CancelledCellsInTAIEUTRAItemExtIEs struct {
 }
 
 const (
-	CancelledCellsInTAIEUTRAItemExtIEsExtensionValueChoiceNothing int = 0
+	CancelledCellsInTAIEUTRAItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type CancelledCellsInTAIEUTRAItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type CancelledCellsInTAINR struct {
@@ -698,30 +700,30 @@ type CancelledCellsInTAINRItemExtIEs struct {
 }
 
 const (
-	CancelledCellsInTAINRItemExtIEsExtensionValueChoiceNothing int = 0
+	CancelledCellsInTAINRItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type CancelledCellsInTAINRItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 const (
-	CauseChoiceRadioNetwork     int = 0
-	CauseChoiceTransport        int = 1
-	CauseChoiceNas              int = 2
-	CauseChoiceProtocol         int = 3
-	CauseChoiceMisc             int = 4
-	CauseChoiceChoiceExtensions int = 5
+	CausePresentRadioNetwork     int = 0
+	CausePresentTransport        int = 1
+	CausePresentNas              int = 2
+	CausePresentProtocol         int = 3
+	CausePresentMisc             int = 4
+	CausePresentPresentExtensions int = 5
 )
 
 type Cause struct {
-	Choice           int
+	Present           int
 	RadioNetwork     *CauseRadioNetwork
 	Transport        *CauseTransport
 	Nas              *CauseNas
 	Protocol         *CauseProtocol
 	Misc             *CauseMisc
-	ChoiceExtensions *ProtocolIESingleContainerCauseExtIEs
+	PresentExtensions *ProtocolIESingleContainerCauseExtIEs
 }
 
 type ProtocolIESingleContainerCauseExtIEs struct {
@@ -735,11 +737,11 @@ type CauseExtIEs struct {
 }
 
 const (
-	CauseExtIEsTypeValueChoiceNothing int = 0
+	CauseExtIEsTypeValuePresentNothing int = 0
 )
 
 type CauseExtIEsTypeValue struct {
-	Choice int
+	Present int
 }
 
 const (
@@ -864,11 +866,11 @@ type CellIDBroadcastEUTRAItemExtIEs struct {
 }
 
 const (
-	CellIDBroadcastEUTRAItemExtIEsExtensionValueChoiceNothing int = 0
+	CellIDBroadcastEUTRAItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type CellIDBroadcastEUTRAItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type CellIDBroadcastNR struct {
@@ -891,11 +893,11 @@ type CellIDBroadcastNRItemExtIEs struct {
 }
 
 const (
-	CellIDBroadcastNRItemExtIEsExtensionValueChoiceNothing int = 0
+	CellIDBroadcastNRItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type CellIDBroadcastNRItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type CellIDCancelledEUTRA struct {
@@ -919,11 +921,11 @@ type CellIDCancelledEUTRAItemExtIEs struct {
 }
 
 const (
-	CellIDCancelledEUTRAItemExtIEsExtensionValueChoiceNothing int = 0
+	CellIDCancelledEUTRAItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type CellIDCancelledEUTRAItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type CellIDCancelledNR struct {
@@ -947,24 +949,24 @@ type CellIDCancelledNRItemExtIEs struct {
 }
 
 const (
-	CellIDCancelledNRItemExtIEsExtensionValueChoiceNothing int = 0
+	CellIDCancelledNRItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type CellIDCancelledNRItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 const (
-	CellIDListForRestartChoiceEUTRACGIListforRestart int = 0
-	CellIDListForRestartChoiceNRCGIListforRestart    int = 1
-	CellIDListForRestartChoiceChoiceExtensions       int = 2
+	CellIDListForRestartPresentEUTRACGIListforRestart int = 0
+	CellIDListForRestartPresentNRCGIListforRestart    int = 1
+	CellIDListForRestartPresentPresentExtensions       int = 2
 )
 
 type CellIDListForRestart struct {
-	Choice                 int
+	Present                 int
 	EUTRACGIListforRestart *EUTRACGIList
 	NRCGIListforRestart    *NRCGIList
-	ChoiceExtensions       *ProtocolIESingleContainerCellIDListForRestartExtIEs
+	PresentExtensions       *ProtocolIESingleContainerCellIDListForRestartExtIEs
 }
 
 type ProtocolIESingleContainerCellIDListForRestartExtIEs struct {
@@ -978,11 +980,11 @@ type CellIDListForRestartExtIEs struct {
 }
 
 const (
-	CellIDListForRestartExtIEsTypeValueChoiceNothing int = 0
+	CellIDListForRestartExtIEsTypeValuePresentNothing int = 0
 )
 
 type CellIDListForRestartExtIEsTypeValue struct {
-	Choice int
+	Present int
 }
 
 const (
@@ -1012,11 +1014,11 @@ type CellTypeExtIEs struct {
 }
 
 const (
-	CellTypeExtIEsExtensionValueChoiceNothing int = 0
+	CellTypeExtIEsExtensionValuePresentNothing int = 0
 )
 
 type CellTypeExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type CNAssistedRANTuning struct {
@@ -1035,11 +1037,11 @@ type CNAssistedRANTuningExtIEs struct {
 }
 
 const (
-	CNAssistedRANTuningExtIEsExtensionValueChoiceNothing int = 0
+	CNAssistedRANTuningExtIEsExtensionValuePresentNothing int = 0
 )
 
 type CNAssistedRANTuningExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type CNTypeRestrictionsForEquivalent struct {
@@ -1068,11 +1070,11 @@ type CNTypeRestrictionsForEquivalentItemExtIEs struct {
 }
 
 const (
-	CNTypeRestrictionsForEquivalentItemExtIEsExtensionValueChoiceNothing int = 0
+	CNTypeRestrictionsForEquivalentItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type CNTypeRestrictionsForEquivalentItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 const (
@@ -1107,11 +1109,11 @@ type CompletedCellsInEAIEUTRAItemExtIEs struct {
 }
 
 const (
-	CompletedCellsInEAIEUTRAItemExtIEsExtensionValueChoiceNothing int = 0
+	CompletedCellsInEAIEUTRAItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type CompletedCellsInEAIEUTRAItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type CompletedCellsInEAINR struct {
@@ -1134,11 +1136,11 @@ type CompletedCellsInEAINRItemExtIEs struct {
 }
 
 const (
-	CompletedCellsInEAINRItemExtIEsExtensionValueChoiceNothing int = 0
+	CompletedCellsInEAINRItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type CompletedCellsInEAINRItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type CompletedCellsInTAIEUTRA struct {
@@ -1161,11 +1163,11 @@ type CompletedCellsInTAIEUTRAItemExtIEs struct {
 }
 
 const (
-	CompletedCellsInTAIEUTRAItemExtIEsExtensionValueChoiceNothing int = 0
+	CompletedCellsInTAIEUTRAItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type CompletedCellsInTAIEUTRAItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type CompletedCellsInTAINR struct {
@@ -1188,11 +1190,11 @@ type CompletedCellsInTAINRItemExtIEs struct {
 }
 
 const (
-	CompletedCellsInTAINRItemExtIEsExtensionValueChoiceNothing int = 0
+	CompletedCellsInTAINRItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type CompletedCellsInTAINRItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 const (
@@ -1243,11 +1245,11 @@ type CoreNetworkAssistanceInformationForInactiveExtIEs struct {
 }
 
 const (
-	CoreNetworkAssistanceInformationForInactiveExtIEsExtensionValueChoiceNothing int = 0
+	CoreNetworkAssistanceInformationForInactiveExtIEsExtensionValuePresentNothing int = 0
 )
 
 type CoreNetworkAssistanceInformationForInactiveExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type COUNTValueForPDCPSN12 struct {
@@ -1267,11 +1269,11 @@ type COUNTValueForPDCPSN12ExtIEs struct {
 }
 
 const (
-	COUNTValueForPDCPSN12ExtIEsExtensionValueChoiceNothing int = 0
+	COUNTValueForPDCPSN12ExtIEsExtensionValuePresentNothing int = 0
 )
 
 type COUNTValueForPDCPSN12ExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type COUNTValueForPDCPSN18 struct {
@@ -1291,22 +1293,22 @@ type COUNTValueForPDCPSN18ExtIEs struct {
 }
 
 const (
-	COUNTValueForPDCPSN18ExtIEsExtensionValueChoiceNothing int = 0
+	COUNTValueForPDCPSN18ExtIEsExtensionValuePresentNothing int = 0
 )
 
 type COUNTValueForPDCPSN18ExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 const (
-	CPTransportLayerInformationChoiceEndpointIPAddress int = 0
-	CPTransportLayerInformationChoiceChoiceExtensions  int = 1
+	CPTransportLayerInformationPresentEndpointIPAddress int = 0
+	CPTransportLayerInformationPresentPresentExtensions  int = 1
 )
 
 type CPTransportLayerInformation struct {
-	Choice            int
+	Present            int
 	EndpointIPAddress *TransportLayerAddress
-	ChoiceExtensions  *ProtocolIESingleContainerCPTransportLayerInformationExtIEs
+	PresentExtensions  *ProtocolIESingleContainerCPTransportLayerInformationExtIEs
 }
 
 type ProtocolIESingleContainerCPTransportLayerInformationExtIEs struct {
@@ -1320,11 +1322,11 @@ type CPTransportLayerInformationExtIEs struct {
 }
 
 const (
-	CPTransportLayerInformationExtIEsTypeValueChoiceEndpointIPAddressAndPort int = 0
+	CPTransportLayerInformationExtIEsTypeValuePresentEndpointIPAddressAndPort int = 0
 )
 
 type CPTransportLayerInformationExtIEsTypeValue struct {
-	Choice                   int
+	Present                   int
 	EndpointIPAddressAndPort *EndpointIPAddressAndPort `vht:"Presence:PresenceMandatory,Criticality:CriticalityReject,ProtocolIEID:ProtocolIEIDEndpointIPAddressAndPort"`
 }
 
@@ -1347,11 +1349,11 @@ type CriticalityDiagnosticsExtIEs struct {
 }
 
 const (
-	CriticalityDiagnosticsExtIEsExtensionValueChoiceNothing int = 0
+	CriticalityDiagnosticsExtIEsExtensionValuePresentNothing int = 0
 )
 
 type CriticalityDiagnosticsExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type CriticalityDiagnosticsIEList struct {
@@ -1376,11 +1378,11 @@ type CriticalityDiagnosticsIEItemExtIEs struct {
 }
 
 const (
-	CriticalityDiagnosticsIEItemExtIEsExtensionValueChoiceNothing int = 0
+	CriticalityDiagnosticsIEItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type CriticalityDiagnosticsIEItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type DataCodingScheme struct {
@@ -1425,11 +1427,11 @@ type DataForwardingResponseDRBItemExtIEs struct {
 }
 
 const (
-	DataForwardingResponseDRBItemExtIEsExtensionValueChoiceNothing int = 0
+	DataForwardingResponseDRBItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type DataForwardingResponseDRBItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type DataForwardingResponseERABList struct {
@@ -1453,11 +1455,11 @@ type DataForwardingResponseERABListItemExtIEs struct {
 }
 
 const (
-	DataForwardingResponseERABListItemExtIEsExtensionValueChoiceNothing int = 0
+	DataForwardingResponseERABListItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type DataForwardingResponseERABListItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 const (
@@ -1519,25 +1521,25 @@ type DRBsSubjectToStatusTransferItemExtIEs struct {
 }
 
 const (
-	DRBsSubjectToStatusTransferItemExtIEsExtensionValueChoiceOldAssociatedQosFlowListULendmarkerexpected int = 0
+	DRBsSubjectToStatusTransferItemExtIEsExtensionValuePresentOldAssociatedQosFlowListULendmarkerexpected int = 0
 )
 
 type DRBsSubjectToStatusTransferItemExtIEsExtensionValue struct {
-	Choice                                      int
+	Present                                      int
 	OldAssociatedQosFlowListULendmarkerexpected *AssociatedQosFlowList `vht:"Presence:PresenceOptional,Criticality:CriticalityReject,ProtocolExtensionID:ProtocolExtensionIDOldAssociatedQosFlowListULendmarkerexpected"`
 }
 
 const (
-	DRBStatusDLChoiceDRBStatusDL12    int = 0
-	DRBStatusDLChoiceDRBStatusDL18    int = 1
-	DRBStatusDLChoiceChoiceExtensions int = 2
+	DRBStatusDLPresentDRBStatusDL12    int = 0
+	DRBStatusDLPresentDRBStatusDL18    int = 1
+	DRBStatusDLPresentPresentExtensions int = 2
 )
 
 type DRBStatusDL struct {
-	Choice           int
+	Present           int
 	DRBStatusDL12    *DRBStatusDL12
 	DRBStatusDL18    *DRBStatusDL18
-	ChoiceExtensions *ProtocolIESingleContainerDRBStatusDLExtIEs
+	PresentExtensions *ProtocolIESingleContainerDRBStatusDLExtIEs
 }
 
 type ProtocolIESingleContainerDRBStatusDLExtIEs struct {
@@ -1551,11 +1553,11 @@ type DRBStatusDLExtIEs struct {
 }
 
 const (
-	DRBStatusDLExtIEsTypeValueChoiceNothing int = 0
+	DRBStatusDLExtIEsTypeValuePresentNothing int = 0
 )
 
 type DRBStatusDLExtIEsTypeValue struct {
-	Choice int
+	Present int
 }
 
 type DRBStatusDL12 struct {
@@ -1574,11 +1576,11 @@ type DRBStatusDL12ExtIEs struct {
 }
 
 const (
-	DRBStatusDL12ExtIEsExtensionValueChoiceNothing int = 0
+	DRBStatusDL12ExtIEsExtensionValuePresentNothing int = 0
 )
 
 type DRBStatusDL12ExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type DRBStatusDL18 struct {
@@ -1597,24 +1599,24 @@ type DRBStatusDL18ExtIEs struct {
 }
 
 const (
-	DRBStatusDL18ExtIEsExtensionValueChoiceNothing int = 0
+	DRBStatusDL18ExtIEsExtensionValuePresentNothing int = 0
 )
 
 type DRBStatusDL18ExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 const (
-	DRBStatusULChoiceDRBStatusUL12    int = 0
-	DRBStatusULChoiceDRBStatusUL18    int = 1
-	DRBStatusULChoiceChoiceExtensions int = 2
+	DRBStatusULPresentDRBStatusUL12    int = 0
+	DRBStatusULPresentDRBStatusUL18    int = 1
+	DRBStatusULPresentPresentExtensions int = 2
 )
 
 type DRBStatusUL struct {
-	Choice           int
+	Present           int
 	DRBStatusUL12    *DRBStatusUL12
 	DRBStatusUL18    *DRBStatusUL18
-	ChoiceExtensions *ProtocolIESingleContainerDRBStatusULExtIEs
+	PresentExtensions *ProtocolIESingleContainerDRBStatusULExtIEs
 }
 
 type ProtocolIESingleContainerDRBStatusULExtIEs struct {
@@ -1628,11 +1630,11 @@ type DRBStatusULExtIEs struct {
 }
 
 const (
-	DRBStatusULExtIEsTypeValueChoiceNothing int = 0
+	DRBStatusULExtIEsTypeValuePresentNothing int = 0
 )
 
 type DRBStatusULExtIEsTypeValue struct {
-	Choice int
+	Present int
 }
 
 type DRBStatusUL12 struct {
@@ -1652,11 +1654,11 @@ type DRBStatusUL12ExtIEs struct {
 }
 
 const (
-	DRBStatusUL12ExtIEsExtensionValueChoiceNothing int = 0
+	DRBStatusUL12ExtIEsExtensionValuePresentNothing int = 0
 )
 
 type DRBStatusUL12ExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type DRBStatusUL18 struct {
@@ -1676,11 +1678,11 @@ type DRBStatusUL18ExtIEs struct {
 }
 
 const (
-	DRBStatusUL18ExtIEsExtensionValueChoiceNothing int = 0
+	DRBStatusUL18ExtIEsExtensionValuePresentNothing int = 0
 )
 
 type DRBStatusUL18ExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type DRBsToQosFlowsMappingList struct {
@@ -1704,11 +1706,11 @@ type DRBsToQosFlowsMappingItemExtIEs struct {
 }
 
 const (
-	DRBsToQosFlowsMappingItemExtIEsExtensionValueChoiceNothing int = 0
+	DRBsToQosFlowsMappingItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type DRBsToQosFlowsMappingItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type Dynamic5QIDescriptor struct {
@@ -1733,11 +1735,11 @@ type Dynamic5QIDescriptorExtIEs struct {
 }
 
 const (
-	Dynamic5QIDescriptorExtIEsExtensionValueChoiceNothing int = 0
+	Dynamic5QIDescriptorExtIEsExtensionValuePresentNothing int = 0
 )
 
 type Dynamic5QIDescriptorExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type EmergencyAreaID struct {
@@ -1765,11 +1767,11 @@ type EmergencyAreaIDBroadcastEUTRAItemExtIEs struct {
 }
 
 const (
-	EmergencyAreaIDBroadcastEUTRAItemExtIEsExtensionValueChoiceNothing int = 0
+	EmergencyAreaIDBroadcastEUTRAItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type EmergencyAreaIDBroadcastEUTRAItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type EmergencyAreaIDBroadcastNR struct {
@@ -1793,11 +1795,11 @@ type EmergencyAreaIDBroadcastNRItemExtIEs struct {
 }
 
 const (
-	EmergencyAreaIDBroadcastNRItemExtIEsExtensionValueChoiceNothing int = 0
+	EmergencyAreaIDBroadcastNRItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type EmergencyAreaIDBroadcastNRItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type EmergencyAreaIDCancelledEUTRA struct {
@@ -1821,11 +1823,11 @@ type EmergencyAreaIDCancelledEUTRAItemExtIEs struct {
 }
 
 const (
-	EmergencyAreaIDCancelledEUTRAItemExtIEsExtensionValueChoiceNothing int = 0
+	EmergencyAreaIDCancelledEUTRAItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type EmergencyAreaIDCancelledEUTRAItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type EmergencyAreaIDCancelledNR struct {
@@ -1849,11 +1851,11 @@ type EmergencyAreaIDCancelledNRItemExtIEs struct {
 }
 
 const (
-	EmergencyAreaIDCancelledNRItemExtIEsExtensionValueChoiceNothing int = 0
+	EmergencyAreaIDCancelledNRItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type EmergencyAreaIDCancelledNRItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type EmergencyAreaIDList struct {
@@ -1881,11 +1883,11 @@ type EmergencyFallbackIndicatorExtIEs struct {
 }
 
 const (
-	EmergencyFallbackIndicatorExtIEsExtensionValueChoiceNothing int = 0
+	EmergencyFallbackIndicatorExtIEsExtensionValuePresentNothing int = 0
 )
 
 type EmergencyFallbackIndicatorExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 const (
@@ -1926,11 +1928,11 @@ type EndpointIPAddressAndPortExtIEs struct {
 }
 
 const (
-	EndpointIPAddressAndPortExtIEsExtensionValueChoiceNothing int = 0
+	EndpointIPAddressAndPortExtIEsExtensionValuePresentNothing int = 0
 )
 
 type EndpointIPAddressAndPortExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type EquivalentPLMNs struct {
@@ -1958,11 +1960,11 @@ type EPSTAIExtIEs struct {
 }
 
 const (
-	EPSTAIExtIEsExtensionValueChoiceNothing int = 0
+	EPSTAIExtIEsExtensionValuePresentNothing int = 0
 )
 
 type EPSTAIExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type ERABID struct {
@@ -1990,11 +1992,11 @@ type ERABInformationItemExtIEs struct {
 }
 
 const (
-	ERABInformationItemExtIEsExtensionValueChoiceNothing int = 0
+	ERABInformationItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type ERABInformationItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type EUTRACellIdentity struct {
@@ -2018,11 +2020,11 @@ type EUTRACGIExtIEs struct {
 }
 
 const (
-	EUTRACGIExtIEsExtensionValueChoiceNothing int = 0
+	EUTRACGIExtIEsExtensionValuePresentNothing int = 0
 )
 
 type EUTRACGIExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type EUTRACGIList struct {
@@ -2094,11 +2096,11 @@ type ExpectedUEActivityBehaviourExtIEs struct {
 }
 
 const (
-	ExpectedUEActivityBehaviourExtIEsExtensionValueChoiceNothing int = 0
+	ExpectedUEActivityBehaviourExtIEsExtensionValuePresentNothing int = 0
 )
 
 type ExpectedUEActivityBehaviourExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type ExpectedUEBehaviour struct {
@@ -2120,11 +2122,11 @@ type ExpectedUEBehaviourExtIEs struct {
 }
 
 const (
-	ExpectedUEBehaviourExtIEsExtensionValueChoiceNothing int = 0
+	ExpectedUEBehaviourExtIEsExtensionValuePresentNothing int = 0
 )
 
 type ExpectedUEBehaviourExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 const (
@@ -2157,11 +2159,11 @@ type ExpectedUEMovingTrajectoryItemExtIEs struct {
 }
 
 const (
-	ExpectedUEMovingTrajectoryItemExtIEsExtensionValueChoiceNothing int = 0
+	ExpectedUEMovingTrajectoryItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type ExpectedUEMovingTrajectoryItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type ExtendedRATRestrictionInformation struct {
@@ -2181,11 +2183,11 @@ type ExtendedRATRestrictionInformationExtIEs struct {
 }
 
 const (
-	ExtendedRATRestrictionInformationExtIEsExtensionValueChoiceNothing int = 0
+	ExtendedRATRestrictionInformationExtIEsExtensionValuePresentNothing int = 0
 )
 
 type ExtendedRATRestrictionInformationExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type ExtendedRNCID struct {
@@ -2210,11 +2212,11 @@ type FiveGSTMSIExtIEs struct {
 }
 
 const (
-	FiveGSTMSIExtIEsExtensionValueChoiceNothing int = 0
+	FiveGSTMSIExtIEsExtensionValuePresentNothing int = 0
 )
 
 type FiveGSTMSIExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type FiveGTMSI struct {
@@ -2246,11 +2248,11 @@ type ForbiddenAreaInformationItemExtIEs struct {
 }
 
 const (
-	ForbiddenAreaInformationItemExtIEsExtensionValueChoiceNothing int = 0
+	ForbiddenAreaInformationItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type ForbiddenAreaInformationItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type ForbiddenTACs struct {
@@ -2279,11 +2281,11 @@ type GBRQosInformationExtIEs struct {
 }
 
 const (
-	GBRQosInformationExtIEsExtensionValueChoiceNothing int = 0
+	GBRQosInformationExtIEsExtensionValuePresentNothing int = 0
 )
 
 type GBRQosInformationExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type GlobalGNBID struct {
@@ -2303,11 +2305,11 @@ type GlobalGNBIDExtIEs struct {
 }
 
 const (
-	GlobalGNBIDExtIEsExtensionValueChoiceNothing int = 0
+	GlobalGNBIDExtIEsExtensionValuePresentNothing int = 0
 )
 
 type GlobalGNBIDExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type GlobalN3IWFID struct {
@@ -2327,11 +2329,11 @@ type GlobalN3IWFIDExtIEs struct {
 }
 
 const (
-	GlobalN3IWFIDExtIEsExtensionValueChoiceNothing int = 0
+	GlobalN3IWFIDExtIEsExtensionValuePresentNothing int = 0
 )
 
 type GlobalN3IWFIDExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type GlobalNgENBID struct {
@@ -2351,26 +2353,26 @@ type GlobalNgENBIDExtIEs struct {
 }
 
 const (
-	GlobalNgENBIDExtIEsExtensionValueChoiceNothing int = 0
+	GlobalNgENBIDExtIEsExtensionValuePresentNothing int = 0
 )
 
 type GlobalNgENBIDExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 const (
-	GlobalRANNodeIDChoiceGlobalGNBID      int = 0
-	GlobalRANNodeIDChoiceGlobalNgENBID    int = 1
-	GlobalRANNodeIDChoiceGlobalN3IWFID    int = 2
-	GlobalRANNodeIDChoiceChoiceExtensions int = 3
+	GlobalRANNodeIDPresentGlobalGNBID      int = 0
+	GlobalRANNodeIDPresentGlobalNgENBID    int = 1
+	GlobalRANNodeIDPresentGlobalN3IWFID    int = 2
+	GlobalRANNodeIDPresentPresentExtensions int = 3
 )
 
 type GlobalRANNodeID struct {
-	Choice           int
+	Present           int
 	GlobalGNBID      *GlobalGNBID
 	GlobalNgENBID    *GlobalNgENBID
 	GlobalN3IWFID    *GlobalN3IWFID
-	ChoiceExtensions *ProtocolIESingleContainerGlobalRANNodeIDExtIEs
+	PresentExtensions *ProtocolIESingleContainerGlobalRANNodeIDExtIEs
 }
 
 type ProtocolIESingleContainerGlobalRANNodeIDExtIEs struct {
@@ -2384,22 +2386,22 @@ type GlobalRANNodeIDExtIEs struct {
 }
 
 const (
-	GlobalRANNodeIDExtIEsTypeValueChoiceNothing int = 0
+	GlobalRANNodeIDExtIEsTypeValuePresentNothing int = 0
 )
 
 type GlobalRANNodeIDExtIEsTypeValue struct {
-	Choice int
+	Present int
 }
 
 const (
-	GNBIDChoiceGNBID            int = 0
-	GNBIDChoiceChoiceExtensions int = 1
+	GNBIDPresentGNBID            int = 0
+	GNBIDPresentPresentExtensions int = 1
 )
 
 type GNBID struct {
-	Choice           int
+	Present           int
 	GNBID            *BitString `vht:"valueMin:22,valueMax:32"`
-	ChoiceExtensions *ProtocolIESingleContainerGNBIDExtIEs
+	PresentExtensions *ProtocolIESingleContainerGNBIDExtIEs
 }
 
 type ProtocolIESingleContainerGNBIDExtIEs struct {
@@ -2413,11 +2415,11 @@ type GNBIDExtIEs struct {
 }
 
 const (
-	GNBIDExtIEsTypeValueChoiceNothing int = 0
+	GNBIDExtIEsTypeValuePresentNothing int = 0
 )
 
 type GNBIDExtIEsTypeValue struct {
-	Choice int
+	Present int
 }
 
 type GTPTEID struct {
@@ -2441,11 +2443,11 @@ type GTPTunnelExtIEs struct {
 }
 
 const (
-	GTPTunnelExtIEsExtensionValueChoiceNothing int = 0
+	GTPTunnelExtIEsExtensionValuePresentNothing int = 0
 )
 
 type GTPTunnelExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type GUAMI struct {
@@ -2467,11 +2469,11 @@ type GUAMIExtIEs struct {
 }
 
 const (
-	GUAMIExtIEsExtensionValueChoiceNothing int = 0
+	GUAMIExtIEsExtensionValuePresentNothing int = 0
 )
 
 type GUAMIExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 const (
@@ -2501,14 +2503,14 @@ type HandoverCommandTransferExtIEs struct {
 }
 
 const (
-	HandoverCommandTransferExtIEsExtensionValueChoiceAdditionalDLForwardingUPTNLInformation int = 0
-	HandoverCommandTransferExtIEsExtensionValueChoiceULForwardingUPTNLInformation           int = 1
-	HandoverCommandTransferExtIEsExtensionValueChoiceAdditionalULForwardingUPTNLInformation int = 2
-	HandoverCommandTransferExtIEsExtensionValueChoiceDataForwardingResponseERABList         int = 3
+	HandoverCommandTransferExtIEsExtensionValuePresentAdditionalDLForwardingUPTNLInformation int = 0
+	HandoverCommandTransferExtIEsExtensionValuePresentULForwardingUPTNLInformation           int = 1
+	HandoverCommandTransferExtIEsExtensionValuePresentAdditionalULForwardingUPTNLInformation int = 2
+	HandoverCommandTransferExtIEsExtensionValuePresentDataForwardingResponseERABList         int = 3
 )
 
 type HandoverCommandTransferExtIEsExtensionValue struct {
-	Choice                                 int
+	Present                                 int
 	AdditionalDLForwardingUPTNLInformation *QosFlowPerTNLInformationList    `vht:"Presence:PresenceOptional,Criticality:CriticalityIgnore,ProtocolExtensionID:ProtocolExtensionIDAdditionalDLForwardingUPTNLInformation"`
 	ULForwardingUPTNLInformation           *UPTransportLayerInformation     `vht:"Presence:PresenceOptional,Criticality:CriticalityReject,ProtocolExtensionID:ProtocolExtensionIDULForwardingUPTNLInformation"`
 	AdditionalULForwardingUPTNLInformation *UPTransportLayerInformationList `vht:"Presence:PresenceOptional,Criticality:CriticalityReject,ProtocolExtensionID:ProtocolExtensionIDAdditionalULForwardingUPTNLInformation"`
@@ -2539,11 +2541,11 @@ type HandoverPreparationUnsuccessfulTransferExtIEs struct {
 }
 
 const (
-	HandoverPreparationUnsuccessfulTransferExtIEsExtensionValueChoiceNothing int = 0
+	HandoverPreparationUnsuccessfulTransferExtIEsExtensionValuePresentNothing int = 0
 )
 
 type HandoverPreparationUnsuccessfulTransferExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type HandoverRequestAcknowledgeTransfer struct {
@@ -2567,14 +2569,14 @@ type HandoverRequestAcknowledgeTransferExtIEs struct {
 }
 
 const (
-	HandoverRequestAcknowledgeTransferExtIEsExtensionValueChoiceAdditionalDLUPTNLInformationForHOList  int = 0
-	HandoverRequestAcknowledgeTransferExtIEsExtensionValueChoiceULForwardingUPTNLInformation           int = 1
-	HandoverRequestAcknowledgeTransferExtIEsExtensionValueChoiceAdditionalULForwardingUPTNLInformation int = 2
-	HandoverRequestAcknowledgeTransferExtIEsExtensionValueChoiceDataForwardingResponseERABList         int = 3
+	HandoverRequestAcknowledgeTransferExtIEsExtensionValuePresentAdditionalDLUPTNLInformationForHOList  int = 0
+	HandoverRequestAcknowledgeTransferExtIEsExtensionValuePresentULForwardingUPTNLInformation           int = 1
+	HandoverRequestAcknowledgeTransferExtIEsExtensionValuePresentAdditionalULForwardingUPTNLInformation int = 2
+	HandoverRequestAcknowledgeTransferExtIEsExtensionValuePresentDataForwardingResponseERABList         int = 3
 )
 
 type HandoverRequestAcknowledgeTransferExtIEsExtensionValue struct {
-	Choice                                 int
+	Present                                 int
 	AdditionalDLUPTNLInformationForHOList  *AdditionalDLUPTNLInformationForHOList `vht:"Presence:PresenceOptional,Criticality:CriticalityIgnore,ProtocolExtensionID:ProtocolExtensionIDAdditionalDLUPTNLInformationForHOList"`
 	ULForwardingUPTNLInformation           *UPTransportLayerInformation           `vht:"Presence:PresenceOptional,Criticality:CriticalityReject,ProtocolExtensionID:ProtocolExtensionIDULForwardingUPTNLInformation"`
 	AdditionalULForwardingUPTNLInformation *UPTransportLayerInformationList       `vht:"Presence:PresenceOptional,Criticality:CriticalityReject,ProtocolExtensionID:ProtocolExtensionIDAdditionalULForwardingUPTNLInformation"`
@@ -2597,11 +2599,11 @@ type HandoverRequiredTransferExtIEs struct {
 }
 
 const (
-	HandoverRequiredTransferExtIEsExtensionValueChoiceNothing int = 0
+	HandoverRequiredTransferExtIEsExtensionValuePresentNothing int = 0
 )
 
 type HandoverRequiredTransferExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type HandoverResourceAllocationUnsuccessfulTransfer struct {
@@ -2621,11 +2623,11 @@ type HandoverResourceAllocationUnsuccessfulTransferExtIEs struct {
 }
 
 const (
-	HandoverResourceAllocationUnsuccessfulTransferExtIEsExtensionValueChoiceNothing int = 0
+	HandoverResourceAllocationUnsuccessfulTransferExtIEsExtensionValuePresentNothing int = 0
 )
 
 type HandoverResourceAllocationUnsuccessfulTransferExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 const (
@@ -2669,11 +2671,11 @@ type InfoOnRecommendedCellsAndRANNodesForPagingExtIEs struct {
 }
 
 const (
-	InfoOnRecommendedCellsAndRANNodesForPagingExtIEsExtensionValueChoiceNothing int = 0
+	InfoOnRecommendedCellsAndRANNodesForPagingExtIEsExtensionValuePresentNothing int = 0
 )
 
 type InfoOnRecommendedCellsAndRANNodesForPagingExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 const (
@@ -2724,28 +2726,28 @@ type LAIExtIEs struct {
 }
 
 const (
-	LAIExtIEsExtensionValueChoiceNothing int = 0
+	LAIExtIEsExtensionValuePresentNothing int = 0
 )
 
 type LAIExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 const (
-	LastVisitedCellInformationChoiceNGRANCell        int = 0
-	LastVisitedCellInformationChoiceEUTRANCell       int = 1
-	LastVisitedCellInformationChoiceUTRANCell        int = 2
-	LastVisitedCellInformationChoiceGERANCell        int = 3
-	LastVisitedCellInformationChoiceChoiceExtensions int = 4
+	LastVisitedCellInformationPresentNGRANCell        int = 0
+	LastVisitedCellInformationPresentEUTRANCell       int = 1
+	LastVisitedCellInformationPresentUTRANCell        int = 2
+	LastVisitedCellInformationPresentGERANCell        int = 3
+	LastVisitedCellInformationPresentPresentExtensions int = 4
 )
 
 type LastVisitedCellInformation struct {
-	Choice           int
+	Present           int
 	NGRANCell        *LastVisitedNGRANCellInformation
 	EUTRANCell       *LastVisitedEUTRANCellInformation
 	UTRANCell        *LastVisitedUTRANCellInformation
 	GERANCell        *LastVisitedGERANCellInformation
-	ChoiceExtensions *ProtocolIESingleContainerLastVisitedCellInformationExtIEs
+	PresentExtensions *ProtocolIESingleContainerLastVisitedCellInformationExtIEs
 }
 
 type ProtocolIESingleContainerLastVisitedCellInformationExtIEs struct {
@@ -2759,11 +2761,11 @@ type LastVisitedCellInformationExtIEs struct {
 }
 
 const (
-	LastVisitedCellInformationExtIEsTypeValueChoiceNothing int = 0
+	LastVisitedCellInformationExtIEsTypeValuePresentNothing int = 0
 )
 
 type LastVisitedCellInformationExtIEsTypeValue struct {
-	Choice int
+	Present int
 }
 
 type LastVisitedCellItem struct {
@@ -2782,11 +2784,11 @@ type LastVisitedCellItemExtIEs struct {
 }
 
 const (
-	LastVisitedCellItemExtIEsExtensionValueChoiceNothing int = 0
+	LastVisitedCellItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type LastVisitedCellItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type LastVisitedEUTRANCellInformation struct {
@@ -2817,11 +2819,11 @@ type LastVisitedNGRANCellInformationExtIEs struct {
 }
 
 const (
-	LastVisitedNGRANCellInformationExtIEsExtensionValueChoiceNothing int = 0
+	LastVisitedNGRANCellInformationExtIEsExtensionValuePresentNothing int = 0
 )
 
 type LastVisitedNGRANCellInformationExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type LastVisitedUTRANCellInformation struct {
@@ -2859,11 +2861,11 @@ type LocationReportingRequestTypeExtIEs struct {
 }
 
 const (
-	LocationReportingRequestTypeExtIEsExtensionValueChoiceLocationReportingAdditionalInfo int = 0
+	LocationReportingRequestTypeExtIEsExtensionValuePresentLocationReportingAdditionalInfo int = 0
 )
 
 type LocationReportingRequestTypeExtIEsExtensionValue struct {
-	Choice                          int
+	Present                          int
 	LocationReportingAdditionalInfo *LocationReportingAdditionalInfo `vht:"Presence:PresenceOptional,Criticality:CriticalityIgnore,ProtocolExtensionID:ProtocolExtensionIDLocationReportingAdditionalInfo"`
 }
 
@@ -2916,27 +2918,27 @@ type MobilityRestrictionListExtIEs struct {
 }
 
 const (
-	MobilityRestrictionListExtIEsExtensionValueChoiceLastEUTRANPLMNIdentity          int = 0
-	MobilityRestrictionListExtIEsExtensionValueChoiceCNTypeRestrictionsForServing    int = 1
-	MobilityRestrictionListExtIEsExtensionValueChoiceCNTypeRestrictionsForEquivalent int = 2
+	MobilityRestrictionListExtIEsExtensionValuePresentLastEUTRANPLMNIdentity          int = 0
+	MobilityRestrictionListExtIEsExtensionValuePresentCNTypeRestrictionsForServing    int = 1
+	MobilityRestrictionListExtIEsExtensionValuePresentCNTypeRestrictionsForEquivalent int = 2
 )
 
 type MobilityRestrictionListExtIEsExtensionValue struct {
-	Choice                          int
+	Present                          int
 	LastEUTRANPLMNIdentity          *PLMNIdentity                    `vht:"Presence:PresenceOptional,Criticality:CriticalityIgnore,ProtocolExtensionID:ProtocolExtensionIDLastEUTRANPLMNIdentity"`
 	CNTypeRestrictionsForServing    *CNTypeRestrictionsForServing    `vht:"Presence:PresenceOptional,Criticality:CriticalityIgnore,ProtocolExtensionID:ProtocolExtensionIDCNTypeRestrictionsForServing"`
 	CNTypeRestrictionsForEquivalent *CNTypeRestrictionsForEquivalent `vht:"Presence:PresenceOptional,Criticality:CriticalityIgnore,ProtocolExtensionID:ProtocolExtensionIDCNTypeRestrictionsForEquivalent"`
 }
 
 const (
-	N3IWFIDChoiceN3IWFID          int = 0
-	N3IWFIDChoiceChoiceExtensions int = 1
+	N3IWFIDPresentN3IWFID          int = 0
+	N3IWFIDPresentPresentExtensions int = 1
 )
 
 type N3IWFID struct {
-	Choice           int
+	Present           int
 	N3IWFID          *BitString `vht:"valueMin:16,valueMax:16"`
-	ChoiceExtensions *ProtocolIESingleContainerN3IWFIDExtIEs
+	PresentExtensions *ProtocolIESingleContainerN3IWFIDExtIEs
 }
 
 type ProtocolIESingleContainerN3IWFIDExtIEs struct {
@@ -2950,11 +2952,11 @@ type N3IWFIDExtIEs struct {
 }
 
 const (
-	N3IWFIDExtIEsTypeValueChoiceNothing int = 0
+	N3IWFIDExtIEsTypeValuePresentNothing int = 0
 )
 
 type N3IWFIDExtIEsTypeValue struct {
-	Choice int
+	Present int
 }
 
 type NASPDU struct {
@@ -2991,18 +2993,18 @@ type NextPagingAreaScope struct {
 }
 
 const (
-	NgENBIDChoiceMacroNgENBID      int = 0
-	NgENBIDChoiceShortMacroNgENBID int = 1
-	NgENBIDChoiceLongMacroNgENBID  int = 2
-	NgENBIDChoiceChoiceExtensions  int = 3
+	NgENBIDPresentMacroNgENBID      int = 0
+	NgENBIDPresentShortMacroNgENBID int = 1
+	NgENBIDPresentLongMacroNgENBID  int = 2
+	NgENBIDPresentPresentExtensions  int = 3
 )
 
 type NgENBID struct {
-	Choice            int
+	Present            int
 	MacroNgENBID      *BitString `vht:"valueMin:20,valueMax:20"`
 	ShortMacroNgENBID *BitString `vht:"valueMin:18,valueMax:18"`
 	LongMacroNgENBID  *BitString `vht:"valueMin:21,valueMax:21"`
-	ChoiceExtensions  *ProtocolIESingleContainerNgENBIDExtIEs
+	PresentExtensions  *ProtocolIESingleContainerNgENBIDExtIEs
 }
 
 type ProtocolIESingleContainerNgENBIDExtIEs struct {
@@ -3016,24 +3018,24 @@ type NgENBIDExtIEs struct {
 }
 
 const (
-	NgENBIDExtIEsTypeValueChoiceNothing int = 0
+	NgENBIDExtIEsTypeValuePresentNothing int = 0
 )
 
 type NgENBIDExtIEsTypeValue struct {
-	Choice int
+	Present int
 }
 
 const (
-	NGRANCGIChoiceNRCGI            int = 0
-	NGRANCGIChoiceEUTRACGI         int = 1
-	NGRANCGIChoiceChoiceExtensions int = 2
+	NGRANCGIPresentNRCGI            int = 0
+	NGRANCGIPresentEUTRACGI         int = 1
+	NGRANCGIPresentPresentExtensions int = 2
 )
 
 type NGRANCGI struct {
-	Choice           int
+	Present           int
 	NRCGI            *NRCGI
 	EUTRACGI         *EUTRACGI
-	ChoiceExtensions *ProtocolIESingleContainerNGRANCGIExtIEs
+	PresentExtensions *ProtocolIESingleContainerNGRANCGIExtIEs
 }
 
 type ProtocolIESingleContainerNGRANCGIExtIEs struct {
@@ -3047,11 +3049,11 @@ type NGRANCGIExtIEs struct {
 }
 
 const (
-	NGRANCGIExtIEsTypeValueChoiceNothing int = 0
+	NGRANCGIExtIEsTypeValuePresentNothing int = 0
 )
 
 type NGRANCGIExtIEsTypeValue struct {
-	Choice int
+	Present int
 }
 
 type NGRANTNLAssociationToRemoveList struct {
@@ -3075,11 +3077,11 @@ type NGRANTNLAssociationToRemoveItemExtIEs struct {
 }
 
 const (
-	NGRANTNLAssociationToRemoveItemExtIEsExtensionValueChoiceNothing int = 0
+	NGRANTNLAssociationToRemoveItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type NGRANTNLAssociationToRemoveItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type NGRANTraceID struct {
@@ -3105,11 +3107,11 @@ type NonDynamic5QIDescriptorExtIEs struct {
 }
 
 const (
-	NonDynamic5QIDescriptorExtIEsExtensionValueChoiceNothing int = 0
+	NonDynamic5QIDescriptorExtIEsExtensionValuePresentNothing int = 0
 )
 
 type NonDynamic5QIDescriptorExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type NotAllowedTACs struct {
@@ -3154,11 +3156,11 @@ type NRCGIExtIEs struct {
 }
 
 const (
-	NRCGIExtIEsExtensionValueChoiceNothing int = 0
+	NRCGIExtIEsExtensionValuePresentNothing int = 0
 )
 
 type NRCGIExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type NRCGIList struct {
@@ -3201,14 +3203,14 @@ type OverloadAction struct {
 }
 
 const (
-	OverloadResponseChoiceOverloadAction   int = 0
-	OverloadResponseChoiceChoiceExtensions int = 1
+	OverloadResponsePresentOverloadAction   int = 0
+	OverloadResponsePresentPresentExtensions int = 1
 )
 
 type OverloadResponse struct {
-	Choice           int
+	Present           int
 	OverloadAction   *OverloadAction
-	ChoiceExtensions *ProtocolIESingleContainerOverloadResponseExtIEs
+	PresentExtensions *ProtocolIESingleContainerOverloadResponseExtIEs
 }
 
 type ProtocolIESingleContainerOverloadResponseExtIEs struct {
@@ -3222,11 +3224,11 @@ type OverloadResponseExtIEs struct {
 }
 
 const (
-	OverloadResponseExtIEsTypeValueChoiceNothing int = 0
+	OverloadResponseExtIEsTypeValuePresentNothing int = 0
 )
 
 type OverloadResponseExtIEsTypeValue struct {
-	Choice int
+	Present int
 }
 
 type OverloadStartNSSAIList struct {
@@ -3251,11 +3253,11 @@ type OverloadStartNSSAIItemExtIEs struct {
 }
 
 const (
-	OverloadStartNSSAIItemExtIEsExtensionValueChoiceNothing int = 0
+	OverloadStartNSSAIItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type OverloadStartNSSAIItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type PacketDelayBudget struct {
@@ -3279,11 +3281,11 @@ type PacketErrorRateExtIEs struct {
 }
 
 const (
-	PacketErrorRateExtIEsExtensionValueChoiceNothing int = 0
+	PacketErrorRateExtIEsExtensionValuePresentNothing int = 0
 )
 
 type PacketErrorRateExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type PacketLossRate struct {
@@ -3308,11 +3310,11 @@ type PagingAttemptInformationExtIEs struct {
 }
 
 const (
-	PagingAttemptInformationExtIEsExtensionValueChoiceNothing int = 0
+	PagingAttemptInformationExtIEsExtensionValuePresentNothing int = 0
 )
 
 type PagingAttemptInformationExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type PagingAttemptCount struct {
@@ -3370,11 +3372,11 @@ type PathSwitchRequestAcknowledgeTransferExtIEs struct {
 }
 
 const (
-	PathSwitchRequestAcknowledgeTransferExtIEsExtensionValueChoiceAdditionalNGUUPTNLInformation int = 0
+	PathSwitchRequestAcknowledgeTransferExtIEsExtensionValuePresentAdditionalNGUUPTNLInformation int = 0
 )
 
 type PathSwitchRequestAcknowledgeTransferExtIEsExtensionValue struct {
-	Choice                        int
+	Present                        int
 	AdditionalNGUUPTNLInformation *UPTransportLayerInformationPairList `vht:"Presence:PresenceOptional,Criticality:CriticalityIgnore,ProtocolExtensionID:ProtocolExtensionIDAdditionalNGUUPTNLInformation"`
 }
 
@@ -3394,11 +3396,11 @@ type PathSwitchRequestSetupFailedTransferExtIEs struct {
 }
 
 const (
-	PathSwitchRequestSetupFailedTransferExtIEsExtensionValueChoiceNothing int = 0
+	PathSwitchRequestSetupFailedTransferExtIEsExtensionValuePresentNothing int = 0
 )
 
 type PathSwitchRequestSetupFailedTransferExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type PathSwitchRequestTransfer struct {
@@ -3420,11 +3422,11 @@ type PathSwitchRequestTransferExtIEs struct {
 }
 
 const (
-	PathSwitchRequestTransferExtIEsExtensionValueChoiceAdditionalDLQosFlowPerTNLInformation int = 0
+	PathSwitchRequestTransferExtIEsExtensionValuePresentAdditionalDLQosFlowPerTNLInformation int = 0
 )
 
 type PathSwitchRequestTransferExtIEsExtensionValue struct {
-	Choice                               int
+	Present                               int
 	AdditionalDLQosFlowPerTNLInformation *QosFlowPerTNLInformationList `vht:"Presence:PresenceOptional,Criticality:CriticalityIgnore,ProtocolExtensionID:ProtocolExtensionIDAdditionalDLQosFlowPerTNLInformation"`
 }
 
@@ -3444,11 +3446,11 @@ type PathSwitchRequestUnsuccessfulTransferExtIEs struct {
 }
 
 const (
-	PathSwitchRequestUnsuccessfulTransferExtIEsExtensionValueChoiceNothing int = 0
+	PathSwitchRequestUnsuccessfulTransferExtIEsExtensionValuePresentNothing int = 0
 )
 
 type PathSwitchRequestUnsuccessfulTransferExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type PDUSessionAggregateMaximumBitRate struct {
@@ -3468,11 +3470,11 @@ type PDUSessionAggregateMaximumBitRateExtIEs struct {
 }
 
 const (
-	PDUSessionAggregateMaximumBitRateExtIEsExtensionValueChoiceNothing int = 0
+	PDUSessionAggregateMaximumBitRateExtIEsExtensionValuePresentNothing int = 0
 )
 
 type PDUSessionAggregateMaximumBitRateExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type PDUSessionID struct {
@@ -3500,11 +3502,11 @@ type PDUSessionResourceAdmittedItemExtIEs struct {
 }
 
 const (
-	PDUSessionResourceAdmittedItemExtIEsExtensionValueChoiceNothing int = 0
+	PDUSessionResourceAdmittedItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type PDUSessionResourceAdmittedItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type PDUSessionResourceFailedToModifyListModCfm struct {
@@ -3528,11 +3530,11 @@ type PDUSessionResourceFailedToModifyItemModCfmExtIEs struct {
 }
 
 const (
-	PDUSessionResourceFailedToModifyItemModCfmExtIEsExtensionValueChoiceNothing int = 0
+	PDUSessionResourceFailedToModifyItemModCfmExtIEsExtensionValuePresentNothing int = 0
 )
 
 type PDUSessionResourceFailedToModifyItemModCfmExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type PDUSessionResourceFailedToModifyListModRes struct {
@@ -3556,11 +3558,11 @@ type PDUSessionResourceFailedToModifyItemModResExtIEs struct {
 }
 
 const (
-	PDUSessionResourceFailedToModifyItemModResExtIEsExtensionValueChoiceNothing int = 0
+	PDUSessionResourceFailedToModifyItemModResExtIEsExtensionValuePresentNothing int = 0
 )
 
 type PDUSessionResourceFailedToModifyItemModResExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type PDUSessionResourceFailedToSetupListCxtFail struct {
@@ -3584,11 +3586,11 @@ type PDUSessionResourceFailedToSetupItemCxtFailExtIEs struct {
 }
 
 const (
-	PDUSessionResourceFailedToSetupItemCxtFailExtIEsExtensionValueChoiceNothing int = 0
+	PDUSessionResourceFailedToSetupItemCxtFailExtIEsExtensionValuePresentNothing int = 0
 )
 
 type PDUSessionResourceFailedToSetupItemCxtFailExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type PDUSessionResourceFailedToSetupListCxtRes struct {
@@ -3612,11 +3614,11 @@ type PDUSessionResourceFailedToSetupItemCxtResExtIEs struct {
 }
 
 const (
-	PDUSessionResourceFailedToSetupItemCxtResExtIEsExtensionValueChoiceNothing int = 0
+	PDUSessionResourceFailedToSetupItemCxtResExtIEsExtensionValuePresentNothing int = 0
 )
 
 type PDUSessionResourceFailedToSetupItemCxtResExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type PDUSessionResourceFailedToSetupListHOAck struct {
@@ -3640,11 +3642,11 @@ type PDUSessionResourceFailedToSetupItemHOAckExtIEs struct {
 }
 
 const (
-	PDUSessionResourceFailedToSetupItemHOAckExtIEsExtensionValueChoiceNothing int = 0
+	PDUSessionResourceFailedToSetupItemHOAckExtIEsExtensionValuePresentNothing int = 0
 )
 
 type PDUSessionResourceFailedToSetupItemHOAckExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type PDUSessionResourceFailedToSetupListPSReq struct {
@@ -3668,11 +3670,11 @@ type PDUSessionResourceFailedToSetupItemPSReqExtIEs struct {
 }
 
 const (
-	PDUSessionResourceFailedToSetupItemPSReqExtIEsExtensionValueChoiceNothing int = 0
+	PDUSessionResourceFailedToSetupItemPSReqExtIEsExtensionValuePresentNothing int = 0
 )
 
 type PDUSessionResourceFailedToSetupItemPSReqExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type PDUSessionResourceFailedToSetupListSURes struct {
@@ -3696,11 +3698,11 @@ type PDUSessionResourceFailedToSetupItemSUResExtIEs struct {
 }
 
 const (
-	PDUSessionResourceFailedToSetupItemSUResExtIEsExtensionValueChoiceNothing int = 0
+	PDUSessionResourceFailedToSetupItemSUResExtIEsExtensionValuePresentNothing int = 0
 )
 
 type PDUSessionResourceFailedToSetupItemSUResExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type PDUSessionResourceHandoverList struct {
@@ -3724,11 +3726,11 @@ type PDUSessionResourceHandoverItemExtIEs struct {
 }
 
 const (
-	PDUSessionResourceHandoverItemExtIEsExtensionValueChoiceNothing int = 0
+	PDUSessionResourceHandoverItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type PDUSessionResourceHandoverItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type PDUSessionResourceInformationList struct {
@@ -3753,11 +3755,11 @@ type PDUSessionResourceInformationItemExtIEs struct {
 }
 
 const (
-	PDUSessionResourceInformationItemExtIEsExtensionValueChoiceNothing int = 0
+	PDUSessionResourceInformationItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type PDUSessionResourceInformationItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type PDUSessionResourceListCxtRelCpl struct {
@@ -3780,11 +3782,11 @@ type PDUSessionResourceItemCxtRelCplExtIEs struct {
 }
 
 const (
-	PDUSessionResourceItemCxtRelCplExtIEsExtensionValueChoicePDUSessionResourceReleaseResponseTransfer int = 0
+	PDUSessionResourceItemCxtRelCplExtIEsExtensionValuePresentPDUSessionResourceReleaseResponseTransfer int = 0
 )
 
 type PDUSessionResourceItemCxtRelCplExtIEsExtensionValue struct {
-	Choice                                    int
+	Present                                    int
 	PDUSessionResourceReleaseResponseTransfer *OctetString `vht:"Presence:PresenceOptional,Criticality:CriticalityIgnore,ProtocolExtensionID:ProtocolExtensionIDPDUSessionResourceReleaseResponseTransfer,Reference:PDUSessionResourceReleaseResponseTransfer"`
 }
 
@@ -3808,11 +3810,11 @@ type PDUSessionResourceItemCxtRelReqExtIEs struct {
 }
 
 const (
-	PDUSessionResourceItemCxtRelReqExtIEsExtensionValueChoiceNothing int = 0
+	PDUSessionResourceItemCxtRelReqExtIEsExtensionValuePresentNothing int = 0
 )
 
 type PDUSessionResourceItemCxtRelReqExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type PDUSessionResourceListHORqd struct {
@@ -3836,11 +3838,11 @@ type PDUSessionResourceItemHORqdExtIEs struct {
 }
 
 const (
-	PDUSessionResourceItemHORqdExtIEsExtensionValueChoiceNothing int = 0
+	PDUSessionResourceItemHORqdExtIEsExtensionValuePresentNothing int = 0
 )
 
 type PDUSessionResourceItemHORqdExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type PDUSessionResourceModifyConfirmTransfer struct {
@@ -3862,11 +3864,11 @@ type PDUSessionResourceModifyConfirmTransferExtIEs struct {
 }
 
 const (
-	PDUSessionResourceModifyConfirmTransferExtIEsExtensionValueChoiceNothing int = 0
+	PDUSessionResourceModifyConfirmTransferExtIEsExtensionValuePresentNothing int = 0
 )
 
 type PDUSessionResourceModifyConfirmTransferExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type PDUSessionResourceModifyIndicationUnsuccessfulTransfer struct {
@@ -3885,11 +3887,11 @@ type PDUSessionResourceModifyIndicationUnsuccessfulTransferExtIEs struct {
 }
 
 const (
-	PDUSessionResourceModifyIndicationUnsuccessfulTransferExtIEsExtensionValueChoiceNothing int = 0
+	PDUSessionResourceModifyIndicationUnsuccessfulTransferExtIEsExtensionValuePresentNothing int = 0
 )
 
 type PDUSessionResourceModifyIndicationUnsuccessfulTransferExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type PDUSessionResourceModifyRequestTransfer struct {
@@ -3907,17 +3909,17 @@ type PDUSessionResourceModifyRequestTransferIEs struct {
 }
 
 const (
-	PDUSessionResourceModifyRequestTransferIEsTypeValueChoicePDUSessionAggregateMaximumBitRate int = 0
-	PDUSessionResourceModifyRequestTransferIEsTypeValueChoiceULNGUUPTNLModifyList              int = 1
-	PDUSessionResourceModifyRequestTransferIEsTypeValueChoiceNetworkInstance                   int = 2
-	PDUSessionResourceModifyRequestTransferIEsTypeValueChoiceQosFlowAddOrModifyRequestList     int = 3
-	PDUSessionResourceModifyRequestTransferIEsTypeValueChoiceQosFlowToReleaseList              int = 4
-	PDUSessionResourceModifyRequestTransferIEsTypeValueChoiceAdditionalULNGUUPTNLInformation   int = 5
-	PDUSessionResourceModifyRequestTransferIEsTypeValueChoiceCommonNetworkInstance             int = 6
+	PDUSessionResourceModifyRequestTransferIEsTypeValuePresentPDUSessionAggregateMaximumBitRate int = 0
+	PDUSessionResourceModifyRequestTransferIEsTypeValuePresentULNGUUPTNLModifyList              int = 1
+	PDUSessionResourceModifyRequestTransferIEsTypeValuePresentNetworkInstance                   int = 2
+	PDUSessionResourceModifyRequestTransferIEsTypeValuePresentQosFlowAddOrModifyRequestList     int = 3
+	PDUSessionResourceModifyRequestTransferIEsTypeValuePresentQosFlowToReleaseList              int = 4
+	PDUSessionResourceModifyRequestTransferIEsTypeValuePresentAdditionalULNGUUPTNLInformation   int = 5
+	PDUSessionResourceModifyRequestTransferIEsTypeValuePresentCommonNetworkInstance             int = 6
 )
 
 type PDUSessionResourceModifyRequestTransferIEsTypeValue struct {
-	Choice                            int
+	Present                            int
 	PDUSessionAggregateMaximumBitRate *PDUSessionAggregateMaximumBitRate `vht:"Presence:PresenceOptional,Criticality:CriticalityReject,ProtocolIEID:ProtocolIEIDPDUSessionAggregateMaximumBitRate"`
 	ULNGUUPTNLModifyList              *ULNGUUPTNLModifyList              `vht:"Presence:PresenceOptional,Criticality:CriticalityReject,ProtocolIEID:ProtocolIEIDULNGUUPTNLModifyList"`
 	NetworkInstance                   *NetworkInstance                   `vht:"Presence:PresenceOptional,Criticality:CriticalityReject,ProtocolIEID:ProtocolIEIDNetworkInstance"`
@@ -3947,11 +3949,11 @@ type PDUSessionResourceModifyResponseTransferExtIEs struct {
 }
 
 const (
-	PDUSessionResourceModifyResponseTransferExtIEsExtensionValueChoiceAdditionalNGUUPTNLInformation int = 0
+	PDUSessionResourceModifyResponseTransferExtIEsExtensionValuePresentAdditionalNGUUPTNLInformation int = 0
 )
 
 type PDUSessionResourceModifyResponseTransferExtIEsExtensionValue struct {
-	Choice                        int
+	Present                        int
 	AdditionalNGUUPTNLInformation *UPTransportLayerInformationPairList `vht:"Presence:PresenceOptional,Criticality:CriticalityIgnore,ProtocolExtensionID:ProtocolExtensionIDAdditionalNGUUPTNLInformation"`
 }
 
@@ -3972,12 +3974,12 @@ type PDUSessionResourceModifyIndicationTransferExtIEs struct {
 }
 
 const (
-	PDUSessionResourceModifyIndicationTransferExtIEsExtensionValueChoiceSecondaryRATUsageInformation int = 0
-	PDUSessionResourceModifyIndicationTransferExtIEsExtensionValueChoiceSecurityResult               int = 1
+	PDUSessionResourceModifyIndicationTransferExtIEsExtensionValuePresentSecondaryRATUsageInformation int = 0
+	PDUSessionResourceModifyIndicationTransferExtIEsExtensionValuePresentSecurityResult               int = 1
 )
 
 type PDUSessionResourceModifyIndicationTransferExtIEsExtensionValue struct {
-	Choice                       int
+	Present                       int
 	SecondaryRATUsageInformation *SecondaryRATUsageInformation `vht:"Presence:PresenceOptional,Criticality:CriticalityIgnore,ProtocolExtensionID:ProtocolExtensionIDSecondaryRATUsageInformation"`
 	SecurityResult               *SecurityResult               `vht:"Presence:PresenceOptional,Criticality:CriticalityIgnore,ProtocolExtensionID:ProtocolExtensionIDSecurityResult"`
 }
@@ -4003,11 +4005,11 @@ type PDUSessionResourceModifyItemModCfmExtIEs struct {
 }
 
 const (
-	PDUSessionResourceModifyItemModCfmExtIEsExtensionValueChoiceNothing int = 0
+	PDUSessionResourceModifyItemModCfmExtIEsExtensionValuePresentNothing int = 0
 )
 
 type PDUSessionResourceModifyItemModCfmExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type PDUSessionResourceModifyListModInd struct {
@@ -4031,11 +4033,11 @@ type PDUSessionResourceModifyItemModIndExtIEs struct {
 }
 
 const (
-	PDUSessionResourceModifyItemModIndExtIEsExtensionValueChoiceNothing int = 0
+	PDUSessionResourceModifyItemModIndExtIEsExtensionValuePresentNothing int = 0
 )
 
 type PDUSessionResourceModifyItemModIndExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type PDUSessionResourceModifyListModReq struct {
@@ -4060,11 +4062,11 @@ type PDUSessionResourceModifyItemModReqExtIEs struct {
 }
 
 const (
-	PDUSessionResourceModifyItemModReqExtIEsExtensionValueChoiceSNSSAI int = 0
+	PDUSessionResourceModifyItemModReqExtIEsExtensionValuePresentSNSSAI int = 0
 )
 
 type PDUSessionResourceModifyItemModReqExtIEsExtensionValue struct {
-	Choice int
+	Present int
 	SNSSAI *SNSSAI `vht:"Presence:PresenceOptional,Criticality:CriticalityReject,ProtocolExtensionID:ProtocolExtensionIDSNSSAI"`
 }
 
@@ -4089,11 +4091,11 @@ type PDUSessionResourceModifyItemModResExtIEs struct {
 }
 
 const (
-	PDUSessionResourceModifyItemModResExtIEsExtensionValueChoiceNothing int = 0
+	PDUSessionResourceModifyItemModResExtIEsExtensionValuePresentNothing int = 0
 )
 
 type PDUSessionResourceModifyItemModResExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type PDUSessionResourceModifyUnsuccessfulTransfer struct {
@@ -4113,11 +4115,11 @@ type PDUSessionResourceModifyUnsuccessfulTransferExtIEs struct {
 }
 
 const (
-	PDUSessionResourceModifyUnsuccessfulTransferExtIEsExtensionValueChoiceNothing int = 0
+	PDUSessionResourceModifyUnsuccessfulTransferExtIEsExtensionValuePresentNothing int = 0
 )
 
 type PDUSessionResourceModifyUnsuccessfulTransferExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type PDUSessionResourceNotifyList struct {
@@ -4141,11 +4143,11 @@ type PDUSessionResourceNotifyItemExtIEs struct {
 }
 
 const (
-	PDUSessionResourceNotifyItemExtIEsExtensionValueChoiceNothing int = 0
+	PDUSessionResourceNotifyItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type PDUSessionResourceNotifyItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type PDUSessionResourceNotifyReleasedTransfer struct {
@@ -4164,11 +4166,11 @@ type PDUSessionResourceNotifyReleasedTransferExtIEs struct {
 }
 
 const (
-	PDUSessionResourceNotifyReleasedTransferExtIEsExtensionValueChoiceSecondaryRATUsageInformation int = 0
+	PDUSessionResourceNotifyReleasedTransferExtIEsExtensionValuePresentSecondaryRATUsageInformation int = 0
 )
 
 type PDUSessionResourceNotifyReleasedTransferExtIEsExtensionValue struct {
-	Choice                       int
+	Present                       int
 	SecondaryRATUsageInformation *SecondaryRATUsageInformation `vht:"Presence:PresenceOptional,Criticality:CriticalityIgnore,ProtocolExtensionID:ProtocolExtensionIDSecondaryRATUsageInformation"`
 }
 
@@ -4189,11 +4191,11 @@ type PDUSessionResourceNotifyTransferExtIEs struct {
 }
 
 const (
-	PDUSessionResourceNotifyTransferExtIEsExtensionValueChoiceSecondaryRATUsageInformation int = 0
+	PDUSessionResourceNotifyTransferExtIEsExtensionValuePresentSecondaryRATUsageInformation int = 0
 )
 
 type PDUSessionResourceNotifyTransferExtIEsExtensionValue struct {
-	Choice                       int
+	Present                       int
 	SecondaryRATUsageInformation *SecondaryRATUsageInformation `vht:"Presence:PresenceOptional,Criticality:CriticalityIgnore,ProtocolExtensionID:ProtocolExtensionIDSecondaryRATUsageInformation"`
 }
 
@@ -4213,11 +4215,11 @@ type PDUSessionResourceReleaseCommandTransferExtIEs struct {
 }
 
 const (
-	PDUSessionResourceReleaseCommandTransferExtIEsExtensionValueChoiceNothing int = 0
+	PDUSessionResourceReleaseCommandTransferExtIEsExtensionValuePresentNothing int = 0
 )
 
 type PDUSessionResourceReleaseCommandTransferExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type PDUSessionResourceReleasedListNot struct {
@@ -4241,11 +4243,11 @@ type PDUSessionResourceReleasedItemNotExtIEs struct {
 }
 
 const (
-	PDUSessionResourceReleasedItemNotExtIEsExtensionValueChoiceNothing int = 0
+	PDUSessionResourceReleasedItemNotExtIEsExtensionValuePresentNothing int = 0
 )
 
 type PDUSessionResourceReleasedItemNotExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type PDUSessionResourceReleasedListPSAck struct {
@@ -4269,11 +4271,11 @@ type PDUSessionResourceReleasedItemPSAckExtIEs struct {
 }
 
 const (
-	PDUSessionResourceReleasedItemPSAckExtIEsExtensionValueChoiceNothing int = 0
+	PDUSessionResourceReleasedItemPSAckExtIEsExtensionValuePresentNothing int = 0
 )
 
 type PDUSessionResourceReleasedItemPSAckExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type PDUSessionResourceReleasedListPSFail struct {
@@ -4297,11 +4299,11 @@ type PDUSessionResourceReleasedItemPSFailExtIEs struct {
 }
 
 const (
-	PDUSessionResourceReleasedItemPSFailExtIEsExtensionValueChoiceNothing int = 0
+	PDUSessionResourceReleasedItemPSFailExtIEsExtensionValuePresentNothing int = 0
 )
 
 type PDUSessionResourceReleasedItemPSFailExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type PDUSessionResourceReleasedListRelRes struct {
@@ -4325,11 +4327,11 @@ type PDUSessionResourceReleasedItemRelResExtIEs struct {
 }
 
 const (
-	PDUSessionResourceReleasedItemRelResExtIEsExtensionValueChoiceNothing int = 0
+	PDUSessionResourceReleasedItemRelResExtIEsExtensionValuePresentNothing int = 0
 )
 
 type PDUSessionResourceReleasedItemRelResExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type PDUSessionResourceReleaseResponseTransfer struct {
@@ -4347,11 +4349,11 @@ type PDUSessionResourceReleaseResponseTransferExtIEs struct {
 }
 
 const (
-	PDUSessionResourceReleaseResponseTransferExtIEsExtensionValueChoiceSecondaryRATUsageInformation int = 0
+	PDUSessionResourceReleaseResponseTransferExtIEsExtensionValuePresentSecondaryRATUsageInformation int = 0
 )
 
 type PDUSessionResourceReleaseResponseTransferExtIEsExtensionValue struct {
-	Choice                       int
+	Present                       int
 	SecondaryRATUsageInformation *SecondaryRATUsageInformation `vht:"Presence:PresenceOptional,Criticality:CriticalityIgnore,ProtocolExtensionID:ProtocolExtensionIDSecondaryRATUsageInformation"`
 }
 
@@ -4376,11 +4378,11 @@ type PDUSessionResourceSecondaryRATUsageItemExtIEs struct {
 }
 
 const (
-	PDUSessionResourceSecondaryRATUsageItemExtIEsExtensionValueChoiceNothing int = 0
+	PDUSessionResourceSecondaryRATUsageItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type PDUSessionResourceSecondaryRATUsageItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type PDUSessionResourceSetupListCxtReq struct {
@@ -4406,11 +4408,11 @@ type PDUSessionResourceSetupItemCxtReqExtIEs struct {
 }
 
 const (
-	PDUSessionResourceSetupItemCxtReqExtIEsExtensionValueChoiceNothing int = 0
+	PDUSessionResourceSetupItemCxtReqExtIEsExtensionValuePresentNothing int = 0
 )
 
 type PDUSessionResourceSetupItemCxtReqExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type PDUSessionResourceSetupListCxtRes struct {
@@ -4434,11 +4436,11 @@ type PDUSessionResourceSetupItemCxtResExtIEs struct {
 }
 
 const (
-	PDUSessionResourceSetupItemCxtResExtIEsExtensionValueChoiceNothing int = 0
+	PDUSessionResourceSetupItemCxtResExtIEsExtensionValuePresentNothing int = 0
 )
 
 type PDUSessionResourceSetupItemCxtResExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type PDUSessionResourceSetupListHOReq struct {
@@ -4463,11 +4465,11 @@ type PDUSessionResourceSetupItemHOReqExtIEs struct {
 }
 
 const (
-	PDUSessionResourceSetupItemHOReqExtIEsExtensionValueChoiceNothing int = 0
+	PDUSessionResourceSetupItemHOReqExtIEsExtensionValuePresentNothing int = 0
 )
 
 type PDUSessionResourceSetupItemHOReqExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type PDUSessionResourceSetupListSUReq struct {
@@ -4493,11 +4495,11 @@ type PDUSessionResourceSetupItemSUReqExtIEs struct {
 }
 
 const (
-	PDUSessionResourceSetupItemSUReqExtIEsExtensionValueChoiceNothing int = 0
+	PDUSessionResourceSetupItemSUReqExtIEsExtensionValuePresentNothing int = 0
 )
 
 type PDUSessionResourceSetupItemSUReqExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type PDUSessionResourceSetupListSURes struct {
@@ -4521,11 +4523,11 @@ type PDUSessionResourceSetupItemSUResExtIEs struct {
 }
 
 const (
-	PDUSessionResourceSetupItemSUResExtIEsExtensionValueChoiceNothing int = 0
+	PDUSessionResourceSetupItemSUResExtIEsExtensionValuePresentNothing int = 0
 )
 
 type PDUSessionResourceSetupItemSUResExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type PDUSessionResourceSetupRequestTransfer struct {
@@ -4543,20 +4545,20 @@ type PDUSessionResourceSetupRequestTransferIEs struct {
 }
 
 const (
-	PDUSessionResourceSetupRequestTransferIEsTypeValueChoicePDUSessionAggregateMaximumBitRate int = 0
-	PDUSessionResourceSetupRequestTransferIEsTypeValueChoiceULNGUUPTNLInformation             int = 1
-	PDUSessionResourceSetupRequestTransferIEsTypeValueChoiceAdditionalULNGUUPTNLInformation   int = 2
-	PDUSessionResourceSetupRequestTransferIEsTypeValueChoiceDataForwardingNotPossible         int = 3
-	PDUSessionResourceSetupRequestTransferIEsTypeValueChoicePDUSessionType                    int = 4
-	PDUSessionResourceSetupRequestTransferIEsTypeValueChoiceSecurityIndication                int = 5
-	PDUSessionResourceSetupRequestTransferIEsTypeValueChoiceNetworkInstance                   int = 6
-	PDUSessionResourceSetupRequestTransferIEsTypeValueChoiceQosFlowSetupRequestList           int = 7
-	PDUSessionResourceSetupRequestTransferIEsTypeValueChoiceCommonNetworkInstance             int = 8
-	PDUSessionResourceSetupRequestTransferIEsTypeValueChoiceDirectForwardingPathAvailability  int = 9
+	PDUSessionResourceSetupRequestTransferIEsTypeValuePresentPDUSessionAggregateMaximumBitRate int = 0
+	PDUSessionResourceSetupRequestTransferIEsTypeValuePresentULNGUUPTNLInformation             int = 1
+	PDUSessionResourceSetupRequestTransferIEsTypeValuePresentAdditionalULNGUUPTNLInformation   int = 2
+	PDUSessionResourceSetupRequestTransferIEsTypeValuePresentDataForwardingNotPossible         int = 3
+	PDUSessionResourceSetupRequestTransferIEsTypeValuePresentPDUSessionType                    int = 4
+	PDUSessionResourceSetupRequestTransferIEsTypeValuePresentSecurityIndication                int = 5
+	PDUSessionResourceSetupRequestTransferIEsTypeValuePresentNetworkInstance                   int = 6
+	PDUSessionResourceSetupRequestTransferIEsTypeValuePresentQosFlowSetupRequestList           int = 7
+	PDUSessionResourceSetupRequestTransferIEsTypeValuePresentCommonNetworkInstance             int = 8
+	PDUSessionResourceSetupRequestTransferIEsTypeValuePresentDirectForwardingPathAvailability  int = 9
 )
 
 type PDUSessionResourceSetupRequestTransferIEsTypeValue struct {
-	Choice                            int
+	Present                            int
 	PDUSessionAggregateMaximumBitRate *PDUSessionAggregateMaximumBitRate `vht:"Presence:PresenceOptional,Criticality:CriticalityReject,ProtocolIEID:ProtocolIEIDPDUSessionAggregateMaximumBitRate"`
 	ULNGUUPTNLInformation             *UPTransportLayerInformation       `vht:"Presence:PresenceMandatory,Criticality:CriticalityReject,ProtocolIEID:ProtocolIEIDULNGUUPTNLInformation"`
 	AdditionalULNGUUPTNLInformation   *UPTransportLayerInformationList   `vht:"Presence:PresenceOptional,Criticality:CriticalityReject,ProtocolIEID:ProtocolIEIDAdditionalULNGUUPTNLInformation"`
@@ -4588,11 +4590,11 @@ type PDUSessionResourceSetupResponseTransferExtIEs struct {
 }
 
 const (
-	PDUSessionResourceSetupResponseTransferExtIEsExtensionValueChoiceNothing int = 0
+	PDUSessionResourceSetupResponseTransferExtIEsExtensionValuePresentNothing int = 0
 )
 
 type PDUSessionResourceSetupResponseTransferExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type PDUSessionResourceSetupUnsuccessfulTransfer struct {
@@ -4612,11 +4614,11 @@ type PDUSessionResourceSetupUnsuccessfulTransferExtIEs struct {
 }
 
 const (
-	PDUSessionResourceSetupUnsuccessfulTransferExtIEsExtensionValueChoiceNothing int = 0
+	PDUSessionResourceSetupUnsuccessfulTransferExtIEsExtensionValuePresentNothing int = 0
 )
 
 type PDUSessionResourceSetupUnsuccessfulTransferExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type PDUSessionResourceSwitchedList struct {
@@ -4640,11 +4642,11 @@ type PDUSessionResourceSwitchedItemExtIEs struct {
 }
 
 const (
-	PDUSessionResourceSwitchedItemExtIEsExtensionValueChoiceNothing int = 0
+	PDUSessionResourceSwitchedItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type PDUSessionResourceSwitchedItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type PDUSessionResourceToBeSwitchedDLList struct {
@@ -4668,11 +4670,11 @@ type PDUSessionResourceToBeSwitchedDLItemExtIEs struct {
 }
 
 const (
-	PDUSessionResourceToBeSwitchedDLItemExtIEsExtensionValueChoiceNothing int = 0
+	PDUSessionResourceToBeSwitchedDLItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type PDUSessionResourceToBeSwitchedDLItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type PDUSessionResourceToReleaseListHOCmd struct {
@@ -4696,11 +4698,11 @@ type PDUSessionResourceToReleaseItemHOCmdExtIEs struct {
 }
 
 const (
-	PDUSessionResourceToReleaseItemHOCmdExtIEsExtensionValueChoiceNothing int = 0
+	PDUSessionResourceToReleaseItemHOCmdExtIEsExtensionValuePresentNothing int = 0
 )
 
 type PDUSessionResourceToReleaseItemHOCmdExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type PDUSessionResourceToReleaseListRelCmd struct {
@@ -4724,11 +4726,11 @@ type PDUSessionResourceToReleaseItemRelCmdExtIEs struct {
 }
 
 const (
-	PDUSessionResourceToReleaseItemRelCmdExtIEsExtensionValueChoiceNothing int = 0
+	PDUSessionResourceToReleaseItemRelCmdExtIEsExtensionValuePresentNothing int = 0
 )
 
 type PDUSessionResourceToReleaseItemRelCmdExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 const (
@@ -4767,11 +4769,11 @@ type PDUSessionUsageReportExtIEs struct {
 }
 
 const (
-	PDUSessionUsageReportExtIEsExtensionValueChoiceNothing int = 0
+	PDUSessionUsageReportExtIEsExtensionValuePresentNothing int = 0
 )
 
 type PDUSessionUsageReportExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type PeriodicRegistrationUpdateTimer struct {
@@ -4803,11 +4805,11 @@ type PLMNSupportItemExtIEs struct {
 }
 
 const (
-	PLMNSupportItemExtIEsExtensionValueChoiceNothing int = 0
+	PLMNSupportItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type PLMNSupportItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type PortNumber struct {
@@ -4841,16 +4843,16 @@ type PriorityLevelQos struct {
 }
 
 const (
-	PWSFailedCellIDListChoiceEUTRACGIPWSFailedList int = 0
-	PWSFailedCellIDListChoiceNRCGIPWSFailedList    int = 1
-	PWSFailedCellIDListChoiceChoiceExtensions      int = 2
+	PWSFailedCellIDListPresentEUTRACGIPWSFailedList int = 0
+	PWSFailedCellIDListPresentNRCGIPWSFailedList    int = 1
+	PWSFailedCellIDListPresentPresentExtensions      int = 2
 )
 
 type PWSFailedCellIDList struct {
-	Choice                int
+	Present                int
 	EUTRACGIPWSFailedList *EUTRACGIList
 	NRCGIPWSFailedList    *NRCGIList
-	ChoiceExtensions      *ProtocolIESingleContainerPWSFailedCellIDListExtIEs
+	PresentExtensions      *ProtocolIESingleContainerPWSFailedCellIDListExtIEs
 }
 
 type ProtocolIESingleContainerPWSFailedCellIDListExtIEs struct {
@@ -4864,24 +4866,24 @@ type PWSFailedCellIDListExtIEs struct {
 }
 
 const (
-	PWSFailedCellIDListExtIEsTypeValueChoiceNothing int = 0
+	PWSFailedCellIDListExtIEsTypeValuePresentNothing int = 0
 )
 
 type PWSFailedCellIDListExtIEsTypeValue struct {
-	Choice int
+	Present int
 }
 
 const (
-	QosCharacteristicsChoiceNonDynamic5QI    int = 0
-	QosCharacteristicsChoiceDynamic5QI       int = 1
-	QosCharacteristicsChoiceChoiceExtensions int = 2
+	QosCharacteristicsPresentNonDynamic5QI    int = 0
+	QosCharacteristicsPresentDynamic5QI       int = 1
+	QosCharacteristicsPresentPresentExtensions int = 2
 )
 
 type QosCharacteristics struct {
-	Choice           int
+	Present           int
 	NonDynamic5QI    *NonDynamic5QIDescriptor
 	Dynamic5QI       *Dynamic5QIDescriptor
-	ChoiceExtensions *ProtocolIESingleContainerQosCharacteristicsExtIEs
+	PresentExtensions *ProtocolIESingleContainerQosCharacteristicsExtIEs
 }
 
 type ProtocolIESingleContainerQosCharacteristicsExtIEs struct {
@@ -4895,11 +4897,11 @@ type QosCharacteristicsExtIEs struct {
 }
 
 const (
-	QosCharacteristicsExtIEsTypeValueChoiceNothing int = 0
+	QosCharacteristicsExtIEsTypeValuePresentNothing int = 0
 )
 
 type QosCharacteristicsExtIEsTypeValue struct {
-	Choice int
+	Present int
 }
 
 type QosFlowAcceptedList struct {
@@ -4922,11 +4924,11 @@ type QosFlowAcceptedItemExtIEs struct {
 }
 
 const (
-	QosFlowAcceptedItemExtIEsExtensionValueChoiceNothing int = 0
+	QosFlowAcceptedItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type QosFlowAcceptedItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type QosFlowAddOrModifyRequestList struct {
@@ -4951,11 +4953,11 @@ type QosFlowAddOrModifyRequestItemExtIEs struct {
 }
 
 const (
-	QosFlowAddOrModifyRequestItemExtIEsExtensionValueChoiceNothing int = 0
+	QosFlowAddOrModifyRequestItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type QosFlowAddOrModifyRequestItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type QosFlowAddOrModifyResponseList struct {
@@ -4978,11 +4980,11 @@ type QosFlowAddOrModifyResponseItemExtIEs struct {
 }
 
 const (
-	QosFlowAddOrModifyResponseItemExtIEsExtensionValueChoiceNothing int = 0
+	QosFlowAddOrModifyResponseItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type QosFlowAddOrModifyResponseItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type QosFlowIdentifier struct {
@@ -5010,11 +5012,11 @@ type QosFlowInformationItemExtIEs struct {
 }
 
 const (
-	QosFlowInformationItemExtIEsExtensionValueChoiceULForwarding int = 0
+	QosFlowInformationItemExtIEsExtensionValuePresentULForwarding int = 0
 )
 
 type QosFlowInformationItemExtIEsExtensionValue struct {
-	Choice       int
+	Present       int
 	ULForwarding *ULForwarding `vht:"Presence:PresenceOptional,Criticality:CriticalityReject,ProtocolExtensionID:ProtocolExtensionIDULForwarding"`
 }
 
@@ -5038,11 +5040,11 @@ type QosFlowLevelQosParametersExtIEs struct {
 }
 
 const (
-	QosFlowLevelQosParametersExtIEsExtensionValueChoiceQosMonitoringRequest int = 0
+	QosFlowLevelQosParametersExtIEsExtensionValuePresentQosMonitoringRequest int = 0
 )
 
 type QosFlowLevelQosParametersExtIEsExtensionValue struct {
-	Choice               int
+	Present               int
 	QosMonitoringRequest *QosMonitoringRequest `vht:"Presence:PresenceOptional,Criticality:CriticalityIgnore,ProtocolExtensionID:ProtocolExtensionIDQosMonitoringRequest"`
 }
 
@@ -5077,11 +5079,11 @@ type QosFlowWithCauseItemExtIEs struct {
 }
 
 const (
-	QosFlowWithCauseItemExtIEsExtensionValueChoiceNothing int = 0
+	QosFlowWithCauseItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type QosFlowWithCauseItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type QosFlowModifyConfirmList struct {
@@ -5104,11 +5106,11 @@ type QosFlowModifyConfirmItemExtIEs struct {
 }
 
 const (
-	QosFlowModifyConfirmItemExtIEsExtensionValueChoiceNothing int = 0
+	QosFlowModifyConfirmItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type QosFlowModifyConfirmItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type QosFlowNotifyList struct {
@@ -5132,11 +5134,11 @@ type QosFlowNotifyItemExtIEs struct {
 }
 
 const (
-	QosFlowNotifyItemExtIEsExtensionValueChoiceNothing int = 0
+	QosFlowNotifyItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type QosFlowNotifyItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type QosFlowPerTNLInformation struct {
@@ -5156,11 +5158,11 @@ type QosFlowPerTNLInformationExtIEs struct {
 }
 
 const (
-	QosFlowPerTNLInformationExtIEsExtensionValueChoiceNothing int = 0
+	QosFlowPerTNLInformationExtIEsExtensionValuePresentNothing int = 0
 )
 
 type QosFlowPerTNLInformationExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type QosFlowPerTNLInformationList struct {
@@ -5183,11 +5185,11 @@ type QosFlowPerTNLInformationItemExtIEs struct {
 }
 
 const (
-	QosFlowPerTNLInformationItemExtIEsExtensionValueChoiceNothing int = 0
+	QosFlowPerTNLInformationItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type QosFlowPerTNLInformationItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type QosFlowSetupRequestList struct {
@@ -5212,11 +5214,11 @@ type QosFlowSetupRequestItemExtIEs struct {
 }
 
 const (
-	QosFlowSetupRequestItemExtIEsExtensionValueChoiceNothing int = 0
+	QosFlowSetupRequestItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type QosFlowSetupRequestItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type QosFlowListWithDataForwarding struct {
@@ -5240,11 +5242,11 @@ type QosFlowItemWithDataForwardingExtIEs struct {
 }
 
 const (
-	QosFlowItemWithDataForwardingExtIEsExtensionValueChoiceNothing int = 0
+	QosFlowItemWithDataForwardingExtIEsExtensionValuePresentNothing int = 0
 )
 
 type QosFlowItemWithDataForwardingExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type QosFlowToBeForwardedList struct {
@@ -5267,11 +5269,11 @@ type QosFlowToBeForwardedItemExtIEs struct {
 }
 
 const (
-	QosFlowToBeForwardedItemExtIEsExtensionValueChoiceNothing int = 0
+	QosFlowToBeForwardedItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type QosFlowToBeForwardedItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type QoSFlowsUsageReportList struct {
@@ -5296,11 +5298,11 @@ type QoSFlowsUsageReportItemExtIEs struct {
 }
 
 const (
-	QoSFlowsUsageReportItemExtIEsExtensionValueChoiceNothing int = 0
+	QoSFlowsUsageReportItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type QoSFlowsUsageReportItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type RANNodeName struct {
@@ -5327,11 +5329,11 @@ type RANStatusTransferTransparentContainerExtIEs struct {
 }
 
 const (
-	RANStatusTransferTransparentContainerExtIEsExtensionValueChoiceNothing int = 0
+	RANStatusTransferTransparentContainerExtIEsExtensionValuePresentNothing int = 0
 )
 
 type RANStatusTransferTransparentContainerExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type RANUENGAPID struct {
@@ -5367,11 +5369,11 @@ type RATRestrictionsItemExtIEs struct {
 }
 
 const (
-	RATRestrictionsItemExtIEsExtensionValueChoiceExtendedRATRestrictionInformation int = 0
+	RATRestrictionsItemExtIEsExtensionValuePresentExtendedRATRestrictionInformation int = 0
 )
 
 type RATRestrictionsItemExtIEsExtensionValue struct {
-	Choice                            int
+	Present                            int
 	ExtendedRATRestrictionInformation *ExtendedRATRestrictionInformation `vht:"Presence:PresenceOptional,Criticality:CriticalityIgnore,ProtocolExtensionID:ProtocolExtensionIDExtendedRATRestrictionInformation"`
 }
 
@@ -5395,11 +5397,11 @@ type RecommendedCellsForPagingExtIEs struct {
 }
 
 const (
-	RecommendedCellsForPagingExtIEsExtensionValueChoiceNothing int = 0
+	RecommendedCellsForPagingExtIEsExtensionValuePresentNothing int = 0
 )
 
 type RecommendedCellsForPagingExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type RecommendedCellList struct {
@@ -5423,11 +5425,11 @@ type RecommendedCellItemExtIEs struct {
 }
 
 const (
-	RecommendedCellItemExtIEsExtensionValueChoiceNothing int = 0
+	RecommendedCellItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type RecommendedCellItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type RecommendedRANNodesForPaging struct {
@@ -5446,11 +5448,11 @@ type RecommendedRANNodesForPagingExtIEs struct {
 }
 
 const (
-	RecommendedRANNodesForPagingExtIEsExtensionValueChoiceNothing int = 0
+	RecommendedRANNodesForPagingExtIEsExtensionValuePresentNothing int = 0
 )
 
 type RecommendedRANNodesForPagingExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type RecommendedRANNodeList struct {
@@ -5473,11 +5475,11 @@ type RecommendedRANNodeItemExtIEs struct {
 }
 
 const (
-	RecommendedRANNodeItemExtIEsExtensionValueChoiceNothing int = 0
+	RecommendedRANNodeItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type RecommendedRANNodeItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 const (
@@ -5522,16 +5524,16 @@ type ResetAll struct {
 }
 
 const (
-	ResetTypeChoiceNGInterface       int = 0
-	ResetTypeChoicePartOfNGInterface int = 1
-	ResetTypeChoiceChoiceExtensions  int = 2
+	ResetTypePresentNGInterface       int = 0
+	ResetTypePresentPartOfNGInterface int = 1
+	ResetTypePresentPresentExtensions  int = 2
 )
 
 type ResetType struct {
-	Choice            int
+	Present            int
 	NGInterface       *ResetAll
 	PartOfNGInterface *UEAssociatedLogicalNGConnectionList
-	ChoiceExtensions  *ProtocolIESingleContainerResetTypeExtIEs
+	PresentExtensions  *ProtocolIESingleContainerResetTypeExtIEs
 }
 
 type ProtocolIESingleContainerResetTypeExtIEs struct {
@@ -5545,11 +5547,11 @@ type ResetTypeExtIEs struct {
 }
 
 const (
-	ResetTypeExtIEsTypeValueChoiceNothing int = 0
+	ResetTypeExtIEsTypeValuePresentNothing int = 0
 )
 
 type ResetTypeExtIEsTypeValue struct {
-	Choice int
+	Present int
 }
 
 type RNCID struct {
@@ -5619,11 +5621,11 @@ type RIMInformationTransferExtIEs struct {
 }
 
 const (
-	RIMInformationTransferExtIEsExtensionValueChoiceNothing int = 0
+	RIMInformationTransferExtIEsExtensionValuePresentNothing int = 0
 )
 
 type RIMInformationTransferExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 const (
@@ -5665,11 +5667,11 @@ type SecondaryRATUsageInformationExtIEs struct {
 }
 
 const (
-	SecondaryRATUsageInformationExtIEsExtensionValueChoiceNothing int = 0
+	SecondaryRATUsageInformationExtIEsExtensionValuePresentNothing int = 0
 )
 
 type SecondaryRATUsageInformationExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type SecondaryRATDataUsageReportTransfer struct {
@@ -5688,11 +5690,11 @@ type SecondaryRATDataUsageReportTransferExtIEs struct {
 }
 
 const (
-	SecondaryRATDataUsageReportTransferExtIEsExtensionValueChoiceNothing int = 0
+	SecondaryRATDataUsageReportTransferExtIEsExtensionValuePresentNothing int = 0
 )
 
 type SecondaryRATDataUsageReportTransferExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type SecurityContext struct {
@@ -5712,11 +5714,11 @@ type SecurityContextExtIEs struct {
 }
 
 const (
-	SecurityContextExtIEsExtensionValueChoiceNothing int = 0
+	SecurityContextExtIEsExtensionValuePresentNothing int = 0
 )
 
 type SecurityContextExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type SecurityIndication struct {
@@ -5737,11 +5739,11 @@ type SecurityIndicationExtIEs struct {
 }
 
 const (
-	SecurityIndicationExtIEsExtensionValueChoiceMaximumIntegrityProtectedDataRateDL int = 0
+	SecurityIndicationExtIEsExtensionValuePresentMaximumIntegrityProtectedDataRateDL int = 0
 )
 
 type SecurityIndicationExtIEsExtensionValue struct {
-	Choice                              int
+	Present                              int
 	MaximumIntegrityProtectedDataRateDL *MaximumIntegrityProtectedDataRate `vht:"Presence:PresenceOptional,Criticality:CriticalityIgnore,ProtocolExtensionID:ProtocolExtensionIDMaximumIntegrityProtectedDataRateDL"`
 }
 
@@ -5766,11 +5768,11 @@ type SecurityResultExtIEs struct {
 }
 
 const (
-	SecurityResultExtIEsExtensionValueChoiceNothing int = 0
+	SecurityResultExtIEsExtensionValuePresentNothing int = 0
 )
 
 type SecurityResultExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type SerialNumber struct {
@@ -5798,11 +5800,11 @@ type ServedGUAMIItemExtIEs struct {
 }
 
 const (
-	ServedGUAMIItemExtIEsExtensionValueChoiceGUAMIType int = 0
+	ServedGUAMIItemExtIEsExtensionValuePresentGUAMIType int = 0
 )
 
 type ServedGUAMIItemExtIEsExtensionValue struct {
-	Choice    int
+	Present    int
 	GUAMIType *GUAMIType `vht:"Presence:PresenceOptional,Criticality:CriticalityIgnore,ProtocolExtensionID:ProtocolExtensionIDGUAMIType"`
 }
 
@@ -5828,11 +5830,11 @@ type ServiceAreaInformationItemExtIEs struct {
 }
 
 const (
-	ServiceAreaInformationItemExtIEsExtensionValueChoiceNothing int = 0
+	ServiceAreaInformationItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type ServiceAreaInformationItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type SgNBUEX2APID struct {
@@ -5859,11 +5861,11 @@ type SliceOverloadItemExtIEs struct {
 }
 
 const (
-	SliceOverloadItemExtIEsExtensionValueChoiceNothing int = 0
+	SliceOverloadItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type SliceOverloadItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type SliceSupportList struct {
@@ -5886,11 +5888,11 @@ type SliceSupportItemExtIEs struct {
 }
 
 const (
-	SliceSupportItemExtIEsExtensionValueChoiceNothing int = 0
+	SliceSupportItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type SliceSupportItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type SNSSAI struct {
@@ -5910,11 +5912,11 @@ type SNSSAIExtIEs struct {
 }
 
 const (
-	SNSSAIExtIEsExtensionValueChoiceNothing int = 0
+	SNSSAIExtIEsExtensionValuePresentNothing int = 0
 )
 
 type SNSSAIExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type SONConfigurationTransfer struct {
@@ -5936,24 +5938,24 @@ type SONConfigurationTransferExtIEs struct {
 }
 
 const (
-	SONConfigurationTransferExtIEsExtensionValueChoiceNothing int = 0
+	SONConfigurationTransferExtIEsExtensionValuePresentNothing int = 0
 )
 
 type SONConfigurationTransferExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 const (
-	SONInformationChoiceSONInformationRequest int = 0
-	SONInformationChoiceSONInformationReply   int = 1
-	SONInformationChoiceChoiceExtensions      int = 2
+	SONInformationPresentSONInformationRequest int = 0
+	SONInformationPresentSONInformationReply   int = 1
+	SONInformationPresentPresentExtensions      int = 2
 )
 
 type SONInformation struct {
-	Choice                int
+	Present                int
 	SONInformationRequest *SONInformationRequest
 	SONInformationReply   *SONInformationReply
-	ChoiceExtensions      *ProtocolIESingleContainerSONInformationExtIEs
+	PresentExtensions      *ProtocolIESingleContainerSONInformationExtIEs
 }
 
 type ProtocolIESingleContainerSONInformationExtIEs struct {
@@ -5967,11 +5969,11 @@ type SONInformationExtIEs struct {
 }
 
 const (
-	SONInformationExtIEsTypeValueChoiceNothing int = 0
+	SONInformationExtIEsTypeValuePresentNothing int = 0
 )
 
 type SONInformationExtIEsTypeValue struct {
-	Choice int
+	Present int
 }
 
 type SONInformationReply struct {
@@ -5990,11 +5992,11 @@ type SONInformationReplyExtIEs struct {
 }
 
 const (
-	SONInformationReplyExtIEsExtensionValueChoiceNothing int = 0
+	SONInformationReplyExtIEsExtensionValuePresentNothing int = 0
 )
 
 type SONInformationReplyExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 const (
@@ -6026,11 +6028,11 @@ type SourceNGRANNodeToTargetNGRANNodeTransparentContainerExtIEs struct {
 }
 
 const (
-	SourceNGRANNodeToTargetNGRANNodeTransparentContainerExtIEsExtensionValueChoiceSgNBUEX2APID int = 0
+	SourceNGRANNodeToTargetNGRANNodeTransparentContainerExtIEsExtensionValuePresentSgNBUEX2APID int = 0
 )
 
 type SourceNGRANNodeToTargetNGRANNodeTransparentContainerExtIEsExtensionValue struct {
-	Choice       int
+	Present       int
 	SgNBUEX2APID *SgNBUEX2APID `vht:"Presence:PresenceOptional,Criticality:CriticalityIgnore,ProtocolExtensionID:ProtocolExtensionIDSgNBUEX2APID"`
 }
 
@@ -6060,11 +6062,11 @@ type SourceRANNodeIDExtIEs struct {
 }
 
 const (
-	SourceRANNodeIDExtIEsExtensionValueChoiceNothing int = 0
+	SourceRANNodeIDExtIEsExtensionValuePresentNothing int = 0
 )
 
 type SourceRANNodeIDExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type SourceToTargetTransparentContainer struct {
@@ -6089,11 +6091,11 @@ type SourceToTargetAMFInformationRerouteExtIEs struct {
 }
 
 const (
-	SourceToTargetAMFInformationRerouteExtIEsExtensionValueChoiceNothing int = 0
+	SourceToTargetAMFInformationRerouteExtIEsExtensionValuePresentNothing int = 0
 )
 
 type SourceToTargetAMFInformationRerouteExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 const (
@@ -6141,11 +6143,11 @@ type SupportedTAItemExtIEs struct {
 }
 
 const (
-	SupportedTAItemExtIEsExtensionValueChoiceRATInformation int = 0
+	SupportedTAItemExtIEsExtensionValuePresentRATInformation int = 0
 )
 
 type SupportedTAItemExtIEsExtensionValue struct {
-	Choice         int
+	Present         int
 	RATInformation *RATInformation `vht:"Presence:PresenceOptional,Criticality:CriticalityReject,ProtocolExtensionID:ProtocolExtensionIDRATInformation"`
 }
 
@@ -6170,11 +6172,11 @@ type TAIExtIEs struct {
 }
 
 const (
-	TAIExtIEsExtensionValueChoiceNothing int = 0
+	TAIExtIEsExtensionValuePresentNothing int = 0
 )
 
 type TAIExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type TAIBroadcastEUTRA struct {
@@ -6198,11 +6200,11 @@ type TAIBroadcastEUTRAItemExtIEs struct {
 }
 
 const (
-	TAIBroadcastEUTRAItemExtIEsExtensionValueChoiceNothing int = 0
+	TAIBroadcastEUTRAItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type TAIBroadcastEUTRAItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type TAIBroadcastNR struct {
@@ -6226,11 +6228,11 @@ type TAIBroadcastNRItemExtIEs struct {
 }
 
 const (
-	TAIBroadcastNRItemExtIEsExtensionValueChoiceNothing int = 0
+	TAIBroadcastNRItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type TAIBroadcastNRItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type TAICancelledEUTRA struct {
@@ -6254,11 +6256,11 @@ type TAICancelledEUTRAItemExtIEs struct {
 }
 
 const (
-	TAICancelledEUTRAItemExtIEsExtensionValueChoiceNothing int = 0
+	TAICancelledEUTRAItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type TAICancelledEUTRAItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type TAICancelledNR struct {
@@ -6282,11 +6284,11 @@ type TAICancelledNRItemExtIEs struct {
 }
 
 const (
-	TAICancelledNRItemExtIEsExtensionValueChoiceNothing int = 0
+	TAICancelledNRItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type TAICancelledNRItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type TAIListForInactive struct {
@@ -6309,11 +6311,11 @@ type TAIListForInactiveItemExtIEs struct {
 }
 
 const (
-	TAIListForInactiveItemExtIEsExtensionValueChoiceNothing int = 0
+	TAIListForInactiveItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type TAIListForInactiveItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type TAIListForPaging struct {
@@ -6336,11 +6338,11 @@ type TAIListForPagingItemExtIEs struct {
 }
 
 const (
-	TAIListForPagingItemExtIEsExtensionValueChoiceNothing int = 0
+	TAIListForPagingItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type TAIListForPagingItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type TAIListForRestart struct {
@@ -6368,24 +6370,24 @@ type TargeteNBIDExtIEs struct {
 }
 
 const (
-	TargeteNBIDExtIEsExtensionValueChoiceNothing int = 0
+	TargeteNBIDExtIEsExtensionValuePresentNothing int = 0
 )
 
 type TargeteNBIDExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 const (
-	TargetIDChoiceTargetRANNodeID  int = 0
-	TargetIDChoiceTargeteNBID      int = 1
-	TargetIDChoiceChoiceExtensions int = 2
+	TargetIDPresentTargetRANNodeID  int = 0
+	TargetIDPresentTargeteNBID      int = 1
+	TargetIDPresentPresentExtensions int = 2
 )
 
 type TargetID struct {
-	Choice           int
+	Present           int
 	TargetRANNodeID  *TargetRANNodeID
 	TargeteNBID      *TargeteNBID
-	ChoiceExtensions *ProtocolIESingleContainerTargetIDExtIEs
+	PresentExtensions *ProtocolIESingleContainerTargetIDExtIEs
 }
 
 type ProtocolIESingleContainerTargetIDExtIEs struct {
@@ -6399,11 +6401,11 @@ type TargetIDExtIEs struct {
 }
 
 const (
-	TargetIDExtIEsTypeValueChoiceTargetRNCID int = 0
+	TargetIDExtIEsTypeValuePresentTargetRNCID int = 0
 )
 
 type TargetIDExtIEsTypeValue struct {
-	Choice      int
+	Present      int
 	TargetRNCID *TargetRNCID `vht:"Presence:PresenceMandatory,Criticality:CriticalityReject,ProtocolIEID:ProtocolIEIDTargetRNCID"`
 }
 
@@ -6423,11 +6425,11 @@ type TargetNGRANNodeToSourceNGRANNodeTransparentContainerExtIEs struct {
 }
 
 const (
-	TargetNGRANNodeToSourceNGRANNodeTransparentContainerExtIEsExtensionValueChoiceNothing int = 0
+	TargetNGRANNodeToSourceNGRANNodeTransparentContainerExtIEsExtensionValuePresentNothing int = 0
 )
 
 type TargetNGRANNodeToSourceNGRANNodeTransparentContainerExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type TargetRANNodeID struct {
@@ -6447,11 +6449,11 @@ type TargetRANNodeIDExtIEs struct {
 }
 
 const (
-	TargetRANNodeIDExtIEsExtensionValueChoiceNothing int = 0
+	TargetRANNodeIDExtIEsExtensionValuePresentNothing int = 0
 )
 
 type TargetRANNodeIDExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type TargetRNCID struct {
@@ -6472,11 +6474,11 @@ type TargetRNCIDExtIEs struct {
 }
 
 const (
-	TargetRNCIDExtIEsExtensionValueChoiceNothing int = 0
+	TargetRNCIDExtIEsExtensionValuePresentNothing int = 0
 )
 
 type TargetRNCIDExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type TargetToSourceTransparentContainer struct {
@@ -6541,11 +6543,11 @@ type TNLAssociationItemExtIEs struct {
 }
 
 const (
-	TNLAssociationItemExtIEsExtensionValueChoiceNothing int = 0
+	TNLAssociationItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type TNLAssociationItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 const (
@@ -6577,11 +6579,11 @@ type TraceActivationExtIEs struct {
 }
 
 const (
-	TraceActivationExtIEsExtensionValueChoiceNothing int = 0
+	TraceActivationExtIEsExtensionValuePresentNothing int = 0
 )
 
 type TraceActivationExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 const (
@@ -6631,11 +6633,11 @@ type UEAggregateMaximumBitRateExtIEs struct {
 }
 
 const (
-	UEAggregateMaximumBitRateExtIEsExtensionValueChoiceNothing int = 0
+	UEAggregateMaximumBitRateExtIEsExtensionValuePresentNothing int = 0
 )
 
 type UEAggregateMaximumBitRateExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type UEAssociatedLogicalNGConnectionList struct {
@@ -6659,11 +6661,11 @@ type UEAssociatedLogicalNGConnectionItemExtIEs struct {
 }
 
 const (
-	UEAssociatedLogicalNGConnectionItemExtIEsExtensionValueChoiceNothing int = 0
+	UEAssociatedLogicalNGConnectionItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type UEAssociatedLogicalNGConnectionItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 const (
@@ -6679,14 +6681,14 @@ type UEHistoryInformation struct {
 }
 
 const (
-	UEIdentityIndexValueChoiceIndexLength10    int = 0
-	UEIdentityIndexValueChoiceChoiceExtensions int = 1
+	UEIdentityIndexValuePresentIndexLength10    int = 0
+	UEIdentityIndexValuePresentPresentExtensions int = 1
 )
 
 type UEIdentityIndexValue struct {
-	Choice           int
+	Present           int
 	IndexLength10    *BitString `vht:"valueMin:10,valueMax:10"`
-	ChoiceExtensions *ProtocolIESingleContainerUEIdentityIndexValueExtIEs
+	PresentExtensions *ProtocolIESingleContainerUEIdentityIndexValueExtIEs
 }
 
 type ProtocolIESingleContainerUEIdentityIndexValueExtIEs struct {
@@ -6700,24 +6702,24 @@ type UEIdentityIndexValueExtIEs struct {
 }
 
 const (
-	UEIdentityIndexValueExtIEsTypeValueChoiceNothing int = 0
+	UEIdentityIndexValueExtIEsTypeValuePresentNothing int = 0
 )
 
 type UEIdentityIndexValueExtIEsTypeValue struct {
-	Choice int
+	Present int
 }
 
 const (
-	UENGAPIDsChoiceUENGAPIDPair     int = 0
-	UENGAPIDsChoiceAMFUENGAPID      int = 1
-	UENGAPIDsChoiceChoiceExtensions int = 2
+	UENGAPIDsPresentUENGAPIDPair     int = 0
+	UENGAPIDsPresentAMFUENGAPID      int = 1
+	UENGAPIDsPresentPresentExtensions int = 2
 )
 
 type UENGAPIDs struct {
-	Choice           int
+	Present           int
 	UENGAPIDPair     *UENGAPIDPair
 	AMFUENGAPID      *AMFUENGAPID
-	ChoiceExtensions *ProtocolIESingleContainerUENGAPIDsExtIEs
+	PresentExtensions *ProtocolIESingleContainerUENGAPIDsExtIEs
 }
 
 type ProtocolIESingleContainerUENGAPIDsExtIEs struct {
@@ -6731,11 +6733,11 @@ type UENGAPIDsExtIEs struct {
 }
 
 const (
-	UENGAPIDsExtIEsTypeValueChoiceNothing int = 0
+	UENGAPIDsExtIEsTypeValuePresentNothing int = 0
 )
 
 type UENGAPIDsExtIEsTypeValue struct {
-	Choice int
+	Present int
 }
 
 type UENGAPIDPair struct {
@@ -6755,22 +6757,22 @@ type UENGAPIDPairExtIEs struct {
 }
 
 const (
-	UENGAPIDPairExtIEsExtensionValueChoiceNothing int = 0
+	UENGAPIDPairExtIEsExtensionValuePresentNothing int = 0
 )
 
 type UENGAPIDPairExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 const (
-	UEPagingIdentityChoiceFiveGSTMSI       int = 0
-	UEPagingIdentityChoiceChoiceExtensions int = 1
+	UEPagingIdentityPresentFiveGSTMSI       int = 0
+	UEPagingIdentityPresentPresentExtensions int = 1
 )
 
 type UEPagingIdentity struct {
-	Choice           int
+	Present           int
 	FiveGSTMSI       *FiveGSTMSI
-	ChoiceExtensions *ProtocolIESingleContainerUEPagingIdentityExtIEs
+	PresentExtensions *ProtocolIESingleContainerUEPagingIdentityExtIEs
 }
 
 type ProtocolIESingleContainerUEPagingIdentityExtIEs struct {
@@ -6784,11 +6786,11 @@ type UEPagingIdentityExtIEs struct {
 }
 
 const (
-	UEPagingIdentityExtIEsTypeValueChoiceNothing int = 0
+	UEPagingIdentityExtIEsTypeValuePresentNothing int = 0
 )
 
 type UEPagingIdentityExtIEsTypeValue struct {
-	Choice int
+	Present int
 }
 
 const (
@@ -6822,11 +6824,11 @@ type UEPresenceInAreaOfInterestItemExtIEs struct {
 }
 
 const (
-	UEPresenceInAreaOfInterestItemExtIEsExtensionValueChoiceNothing int = 0
+	UEPresenceInAreaOfInterestItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type UEPresenceInAreaOfInterestItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type UERadioCapability struct {
@@ -6850,11 +6852,11 @@ type UERadioCapabilityForPagingExtIEs struct {
 }
 
 const (
-	UERadioCapabilityForPagingExtIEsExtensionValueChoiceNothing int = 0
+	UERadioCapabilityForPagingExtIEsExtensionValuePresentNothing int = 0
 )
 
 type UERadioCapabilityForPagingExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type UERadioCapabilityForPagingOfNR struct {
@@ -6892,11 +6894,11 @@ type UESecurityCapabilitiesExtIEs struct {
 }
 
 const (
-	UESecurityCapabilitiesExtIEsExtensionValueChoiceNothing int = 0
+	UESecurityCapabilitiesExtIEsExtensionValuePresentNothing int = 0
 )
 
 type UESecurityCapabilitiesExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type ULNGUUPTNLModifyList struct {
@@ -6920,11 +6922,11 @@ type ULNGUUPTNLModifyItemExtIEs struct {
 }
 
 const (
-	ULNGUUPTNLModifyItemExtIEsExtensionValueChoiceNothing int = 0
+	ULNGUUPTNLModifyItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type ULNGUUPTNLModifyItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type UnavailableGUAMIList struct {
@@ -6949,11 +6951,11 @@ type UnavailableGUAMIItemExtIEs struct {
 }
 
 const (
-	UnavailableGUAMIItemExtIEsExtensionValueChoiceNothing int = 0
+	UnavailableGUAMIItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type UnavailableGUAMIItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 const (
@@ -6965,14 +6967,14 @@ type ULForwarding struct {
 }
 
 const (
-	UPTransportLayerInformationChoiceGTPTunnel        int = 0
-	UPTransportLayerInformationChoiceChoiceExtensions int = 1
+	UPTransportLayerInformationPresentGTPTunnel        int = 0
+	UPTransportLayerInformationPresentPresentExtensions int = 1
 )
 
 type UPTransportLayerInformation struct {
-	Choice           int
+	Present           int
 	GTPTunnel        *GTPTunnel
-	ChoiceExtensions *ProtocolIESingleContainerUPTransportLayerInformationExtIEs
+	PresentExtensions *ProtocolIESingleContainerUPTransportLayerInformationExtIEs
 }
 
 type ProtocolIESingleContainerUPTransportLayerInformationExtIEs struct {
@@ -6986,11 +6988,11 @@ type UPTransportLayerInformationExtIEs struct {
 }
 
 const (
-	UPTransportLayerInformationExtIEsTypeValueChoiceNothing int = 0
+	UPTransportLayerInformationExtIEsTypeValuePresentNothing int = 0
 )
 
 type UPTransportLayerInformationExtIEsTypeValue struct {
-	Choice int
+	Present int
 }
 
 type UPTransportLayerInformationList struct {
@@ -7013,11 +7015,11 @@ type UPTransportLayerInformationItemExtIEs struct {
 }
 
 const (
-	UPTransportLayerInformationItemExtIEsExtensionValueChoiceNothing int = 0
+	UPTransportLayerInformationItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type UPTransportLayerInformationItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type UPTransportLayerInformationPairList struct {
@@ -7041,26 +7043,26 @@ type UPTransportLayerInformationPairItemExtIEs struct {
 }
 
 const (
-	UPTransportLayerInformationPairItemExtIEsExtensionValueChoiceNothing int = 0
+	UPTransportLayerInformationPairItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type UPTransportLayerInformationPairItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 const (
-	UserLocationInformationChoiceUserLocationInformationEUTRA int = 0
-	UserLocationInformationChoiceUserLocationInformationNR    int = 1
-	UserLocationInformationChoiceUserLocationInformationN3IWF int = 2
-	UserLocationInformationChoiceChoiceExtensions             int = 3
+	UserLocationInformationPresentUserLocationInformationEUTRA int = 0
+	UserLocationInformationPresentUserLocationInformationNR    int = 1
+	UserLocationInformationPresentUserLocationInformationN3IWF int = 2
+	UserLocationInformationPresentPresentExtensions             int = 3
 )
 
 type UserLocationInformation struct {
-	Choice                       int
+	Present                       int
 	UserLocationInformationEUTRA *UserLocationInformationEUTRA
 	UserLocationInformationNR    *UserLocationInformationNR
 	UserLocationInformationN3IWF *UserLocationInformationN3IWF
-	ChoiceExtensions             *ProtocolIESingleContainerUserLocationInformationExtIEs
+	PresentExtensions             *ProtocolIESingleContainerUserLocationInformationExtIEs
 }
 
 type ProtocolIESingleContainerUserLocationInformationExtIEs struct {
@@ -7074,11 +7076,11 @@ type UserLocationInformationExtIEs struct {
 }
 
 const (
-	UserLocationInformationExtIEsTypeValueChoiceNothing int = 0
+	UserLocationInformationExtIEsTypeValuePresentNothing int = 0
 )
 
 type UserLocationInformationExtIEsTypeValue struct {
-	Choice int
+	Present int
 }
 
 type UserLocationInformationEUTRA struct {
@@ -7099,11 +7101,11 @@ type UserLocationInformationEUTRAExtIEs struct {
 }
 
 const (
-	UserLocationInformationEUTRAExtIEsExtensionValueChoicePSCellInformation int = 0
+	UserLocationInformationEUTRAExtIEsExtensionValuePresentPSCellInformation int = 0
 )
 
 type UserLocationInformationEUTRAExtIEsExtensionValue struct {
-	Choice            int
+	Present            int
 	PSCellInformation *NGRANCGI `vht:"Presence:PresenceOptional,Criticality:CriticalityIgnore,ProtocolExtensionID:ProtocolExtensionIDPSCellInformation"`
 }
 
@@ -7124,11 +7126,11 @@ type UserLocationInformationN3IWFExtIEs struct {
 }
 
 const (
-	UserLocationInformationN3IWFExtIEsExtensionValueChoiceNothing int = 0
+	UserLocationInformationN3IWFExtIEsExtensionValuePresentNothing int = 0
 )
 
 type UserLocationInformationN3IWFExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type UserLocationInformationNR struct {
@@ -7149,11 +7151,11 @@ type UserLocationInformationNRExtIEs struct {
 }
 
 const (
-	UserLocationInformationNRExtIEsExtensionValueChoicePSCellInformation int = 0
+	UserLocationInformationNRExtIEsExtensionValuePresentPSCellInformation int = 0
 )
 
 type UserLocationInformationNRExtIEsExtensionValue struct {
-	Choice            int
+	Present            int
 	PSCellInformation *NGRANCGI `vht:"Presence:PresenceOptional,Criticality:CriticalityIgnore,ProtocolExtensionID:ProtocolExtensionIDPSCellInformation"`
 }
 
@@ -7174,11 +7176,11 @@ type UserPlaneSecurityInformationExtIEs struct {
 }
 
 const (
-	UserPlaneSecurityInformationExtIEsExtensionValueChoiceNothing int = 0
+	UserPlaneSecurityInformationExtIEsExtensionValuePresentNothing int = 0
 )
 
 type UserPlaneSecurityInformationExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type VolumeTimedReportList struct {
@@ -7204,11 +7206,11 @@ type VolumeTimedReportItemExtIEs struct {
 }
 
 const (
-	VolumeTimedReportItemExtIEsExtensionValueChoiceNothing int = 0
+	VolumeTimedReportItemExtIEsExtensionValuePresentNothing int = 0
 )
 
 type VolumeTimedReportItemExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }
 
 type WarningAreaCoordinates struct {
@@ -7216,20 +7218,20 @@ type WarningAreaCoordinates struct {
 }
 
 const (
-	WarningAreaListChoiceEUTRACGIListForWarning int = 0
-	WarningAreaListChoiceNRCGIListForWarning    int = 1
-	WarningAreaListChoiceTAIListForWarning      int = 2
-	WarningAreaListChoiceEmergencyAreaIDList    int = 3
-	WarningAreaListChoiceChoiceExtensions       int = 4
+	WarningAreaListPresentEUTRACGIListForWarning int = 0
+	WarningAreaListPresentNRCGIListForWarning    int = 1
+	WarningAreaListPresentTAIListForWarning      int = 2
+	WarningAreaListPresentEmergencyAreaIDList    int = 3
+	WarningAreaListPresentPresentExtensions       int = 4
 )
 
 type WarningAreaList struct {
-	Choice                 int
+	Present                 int
 	EUTRACGIListForWarning *EUTRACGIListForWarning
 	NRCGIListForWarning    *NRCGIListForWarning
 	TAIListForWarning      *TAIListForWarning
 	EmergencyAreaIDList    *EmergencyAreaIDList
-	ChoiceExtensions       *ProtocolIESingleContainerWarningAreaListExtIEs
+	PresentExtensions       *ProtocolIESingleContainerWarningAreaListExtIEs
 }
 
 type ProtocolIESingleContainerWarningAreaListExtIEs struct {
@@ -7243,11 +7245,11 @@ type WarningAreaListExtIEs struct {
 }
 
 const (
-	WarningAreaListExtIEsTypeValueChoiceNothing int = 0
+	WarningAreaListExtIEsTypeValuePresentNothing int = 0
 )
 
 type WarningAreaListExtIEsTypeValue struct {
-	Choice int
+	Present int
 }
 
 type WarningMessageContents struct {
@@ -7283,11 +7285,11 @@ type XnExtTLAItemExtIEs struct {
 }
 
 const (
-	XnExtTLAItemExtIEsExtensionValueChoiceSCTPTLAs int = 0
+	XnExtTLAItemExtIEsExtensionValuePresentSCTPTLAs int = 0
 )
 
 type XnExtTLAItemExtIEsExtensionValue struct {
-	Choice   int
+	Present   int
 	SCTPTLAs *SCTPTLAs `vht:"Presence:PresenceOptional,Criticality:CriticalityIgnore,ProtocolExtensionID:ProtocolExtensionIDSCTPTLAs"`
 }
 
@@ -7316,9 +7318,9 @@ type XnTNLConfigurationInfoExtIEs struct {
 }
 
 const (
-	XnTNLConfigurationInfoExtIEsExtensionValueChoiceNothing int = 0
+	XnTNLConfigurationInfoExtIEsExtensionValuePresentNothing int = 0
 )
 
 type XnTNLConfigurationInfoExtIEsExtensionValue struct {
-	Choice int
+	Present int
 }

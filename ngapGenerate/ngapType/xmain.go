@@ -14,8 +14,8 @@ func main() {
 	// NGAPCommonDataTypes()
 	// NGAPConstants()
 	// NGAPContainers()
-	NGAPIEs()
-	// NGAPPDUContents()
+	// NGAPIEs()
+	NGAPPDUContents()
 	// NGAPPDUDescriptions()
 }
 
@@ -309,6 +309,34 @@ func PDUDescriptions() {
 	}
 	str += "}\n"
 	filePointer, _ := os.Create("../../ngapType/PDUDescriptions.go")
+	filePointer.WriteString(str)
+}
+
+func NGAPPDUContents() {
+	data, _ := ioutil.ReadFile("PDUContents.asn")
+	datas := strings.Split(string(data), "\n")
+	str := "package main\n"
+	for i := 0; i < len(datas); i++ {
+		dataLine := strings.Fields(datas[i])
+		if len(dataLine) > 2 {
+			if dataLine[2] == "::=" && dataLine[1] == "NGAP-PROTOCOL-IES" {
+				strx, out := NGAPPROTOCOLIES2(datas, i)
+				str += strx
+				i = out
+			}
+			if dataLine[1] == "::=" && dataLine[2] == "SEQUENCE" {
+				strx, out := SEQUENCE(datas, i)
+				str += strx
+				i = out
+			}
+			if dataLine[2] == "::=" && dataLine[1] == "NGAP-PRIVATE-IES" {
+				strx, out := NGAPPRIVATEIES(datas, i)
+				str += strx
+				i = out
+			}
+		}
+	}
+	filePointer, _ := os.Create("PDUContents.go")
 	filePointer.WriteString(str)
 }
 
@@ -691,6 +719,8 @@ func SEQUENCE(datas []string, in int) (str string, out int) {
 					}
 				} else if dataxx[0] == "protocolIEs" && dataxx[1] == "ProtocolIE-Container" {
 					str += "\tProtocolIEs ProtocolIEContainer"+GetStrOutOfDash(strings.Split(strings.Split(dataxx[3],"{")[1], "}")[0])+"\n"
+				} else if dataxx[0] == "privateIEs" && dataxx[1] == "PrivateIE-Container" {
+					str += "\tPrivateIEs PrivateIEContainer"+GetStrOutOfDash(strings.Split(strings.Split(dataxx[3],"{")[1], "}")[0])+"\n"
 				} else {
 					fmt.Println(in+1+x, "-", dataxx)
 				}
@@ -847,6 +877,138 @@ func NGAPPROTOCOLIES(datas []string, in int) (str string, out int) {
 				x++
 			} else {
 				fmt.Println(in+1+x, "-", dataxx)
+				x++
+			}
+		}
+		str += "}\n"
+	} else {
+		fmt.Println(datax)
+	}
+	return str, in+x
+}
+
+func NGAPPROTOCOLIES2(datas []string, in int) (str string, out int) {
+	datax := strings.Fields(datas[in])
+	var x int
+	if len(datax) == 4 {
+		str += "\ntype ProtocolIEContainer" + GetStrOutOfDash(strings.Title(datax[0])) + " struct {\n"
+		str += "\tList []" + GetStrOutOfDash(strings.Title(datax[0])) + " `vht:\"valueMin:0,valueMax:MaxPrivateIEs\"`\n"
+		str += "}\n"
+
+		str += "\ntype " + GetStrOutOfDash(strings.Title(datax[0])) + " struct {\n"
+		str += "\tProtocolIEID ProtocolIEID\n"
+		str += "\tCriticality Criticality `vht:\"Reference:ProtocolIEID\"`\n"
+		str += "\tTypeValue " + GetStrOutOfDash(strings.Title(datax[0])) + "TypeValue `vht:\"Reference:ProtocolIEID\"`\n"
+		str += "}\n"
+		str += "\nconst (\n"
+		x = 0
+		for {
+			dataxx := strings.Fields(datas[in+1+x])
+			if dataxx[0] == "}" {
+				if x == 1 {
+					str += "\t" + GetStrOutOfDash(strings.Title(datax[0])) + "TypeValueChoiceNothing int = 0\n"
+				}
+				break
+			} else if dataxx[0] == "..." {
+				x++
+				continue
+			} else if len(dataxx) == 10 {
+				str += "\t" + GetStrOutOfDash(datax[0]) + "TypeValueChoice" + GetStrOutOfDash2(dataxx[2]) + " int = " + strconv.Itoa(x) + "\n"
+				x++
+			} else if len(dataxx) == 11 {
+				if dataxx[6] == "OCTET" && dataxx[7] == "STRING" {
+					str += "\t" + GetStrOutOfDash(datax[0]) + "TypeValueChoice" + GetStrOutOfDash2(dataxx[2]) + " int = " + strconv.Itoa(x) + "\n"
+				} else {
+					fmt.Println(in+1+x, "-1", dataxx)
+				}
+				x++
+			} else {
+				fmt.Println(in+1+x, "-1", dataxx)
+				x++
+			}
+		}
+		str += ")\n"
+		str += "\ntype " + GetStrOutOfDash(strings.Title(datax[0])) + "TypeValue struct {\n"
+		str += "\tChoice int\n"
+		x = 0
+		for {
+			dataxx := strings.Fields(datas[in+1+x])
+			if dataxx[0] == "}" || dataxx[0] == "..." {
+				break
+			} else if len(dataxx) == 10 {
+				Presence := dataxx[8]
+				Criticality := dataxx[4]
+				str += "\t" + GetStrOutOfDash2(dataxx[2]) + " *" + GetStrOutOfDash(dataxx[6]) + " `vht:\"Presence:Presence" + strings.Title(Presence) + ",Criticality:Criticality" + strings.Title(Criticality) + ",ProtocolIEID:ProtocolIEID" + GetStrOutOfDash2(dataxx[2]) + "\"`\n"
+				x++
+			} else if len(dataxx) == 11 {
+				if dataxx[6] == "OCTET" && dataxx[7] == "STRING" {
+					Presence := dataxx[9]
+					Criticality := dataxx[4]
+					str += "\t" + GetStrOutOfDash2(dataxx[2]) + " *OctetString `vht:\"Presence:Presence" + strings.Title(Presence) + ",Criticality:Criticality" + strings.Title(Criticality) + ",ProtocolIEID:ProtocolIEID" + GetStrOutOfDash2(dataxx[2]) + "\"`\n"
+				} else {
+					fmt.Println(in+1+x, "-1", dataxx)
+				}
+				x++
+			} else {
+				fmt.Println(in+1+x, "-2", dataxx)
+				x++
+			}
+		}
+		str += "}\n"
+	} else {
+		fmt.Println(datax)
+	}
+	return str, in+x
+}
+
+func NGAPPRIVATEIES(datas []string, in int) (str string, out int) {
+	datax := strings.Fields(datas[in])
+	var x int
+	if len(datax) == 4 {
+		str += "\ntype PrivateIEContainer" + GetStrOutOfDash(strings.Title(datax[0])) + " struct {\n"
+		str += "\tList []" + GetStrOutOfDash(strings.Title(datax[0])) + " `vht:\"valueMin:0,valueMax:MaxProtocolIEs\"`\n"
+		str += "}\n"
+
+		str += "\ntype " + GetStrOutOfDash(strings.Title(datax[0])) + " struct {\n"
+		str += "\tPrivateIEID PrivateIEID\n"
+		str += "\tCriticality Criticality `vht:\"Reference:ProtocolIEID\"`\n"
+		str += "\tTypeValue " + GetStrOutOfDash(strings.Title(datax[0])) + "TypeValue `vht:\"Reference:ProtocolIEID\"`\n"
+		str += "}\n"
+		str += "\nconst (\n"
+		x = 0
+		for {
+			dataxx := strings.Fields(datas[in+1+x])
+			if dataxx[0] == "}" {
+				if x == 1 {
+					str += "\t" + GetStrOutOfDash(strings.Title(datax[0])) + "TypeValueChoiceNothing int = 0\n"
+				}
+				break
+			} else if dataxx[0] == "..." {
+				x++
+				continue
+			} else if len(dataxx) == 10 {
+				str += "\t" + GetStrOutOfDash(datax[0]) + "TypeValueChoice" + GetStrOutOfDash2(dataxx[2]) + " int = " + strconv.Itoa(x) + "\n"
+				x++
+			} else {
+				fmt.Println(in+1+x, "-1", dataxx)
+				x++
+			}
+		}
+		str += ")\n"
+		str += "\ntype " + GetStrOutOfDash(strings.Title(datax[0])) + "TypeValue struct {\n"
+		str += "\tChoice int\n"
+		x = 0
+		for {
+			dataxx := strings.Fields(datas[in+1+x])
+			if dataxx[0] == "}" || dataxx[0] == "..." {
+				break
+			} else if len(dataxx) == 10 {
+				Presence := dataxx[8]
+				Criticality := dataxx[4]
+				str += "\t" + GetStrOutOfDash2(dataxx[2]) + " *" + GetStrOutOfDash(dataxx[6]) + " `vht:\"Presence:Presence" + strings.Title(Presence) + ",Criticality:Criticality" + strings.Title(Criticality) + ",ProtocolIEID:ProtocolIEID" + GetStrOutOfDash2(dataxx[2]) + "\"`\n"
+				x++
+			} else {
+				fmt.Println(in+1+x, "-2", dataxx)
 				x++
 			}
 		}

@@ -1,14 +1,16 @@
+// Created By HaoDHH-245789 VHT2020
+
 package ngapType
 
 const (
-	NGAPPDUChoiceInitiatingMessage   int = 0
-	NGAPPDUChoiceSuccessfulOutcome   int = 1
-	NGAPPDUChoiceUnsuccessfulOutcome int = 2
+	NGAPPDUPresentInitiatingMessage   int = 0
+	NGAPPDUPresentSuccessfulOutcome   int = 1
+	NGAPPDUPresentUnsuccessfulOutcome int = 2
 	/* Extensions may appear below */
 )
 
 type NGAPPDU struct {
-	Choice              int
+	Present              int
 	InitiatingMessage   *InitiatingMessage
 	SuccessfulOutcome   *SuccessfulOutcome
 	UnsuccessfulOutcome *UnsuccessfulOutcome
@@ -33,63 +35,63 @@ type UnsuccessfulOutcome struct {
 }
 
 const (
-	InitiatingMessageValueChoiceAMFConfigurationUpdate                int = 0
-	InitiatingMessageValueChoiceDeactivateTrace                       int = 1
-	InitiatingMessageValueChoiceDownlinkNASTransport                  int = 2
-	InitiatingMessageValueChoiceDownlinkNonUEAssociatedNRPPaTransport int = 3
-	InitiatingMessageValueChoiceDownlinkRANConfigurationTransfer      int = 4
-	InitiatingMessageValueChoiceDownlinkRANStatusTransfer             int = 5
-	InitiatingMessageValueChoiceDownlinkUEAssociatedNRPPaTransport    int = 6
-	InitiatingMessageValueChoiceErrorIndication                       int = 7
-	InitiatingMessageValueChoiceHandoverCancel                        int = 8
-	InitiatingMessageValueChoiceHandoverNotify                        int = 9
-	InitiatingMessageValueChoiceHandoverRequired                      int = 10
-	InitiatingMessageValueChoiceHandoverRequest                       int = 11
-	InitiatingMessageValueChoiceInitialContextSetupRequest            int = 12
-	InitiatingMessageValueChoiceInitialUEMessage                      int = 13
-	InitiatingMessageValueChoiceLocationReport                        int = 14
-	InitiatingMessageValueChoiceLocationReportingControl              int = 15
-	InitiatingMessageValueChoiceLocationReportingFailureIndication    int = 16
-	InitiatingMessageValueChoiceNASNonDeliveryIndication              int = 17
-	InitiatingMessageValueChoiceNGReset                               int = 18
-	InitiatingMessageValueChoiceNGSetupRequest                        int = 19
-	InitiatingMessageValueChoiceOverloadStart                         int = 20
-	InitiatingMessageValueChoiceOverloadStop                          int = 21
-	InitiatingMessageValueChoicePaging                                int = 22
-	InitiatingMessageValueChoicePathSwitchRequest                     int = 23
-	InitiatingMessageValueChoicePDUSessionResourceModifyRequest       int = 24
-	InitiatingMessageValueChoicePDUSessionResourceModifyIndication    int = 25
-	InitiatingMessageValueChoicePDUSessionResourceNotify              int = 26
-	InitiatingMessageValueChoicePDUSessionResourceReleaseCommand      int = 27
-	InitiatingMessageValueChoicePDUSessionResourceSetupRequest        int = 28
-	InitiatingMessageValueChoicePrivateMessage                        int = 29
-	InitiatingMessageValueChoicePWSCancelRequest                      int = 30
-	InitiatingMessageValueChoicePWSFailureIndication                  int = 31
-	InitiatingMessageValueChoicePWSRestartIndication                  int = 32
-	InitiatingMessageValueChoiceRANConfigurationUpdate                int = 33
-	InitiatingMessageValueChoiceRerouteNASRequest                     int = 34
-	InitiatingMessageValueChoiceRRCInactiveTransitionReport           int = 35
-	InitiatingMessageValueChoiceSecondaryRATDataUsageReport           int = 36
-	InitiatingMessageValueChoiceTraceFailureIndication                int = 37
-	InitiatingMessageValueChoiceTraceStart                            int = 38
-	InitiatingMessageValueChoiceUEContextModificationRequest          int = 39
-	InitiatingMessageValueChoiceUEContextReleaseCommand               int = 40
-	InitiatingMessageValueChoiceUEContextReleaseRequest               int = 41
-	InitiatingMessageValueChoiceUERadioCapabilityCheckRequest         int = 42
-	InitiatingMessageValueChoiceUERadioCapabilityInfoIndication       int = 43
-	InitiatingMessageValueChoiceUETNLABindingReleaseRequest           int = 44
-	InitiatingMessageValueChoiceUplinkNASTransport                    int = 45
-	InitiatingMessageValueChoiceUplinkNonUEAssociatedNRPPaTransport   int = 46
-	InitiatingMessageValueChoiceUplinkRANConfigurationTransfer        int = 47
-	InitiatingMessageValueChoiceUplinkRANStatusTransfer               int = 48
-	InitiatingMessageValueChoiceUplinkUEAssociatedNRPPaTransport      int = 49
-	InitiatingMessageValueChoiceWriteReplaceWarningRequest            int = 50
-	InitiatingMessageValueChoiceUplinkRIMInformationTransfer          int = 51
-	InitiatingMessageValueChoiceDownlinkRIMInformationTransfer        int = 52
+	InitiatingMessageValuePresentAMFConfigurationUpdate                int = 0
+	InitiatingMessageValuePresentDeactivateTrace                       int = 1
+	InitiatingMessageValuePresentDownlinkNASTransport                  int = 2
+	InitiatingMessageValuePresentDownlinkNonUEAssociatedNRPPaTransport int = 3
+	InitiatingMessageValuePresentDownlinkRANConfigurationTransfer      int = 4
+	InitiatingMessageValuePresentDownlinkRANStatusTransfer             int = 5
+	InitiatingMessageValuePresentDownlinkUEAssociatedNRPPaTransport    int = 6
+	InitiatingMessageValuePresentErrorIndication                       int = 7
+	InitiatingMessageValuePresentHandoverCancel                        int = 8
+	InitiatingMessageValuePresentHandoverNotify                        int = 9
+	InitiatingMessageValuePresentHandoverRequired                      int = 10
+	InitiatingMessageValuePresentHandoverRequest                       int = 11
+	InitiatingMessageValuePresentInitialContextSetupRequest            int = 12
+	InitiatingMessageValuePresentInitialUEMessage                      int = 13
+	InitiatingMessageValuePresentLocationReport                        int = 14
+	InitiatingMessageValuePresentLocationReportingControl              int = 15
+	InitiatingMessageValuePresentLocationReportingFailureIndication    int = 16
+	InitiatingMessageValuePresentNASNonDeliveryIndication              int = 17
+	InitiatingMessageValuePresentNGReset                               int = 18
+	InitiatingMessageValuePresentNGSetupRequest                        int = 19
+	InitiatingMessageValuePresentOverloadStart                         int = 20
+	InitiatingMessageValuePresentOverloadStop                          int = 21
+	InitiatingMessageValuePresentPaging                                int = 22
+	InitiatingMessageValuePresentPathSwitchRequest                     int = 23
+	InitiatingMessageValuePresentPDUSessionResourceModifyRequest       int = 24
+	InitiatingMessageValuePresentPDUSessionResourceModifyIndication    int = 25
+	InitiatingMessageValuePresentPDUSessionResourceNotify              int = 26
+	InitiatingMessageValuePresentPDUSessionResourceReleaseCommand      int = 27
+	InitiatingMessageValuePresentPDUSessionResourceSetupRequest        int = 28
+	InitiatingMessageValuePresentPrivateMessage                        int = 29
+	InitiatingMessageValuePresentPWSCancelRequest                      int = 30
+	InitiatingMessageValuePresentPWSFailureIndication                  int = 31
+	InitiatingMessageValuePresentPWSRestartIndication                  int = 32
+	InitiatingMessageValuePresentRANConfigurationUpdate                int = 33
+	InitiatingMessageValuePresentRerouteNASRequest                     int = 34
+	InitiatingMessageValuePresentRRCInactiveTransitionReport           int = 35
+	InitiatingMessageValuePresentSecondaryRATDataUsageReport           int = 36
+	InitiatingMessageValuePresentTraceFailureIndication                int = 37
+	InitiatingMessageValuePresentTraceStart                            int = 38
+	InitiatingMessageValuePresentUEContextModificationRequest          int = 39
+	InitiatingMessageValuePresentUEContextReleaseCommand               int = 40
+	InitiatingMessageValuePresentUEContextReleaseRequest               int = 41
+	InitiatingMessageValuePresentUERadioCapabilityCheckRequest         int = 42
+	InitiatingMessageValuePresentUERadioCapabilityInfoIndication       int = 43
+	InitiatingMessageValuePresentUETNLABindingReleaseRequest           int = 44
+	InitiatingMessageValuePresentUplinkNASTransport                    int = 45
+	InitiatingMessageValuePresentUplinkNonUEAssociatedNRPPaTransport   int = 46
+	InitiatingMessageValuePresentUplinkRANConfigurationTransfer        int = 47
+	InitiatingMessageValuePresentUplinkRANStatusTransfer               int = 48
+	InitiatingMessageValuePresentUplinkUEAssociatedNRPPaTransport      int = 49
+	InitiatingMessageValuePresentWriteReplaceWarningRequest            int = 50
+	InitiatingMessageValuePresentUplinkRIMInformationTransfer          int = 51
+	InitiatingMessageValuePresentDownlinkRIMInformationTransfer        int = 52
 )
 
 type InitiatingMessageValue struct {
-	Choice                                int
+	Present                                int
 	AMFConfigurationUpdate                *AMFConfigurationUpdate                `vht:"Presence:PresenceOptional,Criticality:CriticalityReject,ProcedureCode:ProcedureCodeAMFConfigurationUpdate"`
 	DeactivateTrace                       *DeactivateTrace                       `vht:"Presence:PresenceOptional,Criticality:CriticalityIgnore,ProcedureCode:ProcedureCodeDeactivateTrace"`
 	DownlinkNASTransport                  *DownlinkNASTransport                  `vht:"Presence:PresenceOptional,Criticality:CriticalityIgnore,ProcedureCode:ProcedureCodeDownlinkNASTransport"`
@@ -146,28 +148,28 @@ type InitiatingMessageValue struct {
 }
 
 const (
-	SuccessfulOutcomeValueChoiceAMFConfigurationUpdateAcknowledge int = 0
-	SuccessfulOutcomeValueChoiceHandoverCancelAcknowledge         int = 1
-	SuccessfulOutcomeValueChoiceHandoverCommand                   int = 2
-	SuccessfulOutcomeValueChoiceHandoverRequestAcknowledge        int = 3
-	SuccessfulOutcomeValueChoiceInitialContextSetupResponse       int = 4
-	SuccessfulOutcomeValueChoiceNGResetAcknowledge                int = 5
-	SuccessfulOutcomeValueChoiceNGSetupResponse                   int = 6
-	SuccessfulOutcomeValueChoicePathSwitchRequestAcknowledge      int = 7
-	SuccessfulOutcomeValueChoicePDUSessionResourceModifyResponse  int = 8
-	SuccessfulOutcomeValueChoicePDUSessionResourceModifyConfirm   int = 9
-	SuccessfulOutcomeValueChoicePDUSessionResourceReleaseResponse int = 10
-	SuccessfulOutcomeValueChoicePDUSessionResourceSetupResponse   int = 11
-	SuccessfulOutcomeValueChoicePWSCancelResponse                 int = 12
-	SuccessfulOutcomeValueChoiceRANConfigurationUpdateAcknowledge int = 13
-	SuccessfulOutcomeValueChoiceUEContextModificationResponse     int = 14
-	SuccessfulOutcomeValueChoiceUEContextReleaseComplete          int = 15
-	SuccessfulOutcomeValueChoiceUERadioCapabilityCheckResponse    int = 16
-	SuccessfulOutcomeValueChoiceWriteReplaceWarningResponse       int = 17
+	SuccessfulOutcomeValuePresentAMFConfigurationUpdateAcknowledge int = 0
+	SuccessfulOutcomeValuePresentHandoverCancelAcknowledge         int = 1
+	SuccessfulOutcomeValuePresentHandoverCommand                   int = 2
+	SuccessfulOutcomeValuePresentHandoverRequestAcknowledge        int = 3
+	SuccessfulOutcomeValuePresentInitialContextSetupResponse       int = 4
+	SuccessfulOutcomeValuePresentNGResetAcknowledge                int = 5
+	SuccessfulOutcomeValuePresentNGSetupResponse                   int = 6
+	SuccessfulOutcomeValuePresentPathSwitchRequestAcknowledge      int = 7
+	SuccessfulOutcomeValuePresentPDUSessionResourceModifyResponse  int = 8
+	SuccessfulOutcomeValuePresentPDUSessionResourceModifyConfirm   int = 9
+	SuccessfulOutcomeValuePresentPDUSessionResourceReleaseResponse int = 10
+	SuccessfulOutcomeValuePresentPDUSessionResourceSetupResponse   int = 11
+	SuccessfulOutcomeValuePresentPWSCancelResponse                 int = 12
+	SuccessfulOutcomeValuePresentRANConfigurationUpdateAcknowledge int = 13
+	SuccessfulOutcomeValuePresentUEContextModificationResponse     int = 14
+	SuccessfulOutcomeValuePresentUEContextReleaseComplete          int = 15
+	SuccessfulOutcomeValuePresentUERadioCapabilityCheckResponse    int = 16
+	SuccessfulOutcomeValuePresentWriteReplaceWarningResponse       int = 17
 )
 
 type SuccessfulOutcomeValue struct {
-	Choice                            int
+	Present                            int
 	AMFConfigurationUpdateAcknowledge *AMFConfigurationUpdateAcknowledge `vht:"Presence:PresenceOptional,Criticality:CriticalityReject,ProcedureCode:ProcedureCodeAMFConfigurationUpdate"`
 	HandoverCancelAcknowledge         *HandoverCancelAcknowledge         `vht:"Presence:PresenceOptional,Criticality:CriticalityReject,ProcedureCode:ProcedureCodeHandoverCancel"`
 	HandoverCommand                   *HandoverCommand                   `vht:"Presence:PresenceOptional,Criticality:CriticalityReject,ProcedureCode:ProcedureCodeHandoverPreparation"`
@@ -189,18 +191,18 @@ type SuccessfulOutcomeValue struct {
 }
 
 const (
-	UnsuccessfulOutcomeValueChoiceAMFConfigurationUpdateFailure int = 0
-	UnsuccessfulOutcomeValueChoiceHandoverPreparationFailure    int = 1
-	UnsuccessfulOutcomeValueChoiceHandoverFailure               int = 2
-	UnsuccessfulOutcomeValueChoiceInitialContextSetupFailure    int = 3
-	UnsuccessfulOutcomeValueChoiceNGSetupFailure                int = 4
-	UnsuccessfulOutcomeValueChoicePathSwitchRequestFailure      int = 5
-	UnsuccessfulOutcomeValueChoiceRANConfigurationUpdateFailure int = 6
-	UnsuccessfulOutcomeValueChoiceUEContextModificationFailure  int = 7
+	UnsuccessfulOutcomeValuePresentAMFConfigurationUpdateFailure int = 0
+	UnsuccessfulOutcomeValuePresentHandoverPreparationFailure    int = 1
+	UnsuccessfulOutcomeValuePresentHandoverFailure               int = 2
+	UnsuccessfulOutcomeValuePresentInitialContextSetupFailure    int = 3
+	UnsuccessfulOutcomeValuePresentNGSetupFailure                int = 4
+	UnsuccessfulOutcomeValuePresentPathSwitchRequestFailure      int = 5
+	UnsuccessfulOutcomeValuePresentRANConfigurationUpdateFailure int = 6
+	UnsuccessfulOutcomeValuePresentUEContextModificationFailure  int = 7
 )
 
 type UnsuccessfulOutcomeValue struct {
-	Choice                        int
+	Present                        int
 	AMFConfigurationUpdateFailure *AMFConfigurationUpdateFailure `vht:"Presence:PresenceOptional,Criticality:CriticalityReject,ProcedureCode:ProcedureCodeAMFConfigurationUpdate"`
 	HandoverPreparationFailure    *HandoverPreparationFailure    `vht:"Presence:PresenceOptional,Criticality:CriticalityReject,ProcedureCode:ProcedureCodeHandoverPreparation"`
 	HandoverFailure               *HandoverFailure               `vht:"Presence:PresenceOptional,Criticality:CriticalityReject,ProcedureCode:ProcedureCodeHandoverResourceAllocation"`
