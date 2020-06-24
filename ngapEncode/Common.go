@@ -5,116 +5,159 @@ import "ngap/ngapType"
 
 // BIT STRING
 
-func EncodeBitString(value uint64, lenValue uint64, binData []byte, bitEnd uint64) ([]byte, uint64) {
+// (SIZE(mimax))
+func EncodeBitStringFix(value ngapType.BitString, binData []byte, bitEnd uint64) ([]byte, uint64) {
 	return binData, bitEnd
 }
 
-func EncodeBitStringExt(value uint64, lenValue uint64, binData []byte, bitEnd uint64) ([]byte, uint64) {
+// (SIZE(min..max))
+func EncodeBitStringExt(value ngapType.BitString, binData []byte, bitEnd uint64) ([]byte, uint64) {
 	return binData, bitEnd
 }
 
-func EncodeBitStringExx(value uint64, lenValue uint64, binData []byte, bitEnd uint64) ([]byte, uint64) {
+// (SIZE(mimax, ...))
+func EncodeBitStringFixExx(value ngapType.BitString, binData []byte, bitEnd uint64) ([]byte, uint64) {
 	return binData, bitEnd
 }
 
-func EncodeBitStringExtExx(value uint64, lenValue uint64, binData []byte, bitEnd uint64) ([]byte, uint64) {
+// (SIZE(min..max, ...))
+func EncodeBitStringExtExx(value ngapType.BitString, binData []byte, bitEnd uint64) ([]byte, uint64) {
 	return binData, bitEnd
 }
 
 // OCTET STRING
 
-func EncodeOctetString(value uint64, lenValue uint64, binData []byte, bitEnd uint64) ([]byte, uint64) {
+// NO TAG
+func EncodeOctetStringNo(value ngapType.OctetString, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
+	return binData, bitEnd, nil
+}
+
+// (SIZE(mimax))
+func EncodeOctetStringFix(value ngapType.OctetString, binData []byte, bitEnd uint64) ([]byte, uint64) {
 	return binData, bitEnd
 }
 
-func EncodeOctetStringExt(value uint64, lenValue uint64, binData []byte, bitEnd uint64) ([]byte, uint64) {
+// (SIZE(min..max))
+func EncodeOctetStringExt(value ngapType.OctetString, lenMin uint64, lenMax uint64, binData []byte, bitEnd uint64) ([]byte, uint64) {
 	return binData, bitEnd
 }
 
-func EncodeOctetStringExx(value uint64, lenValue uint64, binData []byte, bitEnd uint64) ([]byte, uint64) {
-	return binData, bitEnd
+// CONTAINING
+func EncodeOctetStringContaining(value ngapType.OctetString, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
+	return binData, bitEnd, nil
 }
 
-func EncodeOctetStringExtExx(value uint64, lenValue uint64, binData []byte, bitEnd uint64) ([]byte, uint64) {
+func EncodeOctetStringExtExx(value ngapType.OctetString, lenValue uint64, binData []byte, bitEnd uint64) ([]byte, uint64) {
 	return binData, bitEnd
 }
 
 // OBJECT IDENTIFIER
 
-func EncodeObjectIdentifier(value uint64, lenValue uint64, binData []byte, bitEnd uint64) ([]byte, uint64) {
+func EncodeObjectIdentifier(value ngapType.ObjectIdentifier, lenValue uint64, binData []byte, bitEnd uint64) ([]byte, uint64) {
 	return binData, bitEnd
 }
 
-func EncodeObjectIdentifierExt(value uint64, lenValue uint64, binData []byte, bitEnd uint64) ([]byte, uint64) {
+func EncodeObjectIdentifierExt(value ngapType.ObjectIdentifier, lenValue uint64, binData []byte, bitEnd uint64) ([]byte, uint64) {
 	return binData, bitEnd
 }
 
-func EncodeObjectIdentifierExx(value uint64, lenValue uint64, binData []byte, bitEnd uint64) ([]byte, uint64) {
+func EncodeObjectIdentifierExx(value ngapType.ObjectIdentifier, lenValue uint64, binData []byte, bitEnd uint64) ([]byte, uint64) {
 	return binData, bitEnd
 }
 
-func EncodeObjectIdentifierExtExx(value uint64, lenValue uint64, binData []byte, bitEnd uint64) ([]byte, uint64) {
+func EncodeObjectIdentifierExtExx(value ngapType.ObjectIdentifier, lenValue uint64, binData []byte, bitEnd uint64) ([]byte, uint64) {
 	return binData, bitEnd
 }
 
 // ENUMERATED
 
-func EncodeEnumerated(value uint64, lenValue uint64, binData []byte, bitEnd uint64) ([]byte, uint64) {
+// { value1, value2, value3 }
+func EncodeEnumerated(value ngapType.Enumerated, lenValue uint64, binData []byte, bitEnd uint64) ([]byte, uint64) {
 	return binData, bitEnd
 }
 
-func EncodeEnumeratedExt(value uint64, lenValue uint64, binData []byte, bitEnd uint64) ([]byte, uint64) {
-	return binData, bitEnd
-}
-
-func EncodeEnumeratedExx(value uint64, lenValue uint64, binData []byte, bitEnd uint64) ([]byte, uint64) {
-	return binData, bitEnd
-}
-
-func EncodeEnumeratedExtExx(value uint64, lenValue uint64, binData []byte, bitEnd uint64) ([]byte, uint64) {
+// { value1, value2, ... }
+func EncodeEnumeratedExt(value ngapType.Enumerated, lenValue uint64, binData []byte, bitEnd uint64) ([]byte, uint64) {
 	return binData, bitEnd
 }
 
 // INTEGER
 
-func EncodeInteger(value uint64, lenValue uint64, binData []byte, bitEnd uint64) ([]byte, uint64) {
+// (min..max)
+func EncodeInteger(value ngapType.Integer, lenValue uint64, binData []byte, bitEnd uint64) ([]byte, uint64) {
 	return binData, bitEnd
 }
 
-func EncodeIntegerExt(value uint64, lenValue uint64, binData []byte, bitEnd uint64) ([]byte, uint64) {
-	return binData, bitEnd
-}
-
-func EncodeIntegerExx(value uint64, lenValue uint64, binData []byte, bitEnd uint64) ([]byte, uint64) {
-	return binData, bitEnd
-}
-
-func EncodeIntegerExtExx(value uint64, lenValue uint64, binData []byte, bitEnd uint64) ([]byte, uint64) {
+// (min..max, ...)
+func EncodeIntegerExt(value ngapType.Integer, lenValue uint64, binData []byte, bitEnd uint64) ([]byte, uint64) {
 	return binData, bitEnd
 }
 
 // PrintableString
 
-func EncodePrintableString(value uint64, lenValue uint64, binData []byte, bitEnd uint64) ([]byte, uint64) {
-	return binData, bitEnd
-}
-
-func EncodePrintableStringExt(value uint64, lenValue uint64, binData []byte, bitEnd uint64) ([]byte, uint64) {
-	return binData, bitEnd
-}
-
-func EncodePrintableStringExx(value uint64, lenValue uint64, binData []byte, bitEnd uint64) ([]byte, uint64) {
-	return binData, bitEnd
-}
-
-func EncodePrintableStringExtExx(value uint64, lenValue uint64, binData []byte, bitEnd uint64) ([]byte, uint64) {
+// (SIZE(min..max, ...))
+func EncodePrintableString(value ngapType.PrintableString, lenMin uint64, lenMax uint64, binData []byte, bitEnd uint64) ([]byte, uint64) {
 	return binData, bitEnd
 }
 
 // Choice
 
-func EncodeChoice(value int, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
+func EncodePresent(value int, lenValue uint64, binData []byte, bitEnd uint64) ([]byte, uint64) {
+	return binData, bitEnd
+}
+
+// Option
+
+func EncodeOption(value uint64, lenValue uint64, binData []byte, bitEnd uint64) ([]byte, uint64) {
+	return binData, bitEnd
+}
+
+// Length Value
+
+func EncodeLengthValue(binData []byte) []byte {
+	return binData
+}
+
+// Length Extension Value
+
+func EncodeLengthExtensionValue(binData []byte) []byte {
+	return binData
+}
+
+// Length Type Value
+
+func EncodeLengthTypeValue(binData []byte) []byte {
+	return binData
+}
+
+// Number IEs of ProtocolIEContainer
+
+func EncodeNumberIEsOfProtocolIEContainer(value int, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	return binData, bitEnd, nil
+}
+
+// Number IEs of ProtocolIESingleContainer
+
+func EncodeNumberIEsOfProtocolIESingleContainer(value int, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
+	return binData, bitEnd, nil
+}
+
+// Number IEs of ProtocolExtensionContainer
+
+func EncodeNumberIEsOfProtocolExtensionContainer(value int, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
+	return binData, bitEnd, nil
+}
+
+// Number IEs of PrivateIEContainer
+
+func EncodeNumberIEsOfPrivateIEContainer(value int, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
+	return binData, bitEnd, nil
+}
+
+// Number Item SEQUENCE OF
+
+func EncodeNumberItemSequenceOf(value int, lenMin int, lenMax int, binData []byte, bitEnd uint64) ([]byte, uint64) {
+	return binData, bitEnd
 }
 
 // Criticality
@@ -149,13 +192,13 @@ func ProtocolExtensionID(value ngapType.ProtocolExtensionID, binData []byte, bit
 
 // ProtocolIEID
 
-func ProtocolIEID(value ngapType.ProtocolExtensionID, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
+func ProtocolIEID(value ngapType.ProtocolIEID, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	return binData, bitEnd, nil
 }
 
 // TriggeringMessage
 
-func TriggeringMessage(value ngapType.ProtocolExtensionID, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
+func TriggeringMessage(value ngapType.TriggeringMessage, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	return binData, bitEnd, nil
 }
 
@@ -168,5 +211,11 @@ func EncodeMaxnoofLists(value ngapType.Integer, binData []byte, bitEnd uint64) (
 // Extension constants
 
 func EncodeMaxExtensionConstants(value ngapType.Integer, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
+	return binData, bitEnd, nil
+}
+
+// NGAPMessage
+
+func NGAPMessage(value ngapType.OctetString, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	return binData, bitEnd, nil
 }

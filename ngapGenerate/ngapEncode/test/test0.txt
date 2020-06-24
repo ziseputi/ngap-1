@@ -1,0 +1,7 @@
+NGAPPDU
+InitiatingMessage
+InitiatingMessageValue
+SuccessfulOutcome
+SuccessfulOutcomeValue
+UnsuccessfulOutcome
+UnsuccessfulOutcomeValue

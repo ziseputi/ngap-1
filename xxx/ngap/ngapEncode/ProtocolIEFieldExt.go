@@ -1,0 +1,5 @@
+package ngapEncode
+
+func SourceToTargetTransparentContainerExt () () {
+
+}

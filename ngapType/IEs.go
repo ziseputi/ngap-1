@@ -1,5 +1,3 @@
-// Created By HaoDHH-245789 VHT2020
-
 package ngapType
 
 type AdditionalDLUPTNLInformationForHOList struct {
@@ -36,7 +34,7 @@ const (
 )
 
 type AdditionalQosFlowInformation struct {
-	Value Enumerated `vht:"valueMin:0,valueMax:0"`
+	Value Enumerated `vht:"valueExt,valueMin:0,valueMax:0"`
 }
 
 type AllocationAndRetentionPriority struct {
@@ -102,14 +100,14 @@ type AMFName struct {
 const (
 	AMFPagingTargetPresentGlobalRANNodeID  int = 0
 	AMFPagingTargetPresentTAI              int = 1
-	AMFPagingTargetPresentPresentExtensions int = 2
+	AMFPagingTargetPresentChoiceExtensions int = 2
 )
 
 type AMFPagingTarget struct {
 	Present           int
 	GlobalRANNodeID  *GlobalRANNodeID
 	TAI              *TAI
-	PresentExtensions *ProtocolIESingleContainerAMFPagingTargetExtIEs
+	ChoiceExtensions *ProtocolIESingleContainerAMFPagingTargetExtIEs
 }
 
 type ProtocolIESingleContainerAMFPagingTargetExtIEs struct {
@@ -444,11 +442,6 @@ type AssociatedQosFlowList struct {
 	List []AssociatedQosFlowItem `vht:"sizeMin:1,sizeMax:MaxnoofQosFlows"`
 }
 
-const (
-	QosFlowMappingIndicationUl Enumerated = 0
-	QosFlowMappingIndicationDl Enumerated = 1
-)
-
 type AssociatedQosFlowItem struct {
 	QosFlowIdentifier        QosFlowIdentifier
 	QosFlowMappingIndication *Enumerated `vht:"valueExt,valueMin:0,valueMax:2"`
@@ -488,7 +481,7 @@ const (
 	BroadcastCancelledAreaListPresentCellIDCancelledNR             int = 3
 	BroadcastCancelledAreaListPresentTAICancelledNR                int = 4
 	BroadcastCancelledAreaListPresentEmergencyAreaIDCancelledNR    int = 5
-	BroadcastCancelledAreaListPresentPresentExtensions              int = 6
+	BroadcastCancelledAreaListPresentChoiceExtensions              int = 6
 )
 
 type BroadcastCancelledAreaList struct {
@@ -499,7 +492,7 @@ type BroadcastCancelledAreaList struct {
 	CellIDCancelledNR             *CellIDCancelledNR
 	TAICancelledNR                *TAICancelledNR
 	EmergencyAreaIDCancelledNR    *EmergencyAreaIDCancelledNR
-	PresentExtensions              *ProtocolIESingleContainerBroadcastCancelledAreaListExtIEs
+	ChoiceExtensions              *ProtocolIESingleContainerBroadcastCancelledAreaListExtIEs
 }
 
 type ProtocolIESingleContainerBroadcastCancelledAreaListExtIEs struct {
@@ -527,7 +520,7 @@ const (
 	BroadcastCompletedAreaListPresentCellIDBroadcastNR             int = 3
 	BroadcastCompletedAreaListPresentTAIBroadcastNR                int = 4
 	BroadcastCompletedAreaListPresentEmergencyAreaIDBroadcastNR    int = 5
-	BroadcastCompletedAreaListPresentPresentExtensions              int = 6
+	BroadcastCompletedAreaListPresentChoiceExtensions              int = 6
 )
 
 type BroadcastCompletedAreaList struct {
@@ -538,7 +531,7 @@ type BroadcastCompletedAreaList struct {
 	CellIDBroadcastNR             *CellIDBroadcastNR
 	TAIBroadcastNR                *TAIBroadcastNR
 	EmergencyAreaIDBroadcastNR    *EmergencyAreaIDBroadcastNR
-	PresentExtensions              *ProtocolIESingleContainerBroadcastCompletedAreaListExtIEs
+	ChoiceExtensions              *ProtocolIESingleContainerBroadcastCompletedAreaListExtIEs
 }
 
 type ProtocolIESingleContainerBroadcastCompletedAreaListExtIEs struct {
@@ -592,7 +585,7 @@ const (
 )
 
 type CancelAllWarningMessages struct {
-	Value Enumerated `vht:"valueMin:0,valueMax:0"`
+	Value Enumerated `vht:"valueExt,valueMin:0,valueMax:0"`
 }
 
 type CancelledCellsInEAIEUTRA struct {
@@ -713,7 +706,7 @@ const (
 	CausePresentNas              int = 2
 	CausePresentProtocol         int = 3
 	CausePresentMisc             int = 4
-	CausePresentPresentExtensions int = 5
+	CausePresentChoiceExtensions int = 5
 )
 
 type Cause struct {
@@ -723,7 +716,7 @@ type Cause struct {
 	Nas              *CauseNas
 	Protocol         *CauseProtocol
 	Misc             *CauseMisc
-	PresentExtensions *ProtocolIESingleContainerCauseExtIEs
+	ChoiceExtensions *ProtocolIESingleContainerCauseExtIEs
 }
 
 type ProtocolIESingleContainerCauseExtIEs struct {
@@ -754,7 +747,7 @@ const (
 )
 
 type CauseMisc struct {
-	Value Enumerated `vht:"valueMin:0,valueMax:5"`
+	Value Enumerated `vht:"valueExt,valueMin:0,valueMax:5"`
 }
 
 const (
@@ -765,7 +758,7 @@ const (
 )
 
 type CauseNas struct {
-	Value Enumerated `vht:"valueMin:0,valueMax:3"`
+	Value Enumerated `vht:"valueExt,valueMin:0,valueMax:3"`
 }
 
 const (
@@ -779,7 +772,7 @@ const (
 )
 
 type CauseProtocol struct {
-	Value Enumerated `vht:"valueMin:0,valueMax:6"`
+	Value Enumerated `vht:"valueExt,valueMin:0,valueMax:6"`
 }
 
 const (
@@ -834,7 +827,7 @@ const (
 )
 
 type CauseRadioNetwork struct {
-	Value Enumerated `vht:"valueMin:0,valueMax:47"`
+	Value Enumerated `vht:"valueExt,valueMin:0,valueMax:47"`
 }
 
 const (
@@ -843,7 +836,7 @@ const (
 )
 
 type CauseTransport struct {
-	Value Enumerated `vht:"valueMin:0,valueMax:1"`
+	Value Enumerated `vht:"valueExt,valueMin:0,valueMax:1"`
 }
 
 type CellIDBroadcastEUTRA struct {
@@ -959,14 +952,14 @@ type CellIDCancelledNRItemExtIEsExtensionValue struct {
 const (
 	CellIDListForRestartPresentEUTRACGIListforRestart int = 0
 	CellIDListForRestartPresentNRCGIListforRestart    int = 1
-	CellIDListForRestartPresentPresentExtensions       int = 2
+	CellIDListForRestartPresentChoiceExtensions       int = 2
 )
 
 type CellIDListForRestart struct {
 	Present                 int
 	EUTRACGIListforRestart *EUTRACGIList
 	NRCGIListforRestart    *NRCGIList
-	PresentExtensions       *ProtocolIESingleContainerCellIDListForRestartExtIEs
+	ChoiceExtensions       *ProtocolIESingleContainerCellIDListForRestartExtIEs
 }
 
 type ProtocolIESingleContainerCellIDListForRestartExtIEs struct {
@@ -995,7 +988,7 @@ const (
 )
 
 type CellSize struct {
-	Value Enumerated `vht:"valueMin:0,valueMax:3"`
+	Value Enumerated `vht:"valueExt,valueMin:0,valueMax:3"`
 }
 
 type CellType struct {
@@ -1048,11 +1041,6 @@ type CNTypeRestrictionsForEquivalent struct {
 	List []CNTypeRestrictionsForEquivalentItem `vht:"sizeMin:1,sizeMax:MaxnoofEPLMNs"`
 }
 
-const (
-	CnTypeEpcForbidden    Enumerated = 0
-	CnTypeFiveGCForbidden Enumerated = 1
-)
-
 type CNTypeRestrictionsForEquivalentItem struct {
 	PlmnIdentity PLMNIdentity
 	CnType       Enumerated `vht:"valueExt,valueMin:0,valueMax:2"`
@@ -1082,7 +1070,7 @@ const (
 )
 
 type CNTypeRestrictionsForServing struct {
-	Value Enumerated `vht:"valueMin:0,valueMax:0"`
+	Value Enumerated `vht:"valueExt,valueMin:0,valueMax:0"`
 }
 
 type CommonNetworkInstance struct {
@@ -1202,7 +1190,7 @@ const (
 )
 
 type ConcurrentWarningMessageInd struct {
-	Value Enumerated `vht:"valueMin:0,valueMax:0"`
+	Value Enumerated `vht:"valueExt,valueMin:0,valueMax:0"`
 }
 
 const (
@@ -1212,7 +1200,7 @@ const (
 )
 
 type ConfidentialityProtectionIndication struct {
-	Value Enumerated `vht:"valueMin:0,valueMax:2"`
+	Value Enumerated `vht:"valueExt,valueMin:0,valueMax:2"`
 }
 
 const (
@@ -1221,7 +1209,7 @@ const (
 )
 
 type ConfidentialityProtectionResult struct {
-	Value Enumerated `vht:"valueMin:0,valueMax:1"`
+	Value Enumerated `vht:"valueExt,valueMin:0,valueMax:1"`
 }
 
 type CoreNetworkAssistanceInformationForInactive struct {
@@ -1302,13 +1290,13 @@ type COUNTValueForPDCPSN18ExtIEsExtensionValue struct {
 
 const (
 	CPTransportLayerInformationPresentEndpointIPAddress int = 0
-	CPTransportLayerInformationPresentPresentExtensions  int = 1
+	CPTransportLayerInformationPresentChoiceExtensions  int = 1
 )
 
 type CPTransportLayerInformation struct {
 	Present            int
 	EndpointIPAddress *TransportLayerAddress
-	PresentExtensions  *ProtocolIESingleContainerCPTransportLayerInformationExtIEs
+	ChoiceExtensions  *ProtocolIESingleContainerCPTransportLayerInformationExtIEs
 }
 
 type ProtocolIESingleContainerCPTransportLayerInformationExtIEs struct {
@@ -1394,7 +1382,7 @@ const (
 )
 
 type DataForwardingAccepted struct {
-	Value Enumerated `vht:"valueMin:0,valueMax:0"`
+	Value Enumerated `vht:"valueExt,valueMin:0,valueMax:0"`
 }
 
 const (
@@ -1402,7 +1390,7 @@ const (
 )
 
 type DataForwardingNotPossible struct {
-	Value Enumerated `vht:"valueMin:0,valueMax:0"`
+	Value Enumerated `vht:"valueExt,valueMin:0,valueMax:0"`
 }
 
 type DataForwardingResponseDRBList struct {
@@ -1468,7 +1456,7 @@ const (
 )
 
 type DelayCritical struct {
-	Value Enumerated `vht:"valueMin:0,valueMax:1"`
+	Value Enumerated `vht:"valueExt,valueMin:0,valueMax:1"`
 }
 
 const (
@@ -1476,7 +1464,7 @@ const (
 )
 
 type DLForwarding struct {
-	Value Enumerated `vht:"valueMin:0,valueMax:0"`
+	Value Enumerated `vht:"valueExt,valueMin:0,valueMax:0"`
 }
 
 const (
@@ -1484,7 +1472,7 @@ const (
 )
 
 type DLNGUTNLInformationReused struct {
-	Value Enumerated `vht:"valueMin:0,valueMax:0"`
+	Value Enumerated `vht:"valueExt,valueMin:0,valueMax:0"`
 }
 
 const (
@@ -1492,7 +1480,7 @@ const (
 )
 
 type DirectForwardingPathAvailability struct {
-	Value Enumerated `vht:"valueMin:0,valueMax:0"`
+	Value Enumerated `vht:"valueExt,valueMin:0,valueMax:0"`
 }
 
 type DRBID struct {
@@ -1532,14 +1520,14 @@ type DRBsSubjectToStatusTransferItemExtIEsExtensionValue struct {
 const (
 	DRBStatusDLPresentDRBStatusDL12    int = 0
 	DRBStatusDLPresentDRBStatusDL18    int = 1
-	DRBStatusDLPresentPresentExtensions int = 2
+	DRBStatusDLPresentChoiceExtensions int = 2
 )
 
 type DRBStatusDL struct {
 	Present           int
 	DRBStatusDL12    *DRBStatusDL12
 	DRBStatusDL18    *DRBStatusDL18
-	PresentExtensions *ProtocolIESingleContainerDRBStatusDLExtIEs
+	ChoiceExtensions *ProtocolIESingleContainerDRBStatusDLExtIEs
 }
 
 type ProtocolIESingleContainerDRBStatusDLExtIEs struct {
@@ -1609,14 +1597,14 @@ type DRBStatusDL18ExtIEsExtensionValue struct {
 const (
 	DRBStatusULPresentDRBStatusUL12    int = 0
 	DRBStatusULPresentDRBStatusUL18    int = 1
-	DRBStatusULPresentPresentExtensions int = 2
+	DRBStatusULPresentChoiceExtensions int = 2
 )
 
 type DRBStatusUL struct {
 	Present           int
 	DRBStatusUL12    *DRBStatusUL12
 	DRBStatusUL18    *DRBStatusUL18
-	PresentExtensions *ProtocolIESingleContainerDRBStatusULExtIEs
+	ChoiceExtensions *ProtocolIESingleContainerDRBStatusULExtIEs
 }
 
 type ProtocolIESingleContainerDRBStatusULExtIEs struct {
@@ -1895,7 +1883,7 @@ const (
 )
 
 type EmergencyFallbackRequestIndicator struct {
-	Value Enumerated `vht:"valueMin:0,valueMax:0"`
+	Value Enumerated `vht:"valueExt,valueMin:0,valueMax:0"`
 }
 
 const (
@@ -1904,7 +1892,7 @@ const (
 )
 
 type EmergencyServiceTargetCN struct {
-	Value Enumerated `vht:"valueMin:0,valueMax:1"`
+	Value Enumerated `vht:"valueExt,valueMin:0,valueMax:1"`
 }
 
 type ENDCSONConfigurationTransfer struct {
@@ -2053,7 +2041,7 @@ const (
 )
 
 type EventType struct {
-	Value Enumerated `vht:"valueMin:0,valueMax:5"`
+	Value Enumerated `vht:"valueExt,valueMin:0,valueMax:5"`
 }
 
 type ExpectedActivityPeriod struct {
@@ -2071,7 +2059,7 @@ const (
 )
 
 type ExpectedHOInterval struct {
-	Value Enumerated `vht:"valueMin:0,valueMax:6"`
+	Value Enumerated `vht:"valueExt,valueMin:0,valueMax:6"`
 }
 
 type ExpectedIdlePeriod struct {
@@ -2135,7 +2123,7 @@ const (
 )
 
 type ExpectedUEMobility struct {
-	Value Enumerated `vht:"valueMin:0,valueMax:1"`
+	Value Enumerated `vht:"valueExt,valueMin:0,valueMax:1"`
 }
 
 type ExpectedUEMovingTrajectory struct {
@@ -2364,7 +2352,7 @@ const (
 	GlobalRANNodeIDPresentGlobalGNBID      int = 0
 	GlobalRANNodeIDPresentGlobalNgENBID    int = 1
 	GlobalRANNodeIDPresentGlobalN3IWFID    int = 2
-	GlobalRANNodeIDPresentPresentExtensions int = 3
+	GlobalRANNodeIDPresentChoiceExtensions int = 3
 )
 
 type GlobalRANNodeID struct {
@@ -2372,7 +2360,7 @@ type GlobalRANNodeID struct {
 	GlobalGNBID      *GlobalGNBID
 	GlobalNgENBID    *GlobalNgENBID
 	GlobalN3IWFID    *GlobalN3IWFID
-	PresentExtensions *ProtocolIESingleContainerGlobalRANNodeIDExtIEs
+	ChoiceExtensions *ProtocolIESingleContainerGlobalRANNodeIDExtIEs
 }
 
 type ProtocolIESingleContainerGlobalRANNodeIDExtIEs struct {
@@ -2395,13 +2383,13 @@ type GlobalRANNodeIDExtIEsTypeValue struct {
 
 const (
 	GNBIDPresentGNBID            int = 0
-	GNBIDPresentPresentExtensions int = 1
+	GNBIDPresentChoiceExtensions int = 1
 )
 
 type GNBID struct {
 	Present           int
 	GNBID            *BitString `vht:"valueMin:22,valueMax:32"`
-	PresentExtensions *ProtocolIESingleContainerGNBIDExtIEs
+	ChoiceExtensions *ProtocolIESingleContainerGNBIDExtIEs
 }
 
 type ProtocolIESingleContainerGNBIDExtIEs struct {
@@ -2482,7 +2470,7 @@ const (
 )
 
 type GUAMIType struct {
-	Value Enumerated `vht:"valueMin:0,valueMax:1"`
+	Value Enumerated `vht:"valueExt,valueMin:0,valueMax:1"`
 }
 
 type HandoverCommandTransfer struct {
@@ -2522,7 +2510,7 @@ const (
 )
 
 type HandoverFlag struct {
-	Value Enumerated `vht:"valueMin:0,valueMax:0"`
+	Value Enumerated `vht:"valueExt,valueMin:0,valueMax:0"`
 }
 
 type HandoverPreparationUnsuccessfulTransfer struct {
@@ -2638,7 +2626,7 @@ const (
 )
 
 type HandoverType struct {
-	Value Enumerated `vht:"valueMin:0,valueMax:3"`
+	Value Enumerated `vht:"valueExt,valueMin:0,valueMax:3"`
 }
 
 const (
@@ -2647,7 +2635,7 @@ const (
 )
 
 type IMSVoiceSupportIndicator struct {
-	Value Enumerated `vht:"valueMin:0,valueMax:1"`
+	Value Enumerated `vht:"valueExt,valueMin:0,valueMax:1"`
 }
 
 type IndexToRFSP struct {
@@ -2685,7 +2673,7 @@ const (
 )
 
 type IntegrityProtectionIndication struct {
-	Value Enumerated `vht:"valueMin:0,valueMax:2"`
+	Value Enumerated `vht:"valueExt,valueMin:0,valueMax:2"`
 }
 
 const (
@@ -2694,7 +2682,7 @@ const (
 )
 
 type IntegrityProtectionResult struct {
-	Value Enumerated `vht:"valueMin:0,valueMax:1"`
+	Value Enumerated `vht:"valueExt,valueMin:0,valueMax:1"`
 }
 
 type IntendedNumberOfPagingAttempts struct {
@@ -2738,7 +2726,7 @@ const (
 	LastVisitedCellInformationPresentEUTRANCell       int = 1
 	LastVisitedCellInformationPresentUTRANCell        int = 2
 	LastVisitedCellInformationPresentGERANCell        int = 3
-	LastVisitedCellInformationPresentPresentExtensions int = 4
+	LastVisitedCellInformationPresentChoiceExtensions int = 4
 )
 
 type LastVisitedCellInformation struct {
@@ -2747,7 +2735,7 @@ type LastVisitedCellInformation struct {
 	EUTRANCell       *LastVisitedEUTRANCellInformation
 	UTRANCell        *LastVisitedUTRANCellInformation
 	GERANCell        *LastVisitedGERANCellInformation
-	PresentExtensions *ProtocolIESingleContainerLastVisitedCellInformationExtIEs
+	ChoiceExtensions *ProtocolIESingleContainerLastVisitedCellInformationExtIEs
 }
 
 type ProtocolIESingleContainerLastVisitedCellInformationExtIEs struct {
@@ -2835,7 +2823,7 @@ const (
 )
 
 type LocationReportingAdditionalInfo struct {
-	Value Enumerated `vht:"valueMin:0,valueMax:0"`
+	Value Enumerated `vht:"valueExt,valueMin:0,valueMax:0"`
 }
 
 type LocationReportingReferenceID struct {
@@ -2887,7 +2875,7 @@ const (
 )
 
 type MaximumIntegrityProtectedDataRate struct {
-	Value Enumerated `vht:"valueMin:0,valueMax:1"`
+	Value Enumerated `vht:"valueExt,valueMin:0,valueMax:1"`
 }
 
 const (
@@ -2895,7 +2883,7 @@ const (
 )
 
 type MICOModeIndication struct {
-	Value Enumerated `vht:"valueMin:0,valueMax:0"`
+	Value Enumerated `vht:"valueExt,valueMin:0,valueMax:0"`
 }
 
 type MobilityRestrictionList struct {
@@ -2932,13 +2920,13 @@ type MobilityRestrictionListExtIEsExtensionValue struct {
 
 const (
 	N3IWFIDPresentN3IWFID          int = 0
-	N3IWFIDPresentPresentExtensions int = 1
+	N3IWFIDPresentChoiceExtensions int = 1
 )
 
 type N3IWFID struct {
 	Present           int
 	N3IWFID          *BitString `vht:"valueMin:16,valueMax:16"`
-	PresentExtensions *ProtocolIESingleContainerN3IWFIDExtIEs
+	ChoiceExtensions *ProtocolIESingleContainerN3IWFIDExtIEs
 }
 
 type ProtocolIESingleContainerN3IWFIDExtIEs struct {
@@ -2976,7 +2964,7 @@ const (
 )
 
 type NewSecurityContextInd struct {
-	Value Enumerated `vht:"valueMin:0,valueMax:0"`
+	Value Enumerated `vht:"valueExt,valueMin:0,valueMax:0"`
 }
 
 type NextHopChainingCount struct {
@@ -2989,14 +2977,14 @@ const (
 )
 
 type NextPagingAreaScope struct {
-	Value Enumerated `vht:"valueMin:0,valueMax:1"`
+	Value Enumerated `vht:"valueExt,valueMin:0,valueMax:1"`
 }
 
 const (
 	NgENBIDPresentMacroNgENBID      int = 0
 	NgENBIDPresentShortMacroNgENBID int = 1
 	NgENBIDPresentLongMacroNgENBID  int = 2
-	NgENBIDPresentPresentExtensions  int = 3
+	NgENBIDPresentChoiceExtensions  int = 3
 )
 
 type NgENBID struct {
@@ -3004,7 +2992,7 @@ type NgENBID struct {
 	MacroNgENBID      *BitString `vht:"valueMin:20,valueMax:20"`
 	ShortMacroNgENBID *BitString `vht:"valueMin:18,valueMax:18"`
 	LongMacroNgENBID  *BitString `vht:"valueMin:21,valueMax:21"`
-	PresentExtensions  *ProtocolIESingleContainerNgENBIDExtIEs
+	ChoiceExtensions  *ProtocolIESingleContainerNgENBIDExtIEs
 }
 
 type ProtocolIESingleContainerNgENBIDExtIEs struct {
@@ -3028,14 +3016,14 @@ type NgENBIDExtIEsTypeValue struct {
 const (
 	NGRANCGIPresentNRCGI            int = 0
 	NGRANCGIPresentEUTRACGI         int = 1
-	NGRANCGIPresentPresentExtensions int = 2
+	NGRANCGIPresentChoiceExtensions int = 2
 )
 
 type NGRANCGI struct {
 	Present           int
 	NRCGI            *NRCGI
 	EUTRACGI         *EUTRACGI
-	PresentExtensions *ProtocolIESingleContainerNGRANCGIExtIEs
+	ChoiceExtensions *ProtocolIESingleContainerNGRANCGIExtIEs
 }
 
 type ProtocolIESingleContainerNGRANCGIExtIEs struct {
@@ -3124,7 +3112,7 @@ const (
 )
 
 type NotificationCause struct {
-	Value Enumerated `vht:"valueMin:0,valueMax:1"`
+	Value Enumerated `vht:"valueExt,valueMin:0,valueMax:1"`
 }
 
 const (
@@ -3132,7 +3120,7 @@ const (
 )
 
 type NotificationControl struct {
-	Value Enumerated `vht:"valueMin:0,valueMax:0"`
+	Value Enumerated `vht:"valueExt,valueMin:0,valueMax:0"`
 }
 
 type NRCellIdentity struct {
@@ -3199,18 +3187,18 @@ const (
 )
 
 type OverloadAction struct {
-	Value Enumerated `vht:"valueMin:0,valueMax:3"`
+	Value Enumerated `vht:"valueExt,valueMin:0,valueMax:3"`
 }
 
 const (
 	OverloadResponsePresentOverloadAction   int = 0
-	OverloadResponsePresentPresentExtensions int = 1
+	OverloadResponsePresentChoiceExtensions int = 1
 )
 
 type OverloadResponse struct {
 	Present           int
 	OverloadAction   *OverloadAction
-	PresentExtensions *ProtocolIESingleContainerOverloadResponseExtIEs
+	ChoiceExtensions *ProtocolIESingleContainerOverloadResponseExtIEs
 }
 
 type ProtocolIESingleContainerOverloadResponseExtIEs struct {
@@ -3329,7 +3317,7 @@ const (
 )
 
 type PagingDRX struct {
-	Value Enumerated `vht:"valueMin:0,valueMax:3"`
+	Value Enumerated `vht:"valueExt,valueMin:0,valueMax:3"`
 }
 
 const (
@@ -3337,7 +3325,7 @@ const (
 )
 
 type PagingOrigin struct {
-	Value Enumerated `vht:"valueMin:0,valueMax:0"`
+	Value Enumerated `vht:"valueExt,valueMin:0,valueMax:0"`
 }
 
 const (
@@ -3352,7 +3340,7 @@ const (
 )
 
 type PagingPriority struct {
-	Value Enumerated `vht:"valueMin:0,valueMax:7"`
+	Value Enumerated `vht:"valueExt,valueMin:0,valueMax:7"`
 }
 
 type PathSwitchRequestAcknowledgeTransfer struct {
@@ -4742,15 +4730,8 @@ const (
 )
 
 type PDUSessionType struct {
-	Value Enumerated `vht:"valueMin:0,valueMax:4"`
+	Value Enumerated `vht:"valueExt,valueMin:0,valueMax:4"`
 }
-
-const (
-	RATTypeNr              Enumerated = 0
-	RATTypeEutra           Enumerated = 1
-	RATTypeNrUnlicensed    Enumerated = 2
-	RATTypeEUtraUnlicensed Enumerated = 3
-)
 
 type PDUSessionUsageReport struct {
 	RATType                   Enumerated `vht:"valueExt,valueMin:0,valueMax:4"`
@@ -4822,7 +4803,7 @@ const (
 )
 
 type PreEmptionCapability struct {
-	Value Enumerated `vht:"valueMin:0,valueMax:1"`
+	Value Enumerated `vht:"valueExt,valueMin:0,valueMax:1"`
 }
 
 const (
@@ -4831,7 +4812,7 @@ const (
 )
 
 type PreEmptionVulnerability struct {
-	Value Enumerated `vht:"valueMin:0,valueMax:1"`
+	Value Enumerated `vht:"valueExt,valueMin:0,valueMax:1"`
 }
 
 type PriorityLevelARP struct {
@@ -4845,14 +4826,14 @@ type PriorityLevelQos struct {
 const (
 	PWSFailedCellIDListPresentEUTRACGIPWSFailedList int = 0
 	PWSFailedCellIDListPresentNRCGIPWSFailedList    int = 1
-	PWSFailedCellIDListPresentPresentExtensions      int = 2
+	PWSFailedCellIDListPresentChoiceExtensions      int = 2
 )
 
 type PWSFailedCellIDList struct {
 	Present                int
 	EUTRACGIPWSFailedList *EUTRACGIList
 	NRCGIPWSFailedList    *NRCGIList
-	PresentExtensions      *ProtocolIESingleContainerPWSFailedCellIDListExtIEs
+	ChoiceExtensions      *ProtocolIESingleContainerPWSFailedCellIDListExtIEs
 }
 
 type ProtocolIESingleContainerPWSFailedCellIDListExtIEs struct {
@@ -4876,14 +4857,14 @@ type PWSFailedCellIDListExtIEsTypeValue struct {
 const (
 	QosCharacteristicsPresentNonDynamic5QI    int = 0
 	QosCharacteristicsPresentDynamic5QI       int = 1
-	QosCharacteristicsPresentPresentExtensions int = 2
+	QosCharacteristicsPresentChoiceExtensions int = 2
 )
 
 type QosCharacteristics struct {
 	Present           int
 	NonDynamic5QI    *NonDynamic5QIDescriptor
 	Dynamic5QI       *Dynamic5QIDescriptor
-	PresentExtensions *ProtocolIESingleContainerQosCharacteristicsExtIEs
+	ChoiceExtensions *ProtocolIESingleContainerQosCharacteristicsExtIEs
 }
 
 type ProtocolIESingleContainerQosCharacteristicsExtIEs struct {
@@ -5345,7 +5326,7 @@ const (
 )
 
 type RATInformation struct {
-	Value Enumerated `vht:"valueMin:0,valueMax:0"`
+	Value Enumerated `vht:"valueExt,valueMin:0,valueMax:0"`
 }
 
 type RATRestrictions struct {
@@ -5488,7 +5469,7 @@ const (
 )
 
 type RedirectionVoiceFallback struct {
-	Value Enumerated `vht:"valueMin:0,valueMax:1"`
+	Value Enumerated `vht:"valueExt,valueMin:0,valueMax:1"`
 }
 
 const (
@@ -5496,7 +5477,7 @@ const (
 )
 
 type ReflectiveQosAttribute struct {
-	Value Enumerated `vht:"valueMin:0,valueMax:0"`
+	Value Enumerated `vht:"valueExt,valueMin:0,valueMax:0"`
 }
 
 type RelativeAMFCapacity struct {
@@ -5508,7 +5489,7 @@ const (
 )
 
 type ReportArea struct {
-	Value Enumerated `vht:"valueMin:0,valueMax:0"`
+	Value Enumerated `vht:"valueExt,valueMin:0,valueMax:0"`
 }
 
 type RepetitionPeriod struct {
@@ -5520,20 +5501,20 @@ const (
 )
 
 type ResetAll struct {
-	Value Enumerated `vht:"valueMin:0,valueMax:0"`
+	Value Enumerated `vht:"valueExt,valueMin:0,valueMax:0"`
 }
 
 const (
 	ResetTypePresentNGInterface       int = 0
 	ResetTypePresentPartOfNGInterface int = 1
-	ResetTypePresentPresentExtensions  int = 2
+	ResetTypePresentChoiceExtensions  int = 2
 )
 
 type ResetType struct {
 	Present            int
 	NGInterface       *ResetAll
 	PartOfNGInterface *UEAssociatedLogicalNGConnectionList
-	PresentExtensions  *ProtocolIESingleContainerResetTypeExtIEs
+	ChoiceExtensions  *ProtocolIESingleContainerResetTypeExtIEs
 }
 
 type ProtocolIESingleContainerResetTypeExtIEs struct {
@@ -5581,7 +5562,7 @@ const (
 )
 
 type RRCEstablishmentCause struct {
-	Value Enumerated `vht:"valueMin:0,valueMax:10"`
+	Value Enumerated `vht:"valueExt,valueMin:0,valueMax:10"`
 }
 
 const (
@@ -5591,7 +5572,7 @@ const (
 )
 
 type RRCInactiveTransitionReportRequest struct {
-	Value Enumerated `vht:"valueMin:0,valueMax:2"`
+	Value Enumerated `vht:"valueExt,valueMin:0,valueMax:2"`
 }
 
 const (
@@ -5600,7 +5581,7 @@ const (
 )
 
 type RRCState struct {
-	Value Enumerated `vht:"valueMin:0,valueMax:1"`
+	Value Enumerated `vht:"valueExt,valueMin:0,valueMax:1"`
 }
 
 type RIMInformationTransfer struct {
@@ -5627,11 +5608,6 @@ const (
 type RIMInformationTransferExtIEsExtensionValue struct {
 	Present int
 }
-
-const (
-	RIMRSDetectionRsDetected    Enumerated = 0
-	RIMRSDetectionRsDisappeared Enumerated = 1
-)
 
 type RIMInformation struct {
 	TargetgNBSetID GNBSetID
@@ -5948,14 +5924,14 @@ type SONConfigurationTransferExtIEsExtensionValue struct {
 const (
 	SONInformationPresentSONInformationRequest int = 0
 	SONInformationPresentSONInformationReply   int = 1
-	SONInformationPresentPresentExtensions      int = 2
+	SONInformationPresentChoiceExtensions      int = 2
 )
 
 type SONInformation struct {
 	Present                int
 	SONInformationRequest *SONInformationRequest
 	SONInformationReply   *SONInformationReply
-	PresentExtensions      *ProtocolIESingleContainerSONInformationExtIEs
+	ChoiceExtensions      *ProtocolIESingleContainerSONInformationExtIEs
 }
 
 type ProtocolIESingleContainerSONInformationExtIEs struct {
@@ -6004,7 +5980,7 @@ const (
 )
 
 type SONInformationRequest struct {
-	Value Enumerated `vht:"valueMin:0,valueMax:0"`
+	Value Enumerated `vht:"valueExt,valueMin:0,valueMax:0"`
 }
 
 type SourceNGRANNodeToTargetNGRANNodeTransparentContainer struct {
@@ -6042,7 +6018,7 @@ const (
 )
 
 type SourceOfUEActivityBehaviourInformation struct {
-	Value Enumerated `vht:"valueMin:0,valueMax:1"`
+	Value Enumerated `vht:"valueExt,valueMin:0,valueMax:1"`
 }
 
 type SourceRANNodeID struct {
@@ -6103,7 +6079,7 @@ const (
 )
 
 type SRVCCOperationPossible struct {
-	Value Enumerated `vht:"valueMin:0,valueMax:0"`
+	Value Enumerated `vht:"valueExt,valueMin:0,valueMax:0"`
 }
 
 type ConfiguredNSSAI struct {
@@ -6380,14 +6356,14 @@ type TargeteNBIDExtIEsExtensionValue struct {
 const (
 	TargetIDPresentTargetRANNodeID  int = 0
 	TargetIDPresentTargeteNBID      int = 1
-	TargetIDPresentPresentExtensions int = 2
+	TargetIDPresentChoiceExtensions int = 2
 )
 
 type TargetID struct {
 	Present           int
 	TargetRANNodeID  *TargetRANNodeID
 	TargeteNBID      *TargeteNBID
-	PresentExtensions *ProtocolIESingleContainerTargetIDExtIEs
+	ChoiceExtensions *ProtocolIESingleContainerTargetIDExtIEs
 }
 
 type ProtocolIESingleContainerTargetIDExtIEs struct {
@@ -6490,7 +6466,7 @@ const (
 )
 
 type TimerApproachForGUAMIRemoval struct {
-	Value Enumerated `vht:"valueMin:0,valueMax:0"`
+	Value Enumerated `vht:"valueExt,valueMin:0,valueMax:0"`
 }
 
 type TimeStamp struct {
@@ -6507,7 +6483,7 @@ const (
 )
 
 type TimeToWait struct {
-	Value Enumerated `vht:"valueMin:0,valueMax:5"`
+	Value Enumerated `vht:"valueExt,valueMin:0,valueMax:5"`
 }
 
 type TimeUEStayedInCell struct {
@@ -6557,7 +6533,7 @@ const (
 )
 
 type TNLAssociationUsage struct {
-	Value Enumerated `vht:"valueMin:0,valueMax:2"`
+	Value Enumerated `vht:"valueExt,valueMin:0,valueMax:2"`
 }
 
 type TraceActivation struct {
@@ -6596,7 +6572,7 @@ const (
 )
 
 type TraceDepth struct {
-	Value Enumerated `vht:"valueMin:0,valueMax:5"`
+	Value Enumerated `vht:"valueExt,valueMin:0,valueMax:5"`
 }
 
 type TrafficLoadReductionIndication struct {
@@ -6613,7 +6589,7 @@ const (
 )
 
 type TypeOfError struct {
-	Value Enumerated `vht:"valueMin:0,valueMax:1"`
+	Value Enumerated `vht:"valueExt,valueMin:0,valueMax:1"`
 }
 
 type UEAggregateMaximumBitRate struct {
@@ -6673,7 +6649,7 @@ const (
 )
 
 type UEContextRequest struct {
-	Value Enumerated `vht:"valueMin:0,valueMax:0"`
+	Value Enumerated `vht:"valueExt,valueMin:0,valueMax:0"`
 }
 
 type UEHistoryInformation struct {
@@ -6682,13 +6658,13 @@ type UEHistoryInformation struct {
 
 const (
 	UEIdentityIndexValuePresentIndexLength10    int = 0
-	UEIdentityIndexValuePresentPresentExtensions int = 1
+	UEIdentityIndexValuePresentChoiceExtensions int = 1
 )
 
 type UEIdentityIndexValue struct {
 	Present           int
 	IndexLength10    *BitString `vht:"valueMin:10,valueMax:10"`
-	PresentExtensions *ProtocolIESingleContainerUEIdentityIndexValueExtIEs
+	ChoiceExtensions *ProtocolIESingleContainerUEIdentityIndexValueExtIEs
 }
 
 type ProtocolIESingleContainerUEIdentityIndexValueExtIEs struct {
@@ -6712,14 +6688,14 @@ type UEIdentityIndexValueExtIEsTypeValue struct {
 const (
 	UENGAPIDsPresentUENGAPIDPair     int = 0
 	UENGAPIDsPresentAMFUENGAPID      int = 1
-	UENGAPIDsPresentPresentExtensions int = 2
+	UENGAPIDsPresentChoiceExtensions int = 2
 )
 
 type UENGAPIDs struct {
 	Present           int
 	UENGAPIDPair     *UENGAPIDPair
 	AMFUENGAPID      *AMFUENGAPID
-	PresentExtensions *ProtocolIESingleContainerUENGAPIDsExtIEs
+	ChoiceExtensions *ProtocolIESingleContainerUENGAPIDsExtIEs
 }
 
 type ProtocolIESingleContainerUENGAPIDsExtIEs struct {
@@ -6766,13 +6742,13 @@ type UENGAPIDPairExtIEsExtensionValue struct {
 
 const (
 	UEPagingIdentityPresentFiveGSTMSI       int = 0
-	UEPagingIdentityPresentPresentExtensions int = 1
+	UEPagingIdentityPresentChoiceExtensions int = 1
 )
 
 type UEPagingIdentity struct {
 	Present           int
 	FiveGSTMSI       *FiveGSTMSI
-	PresentExtensions *ProtocolIESingleContainerUEPagingIdentityExtIEs
+	ChoiceExtensions *ProtocolIESingleContainerUEPagingIdentityExtIEs
 }
 
 type ProtocolIESingleContainerUEPagingIdentityExtIEs struct {
@@ -6800,7 +6776,7 @@ const (
 )
 
 type UEPresence struct {
-	Value Enumerated `vht:"valueMin:0,valueMax:2"`
+	Value Enumerated `vht:"valueExt,valueMin:0,valueMax:2"`
 }
 
 type UEPresenceInAreaOfInterestList struct {
@@ -6872,7 +6848,7 @@ const (
 )
 
 type UERetentionInformation struct {
-	Value Enumerated `vht:"valueMin:0,valueMax:0"`
+	Value Enumerated `vht:"valueExt,valueMin:0,valueMax:0"`
 }
 
 type UESecurityCapabilities struct {
@@ -6963,18 +6939,18 @@ const (
 )
 
 type ULForwarding struct {
-	Value Enumerated `vht:"valueMin:0,valueMax:0"`
+	Value Enumerated `vht:"valueExt,valueMin:0,valueMax:0"`
 }
 
 const (
 	UPTransportLayerInformationPresentGTPTunnel        int = 0
-	UPTransportLayerInformationPresentPresentExtensions int = 1
+	UPTransportLayerInformationPresentChoiceExtensions int = 1
 )
 
 type UPTransportLayerInformation struct {
 	Present           int
 	GTPTunnel        *GTPTunnel
-	PresentExtensions *ProtocolIESingleContainerUPTransportLayerInformationExtIEs
+	ChoiceExtensions *ProtocolIESingleContainerUPTransportLayerInformationExtIEs
 }
 
 type ProtocolIESingleContainerUPTransportLayerInformationExtIEs struct {
@@ -7054,7 +7030,7 @@ const (
 	UserLocationInformationPresentUserLocationInformationEUTRA int = 0
 	UserLocationInformationPresentUserLocationInformationNR    int = 1
 	UserLocationInformationPresentUserLocationInformationN3IWF int = 2
-	UserLocationInformationPresentPresentExtensions             int = 3
+	UserLocationInformationPresentChoiceExtensions             int = 3
 )
 
 type UserLocationInformation struct {
@@ -7062,7 +7038,7 @@ type UserLocationInformation struct {
 	UserLocationInformationEUTRA *UserLocationInformationEUTRA
 	UserLocationInformationNR    *UserLocationInformationNR
 	UserLocationInformationN3IWF *UserLocationInformationN3IWF
-	PresentExtensions             *ProtocolIESingleContainerUserLocationInformationExtIEs
+	ChoiceExtensions             *ProtocolIESingleContainerUserLocationInformationExtIEs
 }
 
 type ProtocolIESingleContainerUserLocationInformationExtIEs struct {
@@ -7222,7 +7198,7 @@ const (
 	WarningAreaListPresentNRCGIListForWarning    int = 1
 	WarningAreaListPresentTAIListForWarning      int = 2
 	WarningAreaListPresentEmergencyAreaIDList    int = 3
-	WarningAreaListPresentPresentExtensions       int = 4
+	WarningAreaListPresentChoiceExtensions       int = 4
 )
 
 type WarningAreaList struct {
@@ -7231,7 +7207,7 @@ type WarningAreaList struct {
 	NRCGIListForWarning    *NRCGIListForWarning
 	TAIListForWarning      *TAIListForWarning
 	EmergencyAreaIDList    *EmergencyAreaIDList
-	PresentExtensions       *ProtocolIESingleContainerWarningAreaListExtIEs
+	ChoiceExtensions       *ProtocolIESingleContainerWarningAreaListExtIEs
 }
 
 type ProtocolIESingleContainerWarningAreaListExtIEs struct {
@@ -7324,3 +7300,25 @@ const (
 type XnTNLConfigurationInfoExtIEsExtensionValue struct {
 	Present int
 }
+
+const (
+	QosFlowMappingIndicationUl Enumerated = 0
+	QosFlowMappingIndicationDl Enumerated = 1
+)
+
+const (
+	CnTypeEpcForbidden    Enumerated = 0
+	CnTypeFiveGCForbidden Enumerated = 1
+)
+
+const (
+	RATTypeNr              Enumerated = 0
+	RATTypeEutra           Enumerated = 1
+	RATTypeNrUnlicensed    Enumerated = 2
+	RATTypeEUtraUnlicensed Enumerated = 3
+)
+
+const (
+	RIMRSDetectionRsDetected    Enumerated = 0
+	RIMRSDetectionRsDisappeared Enumerated = 1
+)
