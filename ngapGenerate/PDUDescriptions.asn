@@ -307,13 +307,13 @@ aMFConfigurationUpdate NGAP-ELEMENTARY-PROCEDURE ::= {
 	CRITICALITY				reject
 }
 
-aMFStatusIndication NGAP-ELEMENTARY-PROCEDURE ::={
+aMFStatusIndication NGAP-ELEMENTARY-PROCEDURE ::= {
 	INITIATING MESSAGE		AMFStatusIndication
 	PROCEDURE CODE			id-AMFStatusIndication
 	CRITICALITY				ignore
 }
 
-cellTrafficTrace NGAP-ELEMENTARY-PROCEDURE ::={
+cellTrafficTrace NGAP-ELEMENTARY-PROCEDURE ::= {
 	INITIATING MESSAGE		CellTrafficTrace
 	PROCEDURE CODE			id-CellTrafficTrace
 	CRITICALITY				ignore
