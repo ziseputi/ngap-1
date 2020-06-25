@@ -1,8 +1,0 @@
-// Created By HaoDHH-245789 VHT2020
-package ngapType
-
-/* Sequence of = 35, FULL Name = struct EquivalentPLMNs */
-/* PLMNIdentity */
-type EquivalentPLMNs struct {
-	List []PLMNIdentity `vht:"sizeLB:1,sizeUB:15"`
-}

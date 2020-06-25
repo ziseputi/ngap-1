@@ -17,12 +17,12 @@ type PDUSessionResourceSetupRequestIEs struct {
 }
 
 const (
-	PDUSessionResourceSetupRequestIEsTypeValuePresentAMFUENGAPID                      int = 0
-	PDUSessionResourceSetupRequestIEsTypeValuePresentRANUENGAPID                      int = 1
-	PDUSessionResourceSetupRequestIEsTypeValuePresentRANPagingPriority                int = 2
-	PDUSessionResourceSetupRequestIEsTypeValuePresentNASPDU                           int = 3
-	PDUSessionResourceSetupRequestIEsTypeValuePresentPDUSessionResourceSetupListSUReq int = 4
-	PDUSessionResourceSetupRequestIEsTypeValuePresentUEAggregateMaximumBitRate        int = 5
+	PDUSessionResourceSetupRequestIEsPresentAMFUENGAPID                      int = 0
+	PDUSessionResourceSetupRequestIEsPresentRANUENGAPID                      int = 1
+	PDUSessionResourceSetupRequestIEsPresentRANPagingPriority                int = 2
+	PDUSessionResourceSetupRequestIEsPresentNASPDU                           int = 3
+	PDUSessionResourceSetupRequestIEsPresentPDUSessionResourceSetupListSUReq int = 4
+	PDUSessionResourceSetupRequestIEsPresentUEAggregateMaximumBitRate        int = 5
 )
 
 type PDUSessionResourceSetupRequestIEsTypeValue struct {
@@ -50,11 +50,11 @@ type PDUSessionResourceSetupResponseIEs struct {
 }
 
 const (
-	PDUSessionResourceSetupResponseIEsTypeValuePresentAMFUENGAPID                              int = 0
-	PDUSessionResourceSetupResponseIEsTypeValuePresentRANUENGAPID                              int = 1
-	PDUSessionResourceSetupResponseIEsTypeValuePresentPDUSessionResourceSetupListSURes         int = 2
-	PDUSessionResourceSetupResponseIEsTypeValuePresentPDUSessionResourceFailedToSetupListSURes int = 3
-	PDUSessionResourceSetupResponseIEsTypeValuePresentCriticalityDiagnostics                   int = 4
+	PDUSessionResourceSetupResponseIEsPresentAMFUENGAPID                              int = 0
+	PDUSessionResourceSetupResponseIEsPresentRANUENGAPID                              int = 1
+	PDUSessionResourceSetupResponseIEsPresentPDUSessionResourceSetupListSURes         int = 2
+	PDUSessionResourceSetupResponseIEsPresentPDUSessionResourceFailedToSetupListSURes int = 3
+	PDUSessionResourceSetupResponseIEsPresentCriticalityDiagnostics                   int = 4
 )
 
 type PDUSessionResourceSetupResponseIEsTypeValue struct {
@@ -81,11 +81,11 @@ type PDUSessionResourceReleaseCommandIEs struct {
 }
 
 const (
-	PDUSessionResourceReleaseCommandIEsTypeValuePresentAMFUENGAPID                           int = 0
-	PDUSessionResourceReleaseCommandIEsTypeValuePresentRANUENGAPID                           int = 1
-	PDUSessionResourceReleaseCommandIEsTypeValuePresentRANPagingPriority                     int = 2
-	PDUSessionResourceReleaseCommandIEsTypeValuePresentNASPDU                                int = 3
-	PDUSessionResourceReleaseCommandIEsTypeValuePresentPDUSessionResourceToReleaseListRelCmd int = 4
+	PDUSessionResourceReleaseCommandIEsPresentAMFUENGAPID                           int = 0
+	PDUSessionResourceReleaseCommandIEsPresentRANUENGAPID                           int = 1
+	PDUSessionResourceReleaseCommandIEsPresentRANPagingPriority                     int = 2
+	PDUSessionResourceReleaseCommandIEsPresentNASPDU                                int = 3
+	PDUSessionResourceReleaseCommandIEsPresentPDUSessionResourceToReleaseListRelCmd int = 4
 )
 
 type PDUSessionResourceReleaseCommandIEsTypeValue struct {
@@ -112,11 +112,11 @@ type PDUSessionResourceReleaseResponseIEs struct {
 }
 
 const (
-	PDUSessionResourceReleaseResponseIEsTypeValuePresentAMFUENGAPID                          int = 0
-	PDUSessionResourceReleaseResponseIEsTypeValuePresentRANUENGAPID                          int = 1
-	PDUSessionResourceReleaseResponseIEsTypeValuePresentPDUSessionResourceReleasedListRelRes int = 2
-	PDUSessionResourceReleaseResponseIEsTypeValuePresentUserLocationInformation              int = 3
-	PDUSessionResourceReleaseResponseIEsTypeValuePresentCriticalityDiagnostics               int = 4
+	PDUSessionResourceReleaseResponseIEsPresentAMFUENGAPID                          int = 0
+	PDUSessionResourceReleaseResponseIEsPresentRANUENGAPID                          int = 1
+	PDUSessionResourceReleaseResponseIEsPresentPDUSessionResourceReleasedListRelRes int = 2
+	PDUSessionResourceReleaseResponseIEsPresentUserLocationInformation              int = 3
+	PDUSessionResourceReleaseResponseIEsPresentCriticalityDiagnostics               int = 4
 )
 
 type PDUSessionResourceReleaseResponseIEsTypeValue struct {
@@ -143,10 +143,10 @@ type PDUSessionResourceModifyRequestIEs struct {
 }
 
 const (
-	PDUSessionResourceModifyRequestIEsTypeValuePresentAMFUENGAPID                        int = 0
-	PDUSessionResourceModifyRequestIEsTypeValuePresentRANUENGAPID                        int = 1
-	PDUSessionResourceModifyRequestIEsTypeValuePresentRANPagingPriority                  int = 2
-	PDUSessionResourceModifyRequestIEsTypeValuePresentPDUSessionResourceModifyListModReq int = 3
+	PDUSessionResourceModifyRequestIEsPresentAMFUENGAPID                        int = 0
+	PDUSessionResourceModifyRequestIEsPresentRANUENGAPID                        int = 1
+	PDUSessionResourceModifyRequestIEsPresentRANPagingPriority                  int = 2
+	PDUSessionResourceModifyRequestIEsPresentPDUSessionResourceModifyListModReq int = 3
 )
 
 type PDUSessionResourceModifyRequestIEsTypeValue struct {
@@ -172,12 +172,12 @@ type PDUSessionResourceModifyResponseIEs struct {
 }
 
 const (
-	PDUSessionResourceModifyResponseIEsTypeValuePresentAMFUENGAPID                                int = 0
-	PDUSessionResourceModifyResponseIEsTypeValuePresentRANUENGAPID                                int = 1
-	PDUSessionResourceModifyResponseIEsTypeValuePresentPDUSessionResourceModifyListModRes         int = 2
-	PDUSessionResourceModifyResponseIEsTypeValuePresentPDUSessionResourceFailedToModifyListModRes int = 3
-	PDUSessionResourceModifyResponseIEsTypeValuePresentUserLocationInformation                    int = 4
-	PDUSessionResourceModifyResponseIEsTypeValuePresentCriticalityDiagnostics                     int = 5
+	PDUSessionResourceModifyResponseIEsPresentAMFUENGAPID                                int = 0
+	PDUSessionResourceModifyResponseIEsPresentRANUENGAPID                                int = 1
+	PDUSessionResourceModifyResponseIEsPresentPDUSessionResourceModifyListModRes         int = 2
+	PDUSessionResourceModifyResponseIEsPresentPDUSessionResourceFailedToModifyListModRes int = 3
+	PDUSessionResourceModifyResponseIEsPresentUserLocationInformation                    int = 4
+	PDUSessionResourceModifyResponseIEsPresentCriticalityDiagnostics                     int = 5
 )
 
 type PDUSessionResourceModifyResponseIEsTypeValue struct {
@@ -205,11 +205,11 @@ type PDUSessionResourceNotifyIEs struct {
 }
 
 const (
-	PDUSessionResourceNotifyIEsTypeValuePresentAMFUENGAPID                       int = 0
-	PDUSessionResourceNotifyIEsTypeValuePresentRANUENGAPID                       int = 1
-	PDUSessionResourceNotifyIEsTypeValuePresentPDUSessionResourceNotifyList      int = 2
-	PDUSessionResourceNotifyIEsTypeValuePresentPDUSessionResourceReleasedListNot int = 3
-	PDUSessionResourceNotifyIEsTypeValuePresentUserLocationInformation           int = 4
+	PDUSessionResourceNotifyIEsPresentAMFUENGAPID                       int = 0
+	PDUSessionResourceNotifyIEsPresentRANUENGAPID                       int = 1
+	PDUSessionResourceNotifyIEsPresentPDUSessionResourceNotifyList      int = 2
+	PDUSessionResourceNotifyIEsPresentPDUSessionResourceReleasedListNot int = 3
+	PDUSessionResourceNotifyIEsPresentUserLocationInformation           int = 4
 )
 
 type PDUSessionResourceNotifyIEsTypeValue struct {
@@ -236,10 +236,10 @@ type PDUSessionResourceModifyIndicationIEs struct {
 }
 
 const (
-	PDUSessionResourceModifyIndicationIEsTypeValuePresentAMFUENGAPID                        int = 0
-	PDUSessionResourceModifyIndicationIEsTypeValuePresentRANUENGAPID                        int = 1
-	PDUSessionResourceModifyIndicationIEsTypeValuePresentPDUSessionResourceModifyListModInd int = 2
-	PDUSessionResourceModifyIndicationIEsTypeValuePresentUserLocationInformation            int = 3
+	PDUSessionResourceModifyIndicationIEsPresentAMFUENGAPID                        int = 0
+	PDUSessionResourceModifyIndicationIEsPresentRANUENGAPID                        int = 1
+	PDUSessionResourceModifyIndicationIEsPresentPDUSessionResourceModifyListModInd int = 2
+	PDUSessionResourceModifyIndicationIEsPresentUserLocationInformation            int = 3
 )
 
 type PDUSessionResourceModifyIndicationIEsTypeValue struct {
@@ -265,11 +265,11 @@ type PDUSessionResourceModifyConfirmIEs struct {
 }
 
 const (
-	PDUSessionResourceModifyConfirmIEsTypeValuePresentAMFUENGAPID                                int = 0
-	PDUSessionResourceModifyConfirmIEsTypeValuePresentRANUENGAPID                                int = 1
-	PDUSessionResourceModifyConfirmIEsTypeValuePresentPDUSessionResourceModifyListModCfm         int = 2
-	PDUSessionResourceModifyConfirmIEsTypeValuePresentPDUSessionResourceFailedToModifyListModCfm int = 3
-	PDUSessionResourceModifyConfirmIEsTypeValuePresentCriticalityDiagnostics                     int = 4
+	PDUSessionResourceModifyConfirmIEsPresentAMFUENGAPID                                int = 0
+	PDUSessionResourceModifyConfirmIEsPresentRANUENGAPID                                int = 1
+	PDUSessionResourceModifyConfirmIEsPresentPDUSessionResourceModifyListModCfm         int = 2
+	PDUSessionResourceModifyConfirmIEsPresentPDUSessionResourceFailedToModifyListModCfm int = 3
+	PDUSessionResourceModifyConfirmIEsPresentCriticalityDiagnostics                     int = 4
 )
 
 type PDUSessionResourceModifyConfirmIEsTypeValue struct {
@@ -296,29 +296,29 @@ type InitialContextSetupRequestIEs struct {
 }
 
 const (
-	InitialContextSetupRequestIEsTypeValuePresentAMFUENGAPID                                 int = 0
-	InitialContextSetupRequestIEsTypeValuePresentRANUENGAPID                                 int = 1
-	InitialContextSetupRequestIEsTypeValuePresentOldAMF                                      int = 2
-	InitialContextSetupRequestIEsTypeValuePresentUEAggregateMaximumBitRate                   int = 3
-	InitialContextSetupRequestIEsTypeValuePresentCoreNetworkAssistanceInformationForInactive int = 4
-	InitialContextSetupRequestIEsTypeValuePresentGUAMI                                       int = 5
-	InitialContextSetupRequestIEsTypeValuePresentPDUSessionResourceSetupListCxtReq           int = 6
-	InitialContextSetupRequestIEsTypeValuePresentAllowedNSSAI                                int = 7
-	InitialContextSetupRequestIEsTypeValuePresentUESecurityCapabilities                      int = 8
-	InitialContextSetupRequestIEsTypeValuePresentSecurityKey                                 int = 9
-	InitialContextSetupRequestIEsTypeValuePresentTraceActivation                             int = 10
-	InitialContextSetupRequestIEsTypeValuePresentMobilityRestrictionList                     int = 11
-	InitialContextSetupRequestIEsTypeValuePresentUERadioCapability                           int = 12
-	InitialContextSetupRequestIEsTypeValuePresentIndexToRFSP                                 int = 13
-	InitialContextSetupRequestIEsTypeValuePresentMaskedIMEISV                                int = 14
-	InitialContextSetupRequestIEsTypeValuePresentNASPDU                                      int = 15
-	InitialContextSetupRequestIEsTypeValuePresentEmergencyFallbackIndicator                  int = 16
-	InitialContextSetupRequestIEsTypeValuePresentRRCInactiveTransitionReportRequest          int = 17
-	InitialContextSetupRequestIEsTypeValuePresentUERadioCapabilityForPaging                  int = 18
-	InitialContextSetupRequestIEsTypeValuePresentRedirectionVoiceFallback                    int = 19
-	InitialContextSetupRequestIEsTypeValuePresentLocationReportingRequestType                int = 20
-	InitialContextSetupRequestIEsTypeValuePresentCNAssistedRANTuning                         int = 21
-	InitialContextSetupRequestIEsTypeValuePresentSRVCCOperationPossible                      int = 22
+	InitialContextSetupRequestIEsPresentAMFUENGAPID                                 int = 0
+	InitialContextSetupRequestIEsPresentRANUENGAPID                                 int = 1
+	InitialContextSetupRequestIEsPresentOldAMF                                      int = 2
+	InitialContextSetupRequestIEsPresentUEAggregateMaximumBitRate                   int = 3
+	InitialContextSetupRequestIEsPresentCoreNetworkAssistanceInformationForInactive int = 4
+	InitialContextSetupRequestIEsPresentGUAMI                                       int = 5
+	InitialContextSetupRequestIEsPresentPDUSessionResourceSetupListCxtReq           int = 6
+	InitialContextSetupRequestIEsPresentAllowedNSSAI                                int = 7
+	InitialContextSetupRequestIEsPresentUESecurityCapabilities                      int = 8
+	InitialContextSetupRequestIEsPresentSecurityKey                                 int = 9
+	InitialContextSetupRequestIEsPresentTraceActivation                             int = 10
+	InitialContextSetupRequestIEsPresentMobilityRestrictionList                     int = 11
+	InitialContextSetupRequestIEsPresentUERadioCapability                           int = 12
+	InitialContextSetupRequestIEsPresentIndexToRFSP                                 int = 13
+	InitialContextSetupRequestIEsPresentMaskedIMEISV                                int = 14
+	InitialContextSetupRequestIEsPresentNASPDU                                      int = 15
+	InitialContextSetupRequestIEsPresentEmergencyFallbackIndicator                  int = 16
+	InitialContextSetupRequestIEsPresentRRCInactiveTransitionReportRequest          int = 17
+	InitialContextSetupRequestIEsPresentUERadioCapabilityForPaging                  int = 18
+	InitialContextSetupRequestIEsPresentRedirectionVoiceFallback                    int = 19
+	InitialContextSetupRequestIEsPresentLocationReportingRequestType                int = 20
+	InitialContextSetupRequestIEsPresentCNAssistedRANTuning                         int = 21
+	InitialContextSetupRequestIEsPresentSRVCCOperationPossible                      int = 22
 )
 
 type InitialContextSetupRequestIEsTypeValue struct {
@@ -363,11 +363,11 @@ type InitialContextSetupResponseIEs struct {
 }
 
 const (
-	InitialContextSetupResponseIEsTypeValuePresentAMFUENGAPID                               int = 0
-	InitialContextSetupResponseIEsTypeValuePresentRANUENGAPID                               int = 1
-	InitialContextSetupResponseIEsTypeValuePresentPDUSessionResourceSetupListCxtRes         int = 2
-	InitialContextSetupResponseIEsTypeValuePresentPDUSessionResourceFailedToSetupListCxtRes int = 3
-	InitialContextSetupResponseIEsTypeValuePresentCriticalityDiagnostics                    int = 4
+	InitialContextSetupResponseIEsPresentAMFUENGAPID                               int = 0
+	InitialContextSetupResponseIEsPresentRANUENGAPID                               int = 1
+	InitialContextSetupResponseIEsPresentPDUSessionResourceSetupListCxtRes         int = 2
+	InitialContextSetupResponseIEsPresentPDUSessionResourceFailedToSetupListCxtRes int = 3
+	InitialContextSetupResponseIEsPresentCriticalityDiagnostics                    int = 4
 )
 
 type InitialContextSetupResponseIEsTypeValue struct {
@@ -394,11 +394,11 @@ type InitialContextSetupFailureIEs struct {
 }
 
 const (
-	InitialContextSetupFailureIEsTypeValuePresentAMFUENGAPID                                int = 0
-	InitialContextSetupFailureIEsTypeValuePresentRANUENGAPID                                int = 1
-	InitialContextSetupFailureIEsTypeValuePresentPDUSessionResourceFailedToSetupListCxtFail int = 2
-	InitialContextSetupFailureIEsTypeValuePresentCause                                      int = 3
-	InitialContextSetupFailureIEsTypeValuePresentCriticalityDiagnostics                     int = 4
+	InitialContextSetupFailureIEsPresentAMFUENGAPID                                int = 0
+	InitialContextSetupFailureIEsPresentRANUENGAPID                                int = 1
+	InitialContextSetupFailureIEsPresentPDUSessionResourceFailedToSetupListCxtFail int = 2
+	InitialContextSetupFailureIEsPresentCause                                      int = 3
+	InitialContextSetupFailureIEsPresentCriticalityDiagnostics                     int = 4
 )
 
 type InitialContextSetupFailureIEsTypeValue struct {
@@ -425,10 +425,10 @@ type UEContextReleaseRequestIEs struct {
 }
 
 const (
-	UEContextReleaseRequestIEsTypeValuePresentAMFUENGAPID                     int = 0
-	UEContextReleaseRequestIEsTypeValuePresentRANUENGAPID                     int = 1
-	UEContextReleaseRequestIEsTypeValuePresentPDUSessionResourceListCxtRelReq int = 2
-	UEContextReleaseRequestIEsTypeValuePresentCause                           int = 3
+	UEContextReleaseRequestIEsPresentAMFUENGAPID                     int = 0
+	UEContextReleaseRequestIEsPresentRANUENGAPID                     int = 1
+	UEContextReleaseRequestIEsPresentPDUSessionResourceListCxtRelReq int = 2
+	UEContextReleaseRequestIEsPresentCause                           int = 3
 )
 
 type UEContextReleaseRequestIEsTypeValue struct {
@@ -454,8 +454,8 @@ type UEContextReleaseCommandIEs struct {
 }
 
 const (
-	UEContextReleaseCommandIEsTypeValuePresentUENGAPIDs int = 0
-	UEContextReleaseCommandIEsTypeValuePresentCause     int = 1
+	UEContextReleaseCommandIEsPresentUENGAPIDs int = 0
+	UEContextReleaseCommandIEsPresentCause     int = 1
 )
 
 type UEContextReleaseCommandIEsTypeValue struct {
@@ -479,12 +479,12 @@ type UEContextReleaseCompleteIEs struct {
 }
 
 const (
-	UEContextReleaseCompleteIEsTypeValuePresentAMFUENGAPID                                int = 0
-	UEContextReleaseCompleteIEsTypeValuePresentRANUENGAPID                                int = 1
-	UEContextReleaseCompleteIEsTypeValuePresentUserLocationInformation                    int = 2
-	UEContextReleaseCompleteIEsTypeValuePresentInfoOnRecommendedCellsAndRANNodesForPaging int = 3
-	UEContextReleaseCompleteIEsTypeValuePresentPDUSessionResourceListCxtRelCpl            int = 4
-	UEContextReleaseCompleteIEsTypeValuePresentCriticalityDiagnostics                     int = 5
+	UEContextReleaseCompleteIEsPresentAMFUENGAPID                                int = 0
+	UEContextReleaseCompleteIEsPresentRANUENGAPID                                int = 1
+	UEContextReleaseCompleteIEsPresentUserLocationInformation                    int = 2
+	UEContextReleaseCompleteIEsPresentInfoOnRecommendedCellsAndRANNodesForPaging int = 3
+	UEContextReleaseCompleteIEsPresentPDUSessionResourceListCxtRelCpl            int = 4
+	UEContextReleaseCompleteIEsPresentCriticalityDiagnostics                     int = 5
 )
 
 type UEContextReleaseCompleteIEsTypeValue struct {
@@ -512,20 +512,20 @@ type UEContextModificationRequestIEs struct {
 }
 
 const (
-	UEContextModificationRequestIEsTypeValuePresentAMFUENGAPID                                 int = 0
-	UEContextModificationRequestIEsTypeValuePresentRANUENGAPID                                 int = 1
-	UEContextModificationRequestIEsTypeValuePresentRANPagingPriority                           int = 2
-	UEContextModificationRequestIEsTypeValuePresentSecurityKey                                 int = 3
-	UEContextModificationRequestIEsTypeValuePresentIndexToRFSP                                 int = 4
-	UEContextModificationRequestIEsTypeValuePresentUEAggregateMaximumBitRate                   int = 5
-	UEContextModificationRequestIEsTypeValuePresentUESecurityCapabilities                      int = 6
-	UEContextModificationRequestIEsTypeValuePresentCoreNetworkAssistanceInformationForInactive int = 7
-	UEContextModificationRequestIEsTypeValuePresentEmergencyFallbackIndicator                  int = 8
-	UEContextModificationRequestIEsTypeValuePresentNewAMFUENGAPID                              int = 9
-	UEContextModificationRequestIEsTypeValuePresentRRCInactiveTransitionReportRequest          int = 10
-	UEContextModificationRequestIEsTypeValuePresentNewGUAMI                                    int = 11
-	UEContextModificationRequestIEsTypeValuePresentCNAssistedRANTuning                         int = 12
-	UEContextModificationRequestIEsTypeValuePresentSRVCCOperationPossible                      int = 13
+	UEContextModificationRequestIEsPresentAMFUENGAPID                                 int = 0
+	UEContextModificationRequestIEsPresentRANUENGAPID                                 int = 1
+	UEContextModificationRequestIEsPresentRANPagingPriority                           int = 2
+	UEContextModificationRequestIEsPresentSecurityKey                                 int = 3
+	UEContextModificationRequestIEsPresentIndexToRFSP                                 int = 4
+	UEContextModificationRequestIEsPresentUEAggregateMaximumBitRate                   int = 5
+	UEContextModificationRequestIEsPresentUESecurityCapabilities                      int = 6
+	UEContextModificationRequestIEsPresentCoreNetworkAssistanceInformationForInactive int = 7
+	UEContextModificationRequestIEsPresentEmergencyFallbackIndicator                  int = 8
+	UEContextModificationRequestIEsPresentNewAMFUENGAPID                              int = 9
+	UEContextModificationRequestIEsPresentRRCInactiveTransitionReportRequest          int = 10
+	UEContextModificationRequestIEsPresentNewGUAMI                                    int = 11
+	UEContextModificationRequestIEsPresentCNAssistedRANTuning                         int = 12
+	UEContextModificationRequestIEsPresentSRVCCOperationPossible                      int = 13
 )
 
 type UEContextModificationRequestIEsTypeValue struct {
@@ -561,11 +561,11 @@ type UEContextModificationResponseIEs struct {
 }
 
 const (
-	UEContextModificationResponseIEsTypeValuePresentAMFUENGAPID             int = 0
-	UEContextModificationResponseIEsTypeValuePresentRANUENGAPID             int = 1
-	UEContextModificationResponseIEsTypeValuePresentRRCState                int = 2
-	UEContextModificationResponseIEsTypeValuePresentUserLocationInformation int = 3
-	UEContextModificationResponseIEsTypeValuePresentCriticalityDiagnostics  int = 4
+	UEContextModificationResponseIEsPresentAMFUENGAPID             int = 0
+	UEContextModificationResponseIEsPresentRANUENGAPID             int = 1
+	UEContextModificationResponseIEsPresentRRCState                int = 2
+	UEContextModificationResponseIEsPresentUserLocationInformation int = 3
+	UEContextModificationResponseIEsPresentCriticalityDiagnostics  int = 4
 )
 
 type UEContextModificationResponseIEsTypeValue struct {
@@ -592,10 +592,10 @@ type UEContextModificationFailureIEs struct {
 }
 
 const (
-	UEContextModificationFailureIEsTypeValuePresentAMFUENGAPID            int = 0
-	UEContextModificationFailureIEsTypeValuePresentRANUENGAPID            int = 1
-	UEContextModificationFailureIEsTypeValuePresentCause                  int = 2
-	UEContextModificationFailureIEsTypeValuePresentCriticalityDiagnostics int = 3
+	UEContextModificationFailureIEsPresentAMFUENGAPID            int = 0
+	UEContextModificationFailureIEsPresentRANUENGAPID            int = 1
+	UEContextModificationFailureIEsPresentCause                  int = 2
+	UEContextModificationFailureIEsPresentCriticalityDiagnostics int = 3
 )
 
 type UEContextModificationFailureIEsTypeValue struct {
@@ -621,10 +621,10 @@ type RRCInactiveTransitionReportIEs struct {
 }
 
 const (
-	RRCInactiveTransitionReportIEsTypeValuePresentAMFUENGAPID             int = 0
-	RRCInactiveTransitionReportIEsTypeValuePresentRANUENGAPID             int = 1
-	RRCInactiveTransitionReportIEsTypeValuePresentRRCState                int = 2
-	RRCInactiveTransitionReportIEsTypeValuePresentUserLocationInformation int = 3
+	RRCInactiveTransitionReportIEsPresentAMFUENGAPID             int = 0
+	RRCInactiveTransitionReportIEsPresentRANUENGAPID             int = 1
+	RRCInactiveTransitionReportIEsPresentRRCState                int = 2
+	RRCInactiveTransitionReportIEsPresentUserLocationInformation int = 3
 )
 
 type RRCInactiveTransitionReportIEsTypeValue struct {
@@ -650,14 +650,14 @@ type HandoverRequiredIEs struct {
 }
 
 const (
-	HandoverRequiredIEsTypeValuePresentAMFUENGAPID                        int = 0
-	HandoverRequiredIEsTypeValuePresentRANUENGAPID                        int = 1
-	HandoverRequiredIEsTypeValuePresentHandoverType                       int = 2
-	HandoverRequiredIEsTypeValuePresentCause                              int = 3
-	HandoverRequiredIEsTypeValuePresentTargetID                           int = 4
-	HandoverRequiredIEsTypeValuePresentDirectForwardingPathAvailability   int = 5
-	HandoverRequiredIEsTypeValuePresentPDUSessionResourceListHORqd        int = 6
-	HandoverRequiredIEsTypeValuePresentSourceToTargetTransparentContainer int = 7
+	HandoverRequiredIEsPresentAMFUENGAPID                        int = 0
+	HandoverRequiredIEsPresentRANUENGAPID                        int = 1
+	HandoverRequiredIEsPresentHandoverType                       int = 2
+	HandoverRequiredIEsPresentCause                              int = 3
+	HandoverRequiredIEsPresentTargetID                           int = 4
+	HandoverRequiredIEsPresentDirectForwardingPathAvailability   int = 5
+	HandoverRequiredIEsPresentPDUSessionResourceListHORqd        int = 6
+	HandoverRequiredIEsPresentSourceToTargetTransparentContainer int = 7
 )
 
 type HandoverRequiredIEsTypeValue struct {
@@ -687,14 +687,14 @@ type HandoverCommandIEs struct {
 }
 
 const (
-	HandoverCommandIEsTypeValuePresentAMFUENGAPID                          int = 0
-	HandoverCommandIEsTypeValuePresentRANUENGAPID                          int = 1
-	HandoverCommandIEsTypeValuePresentHandoverType                         int = 2
-	HandoverCommandIEsTypeValuePresentNASSecurityParametersFromNGRAN       int = 3
-	HandoverCommandIEsTypeValuePresentPDUSessionResourceHandoverList       int = 4
-	HandoverCommandIEsTypeValuePresentPDUSessionResourceToReleaseListHOCmd int = 5
-	HandoverCommandIEsTypeValuePresentTargetToSourceTransparentContainer   int = 6
-	HandoverCommandIEsTypeValuePresentCriticalityDiagnostics               int = 7
+	HandoverCommandIEsPresentAMFUENGAPID                          int = 0
+	HandoverCommandIEsPresentRANUENGAPID                          int = 1
+	HandoverCommandIEsPresentHandoverType                         int = 2
+	HandoverCommandIEsPresentNASSecurityParametersFromNGRAN       int = 3
+	HandoverCommandIEsPresentPDUSessionResourceHandoverList       int = 4
+	HandoverCommandIEsPresentPDUSessionResourceToReleaseListHOCmd int = 5
+	HandoverCommandIEsPresentTargetToSourceTransparentContainer   int = 6
+	HandoverCommandIEsPresentCriticalityDiagnostics               int = 7
 )
 
 type HandoverCommandIEsTypeValue struct {
@@ -724,10 +724,10 @@ type HandoverPreparationFailureIEs struct {
 }
 
 const (
-	HandoverPreparationFailureIEsTypeValuePresentAMFUENGAPID            int = 0
-	HandoverPreparationFailureIEsTypeValuePresentRANUENGAPID            int = 1
-	HandoverPreparationFailureIEsTypeValuePresentCause                  int = 2
-	HandoverPreparationFailureIEsTypeValuePresentCriticalityDiagnostics int = 3
+	HandoverPreparationFailureIEsPresentAMFUENGAPID            int = 0
+	HandoverPreparationFailureIEsPresentRANUENGAPID            int = 1
+	HandoverPreparationFailureIEsPresentCause                  int = 2
+	HandoverPreparationFailureIEsPresentCriticalityDiagnostics int = 3
 )
 
 type HandoverPreparationFailureIEsTypeValue struct {
@@ -753,27 +753,27 @@ type HandoverRequestIEs struct {
 }
 
 const (
-	HandoverRequestIEsTypeValuePresentAMFUENGAPID                                 int = 0
-	HandoverRequestIEsTypeValuePresentHandoverType                                int = 1
-	HandoverRequestIEsTypeValuePresentCause                                       int = 2
-	HandoverRequestIEsTypeValuePresentUEAggregateMaximumBitRate                   int = 3
-	HandoverRequestIEsTypeValuePresentCoreNetworkAssistanceInformationForInactive int = 4
-	HandoverRequestIEsTypeValuePresentUESecurityCapabilities                      int = 5
-	HandoverRequestIEsTypeValuePresentSecurityContext                             int = 6
-	HandoverRequestIEsTypeValuePresentNewSecurityContextInd                       int = 7
-	HandoverRequestIEsTypeValuePresentNASC                                        int = 8
-	HandoverRequestIEsTypeValuePresentPDUSessionResourceSetupListHOReq            int = 9
-	HandoverRequestIEsTypeValuePresentAllowedNSSAI                                int = 10
-	HandoverRequestIEsTypeValuePresentTraceActivation                             int = 11
-	HandoverRequestIEsTypeValuePresentMaskedIMEISV                                int = 12
-	HandoverRequestIEsTypeValuePresentSourceToTargetTransparentContainer          int = 13
-	HandoverRequestIEsTypeValuePresentMobilityRestrictionList                     int = 14
-	HandoverRequestIEsTypeValuePresentLocationReportingRequestType                int = 15
-	HandoverRequestIEsTypeValuePresentRRCInactiveTransitionReportRequest          int = 16
-	HandoverRequestIEsTypeValuePresentGUAMI                                       int = 17
-	HandoverRequestIEsTypeValuePresentRedirectionVoiceFallback                    int = 18
-	HandoverRequestIEsTypeValuePresentCNAssistedRANTuning                         int = 19
-	HandoverRequestIEsTypeValuePresentSRVCCOperationPossible                      int = 20
+	HandoverRequestIEsPresentAMFUENGAPID                                 int = 0
+	HandoverRequestIEsPresentHandoverType                                int = 1
+	HandoverRequestIEsPresentCause                                       int = 2
+	HandoverRequestIEsPresentUEAggregateMaximumBitRate                   int = 3
+	HandoverRequestIEsPresentCoreNetworkAssistanceInformationForInactive int = 4
+	HandoverRequestIEsPresentUESecurityCapabilities                      int = 5
+	HandoverRequestIEsPresentSecurityContext                             int = 6
+	HandoverRequestIEsPresentNewSecurityContextInd                       int = 7
+	HandoverRequestIEsPresentNASC                                        int = 8
+	HandoverRequestIEsPresentPDUSessionResourceSetupListHOReq            int = 9
+	HandoverRequestIEsPresentAllowedNSSAI                                int = 10
+	HandoverRequestIEsPresentTraceActivation                             int = 11
+	HandoverRequestIEsPresentMaskedIMEISV                                int = 12
+	HandoverRequestIEsPresentSourceToTargetTransparentContainer          int = 13
+	HandoverRequestIEsPresentMobilityRestrictionList                     int = 14
+	HandoverRequestIEsPresentLocationReportingRequestType                int = 15
+	HandoverRequestIEsPresentRRCInactiveTransitionReportRequest          int = 16
+	HandoverRequestIEsPresentGUAMI                                       int = 17
+	HandoverRequestIEsPresentRedirectionVoiceFallback                    int = 18
+	HandoverRequestIEsPresentCNAssistedRANTuning                         int = 19
+	HandoverRequestIEsPresentSRVCCOperationPossible                      int = 20
 )
 
 type HandoverRequestIEsTypeValue struct {
@@ -816,12 +816,12 @@ type HandoverRequestAcknowledgeIEs struct {
 }
 
 const (
-	HandoverRequestAcknowledgeIEsTypeValuePresentAMFUENGAPID                              int = 0
-	HandoverRequestAcknowledgeIEsTypeValuePresentRANUENGAPID                              int = 1
-	HandoverRequestAcknowledgeIEsTypeValuePresentPDUSessionResourceAdmittedList           int = 2
-	HandoverRequestAcknowledgeIEsTypeValuePresentPDUSessionResourceFailedToSetupListHOAck int = 3
-	HandoverRequestAcknowledgeIEsTypeValuePresentTargetToSourceTransparentContainer       int = 4
-	HandoverRequestAcknowledgeIEsTypeValuePresentCriticalityDiagnostics                   int = 5
+	HandoverRequestAcknowledgeIEsPresentAMFUENGAPID                              int = 0
+	HandoverRequestAcknowledgeIEsPresentRANUENGAPID                              int = 1
+	HandoverRequestAcknowledgeIEsPresentPDUSessionResourceAdmittedList           int = 2
+	HandoverRequestAcknowledgeIEsPresentPDUSessionResourceFailedToSetupListHOAck int = 3
+	HandoverRequestAcknowledgeIEsPresentTargetToSourceTransparentContainer       int = 4
+	HandoverRequestAcknowledgeIEsPresentCriticalityDiagnostics                   int = 5
 )
 
 type HandoverRequestAcknowledgeIEsTypeValue struct {
@@ -849,9 +849,9 @@ type HandoverFailureIEs struct {
 }
 
 const (
-	HandoverFailureIEsTypeValuePresentAMFUENGAPID            int = 0
-	HandoverFailureIEsTypeValuePresentCause                  int = 1
-	HandoverFailureIEsTypeValuePresentCriticalityDiagnostics int = 2
+	HandoverFailureIEsPresentAMFUENGAPID            int = 0
+	HandoverFailureIEsPresentCause                  int = 1
+	HandoverFailureIEsPresentCriticalityDiagnostics int = 2
 )
 
 type HandoverFailureIEsTypeValue struct {
@@ -876,9 +876,9 @@ type HandoverNotifyIEs struct {
 }
 
 const (
-	HandoverNotifyIEsTypeValuePresentAMFUENGAPID             int = 0
-	HandoverNotifyIEsTypeValuePresentRANUENGAPID             int = 1
-	HandoverNotifyIEsTypeValuePresentUserLocationInformation int = 2
+	HandoverNotifyIEsPresentAMFUENGAPID             int = 0
+	HandoverNotifyIEsPresentRANUENGAPID             int = 1
+	HandoverNotifyIEsPresentUserLocationInformation int = 2
 )
 
 type HandoverNotifyIEsTypeValue struct {
@@ -903,12 +903,12 @@ type PathSwitchRequestIEs struct {
 }
 
 const (
-	PathSwitchRequestIEsTypeValuePresentRANUENGAPID                              int = 0
-	PathSwitchRequestIEsTypeValuePresentSourceAMFUENGAPID                        int = 1
-	PathSwitchRequestIEsTypeValuePresentUserLocationInformation                  int = 2
-	PathSwitchRequestIEsTypeValuePresentUESecurityCapabilities                   int = 3
-	PathSwitchRequestIEsTypeValuePresentPDUSessionResourceToBeSwitchedDLList     int = 4
-	PathSwitchRequestIEsTypeValuePresentPDUSessionResourceFailedToSetupListPSReq int = 5
+	PathSwitchRequestIEsPresentRANUENGAPID                              int = 0
+	PathSwitchRequestIEsPresentSourceAMFUENGAPID                        int = 1
+	PathSwitchRequestIEsPresentUserLocationInformation                  int = 2
+	PathSwitchRequestIEsPresentUESecurityCapabilities                   int = 3
+	PathSwitchRequestIEsPresentPDUSessionResourceToBeSwitchedDLList     int = 4
+	PathSwitchRequestIEsPresentPDUSessionResourceFailedToSetupListPSReq int = 5
 )
 
 type PathSwitchRequestIEsTypeValue struct {
@@ -936,20 +936,20 @@ type PathSwitchRequestAcknowledgeIEs struct {
 }
 
 const (
-	PathSwitchRequestAcknowledgeIEsTypeValuePresentAMFUENGAPID                                 int = 0
-	PathSwitchRequestAcknowledgeIEsTypeValuePresentRANUENGAPID                                 int = 1
-	PathSwitchRequestAcknowledgeIEsTypeValuePresentUESecurityCapabilities                      int = 2
-	PathSwitchRequestAcknowledgeIEsTypeValuePresentSecurityContext                             int = 3
-	PathSwitchRequestAcknowledgeIEsTypeValuePresentNewSecurityContextInd                       int = 4
-	PathSwitchRequestAcknowledgeIEsTypeValuePresentPDUSessionResourceSwitchedList              int = 5
-	PathSwitchRequestAcknowledgeIEsTypeValuePresentPDUSessionResourceReleasedListPSAck         int = 6
-	PathSwitchRequestAcknowledgeIEsTypeValuePresentAllowedNSSAI                                int = 7
-	PathSwitchRequestAcknowledgeIEsTypeValuePresentCoreNetworkAssistanceInformationForInactive int = 8
-	PathSwitchRequestAcknowledgeIEsTypeValuePresentRRCInactiveTransitionReportRequest          int = 9
-	PathSwitchRequestAcknowledgeIEsTypeValuePresentCriticalityDiagnostics                      int = 10
-	PathSwitchRequestAcknowledgeIEsTypeValuePresentRedirectionVoiceFallback                    int = 11
-	PathSwitchRequestAcknowledgeIEsTypeValuePresentCNAssistedRANTuning                         int = 12
-	PathSwitchRequestAcknowledgeIEsTypeValuePresentSRVCCOperationPossible                      int = 13
+	PathSwitchRequestAcknowledgeIEsPresentAMFUENGAPID                                 int = 0
+	PathSwitchRequestAcknowledgeIEsPresentRANUENGAPID                                 int = 1
+	PathSwitchRequestAcknowledgeIEsPresentUESecurityCapabilities                      int = 2
+	PathSwitchRequestAcknowledgeIEsPresentSecurityContext                             int = 3
+	PathSwitchRequestAcknowledgeIEsPresentNewSecurityContextInd                       int = 4
+	PathSwitchRequestAcknowledgeIEsPresentPDUSessionResourceSwitchedList              int = 5
+	PathSwitchRequestAcknowledgeIEsPresentPDUSessionResourceReleasedListPSAck         int = 6
+	PathSwitchRequestAcknowledgeIEsPresentAllowedNSSAI                                int = 7
+	PathSwitchRequestAcknowledgeIEsPresentCoreNetworkAssistanceInformationForInactive int = 8
+	PathSwitchRequestAcknowledgeIEsPresentRRCInactiveTransitionReportRequest          int = 9
+	PathSwitchRequestAcknowledgeIEsPresentCriticalityDiagnostics                      int = 10
+	PathSwitchRequestAcknowledgeIEsPresentRedirectionVoiceFallback                    int = 11
+	PathSwitchRequestAcknowledgeIEsPresentCNAssistedRANTuning                         int = 12
+	PathSwitchRequestAcknowledgeIEsPresentSRVCCOperationPossible                      int = 13
 )
 
 type PathSwitchRequestAcknowledgeIEsTypeValue struct {
@@ -985,10 +985,10 @@ type PathSwitchRequestFailureIEs struct {
 }
 
 const (
-	PathSwitchRequestFailureIEsTypeValuePresentAMFUENGAPID                          int = 0
-	PathSwitchRequestFailureIEsTypeValuePresentRANUENGAPID                          int = 1
-	PathSwitchRequestFailureIEsTypeValuePresentPDUSessionResourceReleasedListPSFail int = 2
-	PathSwitchRequestFailureIEsTypeValuePresentCriticalityDiagnostics               int = 3
+	PathSwitchRequestFailureIEsPresentAMFUENGAPID                          int = 0
+	PathSwitchRequestFailureIEsPresentRANUENGAPID                          int = 1
+	PathSwitchRequestFailureIEsPresentPDUSessionResourceReleasedListPSFail int = 2
+	PathSwitchRequestFailureIEsPresentCriticalityDiagnostics               int = 3
 )
 
 type PathSwitchRequestFailureIEsTypeValue struct {
@@ -1014,9 +1014,9 @@ type HandoverCancelIEs struct {
 }
 
 const (
-	HandoverCancelIEsTypeValuePresentAMFUENGAPID int = 0
-	HandoverCancelIEsTypeValuePresentRANUENGAPID int = 1
-	HandoverCancelIEsTypeValuePresentCause       int = 2
+	HandoverCancelIEsPresentAMFUENGAPID int = 0
+	HandoverCancelIEsPresentRANUENGAPID int = 1
+	HandoverCancelIEsPresentCause       int = 2
 )
 
 type HandoverCancelIEsTypeValue struct {
@@ -1041,9 +1041,9 @@ type HandoverCancelAcknowledgeIEs struct {
 }
 
 const (
-	HandoverCancelAcknowledgeIEsTypeValuePresentAMFUENGAPID            int = 0
-	HandoverCancelAcknowledgeIEsTypeValuePresentRANUENGAPID            int = 1
-	HandoverCancelAcknowledgeIEsTypeValuePresentCriticalityDiagnostics int = 2
+	HandoverCancelAcknowledgeIEsPresentAMFUENGAPID            int = 0
+	HandoverCancelAcknowledgeIEsPresentRANUENGAPID            int = 1
+	HandoverCancelAcknowledgeIEsPresentCriticalityDiagnostics int = 2
 )
 
 type HandoverCancelAcknowledgeIEsTypeValue struct {
@@ -1068,9 +1068,9 @@ type UplinkRANStatusTransferIEs struct {
 }
 
 const (
-	UplinkRANStatusTransferIEsTypeValuePresentAMFUENGAPID                           int = 0
-	UplinkRANStatusTransferIEsTypeValuePresentRANUENGAPID                           int = 1
-	UplinkRANStatusTransferIEsTypeValuePresentRANStatusTransferTransparentContainer int = 2
+	UplinkRANStatusTransferIEsPresentAMFUENGAPID                           int = 0
+	UplinkRANStatusTransferIEsPresentRANUENGAPID                           int = 1
+	UplinkRANStatusTransferIEsPresentRANStatusTransferTransparentContainer int = 2
 )
 
 type UplinkRANStatusTransferIEsTypeValue struct {
@@ -1095,9 +1095,9 @@ type DownlinkRANStatusTransferIEs struct {
 }
 
 const (
-	DownlinkRANStatusTransferIEsTypeValuePresentAMFUENGAPID                           int = 0
-	DownlinkRANStatusTransferIEsTypeValuePresentRANUENGAPID                           int = 1
-	DownlinkRANStatusTransferIEsTypeValuePresentRANStatusTransferTransparentContainer int = 2
+	DownlinkRANStatusTransferIEsPresentAMFUENGAPID                           int = 0
+	DownlinkRANStatusTransferIEsPresentRANUENGAPID                           int = 1
+	DownlinkRANStatusTransferIEsPresentRANStatusTransferTransparentContainer int = 2
 )
 
 type DownlinkRANStatusTransferIEsTypeValue struct {
@@ -1122,13 +1122,13 @@ type PagingIEs struct {
 }
 
 const (
-	PagingIEsTypeValuePresentUEPagingIdentity           int = 0
-	PagingIEsTypeValuePresentPagingDRX                  int = 1
-	PagingIEsTypeValuePresentTAIListForPaging           int = 2
-	PagingIEsTypeValuePresentPagingPriority             int = 3
-	PagingIEsTypeValuePresentUERadioCapabilityForPaging int = 4
-	PagingIEsTypeValuePresentPagingOrigin               int = 5
-	PagingIEsTypeValuePresentAssistanceDataForPaging    int = 6
+	PagingIEsPresentUEPagingIdentity           int = 0
+	PagingIEsPresentPagingDRX                  int = 1
+	PagingIEsPresentTAIListForPaging           int = 2
+	PagingIEsPresentPagingPriority             int = 3
+	PagingIEsPresentUERadioCapabilityForPaging int = 4
+	PagingIEsPresentPagingOrigin               int = 5
+	PagingIEsPresentAssistanceDataForPaging    int = 6
 )
 
 type PagingIEsTypeValue struct {
@@ -1157,15 +1157,15 @@ type InitialUEMessageIEs struct {
 }
 
 const (
-	InitialUEMessageIEsTypeValuePresentRANUENGAPID                         int = 0
-	InitialUEMessageIEsTypeValuePresentNASPDU                              int = 1
-	InitialUEMessageIEsTypeValuePresentUserLocationInformation             int = 2
-	InitialUEMessageIEsTypeValuePresentRRCEstablishmentCause               int = 3
-	InitialUEMessageIEsTypeValuePresentFiveGSTMSI                          int = 4
-	InitialUEMessageIEsTypeValuePresentAMFSetID                            int = 5
-	InitialUEMessageIEsTypeValuePresentUEContextRequest                    int = 6
-	InitialUEMessageIEsTypeValuePresentAllowedNSSAI                        int = 7
-	InitialUEMessageIEsTypeValuePresentSourceToTargetAMFInformationReroute int = 8
+	InitialUEMessageIEsPresentRANUENGAPID                         int = 0
+	InitialUEMessageIEsPresentNASPDU                              int = 1
+	InitialUEMessageIEsPresentUserLocationInformation             int = 2
+	InitialUEMessageIEsPresentRRCEstablishmentCause               int = 3
+	InitialUEMessageIEsPresentFiveGSTMSI                          int = 4
+	InitialUEMessageIEsPresentAMFSetID                            int = 5
+	InitialUEMessageIEsPresentUEContextRequest                    int = 6
+	InitialUEMessageIEsPresentAllowedNSSAI                        int = 7
+	InitialUEMessageIEsPresentSourceToTargetAMFInformationReroute int = 8
 )
 
 type InitialUEMessageIEsTypeValue struct {
@@ -1196,16 +1196,16 @@ type DownlinkNASTransportIEs struct {
 }
 
 const (
-	DownlinkNASTransportIEsTypeValuePresentAMFUENGAPID               int = 0
-	DownlinkNASTransportIEsTypeValuePresentRANUENGAPID               int = 1
-	DownlinkNASTransportIEsTypeValuePresentOldAMF                    int = 2
-	DownlinkNASTransportIEsTypeValuePresentRANPagingPriority         int = 3
-	DownlinkNASTransportIEsTypeValuePresentNASPDU                    int = 4
-	DownlinkNASTransportIEsTypeValuePresentMobilityRestrictionList   int = 5
-	DownlinkNASTransportIEsTypeValuePresentIndexToRFSP               int = 6
-	DownlinkNASTransportIEsTypeValuePresentUEAggregateMaximumBitRate int = 7
-	DownlinkNASTransportIEsTypeValuePresentAllowedNSSAI              int = 8
-	DownlinkNASTransportIEsTypeValuePresentSRVCCOperationPossible    int = 9
+	DownlinkNASTransportIEsPresentAMFUENGAPID               int = 0
+	DownlinkNASTransportIEsPresentRANUENGAPID               int = 1
+	DownlinkNASTransportIEsPresentOldAMF                    int = 2
+	DownlinkNASTransportIEsPresentRANPagingPriority         int = 3
+	DownlinkNASTransportIEsPresentNASPDU                    int = 4
+	DownlinkNASTransportIEsPresentMobilityRestrictionList   int = 5
+	DownlinkNASTransportIEsPresentIndexToRFSP               int = 6
+	DownlinkNASTransportIEsPresentUEAggregateMaximumBitRate int = 7
+	DownlinkNASTransportIEsPresentAllowedNSSAI              int = 8
+	DownlinkNASTransportIEsPresentSRVCCOperationPossible    int = 9
 )
 
 type DownlinkNASTransportIEsTypeValue struct {
@@ -1237,10 +1237,10 @@ type UplinkNASTransportIEs struct {
 }
 
 const (
-	UplinkNASTransportIEsTypeValuePresentAMFUENGAPID             int = 0
-	UplinkNASTransportIEsTypeValuePresentRANUENGAPID             int = 1
-	UplinkNASTransportIEsTypeValuePresentNASPDU                  int = 2
-	UplinkNASTransportIEsTypeValuePresentUserLocationInformation int = 3
+	UplinkNASTransportIEsPresentAMFUENGAPID             int = 0
+	UplinkNASTransportIEsPresentRANUENGAPID             int = 1
+	UplinkNASTransportIEsPresentNASPDU                  int = 2
+	UplinkNASTransportIEsPresentUserLocationInformation int = 3
 )
 
 type UplinkNASTransportIEsTypeValue struct {
@@ -1266,10 +1266,10 @@ type NASNonDeliveryIndicationIEs struct {
 }
 
 const (
-	NASNonDeliveryIndicationIEsTypeValuePresentAMFUENGAPID int = 0
-	NASNonDeliveryIndicationIEsTypeValuePresentRANUENGAPID int = 1
-	NASNonDeliveryIndicationIEsTypeValuePresentNASPDU      int = 2
-	NASNonDeliveryIndicationIEsTypeValuePresentCause       int = 3
+	NASNonDeliveryIndicationIEsPresentAMFUENGAPID int = 0
+	NASNonDeliveryIndicationIEsPresentRANUENGAPID int = 1
+	NASNonDeliveryIndicationIEsPresentNASPDU      int = 2
+	NASNonDeliveryIndicationIEsPresentCause       int = 3
 )
 
 type NASNonDeliveryIndicationIEsTypeValue struct {
@@ -1295,12 +1295,12 @@ type RerouteNASRequestIEs struct {
 }
 
 const (
-	RerouteNASRequestIEsTypeValuePresentRANUENGAPID                         int = 0
-	RerouteNASRequestIEsTypeValuePresentAMFUENGAPID                         int = 1
-	RerouteNASRequestIEsTypeValuePresentNGAPMessage                         int = 2
-	RerouteNASRequestIEsTypeValuePresentAMFSetID                            int = 3
-	RerouteNASRequestIEsTypeValuePresentAllowedNSSAI                        int = 4
-	RerouteNASRequestIEsTypeValuePresentSourceToTargetAMFInformationReroute int = 5
+	RerouteNASRequestIEsPresentRANUENGAPID                         int = 0
+	RerouteNASRequestIEsPresentAMFUENGAPID                         int = 1
+	RerouteNASRequestIEsPresentNGAPMessage                         int = 2
+	RerouteNASRequestIEsPresentAMFSetID                            int = 3
+	RerouteNASRequestIEsPresentAllowedNSSAI                        int = 4
+	RerouteNASRequestIEsPresentSourceToTargetAMFInformationReroute int = 5
 )
 
 type RerouteNASRequestIEsTypeValue struct {
@@ -1328,11 +1328,11 @@ type NGSetupRequestIEs struct {
 }
 
 const (
-	NGSetupRequestIEsTypeValuePresentGlobalRANNodeID        int = 0
-	NGSetupRequestIEsTypeValuePresentRANNodeName            int = 1
-	NGSetupRequestIEsTypeValuePresentSupportedTAList        int = 2
-	NGSetupRequestIEsTypeValuePresentDefaultPagingDRX       int = 3
-	NGSetupRequestIEsTypeValuePresentUERetentionInformation int = 4
+	NGSetupRequestIEsPresentGlobalRANNodeID        int = 0
+	NGSetupRequestIEsPresentRANNodeName            int = 1
+	NGSetupRequestIEsPresentSupportedTAList        int = 2
+	NGSetupRequestIEsPresentDefaultPagingDRX       int = 3
+	NGSetupRequestIEsPresentUERetentionInformation int = 4
 )
 
 type NGSetupRequestIEsTypeValue struct {
@@ -1359,12 +1359,12 @@ type NGSetupResponseIEs struct {
 }
 
 const (
-	NGSetupResponseIEsTypeValuePresentAMFName                int = 0
-	NGSetupResponseIEsTypeValuePresentServedGUAMIList        int = 1
-	NGSetupResponseIEsTypeValuePresentRelativeAMFCapacity    int = 2
-	NGSetupResponseIEsTypeValuePresentPLMNSupportList        int = 3
-	NGSetupResponseIEsTypeValuePresentCriticalityDiagnostics int = 4
-	NGSetupResponseIEsTypeValuePresentUERetentionInformation int = 5
+	NGSetupResponseIEsPresentAMFName                int = 0
+	NGSetupResponseIEsPresentServedGUAMIList        int = 1
+	NGSetupResponseIEsPresentRelativeAMFCapacity    int = 2
+	NGSetupResponseIEsPresentPLMNSupportList        int = 3
+	NGSetupResponseIEsPresentCriticalityDiagnostics int = 4
+	NGSetupResponseIEsPresentUERetentionInformation int = 5
 )
 
 type NGSetupResponseIEsTypeValue struct {
@@ -1392,9 +1392,9 @@ type NGSetupFailureIEs struct {
 }
 
 const (
-	NGSetupFailureIEsTypeValuePresentCause                  int = 0
-	NGSetupFailureIEsTypeValuePresentTimeToWait             int = 1
-	NGSetupFailureIEsTypeValuePresentCriticalityDiagnostics int = 2
+	NGSetupFailureIEsPresentCause                  int = 0
+	NGSetupFailureIEsPresentTimeToWait             int = 1
+	NGSetupFailureIEsPresentCriticalityDiagnostics int = 2
 )
 
 type NGSetupFailureIEsTypeValue struct {
@@ -1419,11 +1419,11 @@ type RANConfigurationUpdateIEs struct {
 }
 
 const (
-	RANConfigurationUpdateIEsTypeValuePresentRANNodeName                     int = 0
-	RANConfigurationUpdateIEsTypeValuePresentSupportedTAList                 int = 1
-	RANConfigurationUpdateIEsTypeValuePresentDefaultPagingDRX                int = 2
-	RANConfigurationUpdateIEsTypeValuePresentGlobalRANNodeID                 int = 3
-	RANConfigurationUpdateIEsTypeValuePresentNGRANTNLAssociationToRemoveList int = 4
+	RANConfigurationUpdateIEsPresentRANNodeName                     int = 0
+	RANConfigurationUpdateIEsPresentSupportedTAList                 int = 1
+	RANConfigurationUpdateIEsPresentDefaultPagingDRX                int = 2
+	RANConfigurationUpdateIEsPresentGlobalRANNodeID                 int = 3
+	RANConfigurationUpdateIEsPresentNGRANTNLAssociationToRemoveList int = 4
 )
 
 type RANConfigurationUpdateIEsTypeValue struct {
@@ -1450,7 +1450,7 @@ type RANConfigurationUpdateAcknowledgeIEs struct {
 }
 
 const (
-	RANConfigurationUpdateAcknowledgeIEsTypeValuePresentCriticalityDiagnostics int = 0
+	RANConfigurationUpdateAcknowledgeIEsPresentCriticalityDiagnostics int = 0
 )
 
 type RANConfigurationUpdateAcknowledgeIEsTypeValue struct {
@@ -1473,9 +1473,9 @@ type RANConfigurationUpdateFailureIEs struct {
 }
 
 const (
-	RANConfigurationUpdateFailureIEsTypeValuePresentCause                  int = 0
-	RANConfigurationUpdateFailureIEsTypeValuePresentTimeToWait             int = 1
-	RANConfigurationUpdateFailureIEsTypeValuePresentCriticalityDiagnostics int = 2
+	RANConfigurationUpdateFailureIEsPresentCause                  int = 0
+	RANConfigurationUpdateFailureIEsPresentTimeToWait             int = 1
+	RANConfigurationUpdateFailureIEsPresentCriticalityDiagnostics int = 2
 )
 
 type RANConfigurationUpdateFailureIEsTypeValue struct {
@@ -1500,13 +1500,13 @@ type AMFConfigurationUpdateIEs struct {
 }
 
 const (
-	AMFConfigurationUpdateIEsTypeValuePresentAMFName                       int = 0
-	AMFConfigurationUpdateIEsTypeValuePresentServedGUAMIList               int = 1
-	AMFConfigurationUpdateIEsTypeValuePresentRelativeAMFCapacity           int = 2
-	AMFConfigurationUpdateIEsTypeValuePresentPLMNSupportList               int = 3
-	AMFConfigurationUpdateIEsTypeValuePresentAMFTNLAssociationToAddList    int = 4
-	AMFConfigurationUpdateIEsTypeValuePresentAMFTNLAssociationToRemoveList int = 5
-	AMFConfigurationUpdateIEsTypeValuePresentAMFTNLAssociationToUpdateList int = 6
+	AMFConfigurationUpdateIEsPresentAMFName                       int = 0
+	AMFConfigurationUpdateIEsPresentServedGUAMIList               int = 1
+	AMFConfigurationUpdateIEsPresentRelativeAMFCapacity           int = 2
+	AMFConfigurationUpdateIEsPresentPLMNSupportList               int = 3
+	AMFConfigurationUpdateIEsPresentAMFTNLAssociationToAddList    int = 4
+	AMFConfigurationUpdateIEsPresentAMFTNLAssociationToRemoveList int = 5
+	AMFConfigurationUpdateIEsPresentAMFTNLAssociationToUpdateList int = 6
 )
 
 type AMFConfigurationUpdateIEsTypeValue struct {
@@ -1535,9 +1535,9 @@ type AMFConfigurationUpdateAcknowledgeIEs struct {
 }
 
 const (
-	AMFConfigurationUpdateAcknowledgeIEsTypeValuePresentAMFTNLAssociationSetupList         int = 0
-	AMFConfigurationUpdateAcknowledgeIEsTypeValuePresentAMFTNLAssociationFailedToSetupList int = 1
-	AMFConfigurationUpdateAcknowledgeIEsTypeValuePresentCriticalityDiagnostics             int = 2
+	AMFConfigurationUpdateAcknowledgeIEsPresentAMFTNLAssociationSetupList         int = 0
+	AMFConfigurationUpdateAcknowledgeIEsPresentAMFTNLAssociationFailedToSetupList int = 1
+	AMFConfigurationUpdateAcknowledgeIEsPresentCriticalityDiagnostics             int = 2
 )
 
 type AMFConfigurationUpdateAcknowledgeIEsTypeValue struct {
@@ -1562,9 +1562,9 @@ type AMFConfigurationUpdateFailureIEs struct {
 }
 
 const (
-	AMFConfigurationUpdateFailureIEsTypeValuePresentCause                  int = 0
-	AMFConfigurationUpdateFailureIEsTypeValuePresentTimeToWait             int = 1
-	AMFConfigurationUpdateFailureIEsTypeValuePresentCriticalityDiagnostics int = 2
+	AMFConfigurationUpdateFailureIEsPresentCause                  int = 0
+	AMFConfigurationUpdateFailureIEsPresentTimeToWait             int = 1
+	AMFConfigurationUpdateFailureIEsPresentCriticalityDiagnostics int = 2
 )
 
 type AMFConfigurationUpdateFailureIEsTypeValue struct {
@@ -1589,7 +1589,7 @@ type AMFStatusIndicationIEs struct {
 }
 
 const (
-	AMFStatusIndicationIEsTypeValuePresentUnavailableGUAMIList int = 0
+	AMFStatusIndicationIEsPresentUnavailableGUAMIList int = 0
 )
 
 type AMFStatusIndicationIEsTypeValue struct {
@@ -1612,8 +1612,8 @@ type NGResetIEs struct {
 }
 
 const (
-	NGResetIEsTypeValuePresentCause     int = 0
-	NGResetIEsTypeValuePresentResetType int = 1
+	NGResetIEsPresentCause     int = 0
+	NGResetIEsPresentResetType int = 1
 )
 
 type NGResetIEsTypeValue struct {
@@ -1637,8 +1637,8 @@ type NGResetAcknowledgeIEs struct {
 }
 
 const (
-	NGResetAcknowledgeIEsTypeValuePresentUEAssociatedLogicalNGConnectionList int = 0
-	NGResetAcknowledgeIEsTypeValuePresentCriticalityDiagnostics              int = 1
+	NGResetAcknowledgeIEsPresentUEAssociatedLogicalNGConnectionList int = 0
+	NGResetAcknowledgeIEsPresentCriticalityDiagnostics              int = 1
 )
 
 type NGResetAcknowledgeIEsTypeValue struct {
@@ -1662,10 +1662,10 @@ type ErrorIndicationIEs struct {
 }
 
 const (
-	ErrorIndicationIEsTypeValuePresentAMFUENGAPID            int = 0
-	ErrorIndicationIEsTypeValuePresentRANUENGAPID            int = 1
-	ErrorIndicationIEsTypeValuePresentCause                  int = 2
-	ErrorIndicationIEsTypeValuePresentCriticalityDiagnostics int = 3
+	ErrorIndicationIEsPresentAMFUENGAPID            int = 0
+	ErrorIndicationIEsPresentRANUENGAPID            int = 1
+	ErrorIndicationIEsPresentCause                  int = 2
+	ErrorIndicationIEsPresentCriticalityDiagnostics int = 3
 )
 
 type ErrorIndicationIEsTypeValue struct {
@@ -1691,9 +1691,9 @@ type OverloadStartIEs struct {
 }
 
 const (
-	OverloadStartIEsTypeValuePresentAMFOverloadResponse               int = 0
-	OverloadStartIEsTypeValuePresentAMFTrafficLoadReductionIndication int = 1
-	OverloadStartIEsTypeValuePresentOverloadStartNSSAIList            int = 2
+	OverloadStartIEsPresentAMFOverloadResponse               int = 0
+	OverloadStartIEsPresentAMFTrafficLoadReductionIndication int = 1
+	OverloadStartIEsPresentOverloadStartNSSAIList            int = 2
 )
 
 type OverloadStartIEsTypeValue struct {
@@ -1718,7 +1718,7 @@ type OverloadStopIEs struct {
 }
 
 const (
-	OverloadStopIEsTypeValuePresentNothing int = 0
+	OverloadStopIEsPresentNothing int = 0
 )
 
 type OverloadStopIEsTypeValue struct {
@@ -1740,8 +1740,8 @@ type UplinkRANConfigurationTransferIEs struct {
 }
 
 const (
-	UplinkRANConfigurationTransferIEsTypeValuePresentSONConfigurationTransferUL     int = 0
-	UplinkRANConfigurationTransferIEsTypeValuePresentENDCSONConfigurationTransferUL int = 1
+	UplinkRANConfigurationTransferIEsPresentSONConfigurationTransferUL     int = 0
+	UplinkRANConfigurationTransferIEsPresentENDCSONConfigurationTransferUL int = 1
 )
 
 type UplinkRANConfigurationTransferIEsTypeValue struct {
@@ -1765,8 +1765,8 @@ type DownlinkRANConfigurationTransferIEs struct {
 }
 
 const (
-	DownlinkRANConfigurationTransferIEsTypeValuePresentSONConfigurationTransferDL     int = 0
-	DownlinkRANConfigurationTransferIEsTypeValuePresentENDCSONConfigurationTransferDL int = 1
+	DownlinkRANConfigurationTransferIEsPresentSONConfigurationTransferDL     int = 0
+	DownlinkRANConfigurationTransferIEsPresentENDCSONConfigurationTransferDL int = 1
 )
 
 type DownlinkRANConfigurationTransferIEsTypeValue struct {
@@ -1790,17 +1790,17 @@ type WriteReplaceWarningRequestIEs struct {
 }
 
 const (
-	WriteReplaceWarningRequestIEsTypeValuePresentMessageIdentifier           int = 0
-	WriteReplaceWarningRequestIEsTypeValuePresentSerialNumber                int = 1
-	WriteReplaceWarningRequestIEsTypeValuePresentWarningAreaList             int = 2
-	WriteReplaceWarningRequestIEsTypeValuePresentRepetitionPeriod            int = 3
-	WriteReplaceWarningRequestIEsTypeValuePresentNumberOfBroadcastsRequested int = 4
-	WriteReplaceWarningRequestIEsTypeValuePresentWarningType                 int = 5
-	WriteReplaceWarningRequestIEsTypeValuePresentWarningSecurityInfo         int = 6
-	WriteReplaceWarningRequestIEsTypeValuePresentDataCodingScheme            int = 7
-	WriteReplaceWarningRequestIEsTypeValuePresentWarningMessageContents      int = 8
-	WriteReplaceWarningRequestIEsTypeValuePresentConcurrentWarningMessageInd int = 9
-	WriteReplaceWarningRequestIEsTypeValuePresentWarningAreaCoordinates      int = 10
+	WriteReplaceWarningRequestIEsPresentMessageIdentifier           int = 0
+	WriteReplaceWarningRequestIEsPresentSerialNumber                int = 1
+	WriteReplaceWarningRequestIEsPresentWarningAreaList             int = 2
+	WriteReplaceWarningRequestIEsPresentRepetitionPeriod            int = 3
+	WriteReplaceWarningRequestIEsPresentNumberOfBroadcastsRequested int = 4
+	WriteReplaceWarningRequestIEsPresentWarningType                 int = 5
+	WriteReplaceWarningRequestIEsPresentWarningSecurityInfo         int = 6
+	WriteReplaceWarningRequestIEsPresentDataCodingScheme            int = 7
+	WriteReplaceWarningRequestIEsPresentWarningMessageContents      int = 8
+	WriteReplaceWarningRequestIEsPresentConcurrentWarningMessageInd int = 9
+	WriteReplaceWarningRequestIEsPresentWarningAreaCoordinates      int = 10
 )
 
 type WriteReplaceWarningRequestIEsTypeValue struct {
@@ -1833,10 +1833,10 @@ type WriteReplaceWarningResponseIEs struct {
 }
 
 const (
-	WriteReplaceWarningResponseIEsTypeValuePresentMessageIdentifier          int = 0
-	WriteReplaceWarningResponseIEsTypeValuePresentSerialNumber               int = 1
-	WriteReplaceWarningResponseIEsTypeValuePresentBroadcastCompletedAreaList int = 2
-	WriteReplaceWarningResponseIEsTypeValuePresentCriticalityDiagnostics     int = 3
+	WriteReplaceWarningResponseIEsPresentMessageIdentifier          int = 0
+	WriteReplaceWarningResponseIEsPresentSerialNumber               int = 1
+	WriteReplaceWarningResponseIEsPresentBroadcastCompletedAreaList int = 2
+	WriteReplaceWarningResponseIEsPresentCriticalityDiagnostics     int = 3
 )
 
 type WriteReplaceWarningResponseIEsTypeValue struct {
@@ -1862,10 +1862,10 @@ type PWSCancelRequestIEs struct {
 }
 
 const (
-	PWSCancelRequestIEsTypeValuePresentMessageIdentifier        int = 0
-	PWSCancelRequestIEsTypeValuePresentSerialNumber             int = 1
-	PWSCancelRequestIEsTypeValuePresentWarningAreaList          int = 2
-	PWSCancelRequestIEsTypeValuePresentCancelAllWarningMessages int = 3
+	PWSCancelRequestIEsPresentMessageIdentifier        int = 0
+	PWSCancelRequestIEsPresentSerialNumber             int = 1
+	PWSCancelRequestIEsPresentWarningAreaList          int = 2
+	PWSCancelRequestIEsPresentCancelAllWarningMessages int = 3
 )
 
 type PWSCancelRequestIEsTypeValue struct {
@@ -1891,10 +1891,10 @@ type PWSCancelResponseIEs struct {
 }
 
 const (
-	PWSCancelResponseIEsTypeValuePresentMessageIdentifier          int = 0
-	PWSCancelResponseIEsTypeValuePresentSerialNumber               int = 1
-	PWSCancelResponseIEsTypeValuePresentBroadcastCancelledAreaList int = 2
-	PWSCancelResponseIEsTypeValuePresentCriticalityDiagnostics     int = 3
+	PWSCancelResponseIEsPresentMessageIdentifier          int = 0
+	PWSCancelResponseIEsPresentSerialNumber               int = 1
+	PWSCancelResponseIEsPresentBroadcastCancelledAreaList int = 2
+	PWSCancelResponseIEsPresentCriticalityDiagnostics     int = 3
 )
 
 type PWSCancelResponseIEsTypeValue struct {
@@ -1920,10 +1920,10 @@ type PWSRestartIndicationIEs struct {
 }
 
 const (
-	PWSRestartIndicationIEsTypeValuePresentCellIDListForRestart          int = 0
-	PWSRestartIndicationIEsTypeValuePresentGlobalRANNodeID               int = 1
-	PWSRestartIndicationIEsTypeValuePresentTAIListForRestart             int = 2
-	PWSRestartIndicationIEsTypeValuePresentEmergencyAreaIDListForRestart int = 3
+	PWSRestartIndicationIEsPresentCellIDListForRestart          int = 0
+	PWSRestartIndicationIEsPresentGlobalRANNodeID               int = 1
+	PWSRestartIndicationIEsPresentTAIListForRestart             int = 2
+	PWSRestartIndicationIEsPresentEmergencyAreaIDListForRestart int = 3
 )
 
 type PWSRestartIndicationIEsTypeValue struct {
@@ -1949,8 +1949,8 @@ type PWSFailureIndicationIEs struct {
 }
 
 const (
-	PWSFailureIndicationIEsTypeValuePresentPWSFailedCellIDList int = 0
-	PWSFailureIndicationIEsTypeValuePresentGlobalRANNodeID     int = 1
+	PWSFailureIndicationIEsPresentPWSFailedCellIDList int = 0
+	PWSFailureIndicationIEsPresentGlobalRANNodeID     int = 1
 )
 
 type PWSFailureIndicationIEsTypeValue struct {
@@ -1974,10 +1974,10 @@ type DownlinkUEAssociatedNRPPaTransportIEs struct {
 }
 
 const (
-	DownlinkUEAssociatedNRPPaTransportIEsTypeValuePresentAMFUENGAPID int = 0
-	DownlinkUEAssociatedNRPPaTransportIEsTypeValuePresentRANUENGAPID int = 1
-	DownlinkUEAssociatedNRPPaTransportIEsTypeValuePresentRoutingID   int = 2
-	DownlinkUEAssociatedNRPPaTransportIEsTypeValuePresentNRPPaPDU    int = 3
+	DownlinkUEAssociatedNRPPaTransportIEsPresentAMFUENGAPID int = 0
+	DownlinkUEAssociatedNRPPaTransportIEsPresentRANUENGAPID int = 1
+	DownlinkUEAssociatedNRPPaTransportIEsPresentRoutingID   int = 2
+	DownlinkUEAssociatedNRPPaTransportIEsPresentNRPPaPDU    int = 3
 )
 
 type DownlinkUEAssociatedNRPPaTransportIEsTypeValue struct {
@@ -2003,10 +2003,10 @@ type UplinkUEAssociatedNRPPaTransportIEs struct {
 }
 
 const (
-	UplinkUEAssociatedNRPPaTransportIEsTypeValuePresentAMFUENGAPID int = 0
-	UplinkUEAssociatedNRPPaTransportIEsTypeValuePresentRANUENGAPID int = 1
-	UplinkUEAssociatedNRPPaTransportIEsTypeValuePresentRoutingID   int = 2
-	UplinkUEAssociatedNRPPaTransportIEsTypeValuePresentNRPPaPDU    int = 3
+	UplinkUEAssociatedNRPPaTransportIEsPresentAMFUENGAPID int = 0
+	UplinkUEAssociatedNRPPaTransportIEsPresentRANUENGAPID int = 1
+	UplinkUEAssociatedNRPPaTransportIEsPresentRoutingID   int = 2
+	UplinkUEAssociatedNRPPaTransportIEsPresentNRPPaPDU    int = 3
 )
 
 type UplinkUEAssociatedNRPPaTransportIEsTypeValue struct {
@@ -2032,8 +2032,8 @@ type DownlinkNonUEAssociatedNRPPaTransportIEs struct {
 }
 
 const (
-	DownlinkNonUEAssociatedNRPPaTransportIEsTypeValuePresentRoutingID int = 0
-	DownlinkNonUEAssociatedNRPPaTransportIEsTypeValuePresentNRPPaPDU  int = 1
+	DownlinkNonUEAssociatedNRPPaTransportIEsPresentRoutingID int = 0
+	DownlinkNonUEAssociatedNRPPaTransportIEsPresentNRPPaPDU  int = 1
 )
 
 type DownlinkNonUEAssociatedNRPPaTransportIEsTypeValue struct {
@@ -2057,8 +2057,8 @@ type UplinkNonUEAssociatedNRPPaTransportIEs struct {
 }
 
 const (
-	UplinkNonUEAssociatedNRPPaTransportIEsTypeValuePresentRoutingID int = 0
-	UplinkNonUEAssociatedNRPPaTransportIEsTypeValuePresentNRPPaPDU  int = 1
+	UplinkNonUEAssociatedNRPPaTransportIEsPresentRoutingID int = 0
+	UplinkNonUEAssociatedNRPPaTransportIEsPresentNRPPaPDU  int = 1
 )
 
 type UplinkNonUEAssociatedNRPPaTransportIEsTypeValue struct {
@@ -2082,9 +2082,9 @@ type TraceStartIEs struct {
 }
 
 const (
-	TraceStartIEsTypeValuePresentAMFUENGAPID     int = 0
-	TraceStartIEsTypeValuePresentRANUENGAPID     int = 1
-	TraceStartIEsTypeValuePresentTraceActivation int = 2
+	TraceStartIEsPresentAMFUENGAPID     int = 0
+	TraceStartIEsPresentRANUENGAPID     int = 1
+	TraceStartIEsPresentTraceActivation int = 2
 )
 
 type TraceStartIEsTypeValue struct {
@@ -2109,10 +2109,10 @@ type TraceFailureIndicationIEs struct {
 }
 
 const (
-	TraceFailureIndicationIEsTypeValuePresentAMFUENGAPID  int = 0
-	TraceFailureIndicationIEsTypeValuePresentRANUENGAPID  int = 1
-	TraceFailureIndicationIEsTypeValuePresentNGRANTraceID int = 2
-	TraceFailureIndicationIEsTypeValuePresentCause        int = 3
+	TraceFailureIndicationIEsPresentAMFUENGAPID  int = 0
+	TraceFailureIndicationIEsPresentRANUENGAPID  int = 1
+	TraceFailureIndicationIEsPresentNGRANTraceID int = 2
+	TraceFailureIndicationIEsPresentCause        int = 3
 )
 
 type TraceFailureIndicationIEsTypeValue struct {
@@ -2138,9 +2138,9 @@ type DeactivateTraceIEs struct {
 }
 
 const (
-	DeactivateTraceIEsTypeValuePresentAMFUENGAPID  int = 0
-	DeactivateTraceIEsTypeValuePresentRANUENGAPID  int = 1
-	DeactivateTraceIEsTypeValuePresentNGRANTraceID int = 2
+	DeactivateTraceIEsPresentAMFUENGAPID  int = 0
+	DeactivateTraceIEsPresentRANUENGAPID  int = 1
+	DeactivateTraceIEsPresentNGRANTraceID int = 2
 )
 
 type DeactivateTraceIEsTypeValue struct {
@@ -2165,11 +2165,11 @@ type CellTrafficTraceIEs struct {
 }
 
 const (
-	CellTrafficTraceIEsTypeValuePresentAMFUENGAPID                    int = 0
-	CellTrafficTraceIEsTypeValuePresentRANUENGAPID                    int = 1
-	CellTrafficTraceIEsTypeValuePresentNGRANTraceID                   int = 2
-	CellTrafficTraceIEsTypeValuePresentNGRANCGI                       int = 3
-	CellTrafficTraceIEsTypeValuePresentTraceCollectionEntityIPAddress int = 4
+	CellTrafficTraceIEsPresentAMFUENGAPID                    int = 0
+	CellTrafficTraceIEsPresentRANUENGAPID                    int = 1
+	CellTrafficTraceIEsPresentNGRANTraceID                   int = 2
+	CellTrafficTraceIEsPresentNGRANCGI                       int = 3
+	CellTrafficTraceIEsPresentTraceCollectionEntityIPAddress int = 4
 )
 
 type CellTrafficTraceIEsTypeValue struct {
@@ -2196,9 +2196,9 @@ type LocationReportingControlIEs struct {
 }
 
 const (
-	LocationReportingControlIEsTypeValuePresentAMFUENGAPID                  int = 0
-	LocationReportingControlIEsTypeValuePresentRANUENGAPID                  int = 1
-	LocationReportingControlIEsTypeValuePresentLocationReportingRequestType int = 2
+	LocationReportingControlIEsPresentAMFUENGAPID                  int = 0
+	LocationReportingControlIEsPresentRANUENGAPID                  int = 1
+	LocationReportingControlIEsPresentLocationReportingRequestType int = 2
 )
 
 type LocationReportingControlIEsTypeValue struct {
@@ -2223,9 +2223,9 @@ type LocationReportingFailureIndicationIEs struct {
 }
 
 const (
-	LocationReportingFailureIndicationIEsTypeValuePresentAMFUENGAPID int = 0
-	LocationReportingFailureIndicationIEsTypeValuePresentRANUENGAPID int = 1
-	LocationReportingFailureIndicationIEsTypeValuePresentCause       int = 2
+	LocationReportingFailureIndicationIEsPresentAMFUENGAPID int = 0
+	LocationReportingFailureIndicationIEsPresentRANUENGAPID int = 1
+	LocationReportingFailureIndicationIEsPresentCause       int = 2
 )
 
 type LocationReportingFailureIndicationIEsTypeValue struct {
@@ -2250,11 +2250,11 @@ type LocationReportIEs struct {
 }
 
 const (
-	LocationReportIEsTypeValuePresentAMFUENGAPID                    int = 0
-	LocationReportIEsTypeValuePresentRANUENGAPID                    int = 1
-	LocationReportIEsTypeValuePresentUserLocationInformation        int = 2
-	LocationReportIEsTypeValuePresentUEPresenceInAreaOfInterestList int = 3
-	LocationReportIEsTypeValuePresentLocationReportingRequestType   int = 4
+	LocationReportIEsPresentAMFUENGAPID                    int = 0
+	LocationReportIEsPresentRANUENGAPID                    int = 1
+	LocationReportIEsPresentUserLocationInformation        int = 2
+	LocationReportIEsPresentUEPresenceInAreaOfInterestList int = 3
+	LocationReportIEsPresentLocationReportingRequestType   int = 4
 )
 
 type LocationReportIEsTypeValue struct {
@@ -2281,8 +2281,8 @@ type UETNLABindingReleaseRequestIEs struct {
 }
 
 const (
-	UETNLABindingReleaseRequestIEsTypeValuePresentAMFUENGAPID int = 0
-	UETNLABindingReleaseRequestIEsTypeValuePresentRANUENGAPID int = 1
+	UETNLABindingReleaseRequestIEsPresentAMFUENGAPID int = 0
+	UETNLABindingReleaseRequestIEsPresentRANUENGAPID int = 1
 )
 
 type UETNLABindingReleaseRequestIEsTypeValue struct {
@@ -2306,10 +2306,10 @@ type UERadioCapabilityInfoIndicationIEs struct {
 }
 
 const (
-	UERadioCapabilityInfoIndicationIEsTypeValuePresentAMFUENGAPID                int = 0
-	UERadioCapabilityInfoIndicationIEsTypeValuePresentRANUENGAPID                int = 1
-	UERadioCapabilityInfoIndicationIEsTypeValuePresentUERadioCapability          int = 2
-	UERadioCapabilityInfoIndicationIEsTypeValuePresentUERadioCapabilityForPaging int = 3
+	UERadioCapabilityInfoIndicationIEsPresentAMFUENGAPID                int = 0
+	UERadioCapabilityInfoIndicationIEsPresentRANUENGAPID                int = 1
+	UERadioCapabilityInfoIndicationIEsPresentUERadioCapability          int = 2
+	UERadioCapabilityInfoIndicationIEsPresentUERadioCapabilityForPaging int = 3
 )
 
 type UERadioCapabilityInfoIndicationIEsTypeValue struct {
@@ -2335,9 +2335,9 @@ type UERadioCapabilityCheckRequestIEs struct {
 }
 
 const (
-	UERadioCapabilityCheckRequestIEsTypeValuePresentAMFUENGAPID       int = 0
-	UERadioCapabilityCheckRequestIEsTypeValuePresentRANUENGAPID       int = 1
-	UERadioCapabilityCheckRequestIEsTypeValuePresentUERadioCapability int = 2
+	UERadioCapabilityCheckRequestIEsPresentAMFUENGAPID       int = 0
+	UERadioCapabilityCheckRequestIEsPresentRANUENGAPID       int = 1
+	UERadioCapabilityCheckRequestIEsPresentUERadioCapability int = 2
 )
 
 type UERadioCapabilityCheckRequestIEsTypeValue struct {
@@ -2362,10 +2362,10 @@ type UERadioCapabilityCheckResponseIEs struct {
 }
 
 const (
-	UERadioCapabilityCheckResponseIEsTypeValuePresentAMFUENGAPID              int = 0
-	UERadioCapabilityCheckResponseIEsTypeValuePresentRANUENGAPID              int = 1
-	UERadioCapabilityCheckResponseIEsTypeValuePresentIMSVoiceSupportIndicator int = 2
-	UERadioCapabilityCheckResponseIEsTypeValuePresentCriticalityDiagnostics   int = 3
+	UERadioCapabilityCheckResponseIEsPresentAMFUENGAPID              int = 0
+	UERadioCapabilityCheckResponseIEsPresentRANUENGAPID              int = 1
+	UERadioCapabilityCheckResponseIEsPresentIMSVoiceSupportIndicator int = 2
+	UERadioCapabilityCheckResponseIEsPresentCriticalityDiagnostics   int = 3
 )
 
 type UERadioCapabilityCheckResponseIEsTypeValue struct {
@@ -2391,7 +2391,7 @@ type PrivateMessageIEs struct {
 }
 
 const (
-	PrivateMessageIEsTypeValuePresentNothing int = 0
+	PrivateMessageIEsPresentNothing int = 0
 )
 
 type PrivateMessageIEsTypeValue struct {
@@ -2413,11 +2413,11 @@ type SecondaryRATDataUsageReportIEs struct {
 }
 
 const (
-	SecondaryRATDataUsageReportIEsTypeValuePresentAMFUENGAPID                             int = 0
-	SecondaryRATDataUsageReportIEsTypeValuePresentRANUENGAPID                             int = 1
-	SecondaryRATDataUsageReportIEsTypeValuePresentPDUSessionResourceSecondaryRATUsageList int = 2
-	SecondaryRATDataUsageReportIEsTypeValuePresentHandoverFlag                            int = 3
-	SecondaryRATDataUsageReportIEsTypeValuePresentUserLocationInformation                 int = 4
+	SecondaryRATDataUsageReportIEsPresentAMFUENGAPID                             int = 0
+	SecondaryRATDataUsageReportIEsPresentRANUENGAPID                             int = 1
+	SecondaryRATDataUsageReportIEsPresentPDUSessionResourceSecondaryRATUsageList int = 2
+	SecondaryRATDataUsageReportIEsPresentHandoverFlag                            int = 3
+	SecondaryRATDataUsageReportIEsPresentUserLocationInformation                 int = 4
 )
 
 type SecondaryRATDataUsageReportIEsTypeValue struct {
@@ -2444,7 +2444,7 @@ type UplinkRIMInformationTransferIEs struct {
 }
 
 const (
-	UplinkRIMInformationTransferIEsTypeValuePresentRIMInformationTransfer int = 0
+	UplinkRIMInformationTransferIEsPresentRIMInformationTransfer int = 0
 )
 
 type UplinkRIMInformationTransferIEsTypeValue struct {
@@ -2467,7 +2467,7 @@ type DownlinkRIMInformationTransferIEs struct {
 }
 
 const (
-	DownlinkRIMInformationTransferIEsTypeValuePresentRIMInformationTransfer int = 0
+	DownlinkRIMInformationTransferIEsPresentRIMInformationTransfer int = 0
 )
 
 type DownlinkRIMInformationTransferIEsTypeValue struct {

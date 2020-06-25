@@ -9,7 +9,7 @@ import (
 func PDUSessionResourceSetupRequestIEsTypeValue(value ngapType.PDUSessionResourceSetupRequestIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.PDUSessionResourceSetupRequestIEsTypeValuePresentAMFUENGAPID:
+	case ngapType.PDUSessionResourceSetupRequestIEsPresentAMFUENGAPID:
 		if value.AMFUENGAPID == nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceSetupRequestIEsTypeValue: AMFUENGAPID: NIL")
 		}
@@ -17,7 +17,7 @@ func PDUSessionResourceSetupRequestIEsTypeValue(value ngapType.PDUSessionResourc
 		if err != nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceSetupRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.PDUSessionResourceSetupRequestIEsTypeValuePresentRANUENGAPID:
+	case ngapType.PDUSessionResourceSetupRequestIEsPresentRANUENGAPID:
 		if value.RANUENGAPID == nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceSetupRequestIEsTypeValue: RANUENGAPID: NIL")
 		}
@@ -25,7 +25,7 @@ func PDUSessionResourceSetupRequestIEsTypeValue(value ngapType.PDUSessionResourc
 		if err != nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceSetupRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.PDUSessionResourceSetupRequestIEsTypeValuePresentRANPagingPriority:
+	case ngapType.PDUSessionResourceSetupRequestIEsPresentRANPagingPriority:
 		if value.RANPagingPriority == nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceSetupRequestIEsTypeValue: RANPagingPriority: NIL")
 		}
@@ -33,7 +33,7 @@ func PDUSessionResourceSetupRequestIEsTypeValue(value ngapType.PDUSessionResourc
 		if err != nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceSetupRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.PDUSessionResourceSetupRequestIEsTypeValuePresentNASPDU:
+	case ngapType.PDUSessionResourceSetupRequestIEsPresentNASPDU:
 		if value.NASPDU == nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceSetupRequestIEsTypeValue: NASPDU: NIL")
 		}
@@ -41,7 +41,7 @@ func PDUSessionResourceSetupRequestIEsTypeValue(value ngapType.PDUSessionResourc
 		if err != nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceSetupRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.PDUSessionResourceSetupRequestIEsTypeValuePresentPDUSessionResourceSetupListSUReq:
+	case ngapType.PDUSessionResourceSetupRequestIEsPresentPDUSessionResourceSetupListSUReq:
 		if value.PDUSessionResourceSetupListSUReq == nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceSetupRequestIEsTypeValue: PDUSessionResourceSetupListSUReq: NIL")
 		}
@@ -49,7 +49,7 @@ func PDUSessionResourceSetupRequestIEsTypeValue(value ngapType.PDUSessionResourc
 		if err != nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceSetupRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.PDUSessionResourceSetupRequestIEsTypeValuePresentUEAggregateMaximumBitRate:
+	case ngapType.PDUSessionResourceSetupRequestIEsPresentUEAggregateMaximumBitRate:
 		if value.UEAggregateMaximumBitRate == nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceSetupRequestIEsTypeValue: UEAggregateMaximumBitRate: NIL")
 		}
@@ -66,7 +66,7 @@ func PDUSessionResourceSetupRequestIEsTypeValue(value ngapType.PDUSessionResourc
 func PDUSessionResourceSetupResponseIEsTypeValue(value ngapType.PDUSessionResourceSetupResponseIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.PDUSessionResourceSetupResponseIEsTypeValuePresentAMFUENGAPID:
+	case ngapType.PDUSessionResourceSetupResponseIEsPresentAMFUENGAPID:
 		if value.AMFUENGAPID == nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceSetupResponseIEsTypeValue: AMFUENGAPID: NIL")
 		}
@@ -74,7 +74,7 @@ func PDUSessionResourceSetupResponseIEsTypeValue(value ngapType.PDUSessionResour
 		if err != nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceSetupResponseIEsTypeValue: " + err.Error())
 		}
-	case ngapType.PDUSessionResourceSetupResponseIEsTypeValuePresentRANUENGAPID:
+	case ngapType.PDUSessionResourceSetupResponseIEsPresentRANUENGAPID:
 		if value.RANUENGAPID == nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceSetupResponseIEsTypeValue: RANUENGAPID: NIL")
 		}
@@ -82,7 +82,7 @@ func PDUSessionResourceSetupResponseIEsTypeValue(value ngapType.PDUSessionResour
 		if err != nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceSetupResponseIEsTypeValue: " + err.Error())
 		}
-	case ngapType.PDUSessionResourceSetupResponseIEsTypeValuePresentPDUSessionResourceSetupListSURes:
+	case ngapType.PDUSessionResourceSetupResponseIEsPresentPDUSessionResourceSetupListSURes:
 		if value.PDUSessionResourceSetupListSURes == nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceSetupResponseIEsTypeValue: PDUSessionResourceSetupListSURes: NIL")
 		}
@@ -90,7 +90,7 @@ func PDUSessionResourceSetupResponseIEsTypeValue(value ngapType.PDUSessionResour
 		if err != nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceSetupResponseIEsTypeValue: " + err.Error())
 		}
-	case ngapType.PDUSessionResourceSetupResponseIEsTypeValuePresentPDUSessionResourceFailedToSetupListSURes:
+	case ngapType.PDUSessionResourceSetupResponseIEsPresentPDUSessionResourceFailedToSetupListSURes:
 		if value.PDUSessionResourceFailedToSetupListSURes == nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceSetupResponseIEsTypeValue: PDUSessionResourceFailedToSetupListSURes: NIL")
 		}
@@ -98,7 +98,7 @@ func PDUSessionResourceSetupResponseIEsTypeValue(value ngapType.PDUSessionResour
 		if err != nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceSetupResponseIEsTypeValue: " + err.Error())
 		}
-	case ngapType.PDUSessionResourceSetupResponseIEsTypeValuePresentCriticalityDiagnostics:
+	case ngapType.PDUSessionResourceSetupResponseIEsPresentCriticalityDiagnostics:
 		if value.CriticalityDiagnostics == nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceSetupResponseIEsTypeValue: CriticalityDiagnostics: NIL")
 		}
@@ -115,7 +115,7 @@ func PDUSessionResourceSetupResponseIEsTypeValue(value ngapType.PDUSessionResour
 func PDUSessionResourceReleaseCommandIEsTypeValue(value ngapType.PDUSessionResourceReleaseCommandIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.PDUSessionResourceReleaseCommandIEsTypeValuePresentAMFUENGAPID:
+	case ngapType.PDUSessionResourceReleaseCommandIEsPresentAMFUENGAPID:
 		if value.AMFUENGAPID == nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceReleaseCommandIEsTypeValue: AMFUENGAPID: NIL")
 		}
@@ -123,7 +123,7 @@ func PDUSessionResourceReleaseCommandIEsTypeValue(value ngapType.PDUSessionResou
 		if err != nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceReleaseCommandIEsTypeValue: " + err.Error())
 		}
-	case ngapType.PDUSessionResourceReleaseCommandIEsTypeValuePresentRANUENGAPID:
+	case ngapType.PDUSessionResourceReleaseCommandIEsPresentRANUENGAPID:
 		if value.RANUENGAPID == nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceReleaseCommandIEsTypeValue: RANUENGAPID: NIL")
 		}
@@ -131,7 +131,7 @@ func PDUSessionResourceReleaseCommandIEsTypeValue(value ngapType.PDUSessionResou
 		if err != nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceReleaseCommandIEsTypeValue: " + err.Error())
 		}
-	case ngapType.PDUSessionResourceReleaseCommandIEsTypeValuePresentRANPagingPriority:
+	case ngapType.PDUSessionResourceReleaseCommandIEsPresentRANPagingPriority:
 		if value.RANPagingPriority == nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceReleaseCommandIEsTypeValue: RANPagingPriority: NIL")
 		}
@@ -139,7 +139,7 @@ func PDUSessionResourceReleaseCommandIEsTypeValue(value ngapType.PDUSessionResou
 		if err != nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceReleaseCommandIEsTypeValue: " + err.Error())
 		}
-	case ngapType.PDUSessionResourceReleaseCommandIEsTypeValuePresentNASPDU:
+	case ngapType.PDUSessionResourceReleaseCommandIEsPresentNASPDU:
 		if value.NASPDU == nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceReleaseCommandIEsTypeValue: NASPDU: NIL")
 		}
@@ -147,7 +147,7 @@ func PDUSessionResourceReleaseCommandIEsTypeValue(value ngapType.PDUSessionResou
 		if err != nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceReleaseCommandIEsTypeValue: " + err.Error())
 		}
-	case ngapType.PDUSessionResourceReleaseCommandIEsTypeValuePresentPDUSessionResourceToReleaseListRelCmd:
+	case ngapType.PDUSessionResourceReleaseCommandIEsPresentPDUSessionResourceToReleaseListRelCmd:
 		if value.PDUSessionResourceToReleaseListRelCmd == nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceReleaseCommandIEsTypeValue: PDUSessionResourceToReleaseListRelCmd: NIL")
 		}
@@ -164,7 +164,7 @@ func PDUSessionResourceReleaseCommandIEsTypeValue(value ngapType.PDUSessionResou
 func PDUSessionResourceReleaseResponseIEsTypeValue(value ngapType.PDUSessionResourceReleaseResponseIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.PDUSessionResourceReleaseResponseIEsTypeValuePresentAMFUENGAPID:
+	case ngapType.PDUSessionResourceReleaseResponseIEsPresentAMFUENGAPID:
 		if value.AMFUENGAPID == nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceReleaseResponseIEsTypeValue: AMFUENGAPID: NIL")
 		}
@@ -172,7 +172,7 @@ func PDUSessionResourceReleaseResponseIEsTypeValue(value ngapType.PDUSessionReso
 		if err != nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceReleaseResponseIEsTypeValue: " + err.Error())
 		}
-	case ngapType.PDUSessionResourceReleaseResponseIEsTypeValuePresentRANUENGAPID:
+	case ngapType.PDUSessionResourceReleaseResponseIEsPresentRANUENGAPID:
 		if value.RANUENGAPID == nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceReleaseResponseIEsTypeValue: RANUENGAPID: NIL")
 		}
@@ -180,7 +180,7 @@ func PDUSessionResourceReleaseResponseIEsTypeValue(value ngapType.PDUSessionReso
 		if err != nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceReleaseResponseIEsTypeValue: " + err.Error())
 		}
-	case ngapType.PDUSessionResourceReleaseResponseIEsTypeValuePresentPDUSessionResourceReleasedListRelRes:
+	case ngapType.PDUSessionResourceReleaseResponseIEsPresentPDUSessionResourceReleasedListRelRes:
 		if value.PDUSessionResourceReleasedListRelRes == nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceReleaseResponseIEsTypeValue: PDUSessionResourceReleasedListRelRes: NIL")
 		}
@@ -188,7 +188,7 @@ func PDUSessionResourceReleaseResponseIEsTypeValue(value ngapType.PDUSessionReso
 		if err != nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceReleaseResponseIEsTypeValue: " + err.Error())
 		}
-	case ngapType.PDUSessionResourceReleaseResponseIEsTypeValuePresentUserLocationInformation:
+	case ngapType.PDUSessionResourceReleaseResponseIEsPresentUserLocationInformation:
 		if value.UserLocationInformation == nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceReleaseResponseIEsTypeValue: UserLocationInformation: NIL")
 		}
@@ -196,7 +196,7 @@ func PDUSessionResourceReleaseResponseIEsTypeValue(value ngapType.PDUSessionReso
 		if err != nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceReleaseResponseIEsTypeValue: " + err.Error())
 		}
-	case ngapType.PDUSessionResourceReleaseResponseIEsTypeValuePresentCriticalityDiagnostics:
+	case ngapType.PDUSessionResourceReleaseResponseIEsPresentCriticalityDiagnostics:
 		if value.CriticalityDiagnostics == nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceReleaseResponseIEsTypeValue: CriticalityDiagnostics: NIL")
 		}
@@ -213,7 +213,7 @@ func PDUSessionResourceReleaseResponseIEsTypeValue(value ngapType.PDUSessionReso
 func PDUSessionResourceModifyRequestIEsTypeValue(value ngapType.PDUSessionResourceModifyRequestIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.PDUSessionResourceModifyRequestIEsTypeValuePresentAMFUENGAPID:
+	case ngapType.PDUSessionResourceModifyRequestIEsPresentAMFUENGAPID:
 		if value.AMFUENGAPID == nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceModifyRequestIEsTypeValue: AMFUENGAPID: NIL")
 		}
@@ -221,7 +221,7 @@ func PDUSessionResourceModifyRequestIEsTypeValue(value ngapType.PDUSessionResour
 		if err != nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceModifyRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.PDUSessionResourceModifyRequestIEsTypeValuePresentRANUENGAPID:
+	case ngapType.PDUSessionResourceModifyRequestIEsPresentRANUENGAPID:
 		if value.RANUENGAPID == nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceModifyRequestIEsTypeValue: RANUENGAPID: NIL")
 		}
@@ -229,7 +229,7 @@ func PDUSessionResourceModifyRequestIEsTypeValue(value ngapType.PDUSessionResour
 		if err != nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceModifyRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.PDUSessionResourceModifyRequestIEsTypeValuePresentRANPagingPriority:
+	case ngapType.PDUSessionResourceModifyRequestIEsPresentRANPagingPriority:
 		if value.RANPagingPriority == nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceModifyRequestIEsTypeValue: RANPagingPriority: NIL")
 		}
@@ -237,7 +237,7 @@ func PDUSessionResourceModifyRequestIEsTypeValue(value ngapType.PDUSessionResour
 		if err != nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceModifyRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.PDUSessionResourceModifyRequestIEsTypeValuePresentPDUSessionResourceModifyListModReq:
+	case ngapType.PDUSessionResourceModifyRequestIEsPresentPDUSessionResourceModifyListModReq:
 		if value.PDUSessionResourceModifyListModReq == nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceModifyRequestIEsTypeValue: PDUSessionResourceModifyListModReq: NIL")
 		}
@@ -254,7 +254,7 @@ func PDUSessionResourceModifyRequestIEsTypeValue(value ngapType.PDUSessionResour
 func PDUSessionResourceModifyResponseIEsTypeValue(value ngapType.PDUSessionResourceModifyResponseIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.PDUSessionResourceModifyResponseIEsTypeValuePresentAMFUENGAPID:
+	case ngapType.PDUSessionResourceModifyResponseIEsPresentAMFUENGAPID:
 		if value.AMFUENGAPID == nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceModifyResponseIEsTypeValue: AMFUENGAPID: NIL")
 		}
@@ -262,7 +262,7 @@ func PDUSessionResourceModifyResponseIEsTypeValue(value ngapType.PDUSessionResou
 		if err != nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceModifyResponseIEsTypeValue: " + err.Error())
 		}
-	case ngapType.PDUSessionResourceModifyResponseIEsTypeValuePresentRANUENGAPID:
+	case ngapType.PDUSessionResourceModifyResponseIEsPresentRANUENGAPID:
 		if value.RANUENGAPID == nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceModifyResponseIEsTypeValue: RANUENGAPID: NIL")
 		}
@@ -270,7 +270,7 @@ func PDUSessionResourceModifyResponseIEsTypeValue(value ngapType.PDUSessionResou
 		if err != nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceModifyResponseIEsTypeValue: " + err.Error())
 		}
-	case ngapType.PDUSessionResourceModifyResponseIEsTypeValuePresentPDUSessionResourceModifyListModRes:
+	case ngapType.PDUSessionResourceModifyResponseIEsPresentPDUSessionResourceModifyListModRes:
 		if value.PDUSessionResourceModifyListModRes == nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceModifyResponseIEsTypeValue: PDUSessionResourceModifyListModRes: NIL")
 		}
@@ -278,7 +278,7 @@ func PDUSessionResourceModifyResponseIEsTypeValue(value ngapType.PDUSessionResou
 		if err != nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceModifyResponseIEsTypeValue: " + err.Error())
 		}
-	case ngapType.PDUSessionResourceModifyResponseIEsTypeValuePresentPDUSessionResourceFailedToModifyListModRes:
+	case ngapType.PDUSessionResourceModifyResponseIEsPresentPDUSessionResourceFailedToModifyListModRes:
 		if value.PDUSessionResourceFailedToModifyListModRes == nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceModifyResponseIEsTypeValue: PDUSessionResourceFailedToModifyListModRes: NIL")
 		}
@@ -286,7 +286,7 @@ func PDUSessionResourceModifyResponseIEsTypeValue(value ngapType.PDUSessionResou
 		if err != nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceModifyResponseIEsTypeValue: " + err.Error())
 		}
-	case ngapType.PDUSessionResourceModifyResponseIEsTypeValuePresentUserLocationInformation:
+	case ngapType.PDUSessionResourceModifyResponseIEsPresentUserLocationInformation:
 		if value.UserLocationInformation == nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceModifyResponseIEsTypeValue: UserLocationInformation: NIL")
 		}
@@ -294,7 +294,7 @@ func PDUSessionResourceModifyResponseIEsTypeValue(value ngapType.PDUSessionResou
 		if err != nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceModifyResponseIEsTypeValue: " + err.Error())
 		}
-	case ngapType.PDUSessionResourceModifyResponseIEsTypeValuePresentCriticalityDiagnostics:
+	case ngapType.PDUSessionResourceModifyResponseIEsPresentCriticalityDiagnostics:
 		if value.CriticalityDiagnostics == nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceModifyResponseIEsTypeValue: CriticalityDiagnostics: NIL")
 		}
@@ -311,7 +311,7 @@ func PDUSessionResourceModifyResponseIEsTypeValue(value ngapType.PDUSessionResou
 func PDUSessionResourceNotifyIEsTypeValue(value ngapType.PDUSessionResourceNotifyIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.PDUSessionResourceNotifyIEsTypeValuePresentAMFUENGAPID:
+	case ngapType.PDUSessionResourceNotifyIEsPresentAMFUENGAPID:
 		if value.AMFUENGAPID == nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceNotifyIEsTypeValue: AMFUENGAPID: NIL")
 		}
@@ -319,7 +319,7 @@ func PDUSessionResourceNotifyIEsTypeValue(value ngapType.PDUSessionResourceNotif
 		if err != nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceNotifyIEsTypeValue: " + err.Error())
 		}
-	case ngapType.PDUSessionResourceNotifyIEsTypeValuePresentRANUENGAPID:
+	case ngapType.PDUSessionResourceNotifyIEsPresentRANUENGAPID:
 		if value.RANUENGAPID == nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceNotifyIEsTypeValue: RANUENGAPID: NIL")
 		}
@@ -327,7 +327,7 @@ func PDUSessionResourceNotifyIEsTypeValue(value ngapType.PDUSessionResourceNotif
 		if err != nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceNotifyIEsTypeValue: " + err.Error())
 		}
-	case ngapType.PDUSessionResourceNotifyIEsTypeValuePresentPDUSessionResourceNotifyList:
+	case ngapType.PDUSessionResourceNotifyIEsPresentPDUSessionResourceNotifyList:
 		if value.PDUSessionResourceNotifyList == nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceNotifyIEsTypeValue: PDUSessionResourceNotifyList: NIL")
 		}
@@ -335,7 +335,7 @@ func PDUSessionResourceNotifyIEsTypeValue(value ngapType.PDUSessionResourceNotif
 		if err != nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceNotifyIEsTypeValue: " + err.Error())
 		}
-	case ngapType.PDUSessionResourceNotifyIEsTypeValuePresentPDUSessionResourceReleasedListNot:
+	case ngapType.PDUSessionResourceNotifyIEsPresentPDUSessionResourceReleasedListNot:
 		if value.PDUSessionResourceReleasedListNot == nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceNotifyIEsTypeValue: PDUSessionResourceReleasedListNot: NIL")
 		}
@@ -343,7 +343,7 @@ func PDUSessionResourceNotifyIEsTypeValue(value ngapType.PDUSessionResourceNotif
 		if err != nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceNotifyIEsTypeValue: " + err.Error())
 		}
-	case ngapType.PDUSessionResourceNotifyIEsTypeValuePresentUserLocationInformation:
+	case ngapType.PDUSessionResourceNotifyIEsPresentUserLocationInformation:
 		if value.UserLocationInformation == nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceNotifyIEsTypeValue: UserLocationInformation: NIL")
 		}
@@ -360,7 +360,7 @@ func PDUSessionResourceNotifyIEsTypeValue(value ngapType.PDUSessionResourceNotif
 func PDUSessionResourceModifyIndicationIEsTypeValue(value ngapType.PDUSessionResourceModifyIndicationIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.PDUSessionResourceModifyIndicationIEsTypeValuePresentAMFUENGAPID:
+	case ngapType.PDUSessionResourceModifyIndicationIEsPresentAMFUENGAPID:
 		if value.AMFUENGAPID == nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceModifyIndicationIEsTypeValue: AMFUENGAPID: NIL")
 		}
@@ -368,7 +368,7 @@ func PDUSessionResourceModifyIndicationIEsTypeValue(value ngapType.PDUSessionRes
 		if err != nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceModifyIndicationIEsTypeValue: " + err.Error())
 		}
-	case ngapType.PDUSessionResourceModifyIndicationIEsTypeValuePresentRANUENGAPID:
+	case ngapType.PDUSessionResourceModifyIndicationIEsPresentRANUENGAPID:
 		if value.RANUENGAPID == nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceModifyIndicationIEsTypeValue: RANUENGAPID: NIL")
 		}
@@ -376,7 +376,7 @@ func PDUSessionResourceModifyIndicationIEsTypeValue(value ngapType.PDUSessionRes
 		if err != nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceModifyIndicationIEsTypeValue: " + err.Error())
 		}
-	case ngapType.PDUSessionResourceModifyIndicationIEsTypeValuePresentPDUSessionResourceModifyListModInd:
+	case ngapType.PDUSessionResourceModifyIndicationIEsPresentPDUSessionResourceModifyListModInd:
 		if value.PDUSessionResourceModifyListModInd == nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceModifyIndicationIEsTypeValue: PDUSessionResourceModifyListModInd: NIL")
 		}
@@ -384,7 +384,7 @@ func PDUSessionResourceModifyIndicationIEsTypeValue(value ngapType.PDUSessionRes
 		if err != nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceModifyIndicationIEsTypeValue: " + err.Error())
 		}
-	case ngapType.PDUSessionResourceModifyIndicationIEsTypeValuePresentUserLocationInformation:
+	case ngapType.PDUSessionResourceModifyIndicationIEsPresentUserLocationInformation:
 		if value.UserLocationInformation == nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceModifyIndicationIEsTypeValue: UserLocationInformation: NIL")
 		}
@@ -401,7 +401,7 @@ func PDUSessionResourceModifyIndicationIEsTypeValue(value ngapType.PDUSessionRes
 func PDUSessionResourceModifyConfirmIEsTypeValue(value ngapType.PDUSessionResourceModifyConfirmIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.PDUSessionResourceModifyConfirmIEsTypeValuePresentAMFUENGAPID:
+	case ngapType.PDUSessionResourceModifyConfirmIEsPresentAMFUENGAPID:
 		if value.AMFUENGAPID == nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceModifyConfirmIEsTypeValue: AMFUENGAPID: NIL")
 		}
@@ -409,7 +409,7 @@ func PDUSessionResourceModifyConfirmIEsTypeValue(value ngapType.PDUSessionResour
 		if err != nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceModifyConfirmIEsTypeValue: " + err.Error())
 		}
-	case ngapType.PDUSessionResourceModifyConfirmIEsTypeValuePresentRANUENGAPID:
+	case ngapType.PDUSessionResourceModifyConfirmIEsPresentRANUENGAPID:
 		if value.RANUENGAPID == nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceModifyConfirmIEsTypeValue: RANUENGAPID: NIL")
 		}
@@ -417,7 +417,7 @@ func PDUSessionResourceModifyConfirmIEsTypeValue(value ngapType.PDUSessionResour
 		if err != nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceModifyConfirmIEsTypeValue: " + err.Error())
 		}
-	case ngapType.PDUSessionResourceModifyConfirmIEsTypeValuePresentPDUSessionResourceModifyListModCfm:
+	case ngapType.PDUSessionResourceModifyConfirmIEsPresentPDUSessionResourceModifyListModCfm:
 		if value.PDUSessionResourceModifyListModCfm == nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceModifyConfirmIEsTypeValue: PDUSessionResourceModifyListModCfm: NIL")
 		}
@@ -425,7 +425,7 @@ func PDUSessionResourceModifyConfirmIEsTypeValue(value ngapType.PDUSessionResour
 		if err != nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceModifyConfirmIEsTypeValue: " + err.Error())
 		}
-	case ngapType.PDUSessionResourceModifyConfirmIEsTypeValuePresentPDUSessionResourceFailedToModifyListModCfm:
+	case ngapType.PDUSessionResourceModifyConfirmIEsPresentPDUSessionResourceFailedToModifyListModCfm:
 		if value.PDUSessionResourceFailedToModifyListModCfm == nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceModifyConfirmIEsTypeValue: PDUSessionResourceFailedToModifyListModCfm: NIL")
 		}
@@ -433,7 +433,7 @@ func PDUSessionResourceModifyConfirmIEsTypeValue(value ngapType.PDUSessionResour
 		if err != nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceModifyConfirmIEsTypeValue: " + err.Error())
 		}
-	case ngapType.PDUSessionResourceModifyConfirmIEsTypeValuePresentCriticalityDiagnostics:
+	case ngapType.PDUSessionResourceModifyConfirmIEsPresentCriticalityDiagnostics:
 		if value.CriticalityDiagnostics == nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceModifyConfirmIEsTypeValue: CriticalityDiagnostics: NIL")
 		}
@@ -450,7 +450,7 @@ func PDUSessionResourceModifyConfirmIEsTypeValue(value ngapType.PDUSessionResour
 func InitialContextSetupRequestIEsTypeValue(value ngapType.InitialContextSetupRequestIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.InitialContextSetupRequestIEsTypeValuePresentAMFUENGAPID:
+	case ngapType.InitialContextSetupRequestIEsPresentAMFUENGAPID:
 		if value.AMFUENGAPID == nil {
 			return binData, bitEnd, errors.New("InitialContextSetupRequestIEsTypeValue: AMFUENGAPID: NIL")
 		}
@@ -458,7 +458,7 @@ func InitialContextSetupRequestIEsTypeValue(value ngapType.InitialContextSetupRe
 		if err != nil {
 			return binData, bitEnd, errors.New("InitialContextSetupRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.InitialContextSetupRequestIEsTypeValuePresentRANUENGAPID:
+	case ngapType.InitialContextSetupRequestIEsPresentRANUENGAPID:
 		if value.RANUENGAPID == nil {
 			return binData, bitEnd, errors.New("InitialContextSetupRequestIEsTypeValue: RANUENGAPID: NIL")
 		}
@@ -466,7 +466,7 @@ func InitialContextSetupRequestIEsTypeValue(value ngapType.InitialContextSetupRe
 		if err != nil {
 			return binData, bitEnd, errors.New("InitialContextSetupRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.InitialContextSetupRequestIEsTypeValuePresentOldAMF:
+	case ngapType.InitialContextSetupRequestIEsPresentOldAMF:
 		if value.OldAMF == nil {
 			return binData, bitEnd, errors.New("InitialContextSetupRequestIEsTypeValue: OldAMF: NIL")
 		}
@@ -474,7 +474,7 @@ func InitialContextSetupRequestIEsTypeValue(value ngapType.InitialContextSetupRe
 		if err != nil {
 			return binData, bitEnd, errors.New("InitialContextSetupRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.InitialContextSetupRequestIEsTypeValuePresentUEAggregateMaximumBitRate:
+	case ngapType.InitialContextSetupRequestIEsPresentUEAggregateMaximumBitRate:
 		if value.UEAggregateMaximumBitRate == nil {
 			return binData, bitEnd, errors.New("InitialContextSetupRequestIEsTypeValue: UEAggregateMaximumBitRate: NIL")
 		}
@@ -482,7 +482,7 @@ func InitialContextSetupRequestIEsTypeValue(value ngapType.InitialContextSetupRe
 		if err != nil {
 			return binData, bitEnd, errors.New("InitialContextSetupRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.InitialContextSetupRequestIEsTypeValuePresentCoreNetworkAssistanceInformationForInactive:
+	case ngapType.InitialContextSetupRequestIEsPresentCoreNetworkAssistanceInformationForInactive:
 		if value.CoreNetworkAssistanceInformationForInactive == nil {
 			return binData, bitEnd, errors.New("InitialContextSetupRequestIEsTypeValue: CoreNetworkAssistanceInformationForInactive: NIL")
 		}
@@ -490,7 +490,7 @@ func InitialContextSetupRequestIEsTypeValue(value ngapType.InitialContextSetupRe
 		if err != nil {
 			return binData, bitEnd, errors.New("InitialContextSetupRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.InitialContextSetupRequestIEsTypeValuePresentGUAMI:
+	case ngapType.InitialContextSetupRequestIEsPresentGUAMI:
 		if value.GUAMI == nil {
 			return binData, bitEnd, errors.New("InitialContextSetupRequestIEsTypeValue: GUAMI: NIL")
 		}
@@ -498,7 +498,7 @@ func InitialContextSetupRequestIEsTypeValue(value ngapType.InitialContextSetupRe
 		if err != nil {
 			return binData, bitEnd, errors.New("InitialContextSetupRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.InitialContextSetupRequestIEsTypeValuePresentPDUSessionResourceSetupListCxtReq:
+	case ngapType.InitialContextSetupRequestIEsPresentPDUSessionResourceSetupListCxtReq:
 		if value.PDUSessionResourceSetupListCxtReq == nil {
 			return binData, bitEnd, errors.New("InitialContextSetupRequestIEsTypeValue: PDUSessionResourceSetupListCxtReq: NIL")
 		}
@@ -506,7 +506,7 @@ func InitialContextSetupRequestIEsTypeValue(value ngapType.InitialContextSetupRe
 		if err != nil {
 			return binData, bitEnd, errors.New("InitialContextSetupRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.InitialContextSetupRequestIEsTypeValuePresentAllowedNSSAI:
+	case ngapType.InitialContextSetupRequestIEsPresentAllowedNSSAI:
 		if value.AllowedNSSAI == nil {
 			return binData, bitEnd, errors.New("InitialContextSetupRequestIEsTypeValue: AllowedNSSAI: NIL")
 		}
@@ -514,7 +514,7 @@ func InitialContextSetupRequestIEsTypeValue(value ngapType.InitialContextSetupRe
 		if err != nil {
 			return binData, bitEnd, errors.New("InitialContextSetupRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.InitialContextSetupRequestIEsTypeValuePresentUESecurityCapabilities:
+	case ngapType.InitialContextSetupRequestIEsPresentUESecurityCapabilities:
 		if value.UESecurityCapabilities == nil {
 			return binData, bitEnd, errors.New("InitialContextSetupRequestIEsTypeValue: UESecurityCapabilities: NIL")
 		}
@@ -522,7 +522,7 @@ func InitialContextSetupRequestIEsTypeValue(value ngapType.InitialContextSetupRe
 		if err != nil {
 			return binData, bitEnd, errors.New("InitialContextSetupRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.InitialContextSetupRequestIEsTypeValuePresentSecurityKey:
+	case ngapType.InitialContextSetupRequestIEsPresentSecurityKey:
 		if value.SecurityKey == nil {
 			return binData, bitEnd, errors.New("InitialContextSetupRequestIEsTypeValue: SecurityKey: NIL")
 		}
@@ -530,7 +530,7 @@ func InitialContextSetupRequestIEsTypeValue(value ngapType.InitialContextSetupRe
 		if err != nil {
 			return binData, bitEnd, errors.New("InitialContextSetupRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.InitialContextSetupRequestIEsTypeValuePresentTraceActivation:
+	case ngapType.InitialContextSetupRequestIEsPresentTraceActivation:
 		if value.TraceActivation == nil {
 			return binData, bitEnd, errors.New("InitialContextSetupRequestIEsTypeValue: TraceActivation: NIL")
 		}
@@ -538,7 +538,7 @@ func InitialContextSetupRequestIEsTypeValue(value ngapType.InitialContextSetupRe
 		if err != nil {
 			return binData, bitEnd, errors.New("InitialContextSetupRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.InitialContextSetupRequestIEsTypeValuePresentMobilityRestrictionList:
+	case ngapType.InitialContextSetupRequestIEsPresentMobilityRestrictionList:
 		if value.MobilityRestrictionList == nil {
 			return binData, bitEnd, errors.New("InitialContextSetupRequestIEsTypeValue: MobilityRestrictionList: NIL")
 		}
@@ -546,7 +546,7 @@ func InitialContextSetupRequestIEsTypeValue(value ngapType.InitialContextSetupRe
 		if err != nil {
 			return binData, bitEnd, errors.New("InitialContextSetupRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.InitialContextSetupRequestIEsTypeValuePresentUERadioCapability:
+	case ngapType.InitialContextSetupRequestIEsPresentUERadioCapability:
 		if value.UERadioCapability == nil {
 			return binData, bitEnd, errors.New("InitialContextSetupRequestIEsTypeValue: UERadioCapability: NIL")
 		}
@@ -554,7 +554,7 @@ func InitialContextSetupRequestIEsTypeValue(value ngapType.InitialContextSetupRe
 		if err != nil {
 			return binData, bitEnd, errors.New("InitialContextSetupRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.InitialContextSetupRequestIEsTypeValuePresentIndexToRFSP:
+	case ngapType.InitialContextSetupRequestIEsPresentIndexToRFSP:
 		if value.IndexToRFSP == nil {
 			return binData, bitEnd, errors.New("InitialContextSetupRequestIEsTypeValue: IndexToRFSP: NIL")
 		}
@@ -562,7 +562,7 @@ func InitialContextSetupRequestIEsTypeValue(value ngapType.InitialContextSetupRe
 		if err != nil {
 			return binData, bitEnd, errors.New("InitialContextSetupRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.InitialContextSetupRequestIEsTypeValuePresentMaskedIMEISV:
+	case ngapType.InitialContextSetupRequestIEsPresentMaskedIMEISV:
 		if value.MaskedIMEISV == nil {
 			return binData, bitEnd, errors.New("InitialContextSetupRequestIEsTypeValue: MaskedIMEISV: NIL")
 		}
@@ -570,7 +570,7 @@ func InitialContextSetupRequestIEsTypeValue(value ngapType.InitialContextSetupRe
 		if err != nil {
 			return binData, bitEnd, errors.New("InitialContextSetupRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.InitialContextSetupRequestIEsTypeValuePresentNASPDU:
+	case ngapType.InitialContextSetupRequestIEsPresentNASPDU:
 		if value.NASPDU == nil {
 			return binData, bitEnd, errors.New("InitialContextSetupRequestIEsTypeValue: NASPDU: NIL")
 		}
@@ -578,7 +578,7 @@ func InitialContextSetupRequestIEsTypeValue(value ngapType.InitialContextSetupRe
 		if err != nil {
 			return binData, bitEnd, errors.New("InitialContextSetupRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.InitialContextSetupRequestIEsTypeValuePresentEmergencyFallbackIndicator:
+	case ngapType.InitialContextSetupRequestIEsPresentEmergencyFallbackIndicator:
 		if value.EmergencyFallbackIndicator == nil {
 			return binData, bitEnd, errors.New("InitialContextSetupRequestIEsTypeValue: EmergencyFallbackIndicator: NIL")
 		}
@@ -586,7 +586,7 @@ func InitialContextSetupRequestIEsTypeValue(value ngapType.InitialContextSetupRe
 		if err != nil {
 			return binData, bitEnd, errors.New("InitialContextSetupRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.InitialContextSetupRequestIEsTypeValuePresentRRCInactiveTransitionReportRequest:
+	case ngapType.InitialContextSetupRequestIEsPresentRRCInactiveTransitionReportRequest:
 		if value.RRCInactiveTransitionReportRequest == nil {
 			return binData, bitEnd, errors.New("InitialContextSetupRequestIEsTypeValue: RRCInactiveTransitionReportRequest: NIL")
 		}
@@ -594,7 +594,7 @@ func InitialContextSetupRequestIEsTypeValue(value ngapType.InitialContextSetupRe
 		if err != nil {
 			return binData, bitEnd, errors.New("InitialContextSetupRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.InitialContextSetupRequestIEsTypeValuePresentUERadioCapabilityForPaging:
+	case ngapType.InitialContextSetupRequestIEsPresentUERadioCapabilityForPaging:
 		if value.UERadioCapabilityForPaging == nil {
 			return binData, bitEnd, errors.New("InitialContextSetupRequestIEsTypeValue: UERadioCapabilityForPaging: NIL")
 		}
@@ -602,7 +602,7 @@ func InitialContextSetupRequestIEsTypeValue(value ngapType.InitialContextSetupRe
 		if err != nil {
 			return binData, bitEnd, errors.New("InitialContextSetupRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.InitialContextSetupRequestIEsTypeValuePresentRedirectionVoiceFallback:
+	case ngapType.InitialContextSetupRequestIEsPresentRedirectionVoiceFallback:
 		if value.RedirectionVoiceFallback == nil {
 			return binData, bitEnd, errors.New("InitialContextSetupRequestIEsTypeValue: RedirectionVoiceFallback: NIL")
 		}
@@ -610,7 +610,7 @@ func InitialContextSetupRequestIEsTypeValue(value ngapType.InitialContextSetupRe
 		if err != nil {
 			return binData, bitEnd, errors.New("InitialContextSetupRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.InitialContextSetupRequestIEsTypeValuePresentLocationReportingRequestType:
+	case ngapType.InitialContextSetupRequestIEsPresentLocationReportingRequestType:
 		if value.LocationReportingRequestType == nil {
 			return binData, bitEnd, errors.New("InitialContextSetupRequestIEsTypeValue: LocationReportingRequestType: NIL")
 		}
@@ -618,7 +618,7 @@ func InitialContextSetupRequestIEsTypeValue(value ngapType.InitialContextSetupRe
 		if err != nil {
 			return binData, bitEnd, errors.New("InitialContextSetupRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.InitialContextSetupRequestIEsTypeValuePresentCNAssistedRANTuning:
+	case ngapType.InitialContextSetupRequestIEsPresentCNAssistedRANTuning:
 		if value.CNAssistedRANTuning == nil {
 			return binData, bitEnd, errors.New("InitialContextSetupRequestIEsTypeValue: CNAssistedRANTuning: NIL")
 		}
@@ -626,7 +626,7 @@ func InitialContextSetupRequestIEsTypeValue(value ngapType.InitialContextSetupRe
 		if err != nil {
 			return binData, bitEnd, errors.New("InitialContextSetupRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.InitialContextSetupRequestIEsTypeValuePresentSRVCCOperationPossible:
+	case ngapType.InitialContextSetupRequestIEsPresentSRVCCOperationPossible:
 		if value.SRVCCOperationPossible == nil {
 			return binData, bitEnd, errors.New("InitialContextSetupRequestIEsTypeValue: SRVCCOperationPossible: NIL")
 		}
@@ -643,7 +643,7 @@ func InitialContextSetupRequestIEsTypeValue(value ngapType.InitialContextSetupRe
 func InitialContextSetupResponseIEsTypeValue(value ngapType.InitialContextSetupResponseIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.InitialContextSetupResponseIEsTypeValuePresentAMFUENGAPID:
+	case ngapType.InitialContextSetupResponseIEsPresentAMFUENGAPID:
 		if value.AMFUENGAPID == nil {
 			return binData, bitEnd, errors.New("InitialContextSetupResponseIEsTypeValue: AMFUENGAPID: NIL")
 		}
@@ -651,7 +651,7 @@ func InitialContextSetupResponseIEsTypeValue(value ngapType.InitialContextSetupR
 		if err != nil {
 			return binData, bitEnd, errors.New("InitialContextSetupResponseIEsTypeValue: " + err.Error())
 		}
-	case ngapType.InitialContextSetupResponseIEsTypeValuePresentRANUENGAPID:
+	case ngapType.InitialContextSetupResponseIEsPresentRANUENGAPID:
 		if value.RANUENGAPID == nil {
 			return binData, bitEnd, errors.New("InitialContextSetupResponseIEsTypeValue: RANUENGAPID: NIL")
 		}
@@ -659,7 +659,7 @@ func InitialContextSetupResponseIEsTypeValue(value ngapType.InitialContextSetupR
 		if err != nil {
 			return binData, bitEnd, errors.New("InitialContextSetupResponseIEsTypeValue: " + err.Error())
 		}
-	case ngapType.InitialContextSetupResponseIEsTypeValuePresentPDUSessionResourceSetupListCxtRes:
+	case ngapType.InitialContextSetupResponseIEsPresentPDUSessionResourceSetupListCxtRes:
 		if value.PDUSessionResourceSetupListCxtRes == nil {
 			return binData, bitEnd, errors.New("InitialContextSetupResponseIEsTypeValue: PDUSessionResourceSetupListCxtRes: NIL")
 		}
@@ -667,7 +667,7 @@ func InitialContextSetupResponseIEsTypeValue(value ngapType.InitialContextSetupR
 		if err != nil {
 			return binData, bitEnd, errors.New("InitialContextSetupResponseIEsTypeValue: " + err.Error())
 		}
-	case ngapType.InitialContextSetupResponseIEsTypeValuePresentPDUSessionResourceFailedToSetupListCxtRes:
+	case ngapType.InitialContextSetupResponseIEsPresentPDUSessionResourceFailedToSetupListCxtRes:
 		if value.PDUSessionResourceFailedToSetupListCxtRes == nil {
 			return binData, bitEnd, errors.New("InitialContextSetupResponseIEsTypeValue: PDUSessionResourceFailedToSetupListCxtRes: NIL")
 		}
@@ -675,7 +675,7 @@ func InitialContextSetupResponseIEsTypeValue(value ngapType.InitialContextSetupR
 		if err != nil {
 			return binData, bitEnd, errors.New("InitialContextSetupResponseIEsTypeValue: " + err.Error())
 		}
-	case ngapType.InitialContextSetupResponseIEsTypeValuePresentCriticalityDiagnostics:
+	case ngapType.InitialContextSetupResponseIEsPresentCriticalityDiagnostics:
 		if value.CriticalityDiagnostics == nil {
 			return binData, bitEnd, errors.New("InitialContextSetupResponseIEsTypeValue: CriticalityDiagnostics: NIL")
 		}
@@ -692,7 +692,7 @@ func InitialContextSetupResponseIEsTypeValue(value ngapType.InitialContextSetupR
 func InitialContextSetupFailureIEsTypeValue(value ngapType.InitialContextSetupFailureIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.InitialContextSetupFailureIEsTypeValuePresentAMFUENGAPID:
+	case ngapType.InitialContextSetupFailureIEsPresentAMFUENGAPID:
 		if value.AMFUENGAPID == nil {
 			return binData, bitEnd, errors.New("InitialContextSetupFailureIEsTypeValue: AMFUENGAPID: NIL")
 		}
@@ -700,7 +700,7 @@ func InitialContextSetupFailureIEsTypeValue(value ngapType.InitialContextSetupFa
 		if err != nil {
 			return binData, bitEnd, errors.New("InitialContextSetupFailureIEsTypeValue: " + err.Error())
 		}
-	case ngapType.InitialContextSetupFailureIEsTypeValuePresentRANUENGAPID:
+	case ngapType.InitialContextSetupFailureIEsPresentRANUENGAPID:
 		if value.RANUENGAPID == nil {
 			return binData, bitEnd, errors.New("InitialContextSetupFailureIEsTypeValue: RANUENGAPID: NIL")
 		}
@@ -708,7 +708,7 @@ func InitialContextSetupFailureIEsTypeValue(value ngapType.InitialContextSetupFa
 		if err != nil {
 			return binData, bitEnd, errors.New("InitialContextSetupFailureIEsTypeValue: " + err.Error())
 		}
-	case ngapType.InitialContextSetupFailureIEsTypeValuePresentPDUSessionResourceFailedToSetupListCxtFail:
+	case ngapType.InitialContextSetupFailureIEsPresentPDUSessionResourceFailedToSetupListCxtFail:
 		if value.PDUSessionResourceFailedToSetupListCxtFail == nil {
 			return binData, bitEnd, errors.New("InitialContextSetupFailureIEsTypeValue: PDUSessionResourceFailedToSetupListCxtFail: NIL")
 		}
@@ -716,7 +716,7 @@ func InitialContextSetupFailureIEsTypeValue(value ngapType.InitialContextSetupFa
 		if err != nil {
 			return binData, bitEnd, errors.New("InitialContextSetupFailureIEsTypeValue: " + err.Error())
 		}
-	case ngapType.InitialContextSetupFailureIEsTypeValuePresentCause:
+	case ngapType.InitialContextSetupFailureIEsPresentCause:
 		if value.Cause == nil {
 			return binData, bitEnd, errors.New("InitialContextSetupFailureIEsTypeValue: Cause: NIL")
 		}
@@ -724,7 +724,7 @@ func InitialContextSetupFailureIEsTypeValue(value ngapType.InitialContextSetupFa
 		if err != nil {
 			return binData, bitEnd, errors.New("InitialContextSetupFailureIEsTypeValue: " + err.Error())
 		}
-	case ngapType.InitialContextSetupFailureIEsTypeValuePresentCriticalityDiagnostics:
+	case ngapType.InitialContextSetupFailureIEsPresentCriticalityDiagnostics:
 		if value.CriticalityDiagnostics == nil {
 			return binData, bitEnd, errors.New("InitialContextSetupFailureIEsTypeValue: CriticalityDiagnostics: NIL")
 		}
@@ -741,7 +741,7 @@ func InitialContextSetupFailureIEsTypeValue(value ngapType.InitialContextSetupFa
 func UEContextReleaseRequestIEsTypeValue(value ngapType.UEContextReleaseRequestIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.UEContextReleaseRequestIEsTypeValuePresentAMFUENGAPID:
+	case ngapType.UEContextReleaseRequestIEsPresentAMFUENGAPID:
 		if value.AMFUENGAPID == nil {
 			return binData, bitEnd, errors.New("UEContextReleaseRequestIEsTypeValue: AMFUENGAPID: NIL")
 		}
@@ -749,7 +749,7 @@ func UEContextReleaseRequestIEsTypeValue(value ngapType.UEContextReleaseRequestI
 		if err != nil {
 			return binData, bitEnd, errors.New("UEContextReleaseRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.UEContextReleaseRequestIEsTypeValuePresentRANUENGAPID:
+	case ngapType.UEContextReleaseRequestIEsPresentRANUENGAPID:
 		if value.RANUENGAPID == nil {
 			return binData, bitEnd, errors.New("UEContextReleaseRequestIEsTypeValue: RANUENGAPID: NIL")
 		}
@@ -757,7 +757,7 @@ func UEContextReleaseRequestIEsTypeValue(value ngapType.UEContextReleaseRequestI
 		if err != nil {
 			return binData, bitEnd, errors.New("UEContextReleaseRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.UEContextReleaseRequestIEsTypeValuePresentPDUSessionResourceListCxtRelReq:
+	case ngapType.UEContextReleaseRequestIEsPresentPDUSessionResourceListCxtRelReq:
 		if value.PDUSessionResourceListCxtRelReq == nil {
 			return binData, bitEnd, errors.New("UEContextReleaseRequestIEsTypeValue: PDUSessionResourceListCxtRelReq: NIL")
 		}
@@ -765,7 +765,7 @@ func UEContextReleaseRequestIEsTypeValue(value ngapType.UEContextReleaseRequestI
 		if err != nil {
 			return binData, bitEnd, errors.New("UEContextReleaseRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.UEContextReleaseRequestIEsTypeValuePresentCause:
+	case ngapType.UEContextReleaseRequestIEsPresentCause:
 		if value.Cause == nil {
 			return binData, bitEnd, errors.New("UEContextReleaseRequestIEsTypeValue: Cause: NIL")
 		}
@@ -782,7 +782,7 @@ func UEContextReleaseRequestIEsTypeValue(value ngapType.UEContextReleaseRequestI
 func UEContextReleaseCommandIEsTypeValue(value ngapType.UEContextReleaseCommandIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.UEContextReleaseCommandIEsTypeValuePresentUENGAPIDs:
+	case ngapType.UEContextReleaseCommandIEsPresentUENGAPIDs:
 		if value.UENGAPIDs == nil {
 			return binData, bitEnd, errors.New("UEContextReleaseCommandIEsTypeValue: UENGAPIDs: NIL")
 		}
@@ -790,7 +790,7 @@ func UEContextReleaseCommandIEsTypeValue(value ngapType.UEContextReleaseCommandI
 		if err != nil {
 			return binData, bitEnd, errors.New("UEContextReleaseCommandIEsTypeValue: " + err.Error())
 		}
-	case ngapType.UEContextReleaseCommandIEsTypeValuePresentCause:
+	case ngapType.UEContextReleaseCommandIEsPresentCause:
 		if value.Cause == nil {
 			return binData, bitEnd, errors.New("UEContextReleaseCommandIEsTypeValue: Cause: NIL")
 		}
@@ -807,7 +807,7 @@ func UEContextReleaseCommandIEsTypeValue(value ngapType.UEContextReleaseCommandI
 func UEContextReleaseCompleteIEsTypeValue(value ngapType.UEContextReleaseCompleteIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.UEContextReleaseCompleteIEsTypeValuePresentAMFUENGAPID:
+	case ngapType.UEContextReleaseCompleteIEsPresentAMFUENGAPID:
 		if value.AMFUENGAPID == nil {
 			return binData, bitEnd, errors.New("UEContextReleaseCompleteIEsTypeValue: AMFUENGAPID: NIL")
 		}
@@ -815,7 +815,7 @@ func UEContextReleaseCompleteIEsTypeValue(value ngapType.UEContextReleaseComplet
 		if err != nil {
 			return binData, bitEnd, errors.New("UEContextReleaseCompleteIEsTypeValue: " + err.Error())
 		}
-	case ngapType.UEContextReleaseCompleteIEsTypeValuePresentRANUENGAPID:
+	case ngapType.UEContextReleaseCompleteIEsPresentRANUENGAPID:
 		if value.RANUENGAPID == nil {
 			return binData, bitEnd, errors.New("UEContextReleaseCompleteIEsTypeValue: RANUENGAPID: NIL")
 		}
@@ -823,7 +823,7 @@ func UEContextReleaseCompleteIEsTypeValue(value ngapType.UEContextReleaseComplet
 		if err != nil {
 			return binData, bitEnd, errors.New("UEContextReleaseCompleteIEsTypeValue: " + err.Error())
 		}
-	case ngapType.UEContextReleaseCompleteIEsTypeValuePresentUserLocationInformation:
+	case ngapType.UEContextReleaseCompleteIEsPresentUserLocationInformation:
 		if value.UserLocationInformation == nil {
 			return binData, bitEnd, errors.New("UEContextReleaseCompleteIEsTypeValue: UserLocationInformation: NIL")
 		}
@@ -831,7 +831,7 @@ func UEContextReleaseCompleteIEsTypeValue(value ngapType.UEContextReleaseComplet
 		if err != nil {
 			return binData, bitEnd, errors.New("UEContextReleaseCompleteIEsTypeValue: " + err.Error())
 		}
-	case ngapType.UEContextReleaseCompleteIEsTypeValuePresentInfoOnRecommendedCellsAndRANNodesForPaging:
+	case ngapType.UEContextReleaseCompleteIEsPresentInfoOnRecommendedCellsAndRANNodesForPaging:
 		if value.InfoOnRecommendedCellsAndRANNodesForPaging == nil {
 			return binData, bitEnd, errors.New("UEContextReleaseCompleteIEsTypeValue: InfoOnRecommendedCellsAndRANNodesForPaging: NIL")
 		}
@@ -839,7 +839,7 @@ func UEContextReleaseCompleteIEsTypeValue(value ngapType.UEContextReleaseComplet
 		if err != nil {
 			return binData, bitEnd, errors.New("UEContextReleaseCompleteIEsTypeValue: " + err.Error())
 		}
-	case ngapType.UEContextReleaseCompleteIEsTypeValuePresentPDUSessionResourceListCxtRelCpl:
+	case ngapType.UEContextReleaseCompleteIEsPresentPDUSessionResourceListCxtRelCpl:
 		if value.PDUSessionResourceListCxtRelCpl == nil {
 			return binData, bitEnd, errors.New("UEContextReleaseCompleteIEsTypeValue: PDUSessionResourceListCxtRelCpl: NIL")
 		}
@@ -847,7 +847,7 @@ func UEContextReleaseCompleteIEsTypeValue(value ngapType.UEContextReleaseComplet
 		if err != nil {
 			return binData, bitEnd, errors.New("UEContextReleaseCompleteIEsTypeValue: " + err.Error())
 		}
-	case ngapType.UEContextReleaseCompleteIEsTypeValuePresentCriticalityDiagnostics:
+	case ngapType.UEContextReleaseCompleteIEsPresentCriticalityDiagnostics:
 		if value.CriticalityDiagnostics == nil {
 			return binData, bitEnd, errors.New("UEContextReleaseCompleteIEsTypeValue: CriticalityDiagnostics: NIL")
 		}
@@ -864,7 +864,7 @@ func UEContextReleaseCompleteIEsTypeValue(value ngapType.UEContextReleaseComplet
 func UEContextModificationRequestIEsTypeValue(value ngapType.UEContextModificationRequestIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.UEContextModificationRequestIEsTypeValuePresentAMFUENGAPID:
+	case ngapType.UEContextModificationRequestIEsPresentAMFUENGAPID:
 		if value.AMFUENGAPID == nil {
 			return binData, bitEnd, errors.New("UEContextModificationRequestIEsTypeValue: AMFUENGAPID: NIL")
 		}
@@ -872,7 +872,7 @@ func UEContextModificationRequestIEsTypeValue(value ngapType.UEContextModificati
 		if err != nil {
 			return binData, bitEnd, errors.New("UEContextModificationRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.UEContextModificationRequestIEsTypeValuePresentRANUENGAPID:
+	case ngapType.UEContextModificationRequestIEsPresentRANUENGAPID:
 		if value.RANUENGAPID == nil {
 			return binData, bitEnd, errors.New("UEContextModificationRequestIEsTypeValue: RANUENGAPID: NIL")
 		}
@@ -880,7 +880,7 @@ func UEContextModificationRequestIEsTypeValue(value ngapType.UEContextModificati
 		if err != nil {
 			return binData, bitEnd, errors.New("UEContextModificationRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.UEContextModificationRequestIEsTypeValuePresentRANPagingPriority:
+	case ngapType.UEContextModificationRequestIEsPresentRANPagingPriority:
 		if value.RANPagingPriority == nil {
 			return binData, bitEnd, errors.New("UEContextModificationRequestIEsTypeValue: RANPagingPriority: NIL")
 		}
@@ -888,7 +888,7 @@ func UEContextModificationRequestIEsTypeValue(value ngapType.UEContextModificati
 		if err != nil {
 			return binData, bitEnd, errors.New("UEContextModificationRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.UEContextModificationRequestIEsTypeValuePresentSecurityKey:
+	case ngapType.UEContextModificationRequestIEsPresentSecurityKey:
 		if value.SecurityKey == nil {
 			return binData, bitEnd, errors.New("UEContextModificationRequestIEsTypeValue: SecurityKey: NIL")
 		}
@@ -896,7 +896,7 @@ func UEContextModificationRequestIEsTypeValue(value ngapType.UEContextModificati
 		if err != nil {
 			return binData, bitEnd, errors.New("UEContextModificationRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.UEContextModificationRequestIEsTypeValuePresentIndexToRFSP:
+	case ngapType.UEContextModificationRequestIEsPresentIndexToRFSP:
 		if value.IndexToRFSP == nil {
 			return binData, bitEnd, errors.New("UEContextModificationRequestIEsTypeValue: IndexToRFSP: NIL")
 		}
@@ -904,7 +904,7 @@ func UEContextModificationRequestIEsTypeValue(value ngapType.UEContextModificati
 		if err != nil {
 			return binData, bitEnd, errors.New("UEContextModificationRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.UEContextModificationRequestIEsTypeValuePresentUEAggregateMaximumBitRate:
+	case ngapType.UEContextModificationRequestIEsPresentUEAggregateMaximumBitRate:
 		if value.UEAggregateMaximumBitRate == nil {
 			return binData, bitEnd, errors.New("UEContextModificationRequestIEsTypeValue: UEAggregateMaximumBitRate: NIL")
 		}
@@ -912,7 +912,7 @@ func UEContextModificationRequestIEsTypeValue(value ngapType.UEContextModificati
 		if err != nil {
 			return binData, bitEnd, errors.New("UEContextModificationRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.UEContextModificationRequestIEsTypeValuePresentUESecurityCapabilities:
+	case ngapType.UEContextModificationRequestIEsPresentUESecurityCapabilities:
 		if value.UESecurityCapabilities == nil {
 			return binData, bitEnd, errors.New("UEContextModificationRequestIEsTypeValue: UESecurityCapabilities: NIL")
 		}
@@ -920,7 +920,7 @@ func UEContextModificationRequestIEsTypeValue(value ngapType.UEContextModificati
 		if err != nil {
 			return binData, bitEnd, errors.New("UEContextModificationRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.UEContextModificationRequestIEsTypeValuePresentCoreNetworkAssistanceInformationForInactive:
+	case ngapType.UEContextModificationRequestIEsPresentCoreNetworkAssistanceInformationForInactive:
 		if value.CoreNetworkAssistanceInformationForInactive == nil {
 			return binData, bitEnd, errors.New("UEContextModificationRequestIEsTypeValue: CoreNetworkAssistanceInformationForInactive: NIL")
 		}
@@ -928,7 +928,7 @@ func UEContextModificationRequestIEsTypeValue(value ngapType.UEContextModificati
 		if err != nil {
 			return binData, bitEnd, errors.New("UEContextModificationRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.UEContextModificationRequestIEsTypeValuePresentEmergencyFallbackIndicator:
+	case ngapType.UEContextModificationRequestIEsPresentEmergencyFallbackIndicator:
 		if value.EmergencyFallbackIndicator == nil {
 			return binData, bitEnd, errors.New("UEContextModificationRequestIEsTypeValue: EmergencyFallbackIndicator: NIL")
 		}
@@ -936,7 +936,7 @@ func UEContextModificationRequestIEsTypeValue(value ngapType.UEContextModificati
 		if err != nil {
 			return binData, bitEnd, errors.New("UEContextModificationRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.UEContextModificationRequestIEsTypeValuePresentNewAMFUENGAPID:
+	case ngapType.UEContextModificationRequestIEsPresentNewAMFUENGAPID:
 		if value.NewAMFUENGAPID == nil {
 			return binData, bitEnd, errors.New("UEContextModificationRequestIEsTypeValue: NewAMFUENGAPID: NIL")
 		}
@@ -944,7 +944,7 @@ func UEContextModificationRequestIEsTypeValue(value ngapType.UEContextModificati
 		if err != nil {
 			return binData, bitEnd, errors.New("UEContextModificationRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.UEContextModificationRequestIEsTypeValuePresentRRCInactiveTransitionReportRequest:
+	case ngapType.UEContextModificationRequestIEsPresentRRCInactiveTransitionReportRequest:
 		if value.RRCInactiveTransitionReportRequest == nil {
 			return binData, bitEnd, errors.New("UEContextModificationRequestIEsTypeValue: RRCInactiveTransitionReportRequest: NIL")
 		}
@@ -952,7 +952,7 @@ func UEContextModificationRequestIEsTypeValue(value ngapType.UEContextModificati
 		if err != nil {
 			return binData, bitEnd, errors.New("UEContextModificationRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.UEContextModificationRequestIEsTypeValuePresentNewGUAMI:
+	case ngapType.UEContextModificationRequestIEsPresentNewGUAMI:
 		if value.NewGUAMI == nil {
 			return binData, bitEnd, errors.New("UEContextModificationRequestIEsTypeValue: NewGUAMI: NIL")
 		}
@@ -960,7 +960,7 @@ func UEContextModificationRequestIEsTypeValue(value ngapType.UEContextModificati
 		if err != nil {
 			return binData, bitEnd, errors.New("UEContextModificationRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.UEContextModificationRequestIEsTypeValuePresentCNAssistedRANTuning:
+	case ngapType.UEContextModificationRequestIEsPresentCNAssistedRANTuning:
 		if value.CNAssistedRANTuning == nil {
 			return binData, bitEnd, errors.New("UEContextModificationRequestIEsTypeValue: CNAssistedRANTuning: NIL")
 		}
@@ -968,7 +968,7 @@ func UEContextModificationRequestIEsTypeValue(value ngapType.UEContextModificati
 		if err != nil {
 			return binData, bitEnd, errors.New("UEContextModificationRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.UEContextModificationRequestIEsTypeValuePresentSRVCCOperationPossible:
+	case ngapType.UEContextModificationRequestIEsPresentSRVCCOperationPossible:
 		if value.SRVCCOperationPossible == nil {
 			return binData, bitEnd, errors.New("UEContextModificationRequestIEsTypeValue: SRVCCOperationPossible: NIL")
 		}
@@ -985,7 +985,7 @@ func UEContextModificationRequestIEsTypeValue(value ngapType.UEContextModificati
 func UEContextModificationResponseIEsTypeValue(value ngapType.UEContextModificationResponseIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.UEContextModificationResponseIEsTypeValuePresentAMFUENGAPID:
+	case ngapType.UEContextModificationResponseIEsPresentAMFUENGAPID:
 		if value.AMFUENGAPID == nil {
 			return binData, bitEnd, errors.New("UEContextModificationResponseIEsTypeValue: AMFUENGAPID: NIL")
 		}
@@ -993,7 +993,7 @@ func UEContextModificationResponseIEsTypeValue(value ngapType.UEContextModificat
 		if err != nil {
 			return binData, bitEnd, errors.New("UEContextModificationResponseIEsTypeValue: " + err.Error())
 		}
-	case ngapType.UEContextModificationResponseIEsTypeValuePresentRANUENGAPID:
+	case ngapType.UEContextModificationResponseIEsPresentRANUENGAPID:
 		if value.RANUENGAPID == nil {
 			return binData, bitEnd, errors.New("UEContextModificationResponseIEsTypeValue: RANUENGAPID: NIL")
 		}
@@ -1001,7 +1001,7 @@ func UEContextModificationResponseIEsTypeValue(value ngapType.UEContextModificat
 		if err != nil {
 			return binData, bitEnd, errors.New("UEContextModificationResponseIEsTypeValue: " + err.Error())
 		}
-	case ngapType.UEContextModificationResponseIEsTypeValuePresentRRCState:
+	case ngapType.UEContextModificationResponseIEsPresentRRCState:
 		if value.RRCState == nil {
 			return binData, bitEnd, errors.New("UEContextModificationResponseIEsTypeValue: RRCState: NIL")
 		}
@@ -1009,7 +1009,7 @@ func UEContextModificationResponseIEsTypeValue(value ngapType.UEContextModificat
 		if err != nil {
 			return binData, bitEnd, errors.New("UEContextModificationResponseIEsTypeValue: " + err.Error())
 		}
-	case ngapType.UEContextModificationResponseIEsTypeValuePresentUserLocationInformation:
+	case ngapType.UEContextModificationResponseIEsPresentUserLocationInformation:
 		if value.UserLocationInformation == nil {
 			return binData, bitEnd, errors.New("UEContextModificationResponseIEsTypeValue: UserLocationInformation: NIL")
 		}
@@ -1017,7 +1017,7 @@ func UEContextModificationResponseIEsTypeValue(value ngapType.UEContextModificat
 		if err != nil {
 			return binData, bitEnd, errors.New("UEContextModificationResponseIEsTypeValue: " + err.Error())
 		}
-	case ngapType.UEContextModificationResponseIEsTypeValuePresentCriticalityDiagnostics:
+	case ngapType.UEContextModificationResponseIEsPresentCriticalityDiagnostics:
 		if value.CriticalityDiagnostics == nil {
 			return binData, bitEnd, errors.New("UEContextModificationResponseIEsTypeValue: CriticalityDiagnostics: NIL")
 		}
@@ -1034,7 +1034,7 @@ func UEContextModificationResponseIEsTypeValue(value ngapType.UEContextModificat
 func UEContextModificationFailureIEsTypeValue(value ngapType.UEContextModificationFailureIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.UEContextModificationFailureIEsTypeValuePresentAMFUENGAPID:
+	case ngapType.UEContextModificationFailureIEsPresentAMFUENGAPID:
 		if value.AMFUENGAPID == nil {
 			return binData, bitEnd, errors.New("UEContextModificationFailureIEsTypeValue: AMFUENGAPID: NIL")
 		}
@@ -1042,7 +1042,7 @@ func UEContextModificationFailureIEsTypeValue(value ngapType.UEContextModificati
 		if err != nil {
 			return binData, bitEnd, errors.New("UEContextModificationFailureIEsTypeValue: " + err.Error())
 		}
-	case ngapType.UEContextModificationFailureIEsTypeValuePresentRANUENGAPID:
+	case ngapType.UEContextModificationFailureIEsPresentRANUENGAPID:
 		if value.RANUENGAPID == nil {
 			return binData, bitEnd, errors.New("UEContextModificationFailureIEsTypeValue: RANUENGAPID: NIL")
 		}
@@ -1050,7 +1050,7 @@ func UEContextModificationFailureIEsTypeValue(value ngapType.UEContextModificati
 		if err != nil {
 			return binData, bitEnd, errors.New("UEContextModificationFailureIEsTypeValue: " + err.Error())
 		}
-	case ngapType.UEContextModificationFailureIEsTypeValuePresentCause:
+	case ngapType.UEContextModificationFailureIEsPresentCause:
 		if value.Cause == nil {
 			return binData, bitEnd, errors.New("UEContextModificationFailureIEsTypeValue: Cause: NIL")
 		}
@@ -1058,7 +1058,7 @@ func UEContextModificationFailureIEsTypeValue(value ngapType.UEContextModificati
 		if err != nil {
 			return binData, bitEnd, errors.New("UEContextModificationFailureIEsTypeValue: " + err.Error())
 		}
-	case ngapType.UEContextModificationFailureIEsTypeValuePresentCriticalityDiagnostics:
+	case ngapType.UEContextModificationFailureIEsPresentCriticalityDiagnostics:
 		if value.CriticalityDiagnostics == nil {
 			return binData, bitEnd, errors.New("UEContextModificationFailureIEsTypeValue: CriticalityDiagnostics: NIL")
 		}
@@ -1075,7 +1075,7 @@ func UEContextModificationFailureIEsTypeValue(value ngapType.UEContextModificati
 func RRCInactiveTransitionReportIEsTypeValue(value ngapType.RRCInactiveTransitionReportIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.RRCInactiveTransitionReportIEsTypeValuePresentAMFUENGAPID:
+	case ngapType.RRCInactiveTransitionReportIEsPresentAMFUENGAPID:
 		if value.AMFUENGAPID == nil {
 			return binData, bitEnd, errors.New("RRCInactiveTransitionReportIEsTypeValue: AMFUENGAPID: NIL")
 		}
@@ -1083,7 +1083,7 @@ func RRCInactiveTransitionReportIEsTypeValue(value ngapType.RRCInactiveTransitio
 		if err != nil {
 			return binData, bitEnd, errors.New("RRCInactiveTransitionReportIEsTypeValue: " + err.Error())
 		}
-	case ngapType.RRCInactiveTransitionReportIEsTypeValuePresentRANUENGAPID:
+	case ngapType.RRCInactiveTransitionReportIEsPresentRANUENGAPID:
 		if value.RANUENGAPID == nil {
 			return binData, bitEnd, errors.New("RRCInactiveTransitionReportIEsTypeValue: RANUENGAPID: NIL")
 		}
@@ -1091,7 +1091,7 @@ func RRCInactiveTransitionReportIEsTypeValue(value ngapType.RRCInactiveTransitio
 		if err != nil {
 			return binData, bitEnd, errors.New("RRCInactiveTransitionReportIEsTypeValue: " + err.Error())
 		}
-	case ngapType.RRCInactiveTransitionReportIEsTypeValuePresentRRCState:
+	case ngapType.RRCInactiveTransitionReportIEsPresentRRCState:
 		if value.RRCState == nil {
 			return binData, bitEnd, errors.New("RRCInactiveTransitionReportIEsTypeValue: RRCState: NIL")
 		}
@@ -1099,7 +1099,7 @@ func RRCInactiveTransitionReportIEsTypeValue(value ngapType.RRCInactiveTransitio
 		if err != nil {
 			return binData, bitEnd, errors.New("RRCInactiveTransitionReportIEsTypeValue: " + err.Error())
 		}
-	case ngapType.RRCInactiveTransitionReportIEsTypeValuePresentUserLocationInformation:
+	case ngapType.RRCInactiveTransitionReportIEsPresentUserLocationInformation:
 		if value.UserLocationInformation == nil {
 			return binData, bitEnd, errors.New("RRCInactiveTransitionReportIEsTypeValue: UserLocationInformation: NIL")
 		}
@@ -1116,7 +1116,7 @@ func RRCInactiveTransitionReportIEsTypeValue(value ngapType.RRCInactiveTransitio
 func HandoverRequiredIEsTypeValue(value ngapType.HandoverRequiredIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.HandoverRequiredIEsTypeValuePresentAMFUENGAPID:
+	case ngapType.HandoverRequiredIEsPresentAMFUENGAPID:
 		if value.AMFUENGAPID == nil {
 			return binData, bitEnd, errors.New("HandoverRequiredIEsTypeValue: AMFUENGAPID: NIL")
 		}
@@ -1124,7 +1124,7 @@ func HandoverRequiredIEsTypeValue(value ngapType.HandoverRequiredIEsTypeValue, b
 		if err != nil {
 			return binData, bitEnd, errors.New("HandoverRequiredIEsTypeValue: " + err.Error())
 		}
-	case ngapType.HandoverRequiredIEsTypeValuePresentRANUENGAPID:
+	case ngapType.HandoverRequiredIEsPresentRANUENGAPID:
 		if value.RANUENGAPID == nil {
 			return binData, bitEnd, errors.New("HandoverRequiredIEsTypeValue: RANUENGAPID: NIL")
 		}
@@ -1132,7 +1132,7 @@ func HandoverRequiredIEsTypeValue(value ngapType.HandoverRequiredIEsTypeValue, b
 		if err != nil {
 			return binData, bitEnd, errors.New("HandoverRequiredIEsTypeValue: " + err.Error())
 		}
-	case ngapType.HandoverRequiredIEsTypeValuePresentHandoverType:
+	case ngapType.HandoverRequiredIEsPresentHandoverType:
 		if value.HandoverType == nil {
 			return binData, bitEnd, errors.New("HandoverRequiredIEsTypeValue: HandoverType: NIL")
 		}
@@ -1140,7 +1140,7 @@ func HandoverRequiredIEsTypeValue(value ngapType.HandoverRequiredIEsTypeValue, b
 		if err != nil {
 			return binData, bitEnd, errors.New("HandoverRequiredIEsTypeValue: " + err.Error())
 		}
-	case ngapType.HandoverRequiredIEsTypeValuePresentCause:
+	case ngapType.HandoverRequiredIEsPresentCause:
 		if value.Cause == nil {
 			return binData, bitEnd, errors.New("HandoverRequiredIEsTypeValue: Cause: NIL")
 		}
@@ -1148,7 +1148,7 @@ func HandoverRequiredIEsTypeValue(value ngapType.HandoverRequiredIEsTypeValue, b
 		if err != nil {
 			return binData, bitEnd, errors.New("HandoverRequiredIEsTypeValue: " + err.Error())
 		}
-	case ngapType.HandoverRequiredIEsTypeValuePresentTargetID:
+	case ngapType.HandoverRequiredIEsPresentTargetID:
 		if value.TargetID == nil {
 			return binData, bitEnd, errors.New("HandoverRequiredIEsTypeValue: TargetID: NIL")
 		}
@@ -1156,7 +1156,7 @@ func HandoverRequiredIEsTypeValue(value ngapType.HandoverRequiredIEsTypeValue, b
 		if err != nil {
 			return binData, bitEnd, errors.New("HandoverRequiredIEsTypeValue: " + err.Error())
 		}
-	case ngapType.HandoverRequiredIEsTypeValuePresentDirectForwardingPathAvailability:
+	case ngapType.HandoverRequiredIEsPresentDirectForwardingPathAvailability:
 		if value.DirectForwardingPathAvailability == nil {
 			return binData, bitEnd, errors.New("HandoverRequiredIEsTypeValue: DirectForwardingPathAvailability: NIL")
 		}
@@ -1164,7 +1164,7 @@ func HandoverRequiredIEsTypeValue(value ngapType.HandoverRequiredIEsTypeValue, b
 		if err != nil {
 			return binData, bitEnd, errors.New("HandoverRequiredIEsTypeValue: " + err.Error())
 		}
-	case ngapType.HandoverRequiredIEsTypeValuePresentPDUSessionResourceListHORqd:
+	case ngapType.HandoverRequiredIEsPresentPDUSessionResourceListHORqd:
 		if value.PDUSessionResourceListHORqd == nil {
 			return binData, bitEnd, errors.New("HandoverRequiredIEsTypeValue: PDUSessionResourceListHORqd: NIL")
 		}
@@ -1172,7 +1172,7 @@ func HandoverRequiredIEsTypeValue(value ngapType.HandoverRequiredIEsTypeValue, b
 		if err != nil {
 			return binData, bitEnd, errors.New("HandoverRequiredIEsTypeValue: " + err.Error())
 		}
-	case ngapType.HandoverRequiredIEsTypeValuePresentSourceToTargetTransparentContainer:
+	case ngapType.HandoverRequiredIEsPresentSourceToTargetTransparentContainer:
 		if value.SourceToTargetTransparentContainer == nil {
 			return binData, bitEnd, errors.New("HandoverRequiredIEsTypeValue: SourceToTargetTransparentContainer: NIL")
 		}
@@ -1189,7 +1189,7 @@ func HandoverRequiredIEsTypeValue(value ngapType.HandoverRequiredIEsTypeValue, b
 func HandoverCommandIEsTypeValue(value ngapType.HandoverCommandIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.HandoverCommandIEsTypeValuePresentAMFUENGAPID:
+	case ngapType.HandoverCommandIEsPresentAMFUENGAPID:
 		if value.AMFUENGAPID == nil {
 			return binData, bitEnd, errors.New("HandoverCommandIEsTypeValue: AMFUENGAPID: NIL")
 		}
@@ -1197,7 +1197,7 @@ func HandoverCommandIEsTypeValue(value ngapType.HandoverCommandIEsTypeValue, bin
 		if err != nil {
 			return binData, bitEnd, errors.New("HandoverCommandIEsTypeValue: " + err.Error())
 		}
-	case ngapType.HandoverCommandIEsTypeValuePresentRANUENGAPID:
+	case ngapType.HandoverCommandIEsPresentRANUENGAPID:
 		if value.RANUENGAPID == nil {
 			return binData, bitEnd, errors.New("HandoverCommandIEsTypeValue: RANUENGAPID: NIL")
 		}
@@ -1205,7 +1205,7 @@ func HandoverCommandIEsTypeValue(value ngapType.HandoverCommandIEsTypeValue, bin
 		if err != nil {
 			return binData, bitEnd, errors.New("HandoverCommandIEsTypeValue: " + err.Error())
 		}
-	case ngapType.HandoverCommandIEsTypeValuePresentHandoverType:
+	case ngapType.HandoverCommandIEsPresentHandoverType:
 		if value.HandoverType == nil {
 			return binData, bitEnd, errors.New("HandoverCommandIEsTypeValue: HandoverType: NIL")
 		}
@@ -1213,7 +1213,7 @@ func HandoverCommandIEsTypeValue(value ngapType.HandoverCommandIEsTypeValue, bin
 		if err != nil {
 			return binData, bitEnd, errors.New("HandoverCommandIEsTypeValue: " + err.Error())
 		}
-	case ngapType.HandoverCommandIEsTypeValuePresentNASSecurityParametersFromNGRAN:
+	case ngapType.HandoverCommandIEsPresentNASSecurityParametersFromNGRAN:
 		if value.NASSecurityParametersFromNGRAN == nil {
 			return binData, bitEnd, errors.New("HandoverCommandIEsTypeValue: NASSecurityParametersFromNGRAN: NIL")
 		}
@@ -1221,7 +1221,7 @@ func HandoverCommandIEsTypeValue(value ngapType.HandoverCommandIEsTypeValue, bin
 		if err != nil {
 			return binData, bitEnd, errors.New("HandoverCommandIEsTypeValue: " + err.Error())
 		}
-	case ngapType.HandoverCommandIEsTypeValuePresentPDUSessionResourceHandoverList:
+	case ngapType.HandoverCommandIEsPresentPDUSessionResourceHandoverList:
 		if value.PDUSessionResourceHandoverList == nil {
 			return binData, bitEnd, errors.New("HandoverCommandIEsTypeValue: PDUSessionResourceHandoverList: NIL")
 		}
@@ -1229,7 +1229,7 @@ func HandoverCommandIEsTypeValue(value ngapType.HandoverCommandIEsTypeValue, bin
 		if err != nil {
 			return binData, bitEnd, errors.New("HandoverCommandIEsTypeValue: " + err.Error())
 		}
-	case ngapType.HandoverCommandIEsTypeValuePresentPDUSessionResourceToReleaseListHOCmd:
+	case ngapType.HandoverCommandIEsPresentPDUSessionResourceToReleaseListHOCmd:
 		if value.PDUSessionResourceToReleaseListHOCmd == nil {
 			return binData, bitEnd, errors.New("HandoverCommandIEsTypeValue: PDUSessionResourceToReleaseListHOCmd: NIL")
 		}
@@ -1237,7 +1237,7 @@ func HandoverCommandIEsTypeValue(value ngapType.HandoverCommandIEsTypeValue, bin
 		if err != nil {
 			return binData, bitEnd, errors.New("HandoverCommandIEsTypeValue: " + err.Error())
 		}
-	case ngapType.HandoverCommandIEsTypeValuePresentTargetToSourceTransparentContainer:
+	case ngapType.HandoverCommandIEsPresentTargetToSourceTransparentContainer:
 		if value.TargetToSourceTransparentContainer == nil {
 			return binData, bitEnd, errors.New("HandoverCommandIEsTypeValue: TargetToSourceTransparentContainer: NIL")
 		}
@@ -1245,7 +1245,7 @@ func HandoverCommandIEsTypeValue(value ngapType.HandoverCommandIEsTypeValue, bin
 		if err != nil {
 			return binData, bitEnd, errors.New("HandoverCommandIEsTypeValue: " + err.Error())
 		}
-	case ngapType.HandoverCommandIEsTypeValuePresentCriticalityDiagnostics:
+	case ngapType.HandoverCommandIEsPresentCriticalityDiagnostics:
 		if value.CriticalityDiagnostics == nil {
 			return binData, bitEnd, errors.New("HandoverCommandIEsTypeValue: CriticalityDiagnostics: NIL")
 		}
@@ -1262,7 +1262,7 @@ func HandoverCommandIEsTypeValue(value ngapType.HandoverCommandIEsTypeValue, bin
 func HandoverPreparationFailureIEsTypeValue(value ngapType.HandoverPreparationFailureIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.HandoverPreparationFailureIEsTypeValuePresentAMFUENGAPID:
+	case ngapType.HandoverPreparationFailureIEsPresentAMFUENGAPID:
 		if value.AMFUENGAPID == nil {
 			return binData, bitEnd, errors.New("HandoverPreparationFailureIEsTypeValue: AMFUENGAPID: NIL")
 		}
@@ -1270,7 +1270,7 @@ func HandoverPreparationFailureIEsTypeValue(value ngapType.HandoverPreparationFa
 		if err != nil {
 			return binData, bitEnd, errors.New("HandoverPreparationFailureIEsTypeValue: " + err.Error())
 		}
-	case ngapType.HandoverPreparationFailureIEsTypeValuePresentRANUENGAPID:
+	case ngapType.HandoverPreparationFailureIEsPresentRANUENGAPID:
 		if value.RANUENGAPID == nil {
 			return binData, bitEnd, errors.New("HandoverPreparationFailureIEsTypeValue: RANUENGAPID: NIL")
 		}
@@ -1278,7 +1278,7 @@ func HandoverPreparationFailureIEsTypeValue(value ngapType.HandoverPreparationFa
 		if err != nil {
 			return binData, bitEnd, errors.New("HandoverPreparationFailureIEsTypeValue: " + err.Error())
 		}
-	case ngapType.HandoverPreparationFailureIEsTypeValuePresentCause:
+	case ngapType.HandoverPreparationFailureIEsPresentCause:
 		if value.Cause == nil {
 			return binData, bitEnd, errors.New("HandoverPreparationFailureIEsTypeValue: Cause: NIL")
 		}
@@ -1286,7 +1286,7 @@ func HandoverPreparationFailureIEsTypeValue(value ngapType.HandoverPreparationFa
 		if err != nil {
 			return binData, bitEnd, errors.New("HandoverPreparationFailureIEsTypeValue: " + err.Error())
 		}
-	case ngapType.HandoverPreparationFailureIEsTypeValuePresentCriticalityDiagnostics:
+	case ngapType.HandoverPreparationFailureIEsPresentCriticalityDiagnostics:
 		if value.CriticalityDiagnostics == nil {
 			return binData, bitEnd, errors.New("HandoverPreparationFailureIEsTypeValue: CriticalityDiagnostics: NIL")
 		}
@@ -1303,7 +1303,7 @@ func HandoverPreparationFailureIEsTypeValue(value ngapType.HandoverPreparationFa
 func HandoverRequestIEsTypeValue(value ngapType.HandoverRequestIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.HandoverRequestIEsTypeValuePresentAMFUENGAPID:
+	case ngapType.HandoverRequestIEsPresentAMFUENGAPID:
 		if value.AMFUENGAPID == nil {
 			return binData, bitEnd, errors.New("HandoverRequestIEsTypeValue: AMFUENGAPID: NIL")
 		}
@@ -1311,7 +1311,7 @@ func HandoverRequestIEsTypeValue(value ngapType.HandoverRequestIEsTypeValue, bin
 		if err != nil {
 			return binData, bitEnd, errors.New("HandoverRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.HandoverRequestIEsTypeValuePresentHandoverType:
+	case ngapType.HandoverRequestIEsPresentHandoverType:
 		if value.HandoverType == nil {
 			return binData, bitEnd, errors.New("HandoverRequestIEsTypeValue: HandoverType: NIL")
 		}
@@ -1319,7 +1319,7 @@ func HandoverRequestIEsTypeValue(value ngapType.HandoverRequestIEsTypeValue, bin
 		if err != nil {
 			return binData, bitEnd, errors.New("HandoverRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.HandoverRequestIEsTypeValuePresentCause:
+	case ngapType.HandoverRequestIEsPresentCause:
 		if value.Cause == nil {
 			return binData, bitEnd, errors.New("HandoverRequestIEsTypeValue: Cause: NIL")
 		}
@@ -1327,7 +1327,7 @@ func HandoverRequestIEsTypeValue(value ngapType.HandoverRequestIEsTypeValue, bin
 		if err != nil {
 			return binData, bitEnd, errors.New("HandoverRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.HandoverRequestIEsTypeValuePresentUEAggregateMaximumBitRate:
+	case ngapType.HandoverRequestIEsPresentUEAggregateMaximumBitRate:
 		if value.UEAggregateMaximumBitRate == nil {
 			return binData, bitEnd, errors.New("HandoverRequestIEsTypeValue: UEAggregateMaximumBitRate: NIL")
 		}
@@ -1335,7 +1335,7 @@ func HandoverRequestIEsTypeValue(value ngapType.HandoverRequestIEsTypeValue, bin
 		if err != nil {
 			return binData, bitEnd, errors.New("HandoverRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.HandoverRequestIEsTypeValuePresentCoreNetworkAssistanceInformationForInactive:
+	case ngapType.HandoverRequestIEsPresentCoreNetworkAssistanceInformationForInactive:
 		if value.CoreNetworkAssistanceInformationForInactive == nil {
 			return binData, bitEnd, errors.New("HandoverRequestIEsTypeValue: CoreNetworkAssistanceInformationForInactive: NIL")
 		}
@@ -1343,7 +1343,7 @@ func HandoverRequestIEsTypeValue(value ngapType.HandoverRequestIEsTypeValue, bin
 		if err != nil {
 			return binData, bitEnd, errors.New("HandoverRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.HandoverRequestIEsTypeValuePresentUESecurityCapabilities:
+	case ngapType.HandoverRequestIEsPresentUESecurityCapabilities:
 		if value.UESecurityCapabilities == nil {
 			return binData, bitEnd, errors.New("HandoverRequestIEsTypeValue: UESecurityCapabilities: NIL")
 		}
@@ -1351,7 +1351,7 @@ func HandoverRequestIEsTypeValue(value ngapType.HandoverRequestIEsTypeValue, bin
 		if err != nil {
 			return binData, bitEnd, errors.New("HandoverRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.HandoverRequestIEsTypeValuePresentSecurityContext:
+	case ngapType.HandoverRequestIEsPresentSecurityContext:
 		if value.SecurityContext == nil {
 			return binData, bitEnd, errors.New("HandoverRequestIEsTypeValue: SecurityContext: NIL")
 		}
@@ -1359,7 +1359,7 @@ func HandoverRequestIEsTypeValue(value ngapType.HandoverRequestIEsTypeValue, bin
 		if err != nil {
 			return binData, bitEnd, errors.New("HandoverRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.HandoverRequestIEsTypeValuePresentNewSecurityContextInd:
+	case ngapType.HandoverRequestIEsPresentNewSecurityContextInd:
 		if value.NewSecurityContextInd == nil {
 			return binData, bitEnd, errors.New("HandoverRequestIEsTypeValue: NewSecurityContextInd: NIL")
 		}
@@ -1367,7 +1367,7 @@ func HandoverRequestIEsTypeValue(value ngapType.HandoverRequestIEsTypeValue, bin
 		if err != nil {
 			return binData, bitEnd, errors.New("HandoverRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.HandoverRequestIEsTypeValuePresentNASC:
+	case ngapType.HandoverRequestIEsPresentNASC:
 		if value.NASC == nil {
 			return binData, bitEnd, errors.New("HandoverRequestIEsTypeValue: NASC: NIL")
 		}
@@ -1375,7 +1375,7 @@ func HandoverRequestIEsTypeValue(value ngapType.HandoverRequestIEsTypeValue, bin
 		if err != nil {
 			return binData, bitEnd, errors.New("HandoverRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.HandoverRequestIEsTypeValuePresentPDUSessionResourceSetupListHOReq:
+	case ngapType.HandoverRequestIEsPresentPDUSessionResourceSetupListHOReq:
 		if value.PDUSessionResourceSetupListHOReq == nil {
 			return binData, bitEnd, errors.New("HandoverRequestIEsTypeValue: PDUSessionResourceSetupListHOReq: NIL")
 		}
@@ -1383,7 +1383,7 @@ func HandoverRequestIEsTypeValue(value ngapType.HandoverRequestIEsTypeValue, bin
 		if err != nil {
 			return binData, bitEnd, errors.New("HandoverRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.HandoverRequestIEsTypeValuePresentAllowedNSSAI:
+	case ngapType.HandoverRequestIEsPresentAllowedNSSAI:
 		if value.AllowedNSSAI == nil {
 			return binData, bitEnd, errors.New("HandoverRequestIEsTypeValue: AllowedNSSAI: NIL")
 		}
@@ -1391,7 +1391,7 @@ func HandoverRequestIEsTypeValue(value ngapType.HandoverRequestIEsTypeValue, bin
 		if err != nil {
 			return binData, bitEnd, errors.New("HandoverRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.HandoverRequestIEsTypeValuePresentTraceActivation:
+	case ngapType.HandoverRequestIEsPresentTraceActivation:
 		if value.TraceActivation == nil {
 			return binData, bitEnd, errors.New("HandoverRequestIEsTypeValue: TraceActivation: NIL")
 		}
@@ -1399,7 +1399,7 @@ func HandoverRequestIEsTypeValue(value ngapType.HandoverRequestIEsTypeValue, bin
 		if err != nil {
 			return binData, bitEnd, errors.New("HandoverRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.HandoverRequestIEsTypeValuePresentMaskedIMEISV:
+	case ngapType.HandoverRequestIEsPresentMaskedIMEISV:
 		if value.MaskedIMEISV == nil {
 			return binData, bitEnd, errors.New("HandoverRequestIEsTypeValue: MaskedIMEISV: NIL")
 		}
@@ -1407,7 +1407,7 @@ func HandoverRequestIEsTypeValue(value ngapType.HandoverRequestIEsTypeValue, bin
 		if err != nil {
 			return binData, bitEnd, errors.New("HandoverRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.HandoverRequestIEsTypeValuePresentSourceToTargetTransparentContainer:
+	case ngapType.HandoverRequestIEsPresentSourceToTargetTransparentContainer:
 		if value.SourceToTargetTransparentContainer == nil {
 			return binData, bitEnd, errors.New("HandoverRequestIEsTypeValue: SourceToTargetTransparentContainer: NIL")
 		}
@@ -1415,7 +1415,7 @@ func HandoverRequestIEsTypeValue(value ngapType.HandoverRequestIEsTypeValue, bin
 		if err != nil {
 			return binData, bitEnd, errors.New("HandoverRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.HandoverRequestIEsTypeValuePresentMobilityRestrictionList:
+	case ngapType.HandoverRequestIEsPresentMobilityRestrictionList:
 		if value.MobilityRestrictionList == nil {
 			return binData, bitEnd, errors.New("HandoverRequestIEsTypeValue: MobilityRestrictionList: NIL")
 		}
@@ -1423,7 +1423,7 @@ func HandoverRequestIEsTypeValue(value ngapType.HandoverRequestIEsTypeValue, bin
 		if err != nil {
 			return binData, bitEnd, errors.New("HandoverRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.HandoverRequestIEsTypeValuePresentLocationReportingRequestType:
+	case ngapType.HandoverRequestIEsPresentLocationReportingRequestType:
 		if value.LocationReportingRequestType == nil {
 			return binData, bitEnd, errors.New("HandoverRequestIEsTypeValue: LocationReportingRequestType: NIL")
 		}
@@ -1431,7 +1431,7 @@ func HandoverRequestIEsTypeValue(value ngapType.HandoverRequestIEsTypeValue, bin
 		if err != nil {
 			return binData, bitEnd, errors.New("HandoverRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.HandoverRequestIEsTypeValuePresentRRCInactiveTransitionReportRequest:
+	case ngapType.HandoverRequestIEsPresentRRCInactiveTransitionReportRequest:
 		if value.RRCInactiveTransitionReportRequest == nil {
 			return binData, bitEnd, errors.New("HandoverRequestIEsTypeValue: RRCInactiveTransitionReportRequest: NIL")
 		}
@@ -1439,7 +1439,7 @@ func HandoverRequestIEsTypeValue(value ngapType.HandoverRequestIEsTypeValue, bin
 		if err != nil {
 			return binData, bitEnd, errors.New("HandoverRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.HandoverRequestIEsTypeValuePresentGUAMI:
+	case ngapType.HandoverRequestIEsPresentGUAMI:
 		if value.GUAMI == nil {
 			return binData, bitEnd, errors.New("HandoverRequestIEsTypeValue: GUAMI: NIL")
 		}
@@ -1447,7 +1447,7 @@ func HandoverRequestIEsTypeValue(value ngapType.HandoverRequestIEsTypeValue, bin
 		if err != nil {
 			return binData, bitEnd, errors.New("HandoverRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.HandoverRequestIEsTypeValuePresentRedirectionVoiceFallback:
+	case ngapType.HandoverRequestIEsPresentRedirectionVoiceFallback:
 		if value.RedirectionVoiceFallback == nil {
 			return binData, bitEnd, errors.New("HandoverRequestIEsTypeValue: RedirectionVoiceFallback: NIL")
 		}
@@ -1455,7 +1455,7 @@ func HandoverRequestIEsTypeValue(value ngapType.HandoverRequestIEsTypeValue, bin
 		if err != nil {
 			return binData, bitEnd, errors.New("HandoverRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.HandoverRequestIEsTypeValuePresentCNAssistedRANTuning:
+	case ngapType.HandoverRequestIEsPresentCNAssistedRANTuning:
 		if value.CNAssistedRANTuning == nil {
 			return binData, bitEnd, errors.New("HandoverRequestIEsTypeValue: CNAssistedRANTuning: NIL")
 		}
@@ -1463,7 +1463,7 @@ func HandoverRequestIEsTypeValue(value ngapType.HandoverRequestIEsTypeValue, bin
 		if err != nil {
 			return binData, bitEnd, errors.New("HandoverRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.HandoverRequestIEsTypeValuePresentSRVCCOperationPossible:
+	case ngapType.HandoverRequestIEsPresentSRVCCOperationPossible:
 		if value.SRVCCOperationPossible == nil {
 			return binData, bitEnd, errors.New("HandoverRequestIEsTypeValue: SRVCCOperationPossible: NIL")
 		}
@@ -1480,7 +1480,7 @@ func HandoverRequestIEsTypeValue(value ngapType.HandoverRequestIEsTypeValue, bin
 func HandoverRequestAcknowledgeIEsTypeValue(value ngapType.HandoverRequestAcknowledgeIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.HandoverRequestAcknowledgeIEsTypeValuePresentAMFUENGAPID:
+	case ngapType.HandoverRequestAcknowledgeIEsPresentAMFUENGAPID:
 		if value.AMFUENGAPID == nil {
 			return binData, bitEnd, errors.New("HandoverRequestAcknowledgeIEsTypeValue: AMFUENGAPID: NIL")
 		}
@@ -1488,7 +1488,7 @@ func HandoverRequestAcknowledgeIEsTypeValue(value ngapType.HandoverRequestAcknow
 		if err != nil {
 			return binData, bitEnd, errors.New("HandoverRequestAcknowledgeIEsTypeValue: " + err.Error())
 		}
-	case ngapType.HandoverRequestAcknowledgeIEsTypeValuePresentRANUENGAPID:
+	case ngapType.HandoverRequestAcknowledgeIEsPresentRANUENGAPID:
 		if value.RANUENGAPID == nil {
 			return binData, bitEnd, errors.New("HandoverRequestAcknowledgeIEsTypeValue: RANUENGAPID: NIL")
 		}
@@ -1496,7 +1496,7 @@ func HandoverRequestAcknowledgeIEsTypeValue(value ngapType.HandoverRequestAcknow
 		if err != nil {
 			return binData, bitEnd, errors.New("HandoverRequestAcknowledgeIEsTypeValue: " + err.Error())
 		}
-	case ngapType.HandoverRequestAcknowledgeIEsTypeValuePresentPDUSessionResourceAdmittedList:
+	case ngapType.HandoverRequestAcknowledgeIEsPresentPDUSessionResourceAdmittedList:
 		if value.PDUSessionResourceAdmittedList == nil {
 			return binData, bitEnd, errors.New("HandoverRequestAcknowledgeIEsTypeValue: PDUSessionResourceAdmittedList: NIL")
 		}
@@ -1504,7 +1504,7 @@ func HandoverRequestAcknowledgeIEsTypeValue(value ngapType.HandoverRequestAcknow
 		if err != nil {
 			return binData, bitEnd, errors.New("HandoverRequestAcknowledgeIEsTypeValue: " + err.Error())
 		}
-	case ngapType.HandoverRequestAcknowledgeIEsTypeValuePresentPDUSessionResourceFailedToSetupListHOAck:
+	case ngapType.HandoverRequestAcknowledgeIEsPresentPDUSessionResourceFailedToSetupListHOAck:
 		if value.PDUSessionResourceFailedToSetupListHOAck == nil {
 			return binData, bitEnd, errors.New("HandoverRequestAcknowledgeIEsTypeValue: PDUSessionResourceFailedToSetupListHOAck: NIL")
 		}
@@ -1512,7 +1512,7 @@ func HandoverRequestAcknowledgeIEsTypeValue(value ngapType.HandoverRequestAcknow
 		if err != nil {
 			return binData, bitEnd, errors.New("HandoverRequestAcknowledgeIEsTypeValue: " + err.Error())
 		}
-	case ngapType.HandoverRequestAcknowledgeIEsTypeValuePresentTargetToSourceTransparentContainer:
+	case ngapType.HandoverRequestAcknowledgeIEsPresentTargetToSourceTransparentContainer:
 		if value.TargetToSourceTransparentContainer == nil {
 			return binData, bitEnd, errors.New("HandoverRequestAcknowledgeIEsTypeValue: TargetToSourceTransparentContainer: NIL")
 		}
@@ -1520,7 +1520,7 @@ func HandoverRequestAcknowledgeIEsTypeValue(value ngapType.HandoverRequestAcknow
 		if err != nil {
 			return binData, bitEnd, errors.New("HandoverRequestAcknowledgeIEsTypeValue: " + err.Error())
 		}
-	case ngapType.HandoverRequestAcknowledgeIEsTypeValuePresentCriticalityDiagnostics:
+	case ngapType.HandoverRequestAcknowledgeIEsPresentCriticalityDiagnostics:
 		if value.CriticalityDiagnostics == nil {
 			return binData, bitEnd, errors.New("HandoverRequestAcknowledgeIEsTypeValue: CriticalityDiagnostics: NIL")
 		}
@@ -1537,7 +1537,7 @@ func HandoverRequestAcknowledgeIEsTypeValue(value ngapType.HandoverRequestAcknow
 func HandoverFailureIEsTypeValue(value ngapType.HandoverFailureIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.HandoverFailureIEsTypeValuePresentAMFUENGAPID:
+	case ngapType.HandoverFailureIEsPresentAMFUENGAPID:
 		if value.AMFUENGAPID == nil {
 			return binData, bitEnd, errors.New("HandoverFailureIEsTypeValue: AMFUENGAPID: NIL")
 		}
@@ -1545,7 +1545,7 @@ func HandoverFailureIEsTypeValue(value ngapType.HandoverFailureIEsTypeValue, bin
 		if err != nil {
 			return binData, bitEnd, errors.New("HandoverFailureIEsTypeValue: " + err.Error())
 		}
-	case ngapType.HandoverFailureIEsTypeValuePresentCause:
+	case ngapType.HandoverFailureIEsPresentCause:
 		if value.Cause == nil {
 			return binData, bitEnd, errors.New("HandoverFailureIEsTypeValue: Cause: NIL")
 		}
@@ -1553,7 +1553,7 @@ func HandoverFailureIEsTypeValue(value ngapType.HandoverFailureIEsTypeValue, bin
 		if err != nil {
 			return binData, bitEnd, errors.New("HandoverFailureIEsTypeValue: " + err.Error())
 		}
-	case ngapType.HandoverFailureIEsTypeValuePresentCriticalityDiagnostics:
+	case ngapType.HandoverFailureIEsPresentCriticalityDiagnostics:
 		if value.CriticalityDiagnostics == nil {
 			return binData, bitEnd, errors.New("HandoverFailureIEsTypeValue: CriticalityDiagnostics: NIL")
 		}
@@ -1570,7 +1570,7 @@ func HandoverFailureIEsTypeValue(value ngapType.HandoverFailureIEsTypeValue, bin
 func HandoverNotifyIEsTypeValue(value ngapType.HandoverNotifyIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.HandoverNotifyIEsTypeValuePresentAMFUENGAPID:
+	case ngapType.HandoverNotifyIEsPresentAMFUENGAPID:
 		if value.AMFUENGAPID == nil {
 			return binData, bitEnd, errors.New("HandoverNotifyIEsTypeValue: AMFUENGAPID: NIL")
 		}
@@ -1578,7 +1578,7 @@ func HandoverNotifyIEsTypeValue(value ngapType.HandoverNotifyIEsTypeValue, binDa
 		if err != nil {
 			return binData, bitEnd, errors.New("HandoverNotifyIEsTypeValue: " + err.Error())
 		}
-	case ngapType.HandoverNotifyIEsTypeValuePresentRANUENGAPID:
+	case ngapType.HandoverNotifyIEsPresentRANUENGAPID:
 		if value.RANUENGAPID == nil {
 			return binData, bitEnd, errors.New("HandoverNotifyIEsTypeValue: RANUENGAPID: NIL")
 		}
@@ -1586,7 +1586,7 @@ func HandoverNotifyIEsTypeValue(value ngapType.HandoverNotifyIEsTypeValue, binDa
 		if err != nil {
 			return binData, bitEnd, errors.New("HandoverNotifyIEsTypeValue: " + err.Error())
 		}
-	case ngapType.HandoverNotifyIEsTypeValuePresentUserLocationInformation:
+	case ngapType.HandoverNotifyIEsPresentUserLocationInformation:
 		if value.UserLocationInformation == nil {
 			return binData, bitEnd, errors.New("HandoverNotifyIEsTypeValue: UserLocationInformation: NIL")
 		}
@@ -1603,7 +1603,7 @@ func HandoverNotifyIEsTypeValue(value ngapType.HandoverNotifyIEsTypeValue, binDa
 func PathSwitchRequestIEsTypeValue(value ngapType.PathSwitchRequestIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.PathSwitchRequestIEsTypeValuePresentRANUENGAPID:
+	case ngapType.PathSwitchRequestIEsPresentRANUENGAPID:
 		if value.RANUENGAPID == nil {
 			return binData, bitEnd, errors.New("PathSwitchRequestIEsTypeValue: RANUENGAPID: NIL")
 		}
@@ -1611,7 +1611,7 @@ func PathSwitchRequestIEsTypeValue(value ngapType.PathSwitchRequestIEsTypeValue,
 		if err != nil {
 			return binData, bitEnd, errors.New("PathSwitchRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.PathSwitchRequestIEsTypeValuePresentSourceAMFUENGAPID:
+	case ngapType.PathSwitchRequestIEsPresentSourceAMFUENGAPID:
 		if value.SourceAMFUENGAPID == nil {
 			return binData, bitEnd, errors.New("PathSwitchRequestIEsTypeValue: SourceAMFUENGAPID: NIL")
 		}
@@ -1619,7 +1619,7 @@ func PathSwitchRequestIEsTypeValue(value ngapType.PathSwitchRequestIEsTypeValue,
 		if err != nil {
 			return binData, bitEnd, errors.New("PathSwitchRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.PathSwitchRequestIEsTypeValuePresentUserLocationInformation:
+	case ngapType.PathSwitchRequestIEsPresentUserLocationInformation:
 		if value.UserLocationInformation == nil {
 			return binData, bitEnd, errors.New("PathSwitchRequestIEsTypeValue: UserLocationInformation: NIL")
 		}
@@ -1627,7 +1627,7 @@ func PathSwitchRequestIEsTypeValue(value ngapType.PathSwitchRequestIEsTypeValue,
 		if err != nil {
 			return binData, bitEnd, errors.New("PathSwitchRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.PathSwitchRequestIEsTypeValuePresentUESecurityCapabilities:
+	case ngapType.PathSwitchRequestIEsPresentUESecurityCapabilities:
 		if value.UESecurityCapabilities == nil {
 			return binData, bitEnd, errors.New("PathSwitchRequestIEsTypeValue: UESecurityCapabilities: NIL")
 		}
@@ -1635,7 +1635,7 @@ func PathSwitchRequestIEsTypeValue(value ngapType.PathSwitchRequestIEsTypeValue,
 		if err != nil {
 			return binData, bitEnd, errors.New("PathSwitchRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.PathSwitchRequestIEsTypeValuePresentPDUSessionResourceToBeSwitchedDLList:
+	case ngapType.PathSwitchRequestIEsPresentPDUSessionResourceToBeSwitchedDLList:
 		if value.PDUSessionResourceToBeSwitchedDLList == nil {
 			return binData, bitEnd, errors.New("PathSwitchRequestIEsTypeValue: PDUSessionResourceToBeSwitchedDLList: NIL")
 		}
@@ -1643,7 +1643,7 @@ func PathSwitchRequestIEsTypeValue(value ngapType.PathSwitchRequestIEsTypeValue,
 		if err != nil {
 			return binData, bitEnd, errors.New("PathSwitchRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.PathSwitchRequestIEsTypeValuePresentPDUSessionResourceFailedToSetupListPSReq:
+	case ngapType.PathSwitchRequestIEsPresentPDUSessionResourceFailedToSetupListPSReq:
 		if value.PDUSessionResourceFailedToSetupListPSReq == nil {
 			return binData, bitEnd, errors.New("PathSwitchRequestIEsTypeValue: PDUSessionResourceFailedToSetupListPSReq: NIL")
 		}
@@ -1660,7 +1660,7 @@ func PathSwitchRequestIEsTypeValue(value ngapType.PathSwitchRequestIEsTypeValue,
 func PathSwitchRequestAcknowledgeIEsTypeValue(value ngapType.PathSwitchRequestAcknowledgeIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.PathSwitchRequestAcknowledgeIEsTypeValuePresentAMFUENGAPID:
+	case ngapType.PathSwitchRequestAcknowledgeIEsPresentAMFUENGAPID:
 		if value.AMFUENGAPID == nil {
 			return binData, bitEnd, errors.New("PathSwitchRequestAcknowledgeIEsTypeValue: AMFUENGAPID: NIL")
 		}
@@ -1668,7 +1668,7 @@ func PathSwitchRequestAcknowledgeIEsTypeValue(value ngapType.PathSwitchRequestAc
 		if err != nil {
 			return binData, bitEnd, errors.New("PathSwitchRequestAcknowledgeIEsTypeValue: " + err.Error())
 		}
-	case ngapType.PathSwitchRequestAcknowledgeIEsTypeValuePresentRANUENGAPID:
+	case ngapType.PathSwitchRequestAcknowledgeIEsPresentRANUENGAPID:
 		if value.RANUENGAPID == nil {
 			return binData, bitEnd, errors.New("PathSwitchRequestAcknowledgeIEsTypeValue: RANUENGAPID: NIL")
 		}
@@ -1676,7 +1676,7 @@ func PathSwitchRequestAcknowledgeIEsTypeValue(value ngapType.PathSwitchRequestAc
 		if err != nil {
 			return binData, bitEnd, errors.New("PathSwitchRequestAcknowledgeIEsTypeValue: " + err.Error())
 		}
-	case ngapType.PathSwitchRequestAcknowledgeIEsTypeValuePresentUESecurityCapabilities:
+	case ngapType.PathSwitchRequestAcknowledgeIEsPresentUESecurityCapabilities:
 		if value.UESecurityCapabilities == nil {
 			return binData, bitEnd, errors.New("PathSwitchRequestAcknowledgeIEsTypeValue: UESecurityCapabilities: NIL")
 		}
@@ -1684,7 +1684,7 @@ func PathSwitchRequestAcknowledgeIEsTypeValue(value ngapType.PathSwitchRequestAc
 		if err != nil {
 			return binData, bitEnd, errors.New("PathSwitchRequestAcknowledgeIEsTypeValue: " + err.Error())
 		}
-	case ngapType.PathSwitchRequestAcknowledgeIEsTypeValuePresentSecurityContext:
+	case ngapType.PathSwitchRequestAcknowledgeIEsPresentSecurityContext:
 		if value.SecurityContext == nil {
 			return binData, bitEnd, errors.New("PathSwitchRequestAcknowledgeIEsTypeValue: SecurityContext: NIL")
 		}
@@ -1692,7 +1692,7 @@ func PathSwitchRequestAcknowledgeIEsTypeValue(value ngapType.PathSwitchRequestAc
 		if err != nil {
 			return binData, bitEnd, errors.New("PathSwitchRequestAcknowledgeIEsTypeValue: " + err.Error())
 		}
-	case ngapType.PathSwitchRequestAcknowledgeIEsTypeValuePresentNewSecurityContextInd:
+	case ngapType.PathSwitchRequestAcknowledgeIEsPresentNewSecurityContextInd:
 		if value.NewSecurityContextInd == nil {
 			return binData, bitEnd, errors.New("PathSwitchRequestAcknowledgeIEsTypeValue: NewSecurityContextInd: NIL")
 		}
@@ -1700,7 +1700,7 @@ func PathSwitchRequestAcknowledgeIEsTypeValue(value ngapType.PathSwitchRequestAc
 		if err != nil {
 			return binData, bitEnd, errors.New("PathSwitchRequestAcknowledgeIEsTypeValue: " + err.Error())
 		}
-	case ngapType.PathSwitchRequestAcknowledgeIEsTypeValuePresentPDUSessionResourceSwitchedList:
+	case ngapType.PathSwitchRequestAcknowledgeIEsPresentPDUSessionResourceSwitchedList:
 		if value.PDUSessionResourceSwitchedList == nil {
 			return binData, bitEnd, errors.New("PathSwitchRequestAcknowledgeIEsTypeValue: PDUSessionResourceSwitchedList: NIL")
 		}
@@ -1708,7 +1708,7 @@ func PathSwitchRequestAcknowledgeIEsTypeValue(value ngapType.PathSwitchRequestAc
 		if err != nil {
 			return binData, bitEnd, errors.New("PathSwitchRequestAcknowledgeIEsTypeValue: " + err.Error())
 		}
-	case ngapType.PathSwitchRequestAcknowledgeIEsTypeValuePresentPDUSessionResourceReleasedListPSAck:
+	case ngapType.PathSwitchRequestAcknowledgeIEsPresentPDUSessionResourceReleasedListPSAck:
 		if value.PDUSessionResourceReleasedListPSAck == nil {
 			return binData, bitEnd, errors.New("PathSwitchRequestAcknowledgeIEsTypeValue: PDUSessionResourceReleasedListPSAck: NIL")
 		}
@@ -1716,7 +1716,7 @@ func PathSwitchRequestAcknowledgeIEsTypeValue(value ngapType.PathSwitchRequestAc
 		if err != nil {
 			return binData, bitEnd, errors.New("PathSwitchRequestAcknowledgeIEsTypeValue: " + err.Error())
 		}
-	case ngapType.PathSwitchRequestAcknowledgeIEsTypeValuePresentAllowedNSSAI:
+	case ngapType.PathSwitchRequestAcknowledgeIEsPresentAllowedNSSAI:
 		if value.AllowedNSSAI == nil {
 			return binData, bitEnd, errors.New("PathSwitchRequestAcknowledgeIEsTypeValue: AllowedNSSAI: NIL")
 		}
@@ -1724,7 +1724,7 @@ func PathSwitchRequestAcknowledgeIEsTypeValue(value ngapType.PathSwitchRequestAc
 		if err != nil {
 			return binData, bitEnd, errors.New("PathSwitchRequestAcknowledgeIEsTypeValue: " + err.Error())
 		}
-	case ngapType.PathSwitchRequestAcknowledgeIEsTypeValuePresentCoreNetworkAssistanceInformationForInactive:
+	case ngapType.PathSwitchRequestAcknowledgeIEsPresentCoreNetworkAssistanceInformationForInactive:
 		if value.CoreNetworkAssistanceInformationForInactive == nil {
 			return binData, bitEnd, errors.New("PathSwitchRequestAcknowledgeIEsTypeValue: CoreNetworkAssistanceInformationForInactive: NIL")
 		}
@@ -1732,7 +1732,7 @@ func PathSwitchRequestAcknowledgeIEsTypeValue(value ngapType.PathSwitchRequestAc
 		if err != nil {
 			return binData, bitEnd, errors.New("PathSwitchRequestAcknowledgeIEsTypeValue: " + err.Error())
 		}
-	case ngapType.PathSwitchRequestAcknowledgeIEsTypeValuePresentRRCInactiveTransitionReportRequest:
+	case ngapType.PathSwitchRequestAcknowledgeIEsPresentRRCInactiveTransitionReportRequest:
 		if value.RRCInactiveTransitionReportRequest == nil {
 			return binData, bitEnd, errors.New("PathSwitchRequestAcknowledgeIEsTypeValue: RRCInactiveTransitionReportRequest: NIL")
 		}
@@ -1740,7 +1740,7 @@ func PathSwitchRequestAcknowledgeIEsTypeValue(value ngapType.PathSwitchRequestAc
 		if err != nil {
 			return binData, bitEnd, errors.New("PathSwitchRequestAcknowledgeIEsTypeValue: " + err.Error())
 		}
-	case ngapType.PathSwitchRequestAcknowledgeIEsTypeValuePresentCriticalityDiagnostics:
+	case ngapType.PathSwitchRequestAcknowledgeIEsPresentCriticalityDiagnostics:
 		if value.CriticalityDiagnostics == nil {
 			return binData, bitEnd, errors.New("PathSwitchRequestAcknowledgeIEsTypeValue: CriticalityDiagnostics: NIL")
 		}
@@ -1748,7 +1748,7 @@ func PathSwitchRequestAcknowledgeIEsTypeValue(value ngapType.PathSwitchRequestAc
 		if err != nil {
 			return binData, bitEnd, errors.New("PathSwitchRequestAcknowledgeIEsTypeValue: " + err.Error())
 		}
-	case ngapType.PathSwitchRequestAcknowledgeIEsTypeValuePresentRedirectionVoiceFallback:
+	case ngapType.PathSwitchRequestAcknowledgeIEsPresentRedirectionVoiceFallback:
 		if value.RedirectionVoiceFallback == nil {
 			return binData, bitEnd, errors.New("PathSwitchRequestAcknowledgeIEsTypeValue: RedirectionVoiceFallback: NIL")
 		}
@@ -1756,7 +1756,7 @@ func PathSwitchRequestAcknowledgeIEsTypeValue(value ngapType.PathSwitchRequestAc
 		if err != nil {
 			return binData, bitEnd, errors.New("PathSwitchRequestAcknowledgeIEsTypeValue: " + err.Error())
 		}
-	case ngapType.PathSwitchRequestAcknowledgeIEsTypeValuePresentCNAssistedRANTuning:
+	case ngapType.PathSwitchRequestAcknowledgeIEsPresentCNAssistedRANTuning:
 		if value.CNAssistedRANTuning == nil {
 			return binData, bitEnd, errors.New("PathSwitchRequestAcknowledgeIEsTypeValue: CNAssistedRANTuning: NIL")
 		}
@@ -1764,7 +1764,7 @@ func PathSwitchRequestAcknowledgeIEsTypeValue(value ngapType.PathSwitchRequestAc
 		if err != nil {
 			return binData, bitEnd, errors.New("PathSwitchRequestAcknowledgeIEsTypeValue: " + err.Error())
 		}
-	case ngapType.PathSwitchRequestAcknowledgeIEsTypeValuePresentSRVCCOperationPossible:
+	case ngapType.PathSwitchRequestAcknowledgeIEsPresentSRVCCOperationPossible:
 		if value.SRVCCOperationPossible == nil {
 			return binData, bitEnd, errors.New("PathSwitchRequestAcknowledgeIEsTypeValue: SRVCCOperationPossible: NIL")
 		}
@@ -1781,7 +1781,7 @@ func PathSwitchRequestAcknowledgeIEsTypeValue(value ngapType.PathSwitchRequestAc
 func PathSwitchRequestFailureIEsTypeValue(value ngapType.PathSwitchRequestFailureIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.PathSwitchRequestFailureIEsTypeValuePresentAMFUENGAPID:
+	case ngapType.PathSwitchRequestFailureIEsPresentAMFUENGAPID:
 		if value.AMFUENGAPID == nil {
 			return binData, bitEnd, errors.New("PathSwitchRequestFailureIEsTypeValue: AMFUENGAPID: NIL")
 		}
@@ -1789,7 +1789,7 @@ func PathSwitchRequestFailureIEsTypeValue(value ngapType.PathSwitchRequestFailur
 		if err != nil {
 			return binData, bitEnd, errors.New("PathSwitchRequestFailureIEsTypeValue: " + err.Error())
 		}
-	case ngapType.PathSwitchRequestFailureIEsTypeValuePresentRANUENGAPID:
+	case ngapType.PathSwitchRequestFailureIEsPresentRANUENGAPID:
 		if value.RANUENGAPID == nil {
 			return binData, bitEnd, errors.New("PathSwitchRequestFailureIEsTypeValue: RANUENGAPID: NIL")
 		}
@@ -1797,7 +1797,7 @@ func PathSwitchRequestFailureIEsTypeValue(value ngapType.PathSwitchRequestFailur
 		if err != nil {
 			return binData, bitEnd, errors.New("PathSwitchRequestFailureIEsTypeValue: " + err.Error())
 		}
-	case ngapType.PathSwitchRequestFailureIEsTypeValuePresentPDUSessionResourceReleasedListPSFail:
+	case ngapType.PathSwitchRequestFailureIEsPresentPDUSessionResourceReleasedListPSFail:
 		if value.PDUSessionResourceReleasedListPSFail == nil {
 			return binData, bitEnd, errors.New("PathSwitchRequestFailureIEsTypeValue: PDUSessionResourceReleasedListPSFail: NIL")
 		}
@@ -1805,7 +1805,7 @@ func PathSwitchRequestFailureIEsTypeValue(value ngapType.PathSwitchRequestFailur
 		if err != nil {
 			return binData, bitEnd, errors.New("PathSwitchRequestFailureIEsTypeValue: " + err.Error())
 		}
-	case ngapType.PathSwitchRequestFailureIEsTypeValuePresentCriticalityDiagnostics:
+	case ngapType.PathSwitchRequestFailureIEsPresentCriticalityDiagnostics:
 		if value.CriticalityDiagnostics == nil {
 			return binData, bitEnd, errors.New("PathSwitchRequestFailureIEsTypeValue: CriticalityDiagnostics: NIL")
 		}
@@ -1822,7 +1822,7 @@ func PathSwitchRequestFailureIEsTypeValue(value ngapType.PathSwitchRequestFailur
 func HandoverCancelIEsTypeValue(value ngapType.HandoverCancelIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.HandoverCancelIEsTypeValuePresentAMFUENGAPID:
+	case ngapType.HandoverCancelIEsPresentAMFUENGAPID:
 		if value.AMFUENGAPID == nil {
 			return binData, bitEnd, errors.New("HandoverCancelIEsTypeValue: AMFUENGAPID: NIL")
 		}
@@ -1830,7 +1830,7 @@ func HandoverCancelIEsTypeValue(value ngapType.HandoverCancelIEsTypeValue, binDa
 		if err != nil {
 			return binData, bitEnd, errors.New("HandoverCancelIEsTypeValue: " + err.Error())
 		}
-	case ngapType.HandoverCancelIEsTypeValuePresentRANUENGAPID:
+	case ngapType.HandoverCancelIEsPresentRANUENGAPID:
 		if value.RANUENGAPID == nil {
 			return binData, bitEnd, errors.New("HandoverCancelIEsTypeValue: RANUENGAPID: NIL")
 		}
@@ -1838,7 +1838,7 @@ func HandoverCancelIEsTypeValue(value ngapType.HandoverCancelIEsTypeValue, binDa
 		if err != nil {
 			return binData, bitEnd, errors.New("HandoverCancelIEsTypeValue: " + err.Error())
 		}
-	case ngapType.HandoverCancelIEsTypeValuePresentCause:
+	case ngapType.HandoverCancelIEsPresentCause:
 		if value.Cause == nil {
 			return binData, bitEnd, errors.New("HandoverCancelIEsTypeValue: Cause: NIL")
 		}
@@ -1855,7 +1855,7 @@ func HandoverCancelIEsTypeValue(value ngapType.HandoverCancelIEsTypeValue, binDa
 func HandoverCancelAcknowledgeIEsTypeValue(value ngapType.HandoverCancelAcknowledgeIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.HandoverCancelAcknowledgeIEsTypeValuePresentAMFUENGAPID:
+	case ngapType.HandoverCancelAcknowledgeIEsPresentAMFUENGAPID:
 		if value.AMFUENGAPID == nil {
 			return binData, bitEnd, errors.New("HandoverCancelAcknowledgeIEsTypeValue: AMFUENGAPID: NIL")
 		}
@@ -1863,7 +1863,7 @@ func HandoverCancelAcknowledgeIEsTypeValue(value ngapType.HandoverCancelAcknowle
 		if err != nil {
 			return binData, bitEnd, errors.New("HandoverCancelAcknowledgeIEsTypeValue: " + err.Error())
 		}
-	case ngapType.HandoverCancelAcknowledgeIEsTypeValuePresentRANUENGAPID:
+	case ngapType.HandoverCancelAcknowledgeIEsPresentRANUENGAPID:
 		if value.RANUENGAPID == nil {
 			return binData, bitEnd, errors.New("HandoverCancelAcknowledgeIEsTypeValue: RANUENGAPID: NIL")
 		}
@@ -1871,7 +1871,7 @@ func HandoverCancelAcknowledgeIEsTypeValue(value ngapType.HandoverCancelAcknowle
 		if err != nil {
 			return binData, bitEnd, errors.New("HandoverCancelAcknowledgeIEsTypeValue: " + err.Error())
 		}
-	case ngapType.HandoverCancelAcknowledgeIEsTypeValuePresentCriticalityDiagnostics:
+	case ngapType.HandoverCancelAcknowledgeIEsPresentCriticalityDiagnostics:
 		if value.CriticalityDiagnostics == nil {
 			return binData, bitEnd, errors.New("HandoverCancelAcknowledgeIEsTypeValue: CriticalityDiagnostics: NIL")
 		}
@@ -1888,7 +1888,7 @@ func HandoverCancelAcknowledgeIEsTypeValue(value ngapType.HandoverCancelAcknowle
 func UplinkRANStatusTransferIEsTypeValue(value ngapType.UplinkRANStatusTransferIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.UplinkRANStatusTransferIEsTypeValuePresentAMFUENGAPID:
+	case ngapType.UplinkRANStatusTransferIEsPresentAMFUENGAPID:
 		if value.AMFUENGAPID == nil {
 			return binData, bitEnd, errors.New("UplinkRANStatusTransferIEsTypeValue: AMFUENGAPID: NIL")
 		}
@@ -1896,7 +1896,7 @@ func UplinkRANStatusTransferIEsTypeValue(value ngapType.UplinkRANStatusTransferI
 		if err != nil {
 			return binData, bitEnd, errors.New("UplinkRANStatusTransferIEsTypeValue: " + err.Error())
 		}
-	case ngapType.UplinkRANStatusTransferIEsTypeValuePresentRANUENGAPID:
+	case ngapType.UplinkRANStatusTransferIEsPresentRANUENGAPID:
 		if value.RANUENGAPID == nil {
 			return binData, bitEnd, errors.New("UplinkRANStatusTransferIEsTypeValue: RANUENGAPID: NIL")
 		}
@@ -1904,7 +1904,7 @@ func UplinkRANStatusTransferIEsTypeValue(value ngapType.UplinkRANStatusTransferI
 		if err != nil {
 			return binData, bitEnd, errors.New("UplinkRANStatusTransferIEsTypeValue: " + err.Error())
 		}
-	case ngapType.UplinkRANStatusTransferIEsTypeValuePresentRANStatusTransferTransparentContainer:
+	case ngapType.UplinkRANStatusTransferIEsPresentRANStatusTransferTransparentContainer:
 		if value.RANStatusTransferTransparentContainer == nil {
 			return binData, bitEnd, errors.New("UplinkRANStatusTransferIEsTypeValue: RANStatusTransferTransparentContainer: NIL")
 		}
@@ -1921,7 +1921,7 @@ func UplinkRANStatusTransferIEsTypeValue(value ngapType.UplinkRANStatusTransferI
 func DownlinkRANStatusTransferIEsTypeValue(value ngapType.DownlinkRANStatusTransferIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.DownlinkRANStatusTransferIEsTypeValuePresentAMFUENGAPID:
+	case ngapType.DownlinkRANStatusTransferIEsPresentAMFUENGAPID:
 		if value.AMFUENGAPID == nil {
 			return binData, bitEnd, errors.New("DownlinkRANStatusTransferIEsTypeValue: AMFUENGAPID: NIL")
 		}
@@ -1929,7 +1929,7 @@ func DownlinkRANStatusTransferIEsTypeValue(value ngapType.DownlinkRANStatusTrans
 		if err != nil {
 			return binData, bitEnd, errors.New("DownlinkRANStatusTransferIEsTypeValue: " + err.Error())
 		}
-	case ngapType.DownlinkRANStatusTransferIEsTypeValuePresentRANUENGAPID:
+	case ngapType.DownlinkRANStatusTransferIEsPresentRANUENGAPID:
 		if value.RANUENGAPID == nil {
 			return binData, bitEnd, errors.New("DownlinkRANStatusTransferIEsTypeValue: RANUENGAPID: NIL")
 		}
@@ -1937,7 +1937,7 @@ func DownlinkRANStatusTransferIEsTypeValue(value ngapType.DownlinkRANStatusTrans
 		if err != nil {
 			return binData, bitEnd, errors.New("DownlinkRANStatusTransferIEsTypeValue: " + err.Error())
 		}
-	case ngapType.DownlinkRANStatusTransferIEsTypeValuePresentRANStatusTransferTransparentContainer:
+	case ngapType.DownlinkRANStatusTransferIEsPresentRANStatusTransferTransparentContainer:
 		if value.RANStatusTransferTransparentContainer == nil {
 			return binData, bitEnd, errors.New("DownlinkRANStatusTransferIEsTypeValue: RANStatusTransferTransparentContainer: NIL")
 		}
@@ -1954,7 +1954,7 @@ func DownlinkRANStatusTransferIEsTypeValue(value ngapType.DownlinkRANStatusTrans
 func PagingIEsTypeValue(value ngapType.PagingIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.PagingIEsTypeValuePresentUEPagingIdentity:
+	case ngapType.PagingIEsPresentUEPagingIdentity:
 		if value.UEPagingIdentity == nil {
 			return binData, bitEnd, errors.New("PagingIEsTypeValue: UEPagingIdentity: NIL")
 		}
@@ -1962,7 +1962,7 @@ func PagingIEsTypeValue(value ngapType.PagingIEsTypeValue, binData []byte, bitEn
 		if err != nil {
 			return binData, bitEnd, errors.New("PagingIEsTypeValue: " + err.Error())
 		}
-	case ngapType.PagingIEsTypeValuePresentPagingDRX:
+	case ngapType.PagingIEsPresentPagingDRX:
 		if value.PagingDRX == nil {
 			return binData, bitEnd, errors.New("PagingIEsTypeValue: PagingDRX: NIL")
 		}
@@ -1970,7 +1970,7 @@ func PagingIEsTypeValue(value ngapType.PagingIEsTypeValue, binData []byte, bitEn
 		if err != nil {
 			return binData, bitEnd, errors.New("PagingIEsTypeValue: " + err.Error())
 		}
-	case ngapType.PagingIEsTypeValuePresentTAIListForPaging:
+	case ngapType.PagingIEsPresentTAIListForPaging:
 		if value.TAIListForPaging == nil {
 			return binData, bitEnd, errors.New("PagingIEsTypeValue: TAIListForPaging: NIL")
 		}
@@ -1978,7 +1978,7 @@ func PagingIEsTypeValue(value ngapType.PagingIEsTypeValue, binData []byte, bitEn
 		if err != nil {
 			return binData, bitEnd, errors.New("PagingIEsTypeValue: " + err.Error())
 		}
-	case ngapType.PagingIEsTypeValuePresentPagingPriority:
+	case ngapType.PagingIEsPresentPagingPriority:
 		if value.PagingPriority == nil {
 			return binData, bitEnd, errors.New("PagingIEsTypeValue: PagingPriority: NIL")
 		}
@@ -1986,7 +1986,7 @@ func PagingIEsTypeValue(value ngapType.PagingIEsTypeValue, binData []byte, bitEn
 		if err != nil {
 			return binData, bitEnd, errors.New("PagingIEsTypeValue: " + err.Error())
 		}
-	case ngapType.PagingIEsTypeValuePresentUERadioCapabilityForPaging:
+	case ngapType.PagingIEsPresentUERadioCapabilityForPaging:
 		if value.UERadioCapabilityForPaging == nil {
 			return binData, bitEnd, errors.New("PagingIEsTypeValue: UERadioCapabilityForPaging: NIL")
 		}
@@ -1994,7 +1994,7 @@ func PagingIEsTypeValue(value ngapType.PagingIEsTypeValue, binData []byte, bitEn
 		if err != nil {
 			return binData, bitEnd, errors.New("PagingIEsTypeValue: " + err.Error())
 		}
-	case ngapType.PagingIEsTypeValuePresentPagingOrigin:
+	case ngapType.PagingIEsPresentPagingOrigin:
 		if value.PagingOrigin == nil {
 			return binData, bitEnd, errors.New("PagingIEsTypeValue: PagingOrigin: NIL")
 		}
@@ -2002,7 +2002,7 @@ func PagingIEsTypeValue(value ngapType.PagingIEsTypeValue, binData []byte, bitEn
 		if err != nil {
 			return binData, bitEnd, errors.New("PagingIEsTypeValue: " + err.Error())
 		}
-	case ngapType.PagingIEsTypeValuePresentAssistanceDataForPaging:
+	case ngapType.PagingIEsPresentAssistanceDataForPaging:
 		if value.AssistanceDataForPaging == nil {
 			return binData, bitEnd, errors.New("PagingIEsTypeValue: AssistanceDataForPaging: NIL")
 		}
@@ -2019,7 +2019,7 @@ func PagingIEsTypeValue(value ngapType.PagingIEsTypeValue, binData []byte, bitEn
 func InitialUEMessageIEsTypeValue(value ngapType.InitialUEMessageIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.InitialUEMessageIEsTypeValuePresentRANUENGAPID:
+	case ngapType.InitialUEMessageIEsPresentRANUENGAPID:
 		if value.RANUENGAPID == nil {
 			return binData, bitEnd, errors.New("InitialUEMessageIEsTypeValue: RANUENGAPID: NIL")
 		}
@@ -2027,7 +2027,7 @@ func InitialUEMessageIEsTypeValue(value ngapType.InitialUEMessageIEsTypeValue, b
 		if err != nil {
 			return binData, bitEnd, errors.New("InitialUEMessageIEsTypeValue: " + err.Error())
 		}
-	case ngapType.InitialUEMessageIEsTypeValuePresentNASPDU:
+	case ngapType.InitialUEMessageIEsPresentNASPDU:
 		if value.NASPDU == nil {
 			return binData, bitEnd, errors.New("InitialUEMessageIEsTypeValue: NASPDU: NIL")
 		}
@@ -2035,7 +2035,7 @@ func InitialUEMessageIEsTypeValue(value ngapType.InitialUEMessageIEsTypeValue, b
 		if err != nil {
 			return binData, bitEnd, errors.New("InitialUEMessageIEsTypeValue: " + err.Error())
 		}
-	case ngapType.InitialUEMessageIEsTypeValuePresentUserLocationInformation:
+	case ngapType.InitialUEMessageIEsPresentUserLocationInformation:
 		if value.UserLocationInformation == nil {
 			return binData, bitEnd, errors.New("InitialUEMessageIEsTypeValue: UserLocationInformation: NIL")
 		}
@@ -2043,7 +2043,7 @@ func InitialUEMessageIEsTypeValue(value ngapType.InitialUEMessageIEsTypeValue, b
 		if err != nil {
 			return binData, bitEnd, errors.New("InitialUEMessageIEsTypeValue: " + err.Error())
 		}
-	case ngapType.InitialUEMessageIEsTypeValuePresentRRCEstablishmentCause:
+	case ngapType.InitialUEMessageIEsPresentRRCEstablishmentCause:
 		if value.RRCEstablishmentCause == nil {
 			return binData, bitEnd, errors.New("InitialUEMessageIEsTypeValue: RRCEstablishmentCause: NIL")
 		}
@@ -2051,7 +2051,7 @@ func InitialUEMessageIEsTypeValue(value ngapType.InitialUEMessageIEsTypeValue, b
 		if err != nil {
 			return binData, bitEnd, errors.New("InitialUEMessageIEsTypeValue: " + err.Error())
 		}
-	case ngapType.InitialUEMessageIEsTypeValuePresentFiveGSTMSI:
+	case ngapType.InitialUEMessageIEsPresentFiveGSTMSI:
 		if value.FiveGSTMSI == nil {
 			return binData, bitEnd, errors.New("InitialUEMessageIEsTypeValue: FiveGSTMSI: NIL")
 		}
@@ -2059,7 +2059,7 @@ func InitialUEMessageIEsTypeValue(value ngapType.InitialUEMessageIEsTypeValue, b
 		if err != nil {
 			return binData, bitEnd, errors.New("InitialUEMessageIEsTypeValue: " + err.Error())
 		}
-	case ngapType.InitialUEMessageIEsTypeValuePresentAMFSetID:
+	case ngapType.InitialUEMessageIEsPresentAMFSetID:
 		if value.AMFSetID == nil {
 			return binData, bitEnd, errors.New("InitialUEMessageIEsTypeValue: AMFSetID: NIL")
 		}
@@ -2067,7 +2067,7 @@ func InitialUEMessageIEsTypeValue(value ngapType.InitialUEMessageIEsTypeValue, b
 		if err != nil {
 			return binData, bitEnd, errors.New("InitialUEMessageIEsTypeValue: " + err.Error())
 		}
-	case ngapType.InitialUEMessageIEsTypeValuePresentUEContextRequest:
+	case ngapType.InitialUEMessageIEsPresentUEContextRequest:
 		if value.UEContextRequest == nil {
 			return binData, bitEnd, errors.New("InitialUEMessageIEsTypeValue: UEContextRequest: NIL")
 		}
@@ -2075,7 +2075,7 @@ func InitialUEMessageIEsTypeValue(value ngapType.InitialUEMessageIEsTypeValue, b
 		if err != nil {
 			return binData, bitEnd, errors.New("InitialUEMessageIEsTypeValue: " + err.Error())
 		}
-	case ngapType.InitialUEMessageIEsTypeValuePresentAllowedNSSAI:
+	case ngapType.InitialUEMessageIEsPresentAllowedNSSAI:
 		if value.AllowedNSSAI == nil {
 			return binData, bitEnd, errors.New("InitialUEMessageIEsTypeValue: AllowedNSSAI: NIL")
 		}
@@ -2083,7 +2083,7 @@ func InitialUEMessageIEsTypeValue(value ngapType.InitialUEMessageIEsTypeValue, b
 		if err != nil {
 			return binData, bitEnd, errors.New("InitialUEMessageIEsTypeValue: " + err.Error())
 		}
-	case ngapType.InitialUEMessageIEsTypeValuePresentSourceToTargetAMFInformationReroute:
+	case ngapType.InitialUEMessageIEsPresentSourceToTargetAMFInformationReroute:
 		if value.SourceToTargetAMFInformationReroute == nil {
 			return binData, bitEnd, errors.New("InitialUEMessageIEsTypeValue: SourceToTargetAMFInformationReroute: NIL")
 		}
@@ -2100,7 +2100,7 @@ func InitialUEMessageIEsTypeValue(value ngapType.InitialUEMessageIEsTypeValue, b
 func DownlinkNASTransportIEsTypeValue(value ngapType.DownlinkNASTransportIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.DownlinkNASTransportIEsTypeValuePresentAMFUENGAPID:
+	case ngapType.DownlinkNASTransportIEsPresentAMFUENGAPID:
 		if value.AMFUENGAPID == nil {
 			return binData, bitEnd, errors.New("DownlinkNASTransportIEsTypeValue: AMFUENGAPID: NIL")
 		}
@@ -2108,7 +2108,7 @@ func DownlinkNASTransportIEsTypeValue(value ngapType.DownlinkNASTransportIEsType
 		if err != nil {
 			return binData, bitEnd, errors.New("DownlinkNASTransportIEsTypeValue: " + err.Error())
 		}
-	case ngapType.DownlinkNASTransportIEsTypeValuePresentRANUENGAPID:
+	case ngapType.DownlinkNASTransportIEsPresentRANUENGAPID:
 		if value.RANUENGAPID == nil {
 			return binData, bitEnd, errors.New("DownlinkNASTransportIEsTypeValue: RANUENGAPID: NIL")
 		}
@@ -2116,7 +2116,7 @@ func DownlinkNASTransportIEsTypeValue(value ngapType.DownlinkNASTransportIEsType
 		if err != nil {
 			return binData, bitEnd, errors.New("DownlinkNASTransportIEsTypeValue: " + err.Error())
 		}
-	case ngapType.DownlinkNASTransportIEsTypeValuePresentOldAMF:
+	case ngapType.DownlinkNASTransportIEsPresentOldAMF:
 		if value.OldAMF == nil {
 			return binData, bitEnd, errors.New("DownlinkNASTransportIEsTypeValue: OldAMF: NIL")
 		}
@@ -2124,7 +2124,7 @@ func DownlinkNASTransportIEsTypeValue(value ngapType.DownlinkNASTransportIEsType
 		if err != nil {
 			return binData, bitEnd, errors.New("DownlinkNASTransportIEsTypeValue: " + err.Error())
 		}
-	case ngapType.DownlinkNASTransportIEsTypeValuePresentRANPagingPriority:
+	case ngapType.DownlinkNASTransportIEsPresentRANPagingPriority:
 		if value.RANPagingPriority == nil {
 			return binData, bitEnd, errors.New("DownlinkNASTransportIEsTypeValue: RANPagingPriority: NIL")
 		}
@@ -2132,7 +2132,7 @@ func DownlinkNASTransportIEsTypeValue(value ngapType.DownlinkNASTransportIEsType
 		if err != nil {
 			return binData, bitEnd, errors.New("DownlinkNASTransportIEsTypeValue: " + err.Error())
 		}
-	case ngapType.DownlinkNASTransportIEsTypeValuePresentNASPDU:
+	case ngapType.DownlinkNASTransportIEsPresentNASPDU:
 		if value.NASPDU == nil {
 			return binData, bitEnd, errors.New("DownlinkNASTransportIEsTypeValue: NASPDU: NIL")
 		}
@@ -2140,7 +2140,7 @@ func DownlinkNASTransportIEsTypeValue(value ngapType.DownlinkNASTransportIEsType
 		if err != nil {
 			return binData, bitEnd, errors.New("DownlinkNASTransportIEsTypeValue: " + err.Error())
 		}
-	case ngapType.DownlinkNASTransportIEsTypeValuePresentMobilityRestrictionList:
+	case ngapType.DownlinkNASTransportIEsPresentMobilityRestrictionList:
 		if value.MobilityRestrictionList == nil {
 			return binData, bitEnd, errors.New("DownlinkNASTransportIEsTypeValue: MobilityRestrictionList: NIL")
 		}
@@ -2148,7 +2148,7 @@ func DownlinkNASTransportIEsTypeValue(value ngapType.DownlinkNASTransportIEsType
 		if err != nil {
 			return binData, bitEnd, errors.New("DownlinkNASTransportIEsTypeValue: " + err.Error())
 		}
-	case ngapType.DownlinkNASTransportIEsTypeValuePresentIndexToRFSP:
+	case ngapType.DownlinkNASTransportIEsPresentIndexToRFSP:
 		if value.IndexToRFSP == nil {
 			return binData, bitEnd, errors.New("DownlinkNASTransportIEsTypeValue: IndexToRFSP: NIL")
 		}
@@ -2156,7 +2156,7 @@ func DownlinkNASTransportIEsTypeValue(value ngapType.DownlinkNASTransportIEsType
 		if err != nil {
 			return binData, bitEnd, errors.New("DownlinkNASTransportIEsTypeValue: " + err.Error())
 		}
-	case ngapType.DownlinkNASTransportIEsTypeValuePresentUEAggregateMaximumBitRate:
+	case ngapType.DownlinkNASTransportIEsPresentUEAggregateMaximumBitRate:
 		if value.UEAggregateMaximumBitRate == nil {
 			return binData, bitEnd, errors.New("DownlinkNASTransportIEsTypeValue: UEAggregateMaximumBitRate: NIL")
 		}
@@ -2164,7 +2164,7 @@ func DownlinkNASTransportIEsTypeValue(value ngapType.DownlinkNASTransportIEsType
 		if err != nil {
 			return binData, bitEnd, errors.New("DownlinkNASTransportIEsTypeValue: " + err.Error())
 		}
-	case ngapType.DownlinkNASTransportIEsTypeValuePresentAllowedNSSAI:
+	case ngapType.DownlinkNASTransportIEsPresentAllowedNSSAI:
 		if value.AllowedNSSAI == nil {
 			return binData, bitEnd, errors.New("DownlinkNASTransportIEsTypeValue: AllowedNSSAI: NIL")
 		}
@@ -2172,7 +2172,7 @@ func DownlinkNASTransportIEsTypeValue(value ngapType.DownlinkNASTransportIEsType
 		if err != nil {
 			return binData, bitEnd, errors.New("DownlinkNASTransportIEsTypeValue: " + err.Error())
 		}
-	case ngapType.DownlinkNASTransportIEsTypeValuePresentSRVCCOperationPossible:
+	case ngapType.DownlinkNASTransportIEsPresentSRVCCOperationPossible:
 		if value.SRVCCOperationPossible == nil {
 			return binData, bitEnd, errors.New("DownlinkNASTransportIEsTypeValue: SRVCCOperationPossible: NIL")
 		}
@@ -2189,7 +2189,7 @@ func DownlinkNASTransportIEsTypeValue(value ngapType.DownlinkNASTransportIEsType
 func UplinkNASTransportIEsTypeValue(value ngapType.UplinkNASTransportIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.UplinkNASTransportIEsTypeValuePresentAMFUENGAPID:
+	case ngapType.UplinkNASTransportIEsPresentAMFUENGAPID:
 		if value.AMFUENGAPID == nil {
 			return binData, bitEnd, errors.New("UplinkNASTransportIEsTypeValue: AMFUENGAPID: NIL")
 		}
@@ -2197,7 +2197,7 @@ func UplinkNASTransportIEsTypeValue(value ngapType.UplinkNASTransportIEsTypeValu
 		if err != nil {
 			return binData, bitEnd, errors.New("UplinkNASTransportIEsTypeValue: " + err.Error())
 		}
-	case ngapType.UplinkNASTransportIEsTypeValuePresentRANUENGAPID:
+	case ngapType.UplinkNASTransportIEsPresentRANUENGAPID:
 		if value.RANUENGAPID == nil {
 			return binData, bitEnd, errors.New("UplinkNASTransportIEsTypeValue: RANUENGAPID: NIL")
 		}
@@ -2205,7 +2205,7 @@ func UplinkNASTransportIEsTypeValue(value ngapType.UplinkNASTransportIEsTypeValu
 		if err != nil {
 			return binData, bitEnd, errors.New("UplinkNASTransportIEsTypeValue: " + err.Error())
 		}
-	case ngapType.UplinkNASTransportIEsTypeValuePresentNASPDU:
+	case ngapType.UplinkNASTransportIEsPresentNASPDU:
 		if value.NASPDU == nil {
 			return binData, bitEnd, errors.New("UplinkNASTransportIEsTypeValue: NASPDU: NIL")
 		}
@@ -2213,7 +2213,7 @@ func UplinkNASTransportIEsTypeValue(value ngapType.UplinkNASTransportIEsTypeValu
 		if err != nil {
 			return binData, bitEnd, errors.New("UplinkNASTransportIEsTypeValue: " + err.Error())
 		}
-	case ngapType.UplinkNASTransportIEsTypeValuePresentUserLocationInformation:
+	case ngapType.UplinkNASTransportIEsPresentUserLocationInformation:
 		if value.UserLocationInformation == nil {
 			return binData, bitEnd, errors.New("UplinkNASTransportIEsTypeValue: UserLocationInformation: NIL")
 		}
@@ -2230,7 +2230,7 @@ func UplinkNASTransportIEsTypeValue(value ngapType.UplinkNASTransportIEsTypeValu
 func NASNonDeliveryIndicationIEsTypeValue(value ngapType.NASNonDeliveryIndicationIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.NASNonDeliveryIndicationIEsTypeValuePresentAMFUENGAPID:
+	case ngapType.NASNonDeliveryIndicationIEsPresentAMFUENGAPID:
 		if value.AMFUENGAPID == nil {
 			return binData, bitEnd, errors.New("NASNonDeliveryIndicationIEsTypeValue: AMFUENGAPID: NIL")
 		}
@@ -2238,7 +2238,7 @@ func NASNonDeliveryIndicationIEsTypeValue(value ngapType.NASNonDeliveryIndicatio
 		if err != nil {
 			return binData, bitEnd, errors.New("NASNonDeliveryIndicationIEsTypeValue: " + err.Error())
 		}
-	case ngapType.NASNonDeliveryIndicationIEsTypeValuePresentRANUENGAPID:
+	case ngapType.NASNonDeliveryIndicationIEsPresentRANUENGAPID:
 		if value.RANUENGAPID == nil {
 			return binData, bitEnd, errors.New("NASNonDeliveryIndicationIEsTypeValue: RANUENGAPID: NIL")
 		}
@@ -2246,7 +2246,7 @@ func NASNonDeliveryIndicationIEsTypeValue(value ngapType.NASNonDeliveryIndicatio
 		if err != nil {
 			return binData, bitEnd, errors.New("NASNonDeliveryIndicationIEsTypeValue: " + err.Error())
 		}
-	case ngapType.NASNonDeliveryIndicationIEsTypeValuePresentNASPDU:
+	case ngapType.NASNonDeliveryIndicationIEsPresentNASPDU:
 		if value.NASPDU == nil {
 			return binData, bitEnd, errors.New("NASNonDeliveryIndicationIEsTypeValue: NASPDU: NIL")
 		}
@@ -2254,7 +2254,7 @@ func NASNonDeliveryIndicationIEsTypeValue(value ngapType.NASNonDeliveryIndicatio
 		if err != nil {
 			return binData, bitEnd, errors.New("NASNonDeliveryIndicationIEsTypeValue: " + err.Error())
 		}
-	case ngapType.NASNonDeliveryIndicationIEsTypeValuePresentCause:
+	case ngapType.NASNonDeliveryIndicationIEsPresentCause:
 		if value.Cause == nil {
 			return binData, bitEnd, errors.New("NASNonDeliveryIndicationIEsTypeValue: Cause: NIL")
 		}
@@ -2271,7 +2271,7 @@ func NASNonDeliveryIndicationIEsTypeValue(value ngapType.NASNonDeliveryIndicatio
 func RerouteNASRequestIEsTypeValue(value ngapType.RerouteNASRequestIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.RerouteNASRequestIEsTypeValuePresentRANUENGAPID:
+	case ngapType.RerouteNASRequestIEsPresentRANUENGAPID:
 		if value.RANUENGAPID == nil {
 			return binData, bitEnd, errors.New("RerouteNASRequestIEsTypeValue: RANUENGAPID: NIL")
 		}
@@ -2279,7 +2279,7 @@ func RerouteNASRequestIEsTypeValue(value ngapType.RerouteNASRequestIEsTypeValue,
 		if err != nil {
 			return binData, bitEnd, errors.New("RerouteNASRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.RerouteNASRequestIEsTypeValuePresentAMFUENGAPID:
+	case ngapType.RerouteNASRequestIEsPresentAMFUENGAPID:
 		if value.AMFUENGAPID == nil {
 			return binData, bitEnd, errors.New("RerouteNASRequestIEsTypeValue: AMFUENGAPID: NIL")
 		}
@@ -2287,7 +2287,7 @@ func RerouteNASRequestIEsTypeValue(value ngapType.RerouteNASRequestIEsTypeValue,
 		if err != nil {
 			return binData, bitEnd, errors.New("RerouteNASRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.RerouteNASRequestIEsTypeValuePresentNGAPMessage:
+	case ngapType.RerouteNASRequestIEsPresentNGAPMessage:
 		if value.NGAPMessage == nil {
 			return binData, bitEnd, errors.New("RerouteNASRequestIEsTypeValue: NGAPMessage: NIL")
 		}
@@ -2295,7 +2295,7 @@ func RerouteNASRequestIEsTypeValue(value ngapType.RerouteNASRequestIEsTypeValue,
 		if err != nil {
 			return binData, bitEnd, errors.New("RerouteNASRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.RerouteNASRequestIEsTypeValuePresentAMFSetID:
+	case ngapType.RerouteNASRequestIEsPresentAMFSetID:
 		if value.AMFSetID == nil {
 			return binData, bitEnd, errors.New("RerouteNASRequestIEsTypeValue: AMFSetID: NIL")
 		}
@@ -2303,7 +2303,7 @@ func RerouteNASRequestIEsTypeValue(value ngapType.RerouteNASRequestIEsTypeValue,
 		if err != nil {
 			return binData, bitEnd, errors.New("RerouteNASRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.RerouteNASRequestIEsTypeValuePresentAllowedNSSAI:
+	case ngapType.RerouteNASRequestIEsPresentAllowedNSSAI:
 		if value.AllowedNSSAI == nil {
 			return binData, bitEnd, errors.New("RerouteNASRequestIEsTypeValue: AllowedNSSAI: NIL")
 		}
@@ -2311,7 +2311,7 @@ func RerouteNASRequestIEsTypeValue(value ngapType.RerouteNASRequestIEsTypeValue,
 		if err != nil {
 			return binData, bitEnd, errors.New("RerouteNASRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.RerouteNASRequestIEsTypeValuePresentSourceToTargetAMFInformationReroute:
+	case ngapType.RerouteNASRequestIEsPresentSourceToTargetAMFInformationReroute:
 		if value.SourceToTargetAMFInformationReroute == nil {
 			return binData, bitEnd, errors.New("RerouteNASRequestIEsTypeValue: SourceToTargetAMFInformationReroute: NIL")
 		}
@@ -2328,7 +2328,7 @@ func RerouteNASRequestIEsTypeValue(value ngapType.RerouteNASRequestIEsTypeValue,
 func NGSetupRequestIEsTypeValue(value ngapType.NGSetupRequestIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.NGSetupRequestIEsTypeValuePresentGlobalRANNodeID:
+	case ngapType.NGSetupRequestIEsPresentGlobalRANNodeID:
 		if value.GlobalRANNodeID == nil {
 			return binData, bitEnd, errors.New("NGSetupRequestIEsTypeValue: GlobalRANNodeID: NIL")
 		}
@@ -2336,7 +2336,7 @@ func NGSetupRequestIEsTypeValue(value ngapType.NGSetupRequestIEsTypeValue, binDa
 		if err != nil {
 			return binData, bitEnd, errors.New("NGSetupRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.NGSetupRequestIEsTypeValuePresentRANNodeName:
+	case ngapType.NGSetupRequestIEsPresentRANNodeName:
 		if value.RANNodeName == nil {
 			return binData, bitEnd, errors.New("NGSetupRequestIEsTypeValue: RANNodeName: NIL")
 		}
@@ -2344,7 +2344,7 @@ func NGSetupRequestIEsTypeValue(value ngapType.NGSetupRequestIEsTypeValue, binDa
 		if err != nil {
 			return binData, bitEnd, errors.New("NGSetupRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.NGSetupRequestIEsTypeValuePresentSupportedTAList:
+	case ngapType.NGSetupRequestIEsPresentSupportedTAList:
 		if value.SupportedTAList == nil {
 			return binData, bitEnd, errors.New("NGSetupRequestIEsTypeValue: SupportedTAList: NIL")
 		}
@@ -2352,7 +2352,7 @@ func NGSetupRequestIEsTypeValue(value ngapType.NGSetupRequestIEsTypeValue, binDa
 		if err != nil {
 			return binData, bitEnd, errors.New("NGSetupRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.NGSetupRequestIEsTypeValuePresentDefaultPagingDRX:
+	case ngapType.NGSetupRequestIEsPresentDefaultPagingDRX:
 		if value.DefaultPagingDRX == nil {
 			return binData, bitEnd, errors.New("NGSetupRequestIEsTypeValue: DefaultPagingDRX: NIL")
 		}
@@ -2360,7 +2360,7 @@ func NGSetupRequestIEsTypeValue(value ngapType.NGSetupRequestIEsTypeValue, binDa
 		if err != nil {
 			return binData, bitEnd, errors.New("NGSetupRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.NGSetupRequestIEsTypeValuePresentUERetentionInformation:
+	case ngapType.NGSetupRequestIEsPresentUERetentionInformation:
 		if value.UERetentionInformation == nil {
 			return binData, bitEnd, errors.New("NGSetupRequestIEsTypeValue: UERetentionInformation: NIL")
 		}
@@ -2377,7 +2377,7 @@ func NGSetupRequestIEsTypeValue(value ngapType.NGSetupRequestIEsTypeValue, binDa
 func NGSetupResponseIEsTypeValue(value ngapType.NGSetupResponseIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.NGSetupResponseIEsTypeValuePresentAMFName:
+	case ngapType.NGSetupResponseIEsPresentAMFName:
 		if value.AMFName == nil {
 			return binData, bitEnd, errors.New("NGSetupResponseIEsTypeValue: AMFName: NIL")
 		}
@@ -2385,7 +2385,7 @@ func NGSetupResponseIEsTypeValue(value ngapType.NGSetupResponseIEsTypeValue, bin
 		if err != nil {
 			return binData, bitEnd, errors.New("NGSetupResponseIEsTypeValue: " + err.Error())
 		}
-	case ngapType.NGSetupResponseIEsTypeValuePresentServedGUAMIList:
+	case ngapType.NGSetupResponseIEsPresentServedGUAMIList:
 		if value.ServedGUAMIList == nil {
 			return binData, bitEnd, errors.New("NGSetupResponseIEsTypeValue: ServedGUAMIList: NIL")
 		}
@@ -2393,7 +2393,7 @@ func NGSetupResponseIEsTypeValue(value ngapType.NGSetupResponseIEsTypeValue, bin
 		if err != nil {
 			return binData, bitEnd, errors.New("NGSetupResponseIEsTypeValue: " + err.Error())
 		}
-	case ngapType.NGSetupResponseIEsTypeValuePresentRelativeAMFCapacity:
+	case ngapType.NGSetupResponseIEsPresentRelativeAMFCapacity:
 		if value.RelativeAMFCapacity == nil {
 			return binData, bitEnd, errors.New("NGSetupResponseIEsTypeValue: RelativeAMFCapacity: NIL")
 		}
@@ -2401,7 +2401,7 @@ func NGSetupResponseIEsTypeValue(value ngapType.NGSetupResponseIEsTypeValue, bin
 		if err != nil {
 			return binData, bitEnd, errors.New("NGSetupResponseIEsTypeValue: " + err.Error())
 		}
-	case ngapType.NGSetupResponseIEsTypeValuePresentPLMNSupportList:
+	case ngapType.NGSetupResponseIEsPresentPLMNSupportList:
 		if value.PLMNSupportList == nil {
 			return binData, bitEnd, errors.New("NGSetupResponseIEsTypeValue: PLMNSupportList: NIL")
 		}
@@ -2409,7 +2409,7 @@ func NGSetupResponseIEsTypeValue(value ngapType.NGSetupResponseIEsTypeValue, bin
 		if err != nil {
 			return binData, bitEnd, errors.New("NGSetupResponseIEsTypeValue: " + err.Error())
 		}
-	case ngapType.NGSetupResponseIEsTypeValuePresentCriticalityDiagnostics:
+	case ngapType.NGSetupResponseIEsPresentCriticalityDiagnostics:
 		if value.CriticalityDiagnostics == nil {
 			return binData, bitEnd, errors.New("NGSetupResponseIEsTypeValue: CriticalityDiagnostics: NIL")
 		}
@@ -2417,7 +2417,7 @@ func NGSetupResponseIEsTypeValue(value ngapType.NGSetupResponseIEsTypeValue, bin
 		if err != nil {
 			return binData, bitEnd, errors.New("NGSetupResponseIEsTypeValue: " + err.Error())
 		}
-	case ngapType.NGSetupResponseIEsTypeValuePresentUERetentionInformation:
+	case ngapType.NGSetupResponseIEsPresentUERetentionInformation:
 		if value.UERetentionInformation == nil {
 			return binData, bitEnd, errors.New("NGSetupResponseIEsTypeValue: UERetentionInformation: NIL")
 		}
@@ -2434,7 +2434,7 @@ func NGSetupResponseIEsTypeValue(value ngapType.NGSetupResponseIEsTypeValue, bin
 func NGSetupFailureIEsTypeValue(value ngapType.NGSetupFailureIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.NGSetupFailureIEsTypeValuePresentCause:
+	case ngapType.NGSetupFailureIEsPresentCause:
 		if value.Cause == nil {
 			return binData, bitEnd, errors.New("NGSetupFailureIEsTypeValue: Cause: NIL")
 		}
@@ -2442,7 +2442,7 @@ func NGSetupFailureIEsTypeValue(value ngapType.NGSetupFailureIEsTypeValue, binDa
 		if err != nil {
 			return binData, bitEnd, errors.New("NGSetupFailureIEsTypeValue: " + err.Error())
 		}
-	case ngapType.NGSetupFailureIEsTypeValuePresentTimeToWait:
+	case ngapType.NGSetupFailureIEsPresentTimeToWait:
 		if value.TimeToWait == nil {
 			return binData, bitEnd, errors.New("NGSetupFailureIEsTypeValue: TimeToWait: NIL")
 		}
@@ -2450,7 +2450,7 @@ func NGSetupFailureIEsTypeValue(value ngapType.NGSetupFailureIEsTypeValue, binDa
 		if err != nil {
 			return binData, bitEnd, errors.New("NGSetupFailureIEsTypeValue: " + err.Error())
 		}
-	case ngapType.NGSetupFailureIEsTypeValuePresentCriticalityDiagnostics:
+	case ngapType.NGSetupFailureIEsPresentCriticalityDiagnostics:
 		if value.CriticalityDiagnostics == nil {
 			return binData, bitEnd, errors.New("NGSetupFailureIEsTypeValue: CriticalityDiagnostics: NIL")
 		}
@@ -2467,7 +2467,7 @@ func NGSetupFailureIEsTypeValue(value ngapType.NGSetupFailureIEsTypeValue, binDa
 func RANConfigurationUpdateIEsTypeValue(value ngapType.RANConfigurationUpdateIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.RANConfigurationUpdateIEsTypeValuePresentRANNodeName:
+	case ngapType.RANConfigurationUpdateIEsPresentRANNodeName:
 		if value.RANNodeName == nil {
 			return binData, bitEnd, errors.New("RANConfigurationUpdateIEsTypeValue: RANNodeName: NIL")
 		}
@@ -2475,7 +2475,7 @@ func RANConfigurationUpdateIEsTypeValue(value ngapType.RANConfigurationUpdateIEs
 		if err != nil {
 			return binData, bitEnd, errors.New("RANConfigurationUpdateIEsTypeValue: " + err.Error())
 		}
-	case ngapType.RANConfigurationUpdateIEsTypeValuePresentSupportedTAList:
+	case ngapType.RANConfigurationUpdateIEsPresentSupportedTAList:
 		if value.SupportedTAList == nil {
 			return binData, bitEnd, errors.New("RANConfigurationUpdateIEsTypeValue: SupportedTAList: NIL")
 		}
@@ -2483,7 +2483,7 @@ func RANConfigurationUpdateIEsTypeValue(value ngapType.RANConfigurationUpdateIEs
 		if err != nil {
 			return binData, bitEnd, errors.New("RANConfigurationUpdateIEsTypeValue: " + err.Error())
 		}
-	case ngapType.RANConfigurationUpdateIEsTypeValuePresentDefaultPagingDRX:
+	case ngapType.RANConfigurationUpdateIEsPresentDefaultPagingDRX:
 		if value.DefaultPagingDRX == nil {
 			return binData, bitEnd, errors.New("RANConfigurationUpdateIEsTypeValue: DefaultPagingDRX: NIL")
 		}
@@ -2491,7 +2491,7 @@ func RANConfigurationUpdateIEsTypeValue(value ngapType.RANConfigurationUpdateIEs
 		if err != nil {
 			return binData, bitEnd, errors.New("RANConfigurationUpdateIEsTypeValue: " + err.Error())
 		}
-	case ngapType.RANConfigurationUpdateIEsTypeValuePresentGlobalRANNodeID:
+	case ngapType.RANConfigurationUpdateIEsPresentGlobalRANNodeID:
 		if value.GlobalRANNodeID == nil {
 			return binData, bitEnd, errors.New("RANConfigurationUpdateIEsTypeValue: GlobalRANNodeID: NIL")
 		}
@@ -2499,7 +2499,7 @@ func RANConfigurationUpdateIEsTypeValue(value ngapType.RANConfigurationUpdateIEs
 		if err != nil {
 			return binData, bitEnd, errors.New("RANConfigurationUpdateIEsTypeValue: " + err.Error())
 		}
-	case ngapType.RANConfigurationUpdateIEsTypeValuePresentNGRANTNLAssociationToRemoveList:
+	case ngapType.RANConfigurationUpdateIEsPresentNGRANTNLAssociationToRemoveList:
 		if value.NGRANTNLAssociationToRemoveList == nil {
 			return binData, bitEnd, errors.New("RANConfigurationUpdateIEsTypeValue: NGRANTNLAssociationToRemoveList: NIL")
 		}
@@ -2516,7 +2516,7 @@ func RANConfigurationUpdateIEsTypeValue(value ngapType.RANConfigurationUpdateIEs
 func RANConfigurationUpdateAcknowledgeIEsTypeValue(value ngapType.RANConfigurationUpdateAcknowledgeIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.RANConfigurationUpdateAcknowledgeIEsTypeValuePresentCriticalityDiagnostics:
+	case ngapType.RANConfigurationUpdateAcknowledgeIEsPresentCriticalityDiagnostics:
 		if value.CriticalityDiagnostics == nil {
 			return binData, bitEnd, errors.New("RANConfigurationUpdateAcknowledgeIEsTypeValue: CriticalityDiagnostics: NIL")
 		}
@@ -2533,7 +2533,7 @@ func RANConfigurationUpdateAcknowledgeIEsTypeValue(value ngapType.RANConfigurati
 func RANConfigurationUpdateFailureIEsTypeValue(value ngapType.RANConfigurationUpdateFailureIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.RANConfigurationUpdateFailureIEsTypeValuePresentCause:
+	case ngapType.RANConfigurationUpdateFailureIEsPresentCause:
 		if value.Cause == nil {
 			return binData, bitEnd, errors.New("RANConfigurationUpdateFailureIEsTypeValue: Cause: NIL")
 		}
@@ -2541,7 +2541,7 @@ func RANConfigurationUpdateFailureIEsTypeValue(value ngapType.RANConfigurationUp
 		if err != nil {
 			return binData, bitEnd, errors.New("RANConfigurationUpdateFailureIEsTypeValue: " + err.Error())
 		}
-	case ngapType.RANConfigurationUpdateFailureIEsTypeValuePresentTimeToWait:
+	case ngapType.RANConfigurationUpdateFailureIEsPresentTimeToWait:
 		if value.TimeToWait == nil {
 			return binData, bitEnd, errors.New("RANConfigurationUpdateFailureIEsTypeValue: TimeToWait: NIL")
 		}
@@ -2549,7 +2549,7 @@ func RANConfigurationUpdateFailureIEsTypeValue(value ngapType.RANConfigurationUp
 		if err != nil {
 			return binData, bitEnd, errors.New("RANConfigurationUpdateFailureIEsTypeValue: " + err.Error())
 		}
-	case ngapType.RANConfigurationUpdateFailureIEsTypeValuePresentCriticalityDiagnostics:
+	case ngapType.RANConfigurationUpdateFailureIEsPresentCriticalityDiagnostics:
 		if value.CriticalityDiagnostics == nil {
 			return binData, bitEnd, errors.New("RANConfigurationUpdateFailureIEsTypeValue: CriticalityDiagnostics: NIL")
 		}
@@ -2566,7 +2566,7 @@ func RANConfigurationUpdateFailureIEsTypeValue(value ngapType.RANConfigurationUp
 func AMFConfigurationUpdateIEsTypeValue(value ngapType.AMFConfigurationUpdateIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.AMFConfigurationUpdateIEsTypeValuePresentAMFName:
+	case ngapType.AMFConfigurationUpdateIEsPresentAMFName:
 		if value.AMFName == nil {
 			return binData, bitEnd, errors.New("AMFConfigurationUpdateIEsTypeValue: AMFName: NIL")
 		}
@@ -2574,7 +2574,7 @@ func AMFConfigurationUpdateIEsTypeValue(value ngapType.AMFConfigurationUpdateIEs
 		if err != nil {
 			return binData, bitEnd, errors.New("AMFConfigurationUpdateIEsTypeValue: " + err.Error())
 		}
-	case ngapType.AMFConfigurationUpdateIEsTypeValuePresentServedGUAMIList:
+	case ngapType.AMFConfigurationUpdateIEsPresentServedGUAMIList:
 		if value.ServedGUAMIList == nil {
 			return binData, bitEnd, errors.New("AMFConfigurationUpdateIEsTypeValue: ServedGUAMIList: NIL")
 		}
@@ -2582,7 +2582,7 @@ func AMFConfigurationUpdateIEsTypeValue(value ngapType.AMFConfigurationUpdateIEs
 		if err != nil {
 			return binData, bitEnd, errors.New("AMFConfigurationUpdateIEsTypeValue: " + err.Error())
 		}
-	case ngapType.AMFConfigurationUpdateIEsTypeValuePresentRelativeAMFCapacity:
+	case ngapType.AMFConfigurationUpdateIEsPresentRelativeAMFCapacity:
 		if value.RelativeAMFCapacity == nil {
 			return binData, bitEnd, errors.New("AMFConfigurationUpdateIEsTypeValue: RelativeAMFCapacity: NIL")
 		}
@@ -2590,7 +2590,7 @@ func AMFConfigurationUpdateIEsTypeValue(value ngapType.AMFConfigurationUpdateIEs
 		if err != nil {
 			return binData, bitEnd, errors.New("AMFConfigurationUpdateIEsTypeValue: " + err.Error())
 		}
-	case ngapType.AMFConfigurationUpdateIEsTypeValuePresentPLMNSupportList:
+	case ngapType.AMFConfigurationUpdateIEsPresentPLMNSupportList:
 		if value.PLMNSupportList == nil {
 			return binData, bitEnd, errors.New("AMFConfigurationUpdateIEsTypeValue: PLMNSupportList: NIL")
 		}
@@ -2598,7 +2598,7 @@ func AMFConfigurationUpdateIEsTypeValue(value ngapType.AMFConfigurationUpdateIEs
 		if err != nil {
 			return binData, bitEnd, errors.New("AMFConfigurationUpdateIEsTypeValue: " + err.Error())
 		}
-	case ngapType.AMFConfigurationUpdateIEsTypeValuePresentAMFTNLAssociationToAddList:
+	case ngapType.AMFConfigurationUpdateIEsPresentAMFTNLAssociationToAddList:
 		if value.AMFTNLAssociationToAddList == nil {
 			return binData, bitEnd, errors.New("AMFConfigurationUpdateIEsTypeValue: AMFTNLAssociationToAddList: NIL")
 		}
@@ -2606,7 +2606,7 @@ func AMFConfigurationUpdateIEsTypeValue(value ngapType.AMFConfigurationUpdateIEs
 		if err != nil {
 			return binData, bitEnd, errors.New("AMFConfigurationUpdateIEsTypeValue: " + err.Error())
 		}
-	case ngapType.AMFConfigurationUpdateIEsTypeValuePresentAMFTNLAssociationToRemoveList:
+	case ngapType.AMFConfigurationUpdateIEsPresentAMFTNLAssociationToRemoveList:
 		if value.AMFTNLAssociationToRemoveList == nil {
 			return binData, bitEnd, errors.New("AMFConfigurationUpdateIEsTypeValue: AMFTNLAssociationToRemoveList: NIL")
 		}
@@ -2614,7 +2614,7 @@ func AMFConfigurationUpdateIEsTypeValue(value ngapType.AMFConfigurationUpdateIEs
 		if err != nil {
 			return binData, bitEnd, errors.New("AMFConfigurationUpdateIEsTypeValue: " + err.Error())
 		}
-	case ngapType.AMFConfigurationUpdateIEsTypeValuePresentAMFTNLAssociationToUpdateList:
+	case ngapType.AMFConfigurationUpdateIEsPresentAMFTNLAssociationToUpdateList:
 		if value.AMFTNLAssociationToUpdateList == nil {
 			return binData, bitEnd, errors.New("AMFConfigurationUpdateIEsTypeValue: AMFTNLAssociationToUpdateList: NIL")
 		}
@@ -2631,7 +2631,7 @@ func AMFConfigurationUpdateIEsTypeValue(value ngapType.AMFConfigurationUpdateIEs
 func AMFConfigurationUpdateAcknowledgeIEsTypeValue(value ngapType.AMFConfigurationUpdateAcknowledgeIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.AMFConfigurationUpdateAcknowledgeIEsTypeValuePresentAMFTNLAssociationSetupList:
+	case ngapType.AMFConfigurationUpdateAcknowledgeIEsPresentAMFTNLAssociationSetupList:
 		if value.AMFTNLAssociationSetupList == nil {
 			return binData, bitEnd, errors.New("AMFConfigurationUpdateAcknowledgeIEsTypeValue: AMFTNLAssociationSetupList: NIL")
 		}
@@ -2639,7 +2639,7 @@ func AMFConfigurationUpdateAcknowledgeIEsTypeValue(value ngapType.AMFConfigurati
 		if err != nil {
 			return binData, bitEnd, errors.New("AMFConfigurationUpdateAcknowledgeIEsTypeValue: " + err.Error())
 		}
-	case ngapType.AMFConfigurationUpdateAcknowledgeIEsTypeValuePresentAMFTNLAssociationFailedToSetupList:
+	case ngapType.AMFConfigurationUpdateAcknowledgeIEsPresentAMFTNLAssociationFailedToSetupList:
 		if value.AMFTNLAssociationFailedToSetupList == nil {
 			return binData, bitEnd, errors.New("AMFConfigurationUpdateAcknowledgeIEsTypeValue: AMFTNLAssociationFailedToSetupList: NIL")
 		}
@@ -2647,7 +2647,7 @@ func AMFConfigurationUpdateAcknowledgeIEsTypeValue(value ngapType.AMFConfigurati
 		if err != nil {
 			return binData, bitEnd, errors.New("AMFConfigurationUpdateAcknowledgeIEsTypeValue: " + err.Error())
 		}
-	case ngapType.AMFConfigurationUpdateAcknowledgeIEsTypeValuePresentCriticalityDiagnostics:
+	case ngapType.AMFConfigurationUpdateAcknowledgeIEsPresentCriticalityDiagnostics:
 		if value.CriticalityDiagnostics == nil {
 			return binData, bitEnd, errors.New("AMFConfigurationUpdateAcknowledgeIEsTypeValue: CriticalityDiagnostics: NIL")
 		}
@@ -2664,7 +2664,7 @@ func AMFConfigurationUpdateAcknowledgeIEsTypeValue(value ngapType.AMFConfigurati
 func AMFConfigurationUpdateFailureIEsTypeValue(value ngapType.AMFConfigurationUpdateFailureIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.AMFConfigurationUpdateFailureIEsTypeValuePresentCause:
+	case ngapType.AMFConfigurationUpdateFailureIEsPresentCause:
 		if value.Cause == nil {
 			return binData, bitEnd, errors.New("AMFConfigurationUpdateFailureIEsTypeValue: Cause: NIL")
 		}
@@ -2672,7 +2672,7 @@ func AMFConfigurationUpdateFailureIEsTypeValue(value ngapType.AMFConfigurationUp
 		if err != nil {
 			return binData, bitEnd, errors.New("AMFConfigurationUpdateFailureIEsTypeValue: " + err.Error())
 		}
-	case ngapType.AMFConfigurationUpdateFailureIEsTypeValuePresentTimeToWait:
+	case ngapType.AMFConfigurationUpdateFailureIEsPresentTimeToWait:
 		if value.TimeToWait == nil {
 			return binData, bitEnd, errors.New("AMFConfigurationUpdateFailureIEsTypeValue: TimeToWait: NIL")
 		}
@@ -2680,7 +2680,7 @@ func AMFConfigurationUpdateFailureIEsTypeValue(value ngapType.AMFConfigurationUp
 		if err != nil {
 			return binData, bitEnd, errors.New("AMFConfigurationUpdateFailureIEsTypeValue: " + err.Error())
 		}
-	case ngapType.AMFConfigurationUpdateFailureIEsTypeValuePresentCriticalityDiagnostics:
+	case ngapType.AMFConfigurationUpdateFailureIEsPresentCriticalityDiagnostics:
 		if value.CriticalityDiagnostics == nil {
 			return binData, bitEnd, errors.New("AMFConfigurationUpdateFailureIEsTypeValue: CriticalityDiagnostics: NIL")
 		}
@@ -2697,7 +2697,7 @@ func AMFConfigurationUpdateFailureIEsTypeValue(value ngapType.AMFConfigurationUp
 func AMFStatusIndicationIEsTypeValue(value ngapType.AMFStatusIndicationIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.AMFStatusIndicationIEsTypeValuePresentUnavailableGUAMIList:
+	case ngapType.AMFStatusIndicationIEsPresentUnavailableGUAMIList:
 		if value.UnavailableGUAMIList == nil {
 			return binData, bitEnd, errors.New("AMFStatusIndicationIEsTypeValue: UnavailableGUAMIList: NIL")
 		}
@@ -2714,7 +2714,7 @@ func AMFStatusIndicationIEsTypeValue(value ngapType.AMFStatusIndicationIEsTypeVa
 func NGResetIEsTypeValue(value ngapType.NGResetIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.NGResetIEsTypeValuePresentCause:
+	case ngapType.NGResetIEsPresentCause:
 		if value.Cause == nil {
 			return binData, bitEnd, errors.New("NGResetIEsTypeValue: Cause: NIL")
 		}
@@ -2722,7 +2722,7 @@ func NGResetIEsTypeValue(value ngapType.NGResetIEsTypeValue, binData []byte, bit
 		if err != nil {
 			return binData, bitEnd, errors.New("NGResetIEsTypeValue: " + err.Error())
 		}
-	case ngapType.NGResetIEsTypeValuePresentResetType:
+	case ngapType.NGResetIEsPresentResetType:
 		if value.ResetType == nil {
 			return binData, bitEnd, errors.New("NGResetIEsTypeValue: ResetType: NIL")
 		}
@@ -2739,7 +2739,7 @@ func NGResetIEsTypeValue(value ngapType.NGResetIEsTypeValue, binData []byte, bit
 func NGResetAcknowledgeIEsTypeValue(value ngapType.NGResetAcknowledgeIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.NGResetAcknowledgeIEsTypeValuePresentUEAssociatedLogicalNGConnectionList:
+	case ngapType.NGResetAcknowledgeIEsPresentUEAssociatedLogicalNGConnectionList:
 		if value.UEAssociatedLogicalNGConnectionList == nil {
 			return binData, bitEnd, errors.New("NGResetAcknowledgeIEsTypeValue: UEAssociatedLogicalNGConnectionList: NIL")
 		}
@@ -2747,7 +2747,7 @@ func NGResetAcknowledgeIEsTypeValue(value ngapType.NGResetAcknowledgeIEsTypeValu
 		if err != nil {
 			return binData, bitEnd, errors.New("NGResetAcknowledgeIEsTypeValue: " + err.Error())
 		}
-	case ngapType.NGResetAcknowledgeIEsTypeValuePresentCriticalityDiagnostics:
+	case ngapType.NGResetAcknowledgeIEsPresentCriticalityDiagnostics:
 		if value.CriticalityDiagnostics == nil {
 			return binData, bitEnd, errors.New("NGResetAcknowledgeIEsTypeValue: CriticalityDiagnostics: NIL")
 		}
@@ -2764,7 +2764,7 @@ func NGResetAcknowledgeIEsTypeValue(value ngapType.NGResetAcknowledgeIEsTypeValu
 func ErrorIndicationIEsTypeValue(value ngapType.ErrorIndicationIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.ErrorIndicationIEsTypeValuePresentAMFUENGAPID:
+	case ngapType.ErrorIndicationIEsPresentAMFUENGAPID:
 		if value.AMFUENGAPID == nil {
 			return binData, bitEnd, errors.New("ErrorIndicationIEsTypeValue: AMFUENGAPID: NIL")
 		}
@@ -2772,7 +2772,7 @@ func ErrorIndicationIEsTypeValue(value ngapType.ErrorIndicationIEsTypeValue, bin
 		if err != nil {
 			return binData, bitEnd, errors.New("ErrorIndicationIEsTypeValue: " + err.Error())
 		}
-	case ngapType.ErrorIndicationIEsTypeValuePresentRANUENGAPID:
+	case ngapType.ErrorIndicationIEsPresentRANUENGAPID:
 		if value.RANUENGAPID == nil {
 			return binData, bitEnd, errors.New("ErrorIndicationIEsTypeValue: RANUENGAPID: NIL")
 		}
@@ -2780,7 +2780,7 @@ func ErrorIndicationIEsTypeValue(value ngapType.ErrorIndicationIEsTypeValue, bin
 		if err != nil {
 			return binData, bitEnd, errors.New("ErrorIndicationIEsTypeValue: " + err.Error())
 		}
-	case ngapType.ErrorIndicationIEsTypeValuePresentCause:
+	case ngapType.ErrorIndicationIEsPresentCause:
 		if value.Cause == nil {
 			return binData, bitEnd, errors.New("ErrorIndicationIEsTypeValue: Cause: NIL")
 		}
@@ -2788,7 +2788,7 @@ func ErrorIndicationIEsTypeValue(value ngapType.ErrorIndicationIEsTypeValue, bin
 		if err != nil {
 			return binData, bitEnd, errors.New("ErrorIndicationIEsTypeValue: " + err.Error())
 		}
-	case ngapType.ErrorIndicationIEsTypeValuePresentCriticalityDiagnostics:
+	case ngapType.ErrorIndicationIEsPresentCriticalityDiagnostics:
 		if value.CriticalityDiagnostics == nil {
 			return binData, bitEnd, errors.New("ErrorIndicationIEsTypeValue: CriticalityDiagnostics: NIL")
 		}
@@ -2805,7 +2805,7 @@ func ErrorIndicationIEsTypeValue(value ngapType.ErrorIndicationIEsTypeValue, bin
 func OverloadStartIEsTypeValue(value ngapType.OverloadStartIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.OverloadStartIEsTypeValuePresentAMFOverloadResponse:
+	case ngapType.OverloadStartIEsPresentAMFOverloadResponse:
 		if value.AMFOverloadResponse == nil {
 			return binData, bitEnd, errors.New("OverloadStartIEsTypeValue: AMFOverloadResponse: NIL")
 		}
@@ -2813,7 +2813,7 @@ func OverloadStartIEsTypeValue(value ngapType.OverloadStartIEsTypeValue, binData
 		if err != nil {
 			return binData, bitEnd, errors.New("OverloadStartIEsTypeValue: " + err.Error())
 		}
-	case ngapType.OverloadStartIEsTypeValuePresentAMFTrafficLoadReductionIndication:
+	case ngapType.OverloadStartIEsPresentAMFTrafficLoadReductionIndication:
 		if value.AMFTrafficLoadReductionIndication == nil {
 			return binData, bitEnd, errors.New("OverloadStartIEsTypeValue: AMFTrafficLoadReductionIndication: NIL")
 		}
@@ -2821,7 +2821,7 @@ func OverloadStartIEsTypeValue(value ngapType.OverloadStartIEsTypeValue, binData
 		if err != nil {
 			return binData, bitEnd, errors.New("OverloadStartIEsTypeValue: " + err.Error())
 		}
-	case ngapType.OverloadStartIEsTypeValuePresentOverloadStartNSSAIList:
+	case ngapType.OverloadStartIEsPresentOverloadStartNSSAIList:
 		if value.OverloadStartNSSAIList == nil {
 			return binData, bitEnd, errors.New("OverloadStartIEsTypeValue: OverloadStartNSSAIList: NIL")
 		}
@@ -2847,7 +2847,7 @@ func OverloadStopIEsTypeValue(value ngapType.OverloadStopIEsTypeValue, binData [
 func UplinkRANConfigurationTransferIEsTypeValue(value ngapType.UplinkRANConfigurationTransferIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.UplinkRANConfigurationTransferIEsTypeValuePresentSONConfigurationTransferUL:
+	case ngapType.UplinkRANConfigurationTransferIEsPresentSONConfigurationTransferUL:
 		if value.SONConfigurationTransferUL == nil {
 			return binData, bitEnd, errors.New("UplinkRANConfigurationTransferIEsTypeValue: SONConfigurationTransferUL: NIL")
 		}
@@ -2855,7 +2855,7 @@ func UplinkRANConfigurationTransferIEsTypeValue(value ngapType.UplinkRANConfigur
 		if err != nil {
 			return binData, bitEnd, errors.New("UplinkRANConfigurationTransferIEsTypeValue: " + err.Error())
 		}
-	case ngapType.UplinkRANConfigurationTransferIEsTypeValuePresentENDCSONConfigurationTransferUL:
+	case ngapType.UplinkRANConfigurationTransferIEsPresentENDCSONConfigurationTransferUL:
 		if value.ENDCSONConfigurationTransferUL == nil {
 			return binData, bitEnd, errors.New("UplinkRANConfigurationTransferIEsTypeValue: ENDCSONConfigurationTransferUL: NIL")
 		}
@@ -2872,7 +2872,7 @@ func UplinkRANConfigurationTransferIEsTypeValue(value ngapType.UplinkRANConfigur
 func DownlinkRANConfigurationTransferIEsTypeValue(value ngapType.DownlinkRANConfigurationTransferIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.DownlinkRANConfigurationTransferIEsTypeValuePresentSONConfigurationTransferDL:
+	case ngapType.DownlinkRANConfigurationTransferIEsPresentSONConfigurationTransferDL:
 		if value.SONConfigurationTransferDL == nil {
 			return binData, bitEnd, errors.New("DownlinkRANConfigurationTransferIEsTypeValue: SONConfigurationTransferDL: NIL")
 		}
@@ -2880,7 +2880,7 @@ func DownlinkRANConfigurationTransferIEsTypeValue(value ngapType.DownlinkRANConf
 		if err != nil {
 			return binData, bitEnd, errors.New("DownlinkRANConfigurationTransferIEsTypeValue: " + err.Error())
 		}
-	case ngapType.DownlinkRANConfigurationTransferIEsTypeValuePresentENDCSONConfigurationTransferDL:
+	case ngapType.DownlinkRANConfigurationTransferIEsPresentENDCSONConfigurationTransferDL:
 		if value.ENDCSONConfigurationTransferDL == nil {
 			return binData, bitEnd, errors.New("DownlinkRANConfigurationTransferIEsTypeValue: ENDCSONConfigurationTransferDL: NIL")
 		}
@@ -2897,7 +2897,7 @@ func DownlinkRANConfigurationTransferIEsTypeValue(value ngapType.DownlinkRANConf
 func WriteReplaceWarningRequestIEsTypeValue(value ngapType.WriteReplaceWarningRequestIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.WriteReplaceWarningRequestIEsTypeValuePresentMessageIdentifier:
+	case ngapType.WriteReplaceWarningRequestIEsPresentMessageIdentifier:
 		if value.MessageIdentifier == nil {
 			return binData, bitEnd, errors.New("WriteReplaceWarningRequestIEsTypeValue: MessageIdentifier: NIL")
 		}
@@ -2905,7 +2905,7 @@ func WriteReplaceWarningRequestIEsTypeValue(value ngapType.WriteReplaceWarningRe
 		if err != nil {
 			return binData, bitEnd, errors.New("WriteReplaceWarningRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.WriteReplaceWarningRequestIEsTypeValuePresentSerialNumber:
+	case ngapType.WriteReplaceWarningRequestIEsPresentSerialNumber:
 		if value.SerialNumber == nil {
 			return binData, bitEnd, errors.New("WriteReplaceWarningRequestIEsTypeValue: SerialNumber: NIL")
 		}
@@ -2913,7 +2913,7 @@ func WriteReplaceWarningRequestIEsTypeValue(value ngapType.WriteReplaceWarningRe
 		if err != nil {
 			return binData, bitEnd, errors.New("WriteReplaceWarningRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.WriteReplaceWarningRequestIEsTypeValuePresentWarningAreaList:
+	case ngapType.WriteReplaceWarningRequestIEsPresentWarningAreaList:
 		if value.WarningAreaList == nil {
 			return binData, bitEnd, errors.New("WriteReplaceWarningRequestIEsTypeValue: WarningAreaList: NIL")
 		}
@@ -2921,7 +2921,7 @@ func WriteReplaceWarningRequestIEsTypeValue(value ngapType.WriteReplaceWarningRe
 		if err != nil {
 			return binData, bitEnd, errors.New("WriteReplaceWarningRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.WriteReplaceWarningRequestIEsTypeValuePresentRepetitionPeriod:
+	case ngapType.WriteReplaceWarningRequestIEsPresentRepetitionPeriod:
 		if value.RepetitionPeriod == nil {
 			return binData, bitEnd, errors.New("WriteReplaceWarningRequestIEsTypeValue: RepetitionPeriod: NIL")
 		}
@@ -2929,7 +2929,7 @@ func WriteReplaceWarningRequestIEsTypeValue(value ngapType.WriteReplaceWarningRe
 		if err != nil {
 			return binData, bitEnd, errors.New("WriteReplaceWarningRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.WriteReplaceWarningRequestIEsTypeValuePresentNumberOfBroadcastsRequested:
+	case ngapType.WriteReplaceWarningRequestIEsPresentNumberOfBroadcastsRequested:
 		if value.NumberOfBroadcastsRequested == nil {
 			return binData, bitEnd, errors.New("WriteReplaceWarningRequestIEsTypeValue: NumberOfBroadcastsRequested: NIL")
 		}
@@ -2937,7 +2937,7 @@ func WriteReplaceWarningRequestIEsTypeValue(value ngapType.WriteReplaceWarningRe
 		if err != nil {
 			return binData, bitEnd, errors.New("WriteReplaceWarningRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.WriteReplaceWarningRequestIEsTypeValuePresentWarningType:
+	case ngapType.WriteReplaceWarningRequestIEsPresentWarningType:
 		if value.WarningType == nil {
 			return binData, bitEnd, errors.New("WriteReplaceWarningRequestIEsTypeValue: WarningType: NIL")
 		}
@@ -2945,7 +2945,7 @@ func WriteReplaceWarningRequestIEsTypeValue(value ngapType.WriteReplaceWarningRe
 		if err != nil {
 			return binData, bitEnd, errors.New("WriteReplaceWarningRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.WriteReplaceWarningRequestIEsTypeValuePresentWarningSecurityInfo:
+	case ngapType.WriteReplaceWarningRequestIEsPresentWarningSecurityInfo:
 		if value.WarningSecurityInfo == nil {
 			return binData, bitEnd, errors.New("WriteReplaceWarningRequestIEsTypeValue: WarningSecurityInfo: NIL")
 		}
@@ -2953,7 +2953,7 @@ func WriteReplaceWarningRequestIEsTypeValue(value ngapType.WriteReplaceWarningRe
 		if err != nil {
 			return binData, bitEnd, errors.New("WriteReplaceWarningRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.WriteReplaceWarningRequestIEsTypeValuePresentDataCodingScheme:
+	case ngapType.WriteReplaceWarningRequestIEsPresentDataCodingScheme:
 		if value.DataCodingScheme == nil {
 			return binData, bitEnd, errors.New("WriteReplaceWarningRequestIEsTypeValue: DataCodingScheme: NIL")
 		}
@@ -2961,7 +2961,7 @@ func WriteReplaceWarningRequestIEsTypeValue(value ngapType.WriteReplaceWarningRe
 		if err != nil {
 			return binData, bitEnd, errors.New("WriteReplaceWarningRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.WriteReplaceWarningRequestIEsTypeValuePresentWarningMessageContents:
+	case ngapType.WriteReplaceWarningRequestIEsPresentWarningMessageContents:
 		if value.WarningMessageContents == nil {
 			return binData, bitEnd, errors.New("WriteReplaceWarningRequestIEsTypeValue: WarningMessageContents: NIL")
 		}
@@ -2969,7 +2969,7 @@ func WriteReplaceWarningRequestIEsTypeValue(value ngapType.WriteReplaceWarningRe
 		if err != nil {
 			return binData, bitEnd, errors.New("WriteReplaceWarningRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.WriteReplaceWarningRequestIEsTypeValuePresentConcurrentWarningMessageInd:
+	case ngapType.WriteReplaceWarningRequestIEsPresentConcurrentWarningMessageInd:
 		if value.ConcurrentWarningMessageInd == nil {
 			return binData, bitEnd, errors.New("WriteReplaceWarningRequestIEsTypeValue: ConcurrentWarningMessageInd: NIL")
 		}
@@ -2977,7 +2977,7 @@ func WriteReplaceWarningRequestIEsTypeValue(value ngapType.WriteReplaceWarningRe
 		if err != nil {
 			return binData, bitEnd, errors.New("WriteReplaceWarningRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.WriteReplaceWarningRequestIEsTypeValuePresentWarningAreaCoordinates:
+	case ngapType.WriteReplaceWarningRequestIEsPresentWarningAreaCoordinates:
 		if value.WarningAreaCoordinates == nil {
 			return binData, bitEnd, errors.New("WriteReplaceWarningRequestIEsTypeValue: WarningAreaCoordinates: NIL")
 		}
@@ -2994,7 +2994,7 @@ func WriteReplaceWarningRequestIEsTypeValue(value ngapType.WriteReplaceWarningRe
 func WriteReplaceWarningResponseIEsTypeValue(value ngapType.WriteReplaceWarningResponseIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.WriteReplaceWarningResponseIEsTypeValuePresentMessageIdentifier:
+	case ngapType.WriteReplaceWarningResponseIEsPresentMessageIdentifier:
 		if value.MessageIdentifier == nil {
 			return binData, bitEnd, errors.New("WriteReplaceWarningResponseIEsTypeValue: MessageIdentifier: NIL")
 		}
@@ -3002,7 +3002,7 @@ func WriteReplaceWarningResponseIEsTypeValue(value ngapType.WriteReplaceWarningR
 		if err != nil {
 			return binData, bitEnd, errors.New("WriteReplaceWarningResponseIEsTypeValue: " + err.Error())
 		}
-	case ngapType.WriteReplaceWarningResponseIEsTypeValuePresentSerialNumber:
+	case ngapType.WriteReplaceWarningResponseIEsPresentSerialNumber:
 		if value.SerialNumber == nil {
 			return binData, bitEnd, errors.New("WriteReplaceWarningResponseIEsTypeValue: SerialNumber: NIL")
 		}
@@ -3010,7 +3010,7 @@ func WriteReplaceWarningResponseIEsTypeValue(value ngapType.WriteReplaceWarningR
 		if err != nil {
 			return binData, bitEnd, errors.New("WriteReplaceWarningResponseIEsTypeValue: " + err.Error())
 		}
-	case ngapType.WriteReplaceWarningResponseIEsTypeValuePresentBroadcastCompletedAreaList:
+	case ngapType.WriteReplaceWarningResponseIEsPresentBroadcastCompletedAreaList:
 		if value.BroadcastCompletedAreaList == nil {
 			return binData, bitEnd, errors.New("WriteReplaceWarningResponseIEsTypeValue: BroadcastCompletedAreaList: NIL")
 		}
@@ -3018,7 +3018,7 @@ func WriteReplaceWarningResponseIEsTypeValue(value ngapType.WriteReplaceWarningR
 		if err != nil {
 			return binData, bitEnd, errors.New("WriteReplaceWarningResponseIEsTypeValue: " + err.Error())
 		}
-	case ngapType.WriteReplaceWarningResponseIEsTypeValuePresentCriticalityDiagnostics:
+	case ngapType.WriteReplaceWarningResponseIEsPresentCriticalityDiagnostics:
 		if value.CriticalityDiagnostics == nil {
 			return binData, bitEnd, errors.New("WriteReplaceWarningResponseIEsTypeValue: CriticalityDiagnostics: NIL")
 		}
@@ -3035,7 +3035,7 @@ func WriteReplaceWarningResponseIEsTypeValue(value ngapType.WriteReplaceWarningR
 func PWSCancelRequestIEsTypeValue(value ngapType.PWSCancelRequestIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.PWSCancelRequestIEsTypeValuePresentMessageIdentifier:
+	case ngapType.PWSCancelRequestIEsPresentMessageIdentifier:
 		if value.MessageIdentifier == nil {
 			return binData, bitEnd, errors.New("PWSCancelRequestIEsTypeValue: MessageIdentifier: NIL")
 		}
@@ -3043,7 +3043,7 @@ func PWSCancelRequestIEsTypeValue(value ngapType.PWSCancelRequestIEsTypeValue, b
 		if err != nil {
 			return binData, bitEnd, errors.New("PWSCancelRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.PWSCancelRequestIEsTypeValuePresentSerialNumber:
+	case ngapType.PWSCancelRequestIEsPresentSerialNumber:
 		if value.SerialNumber == nil {
 			return binData, bitEnd, errors.New("PWSCancelRequestIEsTypeValue: SerialNumber: NIL")
 		}
@@ -3051,7 +3051,7 @@ func PWSCancelRequestIEsTypeValue(value ngapType.PWSCancelRequestIEsTypeValue, b
 		if err != nil {
 			return binData, bitEnd, errors.New("PWSCancelRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.PWSCancelRequestIEsTypeValuePresentWarningAreaList:
+	case ngapType.PWSCancelRequestIEsPresentWarningAreaList:
 		if value.WarningAreaList == nil {
 			return binData, bitEnd, errors.New("PWSCancelRequestIEsTypeValue: WarningAreaList: NIL")
 		}
@@ -3059,7 +3059,7 @@ func PWSCancelRequestIEsTypeValue(value ngapType.PWSCancelRequestIEsTypeValue, b
 		if err != nil {
 			return binData, bitEnd, errors.New("PWSCancelRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.PWSCancelRequestIEsTypeValuePresentCancelAllWarningMessages:
+	case ngapType.PWSCancelRequestIEsPresentCancelAllWarningMessages:
 		if value.CancelAllWarningMessages == nil {
 			return binData, bitEnd, errors.New("PWSCancelRequestIEsTypeValue: CancelAllWarningMessages: NIL")
 		}
@@ -3076,7 +3076,7 @@ func PWSCancelRequestIEsTypeValue(value ngapType.PWSCancelRequestIEsTypeValue, b
 func PWSCancelResponseIEsTypeValue(value ngapType.PWSCancelResponseIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.PWSCancelResponseIEsTypeValuePresentMessageIdentifier:
+	case ngapType.PWSCancelResponseIEsPresentMessageIdentifier:
 		if value.MessageIdentifier == nil {
 			return binData, bitEnd, errors.New("PWSCancelResponseIEsTypeValue: MessageIdentifier: NIL")
 		}
@@ -3084,7 +3084,7 @@ func PWSCancelResponseIEsTypeValue(value ngapType.PWSCancelResponseIEsTypeValue,
 		if err != nil {
 			return binData, bitEnd, errors.New("PWSCancelResponseIEsTypeValue: " + err.Error())
 		}
-	case ngapType.PWSCancelResponseIEsTypeValuePresentSerialNumber:
+	case ngapType.PWSCancelResponseIEsPresentSerialNumber:
 		if value.SerialNumber == nil {
 			return binData, bitEnd, errors.New("PWSCancelResponseIEsTypeValue: SerialNumber: NIL")
 		}
@@ -3092,7 +3092,7 @@ func PWSCancelResponseIEsTypeValue(value ngapType.PWSCancelResponseIEsTypeValue,
 		if err != nil {
 			return binData, bitEnd, errors.New("PWSCancelResponseIEsTypeValue: " + err.Error())
 		}
-	case ngapType.PWSCancelResponseIEsTypeValuePresentBroadcastCancelledAreaList:
+	case ngapType.PWSCancelResponseIEsPresentBroadcastCancelledAreaList:
 		if value.BroadcastCancelledAreaList == nil {
 			return binData, bitEnd, errors.New("PWSCancelResponseIEsTypeValue: BroadcastCancelledAreaList: NIL")
 		}
@@ -3100,7 +3100,7 @@ func PWSCancelResponseIEsTypeValue(value ngapType.PWSCancelResponseIEsTypeValue,
 		if err != nil {
 			return binData, bitEnd, errors.New("PWSCancelResponseIEsTypeValue: " + err.Error())
 		}
-	case ngapType.PWSCancelResponseIEsTypeValuePresentCriticalityDiagnostics:
+	case ngapType.PWSCancelResponseIEsPresentCriticalityDiagnostics:
 		if value.CriticalityDiagnostics == nil {
 			return binData, bitEnd, errors.New("PWSCancelResponseIEsTypeValue: CriticalityDiagnostics: NIL")
 		}
@@ -3117,7 +3117,7 @@ func PWSCancelResponseIEsTypeValue(value ngapType.PWSCancelResponseIEsTypeValue,
 func PWSRestartIndicationIEsTypeValue(value ngapType.PWSRestartIndicationIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.PWSRestartIndicationIEsTypeValuePresentCellIDListForRestart:
+	case ngapType.PWSRestartIndicationIEsPresentCellIDListForRestart:
 		if value.CellIDListForRestart == nil {
 			return binData, bitEnd, errors.New("PWSRestartIndicationIEsTypeValue: CellIDListForRestart: NIL")
 		}
@@ -3125,7 +3125,7 @@ func PWSRestartIndicationIEsTypeValue(value ngapType.PWSRestartIndicationIEsType
 		if err != nil {
 			return binData, bitEnd, errors.New("PWSRestartIndicationIEsTypeValue: " + err.Error())
 		}
-	case ngapType.PWSRestartIndicationIEsTypeValuePresentGlobalRANNodeID:
+	case ngapType.PWSRestartIndicationIEsPresentGlobalRANNodeID:
 		if value.GlobalRANNodeID == nil {
 			return binData, bitEnd, errors.New("PWSRestartIndicationIEsTypeValue: GlobalRANNodeID: NIL")
 		}
@@ -3133,7 +3133,7 @@ func PWSRestartIndicationIEsTypeValue(value ngapType.PWSRestartIndicationIEsType
 		if err != nil {
 			return binData, bitEnd, errors.New("PWSRestartIndicationIEsTypeValue: " + err.Error())
 		}
-	case ngapType.PWSRestartIndicationIEsTypeValuePresentTAIListForRestart:
+	case ngapType.PWSRestartIndicationIEsPresentTAIListForRestart:
 		if value.TAIListForRestart == nil {
 			return binData, bitEnd, errors.New("PWSRestartIndicationIEsTypeValue: TAIListForRestart: NIL")
 		}
@@ -3141,7 +3141,7 @@ func PWSRestartIndicationIEsTypeValue(value ngapType.PWSRestartIndicationIEsType
 		if err != nil {
 			return binData, bitEnd, errors.New("PWSRestartIndicationIEsTypeValue: " + err.Error())
 		}
-	case ngapType.PWSRestartIndicationIEsTypeValuePresentEmergencyAreaIDListForRestart:
+	case ngapType.PWSRestartIndicationIEsPresentEmergencyAreaIDListForRestart:
 		if value.EmergencyAreaIDListForRestart == nil {
 			return binData, bitEnd, errors.New("PWSRestartIndicationIEsTypeValue: EmergencyAreaIDListForRestart: NIL")
 		}
@@ -3158,7 +3158,7 @@ func PWSRestartIndicationIEsTypeValue(value ngapType.PWSRestartIndicationIEsType
 func PWSFailureIndicationIEsTypeValue(value ngapType.PWSFailureIndicationIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.PWSFailureIndicationIEsTypeValuePresentPWSFailedCellIDList:
+	case ngapType.PWSFailureIndicationIEsPresentPWSFailedCellIDList:
 		if value.PWSFailedCellIDList == nil {
 			return binData, bitEnd, errors.New("PWSFailureIndicationIEsTypeValue: PWSFailedCellIDList: NIL")
 		}
@@ -3166,7 +3166,7 @@ func PWSFailureIndicationIEsTypeValue(value ngapType.PWSFailureIndicationIEsType
 		if err != nil {
 			return binData, bitEnd, errors.New("PWSFailureIndicationIEsTypeValue: " + err.Error())
 		}
-	case ngapType.PWSFailureIndicationIEsTypeValuePresentGlobalRANNodeID:
+	case ngapType.PWSFailureIndicationIEsPresentGlobalRANNodeID:
 		if value.GlobalRANNodeID == nil {
 			return binData, bitEnd, errors.New("PWSFailureIndicationIEsTypeValue: GlobalRANNodeID: NIL")
 		}
@@ -3183,7 +3183,7 @@ func PWSFailureIndicationIEsTypeValue(value ngapType.PWSFailureIndicationIEsType
 func DownlinkUEAssociatedNRPPaTransportIEsTypeValue(value ngapType.DownlinkUEAssociatedNRPPaTransportIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.DownlinkUEAssociatedNRPPaTransportIEsTypeValuePresentAMFUENGAPID:
+	case ngapType.DownlinkUEAssociatedNRPPaTransportIEsPresentAMFUENGAPID:
 		if value.AMFUENGAPID == nil {
 			return binData, bitEnd, errors.New("DownlinkUEAssociatedNRPPaTransportIEsTypeValue: AMFUENGAPID: NIL")
 		}
@@ -3191,7 +3191,7 @@ func DownlinkUEAssociatedNRPPaTransportIEsTypeValue(value ngapType.DownlinkUEAss
 		if err != nil {
 			return binData, bitEnd, errors.New("DownlinkUEAssociatedNRPPaTransportIEsTypeValue: " + err.Error())
 		}
-	case ngapType.DownlinkUEAssociatedNRPPaTransportIEsTypeValuePresentRANUENGAPID:
+	case ngapType.DownlinkUEAssociatedNRPPaTransportIEsPresentRANUENGAPID:
 		if value.RANUENGAPID == nil {
 			return binData, bitEnd, errors.New("DownlinkUEAssociatedNRPPaTransportIEsTypeValue: RANUENGAPID: NIL")
 		}
@@ -3199,7 +3199,7 @@ func DownlinkUEAssociatedNRPPaTransportIEsTypeValue(value ngapType.DownlinkUEAss
 		if err != nil {
 			return binData, bitEnd, errors.New("DownlinkUEAssociatedNRPPaTransportIEsTypeValue: " + err.Error())
 		}
-	case ngapType.DownlinkUEAssociatedNRPPaTransportIEsTypeValuePresentRoutingID:
+	case ngapType.DownlinkUEAssociatedNRPPaTransportIEsPresentRoutingID:
 		if value.RoutingID == nil {
 			return binData, bitEnd, errors.New("DownlinkUEAssociatedNRPPaTransportIEsTypeValue: RoutingID: NIL")
 		}
@@ -3207,7 +3207,7 @@ func DownlinkUEAssociatedNRPPaTransportIEsTypeValue(value ngapType.DownlinkUEAss
 		if err != nil {
 			return binData, bitEnd, errors.New("DownlinkUEAssociatedNRPPaTransportIEsTypeValue: " + err.Error())
 		}
-	case ngapType.DownlinkUEAssociatedNRPPaTransportIEsTypeValuePresentNRPPaPDU:
+	case ngapType.DownlinkUEAssociatedNRPPaTransportIEsPresentNRPPaPDU:
 		if value.NRPPaPDU == nil {
 			return binData, bitEnd, errors.New("DownlinkUEAssociatedNRPPaTransportIEsTypeValue: NRPPaPDU: NIL")
 		}
@@ -3224,7 +3224,7 @@ func DownlinkUEAssociatedNRPPaTransportIEsTypeValue(value ngapType.DownlinkUEAss
 func UplinkUEAssociatedNRPPaTransportIEsTypeValue(value ngapType.UplinkUEAssociatedNRPPaTransportIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.UplinkUEAssociatedNRPPaTransportIEsTypeValuePresentAMFUENGAPID:
+	case ngapType.UplinkUEAssociatedNRPPaTransportIEsPresentAMFUENGAPID:
 		if value.AMFUENGAPID == nil {
 			return binData, bitEnd, errors.New("UplinkUEAssociatedNRPPaTransportIEsTypeValue: AMFUENGAPID: NIL")
 		}
@@ -3232,7 +3232,7 @@ func UplinkUEAssociatedNRPPaTransportIEsTypeValue(value ngapType.UplinkUEAssocia
 		if err != nil {
 			return binData, bitEnd, errors.New("UplinkUEAssociatedNRPPaTransportIEsTypeValue: " + err.Error())
 		}
-	case ngapType.UplinkUEAssociatedNRPPaTransportIEsTypeValuePresentRANUENGAPID:
+	case ngapType.UplinkUEAssociatedNRPPaTransportIEsPresentRANUENGAPID:
 		if value.RANUENGAPID == nil {
 			return binData, bitEnd, errors.New("UplinkUEAssociatedNRPPaTransportIEsTypeValue: RANUENGAPID: NIL")
 		}
@@ -3240,7 +3240,7 @@ func UplinkUEAssociatedNRPPaTransportIEsTypeValue(value ngapType.UplinkUEAssocia
 		if err != nil {
 			return binData, bitEnd, errors.New("UplinkUEAssociatedNRPPaTransportIEsTypeValue: " + err.Error())
 		}
-	case ngapType.UplinkUEAssociatedNRPPaTransportIEsTypeValuePresentRoutingID:
+	case ngapType.UplinkUEAssociatedNRPPaTransportIEsPresentRoutingID:
 		if value.RoutingID == nil {
 			return binData, bitEnd, errors.New("UplinkUEAssociatedNRPPaTransportIEsTypeValue: RoutingID: NIL")
 		}
@@ -3248,7 +3248,7 @@ func UplinkUEAssociatedNRPPaTransportIEsTypeValue(value ngapType.UplinkUEAssocia
 		if err != nil {
 			return binData, bitEnd, errors.New("UplinkUEAssociatedNRPPaTransportIEsTypeValue: " + err.Error())
 		}
-	case ngapType.UplinkUEAssociatedNRPPaTransportIEsTypeValuePresentNRPPaPDU:
+	case ngapType.UplinkUEAssociatedNRPPaTransportIEsPresentNRPPaPDU:
 		if value.NRPPaPDU == nil {
 			return binData, bitEnd, errors.New("UplinkUEAssociatedNRPPaTransportIEsTypeValue: NRPPaPDU: NIL")
 		}
@@ -3265,7 +3265,7 @@ func UplinkUEAssociatedNRPPaTransportIEsTypeValue(value ngapType.UplinkUEAssocia
 func DownlinkNonUEAssociatedNRPPaTransportIEsTypeValue(value ngapType.DownlinkNonUEAssociatedNRPPaTransportIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.DownlinkNonUEAssociatedNRPPaTransportIEsTypeValuePresentRoutingID:
+	case ngapType.DownlinkNonUEAssociatedNRPPaTransportIEsPresentRoutingID:
 		if value.RoutingID == nil {
 			return binData, bitEnd, errors.New("DownlinkNonUEAssociatedNRPPaTransportIEsTypeValue: RoutingID: NIL")
 		}
@@ -3273,7 +3273,7 @@ func DownlinkNonUEAssociatedNRPPaTransportIEsTypeValue(value ngapType.DownlinkNo
 		if err != nil {
 			return binData, bitEnd, errors.New("DownlinkNonUEAssociatedNRPPaTransportIEsTypeValue: " + err.Error())
 		}
-	case ngapType.DownlinkNonUEAssociatedNRPPaTransportIEsTypeValuePresentNRPPaPDU:
+	case ngapType.DownlinkNonUEAssociatedNRPPaTransportIEsPresentNRPPaPDU:
 		if value.NRPPaPDU == nil {
 			return binData, bitEnd, errors.New("DownlinkNonUEAssociatedNRPPaTransportIEsTypeValue: NRPPaPDU: NIL")
 		}
@@ -3290,7 +3290,7 @@ func DownlinkNonUEAssociatedNRPPaTransportIEsTypeValue(value ngapType.DownlinkNo
 func UplinkNonUEAssociatedNRPPaTransportIEsTypeValue(value ngapType.UplinkNonUEAssociatedNRPPaTransportIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.UplinkNonUEAssociatedNRPPaTransportIEsTypeValuePresentRoutingID:
+	case ngapType.UplinkNonUEAssociatedNRPPaTransportIEsPresentRoutingID:
 		if value.RoutingID == nil {
 			return binData, bitEnd, errors.New("UplinkNonUEAssociatedNRPPaTransportIEsTypeValue: RoutingID: NIL")
 		}
@@ -3298,7 +3298,7 @@ func UplinkNonUEAssociatedNRPPaTransportIEsTypeValue(value ngapType.UplinkNonUEA
 		if err != nil {
 			return binData, bitEnd, errors.New("UplinkNonUEAssociatedNRPPaTransportIEsTypeValue: " + err.Error())
 		}
-	case ngapType.UplinkNonUEAssociatedNRPPaTransportIEsTypeValuePresentNRPPaPDU:
+	case ngapType.UplinkNonUEAssociatedNRPPaTransportIEsPresentNRPPaPDU:
 		if value.NRPPaPDU == nil {
 			return binData, bitEnd, errors.New("UplinkNonUEAssociatedNRPPaTransportIEsTypeValue: NRPPaPDU: NIL")
 		}
@@ -3315,7 +3315,7 @@ func UplinkNonUEAssociatedNRPPaTransportIEsTypeValue(value ngapType.UplinkNonUEA
 func TraceStartIEsTypeValue(value ngapType.TraceStartIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.TraceStartIEsTypeValuePresentAMFUENGAPID:
+	case ngapType.TraceStartIEsPresentAMFUENGAPID:
 		if value.AMFUENGAPID == nil {
 			return binData, bitEnd, errors.New("TraceStartIEsTypeValue: AMFUENGAPID: NIL")
 		}
@@ -3323,7 +3323,7 @@ func TraceStartIEsTypeValue(value ngapType.TraceStartIEsTypeValue, binData []byt
 		if err != nil {
 			return binData, bitEnd, errors.New("TraceStartIEsTypeValue: " + err.Error())
 		}
-	case ngapType.TraceStartIEsTypeValuePresentRANUENGAPID:
+	case ngapType.TraceStartIEsPresentRANUENGAPID:
 		if value.RANUENGAPID == nil {
 			return binData, bitEnd, errors.New("TraceStartIEsTypeValue: RANUENGAPID: NIL")
 		}
@@ -3331,7 +3331,7 @@ func TraceStartIEsTypeValue(value ngapType.TraceStartIEsTypeValue, binData []byt
 		if err != nil {
 			return binData, bitEnd, errors.New("TraceStartIEsTypeValue: " + err.Error())
 		}
-	case ngapType.TraceStartIEsTypeValuePresentTraceActivation:
+	case ngapType.TraceStartIEsPresentTraceActivation:
 		if value.TraceActivation == nil {
 			return binData, bitEnd, errors.New("TraceStartIEsTypeValue: TraceActivation: NIL")
 		}
@@ -3348,7 +3348,7 @@ func TraceStartIEsTypeValue(value ngapType.TraceStartIEsTypeValue, binData []byt
 func TraceFailureIndicationIEsTypeValue(value ngapType.TraceFailureIndicationIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.TraceFailureIndicationIEsTypeValuePresentAMFUENGAPID:
+	case ngapType.TraceFailureIndicationIEsPresentAMFUENGAPID:
 		if value.AMFUENGAPID == nil {
 			return binData, bitEnd, errors.New("TraceFailureIndicationIEsTypeValue: AMFUENGAPID: NIL")
 		}
@@ -3356,7 +3356,7 @@ func TraceFailureIndicationIEsTypeValue(value ngapType.TraceFailureIndicationIEs
 		if err != nil {
 			return binData, bitEnd, errors.New("TraceFailureIndicationIEsTypeValue: " + err.Error())
 		}
-	case ngapType.TraceFailureIndicationIEsTypeValuePresentRANUENGAPID:
+	case ngapType.TraceFailureIndicationIEsPresentRANUENGAPID:
 		if value.RANUENGAPID == nil {
 			return binData, bitEnd, errors.New("TraceFailureIndicationIEsTypeValue: RANUENGAPID: NIL")
 		}
@@ -3364,7 +3364,7 @@ func TraceFailureIndicationIEsTypeValue(value ngapType.TraceFailureIndicationIEs
 		if err != nil {
 			return binData, bitEnd, errors.New("TraceFailureIndicationIEsTypeValue: " + err.Error())
 		}
-	case ngapType.TraceFailureIndicationIEsTypeValuePresentNGRANTraceID:
+	case ngapType.TraceFailureIndicationIEsPresentNGRANTraceID:
 		if value.NGRANTraceID == nil {
 			return binData, bitEnd, errors.New("TraceFailureIndicationIEsTypeValue: NGRANTraceID: NIL")
 		}
@@ -3372,7 +3372,7 @@ func TraceFailureIndicationIEsTypeValue(value ngapType.TraceFailureIndicationIEs
 		if err != nil {
 			return binData, bitEnd, errors.New("TraceFailureIndicationIEsTypeValue: " + err.Error())
 		}
-	case ngapType.TraceFailureIndicationIEsTypeValuePresentCause:
+	case ngapType.TraceFailureIndicationIEsPresentCause:
 		if value.Cause == nil {
 			return binData, bitEnd, errors.New("TraceFailureIndicationIEsTypeValue: Cause: NIL")
 		}
@@ -3389,7 +3389,7 @@ func TraceFailureIndicationIEsTypeValue(value ngapType.TraceFailureIndicationIEs
 func DeactivateTraceIEsTypeValue(value ngapType.DeactivateTraceIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.DeactivateTraceIEsTypeValuePresentAMFUENGAPID:
+	case ngapType.DeactivateTraceIEsPresentAMFUENGAPID:
 		if value.AMFUENGAPID == nil {
 			return binData, bitEnd, errors.New("DeactivateTraceIEsTypeValue: AMFUENGAPID: NIL")
 		}
@@ -3397,7 +3397,7 @@ func DeactivateTraceIEsTypeValue(value ngapType.DeactivateTraceIEsTypeValue, bin
 		if err != nil {
 			return binData, bitEnd, errors.New("DeactivateTraceIEsTypeValue: " + err.Error())
 		}
-	case ngapType.DeactivateTraceIEsTypeValuePresentRANUENGAPID:
+	case ngapType.DeactivateTraceIEsPresentRANUENGAPID:
 		if value.RANUENGAPID == nil {
 			return binData, bitEnd, errors.New("DeactivateTraceIEsTypeValue: RANUENGAPID: NIL")
 		}
@@ -3405,7 +3405,7 @@ func DeactivateTraceIEsTypeValue(value ngapType.DeactivateTraceIEsTypeValue, bin
 		if err != nil {
 			return binData, bitEnd, errors.New("DeactivateTraceIEsTypeValue: " + err.Error())
 		}
-	case ngapType.DeactivateTraceIEsTypeValuePresentNGRANTraceID:
+	case ngapType.DeactivateTraceIEsPresentNGRANTraceID:
 		if value.NGRANTraceID == nil {
 			return binData, bitEnd, errors.New("DeactivateTraceIEsTypeValue: NGRANTraceID: NIL")
 		}
@@ -3422,7 +3422,7 @@ func DeactivateTraceIEsTypeValue(value ngapType.DeactivateTraceIEsTypeValue, bin
 func CellTrafficTraceIEsTypeValue(value ngapType.CellTrafficTraceIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.CellTrafficTraceIEsTypeValuePresentAMFUENGAPID:
+	case ngapType.CellTrafficTraceIEsPresentAMFUENGAPID:
 		if value.AMFUENGAPID == nil {
 			return binData, bitEnd, errors.New("CellTrafficTraceIEsTypeValue: AMFUENGAPID: NIL")
 		}
@@ -3430,7 +3430,7 @@ func CellTrafficTraceIEsTypeValue(value ngapType.CellTrafficTraceIEsTypeValue, b
 		if err != nil {
 			return binData, bitEnd, errors.New("CellTrafficTraceIEsTypeValue: " + err.Error())
 		}
-	case ngapType.CellTrafficTraceIEsTypeValuePresentRANUENGAPID:
+	case ngapType.CellTrafficTraceIEsPresentRANUENGAPID:
 		if value.RANUENGAPID == nil {
 			return binData, bitEnd, errors.New("CellTrafficTraceIEsTypeValue: RANUENGAPID: NIL")
 		}
@@ -3438,7 +3438,7 @@ func CellTrafficTraceIEsTypeValue(value ngapType.CellTrafficTraceIEsTypeValue, b
 		if err != nil {
 			return binData, bitEnd, errors.New("CellTrafficTraceIEsTypeValue: " + err.Error())
 		}
-	case ngapType.CellTrafficTraceIEsTypeValuePresentNGRANTraceID:
+	case ngapType.CellTrafficTraceIEsPresentNGRANTraceID:
 		if value.NGRANTraceID == nil {
 			return binData, bitEnd, errors.New("CellTrafficTraceIEsTypeValue: NGRANTraceID: NIL")
 		}
@@ -3446,7 +3446,7 @@ func CellTrafficTraceIEsTypeValue(value ngapType.CellTrafficTraceIEsTypeValue, b
 		if err != nil {
 			return binData, bitEnd, errors.New("CellTrafficTraceIEsTypeValue: " + err.Error())
 		}
-	case ngapType.CellTrafficTraceIEsTypeValuePresentNGRANCGI:
+	case ngapType.CellTrafficTraceIEsPresentNGRANCGI:
 		if value.NGRANCGI == nil {
 			return binData, bitEnd, errors.New("CellTrafficTraceIEsTypeValue: NGRANCGI: NIL")
 		}
@@ -3454,7 +3454,7 @@ func CellTrafficTraceIEsTypeValue(value ngapType.CellTrafficTraceIEsTypeValue, b
 		if err != nil {
 			return binData, bitEnd, errors.New("CellTrafficTraceIEsTypeValue: " + err.Error())
 		}
-	case ngapType.CellTrafficTraceIEsTypeValuePresentTraceCollectionEntityIPAddress:
+	case ngapType.CellTrafficTraceIEsPresentTraceCollectionEntityIPAddress:
 		if value.TraceCollectionEntityIPAddress == nil {
 			return binData, bitEnd, errors.New("CellTrafficTraceIEsTypeValue: TraceCollectionEntityIPAddress: NIL")
 		}
@@ -3471,7 +3471,7 @@ func CellTrafficTraceIEsTypeValue(value ngapType.CellTrafficTraceIEsTypeValue, b
 func LocationReportingControlIEsTypeValue(value ngapType.LocationReportingControlIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.LocationReportingControlIEsTypeValuePresentAMFUENGAPID:
+	case ngapType.LocationReportingControlIEsPresentAMFUENGAPID:
 		if value.AMFUENGAPID == nil {
 			return binData, bitEnd, errors.New("LocationReportingControlIEsTypeValue: AMFUENGAPID: NIL")
 		}
@@ -3479,7 +3479,7 @@ func LocationReportingControlIEsTypeValue(value ngapType.LocationReportingContro
 		if err != nil {
 			return binData, bitEnd, errors.New("LocationReportingControlIEsTypeValue: " + err.Error())
 		}
-	case ngapType.LocationReportingControlIEsTypeValuePresentRANUENGAPID:
+	case ngapType.LocationReportingControlIEsPresentRANUENGAPID:
 		if value.RANUENGAPID == nil {
 			return binData, bitEnd, errors.New("LocationReportingControlIEsTypeValue: RANUENGAPID: NIL")
 		}
@@ -3487,7 +3487,7 @@ func LocationReportingControlIEsTypeValue(value ngapType.LocationReportingContro
 		if err != nil {
 			return binData, bitEnd, errors.New("LocationReportingControlIEsTypeValue: " + err.Error())
 		}
-	case ngapType.LocationReportingControlIEsTypeValuePresentLocationReportingRequestType:
+	case ngapType.LocationReportingControlIEsPresentLocationReportingRequestType:
 		if value.LocationReportingRequestType == nil {
 			return binData, bitEnd, errors.New("LocationReportingControlIEsTypeValue: LocationReportingRequestType: NIL")
 		}
@@ -3504,7 +3504,7 @@ func LocationReportingControlIEsTypeValue(value ngapType.LocationReportingContro
 func LocationReportingFailureIndicationIEsTypeValue(value ngapType.LocationReportingFailureIndicationIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.LocationReportingFailureIndicationIEsTypeValuePresentAMFUENGAPID:
+	case ngapType.LocationReportingFailureIndicationIEsPresentAMFUENGAPID:
 		if value.AMFUENGAPID == nil {
 			return binData, bitEnd, errors.New("LocationReportingFailureIndicationIEsTypeValue: AMFUENGAPID: NIL")
 		}
@@ -3512,7 +3512,7 @@ func LocationReportingFailureIndicationIEsTypeValue(value ngapType.LocationRepor
 		if err != nil {
 			return binData, bitEnd, errors.New("LocationReportingFailureIndicationIEsTypeValue: " + err.Error())
 		}
-	case ngapType.LocationReportingFailureIndicationIEsTypeValuePresentRANUENGAPID:
+	case ngapType.LocationReportingFailureIndicationIEsPresentRANUENGAPID:
 		if value.RANUENGAPID == nil {
 			return binData, bitEnd, errors.New("LocationReportingFailureIndicationIEsTypeValue: RANUENGAPID: NIL")
 		}
@@ -3520,7 +3520,7 @@ func LocationReportingFailureIndicationIEsTypeValue(value ngapType.LocationRepor
 		if err != nil {
 			return binData, bitEnd, errors.New("LocationReportingFailureIndicationIEsTypeValue: " + err.Error())
 		}
-	case ngapType.LocationReportingFailureIndicationIEsTypeValuePresentCause:
+	case ngapType.LocationReportingFailureIndicationIEsPresentCause:
 		if value.Cause == nil {
 			return binData, bitEnd, errors.New("LocationReportingFailureIndicationIEsTypeValue: Cause: NIL")
 		}
@@ -3537,7 +3537,7 @@ func LocationReportingFailureIndicationIEsTypeValue(value ngapType.LocationRepor
 func LocationReportIEsTypeValue(value ngapType.LocationReportIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.LocationReportIEsTypeValuePresentAMFUENGAPID:
+	case ngapType.LocationReportIEsPresentAMFUENGAPID:
 		if value.AMFUENGAPID == nil {
 			return binData, bitEnd, errors.New("LocationReportIEsTypeValue: AMFUENGAPID: NIL")
 		}
@@ -3545,7 +3545,7 @@ func LocationReportIEsTypeValue(value ngapType.LocationReportIEsTypeValue, binDa
 		if err != nil {
 			return binData, bitEnd, errors.New("LocationReportIEsTypeValue: " + err.Error())
 		}
-	case ngapType.LocationReportIEsTypeValuePresentRANUENGAPID:
+	case ngapType.LocationReportIEsPresentRANUENGAPID:
 		if value.RANUENGAPID == nil {
 			return binData, bitEnd, errors.New("LocationReportIEsTypeValue: RANUENGAPID: NIL")
 		}
@@ -3553,7 +3553,7 @@ func LocationReportIEsTypeValue(value ngapType.LocationReportIEsTypeValue, binDa
 		if err != nil {
 			return binData, bitEnd, errors.New("LocationReportIEsTypeValue: " + err.Error())
 		}
-	case ngapType.LocationReportIEsTypeValuePresentUserLocationInformation:
+	case ngapType.LocationReportIEsPresentUserLocationInformation:
 		if value.UserLocationInformation == nil {
 			return binData, bitEnd, errors.New("LocationReportIEsTypeValue: UserLocationInformation: NIL")
 		}
@@ -3561,7 +3561,7 @@ func LocationReportIEsTypeValue(value ngapType.LocationReportIEsTypeValue, binDa
 		if err != nil {
 			return binData, bitEnd, errors.New("LocationReportIEsTypeValue: " + err.Error())
 		}
-	case ngapType.LocationReportIEsTypeValuePresentUEPresenceInAreaOfInterestList:
+	case ngapType.LocationReportIEsPresentUEPresenceInAreaOfInterestList:
 		if value.UEPresenceInAreaOfInterestList == nil {
 			return binData, bitEnd, errors.New("LocationReportIEsTypeValue: UEPresenceInAreaOfInterestList: NIL")
 		}
@@ -3569,7 +3569,7 @@ func LocationReportIEsTypeValue(value ngapType.LocationReportIEsTypeValue, binDa
 		if err != nil {
 			return binData, bitEnd, errors.New("LocationReportIEsTypeValue: " + err.Error())
 		}
-	case ngapType.LocationReportIEsTypeValuePresentLocationReportingRequestType:
+	case ngapType.LocationReportIEsPresentLocationReportingRequestType:
 		if value.LocationReportingRequestType == nil {
 			return binData, bitEnd, errors.New("LocationReportIEsTypeValue: LocationReportingRequestType: NIL")
 		}
@@ -3586,7 +3586,7 @@ func LocationReportIEsTypeValue(value ngapType.LocationReportIEsTypeValue, binDa
 func UETNLABindingReleaseRequestIEsTypeValue(value ngapType.UETNLABindingReleaseRequestIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.UETNLABindingReleaseRequestIEsTypeValuePresentAMFUENGAPID:
+	case ngapType.UETNLABindingReleaseRequestIEsPresentAMFUENGAPID:
 		if value.AMFUENGAPID == nil {
 			return binData, bitEnd, errors.New("UETNLABindingReleaseRequestIEsTypeValue: AMFUENGAPID: NIL")
 		}
@@ -3594,7 +3594,7 @@ func UETNLABindingReleaseRequestIEsTypeValue(value ngapType.UETNLABindingRelease
 		if err != nil {
 			return binData, bitEnd, errors.New("UETNLABindingReleaseRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.UETNLABindingReleaseRequestIEsTypeValuePresentRANUENGAPID:
+	case ngapType.UETNLABindingReleaseRequestIEsPresentRANUENGAPID:
 		if value.RANUENGAPID == nil {
 			return binData, bitEnd, errors.New("UETNLABindingReleaseRequestIEsTypeValue: RANUENGAPID: NIL")
 		}
@@ -3611,7 +3611,7 @@ func UETNLABindingReleaseRequestIEsTypeValue(value ngapType.UETNLABindingRelease
 func UERadioCapabilityInfoIndicationIEsTypeValue(value ngapType.UERadioCapabilityInfoIndicationIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.UERadioCapabilityInfoIndicationIEsTypeValuePresentAMFUENGAPID:
+	case ngapType.UERadioCapabilityInfoIndicationIEsPresentAMFUENGAPID:
 		if value.AMFUENGAPID == nil {
 			return binData, bitEnd, errors.New("UERadioCapabilityInfoIndicationIEsTypeValue: AMFUENGAPID: NIL")
 		}
@@ -3619,7 +3619,7 @@ func UERadioCapabilityInfoIndicationIEsTypeValue(value ngapType.UERadioCapabilit
 		if err != nil {
 			return binData, bitEnd, errors.New("UERadioCapabilityInfoIndicationIEsTypeValue: " + err.Error())
 		}
-	case ngapType.UERadioCapabilityInfoIndicationIEsTypeValuePresentRANUENGAPID:
+	case ngapType.UERadioCapabilityInfoIndicationIEsPresentRANUENGAPID:
 		if value.RANUENGAPID == nil {
 			return binData, bitEnd, errors.New("UERadioCapabilityInfoIndicationIEsTypeValue: RANUENGAPID: NIL")
 		}
@@ -3627,7 +3627,7 @@ func UERadioCapabilityInfoIndicationIEsTypeValue(value ngapType.UERadioCapabilit
 		if err != nil {
 			return binData, bitEnd, errors.New("UERadioCapabilityInfoIndicationIEsTypeValue: " + err.Error())
 		}
-	case ngapType.UERadioCapabilityInfoIndicationIEsTypeValuePresentUERadioCapability:
+	case ngapType.UERadioCapabilityInfoIndicationIEsPresentUERadioCapability:
 		if value.UERadioCapability == nil {
 			return binData, bitEnd, errors.New("UERadioCapabilityInfoIndicationIEsTypeValue: UERadioCapability: NIL")
 		}
@@ -3635,7 +3635,7 @@ func UERadioCapabilityInfoIndicationIEsTypeValue(value ngapType.UERadioCapabilit
 		if err != nil {
 			return binData, bitEnd, errors.New("UERadioCapabilityInfoIndicationIEsTypeValue: " + err.Error())
 		}
-	case ngapType.UERadioCapabilityInfoIndicationIEsTypeValuePresentUERadioCapabilityForPaging:
+	case ngapType.UERadioCapabilityInfoIndicationIEsPresentUERadioCapabilityForPaging:
 		if value.UERadioCapabilityForPaging == nil {
 			return binData, bitEnd, errors.New("UERadioCapabilityInfoIndicationIEsTypeValue: UERadioCapabilityForPaging: NIL")
 		}
@@ -3652,7 +3652,7 @@ func UERadioCapabilityInfoIndicationIEsTypeValue(value ngapType.UERadioCapabilit
 func UERadioCapabilityCheckRequestIEsTypeValue(value ngapType.UERadioCapabilityCheckRequestIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.UERadioCapabilityCheckRequestIEsTypeValuePresentAMFUENGAPID:
+	case ngapType.UERadioCapabilityCheckRequestIEsPresentAMFUENGAPID:
 		if value.AMFUENGAPID == nil {
 			return binData, bitEnd, errors.New("UERadioCapabilityCheckRequestIEsTypeValue: AMFUENGAPID: NIL")
 		}
@@ -3660,7 +3660,7 @@ func UERadioCapabilityCheckRequestIEsTypeValue(value ngapType.UERadioCapabilityC
 		if err != nil {
 			return binData, bitEnd, errors.New("UERadioCapabilityCheckRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.UERadioCapabilityCheckRequestIEsTypeValuePresentRANUENGAPID:
+	case ngapType.UERadioCapabilityCheckRequestIEsPresentRANUENGAPID:
 		if value.RANUENGAPID == nil {
 			return binData, bitEnd, errors.New("UERadioCapabilityCheckRequestIEsTypeValue: RANUENGAPID: NIL")
 		}
@@ -3668,7 +3668,7 @@ func UERadioCapabilityCheckRequestIEsTypeValue(value ngapType.UERadioCapabilityC
 		if err != nil {
 			return binData, bitEnd, errors.New("UERadioCapabilityCheckRequestIEsTypeValue: " + err.Error())
 		}
-	case ngapType.UERadioCapabilityCheckRequestIEsTypeValuePresentUERadioCapability:
+	case ngapType.UERadioCapabilityCheckRequestIEsPresentUERadioCapability:
 		if value.UERadioCapability == nil {
 			return binData, bitEnd, errors.New("UERadioCapabilityCheckRequestIEsTypeValue: UERadioCapability: NIL")
 		}
@@ -3685,7 +3685,7 @@ func UERadioCapabilityCheckRequestIEsTypeValue(value ngapType.UERadioCapabilityC
 func UERadioCapabilityCheckResponseIEsTypeValue(value ngapType.UERadioCapabilityCheckResponseIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.UERadioCapabilityCheckResponseIEsTypeValuePresentAMFUENGAPID:
+	case ngapType.UERadioCapabilityCheckResponseIEsPresentAMFUENGAPID:
 		if value.AMFUENGAPID == nil {
 			return binData, bitEnd, errors.New("UERadioCapabilityCheckResponseIEsTypeValue: AMFUENGAPID: NIL")
 		}
@@ -3693,7 +3693,7 @@ func UERadioCapabilityCheckResponseIEsTypeValue(value ngapType.UERadioCapability
 		if err != nil {
 			return binData, bitEnd, errors.New("UERadioCapabilityCheckResponseIEsTypeValue: " + err.Error())
 		}
-	case ngapType.UERadioCapabilityCheckResponseIEsTypeValuePresentRANUENGAPID:
+	case ngapType.UERadioCapabilityCheckResponseIEsPresentRANUENGAPID:
 		if value.RANUENGAPID == nil {
 			return binData, bitEnd, errors.New("UERadioCapabilityCheckResponseIEsTypeValue: RANUENGAPID: NIL")
 		}
@@ -3701,7 +3701,7 @@ func UERadioCapabilityCheckResponseIEsTypeValue(value ngapType.UERadioCapability
 		if err != nil {
 			return binData, bitEnd, errors.New("UERadioCapabilityCheckResponseIEsTypeValue: " + err.Error())
 		}
-	case ngapType.UERadioCapabilityCheckResponseIEsTypeValuePresentIMSVoiceSupportIndicator:
+	case ngapType.UERadioCapabilityCheckResponseIEsPresentIMSVoiceSupportIndicator:
 		if value.IMSVoiceSupportIndicator == nil {
 			return binData, bitEnd, errors.New("UERadioCapabilityCheckResponseIEsTypeValue: IMSVoiceSupportIndicator: NIL")
 		}
@@ -3709,7 +3709,7 @@ func UERadioCapabilityCheckResponseIEsTypeValue(value ngapType.UERadioCapability
 		if err != nil {
 			return binData, bitEnd, errors.New("UERadioCapabilityCheckResponseIEsTypeValue: " + err.Error())
 		}
-	case ngapType.UERadioCapabilityCheckResponseIEsTypeValuePresentCriticalityDiagnostics:
+	case ngapType.UERadioCapabilityCheckResponseIEsPresentCriticalityDiagnostics:
 		if value.CriticalityDiagnostics == nil {
 			return binData, bitEnd, errors.New("UERadioCapabilityCheckResponseIEsTypeValue: CriticalityDiagnostics: NIL")
 		}
@@ -3735,7 +3735,7 @@ func PrivateMessageIEsTypeValue(value ngapType.PrivateMessageIEsTypeValue, binDa
 func SecondaryRATDataUsageReportIEsTypeValue(value ngapType.SecondaryRATDataUsageReportIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.SecondaryRATDataUsageReportIEsTypeValuePresentAMFUENGAPID:
+	case ngapType.SecondaryRATDataUsageReportIEsPresentAMFUENGAPID:
 		if value.AMFUENGAPID == nil {
 			return binData, bitEnd, errors.New("SecondaryRATDataUsageReportIEsTypeValue: AMFUENGAPID: NIL")
 		}
@@ -3743,7 +3743,7 @@ func SecondaryRATDataUsageReportIEsTypeValue(value ngapType.SecondaryRATDataUsag
 		if err != nil {
 			return binData, bitEnd, errors.New("SecondaryRATDataUsageReportIEsTypeValue: " + err.Error())
 		}
-	case ngapType.SecondaryRATDataUsageReportIEsTypeValuePresentRANUENGAPID:
+	case ngapType.SecondaryRATDataUsageReportIEsPresentRANUENGAPID:
 		if value.RANUENGAPID == nil {
 			return binData, bitEnd, errors.New("SecondaryRATDataUsageReportIEsTypeValue: RANUENGAPID: NIL")
 		}
@@ -3751,7 +3751,7 @@ func SecondaryRATDataUsageReportIEsTypeValue(value ngapType.SecondaryRATDataUsag
 		if err != nil {
 			return binData, bitEnd, errors.New("SecondaryRATDataUsageReportIEsTypeValue: " + err.Error())
 		}
-	case ngapType.SecondaryRATDataUsageReportIEsTypeValuePresentPDUSessionResourceSecondaryRATUsageList:
+	case ngapType.SecondaryRATDataUsageReportIEsPresentPDUSessionResourceSecondaryRATUsageList:
 		if value.PDUSessionResourceSecondaryRATUsageList == nil {
 			return binData, bitEnd, errors.New("SecondaryRATDataUsageReportIEsTypeValue: PDUSessionResourceSecondaryRATUsageList: NIL")
 		}
@@ -3759,7 +3759,7 @@ func SecondaryRATDataUsageReportIEsTypeValue(value ngapType.SecondaryRATDataUsag
 		if err != nil {
 			return binData, bitEnd, errors.New("SecondaryRATDataUsageReportIEsTypeValue: " + err.Error())
 		}
-	case ngapType.SecondaryRATDataUsageReportIEsTypeValuePresentHandoverFlag:
+	case ngapType.SecondaryRATDataUsageReportIEsPresentHandoverFlag:
 		if value.HandoverFlag == nil {
 			return binData, bitEnd, errors.New("SecondaryRATDataUsageReportIEsTypeValue: HandoverFlag: NIL")
 		}
@@ -3767,7 +3767,7 @@ func SecondaryRATDataUsageReportIEsTypeValue(value ngapType.SecondaryRATDataUsag
 		if err != nil {
 			return binData, bitEnd, errors.New("SecondaryRATDataUsageReportIEsTypeValue: " + err.Error())
 		}
-	case ngapType.SecondaryRATDataUsageReportIEsTypeValuePresentUserLocationInformation:
+	case ngapType.SecondaryRATDataUsageReportIEsPresentUserLocationInformation:
 		if value.UserLocationInformation == nil {
 			return binData, bitEnd, errors.New("SecondaryRATDataUsageReportIEsTypeValue: UserLocationInformation: NIL")
 		}
@@ -3784,7 +3784,7 @@ func SecondaryRATDataUsageReportIEsTypeValue(value ngapType.SecondaryRATDataUsag
 func UplinkRIMInformationTransferIEsTypeValue(value ngapType.UplinkRIMInformationTransferIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.UplinkRIMInformationTransferIEsTypeValuePresentRIMInformationTransfer:
+	case ngapType.UplinkRIMInformationTransferIEsPresentRIMInformationTransfer:
 		if value.RIMInformationTransfer == nil {
 			return binData, bitEnd, errors.New("UplinkRIMInformationTransferIEsTypeValue: RIMInformationTransfer: NIL")
 		}
@@ -3801,7 +3801,7 @@ func UplinkRIMInformationTransferIEsTypeValue(value ngapType.UplinkRIMInformatio
 func DownlinkRIMInformationTransferIEsTypeValue(value ngapType.DownlinkRIMInformationTransferIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.DownlinkRIMInformationTransferIEsTypeValuePresentRIMInformationTransfer:
+	case ngapType.DownlinkRIMInformationTransferIEsPresentRIMInformationTransfer:
 		if value.RIMInformationTransfer == nil {
 			return binData, bitEnd, errors.New("DownlinkRIMInformationTransferIEsTypeValue: RIMInformationTransfer: NIL")
 		}

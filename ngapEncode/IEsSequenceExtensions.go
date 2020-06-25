@@ -100,7 +100,7 @@ func AMFTNLAssociationToRemoveItemExtIEs(value ngapType.AMFTNLAssociationToRemov
 	var err error
 	switch value.ProtocolExtensionID.Value {
 	case ngapType.ProtocolIEIDTNLAssociationTransportLayerAddressNGRAN:
-		if value.ExtensionValue.Present != ngapType.AMFTNLAssociationToRemoveItemExtIEsExtensionValuePresentTNLAssociationTransportLayerAddressNGRAN {
+		if value.ExtensionValue.Present != ngapType.AMFTNLAssociationToRemoveItemExtIEsPresentTNLAssociationTransportLayerAddressNGRAN {
 			return binData, bitEnd, errors.New("AMFTNLAssociationToRemoveItemExtIEs: ProtocolExtensionID: INVALID")
 		}
 	default:
@@ -702,7 +702,7 @@ func DRBsSubjectToStatusTransferItemExtIEs(value ngapType.DRBsSubjectToStatusTra
 	var err error
 	switch value.ProtocolExtensionID.Value {
 	case ngapType.ProtocolIEIDOldAssociatedQosFlowListULendmarkerexpected:
-		if value.ExtensionValue.Present != ngapType.DRBsSubjectToStatusTransferItemExtIEsExtensionValuePresentOldAssociatedQosFlowListULendmarkerexpected {
+		if value.ExtensionValue.Present != ngapType.DRBsSubjectToStatusTransferItemExtIEsPresentOldAssociatedQosFlowListULendmarkerexpected {
 			return binData, bitEnd, errors.New("DRBsSubjectToStatusTransferItemExtIEs: ProtocolExtensionID: INVALID")
 		}
 	default:
@@ -1214,19 +1214,19 @@ func HandoverCommandTransferExtIEs(value ngapType.HandoverCommandTransferExtIEs,
 	var err error
 	switch value.ProtocolExtensionID.Value {
 	case ngapType.ProtocolIEIDAdditionalDLForwardingUPTNLInformation:
-		if value.ExtensionValue.Present != ngapType.HandoverCommandTransferExtIEsExtensionValuePresentAdditionalDLForwardingUPTNLInformation {
+		if value.ExtensionValue.Present != ngapType.HandoverCommandTransferExtIEsPresentAdditionalDLForwardingUPTNLInformation {
 			return binData, bitEnd, errors.New("HandoverCommandTransferExtIEs: ProtocolExtensionID: INVALID")
 		}
 	case ngapType.ProtocolIEIDULForwardingUPTNLInformation:
-		if value.ExtensionValue.Present != ngapType.HandoverCommandTransferExtIEsExtensionValuePresentULForwardingUPTNLInformation {
+		if value.ExtensionValue.Present != ngapType.HandoverCommandTransferExtIEsPresentULForwardingUPTNLInformation {
 			return binData, bitEnd, errors.New("HandoverCommandTransferExtIEs: ProtocolExtensionID: INVALID")
 		}
 	case ngapType.ProtocolIEIDAdditionalULForwardingUPTNLInformation:
-		if value.ExtensionValue.Present != ngapType.HandoverCommandTransferExtIEsExtensionValuePresentAdditionalULForwardingUPTNLInformation {
+		if value.ExtensionValue.Present != ngapType.HandoverCommandTransferExtIEsPresentAdditionalULForwardingUPTNLInformation {
 			return binData, bitEnd, errors.New("HandoverCommandTransferExtIEs: ProtocolExtensionID: INVALID")
 		}
 	case ngapType.ProtocolIEIDDataForwardingResponseERABList:
-		if value.ExtensionValue.Present != ngapType.HandoverCommandTransferExtIEsExtensionValuePresentDataForwardingResponseERABList {
+		if value.ExtensionValue.Present != ngapType.HandoverCommandTransferExtIEsPresentDataForwardingResponseERABList {
 			return binData, bitEnd, errors.New("HandoverCommandTransferExtIEs: ProtocolExtensionID: INVALID")
 		}
 	default:
@@ -1270,19 +1270,19 @@ func HandoverRequestAcknowledgeTransferExtIEs(value ngapType.HandoverRequestAckn
 	var err error
 	switch value.ProtocolExtensionID.Value {
 	case ngapType.ProtocolIEIDAdditionalDLUPTNLInformationForHOList:
-		if value.ExtensionValue.Present != ngapType.HandoverRequestAcknowledgeTransferExtIEsExtensionValuePresentAdditionalDLUPTNLInformationForHOList {
+		if value.ExtensionValue.Present != ngapType.HandoverRequestAcknowledgeTransferExtIEsPresentAdditionalDLUPTNLInformationForHOList {
 			return binData, bitEnd, errors.New("HandoverRequestAcknowledgeTransferExtIEs: ProtocolExtensionID: INVALID")
 		}
 	case ngapType.ProtocolIEIDULForwardingUPTNLInformation:
-		if value.ExtensionValue.Present != ngapType.HandoverRequestAcknowledgeTransferExtIEsExtensionValuePresentULForwardingUPTNLInformation {
+		if value.ExtensionValue.Present != ngapType.HandoverRequestAcknowledgeTransferExtIEsPresentULForwardingUPTNLInformation {
 			return binData, bitEnd, errors.New("HandoverRequestAcknowledgeTransferExtIEs: ProtocolExtensionID: INVALID")
 		}
 	case ngapType.ProtocolIEIDAdditionalULForwardingUPTNLInformation:
-		if value.ExtensionValue.Present != ngapType.HandoverRequestAcknowledgeTransferExtIEsExtensionValuePresentAdditionalULForwardingUPTNLInformation {
+		if value.ExtensionValue.Present != ngapType.HandoverRequestAcknowledgeTransferExtIEsPresentAdditionalULForwardingUPTNLInformation {
 			return binData, bitEnd, errors.New("HandoverRequestAcknowledgeTransferExtIEs: ProtocolExtensionID: INVALID")
 		}
 	case ngapType.ProtocolIEIDDataForwardingResponseERABList:
-		if value.ExtensionValue.Present != ngapType.HandoverRequestAcknowledgeTransferExtIEsExtensionValuePresentDataForwardingResponseERABList {
+		if value.ExtensionValue.Present != ngapType.HandoverRequestAcknowledgeTransferExtIEsPresentDataForwardingResponseERABList {
 			return binData, bitEnd, errors.New("HandoverRequestAcknowledgeTransferExtIEs: ProtocolExtensionID: INVALID")
 		}
 	default:
@@ -1416,7 +1416,7 @@ func LocationReportingRequestTypeExtIEs(value ngapType.LocationReportingRequestT
 	var err error
 	switch value.ProtocolExtensionID.Value {
 	case ngapType.ProtocolIEIDLocationReportingAdditionalInfo:
-		if value.ExtensionValue.Present != ngapType.LocationReportingRequestTypeExtIEsExtensionValuePresentLocationReportingAdditionalInfo {
+		if value.ExtensionValue.Present != ngapType.LocationReportingRequestTypeExtIEsPresentLocationReportingAdditionalInfo {
 			return binData, bitEnd, errors.New("LocationReportingRequestTypeExtIEs: ProtocolExtensionID: INVALID")
 		}
 	default:
@@ -1442,15 +1442,15 @@ func MobilityRestrictionListExtIEs(value ngapType.MobilityRestrictionListExtIEs,
 	var err error
 	switch value.ProtocolExtensionID.Value {
 	case ngapType.ProtocolIEIDLastEUTRANPLMNIdentity:
-		if value.ExtensionValue.Present != ngapType.MobilityRestrictionListExtIEsExtensionValuePresentLastEUTRANPLMNIdentity {
+		if value.ExtensionValue.Present != ngapType.MobilityRestrictionListExtIEsPresentLastEUTRANPLMNIdentity {
 			return binData, bitEnd, errors.New("MobilityRestrictionListExtIEs: ProtocolExtensionID: INVALID")
 		}
 	case ngapType.ProtocolIEIDCNTypeRestrictionsForServing:
-		if value.ExtensionValue.Present != ngapType.MobilityRestrictionListExtIEsExtensionValuePresentCNTypeRestrictionsForServing {
+		if value.ExtensionValue.Present != ngapType.MobilityRestrictionListExtIEsPresentCNTypeRestrictionsForServing {
 			return binData, bitEnd, errors.New("MobilityRestrictionListExtIEs: ProtocolExtensionID: INVALID")
 		}
 	case ngapType.ProtocolIEIDCNTypeRestrictionsForEquivalent:
-		if value.ExtensionValue.Present != ngapType.MobilityRestrictionListExtIEsExtensionValuePresentCNTypeRestrictionsForEquivalent {
+		if value.ExtensionValue.Present != ngapType.MobilityRestrictionListExtIEsPresentCNTypeRestrictionsForEquivalent {
 			return binData, bitEnd, errors.New("MobilityRestrictionListExtIEs: ProtocolExtensionID: INVALID")
 		}
 	default:
@@ -1584,7 +1584,7 @@ func PathSwitchRequestAcknowledgeTransferExtIEs(value ngapType.PathSwitchRequest
 	var err error
 	switch value.ProtocolExtensionID.Value {
 	case ngapType.ProtocolIEIDAdditionalNGUUPTNLInformation:
-		if value.ExtensionValue.Present != ngapType.PathSwitchRequestAcknowledgeTransferExtIEsExtensionValuePresentAdditionalNGUUPTNLInformation {
+		if value.ExtensionValue.Present != ngapType.PathSwitchRequestAcknowledgeTransferExtIEsPresentAdditionalNGUUPTNLInformation {
 			return binData, bitEnd, errors.New("PathSwitchRequestAcknowledgeTransferExtIEs: ProtocolExtensionID: INVALID")
 		}
 	default:
@@ -1628,7 +1628,7 @@ func PathSwitchRequestTransferExtIEs(value ngapType.PathSwitchRequestTransferExt
 	var err error
 	switch value.ProtocolExtensionID.Value {
 	case ngapType.ProtocolIEIDAdditionalDLQosFlowPerTNLInformation:
-		if value.ExtensionValue.Present != ngapType.PathSwitchRequestTransferExtIEsExtensionValuePresentAdditionalDLQosFlowPerTNLInformation {
+		if value.ExtensionValue.Present != ngapType.PathSwitchRequestTransferExtIEsPresentAdditionalDLQosFlowPerTNLInformation {
 			return binData, bitEnd, errors.New("PathSwitchRequestTransferExtIEs: ProtocolExtensionID: INVALID")
 		}
 	default:
@@ -1870,7 +1870,7 @@ func PDUSessionResourceItemCxtRelCplExtIEs(value ngapType.PDUSessionResourceItem
 	var err error
 	switch value.ProtocolExtensionID.Value {
 	case ngapType.ProtocolIEIDPDUSessionResourceReleaseResponseTransfer:
-		if value.ExtensionValue.Present != ngapType.PDUSessionResourceItemCxtRelCplExtIEsExtensionValuePresentPDUSessionResourceReleaseResponseTransfer {
+		if value.ExtensionValue.Present != ngapType.PDUSessionResourceItemCxtRelCplExtIEsPresentPDUSessionResourceReleaseResponseTransfer {
 			return binData, bitEnd, errors.New("PDUSessionResourceItemCxtRelCplExtIEs: ProtocolExtensionID: INVALID")
 		}
 	default:
@@ -2018,7 +2018,7 @@ func PDUSessionResourceModifyResponseTransferExtIEs(value ngapType.PDUSessionRes
 	var err error
 	switch value.ProtocolExtensionID.Value {
 	case ngapType.ProtocolIEIDAdditionalNGUUPTNLInformation:
-		if value.ExtensionValue.Present != ngapType.PDUSessionResourceModifyResponseTransferExtIEsExtensionValuePresentAdditionalNGUUPTNLInformation {
+		if value.ExtensionValue.Present != ngapType.PDUSessionResourceModifyResponseTransferExtIEsPresentAdditionalNGUUPTNLInformation {
 			return binData, bitEnd, errors.New("PDUSessionResourceModifyResponseTransferExtIEs: ProtocolExtensionID: INVALID")
 		}
 	default:
@@ -2044,11 +2044,11 @@ func PDUSessionResourceModifyIndicationTransferExtIEs(value ngapType.PDUSessionR
 	var err error
 	switch value.ProtocolExtensionID.Value {
 	case ngapType.ProtocolIEIDSecondaryRATUsageInformation:
-		if value.ExtensionValue.Present != ngapType.PDUSessionResourceModifyIndicationTransferExtIEsExtensionValuePresentSecondaryRATUsageInformation {
+		if value.ExtensionValue.Present != ngapType.PDUSessionResourceModifyIndicationTransferExtIEsPresentSecondaryRATUsageInformation {
 			return binData, bitEnd, errors.New("PDUSessionResourceModifyIndicationTransferExtIEs: ProtocolExtensionID: INVALID")
 		}
 	case ngapType.ProtocolIEIDSecurityResult:
-		if value.ExtensionValue.Present != ngapType.PDUSessionResourceModifyIndicationTransferExtIEsExtensionValuePresentSecurityResult {
+		if value.ExtensionValue.Present != ngapType.PDUSessionResourceModifyIndicationTransferExtIEsPresentSecurityResult {
 			return binData, bitEnd, errors.New("PDUSessionResourceModifyIndicationTransferExtIEs: ProtocolExtensionID: INVALID")
 		}
 	default:
@@ -2110,7 +2110,7 @@ func PDUSessionResourceModifyItemModReqExtIEs(value ngapType.PDUSessionResourceM
 	var err error
 	switch value.ProtocolExtensionID.Value {
 	case ngapType.ProtocolIEIDSNSSAI:
-		if value.ExtensionValue.Present != ngapType.PDUSessionResourceModifyItemModReqExtIEsExtensionValuePresentSNSSAI {
+		if value.ExtensionValue.Present != ngapType.PDUSessionResourceModifyItemModReqExtIEsPresentSNSSAI {
 			return binData, bitEnd, errors.New("PDUSessionResourceModifyItemModReqExtIEs: ProtocolExtensionID: INVALID")
 		}
 	default:
@@ -2190,7 +2190,7 @@ func PDUSessionResourceNotifyReleasedTransferExtIEs(value ngapType.PDUSessionRes
 	var err error
 	switch value.ProtocolExtensionID.Value {
 	case ngapType.ProtocolIEIDSecondaryRATUsageInformation:
-		if value.ExtensionValue.Present != ngapType.PDUSessionResourceNotifyReleasedTransferExtIEsExtensionValuePresentSecondaryRATUsageInformation {
+		if value.ExtensionValue.Present != ngapType.PDUSessionResourceNotifyReleasedTransferExtIEsPresentSecondaryRATUsageInformation {
 			return binData, bitEnd, errors.New("PDUSessionResourceNotifyReleasedTransferExtIEs: ProtocolExtensionID: INVALID")
 		}
 	default:
@@ -2216,7 +2216,7 @@ func PDUSessionResourceNotifyTransferExtIEs(value ngapType.PDUSessionResourceNot
 	var err error
 	switch value.ProtocolExtensionID.Value {
 	case ngapType.ProtocolIEIDSecondaryRATUsageInformation:
-		if value.ExtensionValue.Present != ngapType.PDUSessionResourceNotifyTransferExtIEsExtensionValuePresentSecondaryRATUsageInformation {
+		if value.ExtensionValue.Present != ngapType.PDUSessionResourceNotifyTransferExtIEsPresentSecondaryRATUsageInformation {
 			return binData, bitEnd, errors.New("PDUSessionResourceNotifyTransferExtIEs: ProtocolExtensionID: INVALID")
 		}
 	default:
@@ -2332,7 +2332,7 @@ func PDUSessionResourceReleaseResponseTransferExtIEs(value ngapType.PDUSessionRe
 	var err error
 	switch value.ProtocolExtensionID.Value {
 	case ngapType.ProtocolIEIDSecondaryRATUsageInformation:
-		if value.ExtensionValue.Present != ngapType.PDUSessionResourceReleaseResponseTransferExtIEsExtensionValuePresentSecondaryRATUsageInformation {
+		if value.ExtensionValue.Present != ngapType.PDUSessionResourceReleaseResponseTransferExtIEsPresentSecondaryRATUsageInformation {
 			return binData, bitEnd, errors.New("PDUSessionResourceReleaseResponseTransferExtIEs: ProtocolExtensionID: INVALID")
 		}
 	default:
@@ -2726,7 +2726,7 @@ func QosFlowInformationItemExtIEs(value ngapType.QosFlowInformationItemExtIEs, b
 	var err error
 	switch value.ProtocolExtensionID.Value {
 	case ngapType.ProtocolIEIDULForwarding:
-		if value.ExtensionValue.Present != ngapType.QosFlowInformationItemExtIEsExtensionValuePresentULForwarding {
+		if value.ExtensionValue.Present != ngapType.QosFlowInformationItemExtIEsPresentULForwarding {
 			return binData, bitEnd, errors.New("QosFlowInformationItemExtIEs: ProtocolExtensionID: INVALID")
 		}
 	default:
@@ -2752,7 +2752,7 @@ func QosFlowLevelQosParametersExtIEs(value ngapType.QosFlowLevelQosParametersExt
 	var err error
 	switch value.ProtocolExtensionID.Value {
 	case ngapType.ProtocolIEIDQosMonitoringRequest:
-		if value.ExtensionValue.Present != ngapType.QosFlowLevelQosParametersExtIEsExtensionValuePresentQosMonitoringRequest {
+		if value.ExtensionValue.Present != ngapType.QosFlowLevelQosParametersExtIEsPresentQosMonitoringRequest {
 			return binData, bitEnd, errors.New("QosFlowLevelQosParametersExtIEs: ProtocolExtensionID: INVALID")
 		}
 	default:
@@ -2958,7 +2958,7 @@ func RATRestrictionsItemExtIEs(value ngapType.RATRestrictionsItemExtIEs, binData
 	var err error
 	switch value.ProtocolExtensionID.Value {
 	case ngapType.ProtocolIEIDExtendedRATRestrictionInformation:
-		if value.ExtensionValue.Present != ngapType.RATRestrictionsItemExtIEsExtensionValuePresentExtendedRATRestrictionInformation {
+		if value.ExtensionValue.Present != ngapType.RATRestrictionsItemExtIEsPresentExtendedRATRestrictionInformation {
 			return binData, bitEnd, errors.New("RATRestrictionsItemExtIEs: ProtocolExtensionID: INVALID")
 		}
 	default:
@@ -3128,7 +3128,7 @@ func SecurityIndicationExtIEs(value ngapType.SecurityIndicationExtIEs, binData [
 	var err error
 	switch value.ProtocolExtensionID.Value {
 	case ngapType.ProtocolIEIDMaximumIntegrityProtectedDataRateDL:
-		if value.ExtensionValue.Present != ngapType.SecurityIndicationExtIEsExtensionValuePresentMaximumIntegrityProtectedDataRateDL {
+		if value.ExtensionValue.Present != ngapType.SecurityIndicationExtIEsPresentMaximumIntegrityProtectedDataRateDL {
 			return binData, bitEnd, errors.New("SecurityIndicationExtIEs: ProtocolExtensionID: INVALID")
 		}
 	default:
@@ -3172,7 +3172,7 @@ func ServedGUAMIItemExtIEs(value ngapType.ServedGUAMIItemExtIEs, binData []byte,
 	var err error
 	switch value.ProtocolExtensionID.Value {
 	case ngapType.ProtocolIEIDGUAMIType:
-		if value.ExtensionValue.Present != ngapType.ServedGUAMIItemExtIEsExtensionValuePresentGUAMIType {
+		if value.ExtensionValue.Present != ngapType.ServedGUAMIItemExtIEsPresentGUAMIType {
 			return binData, bitEnd, errors.New("ServedGUAMIItemExtIEs: ProtocolExtensionID: INVALID")
 		}
 	default:
@@ -3306,7 +3306,7 @@ func SourceNGRANNodeToTargetNGRANNodeTransparentContainerExtIEs(value ngapType.S
 	var err error
 	switch value.ProtocolExtensionID.Value {
 	case ngapType.ProtocolIEIDSgNBUEX2APID:
-		if value.ExtensionValue.Present != ngapType.SourceNGRANNodeToTargetNGRANNodeTransparentContainerExtIEsExtensionValuePresentSgNBUEX2APID {
+		if value.ExtensionValue.Present != ngapType.SourceNGRANNodeToTargetNGRANNodeTransparentContainerExtIEsPresentSgNBUEX2APID {
 			return binData, bitEnd, errors.New("SourceNGRANNodeToTargetNGRANNodeTransparentContainerExtIEs: ProtocolExtensionID: INVALID")
 		}
 	default:
@@ -3368,7 +3368,7 @@ func SupportedTAItemExtIEs(value ngapType.SupportedTAItemExtIEs, binData []byte,
 	var err error
 	switch value.ProtocolExtensionID.Value {
 	case ngapType.ProtocolIEIDRATInformation:
-		if value.ExtensionValue.Present != ngapType.SupportedTAItemExtIEsExtensionValuePresentRATInformation {
+		if value.ExtensionValue.Present != ngapType.SupportedTAItemExtIEsPresentRATInformation {
 			return binData, bitEnd, errors.New("SupportedTAItemExtIEs: ProtocolExtensionID: INVALID")
 		}
 	default:
@@ -3808,7 +3808,7 @@ func UserLocationInformationEUTRAExtIEs(value ngapType.UserLocationInformationEU
 	var err error
 	switch value.ProtocolExtensionID.Value {
 	case ngapType.ProtocolIEIDPSCellInformation:
-		if value.ExtensionValue.Present != ngapType.UserLocationInformationEUTRAExtIEsExtensionValuePresentPSCellInformation {
+		if value.ExtensionValue.Present != ngapType.UserLocationInformationEUTRAExtIEsPresentPSCellInformation {
 			return binData, bitEnd, errors.New("UserLocationInformationEUTRAExtIEs: ProtocolExtensionID: INVALID")
 		}
 	default:
@@ -3852,7 +3852,7 @@ func UserLocationInformationNRExtIEs(value ngapType.UserLocationInformationNRExt
 	var err error
 	switch value.ProtocolExtensionID.Value {
 	case ngapType.ProtocolIEIDPSCellInformation:
-		if value.ExtensionValue.Present != ngapType.UserLocationInformationNRExtIEsExtensionValuePresentPSCellInformation {
+		if value.ExtensionValue.Present != ngapType.UserLocationInformationNRExtIEsPresentPSCellInformation {
 			return binData, bitEnd, errors.New("UserLocationInformationNRExtIEs: ProtocolExtensionID: INVALID")
 		}
 	default:
@@ -3914,7 +3914,7 @@ func XnExtTLAItemExtIEs(value ngapType.XnExtTLAItemExtIEs, binData []byte, bitEn
 	var err error
 	switch value.ProtocolExtensionID.Value {
 	case ngapType.ProtocolIEIDSCTPTLAs:
-		if value.ExtensionValue.Present != ngapType.XnExtTLAItemExtIEsExtensionValuePresentSCTPTLAs {
+		if value.ExtensionValue.Present != ngapType.XnExtTLAItemExtIEsPresentSCTPTLAs {
 			return binData, bitEnd, errors.New("XnExtTLAItemExtIEs: ProtocolExtensionID: INVALID")
 		}
 	default:

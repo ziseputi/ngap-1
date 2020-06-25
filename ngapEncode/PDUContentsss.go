@@ -10,27 +10,27 @@ func PDUSessionResourceSetupRequestIEs(value ngapType.PDUSessionResourceSetupReq
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDAMFUENGAPID:
-		if value.TypeValue.Present != ngapType.PDUSessionResourceSetupRequestIEsTypeValuePresentAMFUENGAPID {
+		if value.TypeValue.Present != ngapType.PDUSessionResourceSetupRequestIEsPresentAMFUENGAPID {
 			return binData, bitEnd, errors.New("PDUSessionResourceSetupRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDRANUENGAPID:
-		if value.TypeValue.Present != ngapType.PDUSessionResourceSetupRequestIEsTypeValuePresentRANUENGAPID {
+		if value.TypeValue.Present != ngapType.PDUSessionResourceSetupRequestIEsPresentRANUENGAPID {
 			return binData, bitEnd, errors.New("PDUSessionResourceSetupRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDRANPagingPriority:
-		if value.TypeValue.Present != ngapType.PDUSessionResourceSetupRequestIEsTypeValuePresentRANPagingPriority {
+		if value.TypeValue.Present != ngapType.PDUSessionResourceSetupRequestIEsPresentRANPagingPriority {
 			return binData, bitEnd, errors.New("PDUSessionResourceSetupRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDNASPDU:
-		if value.TypeValue.Present != ngapType.PDUSessionResourceSetupRequestIEsTypeValuePresentNASPDU {
+		if value.TypeValue.Present != ngapType.PDUSessionResourceSetupRequestIEsPresentNASPDU {
 			return binData, bitEnd, errors.New("PDUSessionResourceSetupRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDPDUSessionResourceSetupListSUReq:
-		if value.TypeValue.Present != ngapType.PDUSessionResourceSetupRequestIEsTypeValuePresentPDUSessionResourceSetupListSUReq {
+		if value.TypeValue.Present != ngapType.PDUSessionResourceSetupRequestIEsPresentPDUSessionResourceSetupListSUReq {
 			return binData, bitEnd, errors.New("PDUSessionResourceSetupRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDUEAggregateMaximumBitRate:
-		if value.TypeValue.Present != ngapType.PDUSessionResourceSetupRequestIEsTypeValuePresentUEAggregateMaximumBitRate {
+		if value.TypeValue.Present != ngapType.PDUSessionResourceSetupRequestIEsPresentUEAggregateMaximumBitRate {
 			return binData, bitEnd, errors.New("PDUSessionResourceSetupRequestIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -56,23 +56,23 @@ func PDUSessionResourceSetupResponseIEs(value ngapType.PDUSessionResourceSetupRe
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDAMFUENGAPID:
-		if value.TypeValue.Present != ngapType.PDUSessionResourceSetupResponseIEsTypeValuePresentAMFUENGAPID {
+		if value.TypeValue.Present != ngapType.PDUSessionResourceSetupResponseIEsPresentAMFUENGAPID {
 			return binData, bitEnd, errors.New("PDUSessionResourceSetupResponseIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDRANUENGAPID:
-		if value.TypeValue.Present != ngapType.PDUSessionResourceSetupResponseIEsTypeValuePresentRANUENGAPID {
+		if value.TypeValue.Present != ngapType.PDUSessionResourceSetupResponseIEsPresentRANUENGAPID {
 			return binData, bitEnd, errors.New("PDUSessionResourceSetupResponseIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDPDUSessionResourceSetupListSURes:
-		if value.TypeValue.Present != ngapType.PDUSessionResourceSetupResponseIEsTypeValuePresentPDUSessionResourceSetupListSURes {
+		if value.TypeValue.Present != ngapType.PDUSessionResourceSetupResponseIEsPresentPDUSessionResourceSetupListSURes {
 			return binData, bitEnd, errors.New("PDUSessionResourceSetupResponseIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDPDUSessionResourceFailedToSetupListSURes:
-		if value.TypeValue.Present != ngapType.PDUSessionResourceSetupResponseIEsTypeValuePresentPDUSessionResourceFailedToSetupListSURes {
+		if value.TypeValue.Present != ngapType.PDUSessionResourceSetupResponseIEsPresentPDUSessionResourceFailedToSetupListSURes {
 			return binData, bitEnd, errors.New("PDUSessionResourceSetupResponseIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDCriticalityDiagnostics:
-		if value.TypeValue.Present != ngapType.PDUSessionResourceSetupResponseIEsTypeValuePresentCriticalityDiagnostics {
+		if value.TypeValue.Present != ngapType.PDUSessionResourceSetupResponseIEsPresentCriticalityDiagnostics {
 			return binData, bitEnd, errors.New("PDUSessionResourceSetupResponseIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -98,23 +98,23 @@ func PDUSessionResourceReleaseCommandIEs(value ngapType.PDUSessionResourceReleas
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDAMFUENGAPID:
-		if value.TypeValue.Present != ngapType.PDUSessionResourceReleaseCommandIEsTypeValuePresentAMFUENGAPID {
+		if value.TypeValue.Present != ngapType.PDUSessionResourceReleaseCommandIEsPresentAMFUENGAPID {
 			return binData, bitEnd, errors.New("PDUSessionResourceReleaseCommandIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDRANUENGAPID:
-		if value.TypeValue.Present != ngapType.PDUSessionResourceReleaseCommandIEsTypeValuePresentRANUENGAPID {
+		if value.TypeValue.Present != ngapType.PDUSessionResourceReleaseCommandIEsPresentRANUENGAPID {
 			return binData, bitEnd, errors.New("PDUSessionResourceReleaseCommandIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDRANPagingPriority:
-		if value.TypeValue.Present != ngapType.PDUSessionResourceReleaseCommandIEsTypeValuePresentRANPagingPriority {
+		if value.TypeValue.Present != ngapType.PDUSessionResourceReleaseCommandIEsPresentRANPagingPriority {
 			return binData, bitEnd, errors.New("PDUSessionResourceReleaseCommandIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDNASPDU:
-		if value.TypeValue.Present != ngapType.PDUSessionResourceReleaseCommandIEsTypeValuePresentNASPDU {
+		if value.TypeValue.Present != ngapType.PDUSessionResourceReleaseCommandIEsPresentNASPDU {
 			return binData, bitEnd, errors.New("PDUSessionResourceReleaseCommandIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDPDUSessionResourceToReleaseListRelCmd:
-		if value.TypeValue.Present != ngapType.PDUSessionResourceReleaseCommandIEsTypeValuePresentPDUSessionResourceToReleaseListRelCmd {
+		if value.TypeValue.Present != ngapType.PDUSessionResourceReleaseCommandIEsPresentPDUSessionResourceToReleaseListRelCmd {
 			return binData, bitEnd, errors.New("PDUSessionResourceReleaseCommandIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -140,23 +140,23 @@ func PDUSessionResourceReleaseResponseIEs(value ngapType.PDUSessionResourceRelea
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDAMFUENGAPID:
-		if value.TypeValue.Present != ngapType.PDUSessionResourceReleaseResponseIEsTypeValuePresentAMFUENGAPID {
+		if value.TypeValue.Present != ngapType.PDUSessionResourceReleaseResponseIEsPresentAMFUENGAPID {
 			return binData, bitEnd, errors.New("PDUSessionResourceReleaseResponseIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDRANUENGAPID:
-		if value.TypeValue.Present != ngapType.PDUSessionResourceReleaseResponseIEsTypeValuePresentRANUENGAPID {
+		if value.TypeValue.Present != ngapType.PDUSessionResourceReleaseResponseIEsPresentRANUENGAPID {
 			return binData, bitEnd, errors.New("PDUSessionResourceReleaseResponseIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDPDUSessionResourceReleasedListRelRes:
-		if value.TypeValue.Present != ngapType.PDUSessionResourceReleaseResponseIEsTypeValuePresentPDUSessionResourceReleasedListRelRes {
+		if value.TypeValue.Present != ngapType.PDUSessionResourceReleaseResponseIEsPresentPDUSessionResourceReleasedListRelRes {
 			return binData, bitEnd, errors.New("PDUSessionResourceReleaseResponseIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDUserLocationInformation:
-		if value.TypeValue.Present != ngapType.PDUSessionResourceReleaseResponseIEsTypeValuePresentUserLocationInformation {
+		if value.TypeValue.Present != ngapType.PDUSessionResourceReleaseResponseIEsPresentUserLocationInformation {
 			return binData, bitEnd, errors.New("PDUSessionResourceReleaseResponseIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDCriticalityDiagnostics:
-		if value.TypeValue.Present != ngapType.PDUSessionResourceReleaseResponseIEsTypeValuePresentCriticalityDiagnostics {
+		if value.TypeValue.Present != ngapType.PDUSessionResourceReleaseResponseIEsPresentCriticalityDiagnostics {
 			return binData, bitEnd, errors.New("PDUSessionResourceReleaseResponseIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -182,19 +182,19 @@ func PDUSessionResourceModifyRequestIEs(value ngapType.PDUSessionResourceModifyR
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDAMFUENGAPID:
-		if value.TypeValue.Present != ngapType.PDUSessionResourceModifyRequestIEsTypeValuePresentAMFUENGAPID {
+		if value.TypeValue.Present != ngapType.PDUSessionResourceModifyRequestIEsPresentAMFUENGAPID {
 			return binData, bitEnd, errors.New("PDUSessionResourceModifyRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDRANUENGAPID:
-		if value.TypeValue.Present != ngapType.PDUSessionResourceModifyRequestIEsTypeValuePresentRANUENGAPID {
+		if value.TypeValue.Present != ngapType.PDUSessionResourceModifyRequestIEsPresentRANUENGAPID {
 			return binData, bitEnd, errors.New("PDUSessionResourceModifyRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDRANPagingPriority:
-		if value.TypeValue.Present != ngapType.PDUSessionResourceModifyRequestIEsTypeValuePresentRANPagingPriority {
+		if value.TypeValue.Present != ngapType.PDUSessionResourceModifyRequestIEsPresentRANPagingPriority {
 			return binData, bitEnd, errors.New("PDUSessionResourceModifyRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDPDUSessionResourceModifyListModReq:
-		if value.TypeValue.Present != ngapType.PDUSessionResourceModifyRequestIEsTypeValuePresentPDUSessionResourceModifyListModReq {
+		if value.TypeValue.Present != ngapType.PDUSessionResourceModifyRequestIEsPresentPDUSessionResourceModifyListModReq {
 			return binData, bitEnd, errors.New("PDUSessionResourceModifyRequestIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -220,27 +220,27 @@ func PDUSessionResourceModifyResponseIEs(value ngapType.PDUSessionResourceModify
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDAMFUENGAPID:
-		if value.TypeValue.Present != ngapType.PDUSessionResourceModifyResponseIEsTypeValuePresentAMFUENGAPID {
+		if value.TypeValue.Present != ngapType.PDUSessionResourceModifyResponseIEsPresentAMFUENGAPID {
 			return binData, bitEnd, errors.New("PDUSessionResourceModifyResponseIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDRANUENGAPID:
-		if value.TypeValue.Present != ngapType.PDUSessionResourceModifyResponseIEsTypeValuePresentRANUENGAPID {
+		if value.TypeValue.Present != ngapType.PDUSessionResourceModifyResponseIEsPresentRANUENGAPID {
 			return binData, bitEnd, errors.New("PDUSessionResourceModifyResponseIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDPDUSessionResourceModifyListModRes:
-		if value.TypeValue.Present != ngapType.PDUSessionResourceModifyResponseIEsTypeValuePresentPDUSessionResourceModifyListModRes {
+		if value.TypeValue.Present != ngapType.PDUSessionResourceModifyResponseIEsPresentPDUSessionResourceModifyListModRes {
 			return binData, bitEnd, errors.New("PDUSessionResourceModifyResponseIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDPDUSessionResourceFailedToModifyListModRes:
-		if value.TypeValue.Present != ngapType.PDUSessionResourceModifyResponseIEsTypeValuePresentPDUSessionResourceFailedToModifyListModRes {
+		if value.TypeValue.Present != ngapType.PDUSessionResourceModifyResponseIEsPresentPDUSessionResourceFailedToModifyListModRes {
 			return binData, bitEnd, errors.New("PDUSessionResourceModifyResponseIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDUserLocationInformation:
-		if value.TypeValue.Present != ngapType.PDUSessionResourceModifyResponseIEsTypeValuePresentUserLocationInformation {
+		if value.TypeValue.Present != ngapType.PDUSessionResourceModifyResponseIEsPresentUserLocationInformation {
 			return binData, bitEnd, errors.New("PDUSessionResourceModifyResponseIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDCriticalityDiagnostics:
-		if value.TypeValue.Present != ngapType.PDUSessionResourceModifyResponseIEsTypeValuePresentCriticalityDiagnostics {
+		if value.TypeValue.Present != ngapType.PDUSessionResourceModifyResponseIEsPresentCriticalityDiagnostics {
 			return binData, bitEnd, errors.New("PDUSessionResourceModifyResponseIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -266,23 +266,23 @@ func PDUSessionResourceNotifyIEs(value ngapType.PDUSessionResourceNotifyIEs, bin
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDAMFUENGAPID:
-		if value.TypeValue.Present != ngapType.PDUSessionResourceNotifyIEsTypeValuePresentAMFUENGAPID {
+		if value.TypeValue.Present != ngapType.PDUSessionResourceNotifyIEsPresentAMFUENGAPID {
 			return binData, bitEnd, errors.New("PDUSessionResourceNotifyIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDRANUENGAPID:
-		if value.TypeValue.Present != ngapType.PDUSessionResourceNotifyIEsTypeValuePresentRANUENGAPID {
+		if value.TypeValue.Present != ngapType.PDUSessionResourceNotifyIEsPresentRANUENGAPID {
 			return binData, bitEnd, errors.New("PDUSessionResourceNotifyIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDPDUSessionResourceNotifyList:
-		if value.TypeValue.Present != ngapType.PDUSessionResourceNotifyIEsTypeValuePresentPDUSessionResourceNotifyList {
+		if value.TypeValue.Present != ngapType.PDUSessionResourceNotifyIEsPresentPDUSessionResourceNotifyList {
 			return binData, bitEnd, errors.New("PDUSessionResourceNotifyIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDPDUSessionResourceReleasedListNot:
-		if value.TypeValue.Present != ngapType.PDUSessionResourceNotifyIEsTypeValuePresentPDUSessionResourceReleasedListNot {
+		if value.TypeValue.Present != ngapType.PDUSessionResourceNotifyIEsPresentPDUSessionResourceReleasedListNot {
 			return binData, bitEnd, errors.New("PDUSessionResourceNotifyIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDUserLocationInformation:
-		if value.TypeValue.Present != ngapType.PDUSessionResourceNotifyIEsTypeValuePresentUserLocationInformation {
+		if value.TypeValue.Present != ngapType.PDUSessionResourceNotifyIEsPresentUserLocationInformation {
 			return binData, bitEnd, errors.New("PDUSessionResourceNotifyIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -308,19 +308,19 @@ func PDUSessionResourceModifyIndicationIEs(value ngapType.PDUSessionResourceModi
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDAMFUENGAPID:
-		if value.TypeValue.Present != ngapType.PDUSessionResourceModifyIndicationIEsTypeValuePresentAMFUENGAPID {
+		if value.TypeValue.Present != ngapType.PDUSessionResourceModifyIndicationIEsPresentAMFUENGAPID {
 			return binData, bitEnd, errors.New("PDUSessionResourceModifyIndicationIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDRANUENGAPID:
-		if value.TypeValue.Present != ngapType.PDUSessionResourceModifyIndicationIEsTypeValuePresentRANUENGAPID {
+		if value.TypeValue.Present != ngapType.PDUSessionResourceModifyIndicationIEsPresentRANUENGAPID {
 			return binData, bitEnd, errors.New("PDUSessionResourceModifyIndicationIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDPDUSessionResourceModifyListModInd:
-		if value.TypeValue.Present != ngapType.PDUSessionResourceModifyIndicationIEsTypeValuePresentPDUSessionResourceModifyListModInd {
+		if value.TypeValue.Present != ngapType.PDUSessionResourceModifyIndicationIEsPresentPDUSessionResourceModifyListModInd {
 			return binData, bitEnd, errors.New("PDUSessionResourceModifyIndicationIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDUserLocationInformation:
-		if value.TypeValue.Present != ngapType.PDUSessionResourceModifyIndicationIEsTypeValuePresentUserLocationInformation {
+		if value.TypeValue.Present != ngapType.PDUSessionResourceModifyIndicationIEsPresentUserLocationInformation {
 			return binData, bitEnd, errors.New("PDUSessionResourceModifyIndicationIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -346,23 +346,23 @@ func PDUSessionResourceModifyConfirmIEs(value ngapType.PDUSessionResourceModifyC
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDAMFUENGAPID:
-		if value.TypeValue.Present != ngapType.PDUSessionResourceModifyConfirmIEsTypeValuePresentAMFUENGAPID {
+		if value.TypeValue.Present != ngapType.PDUSessionResourceModifyConfirmIEsPresentAMFUENGAPID {
 			return binData, bitEnd, errors.New("PDUSessionResourceModifyConfirmIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDRANUENGAPID:
-		if value.TypeValue.Present != ngapType.PDUSessionResourceModifyConfirmIEsTypeValuePresentRANUENGAPID {
+		if value.TypeValue.Present != ngapType.PDUSessionResourceModifyConfirmIEsPresentRANUENGAPID {
 			return binData, bitEnd, errors.New("PDUSessionResourceModifyConfirmIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDPDUSessionResourceModifyListModCfm:
-		if value.TypeValue.Present != ngapType.PDUSessionResourceModifyConfirmIEsTypeValuePresentPDUSessionResourceModifyListModCfm {
+		if value.TypeValue.Present != ngapType.PDUSessionResourceModifyConfirmIEsPresentPDUSessionResourceModifyListModCfm {
 			return binData, bitEnd, errors.New("PDUSessionResourceModifyConfirmIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDPDUSessionResourceFailedToModifyListModCfm:
-		if value.TypeValue.Present != ngapType.PDUSessionResourceModifyConfirmIEsTypeValuePresentPDUSessionResourceFailedToModifyListModCfm {
+		if value.TypeValue.Present != ngapType.PDUSessionResourceModifyConfirmIEsPresentPDUSessionResourceFailedToModifyListModCfm {
 			return binData, bitEnd, errors.New("PDUSessionResourceModifyConfirmIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDCriticalityDiagnostics:
-		if value.TypeValue.Present != ngapType.PDUSessionResourceModifyConfirmIEsTypeValuePresentCriticalityDiagnostics {
+		if value.TypeValue.Present != ngapType.PDUSessionResourceModifyConfirmIEsPresentCriticalityDiagnostics {
 			return binData, bitEnd, errors.New("PDUSessionResourceModifyConfirmIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -388,95 +388,95 @@ func InitialContextSetupRequestIEs(value ngapType.InitialContextSetupRequestIEs,
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDAMFUENGAPID:
-		if value.TypeValue.Present != ngapType.InitialContextSetupRequestIEsTypeValuePresentAMFUENGAPID {
+		if value.TypeValue.Present != ngapType.InitialContextSetupRequestIEsPresentAMFUENGAPID {
 			return binData, bitEnd, errors.New("InitialContextSetupRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDRANUENGAPID:
-		if value.TypeValue.Present != ngapType.InitialContextSetupRequestIEsTypeValuePresentRANUENGAPID {
+		if value.TypeValue.Present != ngapType.InitialContextSetupRequestIEsPresentRANUENGAPID {
 			return binData, bitEnd, errors.New("InitialContextSetupRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDOldAMF:
-		if value.TypeValue.Present != ngapType.InitialContextSetupRequestIEsTypeValuePresentOldAMF {
+		if value.TypeValue.Present != ngapType.InitialContextSetupRequestIEsPresentOldAMF {
 			return binData, bitEnd, errors.New("InitialContextSetupRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDUEAggregateMaximumBitRate:
-		if value.TypeValue.Present != ngapType.InitialContextSetupRequestIEsTypeValuePresentUEAggregateMaximumBitRate {
+		if value.TypeValue.Present != ngapType.InitialContextSetupRequestIEsPresentUEAggregateMaximumBitRate {
 			return binData, bitEnd, errors.New("InitialContextSetupRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDCoreNetworkAssistanceInformationForInactive:
-		if value.TypeValue.Present != ngapType.InitialContextSetupRequestIEsTypeValuePresentCoreNetworkAssistanceInformationForInactive {
+		if value.TypeValue.Present != ngapType.InitialContextSetupRequestIEsPresentCoreNetworkAssistanceInformationForInactive {
 			return binData, bitEnd, errors.New("InitialContextSetupRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDGUAMI:
-		if value.TypeValue.Present != ngapType.InitialContextSetupRequestIEsTypeValuePresentGUAMI {
+		if value.TypeValue.Present != ngapType.InitialContextSetupRequestIEsPresentGUAMI {
 			return binData, bitEnd, errors.New("InitialContextSetupRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDPDUSessionResourceSetupListCxtReq:
-		if value.TypeValue.Present != ngapType.InitialContextSetupRequestIEsTypeValuePresentPDUSessionResourceSetupListCxtReq {
+		if value.TypeValue.Present != ngapType.InitialContextSetupRequestIEsPresentPDUSessionResourceSetupListCxtReq {
 			return binData, bitEnd, errors.New("InitialContextSetupRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDAllowedNSSAI:
-		if value.TypeValue.Present != ngapType.InitialContextSetupRequestIEsTypeValuePresentAllowedNSSAI {
+		if value.TypeValue.Present != ngapType.InitialContextSetupRequestIEsPresentAllowedNSSAI {
 			return binData, bitEnd, errors.New("InitialContextSetupRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDUESecurityCapabilities:
-		if value.TypeValue.Present != ngapType.InitialContextSetupRequestIEsTypeValuePresentUESecurityCapabilities {
+		if value.TypeValue.Present != ngapType.InitialContextSetupRequestIEsPresentUESecurityCapabilities {
 			return binData, bitEnd, errors.New("InitialContextSetupRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDSecurityKey:
-		if value.TypeValue.Present != ngapType.InitialContextSetupRequestIEsTypeValuePresentSecurityKey {
+		if value.TypeValue.Present != ngapType.InitialContextSetupRequestIEsPresentSecurityKey {
 			return binData, bitEnd, errors.New("InitialContextSetupRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDTraceActivation:
-		if value.TypeValue.Present != ngapType.InitialContextSetupRequestIEsTypeValuePresentTraceActivation {
+		if value.TypeValue.Present != ngapType.InitialContextSetupRequestIEsPresentTraceActivation {
 			return binData, bitEnd, errors.New("InitialContextSetupRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDMobilityRestrictionList:
-		if value.TypeValue.Present != ngapType.InitialContextSetupRequestIEsTypeValuePresentMobilityRestrictionList {
+		if value.TypeValue.Present != ngapType.InitialContextSetupRequestIEsPresentMobilityRestrictionList {
 			return binData, bitEnd, errors.New("InitialContextSetupRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDUERadioCapability:
-		if value.TypeValue.Present != ngapType.InitialContextSetupRequestIEsTypeValuePresentUERadioCapability {
+		if value.TypeValue.Present != ngapType.InitialContextSetupRequestIEsPresentUERadioCapability {
 			return binData, bitEnd, errors.New("InitialContextSetupRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDIndexToRFSP:
-		if value.TypeValue.Present != ngapType.InitialContextSetupRequestIEsTypeValuePresentIndexToRFSP {
+		if value.TypeValue.Present != ngapType.InitialContextSetupRequestIEsPresentIndexToRFSP {
 			return binData, bitEnd, errors.New("InitialContextSetupRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDMaskedIMEISV:
-		if value.TypeValue.Present != ngapType.InitialContextSetupRequestIEsTypeValuePresentMaskedIMEISV {
+		if value.TypeValue.Present != ngapType.InitialContextSetupRequestIEsPresentMaskedIMEISV {
 			return binData, bitEnd, errors.New("InitialContextSetupRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDNASPDU:
-		if value.TypeValue.Present != ngapType.InitialContextSetupRequestIEsTypeValuePresentNASPDU {
+		if value.TypeValue.Present != ngapType.InitialContextSetupRequestIEsPresentNASPDU {
 			return binData, bitEnd, errors.New("InitialContextSetupRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDEmergencyFallbackIndicator:
-		if value.TypeValue.Present != ngapType.InitialContextSetupRequestIEsTypeValuePresentEmergencyFallbackIndicator {
+		if value.TypeValue.Present != ngapType.InitialContextSetupRequestIEsPresentEmergencyFallbackIndicator {
 			return binData, bitEnd, errors.New("InitialContextSetupRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDRRCInactiveTransitionReportRequest:
-		if value.TypeValue.Present != ngapType.InitialContextSetupRequestIEsTypeValuePresentRRCInactiveTransitionReportRequest {
+		if value.TypeValue.Present != ngapType.InitialContextSetupRequestIEsPresentRRCInactiveTransitionReportRequest {
 			return binData, bitEnd, errors.New("InitialContextSetupRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDUERadioCapabilityForPaging:
-		if value.TypeValue.Present != ngapType.InitialContextSetupRequestIEsTypeValuePresentUERadioCapabilityForPaging {
+		if value.TypeValue.Present != ngapType.InitialContextSetupRequestIEsPresentUERadioCapabilityForPaging {
 			return binData, bitEnd, errors.New("InitialContextSetupRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDRedirectionVoiceFallback:
-		if value.TypeValue.Present != ngapType.InitialContextSetupRequestIEsTypeValuePresentRedirectionVoiceFallback {
+		if value.TypeValue.Present != ngapType.InitialContextSetupRequestIEsPresentRedirectionVoiceFallback {
 			return binData, bitEnd, errors.New("InitialContextSetupRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDLocationReportingRequestType:
-		if value.TypeValue.Present != ngapType.InitialContextSetupRequestIEsTypeValuePresentLocationReportingRequestType {
+		if value.TypeValue.Present != ngapType.InitialContextSetupRequestIEsPresentLocationReportingRequestType {
 			return binData, bitEnd, errors.New("InitialContextSetupRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDCNAssistedRANTuning:
-		if value.TypeValue.Present != ngapType.InitialContextSetupRequestIEsTypeValuePresentCNAssistedRANTuning {
+		if value.TypeValue.Present != ngapType.InitialContextSetupRequestIEsPresentCNAssistedRANTuning {
 			return binData, bitEnd, errors.New("InitialContextSetupRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDSRVCCOperationPossible:
-		if value.TypeValue.Present != ngapType.InitialContextSetupRequestIEsTypeValuePresentSRVCCOperationPossible {
+		if value.TypeValue.Present != ngapType.InitialContextSetupRequestIEsPresentSRVCCOperationPossible {
 			return binData, bitEnd, errors.New("InitialContextSetupRequestIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -502,23 +502,23 @@ func InitialContextSetupResponseIEs(value ngapType.InitialContextSetupResponseIE
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDAMFUENGAPID:
-		if value.TypeValue.Present != ngapType.InitialContextSetupResponseIEsTypeValuePresentAMFUENGAPID {
+		if value.TypeValue.Present != ngapType.InitialContextSetupResponseIEsPresentAMFUENGAPID {
 			return binData, bitEnd, errors.New("InitialContextSetupResponseIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDRANUENGAPID:
-		if value.TypeValue.Present != ngapType.InitialContextSetupResponseIEsTypeValuePresentRANUENGAPID {
+		if value.TypeValue.Present != ngapType.InitialContextSetupResponseIEsPresentRANUENGAPID {
 			return binData, bitEnd, errors.New("InitialContextSetupResponseIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDPDUSessionResourceSetupListCxtRes:
-		if value.TypeValue.Present != ngapType.InitialContextSetupResponseIEsTypeValuePresentPDUSessionResourceSetupListCxtRes {
+		if value.TypeValue.Present != ngapType.InitialContextSetupResponseIEsPresentPDUSessionResourceSetupListCxtRes {
 			return binData, bitEnd, errors.New("InitialContextSetupResponseIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDPDUSessionResourceFailedToSetupListCxtRes:
-		if value.TypeValue.Present != ngapType.InitialContextSetupResponseIEsTypeValuePresentPDUSessionResourceFailedToSetupListCxtRes {
+		if value.TypeValue.Present != ngapType.InitialContextSetupResponseIEsPresentPDUSessionResourceFailedToSetupListCxtRes {
 			return binData, bitEnd, errors.New("InitialContextSetupResponseIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDCriticalityDiagnostics:
-		if value.TypeValue.Present != ngapType.InitialContextSetupResponseIEsTypeValuePresentCriticalityDiagnostics {
+		if value.TypeValue.Present != ngapType.InitialContextSetupResponseIEsPresentCriticalityDiagnostics {
 			return binData, bitEnd, errors.New("InitialContextSetupResponseIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -544,23 +544,23 @@ func InitialContextSetupFailureIEs(value ngapType.InitialContextSetupFailureIEs,
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDAMFUENGAPID:
-		if value.TypeValue.Present != ngapType.InitialContextSetupFailureIEsTypeValuePresentAMFUENGAPID {
+		if value.TypeValue.Present != ngapType.InitialContextSetupFailureIEsPresentAMFUENGAPID {
 			return binData, bitEnd, errors.New("InitialContextSetupFailureIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDRANUENGAPID:
-		if value.TypeValue.Present != ngapType.InitialContextSetupFailureIEsTypeValuePresentRANUENGAPID {
+		if value.TypeValue.Present != ngapType.InitialContextSetupFailureIEsPresentRANUENGAPID {
 			return binData, bitEnd, errors.New("InitialContextSetupFailureIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDPDUSessionResourceFailedToSetupListCxtFail:
-		if value.TypeValue.Present != ngapType.InitialContextSetupFailureIEsTypeValuePresentPDUSessionResourceFailedToSetupListCxtFail {
+		if value.TypeValue.Present != ngapType.InitialContextSetupFailureIEsPresentPDUSessionResourceFailedToSetupListCxtFail {
 			return binData, bitEnd, errors.New("InitialContextSetupFailureIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDCause:
-		if value.TypeValue.Present != ngapType.InitialContextSetupFailureIEsTypeValuePresentCause {
+		if value.TypeValue.Present != ngapType.InitialContextSetupFailureIEsPresentCause {
 			return binData, bitEnd, errors.New("InitialContextSetupFailureIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDCriticalityDiagnostics:
-		if value.TypeValue.Present != ngapType.InitialContextSetupFailureIEsTypeValuePresentCriticalityDiagnostics {
+		if value.TypeValue.Present != ngapType.InitialContextSetupFailureIEsPresentCriticalityDiagnostics {
 			return binData, bitEnd, errors.New("InitialContextSetupFailureIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -586,19 +586,19 @@ func UEContextReleaseRequestIEs(value ngapType.UEContextReleaseRequestIEs, binDa
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDAMFUENGAPID:
-		if value.TypeValue.Present != ngapType.UEContextReleaseRequestIEsTypeValuePresentAMFUENGAPID {
+		if value.TypeValue.Present != ngapType.UEContextReleaseRequestIEsPresentAMFUENGAPID {
 			return binData, bitEnd, errors.New("UEContextReleaseRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDRANUENGAPID:
-		if value.TypeValue.Present != ngapType.UEContextReleaseRequestIEsTypeValuePresentRANUENGAPID {
+		if value.TypeValue.Present != ngapType.UEContextReleaseRequestIEsPresentRANUENGAPID {
 			return binData, bitEnd, errors.New("UEContextReleaseRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDPDUSessionResourceListCxtRelReq:
-		if value.TypeValue.Present != ngapType.UEContextReleaseRequestIEsTypeValuePresentPDUSessionResourceListCxtRelReq {
+		if value.TypeValue.Present != ngapType.UEContextReleaseRequestIEsPresentPDUSessionResourceListCxtRelReq {
 			return binData, bitEnd, errors.New("UEContextReleaseRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDCause:
-		if value.TypeValue.Present != ngapType.UEContextReleaseRequestIEsTypeValuePresentCause {
+		if value.TypeValue.Present != ngapType.UEContextReleaseRequestIEsPresentCause {
 			return binData, bitEnd, errors.New("UEContextReleaseRequestIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -624,11 +624,11 @@ func UEContextReleaseCommandIEs(value ngapType.UEContextReleaseCommandIEs, binDa
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDUENGAPIDs:
-		if value.TypeValue.Present != ngapType.UEContextReleaseCommandIEsTypeValuePresentUENGAPIDs {
+		if value.TypeValue.Present != ngapType.UEContextReleaseCommandIEsPresentUENGAPIDs {
 			return binData, bitEnd, errors.New("UEContextReleaseCommandIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDCause:
-		if value.TypeValue.Present != ngapType.UEContextReleaseCommandIEsTypeValuePresentCause {
+		if value.TypeValue.Present != ngapType.UEContextReleaseCommandIEsPresentCause {
 			return binData, bitEnd, errors.New("UEContextReleaseCommandIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -654,27 +654,27 @@ func UEContextReleaseCompleteIEs(value ngapType.UEContextReleaseCompleteIEs, bin
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDAMFUENGAPID:
-		if value.TypeValue.Present != ngapType.UEContextReleaseCompleteIEsTypeValuePresentAMFUENGAPID {
+		if value.TypeValue.Present != ngapType.UEContextReleaseCompleteIEsPresentAMFUENGAPID {
 			return binData, bitEnd, errors.New("UEContextReleaseCompleteIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDRANUENGAPID:
-		if value.TypeValue.Present != ngapType.UEContextReleaseCompleteIEsTypeValuePresentRANUENGAPID {
+		if value.TypeValue.Present != ngapType.UEContextReleaseCompleteIEsPresentRANUENGAPID {
 			return binData, bitEnd, errors.New("UEContextReleaseCompleteIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDUserLocationInformation:
-		if value.TypeValue.Present != ngapType.UEContextReleaseCompleteIEsTypeValuePresentUserLocationInformation {
+		if value.TypeValue.Present != ngapType.UEContextReleaseCompleteIEsPresentUserLocationInformation {
 			return binData, bitEnd, errors.New("UEContextReleaseCompleteIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDInfoOnRecommendedCellsAndRANNodesForPaging:
-		if value.TypeValue.Present != ngapType.UEContextReleaseCompleteIEsTypeValuePresentInfoOnRecommendedCellsAndRANNodesForPaging {
+		if value.TypeValue.Present != ngapType.UEContextReleaseCompleteIEsPresentInfoOnRecommendedCellsAndRANNodesForPaging {
 			return binData, bitEnd, errors.New("UEContextReleaseCompleteIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDPDUSessionResourceListCxtRelCpl:
-		if value.TypeValue.Present != ngapType.UEContextReleaseCompleteIEsTypeValuePresentPDUSessionResourceListCxtRelCpl {
+		if value.TypeValue.Present != ngapType.UEContextReleaseCompleteIEsPresentPDUSessionResourceListCxtRelCpl {
 			return binData, bitEnd, errors.New("UEContextReleaseCompleteIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDCriticalityDiagnostics:
-		if value.TypeValue.Present != ngapType.UEContextReleaseCompleteIEsTypeValuePresentCriticalityDiagnostics {
+		if value.TypeValue.Present != ngapType.UEContextReleaseCompleteIEsPresentCriticalityDiagnostics {
 			return binData, bitEnd, errors.New("UEContextReleaseCompleteIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -700,59 +700,59 @@ func UEContextModificationRequestIEs(value ngapType.UEContextModificationRequest
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDAMFUENGAPID:
-		if value.TypeValue.Present != ngapType.UEContextModificationRequestIEsTypeValuePresentAMFUENGAPID {
+		if value.TypeValue.Present != ngapType.UEContextModificationRequestIEsPresentAMFUENGAPID {
 			return binData, bitEnd, errors.New("UEContextModificationRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDRANUENGAPID:
-		if value.TypeValue.Present != ngapType.UEContextModificationRequestIEsTypeValuePresentRANUENGAPID {
+		if value.TypeValue.Present != ngapType.UEContextModificationRequestIEsPresentRANUENGAPID {
 			return binData, bitEnd, errors.New("UEContextModificationRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDRANPagingPriority:
-		if value.TypeValue.Present != ngapType.UEContextModificationRequestIEsTypeValuePresentRANPagingPriority {
+		if value.TypeValue.Present != ngapType.UEContextModificationRequestIEsPresentRANPagingPriority {
 			return binData, bitEnd, errors.New("UEContextModificationRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDSecurityKey:
-		if value.TypeValue.Present != ngapType.UEContextModificationRequestIEsTypeValuePresentSecurityKey {
+		if value.TypeValue.Present != ngapType.UEContextModificationRequestIEsPresentSecurityKey {
 			return binData, bitEnd, errors.New("UEContextModificationRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDIndexToRFSP:
-		if value.TypeValue.Present != ngapType.UEContextModificationRequestIEsTypeValuePresentIndexToRFSP {
+		if value.TypeValue.Present != ngapType.UEContextModificationRequestIEsPresentIndexToRFSP {
 			return binData, bitEnd, errors.New("UEContextModificationRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDUEAggregateMaximumBitRate:
-		if value.TypeValue.Present != ngapType.UEContextModificationRequestIEsTypeValuePresentUEAggregateMaximumBitRate {
+		if value.TypeValue.Present != ngapType.UEContextModificationRequestIEsPresentUEAggregateMaximumBitRate {
 			return binData, bitEnd, errors.New("UEContextModificationRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDUESecurityCapabilities:
-		if value.TypeValue.Present != ngapType.UEContextModificationRequestIEsTypeValuePresentUESecurityCapabilities {
+		if value.TypeValue.Present != ngapType.UEContextModificationRequestIEsPresentUESecurityCapabilities {
 			return binData, bitEnd, errors.New("UEContextModificationRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDCoreNetworkAssistanceInformationForInactive:
-		if value.TypeValue.Present != ngapType.UEContextModificationRequestIEsTypeValuePresentCoreNetworkAssistanceInformationForInactive {
+		if value.TypeValue.Present != ngapType.UEContextModificationRequestIEsPresentCoreNetworkAssistanceInformationForInactive {
 			return binData, bitEnd, errors.New("UEContextModificationRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDEmergencyFallbackIndicator:
-		if value.TypeValue.Present != ngapType.UEContextModificationRequestIEsTypeValuePresentEmergencyFallbackIndicator {
+		if value.TypeValue.Present != ngapType.UEContextModificationRequestIEsPresentEmergencyFallbackIndicator {
 			return binData, bitEnd, errors.New("UEContextModificationRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDNewAMFUENGAPID:
-		if value.TypeValue.Present != ngapType.UEContextModificationRequestIEsTypeValuePresentNewAMFUENGAPID {
+		if value.TypeValue.Present != ngapType.UEContextModificationRequestIEsPresentNewAMFUENGAPID {
 			return binData, bitEnd, errors.New("UEContextModificationRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDRRCInactiveTransitionReportRequest:
-		if value.TypeValue.Present != ngapType.UEContextModificationRequestIEsTypeValuePresentRRCInactiveTransitionReportRequest {
+		if value.TypeValue.Present != ngapType.UEContextModificationRequestIEsPresentRRCInactiveTransitionReportRequest {
 			return binData, bitEnd, errors.New("UEContextModificationRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDNewGUAMI:
-		if value.TypeValue.Present != ngapType.UEContextModificationRequestIEsTypeValuePresentNewGUAMI {
+		if value.TypeValue.Present != ngapType.UEContextModificationRequestIEsPresentNewGUAMI {
 			return binData, bitEnd, errors.New("UEContextModificationRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDCNAssistedRANTuning:
-		if value.TypeValue.Present != ngapType.UEContextModificationRequestIEsTypeValuePresentCNAssistedRANTuning {
+		if value.TypeValue.Present != ngapType.UEContextModificationRequestIEsPresentCNAssistedRANTuning {
 			return binData, bitEnd, errors.New("UEContextModificationRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDSRVCCOperationPossible:
-		if value.TypeValue.Present != ngapType.UEContextModificationRequestIEsTypeValuePresentSRVCCOperationPossible {
+		if value.TypeValue.Present != ngapType.UEContextModificationRequestIEsPresentSRVCCOperationPossible {
 			return binData, bitEnd, errors.New("UEContextModificationRequestIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -778,23 +778,23 @@ func UEContextModificationResponseIEs(value ngapType.UEContextModificationRespon
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDAMFUENGAPID:
-		if value.TypeValue.Present != ngapType.UEContextModificationResponseIEsTypeValuePresentAMFUENGAPID {
+		if value.TypeValue.Present != ngapType.UEContextModificationResponseIEsPresentAMFUENGAPID {
 			return binData, bitEnd, errors.New("UEContextModificationResponseIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDRANUENGAPID:
-		if value.TypeValue.Present != ngapType.UEContextModificationResponseIEsTypeValuePresentRANUENGAPID {
+		if value.TypeValue.Present != ngapType.UEContextModificationResponseIEsPresentRANUENGAPID {
 			return binData, bitEnd, errors.New("UEContextModificationResponseIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDRRCState:
-		if value.TypeValue.Present != ngapType.UEContextModificationResponseIEsTypeValuePresentRRCState {
+		if value.TypeValue.Present != ngapType.UEContextModificationResponseIEsPresentRRCState {
 			return binData, bitEnd, errors.New("UEContextModificationResponseIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDUserLocationInformation:
-		if value.TypeValue.Present != ngapType.UEContextModificationResponseIEsTypeValuePresentUserLocationInformation {
+		if value.TypeValue.Present != ngapType.UEContextModificationResponseIEsPresentUserLocationInformation {
 			return binData, bitEnd, errors.New("UEContextModificationResponseIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDCriticalityDiagnostics:
-		if value.TypeValue.Present != ngapType.UEContextModificationResponseIEsTypeValuePresentCriticalityDiagnostics {
+		if value.TypeValue.Present != ngapType.UEContextModificationResponseIEsPresentCriticalityDiagnostics {
 			return binData, bitEnd, errors.New("UEContextModificationResponseIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -820,19 +820,19 @@ func UEContextModificationFailureIEs(value ngapType.UEContextModificationFailure
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDAMFUENGAPID:
-		if value.TypeValue.Present != ngapType.UEContextModificationFailureIEsTypeValuePresentAMFUENGAPID {
+		if value.TypeValue.Present != ngapType.UEContextModificationFailureIEsPresentAMFUENGAPID {
 			return binData, bitEnd, errors.New("UEContextModificationFailureIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDRANUENGAPID:
-		if value.TypeValue.Present != ngapType.UEContextModificationFailureIEsTypeValuePresentRANUENGAPID {
+		if value.TypeValue.Present != ngapType.UEContextModificationFailureIEsPresentRANUENGAPID {
 			return binData, bitEnd, errors.New("UEContextModificationFailureIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDCause:
-		if value.TypeValue.Present != ngapType.UEContextModificationFailureIEsTypeValuePresentCause {
+		if value.TypeValue.Present != ngapType.UEContextModificationFailureIEsPresentCause {
 			return binData, bitEnd, errors.New("UEContextModificationFailureIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDCriticalityDiagnostics:
-		if value.TypeValue.Present != ngapType.UEContextModificationFailureIEsTypeValuePresentCriticalityDiagnostics {
+		if value.TypeValue.Present != ngapType.UEContextModificationFailureIEsPresentCriticalityDiagnostics {
 			return binData, bitEnd, errors.New("UEContextModificationFailureIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -858,19 +858,19 @@ func RRCInactiveTransitionReportIEs(value ngapType.RRCInactiveTransitionReportIE
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDAMFUENGAPID:
-		if value.TypeValue.Present != ngapType.RRCInactiveTransitionReportIEsTypeValuePresentAMFUENGAPID {
+		if value.TypeValue.Present != ngapType.RRCInactiveTransitionReportIEsPresentAMFUENGAPID {
 			return binData, bitEnd, errors.New("RRCInactiveTransitionReportIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDRANUENGAPID:
-		if value.TypeValue.Present != ngapType.RRCInactiveTransitionReportIEsTypeValuePresentRANUENGAPID {
+		if value.TypeValue.Present != ngapType.RRCInactiveTransitionReportIEsPresentRANUENGAPID {
 			return binData, bitEnd, errors.New("RRCInactiveTransitionReportIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDRRCState:
-		if value.TypeValue.Present != ngapType.RRCInactiveTransitionReportIEsTypeValuePresentRRCState {
+		if value.TypeValue.Present != ngapType.RRCInactiveTransitionReportIEsPresentRRCState {
 			return binData, bitEnd, errors.New("RRCInactiveTransitionReportIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDUserLocationInformation:
-		if value.TypeValue.Present != ngapType.RRCInactiveTransitionReportIEsTypeValuePresentUserLocationInformation {
+		if value.TypeValue.Present != ngapType.RRCInactiveTransitionReportIEsPresentUserLocationInformation {
 			return binData, bitEnd, errors.New("RRCInactiveTransitionReportIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -896,35 +896,35 @@ func HandoverRequiredIEs(value ngapType.HandoverRequiredIEs, binData []byte, bit
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDAMFUENGAPID:
-		if value.TypeValue.Present != ngapType.HandoverRequiredIEsTypeValuePresentAMFUENGAPID {
+		if value.TypeValue.Present != ngapType.HandoverRequiredIEsPresentAMFUENGAPID {
 			return binData, bitEnd, errors.New("HandoverRequiredIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDRANUENGAPID:
-		if value.TypeValue.Present != ngapType.HandoverRequiredIEsTypeValuePresentRANUENGAPID {
+		if value.TypeValue.Present != ngapType.HandoverRequiredIEsPresentRANUENGAPID {
 			return binData, bitEnd, errors.New("HandoverRequiredIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDHandoverType:
-		if value.TypeValue.Present != ngapType.HandoverRequiredIEsTypeValuePresentHandoverType {
+		if value.TypeValue.Present != ngapType.HandoverRequiredIEsPresentHandoverType {
 			return binData, bitEnd, errors.New("HandoverRequiredIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDCause:
-		if value.TypeValue.Present != ngapType.HandoverRequiredIEsTypeValuePresentCause {
+		if value.TypeValue.Present != ngapType.HandoverRequiredIEsPresentCause {
 			return binData, bitEnd, errors.New("HandoverRequiredIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDTargetID:
-		if value.TypeValue.Present != ngapType.HandoverRequiredIEsTypeValuePresentTargetID {
+		if value.TypeValue.Present != ngapType.HandoverRequiredIEsPresentTargetID {
 			return binData, bitEnd, errors.New("HandoverRequiredIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDDirectForwardingPathAvailability:
-		if value.TypeValue.Present != ngapType.HandoverRequiredIEsTypeValuePresentDirectForwardingPathAvailability {
+		if value.TypeValue.Present != ngapType.HandoverRequiredIEsPresentDirectForwardingPathAvailability {
 			return binData, bitEnd, errors.New("HandoverRequiredIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDPDUSessionResourceListHORqd:
-		if value.TypeValue.Present != ngapType.HandoverRequiredIEsTypeValuePresentPDUSessionResourceListHORqd {
+		if value.TypeValue.Present != ngapType.HandoverRequiredIEsPresentPDUSessionResourceListHORqd {
 			return binData, bitEnd, errors.New("HandoverRequiredIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDSourceToTargetTransparentContainer:
-		if value.TypeValue.Present != ngapType.HandoverRequiredIEsTypeValuePresentSourceToTargetTransparentContainer {
+		if value.TypeValue.Present != ngapType.HandoverRequiredIEsPresentSourceToTargetTransparentContainer {
 			return binData, bitEnd, errors.New("HandoverRequiredIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -950,35 +950,35 @@ func HandoverCommandIEs(value ngapType.HandoverCommandIEs, binData []byte, bitEn
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDAMFUENGAPID:
-		if value.TypeValue.Present != ngapType.HandoverCommandIEsTypeValuePresentAMFUENGAPID {
+		if value.TypeValue.Present != ngapType.HandoverCommandIEsPresentAMFUENGAPID {
 			return binData, bitEnd, errors.New("HandoverCommandIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDRANUENGAPID:
-		if value.TypeValue.Present != ngapType.HandoverCommandIEsTypeValuePresentRANUENGAPID {
+		if value.TypeValue.Present != ngapType.HandoverCommandIEsPresentRANUENGAPID {
 			return binData, bitEnd, errors.New("HandoverCommandIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDHandoverType:
-		if value.TypeValue.Present != ngapType.HandoverCommandIEsTypeValuePresentHandoverType {
+		if value.TypeValue.Present != ngapType.HandoverCommandIEsPresentHandoverType {
 			return binData, bitEnd, errors.New("HandoverCommandIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDNASSecurityParametersFromNGRAN:
-		if value.TypeValue.Present != ngapType.HandoverCommandIEsTypeValuePresentNASSecurityParametersFromNGRAN {
+		if value.TypeValue.Present != ngapType.HandoverCommandIEsPresentNASSecurityParametersFromNGRAN {
 			return binData, bitEnd, errors.New("HandoverCommandIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDPDUSessionResourceHandoverList:
-		if value.TypeValue.Present != ngapType.HandoverCommandIEsTypeValuePresentPDUSessionResourceHandoverList {
+		if value.TypeValue.Present != ngapType.HandoverCommandIEsPresentPDUSessionResourceHandoverList {
 			return binData, bitEnd, errors.New("HandoverCommandIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDPDUSessionResourceToReleaseListHOCmd:
-		if value.TypeValue.Present != ngapType.HandoverCommandIEsTypeValuePresentPDUSessionResourceToReleaseListHOCmd {
+		if value.TypeValue.Present != ngapType.HandoverCommandIEsPresentPDUSessionResourceToReleaseListHOCmd {
 			return binData, bitEnd, errors.New("HandoverCommandIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDTargetToSourceTransparentContainer:
-		if value.TypeValue.Present != ngapType.HandoverCommandIEsTypeValuePresentTargetToSourceTransparentContainer {
+		if value.TypeValue.Present != ngapType.HandoverCommandIEsPresentTargetToSourceTransparentContainer {
 			return binData, bitEnd, errors.New("HandoverCommandIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDCriticalityDiagnostics:
-		if value.TypeValue.Present != ngapType.HandoverCommandIEsTypeValuePresentCriticalityDiagnostics {
+		if value.TypeValue.Present != ngapType.HandoverCommandIEsPresentCriticalityDiagnostics {
 			return binData, bitEnd, errors.New("HandoverCommandIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -1004,19 +1004,19 @@ func HandoverPreparationFailureIEs(value ngapType.HandoverPreparationFailureIEs,
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDAMFUENGAPID:
-		if value.TypeValue.Present != ngapType.HandoverPreparationFailureIEsTypeValuePresentAMFUENGAPID {
+		if value.TypeValue.Present != ngapType.HandoverPreparationFailureIEsPresentAMFUENGAPID {
 			return binData, bitEnd, errors.New("HandoverPreparationFailureIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDRANUENGAPID:
-		if value.TypeValue.Present != ngapType.HandoverPreparationFailureIEsTypeValuePresentRANUENGAPID {
+		if value.TypeValue.Present != ngapType.HandoverPreparationFailureIEsPresentRANUENGAPID {
 			return binData, bitEnd, errors.New("HandoverPreparationFailureIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDCause:
-		if value.TypeValue.Present != ngapType.HandoverPreparationFailureIEsTypeValuePresentCause {
+		if value.TypeValue.Present != ngapType.HandoverPreparationFailureIEsPresentCause {
 			return binData, bitEnd, errors.New("HandoverPreparationFailureIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDCriticalityDiagnostics:
-		if value.TypeValue.Present != ngapType.HandoverPreparationFailureIEsTypeValuePresentCriticalityDiagnostics {
+		if value.TypeValue.Present != ngapType.HandoverPreparationFailureIEsPresentCriticalityDiagnostics {
 			return binData, bitEnd, errors.New("HandoverPreparationFailureIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -1042,87 +1042,87 @@ func HandoverRequestIEs(value ngapType.HandoverRequestIEs, binData []byte, bitEn
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDAMFUENGAPID:
-		if value.TypeValue.Present != ngapType.HandoverRequestIEsTypeValuePresentAMFUENGAPID {
+		if value.TypeValue.Present != ngapType.HandoverRequestIEsPresentAMFUENGAPID {
 			return binData, bitEnd, errors.New("HandoverRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDHandoverType:
-		if value.TypeValue.Present != ngapType.HandoverRequestIEsTypeValuePresentHandoverType {
+		if value.TypeValue.Present != ngapType.HandoverRequestIEsPresentHandoverType {
 			return binData, bitEnd, errors.New("HandoverRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDCause:
-		if value.TypeValue.Present != ngapType.HandoverRequestIEsTypeValuePresentCause {
+		if value.TypeValue.Present != ngapType.HandoverRequestIEsPresentCause {
 			return binData, bitEnd, errors.New("HandoverRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDUEAggregateMaximumBitRate:
-		if value.TypeValue.Present != ngapType.HandoverRequestIEsTypeValuePresentUEAggregateMaximumBitRate {
+		if value.TypeValue.Present != ngapType.HandoverRequestIEsPresentUEAggregateMaximumBitRate {
 			return binData, bitEnd, errors.New("HandoverRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDCoreNetworkAssistanceInformationForInactive:
-		if value.TypeValue.Present != ngapType.HandoverRequestIEsTypeValuePresentCoreNetworkAssistanceInformationForInactive {
+		if value.TypeValue.Present != ngapType.HandoverRequestIEsPresentCoreNetworkAssistanceInformationForInactive {
 			return binData, bitEnd, errors.New("HandoverRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDUESecurityCapabilities:
-		if value.TypeValue.Present != ngapType.HandoverRequestIEsTypeValuePresentUESecurityCapabilities {
+		if value.TypeValue.Present != ngapType.HandoverRequestIEsPresentUESecurityCapabilities {
 			return binData, bitEnd, errors.New("HandoverRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDSecurityContext:
-		if value.TypeValue.Present != ngapType.HandoverRequestIEsTypeValuePresentSecurityContext {
+		if value.TypeValue.Present != ngapType.HandoverRequestIEsPresentSecurityContext {
 			return binData, bitEnd, errors.New("HandoverRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDNewSecurityContextInd:
-		if value.TypeValue.Present != ngapType.HandoverRequestIEsTypeValuePresentNewSecurityContextInd {
+		if value.TypeValue.Present != ngapType.HandoverRequestIEsPresentNewSecurityContextInd {
 			return binData, bitEnd, errors.New("HandoverRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDNASC:
-		if value.TypeValue.Present != ngapType.HandoverRequestIEsTypeValuePresentNASC {
+		if value.TypeValue.Present != ngapType.HandoverRequestIEsPresentNASC {
 			return binData, bitEnd, errors.New("HandoverRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDPDUSessionResourceSetupListHOReq:
-		if value.TypeValue.Present != ngapType.HandoverRequestIEsTypeValuePresentPDUSessionResourceSetupListHOReq {
+		if value.TypeValue.Present != ngapType.HandoverRequestIEsPresentPDUSessionResourceSetupListHOReq {
 			return binData, bitEnd, errors.New("HandoverRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDAllowedNSSAI:
-		if value.TypeValue.Present != ngapType.HandoverRequestIEsTypeValuePresentAllowedNSSAI {
+		if value.TypeValue.Present != ngapType.HandoverRequestIEsPresentAllowedNSSAI {
 			return binData, bitEnd, errors.New("HandoverRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDTraceActivation:
-		if value.TypeValue.Present != ngapType.HandoverRequestIEsTypeValuePresentTraceActivation {
+		if value.TypeValue.Present != ngapType.HandoverRequestIEsPresentTraceActivation {
 			return binData, bitEnd, errors.New("HandoverRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDMaskedIMEISV:
-		if value.TypeValue.Present != ngapType.HandoverRequestIEsTypeValuePresentMaskedIMEISV {
+		if value.TypeValue.Present != ngapType.HandoverRequestIEsPresentMaskedIMEISV {
 			return binData, bitEnd, errors.New("HandoverRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDSourceToTargetTransparentContainer:
-		if value.TypeValue.Present != ngapType.HandoverRequestIEsTypeValuePresentSourceToTargetTransparentContainer {
+		if value.TypeValue.Present != ngapType.HandoverRequestIEsPresentSourceToTargetTransparentContainer {
 			return binData, bitEnd, errors.New("HandoverRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDMobilityRestrictionList:
-		if value.TypeValue.Present != ngapType.HandoverRequestIEsTypeValuePresentMobilityRestrictionList {
+		if value.TypeValue.Present != ngapType.HandoverRequestIEsPresentMobilityRestrictionList {
 			return binData, bitEnd, errors.New("HandoverRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDLocationReportingRequestType:
-		if value.TypeValue.Present != ngapType.HandoverRequestIEsTypeValuePresentLocationReportingRequestType {
+		if value.TypeValue.Present != ngapType.HandoverRequestIEsPresentLocationReportingRequestType {
 			return binData, bitEnd, errors.New("HandoverRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDRRCInactiveTransitionReportRequest:
-		if value.TypeValue.Present != ngapType.HandoverRequestIEsTypeValuePresentRRCInactiveTransitionReportRequest {
+		if value.TypeValue.Present != ngapType.HandoverRequestIEsPresentRRCInactiveTransitionReportRequest {
 			return binData, bitEnd, errors.New("HandoverRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDGUAMI:
-		if value.TypeValue.Present != ngapType.HandoverRequestIEsTypeValuePresentGUAMI {
+		if value.TypeValue.Present != ngapType.HandoverRequestIEsPresentGUAMI {
 			return binData, bitEnd, errors.New("HandoverRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDRedirectionVoiceFallback:
-		if value.TypeValue.Present != ngapType.HandoverRequestIEsTypeValuePresentRedirectionVoiceFallback {
+		if value.TypeValue.Present != ngapType.HandoverRequestIEsPresentRedirectionVoiceFallback {
 			return binData, bitEnd, errors.New("HandoverRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDCNAssistedRANTuning:
-		if value.TypeValue.Present != ngapType.HandoverRequestIEsTypeValuePresentCNAssistedRANTuning {
+		if value.TypeValue.Present != ngapType.HandoverRequestIEsPresentCNAssistedRANTuning {
 			return binData, bitEnd, errors.New("HandoverRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDSRVCCOperationPossible:
-		if value.TypeValue.Present != ngapType.HandoverRequestIEsTypeValuePresentSRVCCOperationPossible {
+		if value.TypeValue.Present != ngapType.HandoverRequestIEsPresentSRVCCOperationPossible {
 			return binData, bitEnd, errors.New("HandoverRequestIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -1148,27 +1148,27 @@ func HandoverRequestAcknowledgeIEs(value ngapType.HandoverRequestAcknowledgeIEs,
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDAMFUENGAPID:
-		if value.TypeValue.Present != ngapType.HandoverRequestAcknowledgeIEsTypeValuePresentAMFUENGAPID {
+		if value.TypeValue.Present != ngapType.HandoverRequestAcknowledgeIEsPresentAMFUENGAPID {
 			return binData, bitEnd, errors.New("HandoverRequestAcknowledgeIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDRANUENGAPID:
-		if value.TypeValue.Present != ngapType.HandoverRequestAcknowledgeIEsTypeValuePresentRANUENGAPID {
+		if value.TypeValue.Present != ngapType.HandoverRequestAcknowledgeIEsPresentRANUENGAPID {
 			return binData, bitEnd, errors.New("HandoverRequestAcknowledgeIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDPDUSessionResourceAdmittedList:
-		if value.TypeValue.Present != ngapType.HandoverRequestAcknowledgeIEsTypeValuePresentPDUSessionResourceAdmittedList {
+		if value.TypeValue.Present != ngapType.HandoverRequestAcknowledgeIEsPresentPDUSessionResourceAdmittedList {
 			return binData, bitEnd, errors.New("HandoverRequestAcknowledgeIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDPDUSessionResourceFailedToSetupListHOAck:
-		if value.TypeValue.Present != ngapType.HandoverRequestAcknowledgeIEsTypeValuePresentPDUSessionResourceFailedToSetupListHOAck {
+		if value.TypeValue.Present != ngapType.HandoverRequestAcknowledgeIEsPresentPDUSessionResourceFailedToSetupListHOAck {
 			return binData, bitEnd, errors.New("HandoverRequestAcknowledgeIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDTargetToSourceTransparentContainer:
-		if value.TypeValue.Present != ngapType.HandoverRequestAcknowledgeIEsTypeValuePresentTargetToSourceTransparentContainer {
+		if value.TypeValue.Present != ngapType.HandoverRequestAcknowledgeIEsPresentTargetToSourceTransparentContainer {
 			return binData, bitEnd, errors.New("HandoverRequestAcknowledgeIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDCriticalityDiagnostics:
-		if value.TypeValue.Present != ngapType.HandoverRequestAcknowledgeIEsTypeValuePresentCriticalityDiagnostics {
+		if value.TypeValue.Present != ngapType.HandoverRequestAcknowledgeIEsPresentCriticalityDiagnostics {
 			return binData, bitEnd, errors.New("HandoverRequestAcknowledgeIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -1194,15 +1194,15 @@ func HandoverFailureIEs(value ngapType.HandoverFailureIEs, binData []byte, bitEn
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDAMFUENGAPID:
-		if value.TypeValue.Present != ngapType.HandoverFailureIEsTypeValuePresentAMFUENGAPID {
+		if value.TypeValue.Present != ngapType.HandoverFailureIEsPresentAMFUENGAPID {
 			return binData, bitEnd, errors.New("HandoverFailureIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDCause:
-		if value.TypeValue.Present != ngapType.HandoverFailureIEsTypeValuePresentCause {
+		if value.TypeValue.Present != ngapType.HandoverFailureIEsPresentCause {
 			return binData, bitEnd, errors.New("HandoverFailureIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDCriticalityDiagnostics:
-		if value.TypeValue.Present != ngapType.HandoverFailureIEsTypeValuePresentCriticalityDiagnostics {
+		if value.TypeValue.Present != ngapType.HandoverFailureIEsPresentCriticalityDiagnostics {
 			return binData, bitEnd, errors.New("HandoverFailureIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -1228,15 +1228,15 @@ func HandoverNotifyIEs(value ngapType.HandoverNotifyIEs, binData []byte, bitEnd 
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDAMFUENGAPID:
-		if value.TypeValue.Present != ngapType.HandoverNotifyIEsTypeValuePresentAMFUENGAPID {
+		if value.TypeValue.Present != ngapType.HandoverNotifyIEsPresentAMFUENGAPID {
 			return binData, bitEnd, errors.New("HandoverNotifyIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDRANUENGAPID:
-		if value.TypeValue.Present != ngapType.HandoverNotifyIEsTypeValuePresentRANUENGAPID {
+		if value.TypeValue.Present != ngapType.HandoverNotifyIEsPresentRANUENGAPID {
 			return binData, bitEnd, errors.New("HandoverNotifyIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDUserLocationInformation:
-		if value.TypeValue.Present != ngapType.HandoverNotifyIEsTypeValuePresentUserLocationInformation {
+		if value.TypeValue.Present != ngapType.HandoverNotifyIEsPresentUserLocationInformation {
 			return binData, bitEnd, errors.New("HandoverNotifyIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -1262,27 +1262,27 @@ func PathSwitchRequestIEs(value ngapType.PathSwitchRequestIEs, binData []byte, b
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDRANUENGAPID:
-		if value.TypeValue.Present != ngapType.PathSwitchRequestIEsTypeValuePresentRANUENGAPID {
+		if value.TypeValue.Present != ngapType.PathSwitchRequestIEsPresentRANUENGAPID {
 			return binData, bitEnd, errors.New("PathSwitchRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDSourceAMFUENGAPID:
-		if value.TypeValue.Present != ngapType.PathSwitchRequestIEsTypeValuePresentSourceAMFUENGAPID {
+		if value.TypeValue.Present != ngapType.PathSwitchRequestIEsPresentSourceAMFUENGAPID {
 			return binData, bitEnd, errors.New("PathSwitchRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDUserLocationInformation:
-		if value.TypeValue.Present != ngapType.PathSwitchRequestIEsTypeValuePresentUserLocationInformation {
+		if value.TypeValue.Present != ngapType.PathSwitchRequestIEsPresentUserLocationInformation {
 			return binData, bitEnd, errors.New("PathSwitchRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDUESecurityCapabilities:
-		if value.TypeValue.Present != ngapType.PathSwitchRequestIEsTypeValuePresentUESecurityCapabilities {
+		if value.TypeValue.Present != ngapType.PathSwitchRequestIEsPresentUESecurityCapabilities {
 			return binData, bitEnd, errors.New("PathSwitchRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDPDUSessionResourceToBeSwitchedDLList:
-		if value.TypeValue.Present != ngapType.PathSwitchRequestIEsTypeValuePresentPDUSessionResourceToBeSwitchedDLList {
+		if value.TypeValue.Present != ngapType.PathSwitchRequestIEsPresentPDUSessionResourceToBeSwitchedDLList {
 			return binData, bitEnd, errors.New("PathSwitchRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDPDUSessionResourceFailedToSetupListPSReq:
-		if value.TypeValue.Present != ngapType.PathSwitchRequestIEsTypeValuePresentPDUSessionResourceFailedToSetupListPSReq {
+		if value.TypeValue.Present != ngapType.PathSwitchRequestIEsPresentPDUSessionResourceFailedToSetupListPSReq {
 			return binData, bitEnd, errors.New("PathSwitchRequestIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -1308,59 +1308,59 @@ func PathSwitchRequestAcknowledgeIEs(value ngapType.PathSwitchRequestAcknowledge
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDAMFUENGAPID:
-		if value.TypeValue.Present != ngapType.PathSwitchRequestAcknowledgeIEsTypeValuePresentAMFUENGAPID {
+		if value.TypeValue.Present != ngapType.PathSwitchRequestAcknowledgeIEsPresentAMFUENGAPID {
 			return binData, bitEnd, errors.New("PathSwitchRequestAcknowledgeIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDRANUENGAPID:
-		if value.TypeValue.Present != ngapType.PathSwitchRequestAcknowledgeIEsTypeValuePresentRANUENGAPID {
+		if value.TypeValue.Present != ngapType.PathSwitchRequestAcknowledgeIEsPresentRANUENGAPID {
 			return binData, bitEnd, errors.New("PathSwitchRequestAcknowledgeIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDUESecurityCapabilities:
-		if value.TypeValue.Present != ngapType.PathSwitchRequestAcknowledgeIEsTypeValuePresentUESecurityCapabilities {
+		if value.TypeValue.Present != ngapType.PathSwitchRequestAcknowledgeIEsPresentUESecurityCapabilities {
 			return binData, bitEnd, errors.New("PathSwitchRequestAcknowledgeIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDSecurityContext:
-		if value.TypeValue.Present != ngapType.PathSwitchRequestAcknowledgeIEsTypeValuePresentSecurityContext {
+		if value.TypeValue.Present != ngapType.PathSwitchRequestAcknowledgeIEsPresentSecurityContext {
 			return binData, bitEnd, errors.New("PathSwitchRequestAcknowledgeIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDNewSecurityContextInd:
-		if value.TypeValue.Present != ngapType.PathSwitchRequestAcknowledgeIEsTypeValuePresentNewSecurityContextInd {
+		if value.TypeValue.Present != ngapType.PathSwitchRequestAcknowledgeIEsPresentNewSecurityContextInd {
 			return binData, bitEnd, errors.New("PathSwitchRequestAcknowledgeIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDPDUSessionResourceSwitchedList:
-		if value.TypeValue.Present != ngapType.PathSwitchRequestAcknowledgeIEsTypeValuePresentPDUSessionResourceSwitchedList {
+		if value.TypeValue.Present != ngapType.PathSwitchRequestAcknowledgeIEsPresentPDUSessionResourceSwitchedList {
 			return binData, bitEnd, errors.New("PathSwitchRequestAcknowledgeIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDPDUSessionResourceReleasedListPSAck:
-		if value.TypeValue.Present != ngapType.PathSwitchRequestAcknowledgeIEsTypeValuePresentPDUSessionResourceReleasedListPSAck {
+		if value.TypeValue.Present != ngapType.PathSwitchRequestAcknowledgeIEsPresentPDUSessionResourceReleasedListPSAck {
 			return binData, bitEnd, errors.New("PathSwitchRequestAcknowledgeIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDAllowedNSSAI:
-		if value.TypeValue.Present != ngapType.PathSwitchRequestAcknowledgeIEsTypeValuePresentAllowedNSSAI {
+		if value.TypeValue.Present != ngapType.PathSwitchRequestAcknowledgeIEsPresentAllowedNSSAI {
 			return binData, bitEnd, errors.New("PathSwitchRequestAcknowledgeIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDCoreNetworkAssistanceInformationForInactive:
-		if value.TypeValue.Present != ngapType.PathSwitchRequestAcknowledgeIEsTypeValuePresentCoreNetworkAssistanceInformationForInactive {
+		if value.TypeValue.Present != ngapType.PathSwitchRequestAcknowledgeIEsPresentCoreNetworkAssistanceInformationForInactive {
 			return binData, bitEnd, errors.New("PathSwitchRequestAcknowledgeIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDRRCInactiveTransitionReportRequest:
-		if value.TypeValue.Present != ngapType.PathSwitchRequestAcknowledgeIEsTypeValuePresentRRCInactiveTransitionReportRequest {
+		if value.TypeValue.Present != ngapType.PathSwitchRequestAcknowledgeIEsPresentRRCInactiveTransitionReportRequest {
 			return binData, bitEnd, errors.New("PathSwitchRequestAcknowledgeIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDCriticalityDiagnostics:
-		if value.TypeValue.Present != ngapType.PathSwitchRequestAcknowledgeIEsTypeValuePresentCriticalityDiagnostics {
+		if value.TypeValue.Present != ngapType.PathSwitchRequestAcknowledgeIEsPresentCriticalityDiagnostics {
 			return binData, bitEnd, errors.New("PathSwitchRequestAcknowledgeIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDRedirectionVoiceFallback:
-		if value.TypeValue.Present != ngapType.PathSwitchRequestAcknowledgeIEsTypeValuePresentRedirectionVoiceFallback {
+		if value.TypeValue.Present != ngapType.PathSwitchRequestAcknowledgeIEsPresentRedirectionVoiceFallback {
 			return binData, bitEnd, errors.New("PathSwitchRequestAcknowledgeIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDCNAssistedRANTuning:
-		if value.TypeValue.Present != ngapType.PathSwitchRequestAcknowledgeIEsTypeValuePresentCNAssistedRANTuning {
+		if value.TypeValue.Present != ngapType.PathSwitchRequestAcknowledgeIEsPresentCNAssistedRANTuning {
 			return binData, bitEnd, errors.New("PathSwitchRequestAcknowledgeIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDSRVCCOperationPossible:
-		if value.TypeValue.Present != ngapType.PathSwitchRequestAcknowledgeIEsTypeValuePresentSRVCCOperationPossible {
+		if value.TypeValue.Present != ngapType.PathSwitchRequestAcknowledgeIEsPresentSRVCCOperationPossible {
 			return binData, bitEnd, errors.New("PathSwitchRequestAcknowledgeIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -1386,19 +1386,19 @@ func PathSwitchRequestFailureIEs(value ngapType.PathSwitchRequestFailureIEs, bin
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDAMFUENGAPID:
-		if value.TypeValue.Present != ngapType.PathSwitchRequestFailureIEsTypeValuePresentAMFUENGAPID {
+		if value.TypeValue.Present != ngapType.PathSwitchRequestFailureIEsPresentAMFUENGAPID {
 			return binData, bitEnd, errors.New("PathSwitchRequestFailureIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDRANUENGAPID:
-		if value.TypeValue.Present != ngapType.PathSwitchRequestFailureIEsTypeValuePresentRANUENGAPID {
+		if value.TypeValue.Present != ngapType.PathSwitchRequestFailureIEsPresentRANUENGAPID {
 			return binData, bitEnd, errors.New("PathSwitchRequestFailureIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDPDUSessionResourceReleasedListPSFail:
-		if value.TypeValue.Present != ngapType.PathSwitchRequestFailureIEsTypeValuePresentPDUSessionResourceReleasedListPSFail {
+		if value.TypeValue.Present != ngapType.PathSwitchRequestFailureIEsPresentPDUSessionResourceReleasedListPSFail {
 			return binData, bitEnd, errors.New("PathSwitchRequestFailureIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDCriticalityDiagnostics:
-		if value.TypeValue.Present != ngapType.PathSwitchRequestFailureIEsTypeValuePresentCriticalityDiagnostics {
+		if value.TypeValue.Present != ngapType.PathSwitchRequestFailureIEsPresentCriticalityDiagnostics {
 			return binData, bitEnd, errors.New("PathSwitchRequestFailureIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -1424,15 +1424,15 @@ func HandoverCancelIEs(value ngapType.HandoverCancelIEs, binData []byte, bitEnd 
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDAMFUENGAPID:
-		if value.TypeValue.Present != ngapType.HandoverCancelIEsTypeValuePresentAMFUENGAPID {
+		if value.TypeValue.Present != ngapType.HandoverCancelIEsPresentAMFUENGAPID {
 			return binData, bitEnd, errors.New("HandoverCancelIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDRANUENGAPID:
-		if value.TypeValue.Present != ngapType.HandoverCancelIEsTypeValuePresentRANUENGAPID {
+		if value.TypeValue.Present != ngapType.HandoverCancelIEsPresentRANUENGAPID {
 			return binData, bitEnd, errors.New("HandoverCancelIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDCause:
-		if value.TypeValue.Present != ngapType.HandoverCancelIEsTypeValuePresentCause {
+		if value.TypeValue.Present != ngapType.HandoverCancelIEsPresentCause {
 			return binData, bitEnd, errors.New("HandoverCancelIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -1458,15 +1458,15 @@ func HandoverCancelAcknowledgeIEs(value ngapType.HandoverCancelAcknowledgeIEs, b
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDAMFUENGAPID:
-		if value.TypeValue.Present != ngapType.HandoverCancelAcknowledgeIEsTypeValuePresentAMFUENGAPID {
+		if value.TypeValue.Present != ngapType.HandoverCancelAcknowledgeIEsPresentAMFUENGAPID {
 			return binData, bitEnd, errors.New("HandoverCancelAcknowledgeIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDRANUENGAPID:
-		if value.TypeValue.Present != ngapType.HandoverCancelAcknowledgeIEsTypeValuePresentRANUENGAPID {
+		if value.TypeValue.Present != ngapType.HandoverCancelAcknowledgeIEsPresentRANUENGAPID {
 			return binData, bitEnd, errors.New("HandoverCancelAcknowledgeIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDCriticalityDiagnostics:
-		if value.TypeValue.Present != ngapType.HandoverCancelAcknowledgeIEsTypeValuePresentCriticalityDiagnostics {
+		if value.TypeValue.Present != ngapType.HandoverCancelAcknowledgeIEsPresentCriticalityDiagnostics {
 			return binData, bitEnd, errors.New("HandoverCancelAcknowledgeIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -1492,15 +1492,15 @@ func UplinkRANStatusTransferIEs(value ngapType.UplinkRANStatusTransferIEs, binDa
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDAMFUENGAPID:
-		if value.TypeValue.Present != ngapType.UplinkRANStatusTransferIEsTypeValuePresentAMFUENGAPID {
+		if value.TypeValue.Present != ngapType.UplinkRANStatusTransferIEsPresentAMFUENGAPID {
 			return binData, bitEnd, errors.New("UplinkRANStatusTransferIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDRANUENGAPID:
-		if value.TypeValue.Present != ngapType.UplinkRANStatusTransferIEsTypeValuePresentRANUENGAPID {
+		if value.TypeValue.Present != ngapType.UplinkRANStatusTransferIEsPresentRANUENGAPID {
 			return binData, bitEnd, errors.New("UplinkRANStatusTransferIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDRANStatusTransferTransparentContainer:
-		if value.TypeValue.Present != ngapType.UplinkRANStatusTransferIEsTypeValuePresentRANStatusTransferTransparentContainer {
+		if value.TypeValue.Present != ngapType.UplinkRANStatusTransferIEsPresentRANStatusTransferTransparentContainer {
 			return binData, bitEnd, errors.New("UplinkRANStatusTransferIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -1526,15 +1526,15 @@ func DownlinkRANStatusTransferIEs(value ngapType.DownlinkRANStatusTransferIEs, b
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDAMFUENGAPID:
-		if value.TypeValue.Present != ngapType.DownlinkRANStatusTransferIEsTypeValuePresentAMFUENGAPID {
+		if value.TypeValue.Present != ngapType.DownlinkRANStatusTransferIEsPresentAMFUENGAPID {
 			return binData, bitEnd, errors.New("DownlinkRANStatusTransferIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDRANUENGAPID:
-		if value.TypeValue.Present != ngapType.DownlinkRANStatusTransferIEsTypeValuePresentRANUENGAPID {
+		if value.TypeValue.Present != ngapType.DownlinkRANStatusTransferIEsPresentRANUENGAPID {
 			return binData, bitEnd, errors.New("DownlinkRANStatusTransferIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDRANStatusTransferTransparentContainer:
-		if value.TypeValue.Present != ngapType.DownlinkRANStatusTransferIEsTypeValuePresentRANStatusTransferTransparentContainer {
+		if value.TypeValue.Present != ngapType.DownlinkRANStatusTransferIEsPresentRANStatusTransferTransparentContainer {
 			return binData, bitEnd, errors.New("DownlinkRANStatusTransferIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -1560,31 +1560,31 @@ func PagingIEs(value ngapType.PagingIEs, binData []byte, bitEnd uint64) ([]byte,
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDUEPagingIdentity:
-		if value.TypeValue.Present != ngapType.PagingIEsTypeValuePresentUEPagingIdentity {
+		if value.TypeValue.Present != ngapType.PagingIEsPresentUEPagingIdentity {
 			return binData, bitEnd, errors.New("PagingIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDPagingDRX:
-		if value.TypeValue.Present != ngapType.PagingIEsTypeValuePresentPagingDRX {
+		if value.TypeValue.Present != ngapType.PagingIEsPresentPagingDRX {
 			return binData, bitEnd, errors.New("PagingIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDTAIListForPaging:
-		if value.TypeValue.Present != ngapType.PagingIEsTypeValuePresentTAIListForPaging {
+		if value.TypeValue.Present != ngapType.PagingIEsPresentTAIListForPaging {
 			return binData, bitEnd, errors.New("PagingIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDPagingPriority:
-		if value.TypeValue.Present != ngapType.PagingIEsTypeValuePresentPagingPriority {
+		if value.TypeValue.Present != ngapType.PagingIEsPresentPagingPriority {
 			return binData, bitEnd, errors.New("PagingIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDUERadioCapabilityForPaging:
-		if value.TypeValue.Present != ngapType.PagingIEsTypeValuePresentUERadioCapabilityForPaging {
+		if value.TypeValue.Present != ngapType.PagingIEsPresentUERadioCapabilityForPaging {
 			return binData, bitEnd, errors.New("PagingIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDPagingOrigin:
-		if value.TypeValue.Present != ngapType.PagingIEsTypeValuePresentPagingOrigin {
+		if value.TypeValue.Present != ngapType.PagingIEsPresentPagingOrigin {
 			return binData, bitEnd, errors.New("PagingIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDAssistanceDataForPaging:
-		if value.TypeValue.Present != ngapType.PagingIEsTypeValuePresentAssistanceDataForPaging {
+		if value.TypeValue.Present != ngapType.PagingIEsPresentAssistanceDataForPaging {
 			return binData, bitEnd, errors.New("PagingIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -1610,39 +1610,39 @@ func InitialUEMessageIEs(value ngapType.InitialUEMessageIEs, binData []byte, bit
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDRANUENGAPID:
-		if value.TypeValue.Present != ngapType.InitialUEMessageIEsTypeValuePresentRANUENGAPID {
+		if value.TypeValue.Present != ngapType.InitialUEMessageIEsPresentRANUENGAPID {
 			return binData, bitEnd, errors.New("InitialUEMessageIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDNASPDU:
-		if value.TypeValue.Present != ngapType.InitialUEMessageIEsTypeValuePresentNASPDU {
+		if value.TypeValue.Present != ngapType.InitialUEMessageIEsPresentNASPDU {
 			return binData, bitEnd, errors.New("InitialUEMessageIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDUserLocationInformation:
-		if value.TypeValue.Present != ngapType.InitialUEMessageIEsTypeValuePresentUserLocationInformation {
+		if value.TypeValue.Present != ngapType.InitialUEMessageIEsPresentUserLocationInformation {
 			return binData, bitEnd, errors.New("InitialUEMessageIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDRRCEstablishmentCause:
-		if value.TypeValue.Present != ngapType.InitialUEMessageIEsTypeValuePresentRRCEstablishmentCause {
+		if value.TypeValue.Present != ngapType.InitialUEMessageIEsPresentRRCEstablishmentCause {
 			return binData, bitEnd, errors.New("InitialUEMessageIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDFiveGSTMSI:
-		if value.TypeValue.Present != ngapType.InitialUEMessageIEsTypeValuePresentFiveGSTMSI {
+		if value.TypeValue.Present != ngapType.InitialUEMessageIEsPresentFiveGSTMSI {
 			return binData, bitEnd, errors.New("InitialUEMessageIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDAMFSetID:
-		if value.TypeValue.Present != ngapType.InitialUEMessageIEsTypeValuePresentAMFSetID {
+		if value.TypeValue.Present != ngapType.InitialUEMessageIEsPresentAMFSetID {
 			return binData, bitEnd, errors.New("InitialUEMessageIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDUEContextRequest:
-		if value.TypeValue.Present != ngapType.InitialUEMessageIEsTypeValuePresentUEContextRequest {
+		if value.TypeValue.Present != ngapType.InitialUEMessageIEsPresentUEContextRequest {
 			return binData, bitEnd, errors.New("InitialUEMessageIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDAllowedNSSAI:
-		if value.TypeValue.Present != ngapType.InitialUEMessageIEsTypeValuePresentAllowedNSSAI {
+		if value.TypeValue.Present != ngapType.InitialUEMessageIEsPresentAllowedNSSAI {
 			return binData, bitEnd, errors.New("InitialUEMessageIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDSourceToTargetAMFInformationReroute:
-		if value.TypeValue.Present != ngapType.InitialUEMessageIEsTypeValuePresentSourceToTargetAMFInformationReroute {
+		if value.TypeValue.Present != ngapType.InitialUEMessageIEsPresentSourceToTargetAMFInformationReroute {
 			return binData, bitEnd, errors.New("InitialUEMessageIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -1668,43 +1668,43 @@ func DownlinkNASTransportIEs(value ngapType.DownlinkNASTransportIEs, binData []b
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDAMFUENGAPID:
-		if value.TypeValue.Present != ngapType.DownlinkNASTransportIEsTypeValuePresentAMFUENGAPID {
+		if value.TypeValue.Present != ngapType.DownlinkNASTransportIEsPresentAMFUENGAPID {
 			return binData, bitEnd, errors.New("DownlinkNASTransportIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDRANUENGAPID:
-		if value.TypeValue.Present != ngapType.DownlinkNASTransportIEsTypeValuePresentRANUENGAPID {
+		if value.TypeValue.Present != ngapType.DownlinkNASTransportIEsPresentRANUENGAPID {
 			return binData, bitEnd, errors.New("DownlinkNASTransportIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDOldAMF:
-		if value.TypeValue.Present != ngapType.DownlinkNASTransportIEsTypeValuePresentOldAMF {
+		if value.TypeValue.Present != ngapType.DownlinkNASTransportIEsPresentOldAMF {
 			return binData, bitEnd, errors.New("DownlinkNASTransportIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDRANPagingPriority:
-		if value.TypeValue.Present != ngapType.DownlinkNASTransportIEsTypeValuePresentRANPagingPriority {
+		if value.TypeValue.Present != ngapType.DownlinkNASTransportIEsPresentRANPagingPriority {
 			return binData, bitEnd, errors.New("DownlinkNASTransportIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDNASPDU:
-		if value.TypeValue.Present != ngapType.DownlinkNASTransportIEsTypeValuePresentNASPDU {
+		if value.TypeValue.Present != ngapType.DownlinkNASTransportIEsPresentNASPDU {
 			return binData, bitEnd, errors.New("DownlinkNASTransportIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDMobilityRestrictionList:
-		if value.TypeValue.Present != ngapType.DownlinkNASTransportIEsTypeValuePresentMobilityRestrictionList {
+		if value.TypeValue.Present != ngapType.DownlinkNASTransportIEsPresentMobilityRestrictionList {
 			return binData, bitEnd, errors.New("DownlinkNASTransportIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDIndexToRFSP:
-		if value.TypeValue.Present != ngapType.DownlinkNASTransportIEsTypeValuePresentIndexToRFSP {
+		if value.TypeValue.Present != ngapType.DownlinkNASTransportIEsPresentIndexToRFSP {
 			return binData, bitEnd, errors.New("DownlinkNASTransportIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDUEAggregateMaximumBitRate:
-		if value.TypeValue.Present != ngapType.DownlinkNASTransportIEsTypeValuePresentUEAggregateMaximumBitRate {
+		if value.TypeValue.Present != ngapType.DownlinkNASTransportIEsPresentUEAggregateMaximumBitRate {
 			return binData, bitEnd, errors.New("DownlinkNASTransportIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDAllowedNSSAI:
-		if value.TypeValue.Present != ngapType.DownlinkNASTransportIEsTypeValuePresentAllowedNSSAI {
+		if value.TypeValue.Present != ngapType.DownlinkNASTransportIEsPresentAllowedNSSAI {
 			return binData, bitEnd, errors.New("DownlinkNASTransportIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDSRVCCOperationPossible:
-		if value.TypeValue.Present != ngapType.DownlinkNASTransportIEsTypeValuePresentSRVCCOperationPossible {
+		if value.TypeValue.Present != ngapType.DownlinkNASTransportIEsPresentSRVCCOperationPossible {
 			return binData, bitEnd, errors.New("DownlinkNASTransportIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -1730,19 +1730,19 @@ func UplinkNASTransportIEs(value ngapType.UplinkNASTransportIEs, binData []byte,
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDAMFUENGAPID:
-		if value.TypeValue.Present != ngapType.UplinkNASTransportIEsTypeValuePresentAMFUENGAPID {
+		if value.TypeValue.Present != ngapType.UplinkNASTransportIEsPresentAMFUENGAPID {
 			return binData, bitEnd, errors.New("UplinkNASTransportIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDRANUENGAPID:
-		if value.TypeValue.Present != ngapType.UplinkNASTransportIEsTypeValuePresentRANUENGAPID {
+		if value.TypeValue.Present != ngapType.UplinkNASTransportIEsPresentRANUENGAPID {
 			return binData, bitEnd, errors.New("UplinkNASTransportIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDNASPDU:
-		if value.TypeValue.Present != ngapType.UplinkNASTransportIEsTypeValuePresentNASPDU {
+		if value.TypeValue.Present != ngapType.UplinkNASTransportIEsPresentNASPDU {
 			return binData, bitEnd, errors.New("UplinkNASTransportIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDUserLocationInformation:
-		if value.TypeValue.Present != ngapType.UplinkNASTransportIEsTypeValuePresentUserLocationInformation {
+		if value.TypeValue.Present != ngapType.UplinkNASTransportIEsPresentUserLocationInformation {
 			return binData, bitEnd, errors.New("UplinkNASTransportIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -1768,19 +1768,19 @@ func NASNonDeliveryIndicationIEs(value ngapType.NASNonDeliveryIndicationIEs, bin
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDAMFUENGAPID:
-		if value.TypeValue.Present != ngapType.NASNonDeliveryIndicationIEsTypeValuePresentAMFUENGAPID {
+		if value.TypeValue.Present != ngapType.NASNonDeliveryIndicationIEsPresentAMFUENGAPID {
 			return binData, bitEnd, errors.New("NASNonDeliveryIndicationIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDRANUENGAPID:
-		if value.TypeValue.Present != ngapType.NASNonDeliveryIndicationIEsTypeValuePresentRANUENGAPID {
+		if value.TypeValue.Present != ngapType.NASNonDeliveryIndicationIEsPresentRANUENGAPID {
 			return binData, bitEnd, errors.New("NASNonDeliveryIndicationIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDNASPDU:
-		if value.TypeValue.Present != ngapType.NASNonDeliveryIndicationIEsTypeValuePresentNASPDU {
+		if value.TypeValue.Present != ngapType.NASNonDeliveryIndicationIEsPresentNASPDU {
 			return binData, bitEnd, errors.New("NASNonDeliveryIndicationIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDCause:
-		if value.TypeValue.Present != ngapType.NASNonDeliveryIndicationIEsTypeValuePresentCause {
+		if value.TypeValue.Present != ngapType.NASNonDeliveryIndicationIEsPresentCause {
 			return binData, bitEnd, errors.New("NASNonDeliveryIndicationIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -1806,27 +1806,27 @@ func RerouteNASRequestIEs(value ngapType.RerouteNASRequestIEs, binData []byte, b
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDRANUENGAPID:
-		if value.TypeValue.Present != ngapType.RerouteNASRequestIEsTypeValuePresentRANUENGAPID {
+		if value.TypeValue.Present != ngapType.RerouteNASRequestIEsPresentRANUENGAPID {
 			return binData, bitEnd, errors.New("RerouteNASRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDAMFUENGAPID:
-		if value.TypeValue.Present != ngapType.RerouteNASRequestIEsTypeValuePresentAMFUENGAPID {
+		if value.TypeValue.Present != ngapType.RerouteNASRequestIEsPresentAMFUENGAPID {
 			return binData, bitEnd, errors.New("RerouteNASRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDNGAPMessage:
-		if value.TypeValue.Present != ngapType.RerouteNASRequestIEsTypeValuePresentNGAPMessage {
+		if value.TypeValue.Present != ngapType.RerouteNASRequestIEsPresentNGAPMessage {
 			return binData, bitEnd, errors.New("RerouteNASRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDAMFSetID:
-		if value.TypeValue.Present != ngapType.RerouteNASRequestIEsTypeValuePresentAMFSetID {
+		if value.TypeValue.Present != ngapType.RerouteNASRequestIEsPresentAMFSetID {
 			return binData, bitEnd, errors.New("RerouteNASRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDAllowedNSSAI:
-		if value.TypeValue.Present != ngapType.RerouteNASRequestIEsTypeValuePresentAllowedNSSAI {
+		if value.TypeValue.Present != ngapType.RerouteNASRequestIEsPresentAllowedNSSAI {
 			return binData, bitEnd, errors.New("RerouteNASRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDSourceToTargetAMFInformationReroute:
-		if value.TypeValue.Present != ngapType.RerouteNASRequestIEsTypeValuePresentSourceToTargetAMFInformationReroute {
+		if value.TypeValue.Present != ngapType.RerouteNASRequestIEsPresentSourceToTargetAMFInformationReroute {
 			return binData, bitEnd, errors.New("RerouteNASRequestIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -1852,23 +1852,23 @@ func NGSetupRequestIEs(value ngapType.NGSetupRequestIEs, binData []byte, bitEnd 
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDGlobalRANNodeID:
-		if value.TypeValue.Present != ngapType.NGSetupRequestIEsTypeValuePresentGlobalRANNodeID {
+		if value.TypeValue.Present != ngapType.NGSetupRequestIEsPresentGlobalRANNodeID {
 			return binData, bitEnd, errors.New("NGSetupRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDRANNodeName:
-		if value.TypeValue.Present != ngapType.NGSetupRequestIEsTypeValuePresentRANNodeName {
+		if value.TypeValue.Present != ngapType.NGSetupRequestIEsPresentRANNodeName {
 			return binData, bitEnd, errors.New("NGSetupRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDSupportedTAList:
-		if value.TypeValue.Present != ngapType.NGSetupRequestIEsTypeValuePresentSupportedTAList {
+		if value.TypeValue.Present != ngapType.NGSetupRequestIEsPresentSupportedTAList {
 			return binData, bitEnd, errors.New("NGSetupRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDDefaultPagingDRX:
-		if value.TypeValue.Present != ngapType.NGSetupRequestIEsTypeValuePresentDefaultPagingDRX {
+		if value.TypeValue.Present != ngapType.NGSetupRequestIEsPresentDefaultPagingDRX {
 			return binData, bitEnd, errors.New("NGSetupRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDUERetentionInformation:
-		if value.TypeValue.Present != ngapType.NGSetupRequestIEsTypeValuePresentUERetentionInformation {
+		if value.TypeValue.Present != ngapType.NGSetupRequestIEsPresentUERetentionInformation {
 			return binData, bitEnd, errors.New("NGSetupRequestIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -1894,27 +1894,27 @@ func NGSetupResponseIEs(value ngapType.NGSetupResponseIEs, binData []byte, bitEn
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDAMFName:
-		if value.TypeValue.Present != ngapType.NGSetupResponseIEsTypeValuePresentAMFName {
+		if value.TypeValue.Present != ngapType.NGSetupResponseIEsPresentAMFName {
 			return binData, bitEnd, errors.New("NGSetupResponseIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDServedGUAMIList:
-		if value.TypeValue.Present != ngapType.NGSetupResponseIEsTypeValuePresentServedGUAMIList {
+		if value.TypeValue.Present != ngapType.NGSetupResponseIEsPresentServedGUAMIList {
 			return binData, bitEnd, errors.New("NGSetupResponseIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDRelativeAMFCapacity:
-		if value.TypeValue.Present != ngapType.NGSetupResponseIEsTypeValuePresentRelativeAMFCapacity {
+		if value.TypeValue.Present != ngapType.NGSetupResponseIEsPresentRelativeAMFCapacity {
 			return binData, bitEnd, errors.New("NGSetupResponseIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDPLMNSupportList:
-		if value.TypeValue.Present != ngapType.NGSetupResponseIEsTypeValuePresentPLMNSupportList {
+		if value.TypeValue.Present != ngapType.NGSetupResponseIEsPresentPLMNSupportList {
 			return binData, bitEnd, errors.New("NGSetupResponseIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDCriticalityDiagnostics:
-		if value.TypeValue.Present != ngapType.NGSetupResponseIEsTypeValuePresentCriticalityDiagnostics {
+		if value.TypeValue.Present != ngapType.NGSetupResponseIEsPresentCriticalityDiagnostics {
 			return binData, bitEnd, errors.New("NGSetupResponseIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDUERetentionInformation:
-		if value.TypeValue.Present != ngapType.NGSetupResponseIEsTypeValuePresentUERetentionInformation {
+		if value.TypeValue.Present != ngapType.NGSetupResponseIEsPresentUERetentionInformation {
 			return binData, bitEnd, errors.New("NGSetupResponseIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -1940,15 +1940,15 @@ func NGSetupFailureIEs(value ngapType.NGSetupFailureIEs, binData []byte, bitEnd 
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDCause:
-		if value.TypeValue.Present != ngapType.NGSetupFailureIEsTypeValuePresentCause {
+		if value.TypeValue.Present != ngapType.NGSetupFailureIEsPresentCause {
 			return binData, bitEnd, errors.New("NGSetupFailureIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDTimeToWait:
-		if value.TypeValue.Present != ngapType.NGSetupFailureIEsTypeValuePresentTimeToWait {
+		if value.TypeValue.Present != ngapType.NGSetupFailureIEsPresentTimeToWait {
 			return binData, bitEnd, errors.New("NGSetupFailureIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDCriticalityDiagnostics:
-		if value.TypeValue.Present != ngapType.NGSetupFailureIEsTypeValuePresentCriticalityDiagnostics {
+		if value.TypeValue.Present != ngapType.NGSetupFailureIEsPresentCriticalityDiagnostics {
 			return binData, bitEnd, errors.New("NGSetupFailureIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -1974,23 +1974,23 @@ func RANConfigurationUpdateIEs(value ngapType.RANConfigurationUpdateIEs, binData
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDRANNodeName:
-		if value.TypeValue.Present != ngapType.RANConfigurationUpdateIEsTypeValuePresentRANNodeName {
+		if value.TypeValue.Present != ngapType.RANConfigurationUpdateIEsPresentRANNodeName {
 			return binData, bitEnd, errors.New("RANConfigurationUpdateIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDSupportedTAList:
-		if value.TypeValue.Present != ngapType.RANConfigurationUpdateIEsTypeValuePresentSupportedTAList {
+		if value.TypeValue.Present != ngapType.RANConfigurationUpdateIEsPresentSupportedTAList {
 			return binData, bitEnd, errors.New("RANConfigurationUpdateIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDDefaultPagingDRX:
-		if value.TypeValue.Present != ngapType.RANConfigurationUpdateIEsTypeValuePresentDefaultPagingDRX {
+		if value.TypeValue.Present != ngapType.RANConfigurationUpdateIEsPresentDefaultPagingDRX {
 			return binData, bitEnd, errors.New("RANConfigurationUpdateIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDGlobalRANNodeID:
-		if value.TypeValue.Present != ngapType.RANConfigurationUpdateIEsTypeValuePresentGlobalRANNodeID {
+		if value.TypeValue.Present != ngapType.RANConfigurationUpdateIEsPresentGlobalRANNodeID {
 			return binData, bitEnd, errors.New("RANConfigurationUpdateIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDNGRANTNLAssociationToRemoveList:
-		if value.TypeValue.Present != ngapType.RANConfigurationUpdateIEsTypeValuePresentNGRANTNLAssociationToRemoveList {
+		if value.TypeValue.Present != ngapType.RANConfigurationUpdateIEsPresentNGRANTNLAssociationToRemoveList {
 			return binData, bitEnd, errors.New("RANConfigurationUpdateIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -2016,7 +2016,7 @@ func RANConfigurationUpdateAcknowledgeIEs(value ngapType.RANConfigurationUpdateA
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDCriticalityDiagnostics:
-		if value.TypeValue.Present != ngapType.RANConfigurationUpdateAcknowledgeIEsTypeValuePresentCriticalityDiagnostics {
+		if value.TypeValue.Present != ngapType.RANConfigurationUpdateAcknowledgeIEsPresentCriticalityDiagnostics {
 			return binData, bitEnd, errors.New("RANConfigurationUpdateAcknowledgeIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -2042,15 +2042,15 @@ func RANConfigurationUpdateFailureIEs(value ngapType.RANConfigurationUpdateFailu
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDCause:
-		if value.TypeValue.Present != ngapType.RANConfigurationUpdateFailureIEsTypeValuePresentCause {
+		if value.TypeValue.Present != ngapType.RANConfigurationUpdateFailureIEsPresentCause {
 			return binData, bitEnd, errors.New("RANConfigurationUpdateFailureIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDTimeToWait:
-		if value.TypeValue.Present != ngapType.RANConfigurationUpdateFailureIEsTypeValuePresentTimeToWait {
+		if value.TypeValue.Present != ngapType.RANConfigurationUpdateFailureIEsPresentTimeToWait {
 			return binData, bitEnd, errors.New("RANConfigurationUpdateFailureIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDCriticalityDiagnostics:
-		if value.TypeValue.Present != ngapType.RANConfigurationUpdateFailureIEsTypeValuePresentCriticalityDiagnostics {
+		if value.TypeValue.Present != ngapType.RANConfigurationUpdateFailureIEsPresentCriticalityDiagnostics {
 			return binData, bitEnd, errors.New("RANConfigurationUpdateFailureIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -2076,31 +2076,31 @@ func AMFConfigurationUpdateIEs(value ngapType.AMFConfigurationUpdateIEs, binData
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDAMFName:
-		if value.TypeValue.Present != ngapType.AMFConfigurationUpdateIEsTypeValuePresentAMFName {
+		if value.TypeValue.Present != ngapType.AMFConfigurationUpdateIEsPresentAMFName {
 			return binData, bitEnd, errors.New("AMFConfigurationUpdateIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDServedGUAMIList:
-		if value.TypeValue.Present != ngapType.AMFConfigurationUpdateIEsTypeValuePresentServedGUAMIList {
+		if value.TypeValue.Present != ngapType.AMFConfigurationUpdateIEsPresentServedGUAMIList {
 			return binData, bitEnd, errors.New("AMFConfigurationUpdateIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDRelativeAMFCapacity:
-		if value.TypeValue.Present != ngapType.AMFConfigurationUpdateIEsTypeValuePresentRelativeAMFCapacity {
+		if value.TypeValue.Present != ngapType.AMFConfigurationUpdateIEsPresentRelativeAMFCapacity {
 			return binData, bitEnd, errors.New("AMFConfigurationUpdateIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDPLMNSupportList:
-		if value.TypeValue.Present != ngapType.AMFConfigurationUpdateIEsTypeValuePresentPLMNSupportList {
+		if value.TypeValue.Present != ngapType.AMFConfigurationUpdateIEsPresentPLMNSupportList {
 			return binData, bitEnd, errors.New("AMFConfigurationUpdateIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDAMFTNLAssociationToAddList:
-		if value.TypeValue.Present != ngapType.AMFConfigurationUpdateIEsTypeValuePresentAMFTNLAssociationToAddList {
+		if value.TypeValue.Present != ngapType.AMFConfigurationUpdateIEsPresentAMFTNLAssociationToAddList {
 			return binData, bitEnd, errors.New("AMFConfigurationUpdateIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDAMFTNLAssociationToRemoveList:
-		if value.TypeValue.Present != ngapType.AMFConfigurationUpdateIEsTypeValuePresentAMFTNLAssociationToRemoveList {
+		if value.TypeValue.Present != ngapType.AMFConfigurationUpdateIEsPresentAMFTNLAssociationToRemoveList {
 			return binData, bitEnd, errors.New("AMFConfigurationUpdateIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDAMFTNLAssociationToUpdateList:
-		if value.TypeValue.Present != ngapType.AMFConfigurationUpdateIEsTypeValuePresentAMFTNLAssociationToUpdateList {
+		if value.TypeValue.Present != ngapType.AMFConfigurationUpdateIEsPresentAMFTNLAssociationToUpdateList {
 			return binData, bitEnd, errors.New("AMFConfigurationUpdateIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -2126,15 +2126,15 @@ func AMFConfigurationUpdateAcknowledgeIEs(value ngapType.AMFConfigurationUpdateA
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDAMFTNLAssociationSetupList:
-		if value.TypeValue.Present != ngapType.AMFConfigurationUpdateAcknowledgeIEsTypeValuePresentAMFTNLAssociationSetupList {
+		if value.TypeValue.Present != ngapType.AMFConfigurationUpdateAcknowledgeIEsPresentAMFTNLAssociationSetupList {
 			return binData, bitEnd, errors.New("AMFConfigurationUpdateAcknowledgeIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDAMFTNLAssociationFailedToSetupList:
-		if value.TypeValue.Present != ngapType.AMFConfigurationUpdateAcknowledgeIEsTypeValuePresentAMFTNLAssociationFailedToSetupList {
+		if value.TypeValue.Present != ngapType.AMFConfigurationUpdateAcknowledgeIEsPresentAMFTNLAssociationFailedToSetupList {
 			return binData, bitEnd, errors.New("AMFConfigurationUpdateAcknowledgeIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDCriticalityDiagnostics:
-		if value.TypeValue.Present != ngapType.AMFConfigurationUpdateAcknowledgeIEsTypeValuePresentCriticalityDiagnostics {
+		if value.TypeValue.Present != ngapType.AMFConfigurationUpdateAcknowledgeIEsPresentCriticalityDiagnostics {
 			return binData, bitEnd, errors.New("AMFConfigurationUpdateAcknowledgeIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -2160,15 +2160,15 @@ func AMFConfigurationUpdateFailureIEs(value ngapType.AMFConfigurationUpdateFailu
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDCause:
-		if value.TypeValue.Present != ngapType.AMFConfigurationUpdateFailureIEsTypeValuePresentCause {
+		if value.TypeValue.Present != ngapType.AMFConfigurationUpdateFailureIEsPresentCause {
 			return binData, bitEnd, errors.New("AMFConfigurationUpdateFailureIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDTimeToWait:
-		if value.TypeValue.Present != ngapType.AMFConfigurationUpdateFailureIEsTypeValuePresentTimeToWait {
+		if value.TypeValue.Present != ngapType.AMFConfigurationUpdateFailureIEsPresentTimeToWait {
 			return binData, bitEnd, errors.New("AMFConfigurationUpdateFailureIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDCriticalityDiagnostics:
-		if value.TypeValue.Present != ngapType.AMFConfigurationUpdateFailureIEsTypeValuePresentCriticalityDiagnostics {
+		if value.TypeValue.Present != ngapType.AMFConfigurationUpdateFailureIEsPresentCriticalityDiagnostics {
 			return binData, bitEnd, errors.New("AMFConfigurationUpdateFailureIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -2194,7 +2194,7 @@ func AMFStatusIndicationIEs(value ngapType.AMFStatusIndicationIEs, binData []byt
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDUnavailableGUAMIList:
-		if value.TypeValue.Present != ngapType.AMFStatusIndicationIEsTypeValuePresentUnavailableGUAMIList {
+		if value.TypeValue.Present != ngapType.AMFStatusIndicationIEsPresentUnavailableGUAMIList {
 			return binData, bitEnd, errors.New("AMFStatusIndicationIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -2220,11 +2220,11 @@ func NGResetIEs(value ngapType.NGResetIEs, binData []byte, bitEnd uint64) ([]byt
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDCause:
-		if value.TypeValue.Present != ngapType.NGResetIEsTypeValuePresentCause {
+		if value.TypeValue.Present != ngapType.NGResetIEsPresentCause {
 			return binData, bitEnd, errors.New("NGResetIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDResetType:
-		if value.TypeValue.Present != ngapType.NGResetIEsTypeValuePresentResetType {
+		if value.TypeValue.Present != ngapType.NGResetIEsPresentResetType {
 			return binData, bitEnd, errors.New("NGResetIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -2250,11 +2250,11 @@ func NGResetAcknowledgeIEs(value ngapType.NGResetAcknowledgeIEs, binData []byte,
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDUEAssociatedLogicalNGConnectionList:
-		if value.TypeValue.Present != ngapType.NGResetAcknowledgeIEsTypeValuePresentUEAssociatedLogicalNGConnectionList {
+		if value.TypeValue.Present != ngapType.NGResetAcknowledgeIEsPresentUEAssociatedLogicalNGConnectionList {
 			return binData, bitEnd, errors.New("NGResetAcknowledgeIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDCriticalityDiagnostics:
-		if value.TypeValue.Present != ngapType.NGResetAcknowledgeIEsTypeValuePresentCriticalityDiagnostics {
+		if value.TypeValue.Present != ngapType.NGResetAcknowledgeIEsPresentCriticalityDiagnostics {
 			return binData, bitEnd, errors.New("NGResetAcknowledgeIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -2280,19 +2280,19 @@ func ErrorIndicationIEs(value ngapType.ErrorIndicationIEs, binData []byte, bitEn
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDAMFUENGAPID:
-		if value.TypeValue.Present != ngapType.ErrorIndicationIEsTypeValuePresentAMFUENGAPID {
+		if value.TypeValue.Present != ngapType.ErrorIndicationIEsPresentAMFUENGAPID {
 			return binData, bitEnd, errors.New("ErrorIndicationIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDRANUENGAPID:
-		if value.TypeValue.Present != ngapType.ErrorIndicationIEsTypeValuePresentRANUENGAPID {
+		if value.TypeValue.Present != ngapType.ErrorIndicationIEsPresentRANUENGAPID {
 			return binData, bitEnd, errors.New("ErrorIndicationIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDCause:
-		if value.TypeValue.Present != ngapType.ErrorIndicationIEsTypeValuePresentCause {
+		if value.TypeValue.Present != ngapType.ErrorIndicationIEsPresentCause {
 			return binData, bitEnd, errors.New("ErrorIndicationIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDCriticalityDiagnostics:
-		if value.TypeValue.Present != ngapType.ErrorIndicationIEsTypeValuePresentCriticalityDiagnostics {
+		if value.TypeValue.Present != ngapType.ErrorIndicationIEsPresentCriticalityDiagnostics {
 			return binData, bitEnd, errors.New("ErrorIndicationIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -2318,15 +2318,15 @@ func OverloadStartIEs(value ngapType.OverloadStartIEs, binData []byte, bitEnd ui
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDAMFOverloadResponse:
-		if value.TypeValue.Present != ngapType.OverloadStartIEsTypeValuePresentAMFOverloadResponse {
+		if value.TypeValue.Present != ngapType.OverloadStartIEsPresentAMFOverloadResponse {
 			return binData, bitEnd, errors.New("OverloadStartIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDAMFTrafficLoadReductionIndication:
-		if value.TypeValue.Present != ngapType.OverloadStartIEsTypeValuePresentAMFTrafficLoadReductionIndication {
+		if value.TypeValue.Present != ngapType.OverloadStartIEsPresentAMFTrafficLoadReductionIndication {
 			return binData, bitEnd, errors.New("OverloadStartIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDOverloadStartNSSAIList:
-		if value.TypeValue.Present != ngapType.OverloadStartIEsTypeValuePresentOverloadStartNSSAIList {
+		if value.TypeValue.Present != ngapType.OverloadStartIEsPresentOverloadStartNSSAIList {
 			return binData, bitEnd, errors.New("OverloadStartIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -2374,11 +2374,11 @@ func UplinkRANConfigurationTransferIEs(value ngapType.UplinkRANConfigurationTran
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDSONConfigurationTransferUL:
-		if value.TypeValue.Present != ngapType.UplinkRANConfigurationTransferIEsTypeValuePresentSONConfigurationTransferUL {
+		if value.TypeValue.Present != ngapType.UplinkRANConfigurationTransferIEsPresentSONConfigurationTransferUL {
 			return binData, bitEnd, errors.New("UplinkRANConfigurationTransferIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDENDCSONConfigurationTransferUL:
-		if value.TypeValue.Present != ngapType.UplinkRANConfigurationTransferIEsTypeValuePresentENDCSONConfigurationTransferUL {
+		if value.TypeValue.Present != ngapType.UplinkRANConfigurationTransferIEsPresentENDCSONConfigurationTransferUL {
 			return binData, bitEnd, errors.New("UplinkRANConfigurationTransferIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -2404,11 +2404,11 @@ func DownlinkRANConfigurationTransferIEs(value ngapType.DownlinkRANConfiguration
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDSONConfigurationTransferDL:
-		if value.TypeValue.Present != ngapType.DownlinkRANConfigurationTransferIEsTypeValuePresentSONConfigurationTransferDL {
+		if value.TypeValue.Present != ngapType.DownlinkRANConfigurationTransferIEsPresentSONConfigurationTransferDL {
 			return binData, bitEnd, errors.New("DownlinkRANConfigurationTransferIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDENDCSONConfigurationTransferDL:
-		if value.TypeValue.Present != ngapType.DownlinkRANConfigurationTransferIEsTypeValuePresentENDCSONConfigurationTransferDL {
+		if value.TypeValue.Present != ngapType.DownlinkRANConfigurationTransferIEsPresentENDCSONConfigurationTransferDL {
 			return binData, bitEnd, errors.New("DownlinkRANConfigurationTransferIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -2434,47 +2434,47 @@ func WriteReplaceWarningRequestIEs(value ngapType.WriteReplaceWarningRequestIEs,
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDMessageIdentifier:
-		if value.TypeValue.Present != ngapType.WriteReplaceWarningRequestIEsTypeValuePresentMessageIdentifier {
+		if value.TypeValue.Present != ngapType.WriteReplaceWarningRequestIEsPresentMessageIdentifier {
 			return binData, bitEnd, errors.New("WriteReplaceWarningRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDSerialNumber:
-		if value.TypeValue.Present != ngapType.WriteReplaceWarningRequestIEsTypeValuePresentSerialNumber {
+		if value.TypeValue.Present != ngapType.WriteReplaceWarningRequestIEsPresentSerialNumber {
 			return binData, bitEnd, errors.New("WriteReplaceWarningRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDWarningAreaList:
-		if value.TypeValue.Present != ngapType.WriteReplaceWarningRequestIEsTypeValuePresentWarningAreaList {
+		if value.TypeValue.Present != ngapType.WriteReplaceWarningRequestIEsPresentWarningAreaList {
 			return binData, bitEnd, errors.New("WriteReplaceWarningRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDRepetitionPeriod:
-		if value.TypeValue.Present != ngapType.WriteReplaceWarningRequestIEsTypeValuePresentRepetitionPeriod {
+		if value.TypeValue.Present != ngapType.WriteReplaceWarningRequestIEsPresentRepetitionPeriod {
 			return binData, bitEnd, errors.New("WriteReplaceWarningRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDNumberOfBroadcastsRequested:
-		if value.TypeValue.Present != ngapType.WriteReplaceWarningRequestIEsTypeValuePresentNumberOfBroadcastsRequested {
+		if value.TypeValue.Present != ngapType.WriteReplaceWarningRequestIEsPresentNumberOfBroadcastsRequested {
 			return binData, bitEnd, errors.New("WriteReplaceWarningRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDWarningType:
-		if value.TypeValue.Present != ngapType.WriteReplaceWarningRequestIEsTypeValuePresentWarningType {
+		if value.TypeValue.Present != ngapType.WriteReplaceWarningRequestIEsPresentWarningType {
 			return binData, bitEnd, errors.New("WriteReplaceWarningRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDWarningSecurityInfo:
-		if value.TypeValue.Present != ngapType.WriteReplaceWarningRequestIEsTypeValuePresentWarningSecurityInfo {
+		if value.TypeValue.Present != ngapType.WriteReplaceWarningRequestIEsPresentWarningSecurityInfo {
 			return binData, bitEnd, errors.New("WriteReplaceWarningRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDDataCodingScheme:
-		if value.TypeValue.Present != ngapType.WriteReplaceWarningRequestIEsTypeValuePresentDataCodingScheme {
+		if value.TypeValue.Present != ngapType.WriteReplaceWarningRequestIEsPresentDataCodingScheme {
 			return binData, bitEnd, errors.New("WriteReplaceWarningRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDWarningMessageContents:
-		if value.TypeValue.Present != ngapType.WriteReplaceWarningRequestIEsTypeValuePresentWarningMessageContents {
+		if value.TypeValue.Present != ngapType.WriteReplaceWarningRequestIEsPresentWarningMessageContents {
 			return binData, bitEnd, errors.New("WriteReplaceWarningRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDConcurrentWarningMessageInd:
-		if value.TypeValue.Present != ngapType.WriteReplaceWarningRequestIEsTypeValuePresentConcurrentWarningMessageInd {
+		if value.TypeValue.Present != ngapType.WriteReplaceWarningRequestIEsPresentConcurrentWarningMessageInd {
 			return binData, bitEnd, errors.New("WriteReplaceWarningRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDWarningAreaCoordinates:
-		if value.TypeValue.Present != ngapType.WriteReplaceWarningRequestIEsTypeValuePresentWarningAreaCoordinates {
+		if value.TypeValue.Present != ngapType.WriteReplaceWarningRequestIEsPresentWarningAreaCoordinates {
 			return binData, bitEnd, errors.New("WriteReplaceWarningRequestIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -2500,19 +2500,19 @@ func WriteReplaceWarningResponseIEs(value ngapType.WriteReplaceWarningResponseIE
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDMessageIdentifier:
-		if value.TypeValue.Present != ngapType.WriteReplaceWarningResponseIEsTypeValuePresentMessageIdentifier {
+		if value.TypeValue.Present != ngapType.WriteReplaceWarningResponseIEsPresentMessageIdentifier {
 			return binData, bitEnd, errors.New("WriteReplaceWarningResponseIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDSerialNumber:
-		if value.TypeValue.Present != ngapType.WriteReplaceWarningResponseIEsTypeValuePresentSerialNumber {
+		if value.TypeValue.Present != ngapType.WriteReplaceWarningResponseIEsPresentSerialNumber {
 			return binData, bitEnd, errors.New("WriteReplaceWarningResponseIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDBroadcastCompletedAreaList:
-		if value.TypeValue.Present != ngapType.WriteReplaceWarningResponseIEsTypeValuePresentBroadcastCompletedAreaList {
+		if value.TypeValue.Present != ngapType.WriteReplaceWarningResponseIEsPresentBroadcastCompletedAreaList {
 			return binData, bitEnd, errors.New("WriteReplaceWarningResponseIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDCriticalityDiagnostics:
-		if value.TypeValue.Present != ngapType.WriteReplaceWarningResponseIEsTypeValuePresentCriticalityDiagnostics {
+		if value.TypeValue.Present != ngapType.WriteReplaceWarningResponseIEsPresentCriticalityDiagnostics {
 			return binData, bitEnd, errors.New("WriteReplaceWarningResponseIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -2538,19 +2538,19 @@ func PWSCancelRequestIEs(value ngapType.PWSCancelRequestIEs, binData []byte, bit
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDMessageIdentifier:
-		if value.TypeValue.Present != ngapType.PWSCancelRequestIEsTypeValuePresentMessageIdentifier {
+		if value.TypeValue.Present != ngapType.PWSCancelRequestIEsPresentMessageIdentifier {
 			return binData, bitEnd, errors.New("PWSCancelRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDSerialNumber:
-		if value.TypeValue.Present != ngapType.PWSCancelRequestIEsTypeValuePresentSerialNumber {
+		if value.TypeValue.Present != ngapType.PWSCancelRequestIEsPresentSerialNumber {
 			return binData, bitEnd, errors.New("PWSCancelRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDWarningAreaList:
-		if value.TypeValue.Present != ngapType.PWSCancelRequestIEsTypeValuePresentWarningAreaList {
+		if value.TypeValue.Present != ngapType.PWSCancelRequestIEsPresentWarningAreaList {
 			return binData, bitEnd, errors.New("PWSCancelRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDCancelAllWarningMessages:
-		if value.TypeValue.Present != ngapType.PWSCancelRequestIEsTypeValuePresentCancelAllWarningMessages {
+		if value.TypeValue.Present != ngapType.PWSCancelRequestIEsPresentCancelAllWarningMessages {
 			return binData, bitEnd, errors.New("PWSCancelRequestIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -2576,19 +2576,19 @@ func PWSCancelResponseIEs(value ngapType.PWSCancelResponseIEs, binData []byte, b
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDMessageIdentifier:
-		if value.TypeValue.Present != ngapType.PWSCancelResponseIEsTypeValuePresentMessageIdentifier {
+		if value.TypeValue.Present != ngapType.PWSCancelResponseIEsPresentMessageIdentifier {
 			return binData, bitEnd, errors.New("PWSCancelResponseIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDSerialNumber:
-		if value.TypeValue.Present != ngapType.PWSCancelResponseIEsTypeValuePresentSerialNumber {
+		if value.TypeValue.Present != ngapType.PWSCancelResponseIEsPresentSerialNumber {
 			return binData, bitEnd, errors.New("PWSCancelResponseIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDBroadcastCancelledAreaList:
-		if value.TypeValue.Present != ngapType.PWSCancelResponseIEsTypeValuePresentBroadcastCancelledAreaList {
+		if value.TypeValue.Present != ngapType.PWSCancelResponseIEsPresentBroadcastCancelledAreaList {
 			return binData, bitEnd, errors.New("PWSCancelResponseIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDCriticalityDiagnostics:
-		if value.TypeValue.Present != ngapType.PWSCancelResponseIEsTypeValuePresentCriticalityDiagnostics {
+		if value.TypeValue.Present != ngapType.PWSCancelResponseIEsPresentCriticalityDiagnostics {
 			return binData, bitEnd, errors.New("PWSCancelResponseIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -2614,19 +2614,19 @@ func PWSRestartIndicationIEs(value ngapType.PWSRestartIndicationIEs, binData []b
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDCellIDListForRestart:
-		if value.TypeValue.Present != ngapType.PWSRestartIndicationIEsTypeValuePresentCellIDListForRestart {
+		if value.TypeValue.Present != ngapType.PWSRestartIndicationIEsPresentCellIDListForRestart {
 			return binData, bitEnd, errors.New("PWSRestartIndicationIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDGlobalRANNodeID:
-		if value.TypeValue.Present != ngapType.PWSRestartIndicationIEsTypeValuePresentGlobalRANNodeID {
+		if value.TypeValue.Present != ngapType.PWSRestartIndicationIEsPresentGlobalRANNodeID {
 			return binData, bitEnd, errors.New("PWSRestartIndicationIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDTAIListForRestart:
-		if value.TypeValue.Present != ngapType.PWSRestartIndicationIEsTypeValuePresentTAIListForRestart {
+		if value.TypeValue.Present != ngapType.PWSRestartIndicationIEsPresentTAIListForRestart {
 			return binData, bitEnd, errors.New("PWSRestartIndicationIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDEmergencyAreaIDListForRestart:
-		if value.TypeValue.Present != ngapType.PWSRestartIndicationIEsTypeValuePresentEmergencyAreaIDListForRestart {
+		if value.TypeValue.Present != ngapType.PWSRestartIndicationIEsPresentEmergencyAreaIDListForRestart {
 			return binData, bitEnd, errors.New("PWSRestartIndicationIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -2652,11 +2652,11 @@ func PWSFailureIndicationIEs(value ngapType.PWSFailureIndicationIEs, binData []b
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDPWSFailedCellIDList:
-		if value.TypeValue.Present != ngapType.PWSFailureIndicationIEsTypeValuePresentPWSFailedCellIDList {
+		if value.TypeValue.Present != ngapType.PWSFailureIndicationIEsPresentPWSFailedCellIDList {
 			return binData, bitEnd, errors.New("PWSFailureIndicationIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDGlobalRANNodeID:
-		if value.TypeValue.Present != ngapType.PWSFailureIndicationIEsTypeValuePresentGlobalRANNodeID {
+		if value.TypeValue.Present != ngapType.PWSFailureIndicationIEsPresentGlobalRANNodeID {
 			return binData, bitEnd, errors.New("PWSFailureIndicationIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -2682,19 +2682,19 @@ func DownlinkUEAssociatedNRPPaTransportIEs(value ngapType.DownlinkUEAssociatedNR
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDAMFUENGAPID:
-		if value.TypeValue.Present != ngapType.DownlinkUEAssociatedNRPPaTransportIEsTypeValuePresentAMFUENGAPID {
+		if value.TypeValue.Present != ngapType.DownlinkUEAssociatedNRPPaTransportIEsPresentAMFUENGAPID {
 			return binData, bitEnd, errors.New("DownlinkUEAssociatedNRPPaTransportIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDRANUENGAPID:
-		if value.TypeValue.Present != ngapType.DownlinkUEAssociatedNRPPaTransportIEsTypeValuePresentRANUENGAPID {
+		if value.TypeValue.Present != ngapType.DownlinkUEAssociatedNRPPaTransportIEsPresentRANUENGAPID {
 			return binData, bitEnd, errors.New("DownlinkUEAssociatedNRPPaTransportIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDRoutingID:
-		if value.TypeValue.Present != ngapType.DownlinkUEAssociatedNRPPaTransportIEsTypeValuePresentRoutingID {
+		if value.TypeValue.Present != ngapType.DownlinkUEAssociatedNRPPaTransportIEsPresentRoutingID {
 			return binData, bitEnd, errors.New("DownlinkUEAssociatedNRPPaTransportIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDNRPPaPDU:
-		if value.TypeValue.Present != ngapType.DownlinkUEAssociatedNRPPaTransportIEsTypeValuePresentNRPPaPDU {
+		if value.TypeValue.Present != ngapType.DownlinkUEAssociatedNRPPaTransportIEsPresentNRPPaPDU {
 			return binData, bitEnd, errors.New("DownlinkUEAssociatedNRPPaTransportIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -2720,19 +2720,19 @@ func UplinkUEAssociatedNRPPaTransportIEs(value ngapType.UplinkUEAssociatedNRPPaT
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDAMFUENGAPID:
-		if value.TypeValue.Present != ngapType.UplinkUEAssociatedNRPPaTransportIEsTypeValuePresentAMFUENGAPID {
+		if value.TypeValue.Present != ngapType.UplinkUEAssociatedNRPPaTransportIEsPresentAMFUENGAPID {
 			return binData, bitEnd, errors.New("UplinkUEAssociatedNRPPaTransportIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDRANUENGAPID:
-		if value.TypeValue.Present != ngapType.UplinkUEAssociatedNRPPaTransportIEsTypeValuePresentRANUENGAPID {
+		if value.TypeValue.Present != ngapType.UplinkUEAssociatedNRPPaTransportIEsPresentRANUENGAPID {
 			return binData, bitEnd, errors.New("UplinkUEAssociatedNRPPaTransportIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDRoutingID:
-		if value.TypeValue.Present != ngapType.UplinkUEAssociatedNRPPaTransportIEsTypeValuePresentRoutingID {
+		if value.TypeValue.Present != ngapType.UplinkUEAssociatedNRPPaTransportIEsPresentRoutingID {
 			return binData, bitEnd, errors.New("UplinkUEAssociatedNRPPaTransportIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDNRPPaPDU:
-		if value.TypeValue.Present != ngapType.UplinkUEAssociatedNRPPaTransportIEsTypeValuePresentNRPPaPDU {
+		if value.TypeValue.Present != ngapType.UplinkUEAssociatedNRPPaTransportIEsPresentNRPPaPDU {
 			return binData, bitEnd, errors.New("UplinkUEAssociatedNRPPaTransportIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -2758,11 +2758,11 @@ func DownlinkNonUEAssociatedNRPPaTransportIEs(value ngapType.DownlinkNonUEAssoci
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDRoutingID:
-		if value.TypeValue.Present != ngapType.DownlinkNonUEAssociatedNRPPaTransportIEsTypeValuePresentRoutingID {
+		if value.TypeValue.Present != ngapType.DownlinkNonUEAssociatedNRPPaTransportIEsPresentRoutingID {
 			return binData, bitEnd, errors.New("DownlinkNonUEAssociatedNRPPaTransportIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDNRPPaPDU:
-		if value.TypeValue.Present != ngapType.DownlinkNonUEAssociatedNRPPaTransportIEsTypeValuePresentNRPPaPDU {
+		if value.TypeValue.Present != ngapType.DownlinkNonUEAssociatedNRPPaTransportIEsPresentNRPPaPDU {
 			return binData, bitEnd, errors.New("DownlinkNonUEAssociatedNRPPaTransportIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -2788,11 +2788,11 @@ func UplinkNonUEAssociatedNRPPaTransportIEs(value ngapType.UplinkNonUEAssociated
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDRoutingID:
-		if value.TypeValue.Present != ngapType.UplinkNonUEAssociatedNRPPaTransportIEsTypeValuePresentRoutingID {
+		if value.TypeValue.Present != ngapType.UplinkNonUEAssociatedNRPPaTransportIEsPresentRoutingID {
 			return binData, bitEnd, errors.New("UplinkNonUEAssociatedNRPPaTransportIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDNRPPaPDU:
-		if value.TypeValue.Present != ngapType.UplinkNonUEAssociatedNRPPaTransportIEsTypeValuePresentNRPPaPDU {
+		if value.TypeValue.Present != ngapType.UplinkNonUEAssociatedNRPPaTransportIEsPresentNRPPaPDU {
 			return binData, bitEnd, errors.New("UplinkNonUEAssociatedNRPPaTransportIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -2818,15 +2818,15 @@ func TraceStartIEs(value ngapType.TraceStartIEs, binData []byte, bitEnd uint64) 
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDAMFUENGAPID:
-		if value.TypeValue.Present != ngapType.TraceStartIEsTypeValuePresentAMFUENGAPID {
+		if value.TypeValue.Present != ngapType.TraceStartIEsPresentAMFUENGAPID {
 			return binData, bitEnd, errors.New("TraceStartIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDRANUENGAPID:
-		if value.TypeValue.Present != ngapType.TraceStartIEsTypeValuePresentRANUENGAPID {
+		if value.TypeValue.Present != ngapType.TraceStartIEsPresentRANUENGAPID {
 			return binData, bitEnd, errors.New("TraceStartIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDTraceActivation:
-		if value.TypeValue.Present != ngapType.TraceStartIEsTypeValuePresentTraceActivation {
+		if value.TypeValue.Present != ngapType.TraceStartIEsPresentTraceActivation {
 			return binData, bitEnd, errors.New("TraceStartIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -2852,19 +2852,19 @@ func TraceFailureIndicationIEs(value ngapType.TraceFailureIndicationIEs, binData
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDAMFUENGAPID:
-		if value.TypeValue.Present != ngapType.TraceFailureIndicationIEsTypeValuePresentAMFUENGAPID {
+		if value.TypeValue.Present != ngapType.TraceFailureIndicationIEsPresentAMFUENGAPID {
 			return binData, bitEnd, errors.New("TraceFailureIndicationIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDRANUENGAPID:
-		if value.TypeValue.Present != ngapType.TraceFailureIndicationIEsTypeValuePresentRANUENGAPID {
+		if value.TypeValue.Present != ngapType.TraceFailureIndicationIEsPresentRANUENGAPID {
 			return binData, bitEnd, errors.New("TraceFailureIndicationIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDNGRANTraceID:
-		if value.TypeValue.Present != ngapType.TraceFailureIndicationIEsTypeValuePresentNGRANTraceID {
+		if value.TypeValue.Present != ngapType.TraceFailureIndicationIEsPresentNGRANTraceID {
 			return binData, bitEnd, errors.New("TraceFailureIndicationIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDCause:
-		if value.TypeValue.Present != ngapType.TraceFailureIndicationIEsTypeValuePresentCause {
+		if value.TypeValue.Present != ngapType.TraceFailureIndicationIEsPresentCause {
 			return binData, bitEnd, errors.New("TraceFailureIndicationIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -2890,15 +2890,15 @@ func DeactivateTraceIEs(value ngapType.DeactivateTraceIEs, binData []byte, bitEn
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDAMFUENGAPID:
-		if value.TypeValue.Present != ngapType.DeactivateTraceIEsTypeValuePresentAMFUENGAPID {
+		if value.TypeValue.Present != ngapType.DeactivateTraceIEsPresentAMFUENGAPID {
 			return binData, bitEnd, errors.New("DeactivateTraceIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDRANUENGAPID:
-		if value.TypeValue.Present != ngapType.DeactivateTraceIEsTypeValuePresentRANUENGAPID {
+		if value.TypeValue.Present != ngapType.DeactivateTraceIEsPresentRANUENGAPID {
 			return binData, bitEnd, errors.New("DeactivateTraceIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDNGRANTraceID:
-		if value.TypeValue.Present != ngapType.DeactivateTraceIEsTypeValuePresentNGRANTraceID {
+		if value.TypeValue.Present != ngapType.DeactivateTraceIEsPresentNGRANTraceID {
 			return binData, bitEnd, errors.New("DeactivateTraceIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -2924,23 +2924,23 @@ func CellTrafficTraceIEs(value ngapType.CellTrafficTraceIEs, binData []byte, bit
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDAMFUENGAPID:
-		if value.TypeValue.Present != ngapType.CellTrafficTraceIEsTypeValuePresentAMFUENGAPID {
+		if value.TypeValue.Present != ngapType.CellTrafficTraceIEsPresentAMFUENGAPID {
 			return binData, bitEnd, errors.New("CellTrafficTraceIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDRANUENGAPID:
-		if value.TypeValue.Present != ngapType.CellTrafficTraceIEsTypeValuePresentRANUENGAPID {
+		if value.TypeValue.Present != ngapType.CellTrafficTraceIEsPresentRANUENGAPID {
 			return binData, bitEnd, errors.New("CellTrafficTraceIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDNGRANTraceID:
-		if value.TypeValue.Present != ngapType.CellTrafficTraceIEsTypeValuePresentNGRANTraceID {
+		if value.TypeValue.Present != ngapType.CellTrafficTraceIEsPresentNGRANTraceID {
 			return binData, bitEnd, errors.New("CellTrafficTraceIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDNGRANCGI:
-		if value.TypeValue.Present != ngapType.CellTrafficTraceIEsTypeValuePresentNGRANCGI {
+		if value.TypeValue.Present != ngapType.CellTrafficTraceIEsPresentNGRANCGI {
 			return binData, bitEnd, errors.New("CellTrafficTraceIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDTraceCollectionEntityIPAddress:
-		if value.TypeValue.Present != ngapType.CellTrafficTraceIEsTypeValuePresentTraceCollectionEntityIPAddress {
+		if value.TypeValue.Present != ngapType.CellTrafficTraceIEsPresentTraceCollectionEntityIPAddress {
 			return binData, bitEnd, errors.New("CellTrafficTraceIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -2966,15 +2966,15 @@ func LocationReportingControlIEs(value ngapType.LocationReportingControlIEs, bin
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDAMFUENGAPID:
-		if value.TypeValue.Present != ngapType.LocationReportingControlIEsTypeValuePresentAMFUENGAPID {
+		if value.TypeValue.Present != ngapType.LocationReportingControlIEsPresentAMFUENGAPID {
 			return binData, bitEnd, errors.New("LocationReportingControlIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDRANUENGAPID:
-		if value.TypeValue.Present != ngapType.LocationReportingControlIEsTypeValuePresentRANUENGAPID {
+		if value.TypeValue.Present != ngapType.LocationReportingControlIEsPresentRANUENGAPID {
 			return binData, bitEnd, errors.New("LocationReportingControlIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDLocationReportingRequestType:
-		if value.TypeValue.Present != ngapType.LocationReportingControlIEsTypeValuePresentLocationReportingRequestType {
+		if value.TypeValue.Present != ngapType.LocationReportingControlIEsPresentLocationReportingRequestType {
 			return binData, bitEnd, errors.New("LocationReportingControlIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -3000,15 +3000,15 @@ func LocationReportingFailureIndicationIEs(value ngapType.LocationReportingFailu
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDAMFUENGAPID:
-		if value.TypeValue.Present != ngapType.LocationReportingFailureIndicationIEsTypeValuePresentAMFUENGAPID {
+		if value.TypeValue.Present != ngapType.LocationReportingFailureIndicationIEsPresentAMFUENGAPID {
 			return binData, bitEnd, errors.New("LocationReportingFailureIndicationIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDRANUENGAPID:
-		if value.TypeValue.Present != ngapType.LocationReportingFailureIndicationIEsTypeValuePresentRANUENGAPID {
+		if value.TypeValue.Present != ngapType.LocationReportingFailureIndicationIEsPresentRANUENGAPID {
 			return binData, bitEnd, errors.New("LocationReportingFailureIndicationIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDCause:
-		if value.TypeValue.Present != ngapType.LocationReportingFailureIndicationIEsTypeValuePresentCause {
+		if value.TypeValue.Present != ngapType.LocationReportingFailureIndicationIEsPresentCause {
 			return binData, bitEnd, errors.New("LocationReportingFailureIndicationIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -3034,23 +3034,23 @@ func LocationReportIEs(value ngapType.LocationReportIEs, binData []byte, bitEnd 
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDAMFUENGAPID:
-		if value.TypeValue.Present != ngapType.LocationReportIEsTypeValuePresentAMFUENGAPID {
+		if value.TypeValue.Present != ngapType.LocationReportIEsPresentAMFUENGAPID {
 			return binData, bitEnd, errors.New("LocationReportIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDRANUENGAPID:
-		if value.TypeValue.Present != ngapType.LocationReportIEsTypeValuePresentRANUENGAPID {
+		if value.TypeValue.Present != ngapType.LocationReportIEsPresentRANUENGAPID {
 			return binData, bitEnd, errors.New("LocationReportIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDUserLocationInformation:
-		if value.TypeValue.Present != ngapType.LocationReportIEsTypeValuePresentUserLocationInformation {
+		if value.TypeValue.Present != ngapType.LocationReportIEsPresentUserLocationInformation {
 			return binData, bitEnd, errors.New("LocationReportIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDUEPresenceInAreaOfInterestList:
-		if value.TypeValue.Present != ngapType.LocationReportIEsTypeValuePresentUEPresenceInAreaOfInterestList {
+		if value.TypeValue.Present != ngapType.LocationReportIEsPresentUEPresenceInAreaOfInterestList {
 			return binData, bitEnd, errors.New("LocationReportIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDLocationReportingRequestType:
-		if value.TypeValue.Present != ngapType.LocationReportIEsTypeValuePresentLocationReportingRequestType {
+		if value.TypeValue.Present != ngapType.LocationReportIEsPresentLocationReportingRequestType {
 			return binData, bitEnd, errors.New("LocationReportIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -3076,11 +3076,11 @@ func UETNLABindingReleaseRequestIEs(value ngapType.UETNLABindingReleaseRequestIE
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDAMFUENGAPID:
-		if value.TypeValue.Present != ngapType.UETNLABindingReleaseRequestIEsTypeValuePresentAMFUENGAPID {
+		if value.TypeValue.Present != ngapType.UETNLABindingReleaseRequestIEsPresentAMFUENGAPID {
 			return binData, bitEnd, errors.New("UETNLABindingReleaseRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDRANUENGAPID:
-		if value.TypeValue.Present != ngapType.UETNLABindingReleaseRequestIEsTypeValuePresentRANUENGAPID {
+		if value.TypeValue.Present != ngapType.UETNLABindingReleaseRequestIEsPresentRANUENGAPID {
 			return binData, bitEnd, errors.New("UETNLABindingReleaseRequestIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -3106,19 +3106,19 @@ func UERadioCapabilityInfoIndicationIEs(value ngapType.UERadioCapabilityInfoIndi
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDAMFUENGAPID:
-		if value.TypeValue.Present != ngapType.UERadioCapabilityInfoIndicationIEsTypeValuePresentAMFUENGAPID {
+		if value.TypeValue.Present != ngapType.UERadioCapabilityInfoIndicationIEsPresentAMFUENGAPID {
 			return binData, bitEnd, errors.New("UERadioCapabilityInfoIndicationIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDRANUENGAPID:
-		if value.TypeValue.Present != ngapType.UERadioCapabilityInfoIndicationIEsTypeValuePresentRANUENGAPID {
+		if value.TypeValue.Present != ngapType.UERadioCapabilityInfoIndicationIEsPresentRANUENGAPID {
 			return binData, bitEnd, errors.New("UERadioCapabilityInfoIndicationIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDUERadioCapability:
-		if value.TypeValue.Present != ngapType.UERadioCapabilityInfoIndicationIEsTypeValuePresentUERadioCapability {
+		if value.TypeValue.Present != ngapType.UERadioCapabilityInfoIndicationIEsPresentUERadioCapability {
 			return binData, bitEnd, errors.New("UERadioCapabilityInfoIndicationIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDUERadioCapabilityForPaging:
-		if value.TypeValue.Present != ngapType.UERadioCapabilityInfoIndicationIEsTypeValuePresentUERadioCapabilityForPaging {
+		if value.TypeValue.Present != ngapType.UERadioCapabilityInfoIndicationIEsPresentUERadioCapabilityForPaging {
 			return binData, bitEnd, errors.New("UERadioCapabilityInfoIndicationIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -3144,15 +3144,15 @@ func UERadioCapabilityCheckRequestIEs(value ngapType.UERadioCapabilityCheckReque
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDAMFUENGAPID:
-		if value.TypeValue.Present != ngapType.UERadioCapabilityCheckRequestIEsTypeValuePresentAMFUENGAPID {
+		if value.TypeValue.Present != ngapType.UERadioCapabilityCheckRequestIEsPresentAMFUENGAPID {
 			return binData, bitEnd, errors.New("UERadioCapabilityCheckRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDRANUENGAPID:
-		if value.TypeValue.Present != ngapType.UERadioCapabilityCheckRequestIEsTypeValuePresentRANUENGAPID {
+		if value.TypeValue.Present != ngapType.UERadioCapabilityCheckRequestIEsPresentRANUENGAPID {
 			return binData, bitEnd, errors.New("UERadioCapabilityCheckRequestIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDUERadioCapability:
-		if value.TypeValue.Present != ngapType.UERadioCapabilityCheckRequestIEsTypeValuePresentUERadioCapability {
+		if value.TypeValue.Present != ngapType.UERadioCapabilityCheckRequestIEsPresentUERadioCapability {
 			return binData, bitEnd, errors.New("UERadioCapabilityCheckRequestIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -3178,19 +3178,19 @@ func UERadioCapabilityCheckResponseIEs(value ngapType.UERadioCapabilityCheckResp
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDAMFUENGAPID:
-		if value.TypeValue.Present != ngapType.UERadioCapabilityCheckResponseIEsTypeValuePresentAMFUENGAPID {
+		if value.TypeValue.Present != ngapType.UERadioCapabilityCheckResponseIEsPresentAMFUENGAPID {
 			return binData, bitEnd, errors.New("UERadioCapabilityCheckResponseIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDRANUENGAPID:
-		if value.TypeValue.Present != ngapType.UERadioCapabilityCheckResponseIEsTypeValuePresentRANUENGAPID {
+		if value.TypeValue.Present != ngapType.UERadioCapabilityCheckResponseIEsPresentRANUENGAPID {
 			return binData, bitEnd, errors.New("UERadioCapabilityCheckResponseIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDIMSVoiceSupportIndicator:
-		if value.TypeValue.Present != ngapType.UERadioCapabilityCheckResponseIEsTypeValuePresentIMSVoiceSupportIndicator {
+		if value.TypeValue.Present != ngapType.UERadioCapabilityCheckResponseIEsPresentIMSVoiceSupportIndicator {
 			return binData, bitEnd, errors.New("UERadioCapabilityCheckResponseIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDCriticalityDiagnostics:
-		if value.TypeValue.Present != ngapType.UERadioCapabilityCheckResponseIEsTypeValuePresentCriticalityDiagnostics {
+		if value.TypeValue.Present != ngapType.UERadioCapabilityCheckResponseIEsPresentCriticalityDiagnostics {
 			return binData, bitEnd, errors.New("UERadioCapabilityCheckResponseIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -3238,23 +3238,23 @@ func SecondaryRATDataUsageReportIEs(value ngapType.SecondaryRATDataUsageReportIE
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDAMFUENGAPID:
-		if value.TypeValue.Present != ngapType.SecondaryRATDataUsageReportIEsTypeValuePresentAMFUENGAPID {
+		if value.TypeValue.Present != ngapType.SecondaryRATDataUsageReportIEsPresentAMFUENGAPID {
 			return binData, bitEnd, errors.New("SecondaryRATDataUsageReportIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDRANUENGAPID:
-		if value.TypeValue.Present != ngapType.SecondaryRATDataUsageReportIEsTypeValuePresentRANUENGAPID {
+		if value.TypeValue.Present != ngapType.SecondaryRATDataUsageReportIEsPresentRANUENGAPID {
 			return binData, bitEnd, errors.New("SecondaryRATDataUsageReportIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDPDUSessionResourceSecondaryRATUsageList:
-		if value.TypeValue.Present != ngapType.SecondaryRATDataUsageReportIEsTypeValuePresentPDUSessionResourceSecondaryRATUsageList {
+		if value.TypeValue.Present != ngapType.SecondaryRATDataUsageReportIEsPresentPDUSessionResourceSecondaryRATUsageList {
 			return binData, bitEnd, errors.New("SecondaryRATDataUsageReportIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDHandoverFlag:
-		if value.TypeValue.Present != ngapType.SecondaryRATDataUsageReportIEsTypeValuePresentHandoverFlag {
+		if value.TypeValue.Present != ngapType.SecondaryRATDataUsageReportIEsPresentHandoverFlag {
 			return binData, bitEnd, errors.New("SecondaryRATDataUsageReportIEs: ProtocolIEID: INVALID")
 		}
 	case ngapType.ProtocolIEIDUserLocationInformation:
-		if value.TypeValue.Present != ngapType.SecondaryRATDataUsageReportIEsTypeValuePresentUserLocationInformation {
+		if value.TypeValue.Present != ngapType.SecondaryRATDataUsageReportIEsPresentUserLocationInformation {
 			return binData, bitEnd, errors.New("SecondaryRATDataUsageReportIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -3280,7 +3280,7 @@ func UplinkRIMInformationTransferIEs(value ngapType.UplinkRIMInformationTransfer
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDRIMInformationTransfer:
-		if value.TypeValue.Present != ngapType.UplinkRIMInformationTransferIEsTypeValuePresentRIMInformationTransfer {
+		if value.TypeValue.Present != ngapType.UplinkRIMInformationTransferIEsPresentRIMInformationTransfer {
 			return binData, bitEnd, errors.New("UplinkRIMInformationTransferIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -3306,7 +3306,7 @@ func DownlinkRIMInformationTransferIEs(value ngapType.DownlinkRIMInformationTran
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDRIMInformationTransfer:
-		if value.TypeValue.Present != ngapType.DownlinkRIMInformationTransferIEsTypeValuePresentRIMInformationTransfer {
+		if value.TypeValue.Present != ngapType.DownlinkRIMInformationTransferIEsPresentRIMInformationTransfer {
 			return binData, bitEnd, errors.New("DownlinkRIMInformationTransferIEs: ProtocolIEID: INVALID")
 		}
 	default:

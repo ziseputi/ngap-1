@@ -54,7 +54,7 @@ func CellIDListForRestartExtIEsTypeValue(value ngapType.CellIDListForRestartExtI
 func CPTransportLayerInformationExtIEsTypeValue(value ngapType.CPTransportLayerInformationExtIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.CPTransportLayerInformationExtIEsTypeValuePresentEndpointIPAddressAndPort:
+	case ngapType.CPTransportLayerInformationExtIEsPresentEndpointIPAddressAndPort:
 		if value.EndpointIPAddressAndPort == nil {
 			return binData, bitEnd, errors.New("CPTransportLayerInformationExtIEsTypeValue: EndpointIPAddressAndPort: NIL")
 		}
@@ -188,7 +188,7 @@ func SONInformationExtIEsTypeValue(value ngapType.SONInformationExtIEsTypeValue,
 func TargetIDExtIEsTypeValue(value ngapType.TargetIDExtIEsTypeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.TargetIDExtIEsTypeValuePresentTargetRNCID:
+	case ngapType.TargetIDExtIEsPresentTargetRNCID:
 		if value.TargetRNCID == nil {
 			return binData, bitEnd, errors.New("TargetIDExtIEsTypeValue: TargetRNCID: NIL")
 		}

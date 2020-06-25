@@ -54,7 +54,7 @@ func AMFTNLAssociationToAddItemExtIEsExtensionValue(value ngapType.AMFTNLAssocia
 func AMFTNLAssociationToRemoveItemExtIEsExtensionValue(value ngapType.AMFTNLAssociationToRemoveItemExtIEsExtensionValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.AMFTNLAssociationToRemoveItemExtIEsExtensionValuePresentTNLAssociationTransportLayerAddressNGRAN:
+	case ngapType.AMFTNLAssociationToRemoveItemExtIEsPresentTNLAssociationTransportLayerAddressNGRAN:
 		if value.TNLAssociationTransportLayerAddressNGRAN == nil {
 			return binData, bitEnd, errors.New("AMFTNLAssociationToRemoveItemExtIEsExtensionValue: TNLAssociationTransportLayerAddressNGRAN: NIL")
 		}
@@ -359,7 +359,7 @@ func DataForwardingResponseERABListItemExtIEsExtensionValue(value ngapType.DataF
 func DRBsSubjectToStatusTransferItemExtIEsExtensionValue(value ngapType.DRBsSubjectToStatusTransferItemExtIEsExtensionValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.DRBsSubjectToStatusTransferItemExtIEsExtensionValuePresentOldAssociatedQosFlowListULendmarkerexpected:
+	case ngapType.DRBsSubjectToStatusTransferItemExtIEsPresentOldAssociatedQosFlowListULendmarkerexpected:
 		if value.OldAssociatedQosFlowListULendmarkerexpected == nil {
 			return binData, bitEnd, errors.New("DRBsSubjectToStatusTransferItemExtIEsExtensionValue: OldAssociatedQosFlowListULendmarkerexpected: NIL")
 		}
@@ -619,7 +619,7 @@ func GUAMIExtIEsExtensionValue(value ngapType.GUAMIExtIEsExtensionValue, binData
 func HandoverCommandTransferExtIEsExtensionValue(value ngapType.HandoverCommandTransferExtIEsExtensionValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.HandoverCommandTransferExtIEsExtensionValuePresentAdditionalDLForwardingUPTNLInformation:
+	case ngapType.HandoverCommandTransferExtIEsPresentAdditionalDLForwardingUPTNLInformation:
 		if value.AdditionalDLForwardingUPTNLInformation == nil {
 			return binData, bitEnd, errors.New("HandoverCommandTransferExtIEsExtensionValue: AdditionalDLForwardingUPTNLInformation: NIL")
 		}
@@ -627,7 +627,7 @@ func HandoverCommandTransferExtIEsExtensionValue(value ngapType.HandoverCommandT
 		if err != nil {
 			return binData, bitEnd, errors.New("HandoverCommandTransferExtIEsExtensionValue: " + err.Error())
 		}
-	case ngapType.HandoverCommandTransferExtIEsExtensionValuePresentULForwardingUPTNLInformation:
+	case ngapType.HandoverCommandTransferExtIEsPresentULForwardingUPTNLInformation:
 		if value.ULForwardingUPTNLInformation == nil {
 			return binData, bitEnd, errors.New("HandoverCommandTransferExtIEsExtensionValue: ULForwardingUPTNLInformation: NIL")
 		}
@@ -635,7 +635,7 @@ func HandoverCommandTransferExtIEsExtensionValue(value ngapType.HandoverCommandT
 		if err != nil {
 			return binData, bitEnd, errors.New("HandoverCommandTransferExtIEsExtensionValue: " + err.Error())
 		}
-	case ngapType.HandoverCommandTransferExtIEsExtensionValuePresentAdditionalULForwardingUPTNLInformation:
+	case ngapType.HandoverCommandTransferExtIEsPresentAdditionalULForwardingUPTNLInformation:
 		if value.AdditionalULForwardingUPTNLInformation == nil {
 			return binData, bitEnd, errors.New("HandoverCommandTransferExtIEsExtensionValue: AdditionalULForwardingUPTNLInformation: NIL")
 		}
@@ -643,7 +643,7 @@ func HandoverCommandTransferExtIEsExtensionValue(value ngapType.HandoverCommandT
 		if err != nil {
 			return binData, bitEnd, errors.New("HandoverCommandTransferExtIEsExtensionValue: " + err.Error())
 		}
-	case ngapType.HandoverCommandTransferExtIEsExtensionValuePresentDataForwardingResponseERABList:
+	case ngapType.HandoverCommandTransferExtIEsPresentDataForwardingResponseERABList:
 		if value.DataForwardingResponseERABList == nil {
 			return binData, bitEnd, errors.New("HandoverCommandTransferExtIEsExtensionValue: DataForwardingResponseERABList: NIL")
 		}
@@ -669,7 +669,7 @@ func HandoverPreparationUnsuccessfulTransferExtIEsExtensionValue(value ngapType.
 func HandoverRequestAcknowledgeTransferExtIEsExtensionValue(value ngapType.HandoverRequestAcknowledgeTransferExtIEsExtensionValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.HandoverRequestAcknowledgeTransferExtIEsExtensionValuePresentAdditionalDLUPTNLInformationForHOList:
+	case ngapType.HandoverRequestAcknowledgeTransferExtIEsPresentAdditionalDLUPTNLInformationForHOList:
 		if value.AdditionalDLUPTNLInformationForHOList == nil {
 			return binData, bitEnd, errors.New("HandoverRequestAcknowledgeTransferExtIEsExtensionValue: AdditionalDLUPTNLInformationForHOList: NIL")
 		}
@@ -677,7 +677,7 @@ func HandoverRequestAcknowledgeTransferExtIEsExtensionValue(value ngapType.Hando
 		if err != nil {
 			return binData, bitEnd, errors.New("HandoverRequestAcknowledgeTransferExtIEsExtensionValue: " + err.Error())
 		}
-	case ngapType.HandoverRequestAcknowledgeTransferExtIEsExtensionValuePresentULForwardingUPTNLInformation:
+	case ngapType.HandoverRequestAcknowledgeTransferExtIEsPresentULForwardingUPTNLInformation:
 		if value.ULForwardingUPTNLInformation == nil {
 			return binData, bitEnd, errors.New("HandoverRequestAcknowledgeTransferExtIEsExtensionValue: ULForwardingUPTNLInformation: NIL")
 		}
@@ -685,7 +685,7 @@ func HandoverRequestAcknowledgeTransferExtIEsExtensionValue(value ngapType.Hando
 		if err != nil {
 			return binData, bitEnd, errors.New("HandoverRequestAcknowledgeTransferExtIEsExtensionValue: " + err.Error())
 		}
-	case ngapType.HandoverRequestAcknowledgeTransferExtIEsExtensionValuePresentAdditionalULForwardingUPTNLInformation:
+	case ngapType.HandoverRequestAcknowledgeTransferExtIEsPresentAdditionalULForwardingUPTNLInformation:
 		if value.AdditionalULForwardingUPTNLInformation == nil {
 			return binData, bitEnd, errors.New("HandoverRequestAcknowledgeTransferExtIEsExtensionValue: AdditionalULForwardingUPTNLInformation: NIL")
 		}
@@ -693,7 +693,7 @@ func HandoverRequestAcknowledgeTransferExtIEsExtensionValue(value ngapType.Hando
 		if err != nil {
 			return binData, bitEnd, errors.New("HandoverRequestAcknowledgeTransferExtIEsExtensionValue: " + err.Error())
 		}
-	case ngapType.HandoverRequestAcknowledgeTransferExtIEsExtensionValuePresentDataForwardingResponseERABList:
+	case ngapType.HandoverRequestAcknowledgeTransferExtIEsPresentDataForwardingResponseERABList:
 		if value.DataForwardingResponseERABList == nil {
 			return binData, bitEnd, errors.New("HandoverRequestAcknowledgeTransferExtIEsExtensionValue: DataForwardingResponseERABList: NIL")
 		}
@@ -764,7 +764,7 @@ func LastVisitedNGRANCellInformationExtIEsExtensionValue(value ngapType.LastVisi
 func LocationReportingRequestTypeExtIEsExtensionValue(value ngapType.LocationReportingRequestTypeExtIEsExtensionValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.LocationReportingRequestTypeExtIEsExtensionValuePresentLocationReportingAdditionalInfo:
+	case ngapType.LocationReportingRequestTypeExtIEsPresentLocationReportingAdditionalInfo:
 		if value.LocationReportingAdditionalInfo == nil {
 			return binData, bitEnd, errors.New("LocationReportingRequestTypeExtIEsExtensionValue: LocationReportingAdditionalInfo: NIL")
 		}
@@ -781,7 +781,7 @@ func LocationReportingRequestTypeExtIEsExtensionValue(value ngapType.LocationRep
 func MobilityRestrictionListExtIEsExtensionValue(value ngapType.MobilityRestrictionListExtIEsExtensionValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.MobilityRestrictionListExtIEsExtensionValuePresentLastEUTRANPLMNIdentity:
+	case ngapType.MobilityRestrictionListExtIEsPresentLastEUTRANPLMNIdentity:
 		if value.LastEUTRANPLMNIdentity == nil {
 			return binData, bitEnd, errors.New("MobilityRestrictionListExtIEsExtensionValue: LastEUTRANPLMNIdentity: NIL")
 		}
@@ -789,7 +789,7 @@ func MobilityRestrictionListExtIEsExtensionValue(value ngapType.MobilityRestrict
 		if err != nil {
 			return binData, bitEnd, errors.New("MobilityRestrictionListExtIEsExtensionValue: " + err.Error())
 		}
-	case ngapType.MobilityRestrictionListExtIEsExtensionValuePresentCNTypeRestrictionsForServing:
+	case ngapType.MobilityRestrictionListExtIEsPresentCNTypeRestrictionsForServing:
 		if value.CNTypeRestrictionsForServing == nil {
 			return binData, bitEnd, errors.New("MobilityRestrictionListExtIEsExtensionValue: CNTypeRestrictionsForServing: NIL")
 		}
@@ -797,7 +797,7 @@ func MobilityRestrictionListExtIEsExtensionValue(value ngapType.MobilityRestrict
 		if err != nil {
 			return binData, bitEnd, errors.New("MobilityRestrictionListExtIEsExtensionValue: " + err.Error())
 		}
-	case ngapType.MobilityRestrictionListExtIEsExtensionValuePresentCNTypeRestrictionsForEquivalent:
+	case ngapType.MobilityRestrictionListExtIEsPresentCNTypeRestrictionsForEquivalent:
 		if value.CNTypeRestrictionsForEquivalent == nil {
 			return binData, bitEnd, errors.New("MobilityRestrictionListExtIEsExtensionValue: CNTypeRestrictionsForEquivalent: NIL")
 		}
@@ -868,7 +868,7 @@ func PagingAttemptInformationExtIEsExtensionValue(value ngapType.PagingAttemptIn
 func PathSwitchRequestAcknowledgeTransferExtIEsExtensionValue(value ngapType.PathSwitchRequestAcknowledgeTransferExtIEsExtensionValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.PathSwitchRequestAcknowledgeTransferExtIEsExtensionValuePresentAdditionalNGUUPTNLInformation:
+	case ngapType.PathSwitchRequestAcknowledgeTransferExtIEsPresentAdditionalNGUUPTNLInformation:
 		if value.AdditionalNGUUPTNLInformation == nil {
 			return binData, bitEnd, errors.New("PathSwitchRequestAcknowledgeTransferExtIEsExtensionValue: AdditionalNGUUPTNLInformation: NIL")
 		}
@@ -894,7 +894,7 @@ func PathSwitchRequestSetupFailedTransferExtIEsExtensionValue(value ngapType.Pat
 func PathSwitchRequestTransferExtIEsExtensionValue(value ngapType.PathSwitchRequestTransferExtIEsExtensionValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.PathSwitchRequestTransferExtIEsExtensionValuePresentAdditionalDLQosFlowPerTNLInformation:
+	case ngapType.PathSwitchRequestTransferExtIEsPresentAdditionalDLQosFlowPerTNLInformation:
 		if value.AdditionalDLQosFlowPerTNLInformation == nil {
 			return binData, bitEnd, errors.New("PathSwitchRequestTransferExtIEsExtensionValue: AdditionalDLQosFlowPerTNLInformation: NIL")
 		}
@@ -1019,7 +1019,7 @@ func PDUSessionResourceInformationItemExtIEsExtensionValue(value ngapType.PDUSes
 func PDUSessionResourceItemCxtRelCplExtIEsExtensionValue(value ngapType.PDUSessionResourceItemCxtRelCplExtIEsExtensionValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.PDUSessionResourceItemCxtRelCplExtIEsExtensionValuePresentPDUSessionResourceReleaseResponseTransfer:
+	case ngapType.PDUSessionResourceItemCxtRelCplExtIEsPresentPDUSessionResourceReleaseResponseTransfer:
 		if value.PDUSessionResourceReleaseResponseTransfer == nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceItemCxtRelCplExtIEsExtensionValue: PDUSessionResourceReleaseResponseTransfer: NIL")
 		}
@@ -1137,7 +1137,7 @@ func PDUSessionResourceModifyRequestTransferIEsTypeValue(value ngapType.PDUSessi
 func PDUSessionResourceModifyResponseTransferExtIEsExtensionValue(value ngapType.PDUSessionResourceModifyResponseTransferExtIEsExtensionValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.PDUSessionResourceModifyResponseTransferExtIEsExtensionValuePresentAdditionalNGUUPTNLInformation:
+	case ngapType.PDUSessionResourceModifyResponseTransferExtIEsPresentAdditionalNGUUPTNLInformation:
 		if value.AdditionalNGUUPTNLInformation == nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceModifyResponseTransferExtIEsExtensionValue: AdditionalNGUUPTNLInformation: NIL")
 		}
@@ -1154,7 +1154,7 @@ func PDUSessionResourceModifyResponseTransferExtIEsExtensionValue(value ngapType
 func PDUSessionResourceModifyIndicationTransferExtIEsExtensionValue(value ngapType.PDUSessionResourceModifyIndicationTransferExtIEsExtensionValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.PDUSessionResourceModifyIndicationTransferExtIEsExtensionValuePresentSecondaryRATUsageInformation:
+	case ngapType.PDUSessionResourceModifyIndicationTransferExtIEsPresentSecondaryRATUsageInformation:
 		if value.SecondaryRATUsageInformation == nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceModifyIndicationTransferExtIEsExtensionValue: SecondaryRATUsageInformation: NIL")
 		}
@@ -1162,7 +1162,7 @@ func PDUSessionResourceModifyIndicationTransferExtIEsExtensionValue(value ngapTy
 		if err != nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceModifyIndicationTransferExtIEsExtensionValue: " + err.Error())
 		}
-	case ngapType.PDUSessionResourceModifyIndicationTransferExtIEsExtensionValuePresentSecurityResult:
+	case ngapType.PDUSessionResourceModifyIndicationTransferExtIEsPresentSecurityResult:
 		if value.SecurityResult == nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceModifyIndicationTransferExtIEsExtensionValue: SecurityResult: NIL")
 		}
@@ -1197,7 +1197,7 @@ func PDUSessionResourceModifyItemModIndExtIEsExtensionValue(value ngapType.PDUSe
 func PDUSessionResourceModifyItemModReqExtIEsExtensionValue(value ngapType.PDUSessionResourceModifyItemModReqExtIEsExtensionValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.PDUSessionResourceModifyItemModReqExtIEsExtensionValuePresentSNSSAI:
+	case ngapType.PDUSessionResourceModifyItemModReqExtIEsPresentSNSSAI:
 		if value.SNSSAI == nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceModifyItemModReqExtIEsExtensionValue: SNSSAI: NIL")
 		}
@@ -1241,7 +1241,7 @@ func PDUSessionResourceNotifyItemExtIEsExtensionValue(value ngapType.PDUSessionR
 func PDUSessionResourceNotifyReleasedTransferExtIEsExtensionValue(value ngapType.PDUSessionResourceNotifyReleasedTransferExtIEsExtensionValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.PDUSessionResourceNotifyReleasedTransferExtIEsExtensionValuePresentSecondaryRATUsageInformation:
+	case ngapType.PDUSessionResourceNotifyReleasedTransferExtIEsPresentSecondaryRATUsageInformation:
 		if value.SecondaryRATUsageInformation == nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceNotifyReleasedTransferExtIEsExtensionValue: SecondaryRATUsageInformation: NIL")
 		}
@@ -1258,7 +1258,7 @@ func PDUSessionResourceNotifyReleasedTransferExtIEsExtensionValue(value ngapType
 func PDUSessionResourceNotifyTransferExtIEsExtensionValue(value ngapType.PDUSessionResourceNotifyTransferExtIEsExtensionValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.PDUSessionResourceNotifyTransferExtIEsExtensionValuePresentSecondaryRATUsageInformation:
+	case ngapType.PDUSessionResourceNotifyTransferExtIEsPresentSecondaryRATUsageInformation:
 		if value.SecondaryRATUsageInformation == nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceNotifyTransferExtIEsExtensionValue: SecondaryRATUsageInformation: NIL")
 		}
@@ -1320,7 +1320,7 @@ func PDUSessionResourceReleasedItemRelResExtIEsExtensionValue(value ngapType.PDU
 func PDUSessionResourceReleaseResponseTransferExtIEsExtensionValue(value ngapType.PDUSessionResourceReleaseResponseTransferExtIEsExtensionValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.PDUSessionResourceReleaseResponseTransferExtIEsExtensionValuePresentSecondaryRATUsageInformation:
+	case ngapType.PDUSessionResourceReleaseResponseTransferExtIEsPresentSecondaryRATUsageInformation:
 		if value.SecondaryRATUsageInformation == nil {
 			return binData, bitEnd, errors.New("PDUSessionResourceReleaseResponseTransferExtIEsExtensionValue: SecondaryRATUsageInformation: NIL")
 		}
@@ -1579,7 +1579,7 @@ func QosFlowAddOrModifyResponseItemExtIEsExtensionValue(value ngapType.QosFlowAd
 func QosFlowInformationItemExtIEsExtensionValue(value ngapType.QosFlowInformationItemExtIEsExtensionValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.QosFlowInformationItemExtIEsExtensionValuePresentULForwarding:
+	case ngapType.QosFlowInformationItemExtIEsPresentULForwarding:
 		if value.ULForwarding == nil {
 			return binData, bitEnd, errors.New("QosFlowInformationItemExtIEsExtensionValue: ULForwarding: NIL")
 		}
@@ -1596,7 +1596,7 @@ func QosFlowInformationItemExtIEsExtensionValue(value ngapType.QosFlowInformatio
 func QosFlowLevelQosParametersExtIEsExtensionValue(value ngapType.QosFlowLevelQosParametersExtIEsExtensionValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.QosFlowLevelQosParametersExtIEsExtensionValuePresentQosMonitoringRequest:
+	case ngapType.QosFlowLevelQosParametersExtIEsPresentQosMonitoringRequest:
 		if value.QosMonitoringRequest == nil {
 			return binData, bitEnd, errors.New("QosFlowLevelQosParametersExtIEsExtensionValue: QosMonitoringRequest: NIL")
 		}
@@ -1703,7 +1703,7 @@ func RANStatusTransferTransparentContainerExtIEsExtensionValue(value ngapType.RA
 func RATRestrictionsItemExtIEsExtensionValue(value ngapType.RATRestrictionsItemExtIEsExtensionValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.RATRestrictionsItemExtIEsExtensionValuePresentExtendedRATRestrictionInformation:
+	case ngapType.RATRestrictionsItemExtIEsPresentExtendedRATRestrictionInformation:
 		if value.ExtendedRATRestrictionInformation == nil {
 			return binData, bitEnd, errors.New("RATRestrictionsItemExtIEsExtensionValue: ExtendedRATRestrictionInformation: NIL")
 		}
@@ -1792,7 +1792,7 @@ func SecurityContextExtIEsExtensionValue(value ngapType.SecurityContextExtIEsExt
 func SecurityIndicationExtIEsExtensionValue(value ngapType.SecurityIndicationExtIEsExtensionValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.SecurityIndicationExtIEsExtensionValuePresentMaximumIntegrityProtectedDataRateDL:
+	case ngapType.SecurityIndicationExtIEsPresentMaximumIntegrityProtectedDataRateDL:
 		if value.MaximumIntegrityProtectedDataRateDL == nil {
 			return binData, bitEnd, errors.New("SecurityIndicationExtIEsExtensionValue: MaximumIntegrityProtectedDataRateDL: NIL")
 		}
@@ -1818,7 +1818,7 @@ func SecurityResultExtIEsExtensionValue(value ngapType.SecurityResultExtIEsExten
 func ServedGUAMIItemExtIEsExtensionValue(value ngapType.ServedGUAMIItemExtIEsExtensionValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.ServedGUAMIItemExtIEsExtensionValuePresentGUAMIType:
+	case ngapType.ServedGUAMIItemExtIEsPresentGUAMIType:
 		if value.GUAMIType == nil {
 			return binData, bitEnd, errors.New("ServedGUAMIItemExtIEsExtensionValue: GUAMIType: NIL")
 		}
@@ -1889,7 +1889,7 @@ func SONInformationReplyExtIEsExtensionValue(value ngapType.SONInformationReplyE
 func SourceNGRANNodeToTargetNGRANNodeTransparentContainerExtIEsExtensionValue(value ngapType.SourceNGRANNodeToTargetNGRANNodeTransparentContainerExtIEsExtensionValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.SourceNGRANNodeToTargetNGRANNodeTransparentContainerExtIEsExtensionValuePresentSgNBUEX2APID:
+	case ngapType.SourceNGRANNodeToTargetNGRANNodeTransparentContainerExtIEsPresentSgNBUEX2APID:
 		if value.SgNBUEX2APID == nil {
 			return binData, bitEnd, errors.New("SourceNGRANNodeToTargetNGRANNodeTransparentContainerExtIEsExtensionValue: SgNBUEX2APID: NIL")
 		}
@@ -1924,7 +1924,7 @@ func SourceToTargetAMFInformationRerouteExtIEsExtensionValue(value ngapType.Sour
 func SupportedTAItemExtIEsExtensionValue(value ngapType.SupportedTAItemExtIEsExtensionValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.SupportedTAItemExtIEsExtensionValuePresentRATInformation:
+	case ngapType.SupportedTAItemExtIEsPresentRATInformation:
 		if value.RATInformation == nil {
 			return binData, bitEnd, errors.New("SupportedTAItemExtIEsExtensionValue: RATInformation: NIL")
 		}
@@ -2148,7 +2148,7 @@ func UPTransportLayerInformationPairItemExtIEsExtensionValue(value ngapType.UPTr
 func UserLocationInformationEUTRAExtIEsExtensionValue(value ngapType.UserLocationInformationEUTRAExtIEsExtensionValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.UserLocationInformationEUTRAExtIEsExtensionValuePresentPSCellInformation:
+	case ngapType.UserLocationInformationEUTRAExtIEsPresentPSCellInformation:
 		if value.PSCellInformation == nil {
 			return binData, bitEnd, errors.New("UserLocationInformationEUTRAExtIEsExtensionValue: PSCellInformation: NIL")
 		}
@@ -2174,7 +2174,7 @@ func UserLocationInformationN3IWFExtIEsExtensionValue(value ngapType.UserLocatio
 func UserLocationInformationNRExtIEsExtensionValue(value ngapType.UserLocationInformationNRExtIEsExtensionValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.UserLocationInformationNRExtIEsExtensionValuePresentPSCellInformation:
+	case ngapType.UserLocationInformationNRExtIEsPresentPSCellInformation:
 		if value.PSCellInformation == nil {
 			return binData, bitEnd, errors.New("UserLocationInformationNRExtIEsExtensionValue: PSCellInformation: NIL")
 		}
@@ -2209,7 +2209,7 @@ func VolumeTimedReportItemExtIEsExtensionValue(value ngapType.VolumeTimedReportI
 func XnExtTLAItemExtIEsExtensionValue(value ngapType.XnExtTLAItemExtIEsExtensionValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.XnExtTLAItemExtIEsExtensionValuePresentSCTPTLAs:
+	case ngapType.XnExtTLAItemExtIEsPresentSCTPTLAs:
 		if value.SCTPTLAs == nil {
 			return binData, bitEnd, errors.New("XnExtTLAItemExtIEsExtensionValue: SCTPTLAs: NIL")
 		}

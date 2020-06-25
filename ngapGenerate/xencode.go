@@ -9,427 +9,427 @@ import (
 )
 
 func main() {
-	// EncodePDUDescriptions()
+	EncodePDUDescriptions()
 	// EncodePDUContents()
-	EncodeIEs()
+	// EncodeIEs()
 }
 
 //
-// func EncodePDUDescriptions() () {
-// 	data, _ := ioutil.ReadFile("PDUDescriptions.asn")
-// 	datas := strings.Split(string(data), "\n")
-// 	str := "package ngapEncode\n\n" +
-// 		"import (\n" +
-// 		"\t\"errors\"\n\n" +
-// 		"\t\"ngap/ngapType\"\n" +
-// 		")\n\n" +
-// 		"func NGAPPDU (value ngapType.NGAPPDU, binData []byte, bitEnd uint64) ([]byte, uint64, error) {\n" +
-// 		"\tvar err error\n" +
-// 		"\tbinData, bitEnd = EncodePresent(value.Present, 3, binData, bitEnd)\n" +
-// 		"\tswitch value.Present {\n" +
-// 		"\tcase ngapType.NGAPPDUPresentInitiatingMessage:\n" +
-// 		"\t\tif value.InitiatingMessage == nil {\n" +
-// 		"\t\t\treturn binData, bitEnd, errors.New(\"NGAPPDU: InitiatingMessage: NIL\")\n" +
-// 		"\t\t}\n" +
-// 		"\t\tbinData, bitEnd, err = InitiatingMessage(*value.InitiatingMessage, binData, bitEnd)\n" +
-// 		"\t\tif err != nil {\n" +
-// 		"\t\t\treturn binData, bitEnd, errors.New(\"NGAPPDU: \" + err.Error())\n" +
-// 		"\t\t}\n" +
-// 		"\tcase ngapType.NGAPPDUPresentSuccessfulOutcome:\n" +
-// 		"\t\tif value.SuccessfulOutcome == nil {\n" +
-// 		"\t\t\treturn binData, bitEnd, errors.New(\"NGAPPDU: SuccessfulOutcome: NIL\")\n" +
-// 		"\t\t}\n" +
-// 		"\t\tbinData, bitEnd, err = SuccessfulOutcome(*value.SuccessfulOutcome, binData, bitEnd)\n" +
-// 		"\t\tif err != nil {\n" +
-// 		"\t\t\treturn binData, bitEnd, errors.New(\"NGAPPDU: \" + err.Error())\n" +
-// 		"\t\t}\n" +
-// 		"\tcase ngapType.NGAPPDUPresentUnsuccessfulOutcome:\n" +
-// 		"\t\tif value.UnsuccessfulOutcome == nil {\n" +
-// 		"\t\t\treturn binData, bitEnd, errors.New(\"NGAPPDU: UnsuccessfulOutcome: NIL\")\n" +
-// 		"\t\t}\n" +
-// 		"\t\tbinData, bitEnd, err = UnsuccessfulOutcome(*value.UnsuccessfulOutcome, binData, bitEnd)\n" +
-// 		"\t\tif err != nil {\n" +
-// 		"\t\t\treturn binData, bitEnd, errors.New(\"NGAPPDU: \" + err.Error())\n" +
-// 		"\t\t}\n" +
-// 		"\tdefault:\n" +
-// 		"\t\treturn binData, bitEnd, errors.New(\"NGAPPDU: Present: INVALID\")\n" +
-// 		"\t}\n\treturn binData, bitEnd, err\n" +
-// 		"}\n"
-// 	str += "\nfunc InitiatingMessage (value ngapType.InitiatingMessage, binData []byte, bitEnd uint64) ([]byte, uint64, error) {\n" +
-// 		"\tvar err error\n" +
-// 		"\tswitch value.ProcedureCode.Value {\n"
-// 	for i := 300; i < len(datas); i++ {
-// 		datax := strings.Fields(datas[i])
-// 		if len(datax) > 2 {
-// 			if datax[2] == "::=" && datax[1] == "NGAP-ELEMENTARY-PROCEDURE" {
-// 				dataxx := strings.Fields(datas[i+1])
-// 				if dataxx[0] == "INITIATING" {
-// 					dataxxx := strings.Fields(datas[i+2])
-// 					if dataxxx[0] == "PROCEDURE" {
-// 						str += "\tcase ngapType.ProcedureCode" + GetStrOutOfDashE2(dataxxx[2]) + ":\n"
-// 						str += "\t\tif value.Value.Present != ngapType.InitiatingMessageValuePresent" + GetStrOutOfDashE(dataxx[2]) + " {\n"
-// 						str += "\t\t\treturn binData, bitEnd, errors.New(\"InitiatingMessage: ProcedureCode: INVALID\")\n"
-// 						str += "\t\t}\n"
-// 					} else {
-// 						dataxxx = strings.Fields(datas[i+3])
-// 						if dataxxx[0] == "PROCEDURE" {
-// 							str += "\tcase ngapType.ProcedureCode" + GetStrOutOfDashE2(dataxxx[2]) + ":\n"
-// 							str += "\t\tif value.Value.Present != ngapType.InitiatingMessageValuePresent" + GetStrOutOfDashE(dataxx[2]) + " {\n"
-// 							str += "\t\t\treturn binData, bitEnd, errors.New(\"InitiatingMessage: ProcedureCode: INVALID\")\n"
-// 							str += "\t\t}\n"
-// 						} else {
-// 							dataxxx = strings.Fields(datas[i+4])
-// 							if dataxxx[0] == "PROCEDURE" {
-// 								str += "\tcase ngapType.ProcedureCode" + GetStrOutOfDashE2(dataxxx[2]) + ":\n"
-// 								str += "\t\tif value.Value.Present != ngapType.InitiatingMessageValuePresent" + GetStrOutOfDashE(dataxx[2]) + " {\n"
-// 								str += "\t\t\treturn binData, bitEnd, errors.New(\"InitiatingMessage: ProcedureCode: INVALID\")\n"
-// 								str += "\t\t}\n"
-// 							} else {
-// 								fmt.Println(i, "-", datax)
-// 							}
-// 						}
-// 					}
-// 				}
-// 			}
-// 		}
-// 	}
-// 	str += "\tdefault:\n" +
-// 		"\t\treturn binData, bitEnd, errors.New(\"InitiatingMessage: ProcedureCode: INVALID\")\n" +
-// 		"\t}\n" +
-// 		"\tbinData, bitEnd, err = ProcedureCode(value.ProcedureCode, binData, bitEnd)\n" +
-// 		"\tif err != nil {\n" +
-// 		"\t\treturn binData, bitEnd, errors.New(\"InitiatingMessage: \" + err.Error())\n" +
-// 		"\t}\n" +
-// 		"\tbinData, bitEnd, err = Criticality(value.Criticality, binData, bitEnd)\n" +
-// 		"\tif err != nil {\n" +
-// 		"\t\treturn binData, bitEnd, errors.New(\"InitiatingMessage: \" + err.Error())\n" +
-// 		"\t}\n" +
-// 		"\tvar binValue []byte\n" +
-// 		"\tbinValue, bitEnd, err = InitiatingMessageValue(value.Value, binValue, 8)\n" +
-// 		"\tif err != nil {\n" +
-// 		"\t\treturn binData, bitEnd, errors.New(\"InitiatingMessage: \" + err.Error())\n" +
-// 		"\t}\n" +
-// 		"\treturn append(binData, EncodeLengthValue(binValue)...), bitEnd, err\n" +
-// 		"}\n" +
-// 		"\nfunc InitiatingMessageValue (value ngapType.InitiatingMessageValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {\n" +
-// 		"\tvar err error\n" +
-// 		"\tswitch value.Present {\n"
-// 	for i := 300; i < len(datas); i++ {
-// 		datax := strings.Fields(datas[i])
-// 		if len(datax) > 2 {
-// 			if datax[2] == "::=" && datax[1] == "NGAP-ELEMENTARY-PROCEDURE" {
-// 				dataxx := strings.Fields(datas[i+1])
-// 				if dataxx[0] == "INITIATING" {
-// 					str += "\tcase ngapType.InitiatingMessageValuePresent" + GetStrOutOfDashE(dataxx[2]) + ":\n" +
-// 						"\t\tif value." + GetStrOutOfDashE(dataxx[2]) + " == nil {\n" +
-// 						"\t\t\treturn binData, bitEnd, errors.New(\"InitiatingMessageValue: " + GetStrOutOfDashE(dataxx[2]) + ": NIL\")\n" +
-// 						"\t\t}\n" +
-// 						"\t\tbinData, bitEnd, err = " + GetStrOutOfDashE(dataxx[2]) + "(*value." + GetStrOutOfDashE(dataxx[2]) + ", binData, bitEnd)\n" +
-// 						"\t\tif err != nil {\n" +
-// 						"\t\t\treturn binData, bitEnd, errors.New(\"InitiatingMessageValue: \" + err.Error())\n" +
-// 						"\t\t}\n"
-// 				}
-// 			}
-// 		}
-// 	}
-// 	str += "\tdefault:\n" +
-// 		"\t\treturn binData, bitEnd, errors.New(\"InitiatingMessageValue: Present: INVALID\")\n" +
-// 		"\t}\n" +
-// 		"\treturn binData, bitEnd, err\n" +
-// 		"}\n"
-//
-// 	str += "\nfunc SuccessfulOutcome (value ngapType.SuccessfulOutcome, binData []byte, bitEnd uint64) ([]byte, uint64, error) {\n" +
-// 		"\tvar err error\n" +
-// 		"\tswitch value.ProcedureCode.Value {\n"
-// 	for i := 300; i < len(datas); i++ {
-// 		datax := strings.Fields(datas[i])
-// 		if len(datax) > 2 {
-// 			if datax[2] == "::=" && datax[1] == "NGAP-ELEMENTARY-PROCEDURE" {
-// 				dataxx := strings.Fields(datas[i+1])
-// 				if dataxx[0] == "SUCCESSFUL" {
-// 					dataxxx := strings.Fields(datas[i+2])
-// 					if dataxxx[0] == "PROCEDURE" {
-// 						str += "\tcase ngapType.ProcedureCode" + GetStrOutOfDashE2(dataxxx[2]) + ":\n"
-// 						str += "\t\tif value.Value.Present != ngapType.SuccessfulOutcomeValuePresent" + GetStrOutOfDashE(dataxx[2]) + " {\n"
-// 						str += "\t\t\treturn binData, bitEnd, errors.New(\"SuccessfulOutcome: ProcedureCode: INVALID\")\n"
-// 						str += "\t\t}\n"
-// 					} else {
-// 						dataxxx = strings.Fields(datas[i+3])
-// 						if dataxxx[0] == "PROCEDURE" {
-// 							str += "\tcase ngapType.ProcedureCode" + GetStrOutOfDashE2(dataxxx[2]) + ":\n"
-// 							str += "\t\tif value.Value.Present != ngapType.SuccessfulOutcomeValuePresent" + GetStrOutOfDashE(dataxx[2]) + " {\n"
-// 							str += "\t\t\treturn binData, bitEnd, errors.New(\"SuccessfulOutcome: ProcedureCode: INVALID\")\n"
-// 							str += "\t\t}\n"
-// 						} else {
-// 							dataxxx = strings.Fields(datas[i+4])
-// 							if dataxxx[0] == "PROCEDURE" {
-// 								str += "\tcase ngapType.ProcedureCode" + GetStrOutOfDashE2(dataxxx[2]) + ":\n"
-// 								str += "\t\tif value.Value.Present != ngapType.SuccessfulOutcomeValuePresent" + GetStrOutOfDashE(dataxx[2]) + " {\n"
-// 								str += "\t\t\treturn binData, bitEnd, errors.New(\"SuccessfulOutcome: ProcedureCode: INVALID\")\n"
-// 								str += "\t\t}\n"
-// 							} else {
-// 								fmt.Println(i, "-", datax)
-// 							}
-// 						}
-// 					}
-// 				} else {
-// 					dataxx := strings.Fields(datas[i+2])
-// 					if dataxx[0] == "SUCCESSFUL" {
-// 						dataxxx := strings.Fields(datas[i+3])
-// 						if dataxxx[0] == "PROCEDURE" {
-// 							str += "\tcase ngapType.ProcedureCode" + GetStrOutOfDashE2(dataxxx[2]) + ":\n"
-// 							str += "\t\tif value.Value.Present != ngapType.SuccessfulOutcomeValuePresent" + GetStrOutOfDashE(dataxx[2]) + " {\n"
-// 							str += "\t\t\treturn binData, bitEnd, errors.New(\"SuccessfulOutcome: ProcedureCode: INVALID\")\n"
-// 							str += "\t\t}\n"
-// 						} else {
-// 							dataxxx = strings.Fields(datas[i+4])
-// 							if dataxxx[0] == "PROCEDURE" {
-// 								str += "\tcase ngapType.ProcedureCode" + GetStrOutOfDashE2(dataxxx[2]) + ":\n"
-// 								str += "\t\tif value.Value.Present != ngapType.SuccessfulOutcomeValuePresent" + GetStrOutOfDashE(dataxx[2]) + " {\n"
-// 								str += "\t\t\treturn binData, bitEnd, errors.New(\"SuccessfulOutcome: ProcedureCode: INVALID\")\n"
-// 								str += "\t\t}\n"
-// 							} else {
-// 								dataxxx = strings.Fields(datas[i+5])
-// 								if dataxxx[0] == "PROCEDURE" {
-// 									str += "\tcase ngapType.ProcedureCode" + GetStrOutOfDashE2(dataxxx[2]) + ":\n"
-// 									str += "\t\tif value.Value.Present != ngapType.SuccessfulOutcomeValuePresent" + GetStrOutOfDashE(dataxx[2]) + " {\n"
-// 									str += "\t\t\treturn binData, bitEnd, errors.New(\"SuccessfulOutcome: ProcedureCode: INVALID\")\n"
-// 									str += "\t\t}\n"
-// 								} else {
-// 									fmt.Println(i, "-", datax)
-// 								}
-// 							}
-// 						}
-// 					}
-// 				}
-// 			}
-// 		}
-// 	}
-// 	str += "\tdefault:\n" +
-// 		"\t\treturn binData, bitEnd, errors.New(\"SuccessfulOutcome: ProcedureCode: INVALID\")\n" +
-// 		"\t}\n" +
-// 		"\tbinData, bitEnd, err = ProcedureCode(value.ProcedureCode, binData, bitEnd)\n" +
-// 		"\tif err != nil {\n" +
-// 		"\t\treturn binData, bitEnd, errors.New(\"SuccessfulOutcome: \" + err.Error())\n" +
-// 		"\t}\n" +
-// 		"\tbinData, bitEnd, err = Criticality(value.Criticality, binData, bitEnd)\n" +
-// 		"\tif err != nil {\n" +
-// 		"\t\treturn binData, bitEnd, errors.New(\"SuccessfulOutcome: \" + err.Error())\n" +
-// 		"\t}\n" +
-// 		"\tvar binValue []byte\n" +
-// 		"\tbinValue, bitEnd, err = SuccessfulOutcomeValue(value.Value, binValue, 8)\n" +
-// 		"\tif err != nil {\n" +
-// 		"\t\treturn binData, bitEnd, errors.New(\"SuccessfulOutcome: \" + err.Error())\n" +
-// 		"\t}\n" +
-// 		"\treturn append(binData, EncodeLengthValue(binValue)...), bitEnd, err\n" +
-// 		"}\n" +
-// 		"\nfunc SuccessfulOutcomeValue (value ngapType.SuccessfulOutcomeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {\n" +
-// 		"\tvar err error\n" +
-// 		"\tswitch value.Present {\n"
-// 	for i := 300; i < len(datas); i++ {
-// 		datax := strings.Fields(datas[i])
-// 		if len(datax) > 2 {
-// 			if datax[2] == "::=" && datax[1] == "NGAP-ELEMENTARY-PROCEDURE" {
-// 				dataxx := strings.Fields(datas[i+1])
-// 				if dataxx[0] == "SUCCESSFUL" {
-// 					str += "\tcase ngapType.SuccessfulOutcomeValuePresent" + GetStrOutOfDashE(dataxx[2]) + ":\n" +
-// 						"\t\tif value." + GetStrOutOfDashE(dataxx[2]) + " == nil {\n" +
-// 						"\t\t\treturn binData, bitEnd, errors.New(\"SuccessfulOutcomeValue: " + GetStrOutOfDashE(dataxx[2]) + ": NIL\")\n" +
-// 						"\t\t}\n" +
-// 						"\t\tbinData, bitEnd, err = " + GetStrOutOfDashE(dataxx[2]) + "(*value." + GetStrOutOfDashE(dataxx[2]) + ", binData, bitEnd)\n" +
-// 						"\t\tif err != nil {\n" +
-// 						"\t\t\treturn binData, bitEnd, errors.New(\"SuccessfulOutcomeValue: \" + err.Error())\n" +
-// 						"\t\t}\n"
-// 				} else {
-// 					dataxx := strings.Fields(datas[i+2])
-// 					if dataxx[0] == "SUCCESSFUL" {
-// 						str += "\tcase ngapType.SuccessfulOutcomeValuePresent" + GetStrOutOfDashE(dataxx[2]) + ":\n" +
-// 							"\t\tif value." + GetStrOutOfDashE(dataxx[2]) + " == nil {\n" +
-// 							"\t\t\treturn binData, bitEnd, errors.New(\"SuccessfulOutcomeValue: " + GetStrOutOfDashE(dataxx[2]) + ": NIL\")\n" +
-// 							"\t\t}\n" +
-// 							"\t\tbinData, bitEnd, err = " + GetStrOutOfDashE(dataxx[2]) + "(*value." + GetStrOutOfDashE(dataxx[2]) + ", binData, bitEnd)\n" +
-// 							"\t\tif err != nil {\n" +
-// 							"\t\t\treturn binData, bitEnd, errors.New(\"SuccessfulOutcomeValue: \" + err.Error())\n" +
-// 							"\t\t}\n"
-// 					}
-// 				}
-// 			}
-// 		}
-// 	}
-// 	str += "\tdefault:\n" +
-// 		"\t\treturn binData, bitEnd, errors.New(\"SuccessfulOutcomeValue: Present: INVALID\")\n" +
-// 		"\t}\n" +
-// 		"\treturn binData, bitEnd, err\n" +
-// 		"}\n"
-//
-// 	str += "\nfunc UnsuccessfulOutcome (value ngapType.UnsuccessfulOutcome, binData []byte, bitEnd uint64) ([]byte, uint64, error) {\n" +
-// 		"\tvar err error\n" +
-// 		"\tswitch value.ProcedureCode.Value {\n"
-// 	for i := 300; i < len(datas); i++ {
-// 		datax := strings.Fields(datas[i])
-// 		if len(datax) > 2 {
-// 			if datax[2] == "::=" && datax[1] == "NGAP-ELEMENTARY-PROCEDURE" {
-// 				dataxx := strings.Fields(datas[i+1])
-// 				if dataxx[0] == "UNSUCCESSFUL" {
-// 					dataxxx := strings.Fields(datas[i+2])
-// 					if dataxxx[0] == "PROCEDURE" {
-// 						str += "\tcase ngapType.ProcedureCode" + GetStrOutOfDashE2(dataxxx[2]) + ":\n"
-// 						str += "\t\tif value.Value.Present != ngapType.UnsuccessfulOutcomeValuePresent" + GetStrOutOfDashE(dataxx[2]) + " {\n"
-// 						str += "\t\t\treturn binData, bitEnd, errors.New(\"UnsuccessfulOutcome: ProcedureCode: INVALID\")\n"
-// 						str += "\t\t}\n"
-// 					} else {
-// 						dataxxx = strings.Fields(datas[i+3])
-// 						if dataxxx[0] == "PROCEDURE" {
-// 							str += "\tcase ngapType.ProcedureCode" + GetStrOutOfDashE2(dataxxx[2]) + ":\n"
-// 							str += "\t\tif value.Value.Present != ngapType.UnsuccessfulOutcomeValuePresent" + GetStrOutOfDashE(dataxx[2]) + " {\n"
-// 							str += "\t\t\treturn binData, bitEnd, errors.New(\"UnsuccessfulOutcome: ProcedureCode: INVALID\")\n"
-// 							str += "\t\t}\n"
-// 						} else {
-// 							dataxxx = strings.Fields(datas[i+4])
-// 							if dataxxx[0] == "PROCEDURE" {
-// 								str += "\tcase ngapType.ProcedureCode" + GetStrOutOfDashE2(dataxxx[2]) + ":\n"
-// 								str += "\t\tif value.Value.Present != ngapType.UnsuccessfulOutcomeValuePresent" + GetStrOutOfDashE(dataxx[2]) + " {\n"
-// 								str += "\t\t\treturn binData, bitEnd, errors.New(\"UnsuccessfulOutcome: ProcedureCode: INVALID\")\n"
-// 								str += "\t\t}\n"
-// 							} else {
-// 								fmt.Println(i, "-", datax)
-// 							}
-// 						}
-// 					}
-// 				} else {
-// 					dataxx := strings.Fields(datas[i+2])
-// 					if dataxx[0] == "UNSUCCESSFUL" {
-// 						dataxxx := strings.Fields(datas[i+3])
-// 						if dataxxx[0] == "PROCEDURE" {
-// 							str += "\tcase ngapType.ProcedureCode" + GetStrOutOfDashE2(dataxxx[2]) + ":\n"
-// 							str += "\t\tif value.Value.Present != ngapType.UnsuccessfulOutcomeValuePresent" + GetStrOutOfDashE(dataxx[2]) + " {\n"
-// 							str += "\t\t\treturn binData, bitEnd, errors.New(\"UnsuccessfulOutcome: ProcedureCode: INVALID\")\n"
-// 							str += "\t\t}\n"
-// 						} else {
-// 							dataxxx = strings.Fields(datas[i+4])
-// 							if dataxxx[0] == "PROCEDURE" {
-// 								str += "\tcase ngapType.ProcedureCode" + GetStrOutOfDashE2(dataxxx[2]) + ":\n"
-// 								str += "\t\tif value.Value.Present != ngapType.UnsuccessfulOutcomeValuePresent" + GetStrOutOfDashE(dataxx[2]) + " {\n"
-// 								str += "\t\t\treturn binData, bitEnd, errors.New(\"UnsuccessfulOutcome: ProcedureCode: INVALID\")\n"
-// 								str += "\t\t}\n"
-// 							} else {
-// 								dataxxx = strings.Fields(datas[i+5])
-// 								if dataxxx[0] == "PROCEDURE" {
-// 									str += "\tcase ngapType.ProcedureCode" + GetStrOutOfDashE2(dataxxx[2]) + ":\n"
-// 									str += "\t\tif value.Value.Present != ngapType.UnsuccessfulOutcomeValuePresent" + GetStrOutOfDashE(dataxx[2]) + " {\n"
-// 									str += "\t\t\treturn binData, bitEnd, errors.New(\"UnsuccessfulOutcome: ProcedureCode: INVALID\")\n"
-// 									str += "\t\t}\n"
-// 								} else {
-// 									fmt.Println(i, "-", datax)
-// 								}
-// 							}
-// 						}
-// 					} else {
-// 						dataxx := strings.Fields(datas[i+3])
-// 						if dataxx[0] == "UNSUCCESSFUL" {
-// 							dataxxx := strings.Fields(datas[i+4])
-// 							if dataxxx[0] == "PROCEDURE" {
-// 								str += "\tcase ngapType.ProcedureCode" + GetStrOutOfDashE2(dataxxx[2]) + ":\n"
-// 								str += "\t\tif value.Value.Present != ngapType.UnsuccessfulOutcomeValuePresent" + GetStrOutOfDashE(dataxx[2]) + " {\n"
-// 								str += "\t\t\treturn binData, bitEnd, errors.New(\"UnsuccessfulOutcome: ProcedureCode: INVALID\")\n"
-// 								str += "\t\t}\n"
-// 							} else {
-// 								dataxxx = strings.Fields(datas[i+5])
-// 								if dataxxx[0] == "PROCEDURE" {
-// 									str += "\tcase ngapType.ProcedureCode" + GetStrOutOfDashE2(dataxxx[2]) + ":\n"
-// 									str += "\t\tif value.Value.Present != ngapType.UnsuccessfulOutcomeValuePresent" + GetStrOutOfDashE(dataxx[2]) + " {\n"
-// 									str += "\t\t\treturn binData, bitEnd, errors.New(\"UnsuccessfulOutcome: ProcedureCode: INVALID\")\n"
-// 									str += "\t\t}\n"
-// 								} else {
-// 									dataxxx = strings.Fields(datas[i+6])
-// 									if dataxxx[0] == "PROCEDURE" {
-// 										str += "\tcase ngapType.ProcedureCode" + GetStrOutOfDashE2(dataxxx[2]) + ":\n"
-// 										str += "\t\tif value.Value.Present != ngapType.UnsuccessfulOutcomeValuePresent" + GetStrOutOfDashE(dataxx[2]) + " {\n"
-// 										str += "\t\t\treturn binData, bitEnd, errors.New(\"UnsuccessfulOutcome: ProcedureCode: INVALID\")\n"
-// 										str += "\t\t}\n"
-// 									} else {
-// 										fmt.Println(i, "-", datax)
-// 									}
-// 								}
-// 							}
-// 						}
-// 					}
-// 				}
-// 			}
-// 		}
-// 	}
-// 	str += "\tdefault:\n" +
-// 		"\t\treturn binData, bitEnd, errors.New(\"UnsuccessfulOutcome: ProcedureCode: INVALID\")\n" +
-// 		"\t}\n" +
-// 		"\tbinData, bitEnd, err = ProcedureCode(value.ProcedureCode, binData, bitEnd)\n" +
-// 		"\tif err != nil {\n" +
-// 		"\t\treturn binData, bitEnd, errors.New(\"UnsuccessfulOutcome: \" + err.Error())\n" +
-// 		"\t}\n" +
-// 		"\tbinData, bitEnd, err = Criticality(value.Criticality, binData, bitEnd)\n" +
-// 		"\tif err != nil {\n" +
-// 		"\t\treturn binData, bitEnd, errors.New(\"UnsuccessfulOutcome: \" + err.Error())\n" +
-// 		"\t}\n" +
-// 		"\tvar binValue []byte\n" +
-// 		"\tbinValue, bitEnd, err = UnsuccessfulOutcomeValue(value.Value, binValue, 8)\n" +
-// 		"\tif err != nil {\n" +
-// 		"\t\treturn binData, bitEnd, errors.New(\"UnsuccessfulOutcome: \" + err.Error())\n" +
-// 		"\t}\n" +
-// 		"\treturn append(binData, EncodeLengthValue(binValue)...), bitEnd, err\n" +
-// 		"}\n" +
-// 		"\nfunc UnsuccessfulOutcomeValue (value ngapType.UnsuccessfulOutcomeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {\n" +
-// 		"\tvar err error\n" +
-// 		"\tswitch value.Present {\n"
-// 	for i := 300; i < len(datas); i++ {
-// 		datax := strings.Fields(datas[i])
-// 		if len(datax) > 2 {
-// 			if datax[2] == "::=" && datax[1] == "NGAP-ELEMENTARY-PROCEDURE" {
-// 				dataxx := strings.Fields(datas[i+1])
-// 				if dataxx[0] == "UNSUCCESSFUL" {
-// 					str += "\tcase ngapType.UnsuccessfulOutcomeValuePresent" + GetStrOutOfDashE(dataxx[2]) + ":\n" +
-// 						"\t\tif value." + GetStrOutOfDashE(dataxx[2]) + " == nil {\n" +
-// 						"\t\t\treturn binData, bitEnd, errors.New(\"UnsuccessfulOutcomeValue: " + GetStrOutOfDashE(dataxx[2]) + ": NIL\")\n" +
-// 						"\t\t}\n" +
-// 						"\t\tbinData, bitEnd, err = " + GetStrOutOfDashE(dataxx[2]) + "(*value." + GetStrOutOfDashE(dataxx[2]) + ", binData, bitEnd)\n" +
-// 						"\t\tif err != nil {\n" +
-// 						"\t\t\treturn binData, bitEnd, errors.New(\"UnsuccessfulOutcomeValue: \" + err.Error())\n" +
-// 						"\t\t}\n"
-// 				} else {
-// 					dataxx := strings.Fields(datas[i+2])
-// 					if dataxx[0] == "UNSUCCESSFUL" {
-// 						str += "\tcase ngapType.UnsuccessfulOutcomeValuePresent" + GetStrOutOfDashE(dataxx[2]) + ":\n" +
-// 							"\t\tif value." + GetStrOutOfDashE(dataxx[2]) + " == nil {\n" +
-// 							"\t\t\treturn binData, bitEnd, errors.New(\"UnsuccessfulOutcomeValue: " + GetStrOutOfDashE(dataxx[2]) + ": NIL\")\n" +
-// 							"\t\t}\n" +
-// 							"\t\tbinData, bitEnd, err = " + GetStrOutOfDashE(dataxx[2]) + "(*value." + GetStrOutOfDashE(dataxx[2]) + ", binData, bitEnd)\n" +
-// 							"\t\tif err != nil {\n" +
-// 							"\t\t\treturn binData, bitEnd, errors.New(\"UnsuccessfulOutcomeValue: \" + err.Error())\n" +
-// 							"\t\t}\n"
-// 					} else {
-// 						dataxx := strings.Fields(datas[i+3])
-// 						if dataxx[0] == "UNSUCCESSFUL" {
-// 							str += "\tcase ngapType.UnsuccessfulOutcomeValuePresent" + GetStrOutOfDashE(dataxx[2]) + ":\n" +
-// 								"\t\tif value." + GetStrOutOfDashE(dataxx[2]) + " == nil {\n" +
-// 								"\t\t\treturn binData, bitEnd, errors.New(\"UnsuccessfulOutcomeValue: " + GetStrOutOfDashE(dataxx[2]) + ": NIL\")\n" +
-// 								"\t\t}\n" +
-// 								"\t\tbinData, bitEnd, err = " + GetStrOutOfDashE(dataxx[2]) + "(*value." + GetStrOutOfDashE(dataxx[2]) + ", binData, bitEnd)\n" +
-// 								"\t\tif err != nil {\n" +
-// 								"\t\t\treturn binData, bitEnd, errors.New(\"UnsuccessfulOutcomeValue: \" + err.Error())\n" +
-// 								"\t\t}\n"
-// 						}
-// 					}
-// 				}
-// 			}
-// 		}
-// 	}
-// 	str += "\tdefault:\n" +
-// 		"\t\treturn binData, bitEnd, errors.New(\"UnsuccessfulOutcomeValue: Present: INVALID\")\n" +
-// 		"\t}\n" +
-// 		"\treturn binData, bitEnd, err\n" +
-// 		"}\n"
-//
-// 	filePointer, _ := os.Create("../ngapEncode/PDUDescriptions.go")
-// 	filePointer.WriteString(str)
-// }
+func EncodePDUDescriptions() () {
+	data, _ := ioutil.ReadFile("PDUDescriptions.asn")
+	datas := strings.Split(string(data), "\n")
+	str := "package ngapEncode\n\n" +
+		"import (\n" +
+		"\t\"errors\"\n\n" +
+		"\t\"ngap/ngapType\"\n" +
+		")\n\n" +
+		"func NGAPPDU (value ngapType.NGAPPDU, binData []byte, bitEnd uint64) ([]byte, uint64, error) {\n" +
+		"\tvar err error\n" +
+		"\tbinData, bitEnd = EncodePresent(value.Present, 3, binData, bitEnd)\n" +
+		"\tswitch value.Present {\n" +
+		"\tcase ngapType.NGAPPDUPresentInitiatingMessage:\n" +
+		"\t\tif value.InitiatingMessage == nil {\n" +
+		"\t\t\treturn binData, bitEnd, errors.New(\"NGAPPDU: InitiatingMessage: NIL\")\n" +
+		"\t\t}\n" +
+		"\t\tbinData, bitEnd, err = InitiatingMessage(*value.InitiatingMessage, binData, bitEnd)\n" +
+		"\t\tif err != nil {\n" +
+		"\t\t\treturn binData, bitEnd, errors.New(\"NGAPPDU: \" + err.Error())\n" +
+		"\t\t}\n" +
+		"\tcase ngapType.NGAPPDUPresentSuccessfulOutcome:\n" +
+		"\t\tif value.SuccessfulOutcome == nil {\n" +
+		"\t\t\treturn binData, bitEnd, errors.New(\"NGAPPDU: SuccessfulOutcome: NIL\")\n" +
+		"\t\t}\n" +
+		"\t\tbinData, bitEnd, err = SuccessfulOutcome(*value.SuccessfulOutcome, binData, bitEnd)\n" +
+		"\t\tif err != nil {\n" +
+		"\t\t\treturn binData, bitEnd, errors.New(\"NGAPPDU: \" + err.Error())\n" +
+		"\t\t}\n" +
+		"\tcase ngapType.NGAPPDUPresentUnsuccessfulOutcome:\n" +
+		"\t\tif value.UnsuccessfulOutcome == nil {\n" +
+		"\t\t\treturn binData, bitEnd, errors.New(\"NGAPPDU: UnsuccessfulOutcome: NIL\")\n" +
+		"\t\t}\n" +
+		"\t\tbinData, bitEnd, err = UnsuccessfulOutcome(*value.UnsuccessfulOutcome, binData, bitEnd)\n" +
+		"\t\tif err != nil {\n" +
+		"\t\t\treturn binData, bitEnd, errors.New(\"NGAPPDU: \" + err.Error())\n" +
+		"\t\t}\n" +
+		"\tdefault:\n" +
+		"\t\treturn binData, bitEnd, errors.New(\"NGAPPDU: Present: INVALID\")\n" +
+		"\t}\n\treturn binData, bitEnd, err\n" +
+		"}\n"
+	str += "\nfunc InitiatingMessage (value ngapType.InitiatingMessage, binData []byte, bitEnd uint64) ([]byte, uint64, error) {\n" +
+		"\tvar err error\n" +
+		"\tswitch value.ProcedureCode.Value {\n"
+	for i := 300; i < len(datas); i++ {
+		datax := strings.Fields(datas[i])
+		if len(datax) > 2 {
+			if datax[2] == "::=" && datax[1] == "NGAP-ELEMENTARY-PROCEDURE" {
+				dataxx := strings.Fields(datas[i+1])
+				if dataxx[0] == "INITIATING" {
+					dataxxx := strings.Fields(datas[i+2])
+					if dataxxx[0] == "PROCEDURE" {
+						str += "\tcase ngapType.ProcedureCode" + GetStrOutOfDashE2(dataxxx[2]) + ":\n"
+						str += "\t\tif value.Value.Present != ngapType.InitiatingMessageValuePresent" + GetStrOutOfDashE(dataxx[2]) + " {\n"
+						str += "\t\t\treturn binData, bitEnd, errors.New(\"InitiatingMessage: ProcedureCode: INVALID\")\n"
+						str += "\t\t}\n"
+					} else {
+						dataxxx = strings.Fields(datas[i+3])
+						if dataxxx[0] == "PROCEDURE" {
+							str += "\tcase ngapType.ProcedureCode" + GetStrOutOfDashE2(dataxxx[2]) + ":\n"
+							str += "\t\tif value.Value.Present != ngapType.InitiatingMessageValuePresent" + GetStrOutOfDashE(dataxx[2]) + " {\n"
+							str += "\t\t\treturn binData, bitEnd, errors.New(\"InitiatingMessage: ProcedureCode: INVALID\")\n"
+							str += "\t\t}\n"
+						} else {
+							dataxxx = strings.Fields(datas[i+4])
+							if dataxxx[0] == "PROCEDURE" {
+								str += "\tcase ngapType.ProcedureCode" + GetStrOutOfDashE2(dataxxx[2]) + ":\n"
+								str += "\t\tif value.Value.Present != ngapType.InitiatingMessageValuePresent" + GetStrOutOfDashE(dataxx[2]) + " {\n"
+								str += "\t\t\treturn binData, bitEnd, errors.New(\"InitiatingMessage: ProcedureCode: INVALID\")\n"
+								str += "\t\t}\n"
+							} else {
+								fmt.Println(i, "-", datax)
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	str += "\tdefault:\n" +
+		"\t\treturn binData, bitEnd, errors.New(\"InitiatingMessage: ProcedureCode: INVALID\")\n" +
+		"\t}\n" +
+		"\tbinData, bitEnd, err = ProcedureCode(value.ProcedureCode, binData, bitEnd)\n" +
+		"\tif err != nil {\n" +
+		"\t\treturn binData, bitEnd, errors.New(\"InitiatingMessage: \" + err.Error())\n" +
+		"\t}\n" +
+		"\tbinData, bitEnd, err = Criticality(value.Criticality, binData, bitEnd)\n" +
+		"\tif err != nil {\n" +
+		"\t\treturn binData, bitEnd, errors.New(\"InitiatingMessage: \" + err.Error())\n" +
+		"\t}\n" +
+		"\tvar binValue []byte\n" +
+		"\tbinValue, bitEnd, err = InitiatingMessageValue(value.Value, binValue, 8)\n" +
+		"\tif err != nil {\n" +
+		"\t\treturn binData, bitEnd, errors.New(\"InitiatingMessage: \" + err.Error())\n" +
+		"\t}\n" +
+		"\treturn append(binData, EncodeLengthValue(binValue)...), bitEnd, err\n" +
+		"}\n" +
+		"\nfunc InitiatingMessageValue (value ngapType.InitiatingMessageValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {\n" +
+		"\tvar err error\n" +
+		"\tswitch value.Present {\n"
+	for i := 300; i < len(datas); i++ {
+		datax := strings.Fields(datas[i])
+		if len(datax) > 2 {
+			if datax[2] == "::=" && datax[1] == "NGAP-ELEMENTARY-PROCEDURE" {
+				dataxx := strings.Fields(datas[i+1])
+				if dataxx[0] == "INITIATING" {
+					str += "\tcase ngapType.InitiatingMessageValuePresent" + GetStrOutOfDashE(dataxx[2]) + ":\n" +
+						"\t\tif value." + GetStrOutOfDashE(dataxx[2]) + " == nil {\n" +
+						"\t\t\treturn binData, bitEnd, errors.New(\"InitiatingMessageValue: " + GetStrOutOfDashE(dataxx[2]) + ": NIL\")\n" +
+						"\t\t}\n" +
+						"\t\tbinData, bitEnd, err = " + GetStrOutOfDashE(dataxx[2]) + "(*value." + GetStrOutOfDashE(dataxx[2]) + ", binData, bitEnd)\n" +
+						"\t\tif err != nil {\n" +
+						"\t\t\treturn binData, bitEnd, errors.New(\"InitiatingMessageValue: \" + err.Error())\n" +
+						"\t\t}\n"
+				}
+			}
+		}
+	}
+	str += "\tdefault:\n" +
+		"\t\treturn binData, bitEnd, errors.New(\"InitiatingMessageValue: Present: INVALID\")\n" +
+		"\t}\n" +
+		"\treturn binData, bitEnd, err\n" +
+		"}\n"
+
+	str += "\nfunc SuccessfulOutcome (value ngapType.SuccessfulOutcome, binData []byte, bitEnd uint64) ([]byte, uint64, error) {\n" +
+		"\tvar err error\n" +
+		"\tswitch value.ProcedureCode.Value {\n"
+	for i := 300; i < len(datas); i++ {
+		datax := strings.Fields(datas[i])
+		if len(datax) > 2 {
+			if datax[2] == "::=" && datax[1] == "NGAP-ELEMENTARY-PROCEDURE" {
+				dataxx := strings.Fields(datas[i+1])
+				if dataxx[0] == "SUCCESSFUL" {
+					dataxxx := strings.Fields(datas[i+2])
+					if dataxxx[0] == "PROCEDURE" {
+						str += "\tcase ngapType.ProcedureCode" + GetStrOutOfDashE2(dataxxx[2]) + ":\n"
+						str += "\t\tif value.Value.Present != ngapType.SuccessfulOutcomeValuePresent" + GetStrOutOfDashE(dataxx[2]) + " {\n"
+						str += "\t\t\treturn binData, bitEnd, errors.New(\"SuccessfulOutcome: ProcedureCode: INVALID\")\n"
+						str += "\t\t}\n"
+					} else {
+						dataxxx = strings.Fields(datas[i+3])
+						if dataxxx[0] == "PROCEDURE" {
+							str += "\tcase ngapType.ProcedureCode" + GetStrOutOfDashE2(dataxxx[2]) + ":\n"
+							str += "\t\tif value.Value.Present != ngapType.SuccessfulOutcomeValuePresent" + GetStrOutOfDashE(dataxx[2]) + " {\n"
+							str += "\t\t\treturn binData, bitEnd, errors.New(\"SuccessfulOutcome: ProcedureCode: INVALID\")\n"
+							str += "\t\t}\n"
+						} else {
+							dataxxx = strings.Fields(datas[i+4])
+							if dataxxx[0] == "PROCEDURE" {
+								str += "\tcase ngapType.ProcedureCode" + GetStrOutOfDashE2(dataxxx[2]) + ":\n"
+								str += "\t\tif value.Value.Present != ngapType.SuccessfulOutcomeValuePresent" + GetStrOutOfDashE(dataxx[2]) + " {\n"
+								str += "\t\t\treturn binData, bitEnd, errors.New(\"SuccessfulOutcome: ProcedureCode: INVALID\")\n"
+								str += "\t\t}\n"
+							} else {
+								fmt.Println(i, "-", datax)
+							}
+						}
+					}
+				} else {
+					dataxx := strings.Fields(datas[i+2])
+					if dataxx[0] == "SUCCESSFUL" {
+						dataxxx := strings.Fields(datas[i+3])
+						if dataxxx[0] == "PROCEDURE" {
+							str += "\tcase ngapType.ProcedureCode" + GetStrOutOfDashE2(dataxxx[2]) + ":\n"
+							str += "\t\tif value.Value.Present != ngapType.SuccessfulOutcomeValuePresent" + GetStrOutOfDashE(dataxx[2]) + " {\n"
+							str += "\t\t\treturn binData, bitEnd, errors.New(\"SuccessfulOutcome: ProcedureCode: INVALID\")\n"
+							str += "\t\t}\n"
+						} else {
+							dataxxx = strings.Fields(datas[i+4])
+							if dataxxx[0] == "PROCEDURE" {
+								str += "\tcase ngapType.ProcedureCode" + GetStrOutOfDashE2(dataxxx[2]) + ":\n"
+								str += "\t\tif value.Value.Present != ngapType.SuccessfulOutcomeValuePresent" + GetStrOutOfDashE(dataxx[2]) + " {\n"
+								str += "\t\t\treturn binData, bitEnd, errors.New(\"SuccessfulOutcome: ProcedureCode: INVALID\")\n"
+								str += "\t\t}\n"
+							} else {
+								dataxxx = strings.Fields(datas[i+5])
+								if dataxxx[0] == "PROCEDURE" {
+									str += "\tcase ngapType.ProcedureCode" + GetStrOutOfDashE2(dataxxx[2]) + ":\n"
+									str += "\t\tif value.Value.Present != ngapType.SuccessfulOutcomeValuePresent" + GetStrOutOfDashE(dataxx[2]) + " {\n"
+									str += "\t\t\treturn binData, bitEnd, errors.New(\"SuccessfulOutcome: ProcedureCode: INVALID\")\n"
+									str += "\t\t}\n"
+								} else {
+									fmt.Println(i, "-", datax)
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	str += "\tdefault:\n" +
+		"\t\treturn binData, bitEnd, errors.New(\"SuccessfulOutcome: ProcedureCode: INVALID\")\n" +
+		"\t}\n" +
+		"\tbinData, bitEnd, err = ProcedureCode(value.ProcedureCode, binData, bitEnd)\n" +
+		"\tif err != nil {\n" +
+		"\t\treturn binData, bitEnd, errors.New(\"SuccessfulOutcome: \" + err.Error())\n" +
+		"\t}\n" +
+		"\tbinData, bitEnd, err = Criticality(value.Criticality, binData, bitEnd)\n" +
+		"\tif err != nil {\n" +
+		"\t\treturn binData, bitEnd, errors.New(\"SuccessfulOutcome: \" + err.Error())\n" +
+		"\t}\n" +
+		"\tvar binValue []byte\n" +
+		"\tbinValue, bitEnd, err = SuccessfulOutcomeValue(value.Value, binValue, 8)\n" +
+		"\tif err != nil {\n" +
+		"\t\treturn binData, bitEnd, errors.New(\"SuccessfulOutcome: \" + err.Error())\n" +
+		"\t}\n" +
+		"\treturn append(binData, EncodeLengthValue(binValue)...), bitEnd, err\n" +
+		"}\n" +
+		"\nfunc SuccessfulOutcomeValue (value ngapType.SuccessfulOutcomeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {\n" +
+		"\tvar err error\n" +
+		"\tswitch value.Present {\n"
+	for i := 300; i < len(datas); i++ {
+		datax := strings.Fields(datas[i])
+		if len(datax) > 2 {
+			if datax[2] == "::=" && datax[1] == "NGAP-ELEMENTARY-PROCEDURE" {
+				dataxx := strings.Fields(datas[i+1])
+				if dataxx[0] == "SUCCESSFUL" {
+					str += "\tcase ngapType.SuccessfulOutcomeValuePresent" + GetStrOutOfDashE(dataxx[2]) + ":\n" +
+						"\t\tif value." + GetStrOutOfDashE(dataxx[2]) + " == nil {\n" +
+						"\t\t\treturn binData, bitEnd, errors.New(\"SuccessfulOutcomeValue: " + GetStrOutOfDashE(dataxx[2]) + ": NIL\")\n" +
+						"\t\t}\n" +
+						"\t\tbinData, bitEnd, err = " + GetStrOutOfDashE(dataxx[2]) + "(*value." + GetStrOutOfDashE(dataxx[2]) + ", binData, bitEnd)\n" +
+						"\t\tif err != nil {\n" +
+						"\t\t\treturn binData, bitEnd, errors.New(\"SuccessfulOutcomeValue: \" + err.Error())\n" +
+						"\t\t}\n"
+				} else {
+					dataxx := strings.Fields(datas[i+2])
+					if dataxx[0] == "SUCCESSFUL" {
+						str += "\tcase ngapType.SuccessfulOutcomeValuePresent" + GetStrOutOfDashE(dataxx[2]) + ":\n" +
+							"\t\tif value." + GetStrOutOfDashE(dataxx[2]) + " == nil {\n" +
+							"\t\t\treturn binData, bitEnd, errors.New(\"SuccessfulOutcomeValue: " + GetStrOutOfDashE(dataxx[2]) + ": NIL\")\n" +
+							"\t\t}\n" +
+							"\t\tbinData, bitEnd, err = " + GetStrOutOfDashE(dataxx[2]) + "(*value." + GetStrOutOfDashE(dataxx[2]) + ", binData, bitEnd)\n" +
+							"\t\tif err != nil {\n" +
+							"\t\t\treturn binData, bitEnd, errors.New(\"SuccessfulOutcomeValue: \" + err.Error())\n" +
+							"\t\t}\n"
+					}
+				}
+			}
+		}
+	}
+	str += "\tdefault:\n" +
+		"\t\treturn binData, bitEnd, errors.New(\"SuccessfulOutcomeValue: Present: INVALID\")\n" +
+		"\t}\n" +
+		"\treturn binData, bitEnd, err\n" +
+		"}\n"
+
+	str += "\nfunc UnsuccessfulOutcome (value ngapType.UnsuccessfulOutcome, binData []byte, bitEnd uint64) ([]byte, uint64, error) {\n" +
+		"\tvar err error\n" +
+		"\tswitch value.ProcedureCode.Value {\n"
+	for i := 300; i < len(datas); i++ {
+		datax := strings.Fields(datas[i])
+		if len(datax) > 2 {
+			if datax[2] == "::=" && datax[1] == "NGAP-ELEMENTARY-PROCEDURE" {
+				dataxx := strings.Fields(datas[i+1])
+				if dataxx[0] == "UNSUCCESSFUL" {
+					dataxxx := strings.Fields(datas[i+2])
+					if dataxxx[0] == "PROCEDURE" {
+						str += "\tcase ngapType.ProcedureCode" + GetStrOutOfDashE2(dataxxx[2]) + ":\n"
+						str += "\t\tif value.Value.Present != ngapType.UnsuccessfulOutcomeValuePresent" + GetStrOutOfDashE(dataxx[2]) + " {\n"
+						str += "\t\t\treturn binData, bitEnd, errors.New(\"UnsuccessfulOutcome: ProcedureCode: INVALID\")\n"
+						str += "\t\t}\n"
+					} else {
+						dataxxx = strings.Fields(datas[i+3])
+						if dataxxx[0] == "PROCEDURE" {
+							str += "\tcase ngapType.ProcedureCode" + GetStrOutOfDashE2(dataxxx[2]) + ":\n"
+							str += "\t\tif value.Value.Present != ngapType.UnsuccessfulOutcomeValuePresent" + GetStrOutOfDashE(dataxx[2]) + " {\n"
+							str += "\t\t\treturn binData, bitEnd, errors.New(\"UnsuccessfulOutcome: ProcedureCode: INVALID\")\n"
+							str += "\t\t}\n"
+						} else {
+							dataxxx = strings.Fields(datas[i+4])
+							if dataxxx[0] == "PROCEDURE" {
+								str += "\tcase ngapType.ProcedureCode" + GetStrOutOfDashE2(dataxxx[2]) + ":\n"
+								str += "\t\tif value.Value.Present != ngapType.UnsuccessfulOutcomeValuePresent" + GetStrOutOfDashE(dataxx[2]) + " {\n"
+								str += "\t\t\treturn binData, bitEnd, errors.New(\"UnsuccessfulOutcome: ProcedureCode: INVALID\")\n"
+								str += "\t\t}\n"
+							} else {
+								fmt.Println(i, "-", datax)
+							}
+						}
+					}
+				} else {
+					dataxx := strings.Fields(datas[i+2])
+					if dataxx[0] == "UNSUCCESSFUL" {
+						dataxxx := strings.Fields(datas[i+3])
+						if dataxxx[0] == "PROCEDURE" {
+							str += "\tcase ngapType.ProcedureCode" + GetStrOutOfDashE2(dataxxx[2]) + ":\n"
+							str += "\t\tif value.Value.Present != ngapType.UnsuccessfulOutcomeValuePresent" + GetStrOutOfDashE(dataxx[2]) + " {\n"
+							str += "\t\t\treturn binData, bitEnd, errors.New(\"UnsuccessfulOutcome: ProcedureCode: INVALID\")\n"
+							str += "\t\t}\n"
+						} else {
+							dataxxx = strings.Fields(datas[i+4])
+							if dataxxx[0] == "PROCEDURE" {
+								str += "\tcase ngapType.ProcedureCode" + GetStrOutOfDashE2(dataxxx[2]) + ":\n"
+								str += "\t\tif value.Value.Present != ngapType.UnsuccessfulOutcomeValuePresent" + GetStrOutOfDashE(dataxx[2]) + " {\n"
+								str += "\t\t\treturn binData, bitEnd, errors.New(\"UnsuccessfulOutcome: ProcedureCode: INVALID\")\n"
+								str += "\t\t}\n"
+							} else {
+								dataxxx = strings.Fields(datas[i+5])
+								if dataxxx[0] == "PROCEDURE" {
+									str += "\tcase ngapType.ProcedureCode" + GetStrOutOfDashE2(dataxxx[2]) + ":\n"
+									str += "\t\tif value.Value.Present != ngapType.UnsuccessfulOutcomeValuePresent" + GetStrOutOfDashE(dataxx[2]) + " {\n"
+									str += "\t\t\treturn binData, bitEnd, errors.New(\"UnsuccessfulOutcome: ProcedureCode: INVALID\")\n"
+									str += "\t\t}\n"
+								} else {
+									fmt.Println(i, "-", datax)
+								}
+							}
+						}
+					} else {
+						dataxx := strings.Fields(datas[i+3])
+						if dataxx[0] == "UNSUCCESSFUL" {
+							dataxxx := strings.Fields(datas[i+4])
+							if dataxxx[0] == "PROCEDURE" {
+								str += "\tcase ngapType.ProcedureCode" + GetStrOutOfDashE2(dataxxx[2]) + ":\n"
+								str += "\t\tif value.Value.Present != ngapType.UnsuccessfulOutcomeValuePresent" + GetStrOutOfDashE(dataxx[2]) + " {\n"
+								str += "\t\t\treturn binData, bitEnd, errors.New(\"UnsuccessfulOutcome: ProcedureCode: INVALID\")\n"
+								str += "\t\t}\n"
+							} else {
+								dataxxx = strings.Fields(datas[i+5])
+								if dataxxx[0] == "PROCEDURE" {
+									str += "\tcase ngapType.ProcedureCode" + GetStrOutOfDashE2(dataxxx[2]) + ":\n"
+									str += "\t\tif value.Value.Present != ngapType.UnsuccessfulOutcomeValuePresent" + GetStrOutOfDashE(dataxx[2]) + " {\n"
+									str += "\t\t\treturn binData, bitEnd, errors.New(\"UnsuccessfulOutcome: ProcedureCode: INVALID\")\n"
+									str += "\t\t}\n"
+								} else {
+									dataxxx = strings.Fields(datas[i+6])
+									if dataxxx[0] == "PROCEDURE" {
+										str += "\tcase ngapType.ProcedureCode" + GetStrOutOfDashE2(dataxxx[2]) + ":\n"
+										str += "\t\tif value.Value.Present != ngapType.UnsuccessfulOutcomeValuePresent" + GetStrOutOfDashE(dataxx[2]) + " {\n"
+										str += "\t\t\treturn binData, bitEnd, errors.New(\"UnsuccessfulOutcome: ProcedureCode: INVALID\")\n"
+										str += "\t\t}\n"
+									} else {
+										fmt.Println(i, "-", datax)
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	str += "\tdefault:\n" +
+		"\t\treturn binData, bitEnd, errors.New(\"UnsuccessfulOutcome: ProcedureCode: INVALID\")\n" +
+		"\t}\n" +
+		"\tbinData, bitEnd, err = ProcedureCode(value.ProcedureCode, binData, bitEnd)\n" +
+		"\tif err != nil {\n" +
+		"\t\treturn binData, bitEnd, errors.New(\"UnsuccessfulOutcome: \" + err.Error())\n" +
+		"\t}\n" +
+		"\tbinData, bitEnd, err = Criticality(value.Criticality, binData, bitEnd)\n" +
+		"\tif err != nil {\n" +
+		"\t\treturn binData, bitEnd, errors.New(\"UnsuccessfulOutcome: \" + err.Error())\n" +
+		"\t}\n" +
+		"\tvar binValue []byte\n" +
+		"\tbinValue, bitEnd, err = UnsuccessfulOutcomeValue(value.Value, binValue, 8)\n" +
+		"\tif err != nil {\n" +
+		"\t\treturn binData, bitEnd, errors.New(\"UnsuccessfulOutcome: \" + err.Error())\n" +
+		"\t}\n" +
+		"\treturn append(binData, EncodeLengthValue(binValue)...), bitEnd, err\n" +
+		"}\n" +
+		"\nfunc UnsuccessfulOutcomeValue (value ngapType.UnsuccessfulOutcomeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {\n" +
+		"\tvar err error\n" +
+		"\tswitch value.Present {\n"
+	for i := 300; i < len(datas); i++ {
+		datax := strings.Fields(datas[i])
+		if len(datax) > 2 {
+			if datax[2] == "::=" && datax[1] == "NGAP-ELEMENTARY-PROCEDURE" {
+				dataxx := strings.Fields(datas[i+1])
+				if dataxx[0] == "UNSUCCESSFUL" {
+					str += "\tcase ngapType.UnsuccessfulOutcomeValuePresent" + GetStrOutOfDashE(dataxx[2]) + ":\n" +
+						"\t\tif value." + GetStrOutOfDashE(dataxx[2]) + " == nil {\n" +
+						"\t\t\treturn binData, bitEnd, errors.New(\"UnsuccessfulOutcomeValue: " + GetStrOutOfDashE(dataxx[2]) + ": NIL\")\n" +
+						"\t\t}\n" +
+						"\t\tbinData, bitEnd, err = " + GetStrOutOfDashE(dataxx[2]) + "(*value." + GetStrOutOfDashE(dataxx[2]) + ", binData, bitEnd)\n" +
+						"\t\tif err != nil {\n" +
+						"\t\t\treturn binData, bitEnd, errors.New(\"UnsuccessfulOutcomeValue: \" + err.Error())\n" +
+						"\t\t}\n"
+				} else {
+					dataxx := strings.Fields(datas[i+2])
+					if dataxx[0] == "UNSUCCESSFUL" {
+						str += "\tcase ngapType.UnsuccessfulOutcomeValuePresent" + GetStrOutOfDashE(dataxx[2]) + ":\n" +
+							"\t\tif value." + GetStrOutOfDashE(dataxx[2]) + " == nil {\n" +
+							"\t\t\treturn binData, bitEnd, errors.New(\"UnsuccessfulOutcomeValue: " + GetStrOutOfDashE(dataxx[2]) + ": NIL\")\n" +
+							"\t\t}\n" +
+							"\t\tbinData, bitEnd, err = " + GetStrOutOfDashE(dataxx[2]) + "(*value." + GetStrOutOfDashE(dataxx[2]) + ", binData, bitEnd)\n" +
+							"\t\tif err != nil {\n" +
+							"\t\t\treturn binData, bitEnd, errors.New(\"UnsuccessfulOutcomeValue: \" + err.Error())\n" +
+							"\t\t}\n"
+					} else {
+						dataxx := strings.Fields(datas[i+3])
+						if dataxx[0] == "UNSUCCESSFUL" {
+							str += "\tcase ngapType.UnsuccessfulOutcomeValuePresent" + GetStrOutOfDashE(dataxx[2]) + ":\n" +
+								"\t\tif value." + GetStrOutOfDashE(dataxx[2]) + " == nil {\n" +
+								"\t\t\treturn binData, bitEnd, errors.New(\"UnsuccessfulOutcomeValue: " + GetStrOutOfDashE(dataxx[2]) + ": NIL\")\n" +
+								"\t\t}\n" +
+								"\t\tbinData, bitEnd, err = " + GetStrOutOfDashE(dataxx[2]) + "(*value." + GetStrOutOfDashE(dataxx[2]) + ", binData, bitEnd)\n" +
+								"\t\tif err != nil {\n" +
+								"\t\t\treturn binData, bitEnd, errors.New(\"UnsuccessfulOutcomeValue: \" + err.Error())\n" +
+								"\t\t}\n"
+						}
+					}
+				}
+			}
+		}
+	}
+	str += "\tdefault:\n" +
+		"\t\treturn binData, bitEnd, errors.New(\"UnsuccessfulOutcomeValue: Present: INVALID\")\n" +
+		"\t}\n" +
+		"\treturn binData, bitEnd, err\n" +
+		"}\n"
+
+	filePointer, _ := os.Create("../ngapEncode/PDUDescriptions.go")
+	filePointer.WriteString(str)
+}
 //
 // func EncodePDUContents() {
 // 	data, _ := ioutil.ReadFile("PDUContents.asn")

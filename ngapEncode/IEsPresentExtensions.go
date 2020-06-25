@@ -120,7 +120,7 @@ func CPTransportLayerInformationExtIEs(value ngapType.CPTransportLayerInformatio
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDEndpointIPAddressAndPort:
-		if value.TypeValue.Present != ngapType.CPTransportLayerInformationExtIEsTypeValuePresentEndpointIPAddressAndPort {
+		if value.TypeValue.Present != ngapType.CPTransportLayerInformationExtIEsPresentEndpointIPAddressAndPort {
 			return binData, bitEnd, errors.New("CPTransportLayerInformationExtIEs: ProtocolIEID: INVALID")
 		}
 	default:
@@ -432,7 +432,7 @@ func TargetIDExtIEs(value ngapType.TargetIDExtIEs, binData []byte, bitEnd uint64
 	var err error
 	switch value.ProtocolIEID.Value {
 	case ngapType.ProtocolIEIDTargetRNCID:
-		if value.TypeValue.Present != ngapType.TargetIDExtIEsTypeValuePresentTargetRNCID {
+		if value.TypeValue.Present != ngapType.TargetIDExtIEsPresentTargetRNCID {
 			return binData, bitEnd, errors.New("TargetIDExtIEs: ProtocolIEID: INVALID")
 		}
 	default:

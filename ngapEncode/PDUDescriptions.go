@@ -44,215 +44,223 @@ func InitiatingMessage (value ngapType.InitiatingMessage, binData []byte, bitEnd
 	var err error
 	switch value.ProcedureCode.Value {
 	case ngapType.ProcedureCodeAMFConfigurationUpdate:
-		if value.Value.Present != ngapType.InitiatingMessageValuePresentAMFConfigurationUpdate {
+		if value.Value.Present != ngapType.InitiatingMessagePresentAMFConfigurationUpdate {
+			return binData, bitEnd, errors.New("InitiatingMessage: ProcedureCode: INVALID")
+		}
+	case ngapType.ProcedureCodeAMFStatusIndication:
+		if value.Value.Present != ngapType.InitiatingMessagePresentAMFStatusIndication {
+			return binData, bitEnd, errors.New("InitiatingMessage: ProcedureCode: INVALID")
+		}
+	case ngapType.ProcedureCodeCellTrafficTrace:
+		if value.Value.Present != ngapType.InitiatingMessagePresentCellTrafficTrace {
 			return binData, bitEnd, errors.New("InitiatingMessage: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodeDeactivateTrace:
-		if value.Value.Present != ngapType.InitiatingMessageValuePresentDeactivateTrace {
+		if value.Value.Present != ngapType.InitiatingMessagePresentDeactivateTrace {
 			return binData, bitEnd, errors.New("InitiatingMessage: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodeDownlinkNASTransport:
-		if value.Value.Present != ngapType.InitiatingMessageValuePresentDownlinkNASTransport {
+		if value.Value.Present != ngapType.InitiatingMessagePresentDownlinkNASTransport {
 			return binData, bitEnd, errors.New("InitiatingMessage: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodeDownlinkNonUEAssociatedNRPPaTransport:
-		if value.Value.Present != ngapType.InitiatingMessageValuePresentDownlinkNonUEAssociatedNRPPaTransport {
+		if value.Value.Present != ngapType.InitiatingMessagePresentDownlinkNonUEAssociatedNRPPaTransport {
 			return binData, bitEnd, errors.New("InitiatingMessage: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodeDownlinkRANConfigurationTransfer:
-		if value.Value.Present != ngapType.InitiatingMessageValuePresentDownlinkRANConfigurationTransfer {
+		if value.Value.Present != ngapType.InitiatingMessagePresentDownlinkRANConfigurationTransfer {
 			return binData, bitEnd, errors.New("InitiatingMessage: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodeDownlinkRANStatusTransfer:
-		if value.Value.Present != ngapType.InitiatingMessageValuePresentDownlinkRANStatusTransfer {
+		if value.Value.Present != ngapType.InitiatingMessagePresentDownlinkRANStatusTransfer {
 			return binData, bitEnd, errors.New("InitiatingMessage: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodeDownlinkUEAssociatedNRPPaTransport:
-		if value.Value.Present != ngapType.InitiatingMessageValuePresentDownlinkUEAssociatedNRPPaTransport {
+		if value.Value.Present != ngapType.InitiatingMessagePresentDownlinkUEAssociatedNRPPaTransport {
 			return binData, bitEnd, errors.New("InitiatingMessage: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodeErrorIndication:
-		if value.Value.Present != ngapType.InitiatingMessageValuePresentErrorIndication {
+		if value.Value.Present != ngapType.InitiatingMessagePresentErrorIndication {
 			return binData, bitEnd, errors.New("InitiatingMessage: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodeHandoverCancel:
-		if value.Value.Present != ngapType.InitiatingMessageValuePresentHandoverCancel {
+		if value.Value.Present != ngapType.InitiatingMessagePresentHandoverCancel {
 			return binData, bitEnd, errors.New("InitiatingMessage: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodeHandoverNotification:
-		if value.Value.Present != ngapType.InitiatingMessageValuePresentHandoverNotify {
+		if value.Value.Present != ngapType.InitiatingMessagePresentHandoverNotify {
 			return binData, bitEnd, errors.New("InitiatingMessage: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodeHandoverPreparation:
-		if value.Value.Present != ngapType.InitiatingMessageValuePresentHandoverRequired {
+		if value.Value.Present != ngapType.InitiatingMessagePresentHandoverRequired {
 			return binData, bitEnd, errors.New("InitiatingMessage: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodeHandoverResourceAllocation:
-		if value.Value.Present != ngapType.InitiatingMessageValuePresentHandoverRequest {
+		if value.Value.Present != ngapType.InitiatingMessagePresentHandoverRequest {
 			return binData, bitEnd, errors.New("InitiatingMessage: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodeInitialContextSetup:
-		if value.Value.Present != ngapType.InitiatingMessageValuePresentInitialContextSetupRequest {
+		if value.Value.Present != ngapType.InitiatingMessagePresentInitialContextSetupRequest {
 			return binData, bitEnd, errors.New("InitiatingMessage: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodeInitialUEMessage:
-		if value.Value.Present != ngapType.InitiatingMessageValuePresentInitialUEMessage {
+		if value.Value.Present != ngapType.InitiatingMessagePresentInitialUEMessage {
 			return binData, bitEnd, errors.New("InitiatingMessage: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodeLocationReport:
-		if value.Value.Present != ngapType.InitiatingMessageValuePresentLocationReport {
+		if value.Value.Present != ngapType.InitiatingMessagePresentLocationReport {
 			return binData, bitEnd, errors.New("InitiatingMessage: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodeLocationReportingControl:
-		if value.Value.Present != ngapType.InitiatingMessageValuePresentLocationReportingControl {
+		if value.Value.Present != ngapType.InitiatingMessagePresentLocationReportingControl {
 			return binData, bitEnd, errors.New("InitiatingMessage: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodeLocationReportingFailureIndication:
-		if value.Value.Present != ngapType.InitiatingMessageValuePresentLocationReportingFailureIndication {
+		if value.Value.Present != ngapType.InitiatingMessagePresentLocationReportingFailureIndication {
 			return binData, bitEnd, errors.New("InitiatingMessage: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodeNASNonDeliveryIndication:
-		if value.Value.Present != ngapType.InitiatingMessageValuePresentNASNonDeliveryIndication {
+		if value.Value.Present != ngapType.InitiatingMessagePresentNASNonDeliveryIndication {
 			return binData, bitEnd, errors.New("InitiatingMessage: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodeNGReset:
-		if value.Value.Present != ngapType.InitiatingMessageValuePresentNGReset {
+		if value.Value.Present != ngapType.InitiatingMessagePresentNGReset {
 			return binData, bitEnd, errors.New("InitiatingMessage: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodeNGSetup:
-		if value.Value.Present != ngapType.InitiatingMessageValuePresentNGSetupRequest {
+		if value.Value.Present != ngapType.InitiatingMessagePresentNGSetupRequest {
 			return binData, bitEnd, errors.New("InitiatingMessage: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodeOverloadStart:
-		if value.Value.Present != ngapType.InitiatingMessageValuePresentOverloadStart {
+		if value.Value.Present != ngapType.InitiatingMessagePresentOverloadStart {
 			return binData, bitEnd, errors.New("InitiatingMessage: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodeOverloadStop:
-		if value.Value.Present != ngapType.InitiatingMessageValuePresentOverloadStop {
+		if value.Value.Present != ngapType.InitiatingMessagePresentOverloadStop {
 			return binData, bitEnd, errors.New("InitiatingMessage: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodePaging:
-		if value.Value.Present != ngapType.InitiatingMessageValuePresentPaging {
+		if value.Value.Present != ngapType.InitiatingMessagePresentPaging {
 			return binData, bitEnd, errors.New("InitiatingMessage: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodePathSwitchRequest:
-		if value.Value.Present != ngapType.InitiatingMessageValuePresentPathSwitchRequest {
+		if value.Value.Present != ngapType.InitiatingMessagePresentPathSwitchRequest {
 			return binData, bitEnd, errors.New("InitiatingMessage: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodePDUSessionResourceModify:
-		if value.Value.Present != ngapType.InitiatingMessageValuePresentPDUSessionResourceModifyRequest {
+		if value.Value.Present != ngapType.InitiatingMessagePresentPDUSessionResourceModifyRequest {
 			return binData, bitEnd, errors.New("InitiatingMessage: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodePDUSessionResourceModifyIndication:
-		if value.Value.Present != ngapType.InitiatingMessageValuePresentPDUSessionResourceModifyIndication {
+		if value.Value.Present != ngapType.InitiatingMessagePresentPDUSessionResourceModifyIndication {
 			return binData, bitEnd, errors.New("InitiatingMessage: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodePDUSessionResourceNotify:
-		if value.Value.Present != ngapType.InitiatingMessageValuePresentPDUSessionResourceNotify {
+		if value.Value.Present != ngapType.InitiatingMessagePresentPDUSessionResourceNotify {
 			return binData, bitEnd, errors.New("InitiatingMessage: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodePDUSessionResourceRelease:
-		if value.Value.Present != ngapType.InitiatingMessageValuePresentPDUSessionResourceReleaseCommand {
+		if value.Value.Present != ngapType.InitiatingMessagePresentPDUSessionResourceReleaseCommand {
 			return binData, bitEnd, errors.New("InitiatingMessage: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodePDUSessionResourceSetup:
-		if value.Value.Present != ngapType.InitiatingMessageValuePresentPDUSessionResourceSetupRequest {
+		if value.Value.Present != ngapType.InitiatingMessagePresentPDUSessionResourceSetupRequest {
 			return binData, bitEnd, errors.New("InitiatingMessage: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodePrivateMessage:
-		if value.Value.Present != ngapType.InitiatingMessageValuePresentPrivateMessage {
+		if value.Value.Present != ngapType.InitiatingMessagePresentPrivateMessage {
 			return binData, bitEnd, errors.New("InitiatingMessage: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodePWSCancel:
-		if value.Value.Present != ngapType.InitiatingMessageValuePresentPWSCancelRequest {
+		if value.Value.Present != ngapType.InitiatingMessagePresentPWSCancelRequest {
 			return binData, bitEnd, errors.New("InitiatingMessage: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodePWSFailureIndication:
-		if value.Value.Present != ngapType.InitiatingMessageValuePresentPWSFailureIndication {
+		if value.Value.Present != ngapType.InitiatingMessagePresentPWSFailureIndication {
 			return binData, bitEnd, errors.New("InitiatingMessage: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodePWSRestartIndication:
-		if value.Value.Present != ngapType.InitiatingMessageValuePresentPWSRestartIndication {
+		if value.Value.Present != ngapType.InitiatingMessagePresentPWSRestartIndication {
 			return binData, bitEnd, errors.New("InitiatingMessage: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodeRANConfigurationUpdate:
-		if value.Value.Present != ngapType.InitiatingMessageValuePresentRANConfigurationUpdate {
+		if value.Value.Present != ngapType.InitiatingMessagePresentRANConfigurationUpdate {
 			return binData, bitEnd, errors.New("InitiatingMessage: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodeRerouteNASRequest:
-		if value.Value.Present != ngapType.InitiatingMessageValuePresentRerouteNASRequest {
+		if value.Value.Present != ngapType.InitiatingMessagePresentRerouteNASRequest {
 			return binData, bitEnd, errors.New("InitiatingMessage: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodeRRCInactiveTransitionReport:
-		if value.Value.Present != ngapType.InitiatingMessageValuePresentRRCInactiveTransitionReport {
+		if value.Value.Present != ngapType.InitiatingMessagePresentRRCInactiveTransitionReport {
 			return binData, bitEnd, errors.New("InitiatingMessage: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodeSecondaryRATDataUsageReport:
-		if value.Value.Present != ngapType.InitiatingMessageValuePresentSecondaryRATDataUsageReport {
+		if value.Value.Present != ngapType.InitiatingMessagePresentSecondaryRATDataUsageReport {
 			return binData, bitEnd, errors.New("InitiatingMessage: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodeTraceFailureIndication:
-		if value.Value.Present != ngapType.InitiatingMessageValuePresentTraceFailureIndication {
+		if value.Value.Present != ngapType.InitiatingMessagePresentTraceFailureIndication {
 			return binData, bitEnd, errors.New("InitiatingMessage: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodeTraceStart:
-		if value.Value.Present != ngapType.InitiatingMessageValuePresentTraceStart {
+		if value.Value.Present != ngapType.InitiatingMessagePresentTraceStart {
 			return binData, bitEnd, errors.New("InitiatingMessage: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodeUEContextModification:
-		if value.Value.Present != ngapType.InitiatingMessageValuePresentUEContextModificationRequest {
+		if value.Value.Present != ngapType.InitiatingMessagePresentUEContextModificationRequest {
 			return binData, bitEnd, errors.New("InitiatingMessage: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodeUEContextRelease:
-		if value.Value.Present != ngapType.InitiatingMessageValuePresentUEContextReleaseCommand {
+		if value.Value.Present != ngapType.InitiatingMessagePresentUEContextReleaseCommand {
 			return binData, bitEnd, errors.New("InitiatingMessage: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodeUEContextReleaseRequest:
-		if value.Value.Present != ngapType.InitiatingMessageValuePresentUEContextReleaseRequest {
+		if value.Value.Present != ngapType.InitiatingMessagePresentUEContextReleaseRequest {
 			return binData, bitEnd, errors.New("InitiatingMessage: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodeUERadioCapabilityCheck:
-		if value.Value.Present != ngapType.InitiatingMessageValuePresentUERadioCapabilityCheckRequest {
+		if value.Value.Present != ngapType.InitiatingMessagePresentUERadioCapabilityCheckRequest {
 			return binData, bitEnd, errors.New("InitiatingMessage: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodeUERadioCapabilityInfoIndication:
-		if value.Value.Present != ngapType.InitiatingMessageValuePresentUERadioCapabilityInfoIndication {
+		if value.Value.Present != ngapType.InitiatingMessagePresentUERadioCapabilityInfoIndication {
 			return binData, bitEnd, errors.New("InitiatingMessage: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodeUETNLABindingRelease:
-		if value.Value.Present != ngapType.InitiatingMessageValuePresentUETNLABindingReleaseRequest {
+		if value.Value.Present != ngapType.InitiatingMessagePresentUETNLABindingReleaseRequest {
 			return binData, bitEnd, errors.New("InitiatingMessage: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodeUplinkNASTransport:
-		if value.Value.Present != ngapType.InitiatingMessageValuePresentUplinkNASTransport {
+		if value.Value.Present != ngapType.InitiatingMessagePresentUplinkNASTransport {
 			return binData, bitEnd, errors.New("InitiatingMessage: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodeUplinkNonUEAssociatedNRPPaTransport:
-		if value.Value.Present != ngapType.InitiatingMessageValuePresentUplinkNonUEAssociatedNRPPaTransport {
+		if value.Value.Present != ngapType.InitiatingMessagePresentUplinkNonUEAssociatedNRPPaTransport {
 			return binData, bitEnd, errors.New("InitiatingMessage: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodeUplinkRANConfigurationTransfer:
-		if value.Value.Present != ngapType.InitiatingMessageValuePresentUplinkRANConfigurationTransfer {
+		if value.Value.Present != ngapType.InitiatingMessagePresentUplinkRANConfigurationTransfer {
 			return binData, bitEnd, errors.New("InitiatingMessage: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodeUplinkRANStatusTransfer:
-		if value.Value.Present != ngapType.InitiatingMessageValuePresentUplinkRANStatusTransfer {
+		if value.Value.Present != ngapType.InitiatingMessagePresentUplinkRANStatusTransfer {
 			return binData, bitEnd, errors.New("InitiatingMessage: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodeUplinkUEAssociatedNRPPaTransport:
-		if value.Value.Present != ngapType.InitiatingMessageValuePresentUplinkUEAssociatedNRPPaTransport {
+		if value.Value.Present != ngapType.InitiatingMessagePresentUplinkUEAssociatedNRPPaTransport {
 			return binData, bitEnd, errors.New("InitiatingMessage: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodeWriteReplaceWarning:
-		if value.Value.Present != ngapType.InitiatingMessageValuePresentWriteReplaceWarningRequest {
+		if value.Value.Present != ngapType.InitiatingMessagePresentWriteReplaceWarningRequest {
 			return binData, bitEnd, errors.New("InitiatingMessage: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodeUplinkRIMInformationTransfer:
-		if value.Value.Present != ngapType.InitiatingMessageValuePresentUplinkRIMInformationTransfer {
+		if value.Value.Present != ngapType.InitiatingMessagePresentUplinkRIMInformationTransfer {
 			return binData, bitEnd, errors.New("InitiatingMessage: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodeDownlinkRIMInformationTransfer:
-		if value.Value.Present != ngapType.InitiatingMessageValuePresentDownlinkRIMInformationTransfer {
+		if value.Value.Present != ngapType.InitiatingMessagePresentDownlinkRIMInformationTransfer {
 			return binData, bitEnd, errors.New("InitiatingMessage: ProcedureCode: INVALID")
 		}
 	default:
@@ -277,7 +285,7 @@ func InitiatingMessage (value ngapType.InitiatingMessage, binData []byte, bitEnd
 func InitiatingMessageValue (value ngapType.InitiatingMessageValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.InitiatingMessageValuePresentAMFConfigurationUpdate:
+	case ngapType.InitiatingMessagePresentAMFConfigurationUpdate:
 		if value.AMFConfigurationUpdate == nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: AMFConfigurationUpdate: NIL")
 		}
@@ -285,7 +293,23 @@ func InitiatingMessageValue (value ngapType.InitiatingMessageValue, binData []by
 		if err != nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: " + err.Error())
 		}
-	case ngapType.InitiatingMessageValuePresentDeactivateTrace:
+	case ngapType.InitiatingMessagePresentAMFStatusIndication:
+		if value.AMFStatusIndication == nil {
+			return binData, bitEnd, errors.New("InitiatingMessageValue: AMFStatusIndication: NIL")
+		}
+		binData, bitEnd, err = AMFStatusIndication(*value.AMFStatusIndication, binData, bitEnd)
+		if err != nil {
+			return binData, bitEnd, errors.New("InitiatingMessageValue: " + err.Error())
+		}
+	case ngapType.InitiatingMessagePresentCellTrafficTrace:
+		if value.CellTrafficTrace == nil {
+			return binData, bitEnd, errors.New("InitiatingMessageValue: CellTrafficTrace: NIL")
+		}
+		binData, bitEnd, err = CellTrafficTrace(*value.CellTrafficTrace, binData, bitEnd)
+		if err != nil {
+			return binData, bitEnd, errors.New("InitiatingMessageValue: " + err.Error())
+		}
+	case ngapType.InitiatingMessagePresentDeactivateTrace:
 		if value.DeactivateTrace == nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: DeactivateTrace: NIL")
 		}
@@ -293,7 +317,7 @@ func InitiatingMessageValue (value ngapType.InitiatingMessageValue, binData []by
 		if err != nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: " + err.Error())
 		}
-	case ngapType.InitiatingMessageValuePresentDownlinkNASTransport:
+	case ngapType.InitiatingMessagePresentDownlinkNASTransport:
 		if value.DownlinkNASTransport == nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: DownlinkNASTransport: NIL")
 		}
@@ -301,7 +325,7 @@ func InitiatingMessageValue (value ngapType.InitiatingMessageValue, binData []by
 		if err != nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: " + err.Error())
 		}
-	case ngapType.InitiatingMessageValuePresentDownlinkNonUEAssociatedNRPPaTransport:
+	case ngapType.InitiatingMessagePresentDownlinkNonUEAssociatedNRPPaTransport:
 		if value.DownlinkNonUEAssociatedNRPPaTransport == nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: DownlinkNonUEAssociatedNRPPaTransport: NIL")
 		}
@@ -309,7 +333,7 @@ func InitiatingMessageValue (value ngapType.InitiatingMessageValue, binData []by
 		if err != nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: " + err.Error())
 		}
-	case ngapType.InitiatingMessageValuePresentDownlinkRANConfigurationTransfer:
+	case ngapType.InitiatingMessagePresentDownlinkRANConfigurationTransfer:
 		if value.DownlinkRANConfigurationTransfer == nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: DownlinkRANConfigurationTransfer: NIL")
 		}
@@ -317,7 +341,7 @@ func InitiatingMessageValue (value ngapType.InitiatingMessageValue, binData []by
 		if err != nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: " + err.Error())
 		}
-	case ngapType.InitiatingMessageValuePresentDownlinkRANStatusTransfer:
+	case ngapType.InitiatingMessagePresentDownlinkRANStatusTransfer:
 		if value.DownlinkRANStatusTransfer == nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: DownlinkRANStatusTransfer: NIL")
 		}
@@ -325,7 +349,7 @@ func InitiatingMessageValue (value ngapType.InitiatingMessageValue, binData []by
 		if err != nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: " + err.Error())
 		}
-	case ngapType.InitiatingMessageValuePresentDownlinkUEAssociatedNRPPaTransport:
+	case ngapType.InitiatingMessagePresentDownlinkUEAssociatedNRPPaTransport:
 		if value.DownlinkUEAssociatedNRPPaTransport == nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: DownlinkUEAssociatedNRPPaTransport: NIL")
 		}
@@ -333,7 +357,7 @@ func InitiatingMessageValue (value ngapType.InitiatingMessageValue, binData []by
 		if err != nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: " + err.Error())
 		}
-	case ngapType.InitiatingMessageValuePresentErrorIndication:
+	case ngapType.InitiatingMessagePresentErrorIndication:
 		if value.ErrorIndication == nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: ErrorIndication: NIL")
 		}
@@ -341,7 +365,7 @@ func InitiatingMessageValue (value ngapType.InitiatingMessageValue, binData []by
 		if err != nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: " + err.Error())
 		}
-	case ngapType.InitiatingMessageValuePresentHandoverCancel:
+	case ngapType.InitiatingMessagePresentHandoverCancel:
 		if value.HandoverCancel == nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: HandoverCancel: NIL")
 		}
@@ -349,7 +373,7 @@ func InitiatingMessageValue (value ngapType.InitiatingMessageValue, binData []by
 		if err != nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: " + err.Error())
 		}
-	case ngapType.InitiatingMessageValuePresentHandoverNotify:
+	case ngapType.InitiatingMessagePresentHandoverNotify:
 		if value.HandoverNotify == nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: HandoverNotify: NIL")
 		}
@@ -357,7 +381,7 @@ func InitiatingMessageValue (value ngapType.InitiatingMessageValue, binData []by
 		if err != nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: " + err.Error())
 		}
-	case ngapType.InitiatingMessageValuePresentHandoverRequired:
+	case ngapType.InitiatingMessagePresentHandoverRequired:
 		if value.HandoverRequired == nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: HandoverRequired: NIL")
 		}
@@ -365,7 +389,7 @@ func InitiatingMessageValue (value ngapType.InitiatingMessageValue, binData []by
 		if err != nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: " + err.Error())
 		}
-	case ngapType.InitiatingMessageValuePresentHandoverRequest:
+	case ngapType.InitiatingMessagePresentHandoverRequest:
 		if value.HandoverRequest == nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: HandoverRequest: NIL")
 		}
@@ -373,7 +397,7 @@ func InitiatingMessageValue (value ngapType.InitiatingMessageValue, binData []by
 		if err != nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: " + err.Error())
 		}
-	case ngapType.InitiatingMessageValuePresentInitialContextSetupRequest:
+	case ngapType.InitiatingMessagePresentInitialContextSetupRequest:
 		if value.InitialContextSetupRequest == nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: InitialContextSetupRequest: NIL")
 		}
@@ -381,7 +405,7 @@ func InitiatingMessageValue (value ngapType.InitiatingMessageValue, binData []by
 		if err != nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: " + err.Error())
 		}
-	case ngapType.InitiatingMessageValuePresentInitialUEMessage:
+	case ngapType.InitiatingMessagePresentInitialUEMessage:
 		if value.InitialUEMessage == nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: InitialUEMessage: NIL")
 		}
@@ -389,7 +413,7 @@ func InitiatingMessageValue (value ngapType.InitiatingMessageValue, binData []by
 		if err != nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: " + err.Error())
 		}
-	case ngapType.InitiatingMessageValuePresentLocationReport:
+	case ngapType.InitiatingMessagePresentLocationReport:
 		if value.LocationReport == nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: LocationReport: NIL")
 		}
@@ -397,7 +421,7 @@ func InitiatingMessageValue (value ngapType.InitiatingMessageValue, binData []by
 		if err != nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: " + err.Error())
 		}
-	case ngapType.InitiatingMessageValuePresentLocationReportingControl:
+	case ngapType.InitiatingMessagePresentLocationReportingControl:
 		if value.LocationReportingControl == nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: LocationReportingControl: NIL")
 		}
@@ -405,7 +429,7 @@ func InitiatingMessageValue (value ngapType.InitiatingMessageValue, binData []by
 		if err != nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: " + err.Error())
 		}
-	case ngapType.InitiatingMessageValuePresentLocationReportingFailureIndication:
+	case ngapType.InitiatingMessagePresentLocationReportingFailureIndication:
 		if value.LocationReportingFailureIndication == nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: LocationReportingFailureIndication: NIL")
 		}
@@ -413,7 +437,7 @@ func InitiatingMessageValue (value ngapType.InitiatingMessageValue, binData []by
 		if err != nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: " + err.Error())
 		}
-	case ngapType.InitiatingMessageValuePresentNASNonDeliveryIndication:
+	case ngapType.InitiatingMessagePresentNASNonDeliveryIndication:
 		if value.NASNonDeliveryIndication == nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: NASNonDeliveryIndication: NIL")
 		}
@@ -421,7 +445,7 @@ func InitiatingMessageValue (value ngapType.InitiatingMessageValue, binData []by
 		if err != nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: " + err.Error())
 		}
-	case ngapType.InitiatingMessageValuePresentNGReset:
+	case ngapType.InitiatingMessagePresentNGReset:
 		if value.NGReset == nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: NGReset: NIL")
 		}
@@ -429,7 +453,7 @@ func InitiatingMessageValue (value ngapType.InitiatingMessageValue, binData []by
 		if err != nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: " + err.Error())
 		}
-	case ngapType.InitiatingMessageValuePresentNGSetupRequest:
+	case ngapType.InitiatingMessagePresentNGSetupRequest:
 		if value.NGSetupRequest == nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: NGSetupRequest: NIL")
 		}
@@ -437,7 +461,7 @@ func InitiatingMessageValue (value ngapType.InitiatingMessageValue, binData []by
 		if err != nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: " + err.Error())
 		}
-	case ngapType.InitiatingMessageValuePresentOverloadStart:
+	case ngapType.InitiatingMessagePresentOverloadStart:
 		if value.OverloadStart == nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: OverloadStart: NIL")
 		}
@@ -445,7 +469,7 @@ func InitiatingMessageValue (value ngapType.InitiatingMessageValue, binData []by
 		if err != nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: " + err.Error())
 		}
-	case ngapType.InitiatingMessageValuePresentOverloadStop:
+	case ngapType.InitiatingMessagePresentOverloadStop:
 		if value.OverloadStop == nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: OverloadStop: NIL")
 		}
@@ -453,7 +477,7 @@ func InitiatingMessageValue (value ngapType.InitiatingMessageValue, binData []by
 		if err != nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: " + err.Error())
 		}
-	case ngapType.InitiatingMessageValuePresentPaging:
+	case ngapType.InitiatingMessagePresentPaging:
 		if value.Paging == nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: Paging: NIL")
 		}
@@ -461,7 +485,7 @@ func InitiatingMessageValue (value ngapType.InitiatingMessageValue, binData []by
 		if err != nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: " + err.Error())
 		}
-	case ngapType.InitiatingMessageValuePresentPathSwitchRequest:
+	case ngapType.InitiatingMessagePresentPathSwitchRequest:
 		if value.PathSwitchRequest == nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: PathSwitchRequest: NIL")
 		}
@@ -469,7 +493,7 @@ func InitiatingMessageValue (value ngapType.InitiatingMessageValue, binData []by
 		if err != nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: " + err.Error())
 		}
-	case ngapType.InitiatingMessageValuePresentPDUSessionResourceModifyRequest:
+	case ngapType.InitiatingMessagePresentPDUSessionResourceModifyRequest:
 		if value.PDUSessionResourceModifyRequest == nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: PDUSessionResourceModifyRequest: NIL")
 		}
@@ -477,7 +501,7 @@ func InitiatingMessageValue (value ngapType.InitiatingMessageValue, binData []by
 		if err != nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: " + err.Error())
 		}
-	case ngapType.InitiatingMessageValuePresentPDUSessionResourceModifyIndication:
+	case ngapType.InitiatingMessagePresentPDUSessionResourceModifyIndication:
 		if value.PDUSessionResourceModifyIndication == nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: PDUSessionResourceModifyIndication: NIL")
 		}
@@ -485,7 +509,7 @@ func InitiatingMessageValue (value ngapType.InitiatingMessageValue, binData []by
 		if err != nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: " + err.Error())
 		}
-	case ngapType.InitiatingMessageValuePresentPDUSessionResourceNotify:
+	case ngapType.InitiatingMessagePresentPDUSessionResourceNotify:
 		if value.PDUSessionResourceNotify == nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: PDUSessionResourceNotify: NIL")
 		}
@@ -493,7 +517,7 @@ func InitiatingMessageValue (value ngapType.InitiatingMessageValue, binData []by
 		if err != nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: " + err.Error())
 		}
-	case ngapType.InitiatingMessageValuePresentPDUSessionResourceReleaseCommand:
+	case ngapType.InitiatingMessagePresentPDUSessionResourceReleaseCommand:
 		if value.PDUSessionResourceReleaseCommand == nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: PDUSessionResourceReleaseCommand: NIL")
 		}
@@ -501,7 +525,7 @@ func InitiatingMessageValue (value ngapType.InitiatingMessageValue, binData []by
 		if err != nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: " + err.Error())
 		}
-	case ngapType.InitiatingMessageValuePresentPDUSessionResourceSetupRequest:
+	case ngapType.InitiatingMessagePresentPDUSessionResourceSetupRequest:
 		if value.PDUSessionResourceSetupRequest == nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: PDUSessionResourceSetupRequest: NIL")
 		}
@@ -509,7 +533,7 @@ func InitiatingMessageValue (value ngapType.InitiatingMessageValue, binData []by
 		if err != nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: " + err.Error())
 		}
-	case ngapType.InitiatingMessageValuePresentPrivateMessage:
+	case ngapType.InitiatingMessagePresentPrivateMessage:
 		if value.PrivateMessage == nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: PrivateMessage: NIL")
 		}
@@ -517,7 +541,7 @@ func InitiatingMessageValue (value ngapType.InitiatingMessageValue, binData []by
 		if err != nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: " + err.Error())
 		}
-	case ngapType.InitiatingMessageValuePresentPWSCancelRequest:
+	case ngapType.InitiatingMessagePresentPWSCancelRequest:
 		if value.PWSCancelRequest == nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: PWSCancelRequest: NIL")
 		}
@@ -525,7 +549,7 @@ func InitiatingMessageValue (value ngapType.InitiatingMessageValue, binData []by
 		if err != nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: " + err.Error())
 		}
-	case ngapType.InitiatingMessageValuePresentPWSFailureIndication:
+	case ngapType.InitiatingMessagePresentPWSFailureIndication:
 		if value.PWSFailureIndication == nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: PWSFailureIndication: NIL")
 		}
@@ -533,7 +557,7 @@ func InitiatingMessageValue (value ngapType.InitiatingMessageValue, binData []by
 		if err != nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: " + err.Error())
 		}
-	case ngapType.InitiatingMessageValuePresentPWSRestartIndication:
+	case ngapType.InitiatingMessagePresentPWSRestartIndication:
 		if value.PWSRestartIndication == nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: PWSRestartIndication: NIL")
 		}
@@ -541,7 +565,7 @@ func InitiatingMessageValue (value ngapType.InitiatingMessageValue, binData []by
 		if err != nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: " + err.Error())
 		}
-	case ngapType.InitiatingMessageValuePresentRANConfigurationUpdate:
+	case ngapType.InitiatingMessagePresentRANConfigurationUpdate:
 		if value.RANConfigurationUpdate == nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: RANConfigurationUpdate: NIL")
 		}
@@ -549,7 +573,7 @@ func InitiatingMessageValue (value ngapType.InitiatingMessageValue, binData []by
 		if err != nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: " + err.Error())
 		}
-	case ngapType.InitiatingMessageValuePresentRerouteNASRequest:
+	case ngapType.InitiatingMessagePresentRerouteNASRequest:
 		if value.RerouteNASRequest == nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: RerouteNASRequest: NIL")
 		}
@@ -557,7 +581,7 @@ func InitiatingMessageValue (value ngapType.InitiatingMessageValue, binData []by
 		if err != nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: " + err.Error())
 		}
-	case ngapType.InitiatingMessageValuePresentRRCInactiveTransitionReport:
+	case ngapType.InitiatingMessagePresentRRCInactiveTransitionReport:
 		if value.RRCInactiveTransitionReport == nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: RRCInactiveTransitionReport: NIL")
 		}
@@ -565,7 +589,7 @@ func InitiatingMessageValue (value ngapType.InitiatingMessageValue, binData []by
 		if err != nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: " + err.Error())
 		}
-	case ngapType.InitiatingMessageValuePresentSecondaryRATDataUsageReport:
+	case ngapType.InitiatingMessagePresentSecondaryRATDataUsageReport:
 		if value.SecondaryRATDataUsageReport == nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: SecondaryRATDataUsageReport: NIL")
 		}
@@ -573,7 +597,7 @@ func InitiatingMessageValue (value ngapType.InitiatingMessageValue, binData []by
 		if err != nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: " + err.Error())
 		}
-	case ngapType.InitiatingMessageValuePresentTraceFailureIndication:
+	case ngapType.InitiatingMessagePresentTraceFailureIndication:
 		if value.TraceFailureIndication == nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: TraceFailureIndication: NIL")
 		}
@@ -581,7 +605,7 @@ func InitiatingMessageValue (value ngapType.InitiatingMessageValue, binData []by
 		if err != nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: " + err.Error())
 		}
-	case ngapType.InitiatingMessageValuePresentTraceStart:
+	case ngapType.InitiatingMessagePresentTraceStart:
 		if value.TraceStart == nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: TraceStart: NIL")
 		}
@@ -589,7 +613,7 @@ func InitiatingMessageValue (value ngapType.InitiatingMessageValue, binData []by
 		if err != nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: " + err.Error())
 		}
-	case ngapType.InitiatingMessageValuePresentUEContextModificationRequest:
+	case ngapType.InitiatingMessagePresentUEContextModificationRequest:
 		if value.UEContextModificationRequest == nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: UEContextModificationRequest: NIL")
 		}
@@ -597,7 +621,7 @@ func InitiatingMessageValue (value ngapType.InitiatingMessageValue, binData []by
 		if err != nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: " + err.Error())
 		}
-	case ngapType.InitiatingMessageValuePresentUEContextReleaseCommand:
+	case ngapType.InitiatingMessagePresentUEContextReleaseCommand:
 		if value.UEContextReleaseCommand == nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: UEContextReleaseCommand: NIL")
 		}
@@ -605,7 +629,7 @@ func InitiatingMessageValue (value ngapType.InitiatingMessageValue, binData []by
 		if err != nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: " + err.Error())
 		}
-	case ngapType.InitiatingMessageValuePresentUEContextReleaseRequest:
+	case ngapType.InitiatingMessagePresentUEContextReleaseRequest:
 		if value.UEContextReleaseRequest == nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: UEContextReleaseRequest: NIL")
 		}
@@ -613,7 +637,7 @@ func InitiatingMessageValue (value ngapType.InitiatingMessageValue, binData []by
 		if err != nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: " + err.Error())
 		}
-	case ngapType.InitiatingMessageValuePresentUERadioCapabilityCheckRequest:
+	case ngapType.InitiatingMessagePresentUERadioCapabilityCheckRequest:
 		if value.UERadioCapabilityCheckRequest == nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: UERadioCapabilityCheckRequest: NIL")
 		}
@@ -621,7 +645,7 @@ func InitiatingMessageValue (value ngapType.InitiatingMessageValue, binData []by
 		if err != nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: " + err.Error())
 		}
-	case ngapType.InitiatingMessageValuePresentUERadioCapabilityInfoIndication:
+	case ngapType.InitiatingMessagePresentUERadioCapabilityInfoIndication:
 		if value.UERadioCapabilityInfoIndication == nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: UERadioCapabilityInfoIndication: NIL")
 		}
@@ -629,7 +653,7 @@ func InitiatingMessageValue (value ngapType.InitiatingMessageValue, binData []by
 		if err != nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: " + err.Error())
 		}
-	case ngapType.InitiatingMessageValuePresentUETNLABindingReleaseRequest:
+	case ngapType.InitiatingMessagePresentUETNLABindingReleaseRequest:
 		if value.UETNLABindingReleaseRequest == nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: UETNLABindingReleaseRequest: NIL")
 		}
@@ -637,7 +661,7 @@ func InitiatingMessageValue (value ngapType.InitiatingMessageValue, binData []by
 		if err != nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: " + err.Error())
 		}
-	case ngapType.InitiatingMessageValuePresentUplinkNASTransport:
+	case ngapType.InitiatingMessagePresentUplinkNASTransport:
 		if value.UplinkNASTransport == nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: UplinkNASTransport: NIL")
 		}
@@ -645,7 +669,7 @@ func InitiatingMessageValue (value ngapType.InitiatingMessageValue, binData []by
 		if err != nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: " + err.Error())
 		}
-	case ngapType.InitiatingMessageValuePresentUplinkNonUEAssociatedNRPPaTransport:
+	case ngapType.InitiatingMessagePresentUplinkNonUEAssociatedNRPPaTransport:
 		if value.UplinkNonUEAssociatedNRPPaTransport == nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: UplinkNonUEAssociatedNRPPaTransport: NIL")
 		}
@@ -653,7 +677,7 @@ func InitiatingMessageValue (value ngapType.InitiatingMessageValue, binData []by
 		if err != nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: " + err.Error())
 		}
-	case ngapType.InitiatingMessageValuePresentUplinkRANConfigurationTransfer:
+	case ngapType.InitiatingMessagePresentUplinkRANConfigurationTransfer:
 		if value.UplinkRANConfigurationTransfer == nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: UplinkRANConfigurationTransfer: NIL")
 		}
@@ -661,7 +685,7 @@ func InitiatingMessageValue (value ngapType.InitiatingMessageValue, binData []by
 		if err != nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: " + err.Error())
 		}
-	case ngapType.InitiatingMessageValuePresentUplinkRANStatusTransfer:
+	case ngapType.InitiatingMessagePresentUplinkRANStatusTransfer:
 		if value.UplinkRANStatusTransfer == nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: UplinkRANStatusTransfer: NIL")
 		}
@@ -669,7 +693,7 @@ func InitiatingMessageValue (value ngapType.InitiatingMessageValue, binData []by
 		if err != nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: " + err.Error())
 		}
-	case ngapType.InitiatingMessageValuePresentUplinkUEAssociatedNRPPaTransport:
+	case ngapType.InitiatingMessagePresentUplinkUEAssociatedNRPPaTransport:
 		if value.UplinkUEAssociatedNRPPaTransport == nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: UplinkUEAssociatedNRPPaTransport: NIL")
 		}
@@ -677,7 +701,7 @@ func InitiatingMessageValue (value ngapType.InitiatingMessageValue, binData []by
 		if err != nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: " + err.Error())
 		}
-	case ngapType.InitiatingMessageValuePresentWriteReplaceWarningRequest:
+	case ngapType.InitiatingMessagePresentWriteReplaceWarningRequest:
 		if value.WriteReplaceWarningRequest == nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: WriteReplaceWarningRequest: NIL")
 		}
@@ -685,7 +709,7 @@ func InitiatingMessageValue (value ngapType.InitiatingMessageValue, binData []by
 		if err != nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: " + err.Error())
 		}
-	case ngapType.InitiatingMessageValuePresentUplinkRIMInformationTransfer:
+	case ngapType.InitiatingMessagePresentUplinkRIMInformationTransfer:
 		if value.UplinkRIMInformationTransfer == nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: UplinkRIMInformationTransfer: NIL")
 		}
@@ -693,7 +717,7 @@ func InitiatingMessageValue (value ngapType.InitiatingMessageValue, binData []by
 		if err != nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: " + err.Error())
 		}
-	case ngapType.InitiatingMessageValuePresentDownlinkRIMInformationTransfer:
+	case ngapType.InitiatingMessagePresentDownlinkRIMInformationTransfer:
 		if value.DownlinkRIMInformationTransfer == nil {
 			return binData, bitEnd, errors.New("InitiatingMessageValue: DownlinkRIMInformationTransfer: NIL")
 		}
@@ -711,75 +735,75 @@ func SuccessfulOutcome (value ngapType.SuccessfulOutcome, binData []byte, bitEnd
 	var err error
 	switch value.ProcedureCode.Value {
 	case ngapType.ProcedureCodeAMFConfigurationUpdate:
-		if value.Value.Present != ngapType.SuccessfulOutcomeValuePresentAMFConfigurationUpdateAcknowledge {
+		if value.Value.Present != ngapType.SuccessfulOutcomePresentAMFConfigurationUpdateAcknowledge {
 			return binData, bitEnd, errors.New("SuccessfulOutcome: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodeHandoverCancel:
-		if value.Value.Present != ngapType.SuccessfulOutcomeValuePresentHandoverCancelAcknowledge {
+		if value.Value.Present != ngapType.SuccessfulOutcomePresentHandoverCancelAcknowledge {
 			return binData, bitEnd, errors.New("SuccessfulOutcome: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodeHandoverPreparation:
-		if value.Value.Present != ngapType.SuccessfulOutcomeValuePresentHandoverCommand {
+		if value.Value.Present != ngapType.SuccessfulOutcomePresentHandoverCommand {
 			return binData, bitEnd, errors.New("SuccessfulOutcome: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodeHandoverResourceAllocation:
-		if value.Value.Present != ngapType.SuccessfulOutcomeValuePresentHandoverRequestAcknowledge {
+		if value.Value.Present != ngapType.SuccessfulOutcomePresentHandoverRequestAcknowledge {
 			return binData, bitEnd, errors.New("SuccessfulOutcome: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodeInitialContextSetup:
-		if value.Value.Present != ngapType.SuccessfulOutcomeValuePresentInitialContextSetupResponse {
+		if value.Value.Present != ngapType.SuccessfulOutcomePresentInitialContextSetupResponse {
 			return binData, bitEnd, errors.New("SuccessfulOutcome: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodeNGReset:
-		if value.Value.Present != ngapType.SuccessfulOutcomeValuePresentNGResetAcknowledge {
+		if value.Value.Present != ngapType.SuccessfulOutcomePresentNGResetAcknowledge {
 			return binData, bitEnd, errors.New("SuccessfulOutcome: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodeNGSetup:
-		if value.Value.Present != ngapType.SuccessfulOutcomeValuePresentNGSetupResponse {
+		if value.Value.Present != ngapType.SuccessfulOutcomePresentNGSetupResponse {
 			return binData, bitEnd, errors.New("SuccessfulOutcome: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodePathSwitchRequest:
-		if value.Value.Present != ngapType.SuccessfulOutcomeValuePresentPathSwitchRequestAcknowledge {
+		if value.Value.Present != ngapType.SuccessfulOutcomePresentPathSwitchRequestAcknowledge {
 			return binData, bitEnd, errors.New("SuccessfulOutcome: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodePDUSessionResourceModify:
-		if value.Value.Present != ngapType.SuccessfulOutcomeValuePresentPDUSessionResourceModifyResponse {
+		if value.Value.Present != ngapType.SuccessfulOutcomePresentPDUSessionResourceModifyResponse {
 			return binData, bitEnd, errors.New("SuccessfulOutcome: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodePDUSessionResourceModifyIndication:
-		if value.Value.Present != ngapType.SuccessfulOutcomeValuePresentPDUSessionResourceModifyConfirm {
+		if value.Value.Present != ngapType.SuccessfulOutcomePresentPDUSessionResourceModifyConfirm {
 			return binData, bitEnd, errors.New("SuccessfulOutcome: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodePDUSessionResourceRelease:
-		if value.Value.Present != ngapType.SuccessfulOutcomeValuePresentPDUSessionResourceReleaseResponse {
+		if value.Value.Present != ngapType.SuccessfulOutcomePresentPDUSessionResourceReleaseResponse {
 			return binData, bitEnd, errors.New("SuccessfulOutcome: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodePDUSessionResourceSetup:
-		if value.Value.Present != ngapType.SuccessfulOutcomeValuePresentPDUSessionResourceSetupResponse {
+		if value.Value.Present != ngapType.SuccessfulOutcomePresentPDUSessionResourceSetupResponse {
 			return binData, bitEnd, errors.New("SuccessfulOutcome: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodePWSCancel:
-		if value.Value.Present != ngapType.SuccessfulOutcomeValuePresentPWSCancelResponse {
+		if value.Value.Present != ngapType.SuccessfulOutcomePresentPWSCancelResponse {
 			return binData, bitEnd, errors.New("SuccessfulOutcome: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodeRANConfigurationUpdate:
-		if value.Value.Present != ngapType.SuccessfulOutcomeValuePresentRANConfigurationUpdateAcknowledge {
+		if value.Value.Present != ngapType.SuccessfulOutcomePresentRANConfigurationUpdateAcknowledge {
 			return binData, bitEnd, errors.New("SuccessfulOutcome: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodeUEContextModification:
-		if value.Value.Present != ngapType.SuccessfulOutcomeValuePresentUEContextModificationResponse {
+		if value.Value.Present != ngapType.SuccessfulOutcomePresentUEContextModificationResponse {
 			return binData, bitEnd, errors.New("SuccessfulOutcome: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodeUEContextRelease:
-		if value.Value.Present != ngapType.SuccessfulOutcomeValuePresentUEContextReleaseComplete {
+		if value.Value.Present != ngapType.SuccessfulOutcomePresentUEContextReleaseComplete {
 			return binData, bitEnd, errors.New("SuccessfulOutcome: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodeUERadioCapabilityCheck:
-		if value.Value.Present != ngapType.SuccessfulOutcomeValuePresentUERadioCapabilityCheckResponse {
+		if value.Value.Present != ngapType.SuccessfulOutcomePresentUERadioCapabilityCheckResponse {
 			return binData, bitEnd, errors.New("SuccessfulOutcome: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodeWriteReplaceWarning:
-		if value.Value.Present != ngapType.SuccessfulOutcomeValuePresentWriteReplaceWarningResponse {
+		if value.Value.Present != ngapType.SuccessfulOutcomePresentWriteReplaceWarningResponse {
 			return binData, bitEnd, errors.New("SuccessfulOutcome: ProcedureCode: INVALID")
 		}
 	default:
@@ -804,7 +828,7 @@ func SuccessfulOutcome (value ngapType.SuccessfulOutcome, binData []byte, bitEnd
 func SuccessfulOutcomeValue (value ngapType.SuccessfulOutcomeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.SuccessfulOutcomeValuePresentAMFConfigurationUpdateAcknowledge:
+	case ngapType.SuccessfulOutcomePresentAMFConfigurationUpdateAcknowledge:
 		if value.AMFConfigurationUpdateAcknowledge == nil {
 			return binData, bitEnd, errors.New("SuccessfulOutcomeValue: AMFConfigurationUpdateAcknowledge: NIL")
 		}
@@ -812,7 +836,7 @@ func SuccessfulOutcomeValue (value ngapType.SuccessfulOutcomeValue, binData []by
 		if err != nil {
 			return binData, bitEnd, errors.New("SuccessfulOutcomeValue: " + err.Error())
 		}
-	case ngapType.SuccessfulOutcomeValuePresentHandoverCancelAcknowledge:
+	case ngapType.SuccessfulOutcomePresentHandoverCancelAcknowledge:
 		if value.HandoverCancelAcknowledge == nil {
 			return binData, bitEnd, errors.New("SuccessfulOutcomeValue: HandoverCancelAcknowledge: NIL")
 		}
@@ -820,7 +844,7 @@ func SuccessfulOutcomeValue (value ngapType.SuccessfulOutcomeValue, binData []by
 		if err != nil {
 			return binData, bitEnd, errors.New("SuccessfulOutcomeValue: " + err.Error())
 		}
-	case ngapType.SuccessfulOutcomeValuePresentHandoverCommand:
+	case ngapType.SuccessfulOutcomePresentHandoverCommand:
 		if value.HandoverCommand == nil {
 			return binData, bitEnd, errors.New("SuccessfulOutcomeValue: HandoverCommand: NIL")
 		}
@@ -828,7 +852,7 @@ func SuccessfulOutcomeValue (value ngapType.SuccessfulOutcomeValue, binData []by
 		if err != nil {
 			return binData, bitEnd, errors.New("SuccessfulOutcomeValue: " + err.Error())
 		}
-	case ngapType.SuccessfulOutcomeValuePresentHandoverRequestAcknowledge:
+	case ngapType.SuccessfulOutcomePresentHandoverRequestAcknowledge:
 		if value.HandoverRequestAcknowledge == nil {
 			return binData, bitEnd, errors.New("SuccessfulOutcomeValue: HandoverRequestAcknowledge: NIL")
 		}
@@ -836,7 +860,7 @@ func SuccessfulOutcomeValue (value ngapType.SuccessfulOutcomeValue, binData []by
 		if err != nil {
 			return binData, bitEnd, errors.New("SuccessfulOutcomeValue: " + err.Error())
 		}
-	case ngapType.SuccessfulOutcomeValuePresentInitialContextSetupResponse:
+	case ngapType.SuccessfulOutcomePresentInitialContextSetupResponse:
 		if value.InitialContextSetupResponse == nil {
 			return binData, bitEnd, errors.New("SuccessfulOutcomeValue: InitialContextSetupResponse: NIL")
 		}
@@ -844,7 +868,7 @@ func SuccessfulOutcomeValue (value ngapType.SuccessfulOutcomeValue, binData []by
 		if err != nil {
 			return binData, bitEnd, errors.New("SuccessfulOutcomeValue: " + err.Error())
 		}
-	case ngapType.SuccessfulOutcomeValuePresentNGResetAcknowledge:
+	case ngapType.SuccessfulOutcomePresentNGResetAcknowledge:
 		if value.NGResetAcknowledge == nil {
 			return binData, bitEnd, errors.New("SuccessfulOutcomeValue: NGResetAcknowledge: NIL")
 		}
@@ -852,7 +876,7 @@ func SuccessfulOutcomeValue (value ngapType.SuccessfulOutcomeValue, binData []by
 		if err != nil {
 			return binData, bitEnd, errors.New("SuccessfulOutcomeValue: " + err.Error())
 		}
-	case ngapType.SuccessfulOutcomeValuePresentNGSetupResponse:
+	case ngapType.SuccessfulOutcomePresentNGSetupResponse:
 		if value.NGSetupResponse == nil {
 			return binData, bitEnd, errors.New("SuccessfulOutcomeValue: NGSetupResponse: NIL")
 		}
@@ -860,7 +884,7 @@ func SuccessfulOutcomeValue (value ngapType.SuccessfulOutcomeValue, binData []by
 		if err != nil {
 			return binData, bitEnd, errors.New("SuccessfulOutcomeValue: " + err.Error())
 		}
-	case ngapType.SuccessfulOutcomeValuePresentPathSwitchRequestAcknowledge:
+	case ngapType.SuccessfulOutcomePresentPathSwitchRequestAcknowledge:
 		if value.PathSwitchRequestAcknowledge == nil {
 			return binData, bitEnd, errors.New("SuccessfulOutcomeValue: PathSwitchRequestAcknowledge: NIL")
 		}
@@ -868,7 +892,7 @@ func SuccessfulOutcomeValue (value ngapType.SuccessfulOutcomeValue, binData []by
 		if err != nil {
 			return binData, bitEnd, errors.New("SuccessfulOutcomeValue: " + err.Error())
 		}
-	case ngapType.SuccessfulOutcomeValuePresentPDUSessionResourceModifyResponse:
+	case ngapType.SuccessfulOutcomePresentPDUSessionResourceModifyResponse:
 		if value.PDUSessionResourceModifyResponse == nil {
 			return binData, bitEnd, errors.New("SuccessfulOutcomeValue: PDUSessionResourceModifyResponse: NIL")
 		}
@@ -876,7 +900,7 @@ func SuccessfulOutcomeValue (value ngapType.SuccessfulOutcomeValue, binData []by
 		if err != nil {
 			return binData, bitEnd, errors.New("SuccessfulOutcomeValue: " + err.Error())
 		}
-	case ngapType.SuccessfulOutcomeValuePresentPDUSessionResourceModifyConfirm:
+	case ngapType.SuccessfulOutcomePresentPDUSessionResourceModifyConfirm:
 		if value.PDUSessionResourceModifyConfirm == nil {
 			return binData, bitEnd, errors.New("SuccessfulOutcomeValue: PDUSessionResourceModifyConfirm: NIL")
 		}
@@ -884,7 +908,7 @@ func SuccessfulOutcomeValue (value ngapType.SuccessfulOutcomeValue, binData []by
 		if err != nil {
 			return binData, bitEnd, errors.New("SuccessfulOutcomeValue: " + err.Error())
 		}
-	case ngapType.SuccessfulOutcomeValuePresentPDUSessionResourceReleaseResponse:
+	case ngapType.SuccessfulOutcomePresentPDUSessionResourceReleaseResponse:
 		if value.PDUSessionResourceReleaseResponse == nil {
 			return binData, bitEnd, errors.New("SuccessfulOutcomeValue: PDUSessionResourceReleaseResponse: NIL")
 		}
@@ -892,7 +916,7 @@ func SuccessfulOutcomeValue (value ngapType.SuccessfulOutcomeValue, binData []by
 		if err != nil {
 			return binData, bitEnd, errors.New("SuccessfulOutcomeValue: " + err.Error())
 		}
-	case ngapType.SuccessfulOutcomeValuePresentPDUSessionResourceSetupResponse:
+	case ngapType.SuccessfulOutcomePresentPDUSessionResourceSetupResponse:
 		if value.PDUSessionResourceSetupResponse == nil {
 			return binData, bitEnd, errors.New("SuccessfulOutcomeValue: PDUSessionResourceSetupResponse: NIL")
 		}
@@ -900,7 +924,7 @@ func SuccessfulOutcomeValue (value ngapType.SuccessfulOutcomeValue, binData []by
 		if err != nil {
 			return binData, bitEnd, errors.New("SuccessfulOutcomeValue: " + err.Error())
 		}
-	case ngapType.SuccessfulOutcomeValuePresentPWSCancelResponse:
+	case ngapType.SuccessfulOutcomePresentPWSCancelResponse:
 		if value.PWSCancelResponse == nil {
 			return binData, bitEnd, errors.New("SuccessfulOutcomeValue: PWSCancelResponse: NIL")
 		}
@@ -908,7 +932,7 @@ func SuccessfulOutcomeValue (value ngapType.SuccessfulOutcomeValue, binData []by
 		if err != nil {
 			return binData, bitEnd, errors.New("SuccessfulOutcomeValue: " + err.Error())
 		}
-	case ngapType.SuccessfulOutcomeValuePresentRANConfigurationUpdateAcknowledge:
+	case ngapType.SuccessfulOutcomePresentRANConfigurationUpdateAcknowledge:
 		if value.RANConfigurationUpdateAcknowledge == nil {
 			return binData, bitEnd, errors.New("SuccessfulOutcomeValue: RANConfigurationUpdateAcknowledge: NIL")
 		}
@@ -916,7 +940,7 @@ func SuccessfulOutcomeValue (value ngapType.SuccessfulOutcomeValue, binData []by
 		if err != nil {
 			return binData, bitEnd, errors.New("SuccessfulOutcomeValue: " + err.Error())
 		}
-	case ngapType.SuccessfulOutcomeValuePresentUEContextModificationResponse:
+	case ngapType.SuccessfulOutcomePresentUEContextModificationResponse:
 		if value.UEContextModificationResponse == nil {
 			return binData, bitEnd, errors.New("SuccessfulOutcomeValue: UEContextModificationResponse: NIL")
 		}
@@ -924,7 +948,7 @@ func SuccessfulOutcomeValue (value ngapType.SuccessfulOutcomeValue, binData []by
 		if err != nil {
 			return binData, bitEnd, errors.New("SuccessfulOutcomeValue: " + err.Error())
 		}
-	case ngapType.SuccessfulOutcomeValuePresentUEContextReleaseComplete:
+	case ngapType.SuccessfulOutcomePresentUEContextReleaseComplete:
 		if value.UEContextReleaseComplete == nil {
 			return binData, bitEnd, errors.New("SuccessfulOutcomeValue: UEContextReleaseComplete: NIL")
 		}
@@ -932,7 +956,7 @@ func SuccessfulOutcomeValue (value ngapType.SuccessfulOutcomeValue, binData []by
 		if err != nil {
 			return binData, bitEnd, errors.New("SuccessfulOutcomeValue: " + err.Error())
 		}
-	case ngapType.SuccessfulOutcomeValuePresentUERadioCapabilityCheckResponse:
+	case ngapType.SuccessfulOutcomePresentUERadioCapabilityCheckResponse:
 		if value.UERadioCapabilityCheckResponse == nil {
 			return binData, bitEnd, errors.New("SuccessfulOutcomeValue: UERadioCapabilityCheckResponse: NIL")
 		}
@@ -940,7 +964,7 @@ func SuccessfulOutcomeValue (value ngapType.SuccessfulOutcomeValue, binData []by
 		if err != nil {
 			return binData, bitEnd, errors.New("SuccessfulOutcomeValue: " + err.Error())
 		}
-	case ngapType.SuccessfulOutcomeValuePresentWriteReplaceWarningResponse:
+	case ngapType.SuccessfulOutcomePresentWriteReplaceWarningResponse:
 		if value.WriteReplaceWarningResponse == nil {
 			return binData, bitEnd, errors.New("SuccessfulOutcomeValue: WriteReplaceWarningResponse: NIL")
 		}
@@ -958,35 +982,35 @@ func UnsuccessfulOutcome (value ngapType.UnsuccessfulOutcome, binData []byte, bi
 	var err error
 	switch value.ProcedureCode.Value {
 	case ngapType.ProcedureCodeAMFConfigurationUpdate:
-		if value.Value.Present != ngapType.UnsuccessfulOutcomeValuePresentAMFConfigurationUpdateFailure {
+		if value.Value.Present != ngapType.UnsuccessfulOutcomePresentAMFConfigurationUpdateFailure {
 			return binData, bitEnd, errors.New("UnsuccessfulOutcome: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodeHandoverPreparation:
-		if value.Value.Present != ngapType.UnsuccessfulOutcomeValuePresentHandoverPreparationFailure {
+		if value.Value.Present != ngapType.UnsuccessfulOutcomePresentHandoverPreparationFailure {
 			return binData, bitEnd, errors.New("UnsuccessfulOutcome: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodeHandoverResourceAllocation:
-		if value.Value.Present != ngapType.UnsuccessfulOutcomeValuePresentHandoverFailure {
+		if value.Value.Present != ngapType.UnsuccessfulOutcomePresentHandoverFailure {
 			return binData, bitEnd, errors.New("UnsuccessfulOutcome: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodeInitialContextSetup:
-		if value.Value.Present != ngapType.UnsuccessfulOutcomeValuePresentInitialContextSetupFailure {
+		if value.Value.Present != ngapType.UnsuccessfulOutcomePresentInitialContextSetupFailure {
 			return binData, bitEnd, errors.New("UnsuccessfulOutcome: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodeNGSetup:
-		if value.Value.Present != ngapType.UnsuccessfulOutcomeValuePresentNGSetupFailure {
+		if value.Value.Present != ngapType.UnsuccessfulOutcomePresentNGSetupFailure {
 			return binData, bitEnd, errors.New("UnsuccessfulOutcome: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodePathSwitchRequest:
-		if value.Value.Present != ngapType.UnsuccessfulOutcomeValuePresentPathSwitchRequestFailure {
+		if value.Value.Present != ngapType.UnsuccessfulOutcomePresentPathSwitchRequestFailure {
 			return binData, bitEnd, errors.New("UnsuccessfulOutcome: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodeRANConfigurationUpdate:
-		if value.Value.Present != ngapType.UnsuccessfulOutcomeValuePresentRANConfigurationUpdateFailure {
+		if value.Value.Present != ngapType.UnsuccessfulOutcomePresentRANConfigurationUpdateFailure {
 			return binData, bitEnd, errors.New("UnsuccessfulOutcome: ProcedureCode: INVALID")
 		}
 	case ngapType.ProcedureCodeUEContextModification:
-		if value.Value.Present != ngapType.UnsuccessfulOutcomeValuePresentUEContextModificationFailure {
+		if value.Value.Present != ngapType.UnsuccessfulOutcomePresentUEContextModificationFailure {
 			return binData, bitEnd, errors.New("UnsuccessfulOutcome: ProcedureCode: INVALID")
 		}
 	default:
@@ -1011,7 +1035,7 @@ func UnsuccessfulOutcome (value ngapType.UnsuccessfulOutcome, binData []byte, bi
 func UnsuccessfulOutcomeValue (value ngapType.UnsuccessfulOutcomeValue, binData []byte, bitEnd uint64) ([]byte, uint64, error) {
 	var err error
 	switch value.Present {
-	case ngapType.UnsuccessfulOutcomeValuePresentAMFConfigurationUpdateFailure:
+	case ngapType.UnsuccessfulOutcomePresentAMFConfigurationUpdateFailure:
 		if value.AMFConfigurationUpdateFailure == nil {
 			return binData, bitEnd, errors.New("UnsuccessfulOutcomeValue: AMFConfigurationUpdateFailure: NIL")
 		}
@@ -1019,7 +1043,7 @@ func UnsuccessfulOutcomeValue (value ngapType.UnsuccessfulOutcomeValue, binData 
 		if err != nil {
 			return binData, bitEnd, errors.New("UnsuccessfulOutcomeValue: " + err.Error())
 		}
-	case ngapType.UnsuccessfulOutcomeValuePresentHandoverPreparationFailure:
+	case ngapType.UnsuccessfulOutcomePresentHandoverPreparationFailure:
 		if value.HandoverPreparationFailure == nil {
 			return binData, bitEnd, errors.New("UnsuccessfulOutcomeValue: HandoverPreparationFailure: NIL")
 		}
@@ -1027,7 +1051,7 @@ func UnsuccessfulOutcomeValue (value ngapType.UnsuccessfulOutcomeValue, binData 
 		if err != nil {
 			return binData, bitEnd, errors.New("UnsuccessfulOutcomeValue: " + err.Error())
 		}
-	case ngapType.UnsuccessfulOutcomeValuePresentHandoverFailure:
+	case ngapType.UnsuccessfulOutcomePresentHandoverFailure:
 		if value.HandoverFailure == nil {
 			return binData, bitEnd, errors.New("UnsuccessfulOutcomeValue: HandoverFailure: NIL")
 		}
@@ -1035,7 +1059,7 @@ func UnsuccessfulOutcomeValue (value ngapType.UnsuccessfulOutcomeValue, binData 
 		if err != nil {
 			return binData, bitEnd, errors.New("UnsuccessfulOutcomeValue: " + err.Error())
 		}
-	case ngapType.UnsuccessfulOutcomeValuePresentInitialContextSetupFailure:
+	case ngapType.UnsuccessfulOutcomePresentInitialContextSetupFailure:
 		if value.InitialContextSetupFailure == nil {
 			return binData, bitEnd, errors.New("UnsuccessfulOutcomeValue: InitialContextSetupFailure: NIL")
 		}
@@ -1043,7 +1067,7 @@ func UnsuccessfulOutcomeValue (value ngapType.UnsuccessfulOutcomeValue, binData 
 		if err != nil {
 			return binData, bitEnd, errors.New("UnsuccessfulOutcomeValue: " + err.Error())
 		}
-	case ngapType.UnsuccessfulOutcomeValuePresentNGSetupFailure:
+	case ngapType.UnsuccessfulOutcomePresentNGSetupFailure:
 		if value.NGSetupFailure == nil {
 			return binData, bitEnd, errors.New("UnsuccessfulOutcomeValue: NGSetupFailure: NIL")
 		}
@@ -1051,7 +1075,7 @@ func UnsuccessfulOutcomeValue (value ngapType.UnsuccessfulOutcomeValue, binData 
 		if err != nil {
 			return binData, bitEnd, errors.New("UnsuccessfulOutcomeValue: " + err.Error())
 		}
-	case ngapType.UnsuccessfulOutcomeValuePresentPathSwitchRequestFailure:
+	case ngapType.UnsuccessfulOutcomePresentPathSwitchRequestFailure:
 		if value.PathSwitchRequestFailure == nil {
 			return binData, bitEnd, errors.New("UnsuccessfulOutcomeValue: PathSwitchRequestFailure: NIL")
 		}
@@ -1059,7 +1083,7 @@ func UnsuccessfulOutcomeValue (value ngapType.UnsuccessfulOutcomeValue, binData 
 		if err != nil {
 			return binData, bitEnd, errors.New("UnsuccessfulOutcomeValue: " + err.Error())
 		}
-	case ngapType.UnsuccessfulOutcomeValuePresentRANConfigurationUpdateFailure:
+	case ngapType.UnsuccessfulOutcomePresentRANConfigurationUpdateFailure:
 		if value.RANConfigurationUpdateFailure == nil {
 			return binData, bitEnd, errors.New("UnsuccessfulOutcomeValue: RANConfigurationUpdateFailure: NIL")
 		}
@@ -1067,7 +1091,7 @@ func UnsuccessfulOutcomeValue (value ngapType.UnsuccessfulOutcomeValue, binData 
 		if err != nil {
 			return binData, bitEnd, errors.New("UnsuccessfulOutcomeValue: " + err.Error())
 		}
-	case ngapType.UnsuccessfulOutcomeValuePresentUEContextModificationFailure:
+	case ngapType.UnsuccessfulOutcomePresentUEContextModificationFailure:
 		if value.UEContextModificationFailure == nil {
 			return binData, bitEnd, errors.New("UnsuccessfulOutcomeValue: UEContextModificationFailure: NIL")
 		}

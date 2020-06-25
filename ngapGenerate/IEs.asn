@@ -3350,7 +3350,10 @@ UE-associatedLogicalNG-connectionItem-ExtIEs NGAP-PROTOCOL-EXTENSION ::= {
 	...
 }
 
-UEContextRequest ::= ENUMERATED { requested, ... }
+UEContextRequest ::= ENUMERATED {
+    requested,
+    ...
+}
 
 UEHistoryInformation ::= SEQUENCE (SIZE(1..maxnoofCellsinUEHistoryInfo)) OF LastVisitedCellItem
 
@@ -3393,7 +3396,12 @@ UEPagingIdentity-ExtIEs NGAP-PROTOCOL-IES ::= {
 	...
 }
 
-UEPresence ::= ENUMERATED { in, out, unknown, ... }
+UEPresence ::= ENUMERATED {
+    in,
+    out,
+    unknown,
+    ...
+}
 
 UEPresenceInAreaOfInterestList ::= SEQUENCE (SIZE(1..maxnoofAoI)) OF UEPresenceInAreaOfInterestItem
 

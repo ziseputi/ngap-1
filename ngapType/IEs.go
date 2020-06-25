@@ -22,7 +22,7 @@ type AdditionalDLUPTNLInformationForHOItemExtIEs struct {
 }
 
 const (
-	AdditionalDLUPTNLInformationForHOItemExtIEsExtensionValuePresentNothing int = 0
+	AdditionalDLUPTNLInformationForHOItemExtIEsPresentNothing int = 0
 )
 
 type AdditionalDLUPTNLInformationForHOItemExtIEsExtensionValue struct {
@@ -55,7 +55,7 @@ type AllocationAndRetentionPriorityExtIEs struct {
 }
 
 const (
-	AllocationAndRetentionPriorityExtIEsExtensionValuePresentNothing int = 0
+	AllocationAndRetentionPriorityExtIEsPresentNothing int = 0
 )
 
 type AllocationAndRetentionPriorityExtIEsExtensionValue struct {
@@ -82,7 +82,7 @@ type AllowedNSSAIItemExtIEs struct {
 }
 
 const (
-	AllowedNSSAIItemExtIEsExtensionValuePresentNothing int = 0
+	AllowedNSSAIItemExtIEsPresentNothing int = 0
 )
 
 type AllowedNSSAIItemExtIEsExtensionValue struct {
@@ -121,7 +121,7 @@ type AMFPagingTargetExtIEs struct {
 }
 
 const (
-	AMFPagingTargetExtIEsTypeValuePresentNothing int = 0
+	AMFPagingTargetExtIEsPresentNothing int = 0
 )
 
 type AMFPagingTargetExtIEsTypeValue struct {
@@ -160,7 +160,7 @@ type AMFTNLAssociationSetupItemExtIEs struct {
 }
 
 const (
-	AMFTNLAssociationSetupItemExtIEsExtensionValuePresentNothing int = 0
+	AMFTNLAssociationSetupItemExtIEsPresentNothing int = 0
 )
 
 type AMFTNLAssociationSetupItemExtIEsExtensionValue struct {
@@ -189,7 +189,7 @@ type AMFTNLAssociationToAddItemExtIEs struct {
 }
 
 const (
-	AMFTNLAssociationToAddItemExtIEsExtensionValuePresentNothing int = 0
+	AMFTNLAssociationToAddItemExtIEsPresentNothing int = 0
 )
 
 type AMFTNLAssociationToAddItemExtIEsExtensionValue struct {
@@ -216,7 +216,7 @@ type AMFTNLAssociationToRemoveItemExtIEs struct {
 }
 
 const (
-	AMFTNLAssociationToRemoveItemExtIEsExtensionValuePresentTNLAssociationTransportLayerAddressNGRAN int = 0
+	AMFTNLAssociationToRemoveItemExtIEsPresentTNLAssociationTransportLayerAddressNGRAN int = 0
 )
 
 type AMFTNLAssociationToRemoveItemExtIEsExtensionValue struct {
@@ -246,7 +246,7 @@ type AMFTNLAssociationToUpdateItemExtIEs struct {
 }
 
 const (
-	AMFTNLAssociationToUpdateItemExtIEsExtensionValuePresentNothing int = 0
+	AMFTNLAssociationToUpdateItemExtIEsPresentNothing int = 0
 )
 
 type AMFTNLAssociationToUpdateItemExtIEsExtensionValue struct {
@@ -275,7 +275,7 @@ type AreaOfInterestExtIEs struct {
 }
 
 const (
-	AreaOfInterestExtIEsExtensionValuePresentNothing int = 0
+	AreaOfInterestExtIEsPresentNothing int = 0
 )
 
 type AreaOfInterestExtIEsExtensionValue struct {
@@ -302,7 +302,7 @@ type AreaOfInterestCellItemExtIEs struct {
 }
 
 const (
-	AreaOfInterestCellItemExtIEsExtensionValuePresentNothing int = 0
+	AreaOfInterestCellItemExtIEsPresentNothing int = 0
 )
 
 type AreaOfInterestCellItemExtIEsExtensionValue struct {
@@ -330,7 +330,7 @@ type AreaOfInterestItemExtIEs struct {
 }
 
 const (
-	AreaOfInterestItemExtIEsExtensionValuePresentNothing int = 0
+	AreaOfInterestItemExtIEsPresentNothing int = 0
 )
 
 type AreaOfInterestItemExtIEsExtensionValue struct {
@@ -357,7 +357,7 @@ type AreaOfInterestRANNodeItemExtIEs struct {
 }
 
 const (
-	AreaOfInterestRANNodeItemExtIEsExtensionValuePresentNothing int = 0
+	AreaOfInterestRANNodeItemExtIEsPresentNothing int = 0
 )
 
 type AreaOfInterestRANNodeItemExtIEsExtensionValue struct {
@@ -384,7 +384,7 @@ type AreaOfInterestTAIItemExtIEs struct {
 }
 
 const (
-	AreaOfInterestTAIItemExtIEsExtensionValuePresentNothing int = 0
+	AreaOfInterestTAIItemExtIEsPresentNothing int = 0
 )
 
 type AreaOfInterestTAIItemExtIEsExtensionValue struct {
@@ -408,7 +408,7 @@ type AssistanceDataForPagingExtIEs struct {
 }
 
 const (
-	AssistanceDataForPagingExtIEsExtensionValuePresentNothing int = 0
+	AssistanceDataForPagingExtIEsPresentNothing int = 0
 )
 
 type AssistanceDataForPagingExtIEsExtensionValue struct {
@@ -431,7 +431,7 @@ type AssistanceDataForRecommendedCellsExtIEs struct {
 }
 
 const (
-	AssistanceDataForRecommendedCellsExtIEsExtensionValuePresentNothing int = 0
+	AssistanceDataForRecommendedCellsExtIEsPresentNothing int = 0
 )
 
 type AssistanceDataForRecommendedCellsExtIEsExtensionValue struct {
@@ -459,7 +459,7 @@ type AssociatedQosFlowItemExtIEs struct {
 }
 
 const (
-	AssociatedQosFlowItemExtIEsExtensionValuePresentNothing int = 0
+	AssociatedQosFlowItemExtIEsPresentNothing int = 0
 )
 
 type AssociatedQosFlowItemExtIEsExtensionValue struct {
@@ -506,7 +506,7 @@ type BroadcastCancelledAreaListExtIEs struct {
 }
 
 const (
-	BroadcastCancelledAreaListExtIEsTypeValuePresentNothing int = 0
+	BroadcastCancelledAreaListExtIEsPresentNothing int = 0
 )
 
 type BroadcastCancelledAreaListExtIEsTypeValue struct {
@@ -545,7 +545,7 @@ type BroadcastCompletedAreaListExtIEs struct {
 }
 
 const (
-	BroadcastCompletedAreaListExtIEsTypeValuePresentNothing int = 0
+	BroadcastCompletedAreaListExtIEsPresentNothing int = 0
 )
 
 type BroadcastCompletedAreaListExtIEsTypeValue struct {
@@ -573,7 +573,7 @@ type BroadcastPLMNItemExtIEs struct {
 }
 
 const (
-	BroadcastPLMNItemExtIEsExtensionValuePresentNothing int = 0
+	BroadcastPLMNItemExtIEsPresentNothing int = 0
 )
 
 type BroadcastPLMNItemExtIEsExtensionValue struct {
@@ -609,7 +609,7 @@ type CancelledCellsInEAIEUTRAItemExtIEs struct {
 }
 
 const (
-	CancelledCellsInEAIEUTRAItemExtIEsExtensionValuePresentNothing int = 0
+	CancelledCellsInEAIEUTRAItemExtIEsPresentNothing int = 0
 )
 
 type CancelledCellsInEAIEUTRAItemExtIEsExtensionValue struct {
@@ -637,7 +637,7 @@ type CancelledCellsInEAINRItemExtIEs struct {
 }
 
 const (
-	CancelledCellsInEAINRItemExtIEsExtensionValuePresentNothing int = 0
+	CancelledCellsInEAINRItemExtIEsPresentNothing int = 0
 )
 
 type CancelledCellsInEAINRItemExtIEsExtensionValue struct {
@@ -665,7 +665,7 @@ type CancelledCellsInTAIEUTRAItemExtIEs struct {
 }
 
 const (
-	CancelledCellsInTAIEUTRAItemExtIEsExtensionValuePresentNothing int = 0
+	CancelledCellsInTAIEUTRAItemExtIEsPresentNothing int = 0
 )
 
 type CancelledCellsInTAIEUTRAItemExtIEsExtensionValue struct {
@@ -693,7 +693,7 @@ type CancelledCellsInTAINRItemExtIEs struct {
 }
 
 const (
-	CancelledCellsInTAINRItemExtIEsExtensionValuePresentNothing int = 0
+	CancelledCellsInTAINRItemExtIEsPresentNothing int = 0
 )
 
 type CancelledCellsInTAINRItemExtIEsExtensionValue struct {
@@ -730,7 +730,7 @@ type CauseExtIEs struct {
 }
 
 const (
-	CauseExtIEsTypeValuePresentNothing int = 0
+	CauseExtIEsPresentNothing int = 0
 )
 
 type CauseExtIEsTypeValue struct {
@@ -859,7 +859,7 @@ type CellIDBroadcastEUTRAItemExtIEs struct {
 }
 
 const (
-	CellIDBroadcastEUTRAItemExtIEsExtensionValuePresentNothing int = 0
+	CellIDBroadcastEUTRAItemExtIEsPresentNothing int = 0
 )
 
 type CellIDBroadcastEUTRAItemExtIEsExtensionValue struct {
@@ -886,7 +886,7 @@ type CellIDBroadcastNRItemExtIEs struct {
 }
 
 const (
-	CellIDBroadcastNRItemExtIEsExtensionValuePresentNothing int = 0
+	CellIDBroadcastNRItemExtIEsPresentNothing int = 0
 )
 
 type CellIDBroadcastNRItemExtIEsExtensionValue struct {
@@ -914,7 +914,7 @@ type CellIDCancelledEUTRAItemExtIEs struct {
 }
 
 const (
-	CellIDCancelledEUTRAItemExtIEsExtensionValuePresentNothing int = 0
+	CellIDCancelledEUTRAItemExtIEsPresentNothing int = 0
 )
 
 type CellIDCancelledEUTRAItemExtIEsExtensionValue struct {
@@ -942,7 +942,7 @@ type CellIDCancelledNRItemExtIEs struct {
 }
 
 const (
-	CellIDCancelledNRItemExtIEsExtensionValuePresentNothing int = 0
+	CellIDCancelledNRItemExtIEsPresentNothing int = 0
 )
 
 type CellIDCancelledNRItemExtIEsExtensionValue struct {
@@ -973,7 +973,7 @@ type CellIDListForRestartExtIEs struct {
 }
 
 const (
-	CellIDListForRestartExtIEsTypeValuePresentNothing int = 0
+	CellIDListForRestartExtIEsPresentNothing int = 0
 )
 
 type CellIDListForRestartExtIEsTypeValue struct {
@@ -1007,7 +1007,7 @@ type CellTypeExtIEs struct {
 }
 
 const (
-	CellTypeExtIEsExtensionValuePresentNothing int = 0
+	CellTypeExtIEsPresentNothing int = 0
 )
 
 type CellTypeExtIEsExtensionValue struct {
@@ -1030,7 +1030,7 @@ type CNAssistedRANTuningExtIEs struct {
 }
 
 const (
-	CNAssistedRANTuningExtIEsExtensionValuePresentNothing int = 0
+	CNAssistedRANTuningExtIEsPresentNothing int = 0
 )
 
 type CNAssistedRANTuningExtIEsExtensionValue struct {
@@ -1058,7 +1058,7 @@ type CNTypeRestrictionsForEquivalentItemExtIEs struct {
 }
 
 const (
-	CNTypeRestrictionsForEquivalentItemExtIEsExtensionValuePresentNothing int = 0
+	CNTypeRestrictionsForEquivalentItemExtIEsPresentNothing int = 0
 )
 
 type CNTypeRestrictionsForEquivalentItemExtIEsExtensionValue struct {
@@ -1097,7 +1097,7 @@ type CompletedCellsInEAIEUTRAItemExtIEs struct {
 }
 
 const (
-	CompletedCellsInEAIEUTRAItemExtIEsExtensionValuePresentNothing int = 0
+	CompletedCellsInEAIEUTRAItemExtIEsPresentNothing int = 0
 )
 
 type CompletedCellsInEAIEUTRAItemExtIEsExtensionValue struct {
@@ -1124,7 +1124,7 @@ type CompletedCellsInEAINRItemExtIEs struct {
 }
 
 const (
-	CompletedCellsInEAINRItemExtIEsExtensionValuePresentNothing int = 0
+	CompletedCellsInEAINRItemExtIEsPresentNothing int = 0
 )
 
 type CompletedCellsInEAINRItemExtIEsExtensionValue struct {
@@ -1151,7 +1151,7 @@ type CompletedCellsInTAIEUTRAItemExtIEs struct {
 }
 
 const (
-	CompletedCellsInTAIEUTRAItemExtIEsExtensionValuePresentNothing int = 0
+	CompletedCellsInTAIEUTRAItemExtIEsPresentNothing int = 0
 )
 
 type CompletedCellsInTAIEUTRAItemExtIEsExtensionValue struct {
@@ -1178,7 +1178,7 @@ type CompletedCellsInTAINRItemExtIEs struct {
 }
 
 const (
-	CompletedCellsInTAINRItemExtIEsExtensionValuePresentNothing int = 0
+	CompletedCellsInTAINRItemExtIEsPresentNothing int = 0
 )
 
 type CompletedCellsInTAINRItemExtIEsExtensionValue struct {
@@ -1233,7 +1233,7 @@ type CoreNetworkAssistanceInformationForInactiveExtIEs struct {
 }
 
 const (
-	CoreNetworkAssistanceInformationForInactiveExtIEsExtensionValuePresentNothing int = 0
+	CoreNetworkAssistanceInformationForInactiveExtIEsPresentNothing int = 0
 )
 
 type CoreNetworkAssistanceInformationForInactiveExtIEsExtensionValue struct {
@@ -1257,7 +1257,7 @@ type COUNTValueForPDCPSN12ExtIEs struct {
 }
 
 const (
-	COUNTValueForPDCPSN12ExtIEsExtensionValuePresentNothing int = 0
+	COUNTValueForPDCPSN12ExtIEsPresentNothing int = 0
 )
 
 type COUNTValueForPDCPSN12ExtIEsExtensionValue struct {
@@ -1281,7 +1281,7 @@ type COUNTValueForPDCPSN18ExtIEs struct {
 }
 
 const (
-	COUNTValueForPDCPSN18ExtIEsExtensionValuePresentNothing int = 0
+	COUNTValueForPDCPSN18ExtIEsPresentNothing int = 0
 )
 
 type COUNTValueForPDCPSN18ExtIEsExtensionValue struct {
@@ -1310,7 +1310,7 @@ type CPTransportLayerInformationExtIEs struct {
 }
 
 const (
-	CPTransportLayerInformationExtIEsTypeValuePresentEndpointIPAddressAndPort int = 0
+	CPTransportLayerInformationExtIEsPresentEndpointIPAddressAndPort int = 0
 )
 
 type CPTransportLayerInformationExtIEsTypeValue struct {
@@ -1337,7 +1337,7 @@ type CriticalityDiagnosticsExtIEs struct {
 }
 
 const (
-	CriticalityDiagnosticsExtIEsExtensionValuePresentNothing int = 0
+	CriticalityDiagnosticsExtIEsPresentNothing int = 0
 )
 
 type CriticalityDiagnosticsExtIEsExtensionValue struct {
@@ -1366,7 +1366,7 @@ type CriticalityDiagnosticsIEItemExtIEs struct {
 }
 
 const (
-	CriticalityDiagnosticsIEItemExtIEsExtensionValuePresentNothing int = 0
+	CriticalityDiagnosticsIEItemExtIEsPresentNothing int = 0
 )
 
 type CriticalityDiagnosticsIEItemExtIEsExtensionValue struct {
@@ -1415,7 +1415,7 @@ type DataForwardingResponseDRBItemExtIEs struct {
 }
 
 const (
-	DataForwardingResponseDRBItemExtIEsExtensionValuePresentNothing int = 0
+	DataForwardingResponseDRBItemExtIEsPresentNothing int = 0
 )
 
 type DataForwardingResponseDRBItemExtIEsExtensionValue struct {
@@ -1443,7 +1443,7 @@ type DataForwardingResponseERABListItemExtIEs struct {
 }
 
 const (
-	DataForwardingResponseERABListItemExtIEsExtensionValuePresentNothing int = 0
+	DataForwardingResponseERABListItemExtIEsPresentNothing int = 0
 )
 
 type DataForwardingResponseERABListItemExtIEsExtensionValue struct {
@@ -1509,7 +1509,7 @@ type DRBsSubjectToStatusTransferItemExtIEs struct {
 }
 
 const (
-	DRBsSubjectToStatusTransferItemExtIEsExtensionValuePresentOldAssociatedQosFlowListULendmarkerexpected int = 0
+	DRBsSubjectToStatusTransferItemExtIEsPresentOldAssociatedQosFlowListULendmarkerexpected int = 0
 )
 
 type DRBsSubjectToStatusTransferItemExtIEsExtensionValue struct {
@@ -1541,7 +1541,7 @@ type DRBStatusDLExtIEs struct {
 }
 
 const (
-	DRBStatusDLExtIEsTypeValuePresentNothing int = 0
+	DRBStatusDLExtIEsPresentNothing int = 0
 )
 
 type DRBStatusDLExtIEsTypeValue struct {
@@ -1564,7 +1564,7 @@ type DRBStatusDL12ExtIEs struct {
 }
 
 const (
-	DRBStatusDL12ExtIEsExtensionValuePresentNothing int = 0
+	DRBStatusDL12ExtIEsPresentNothing int = 0
 )
 
 type DRBStatusDL12ExtIEsExtensionValue struct {
@@ -1587,7 +1587,7 @@ type DRBStatusDL18ExtIEs struct {
 }
 
 const (
-	DRBStatusDL18ExtIEsExtensionValuePresentNothing int = 0
+	DRBStatusDL18ExtIEsPresentNothing int = 0
 )
 
 type DRBStatusDL18ExtIEsExtensionValue struct {
@@ -1618,7 +1618,7 @@ type DRBStatusULExtIEs struct {
 }
 
 const (
-	DRBStatusULExtIEsTypeValuePresentNothing int = 0
+	DRBStatusULExtIEsPresentNothing int = 0
 )
 
 type DRBStatusULExtIEsTypeValue struct {
@@ -1642,7 +1642,7 @@ type DRBStatusUL12ExtIEs struct {
 }
 
 const (
-	DRBStatusUL12ExtIEsExtensionValuePresentNothing int = 0
+	DRBStatusUL12ExtIEsPresentNothing int = 0
 )
 
 type DRBStatusUL12ExtIEsExtensionValue struct {
@@ -1666,7 +1666,7 @@ type DRBStatusUL18ExtIEs struct {
 }
 
 const (
-	DRBStatusUL18ExtIEsExtensionValuePresentNothing int = 0
+	DRBStatusUL18ExtIEsPresentNothing int = 0
 )
 
 type DRBStatusUL18ExtIEsExtensionValue struct {
@@ -1694,7 +1694,7 @@ type DRBsToQosFlowsMappingItemExtIEs struct {
 }
 
 const (
-	DRBsToQosFlowsMappingItemExtIEsExtensionValuePresentNothing int = 0
+	DRBsToQosFlowsMappingItemExtIEsPresentNothing int = 0
 )
 
 type DRBsToQosFlowsMappingItemExtIEsExtensionValue struct {
@@ -1723,7 +1723,7 @@ type Dynamic5QIDescriptorExtIEs struct {
 }
 
 const (
-	Dynamic5QIDescriptorExtIEsExtensionValuePresentNothing int = 0
+	Dynamic5QIDescriptorExtIEsPresentNothing int = 0
 )
 
 type Dynamic5QIDescriptorExtIEsExtensionValue struct {
@@ -1755,7 +1755,7 @@ type EmergencyAreaIDBroadcastEUTRAItemExtIEs struct {
 }
 
 const (
-	EmergencyAreaIDBroadcastEUTRAItemExtIEsExtensionValuePresentNothing int = 0
+	EmergencyAreaIDBroadcastEUTRAItemExtIEsPresentNothing int = 0
 )
 
 type EmergencyAreaIDBroadcastEUTRAItemExtIEsExtensionValue struct {
@@ -1783,7 +1783,7 @@ type EmergencyAreaIDBroadcastNRItemExtIEs struct {
 }
 
 const (
-	EmergencyAreaIDBroadcastNRItemExtIEsExtensionValuePresentNothing int = 0
+	EmergencyAreaIDBroadcastNRItemExtIEsPresentNothing int = 0
 )
 
 type EmergencyAreaIDBroadcastNRItemExtIEsExtensionValue struct {
@@ -1811,7 +1811,7 @@ type EmergencyAreaIDCancelledEUTRAItemExtIEs struct {
 }
 
 const (
-	EmergencyAreaIDCancelledEUTRAItemExtIEsExtensionValuePresentNothing int = 0
+	EmergencyAreaIDCancelledEUTRAItemExtIEsPresentNothing int = 0
 )
 
 type EmergencyAreaIDCancelledEUTRAItemExtIEsExtensionValue struct {
@@ -1839,7 +1839,7 @@ type EmergencyAreaIDCancelledNRItemExtIEs struct {
 }
 
 const (
-	EmergencyAreaIDCancelledNRItemExtIEsExtensionValuePresentNothing int = 0
+	EmergencyAreaIDCancelledNRItemExtIEsPresentNothing int = 0
 )
 
 type EmergencyAreaIDCancelledNRItemExtIEsExtensionValue struct {
@@ -1871,7 +1871,7 @@ type EmergencyFallbackIndicatorExtIEs struct {
 }
 
 const (
-	EmergencyFallbackIndicatorExtIEsExtensionValuePresentNothing int = 0
+	EmergencyFallbackIndicatorExtIEsPresentNothing int = 0
 )
 
 type EmergencyFallbackIndicatorExtIEsExtensionValue struct {
@@ -1916,7 +1916,7 @@ type EndpointIPAddressAndPortExtIEs struct {
 }
 
 const (
-	EndpointIPAddressAndPortExtIEsExtensionValuePresentNothing int = 0
+	EndpointIPAddressAndPortExtIEsPresentNothing int = 0
 )
 
 type EndpointIPAddressAndPortExtIEsExtensionValue struct {
@@ -1948,7 +1948,7 @@ type EPSTAIExtIEs struct {
 }
 
 const (
-	EPSTAIExtIEsExtensionValuePresentNothing int = 0
+	EPSTAIExtIEsPresentNothing int = 0
 )
 
 type EPSTAIExtIEsExtensionValue struct {
@@ -1980,7 +1980,7 @@ type ERABInformationItemExtIEs struct {
 }
 
 const (
-	ERABInformationItemExtIEsExtensionValuePresentNothing int = 0
+	ERABInformationItemExtIEsPresentNothing int = 0
 )
 
 type ERABInformationItemExtIEsExtensionValue struct {
@@ -2008,7 +2008,7 @@ type EUTRACGIExtIEs struct {
 }
 
 const (
-	EUTRACGIExtIEsExtensionValuePresentNothing int = 0
+	EUTRACGIExtIEsPresentNothing int = 0
 )
 
 type EUTRACGIExtIEsExtensionValue struct {
@@ -2084,7 +2084,7 @@ type ExpectedUEActivityBehaviourExtIEs struct {
 }
 
 const (
-	ExpectedUEActivityBehaviourExtIEsExtensionValuePresentNothing int = 0
+	ExpectedUEActivityBehaviourExtIEsPresentNothing int = 0
 )
 
 type ExpectedUEActivityBehaviourExtIEsExtensionValue struct {
@@ -2110,7 +2110,7 @@ type ExpectedUEBehaviourExtIEs struct {
 }
 
 const (
-	ExpectedUEBehaviourExtIEsExtensionValuePresentNothing int = 0
+	ExpectedUEBehaviourExtIEsPresentNothing int = 0
 )
 
 type ExpectedUEBehaviourExtIEsExtensionValue struct {
@@ -2147,7 +2147,7 @@ type ExpectedUEMovingTrajectoryItemExtIEs struct {
 }
 
 const (
-	ExpectedUEMovingTrajectoryItemExtIEsExtensionValuePresentNothing int = 0
+	ExpectedUEMovingTrajectoryItemExtIEsPresentNothing int = 0
 )
 
 type ExpectedUEMovingTrajectoryItemExtIEsExtensionValue struct {
@@ -2171,7 +2171,7 @@ type ExtendedRATRestrictionInformationExtIEs struct {
 }
 
 const (
-	ExtendedRATRestrictionInformationExtIEsExtensionValuePresentNothing int = 0
+	ExtendedRATRestrictionInformationExtIEsPresentNothing int = 0
 )
 
 type ExtendedRATRestrictionInformationExtIEsExtensionValue struct {
@@ -2200,7 +2200,7 @@ type FiveGSTMSIExtIEs struct {
 }
 
 const (
-	FiveGSTMSIExtIEsExtensionValuePresentNothing int = 0
+	FiveGSTMSIExtIEsPresentNothing int = 0
 )
 
 type FiveGSTMSIExtIEsExtensionValue struct {
@@ -2236,7 +2236,7 @@ type ForbiddenAreaInformationItemExtIEs struct {
 }
 
 const (
-	ForbiddenAreaInformationItemExtIEsExtensionValuePresentNothing int = 0
+	ForbiddenAreaInformationItemExtIEsPresentNothing int = 0
 )
 
 type ForbiddenAreaInformationItemExtIEsExtensionValue struct {
@@ -2269,7 +2269,7 @@ type GBRQosInformationExtIEs struct {
 }
 
 const (
-	GBRQosInformationExtIEsExtensionValuePresentNothing int = 0
+	GBRQosInformationExtIEsPresentNothing int = 0
 )
 
 type GBRQosInformationExtIEsExtensionValue struct {
@@ -2293,7 +2293,7 @@ type GlobalGNBIDExtIEs struct {
 }
 
 const (
-	GlobalGNBIDExtIEsExtensionValuePresentNothing int = 0
+	GlobalGNBIDExtIEsPresentNothing int = 0
 )
 
 type GlobalGNBIDExtIEsExtensionValue struct {
@@ -2317,7 +2317,7 @@ type GlobalN3IWFIDExtIEs struct {
 }
 
 const (
-	GlobalN3IWFIDExtIEsExtensionValuePresentNothing int = 0
+	GlobalN3IWFIDExtIEsPresentNothing int = 0
 )
 
 type GlobalN3IWFIDExtIEsExtensionValue struct {
@@ -2341,7 +2341,7 @@ type GlobalNgENBIDExtIEs struct {
 }
 
 const (
-	GlobalNgENBIDExtIEsExtensionValuePresentNothing int = 0
+	GlobalNgENBIDExtIEsPresentNothing int = 0
 )
 
 type GlobalNgENBIDExtIEsExtensionValue struct {
@@ -2374,7 +2374,7 @@ type GlobalRANNodeIDExtIEs struct {
 }
 
 const (
-	GlobalRANNodeIDExtIEsTypeValuePresentNothing int = 0
+	GlobalRANNodeIDExtIEsPresentNothing int = 0
 )
 
 type GlobalRANNodeIDExtIEsTypeValue struct {
@@ -2403,7 +2403,7 @@ type GNBIDExtIEs struct {
 }
 
 const (
-	GNBIDExtIEsTypeValuePresentNothing int = 0
+	GNBIDExtIEsPresentNothing int = 0
 )
 
 type GNBIDExtIEsTypeValue struct {
@@ -2431,7 +2431,7 @@ type GTPTunnelExtIEs struct {
 }
 
 const (
-	GTPTunnelExtIEsExtensionValuePresentNothing int = 0
+	GTPTunnelExtIEsPresentNothing int = 0
 )
 
 type GTPTunnelExtIEsExtensionValue struct {
@@ -2457,7 +2457,7 @@ type GUAMIExtIEs struct {
 }
 
 const (
-	GUAMIExtIEsExtensionValuePresentNothing int = 0
+	GUAMIExtIEsPresentNothing int = 0
 )
 
 type GUAMIExtIEsExtensionValue struct {
@@ -2491,10 +2491,10 @@ type HandoverCommandTransferExtIEs struct {
 }
 
 const (
-	HandoverCommandTransferExtIEsExtensionValuePresentAdditionalDLForwardingUPTNLInformation int = 0
-	HandoverCommandTransferExtIEsExtensionValuePresentULForwardingUPTNLInformation           int = 1
-	HandoverCommandTransferExtIEsExtensionValuePresentAdditionalULForwardingUPTNLInformation int = 2
-	HandoverCommandTransferExtIEsExtensionValuePresentDataForwardingResponseERABList         int = 3
+	HandoverCommandTransferExtIEsPresentAdditionalDLForwardingUPTNLInformation int = 0
+	HandoverCommandTransferExtIEsPresentULForwardingUPTNLInformation           int = 1
+	HandoverCommandTransferExtIEsPresentAdditionalULForwardingUPTNLInformation int = 2
+	HandoverCommandTransferExtIEsPresentDataForwardingResponseERABList         int = 3
 )
 
 type HandoverCommandTransferExtIEsExtensionValue struct {
@@ -2529,7 +2529,7 @@ type HandoverPreparationUnsuccessfulTransferExtIEs struct {
 }
 
 const (
-	HandoverPreparationUnsuccessfulTransferExtIEsExtensionValuePresentNothing int = 0
+	HandoverPreparationUnsuccessfulTransferExtIEsPresentNothing int = 0
 )
 
 type HandoverPreparationUnsuccessfulTransferExtIEsExtensionValue struct {
@@ -2557,10 +2557,10 @@ type HandoverRequestAcknowledgeTransferExtIEs struct {
 }
 
 const (
-	HandoverRequestAcknowledgeTransferExtIEsExtensionValuePresentAdditionalDLUPTNLInformationForHOList  int = 0
-	HandoverRequestAcknowledgeTransferExtIEsExtensionValuePresentULForwardingUPTNLInformation           int = 1
-	HandoverRequestAcknowledgeTransferExtIEsExtensionValuePresentAdditionalULForwardingUPTNLInformation int = 2
-	HandoverRequestAcknowledgeTransferExtIEsExtensionValuePresentDataForwardingResponseERABList         int = 3
+	HandoverRequestAcknowledgeTransferExtIEsPresentAdditionalDLUPTNLInformationForHOList  int = 0
+	HandoverRequestAcknowledgeTransferExtIEsPresentULForwardingUPTNLInformation           int = 1
+	HandoverRequestAcknowledgeTransferExtIEsPresentAdditionalULForwardingUPTNLInformation int = 2
+	HandoverRequestAcknowledgeTransferExtIEsPresentDataForwardingResponseERABList         int = 3
 )
 
 type HandoverRequestAcknowledgeTransferExtIEsExtensionValue struct {
@@ -2587,7 +2587,7 @@ type HandoverRequiredTransferExtIEs struct {
 }
 
 const (
-	HandoverRequiredTransferExtIEsExtensionValuePresentNothing int = 0
+	HandoverRequiredTransferExtIEsPresentNothing int = 0
 )
 
 type HandoverRequiredTransferExtIEsExtensionValue struct {
@@ -2611,7 +2611,7 @@ type HandoverResourceAllocationUnsuccessfulTransferExtIEs struct {
 }
 
 const (
-	HandoverResourceAllocationUnsuccessfulTransferExtIEsExtensionValuePresentNothing int = 0
+	HandoverResourceAllocationUnsuccessfulTransferExtIEsPresentNothing int = 0
 )
 
 type HandoverResourceAllocationUnsuccessfulTransferExtIEsExtensionValue struct {
@@ -2659,7 +2659,7 @@ type InfoOnRecommendedCellsAndRANNodesForPagingExtIEs struct {
 }
 
 const (
-	InfoOnRecommendedCellsAndRANNodesForPagingExtIEsExtensionValuePresentNothing int = 0
+	InfoOnRecommendedCellsAndRANNodesForPagingExtIEsPresentNothing int = 0
 )
 
 type InfoOnRecommendedCellsAndRANNodesForPagingExtIEsExtensionValue struct {
@@ -2714,7 +2714,7 @@ type LAIExtIEs struct {
 }
 
 const (
-	LAIExtIEsExtensionValuePresentNothing int = 0
+	LAIExtIEsPresentNothing int = 0
 )
 
 type LAIExtIEsExtensionValue struct {
@@ -2749,7 +2749,7 @@ type LastVisitedCellInformationExtIEs struct {
 }
 
 const (
-	LastVisitedCellInformationExtIEsTypeValuePresentNothing int = 0
+	LastVisitedCellInformationExtIEsPresentNothing int = 0
 )
 
 type LastVisitedCellInformationExtIEsTypeValue struct {
@@ -2772,7 +2772,7 @@ type LastVisitedCellItemExtIEs struct {
 }
 
 const (
-	LastVisitedCellItemExtIEsExtensionValuePresentNothing int = 0
+	LastVisitedCellItemExtIEsPresentNothing int = 0
 )
 
 type LastVisitedCellItemExtIEsExtensionValue struct {
@@ -2807,7 +2807,7 @@ type LastVisitedNGRANCellInformationExtIEs struct {
 }
 
 const (
-	LastVisitedNGRANCellInformationExtIEsExtensionValuePresentNothing int = 0
+	LastVisitedNGRANCellInformationExtIEsPresentNothing int = 0
 )
 
 type LastVisitedNGRANCellInformationExtIEsExtensionValue struct {
@@ -2849,7 +2849,7 @@ type LocationReportingRequestTypeExtIEs struct {
 }
 
 const (
-	LocationReportingRequestTypeExtIEsExtensionValuePresentLocationReportingAdditionalInfo int = 0
+	LocationReportingRequestTypeExtIEsPresentLocationReportingAdditionalInfo int = 0
 )
 
 type LocationReportingRequestTypeExtIEsExtensionValue struct {
@@ -2906,9 +2906,9 @@ type MobilityRestrictionListExtIEs struct {
 }
 
 const (
-	MobilityRestrictionListExtIEsExtensionValuePresentLastEUTRANPLMNIdentity          int = 0
-	MobilityRestrictionListExtIEsExtensionValuePresentCNTypeRestrictionsForServing    int = 1
-	MobilityRestrictionListExtIEsExtensionValuePresentCNTypeRestrictionsForEquivalent int = 2
+	MobilityRestrictionListExtIEsPresentLastEUTRANPLMNIdentity          int = 0
+	MobilityRestrictionListExtIEsPresentCNTypeRestrictionsForServing    int = 1
+	MobilityRestrictionListExtIEsPresentCNTypeRestrictionsForEquivalent int = 2
 )
 
 type MobilityRestrictionListExtIEsExtensionValue struct {
@@ -2940,7 +2940,7 @@ type N3IWFIDExtIEs struct {
 }
 
 const (
-	N3IWFIDExtIEsTypeValuePresentNothing int = 0
+	N3IWFIDExtIEsPresentNothing int = 0
 )
 
 type N3IWFIDExtIEsTypeValue struct {
@@ -3006,7 +3006,7 @@ type NgENBIDExtIEs struct {
 }
 
 const (
-	NgENBIDExtIEsTypeValuePresentNothing int = 0
+	NgENBIDExtIEsPresentNothing int = 0
 )
 
 type NgENBIDExtIEsTypeValue struct {
@@ -3037,7 +3037,7 @@ type NGRANCGIExtIEs struct {
 }
 
 const (
-	NGRANCGIExtIEsTypeValuePresentNothing int = 0
+	NGRANCGIExtIEsPresentNothing int = 0
 )
 
 type NGRANCGIExtIEsTypeValue struct {
@@ -3065,7 +3065,7 @@ type NGRANTNLAssociationToRemoveItemExtIEs struct {
 }
 
 const (
-	NGRANTNLAssociationToRemoveItemExtIEsExtensionValuePresentNothing int = 0
+	NGRANTNLAssociationToRemoveItemExtIEsPresentNothing int = 0
 )
 
 type NGRANTNLAssociationToRemoveItemExtIEsExtensionValue struct {
@@ -3095,7 +3095,7 @@ type NonDynamic5QIDescriptorExtIEs struct {
 }
 
 const (
-	NonDynamic5QIDescriptorExtIEsExtensionValuePresentNothing int = 0
+	NonDynamic5QIDescriptorExtIEsPresentNothing int = 0
 )
 
 type NonDynamic5QIDescriptorExtIEsExtensionValue struct {
@@ -3144,7 +3144,7 @@ type NRCGIExtIEs struct {
 }
 
 const (
-	NRCGIExtIEsExtensionValuePresentNothing int = 0
+	NRCGIExtIEsPresentNothing int = 0
 )
 
 type NRCGIExtIEsExtensionValue struct {
@@ -3212,7 +3212,7 @@ type OverloadResponseExtIEs struct {
 }
 
 const (
-	OverloadResponseExtIEsTypeValuePresentNothing int = 0
+	OverloadResponseExtIEsPresentNothing int = 0
 )
 
 type OverloadResponseExtIEsTypeValue struct {
@@ -3241,7 +3241,7 @@ type OverloadStartNSSAIItemExtIEs struct {
 }
 
 const (
-	OverloadStartNSSAIItemExtIEsExtensionValuePresentNothing int = 0
+	OverloadStartNSSAIItemExtIEsPresentNothing int = 0
 )
 
 type OverloadStartNSSAIItemExtIEsExtensionValue struct {
@@ -3269,7 +3269,7 @@ type PacketErrorRateExtIEs struct {
 }
 
 const (
-	PacketErrorRateExtIEsExtensionValuePresentNothing int = 0
+	PacketErrorRateExtIEsPresentNothing int = 0
 )
 
 type PacketErrorRateExtIEsExtensionValue struct {
@@ -3298,7 +3298,7 @@ type PagingAttemptInformationExtIEs struct {
 }
 
 const (
-	PagingAttemptInformationExtIEsExtensionValuePresentNothing int = 0
+	PagingAttemptInformationExtIEsPresentNothing int = 0
 )
 
 type PagingAttemptInformationExtIEsExtensionValue struct {
@@ -3360,7 +3360,7 @@ type PathSwitchRequestAcknowledgeTransferExtIEs struct {
 }
 
 const (
-	PathSwitchRequestAcknowledgeTransferExtIEsExtensionValuePresentAdditionalNGUUPTNLInformation int = 0
+	PathSwitchRequestAcknowledgeTransferExtIEsPresentAdditionalNGUUPTNLInformation int = 0
 )
 
 type PathSwitchRequestAcknowledgeTransferExtIEsExtensionValue struct {
@@ -3384,7 +3384,7 @@ type PathSwitchRequestSetupFailedTransferExtIEs struct {
 }
 
 const (
-	PathSwitchRequestSetupFailedTransferExtIEsExtensionValuePresentNothing int = 0
+	PathSwitchRequestSetupFailedTransferExtIEsPresentNothing int = 0
 )
 
 type PathSwitchRequestSetupFailedTransferExtIEsExtensionValue struct {
@@ -3410,7 +3410,7 @@ type PathSwitchRequestTransferExtIEs struct {
 }
 
 const (
-	PathSwitchRequestTransferExtIEsExtensionValuePresentAdditionalDLQosFlowPerTNLInformation int = 0
+	PathSwitchRequestTransferExtIEsPresentAdditionalDLQosFlowPerTNLInformation int = 0
 )
 
 type PathSwitchRequestTransferExtIEsExtensionValue struct {
@@ -3434,7 +3434,7 @@ type PathSwitchRequestUnsuccessfulTransferExtIEs struct {
 }
 
 const (
-	PathSwitchRequestUnsuccessfulTransferExtIEsExtensionValuePresentNothing int = 0
+	PathSwitchRequestUnsuccessfulTransferExtIEsPresentNothing int = 0
 )
 
 type PathSwitchRequestUnsuccessfulTransferExtIEsExtensionValue struct {
@@ -3458,7 +3458,7 @@ type PDUSessionAggregateMaximumBitRateExtIEs struct {
 }
 
 const (
-	PDUSessionAggregateMaximumBitRateExtIEsExtensionValuePresentNothing int = 0
+	PDUSessionAggregateMaximumBitRateExtIEsPresentNothing int = 0
 )
 
 type PDUSessionAggregateMaximumBitRateExtIEsExtensionValue struct {
@@ -3490,7 +3490,7 @@ type PDUSessionResourceAdmittedItemExtIEs struct {
 }
 
 const (
-	PDUSessionResourceAdmittedItemExtIEsExtensionValuePresentNothing int = 0
+	PDUSessionResourceAdmittedItemExtIEsPresentNothing int = 0
 )
 
 type PDUSessionResourceAdmittedItemExtIEsExtensionValue struct {
@@ -3518,7 +3518,7 @@ type PDUSessionResourceFailedToModifyItemModCfmExtIEs struct {
 }
 
 const (
-	PDUSessionResourceFailedToModifyItemModCfmExtIEsExtensionValuePresentNothing int = 0
+	PDUSessionResourceFailedToModifyItemModCfmExtIEsPresentNothing int = 0
 )
 
 type PDUSessionResourceFailedToModifyItemModCfmExtIEsExtensionValue struct {
@@ -3546,7 +3546,7 @@ type PDUSessionResourceFailedToModifyItemModResExtIEs struct {
 }
 
 const (
-	PDUSessionResourceFailedToModifyItemModResExtIEsExtensionValuePresentNothing int = 0
+	PDUSessionResourceFailedToModifyItemModResExtIEsPresentNothing int = 0
 )
 
 type PDUSessionResourceFailedToModifyItemModResExtIEsExtensionValue struct {
@@ -3574,7 +3574,7 @@ type PDUSessionResourceFailedToSetupItemCxtFailExtIEs struct {
 }
 
 const (
-	PDUSessionResourceFailedToSetupItemCxtFailExtIEsExtensionValuePresentNothing int = 0
+	PDUSessionResourceFailedToSetupItemCxtFailExtIEsPresentNothing int = 0
 )
 
 type PDUSessionResourceFailedToSetupItemCxtFailExtIEsExtensionValue struct {
@@ -3602,7 +3602,7 @@ type PDUSessionResourceFailedToSetupItemCxtResExtIEs struct {
 }
 
 const (
-	PDUSessionResourceFailedToSetupItemCxtResExtIEsExtensionValuePresentNothing int = 0
+	PDUSessionResourceFailedToSetupItemCxtResExtIEsPresentNothing int = 0
 )
 
 type PDUSessionResourceFailedToSetupItemCxtResExtIEsExtensionValue struct {
@@ -3630,7 +3630,7 @@ type PDUSessionResourceFailedToSetupItemHOAckExtIEs struct {
 }
 
 const (
-	PDUSessionResourceFailedToSetupItemHOAckExtIEsExtensionValuePresentNothing int = 0
+	PDUSessionResourceFailedToSetupItemHOAckExtIEsPresentNothing int = 0
 )
 
 type PDUSessionResourceFailedToSetupItemHOAckExtIEsExtensionValue struct {
@@ -3658,7 +3658,7 @@ type PDUSessionResourceFailedToSetupItemPSReqExtIEs struct {
 }
 
 const (
-	PDUSessionResourceFailedToSetupItemPSReqExtIEsExtensionValuePresentNothing int = 0
+	PDUSessionResourceFailedToSetupItemPSReqExtIEsPresentNothing int = 0
 )
 
 type PDUSessionResourceFailedToSetupItemPSReqExtIEsExtensionValue struct {
@@ -3686,7 +3686,7 @@ type PDUSessionResourceFailedToSetupItemSUResExtIEs struct {
 }
 
 const (
-	PDUSessionResourceFailedToSetupItemSUResExtIEsExtensionValuePresentNothing int = 0
+	PDUSessionResourceFailedToSetupItemSUResExtIEsPresentNothing int = 0
 )
 
 type PDUSessionResourceFailedToSetupItemSUResExtIEsExtensionValue struct {
@@ -3714,7 +3714,7 @@ type PDUSessionResourceHandoverItemExtIEs struct {
 }
 
 const (
-	PDUSessionResourceHandoverItemExtIEsExtensionValuePresentNothing int = 0
+	PDUSessionResourceHandoverItemExtIEsPresentNothing int = 0
 )
 
 type PDUSessionResourceHandoverItemExtIEsExtensionValue struct {
@@ -3743,7 +3743,7 @@ type PDUSessionResourceInformationItemExtIEs struct {
 }
 
 const (
-	PDUSessionResourceInformationItemExtIEsExtensionValuePresentNothing int = 0
+	PDUSessionResourceInformationItemExtIEsPresentNothing int = 0
 )
 
 type PDUSessionResourceInformationItemExtIEsExtensionValue struct {
@@ -3770,7 +3770,7 @@ type PDUSessionResourceItemCxtRelCplExtIEs struct {
 }
 
 const (
-	PDUSessionResourceItemCxtRelCplExtIEsExtensionValuePresentPDUSessionResourceReleaseResponseTransfer int = 0
+	PDUSessionResourceItemCxtRelCplExtIEsPresentPDUSessionResourceReleaseResponseTransfer int = 0
 )
 
 type PDUSessionResourceItemCxtRelCplExtIEsExtensionValue struct {
@@ -3798,7 +3798,7 @@ type PDUSessionResourceItemCxtRelReqExtIEs struct {
 }
 
 const (
-	PDUSessionResourceItemCxtRelReqExtIEsExtensionValuePresentNothing int = 0
+	PDUSessionResourceItemCxtRelReqExtIEsPresentNothing int = 0
 )
 
 type PDUSessionResourceItemCxtRelReqExtIEsExtensionValue struct {
@@ -3826,7 +3826,7 @@ type PDUSessionResourceItemHORqdExtIEs struct {
 }
 
 const (
-	PDUSessionResourceItemHORqdExtIEsExtensionValuePresentNothing int = 0
+	PDUSessionResourceItemHORqdExtIEsPresentNothing int = 0
 )
 
 type PDUSessionResourceItemHORqdExtIEsExtensionValue struct {
@@ -3852,7 +3852,7 @@ type PDUSessionResourceModifyConfirmTransferExtIEs struct {
 }
 
 const (
-	PDUSessionResourceModifyConfirmTransferExtIEsExtensionValuePresentNothing int = 0
+	PDUSessionResourceModifyConfirmTransferExtIEsPresentNothing int = 0
 )
 
 type PDUSessionResourceModifyConfirmTransferExtIEsExtensionValue struct {
@@ -3875,7 +3875,7 @@ type PDUSessionResourceModifyIndicationUnsuccessfulTransferExtIEs struct {
 }
 
 const (
-	PDUSessionResourceModifyIndicationUnsuccessfulTransferExtIEsExtensionValuePresentNothing int = 0
+	PDUSessionResourceModifyIndicationUnsuccessfulTransferExtIEsPresentNothing int = 0
 )
 
 type PDUSessionResourceModifyIndicationUnsuccessfulTransferExtIEsExtensionValue struct {
@@ -3897,13 +3897,13 @@ type PDUSessionResourceModifyRequestTransferIEs struct {
 }
 
 const (
-	PDUSessionResourceModifyRequestTransferIEsTypeValuePresentPDUSessionAggregateMaximumBitRate int = 0
-	PDUSessionResourceModifyRequestTransferIEsTypeValuePresentULNGUUPTNLModifyList              int = 1
-	PDUSessionResourceModifyRequestTransferIEsTypeValuePresentNetworkInstance                   int = 2
-	PDUSessionResourceModifyRequestTransferIEsTypeValuePresentQosFlowAddOrModifyRequestList     int = 3
-	PDUSessionResourceModifyRequestTransferIEsTypeValuePresentQosFlowToReleaseList              int = 4
-	PDUSessionResourceModifyRequestTransferIEsTypeValuePresentAdditionalULNGUUPTNLInformation   int = 5
-	PDUSessionResourceModifyRequestTransferIEsTypeValuePresentCommonNetworkInstance             int = 6
+	PDUSessionResourceModifyRequestTransferIEsPresentPDUSessionAggregateMaximumBitRate int = 0
+	PDUSessionResourceModifyRequestTransferIEsPresentULNGUUPTNLModifyList              int = 1
+	PDUSessionResourceModifyRequestTransferIEsPresentNetworkInstance                   int = 2
+	PDUSessionResourceModifyRequestTransferIEsPresentQosFlowAddOrModifyRequestList     int = 3
+	PDUSessionResourceModifyRequestTransferIEsPresentQosFlowToReleaseList              int = 4
+	PDUSessionResourceModifyRequestTransferIEsPresentAdditionalULNGUUPTNLInformation   int = 5
+	PDUSessionResourceModifyRequestTransferIEsPresentCommonNetworkInstance             int = 6
 )
 
 type PDUSessionResourceModifyRequestTransferIEsTypeValue struct {
@@ -3937,7 +3937,7 @@ type PDUSessionResourceModifyResponseTransferExtIEs struct {
 }
 
 const (
-	PDUSessionResourceModifyResponseTransferExtIEsExtensionValuePresentAdditionalNGUUPTNLInformation int = 0
+	PDUSessionResourceModifyResponseTransferExtIEsPresentAdditionalNGUUPTNLInformation int = 0
 )
 
 type PDUSessionResourceModifyResponseTransferExtIEsExtensionValue struct {
@@ -3962,8 +3962,8 @@ type PDUSessionResourceModifyIndicationTransferExtIEs struct {
 }
 
 const (
-	PDUSessionResourceModifyIndicationTransferExtIEsExtensionValuePresentSecondaryRATUsageInformation int = 0
-	PDUSessionResourceModifyIndicationTransferExtIEsExtensionValuePresentSecurityResult               int = 1
+	PDUSessionResourceModifyIndicationTransferExtIEsPresentSecondaryRATUsageInformation int = 0
+	PDUSessionResourceModifyIndicationTransferExtIEsPresentSecurityResult               int = 1
 )
 
 type PDUSessionResourceModifyIndicationTransferExtIEsExtensionValue struct {
@@ -3993,7 +3993,7 @@ type PDUSessionResourceModifyItemModCfmExtIEs struct {
 }
 
 const (
-	PDUSessionResourceModifyItemModCfmExtIEsExtensionValuePresentNothing int = 0
+	PDUSessionResourceModifyItemModCfmExtIEsPresentNothing int = 0
 )
 
 type PDUSessionResourceModifyItemModCfmExtIEsExtensionValue struct {
@@ -4021,7 +4021,7 @@ type PDUSessionResourceModifyItemModIndExtIEs struct {
 }
 
 const (
-	PDUSessionResourceModifyItemModIndExtIEsExtensionValuePresentNothing int = 0
+	PDUSessionResourceModifyItemModIndExtIEsPresentNothing int = 0
 )
 
 type PDUSessionResourceModifyItemModIndExtIEsExtensionValue struct {
@@ -4050,7 +4050,7 @@ type PDUSessionResourceModifyItemModReqExtIEs struct {
 }
 
 const (
-	PDUSessionResourceModifyItemModReqExtIEsExtensionValuePresentSNSSAI int = 0
+	PDUSessionResourceModifyItemModReqExtIEsPresentSNSSAI int = 0
 )
 
 type PDUSessionResourceModifyItemModReqExtIEsExtensionValue struct {
@@ -4079,7 +4079,7 @@ type PDUSessionResourceModifyItemModResExtIEs struct {
 }
 
 const (
-	PDUSessionResourceModifyItemModResExtIEsExtensionValuePresentNothing int = 0
+	PDUSessionResourceModifyItemModResExtIEsPresentNothing int = 0
 )
 
 type PDUSessionResourceModifyItemModResExtIEsExtensionValue struct {
@@ -4103,7 +4103,7 @@ type PDUSessionResourceModifyUnsuccessfulTransferExtIEs struct {
 }
 
 const (
-	PDUSessionResourceModifyUnsuccessfulTransferExtIEsExtensionValuePresentNothing int = 0
+	PDUSessionResourceModifyUnsuccessfulTransferExtIEsPresentNothing int = 0
 )
 
 type PDUSessionResourceModifyUnsuccessfulTransferExtIEsExtensionValue struct {
@@ -4131,7 +4131,7 @@ type PDUSessionResourceNotifyItemExtIEs struct {
 }
 
 const (
-	PDUSessionResourceNotifyItemExtIEsExtensionValuePresentNothing int = 0
+	PDUSessionResourceNotifyItemExtIEsPresentNothing int = 0
 )
 
 type PDUSessionResourceNotifyItemExtIEsExtensionValue struct {
@@ -4154,7 +4154,7 @@ type PDUSessionResourceNotifyReleasedTransferExtIEs struct {
 }
 
 const (
-	PDUSessionResourceNotifyReleasedTransferExtIEsExtensionValuePresentSecondaryRATUsageInformation int = 0
+	PDUSessionResourceNotifyReleasedTransferExtIEsPresentSecondaryRATUsageInformation int = 0
 )
 
 type PDUSessionResourceNotifyReleasedTransferExtIEsExtensionValue struct {
@@ -4179,7 +4179,7 @@ type PDUSessionResourceNotifyTransferExtIEs struct {
 }
 
 const (
-	PDUSessionResourceNotifyTransferExtIEsExtensionValuePresentSecondaryRATUsageInformation int = 0
+	PDUSessionResourceNotifyTransferExtIEsPresentSecondaryRATUsageInformation int = 0
 )
 
 type PDUSessionResourceNotifyTransferExtIEsExtensionValue struct {
@@ -4203,7 +4203,7 @@ type PDUSessionResourceReleaseCommandTransferExtIEs struct {
 }
 
 const (
-	PDUSessionResourceReleaseCommandTransferExtIEsExtensionValuePresentNothing int = 0
+	PDUSessionResourceReleaseCommandTransferExtIEsPresentNothing int = 0
 )
 
 type PDUSessionResourceReleaseCommandTransferExtIEsExtensionValue struct {
@@ -4231,7 +4231,7 @@ type PDUSessionResourceReleasedItemNotExtIEs struct {
 }
 
 const (
-	PDUSessionResourceReleasedItemNotExtIEsExtensionValuePresentNothing int = 0
+	PDUSessionResourceReleasedItemNotExtIEsPresentNothing int = 0
 )
 
 type PDUSessionResourceReleasedItemNotExtIEsExtensionValue struct {
@@ -4259,7 +4259,7 @@ type PDUSessionResourceReleasedItemPSAckExtIEs struct {
 }
 
 const (
-	PDUSessionResourceReleasedItemPSAckExtIEsExtensionValuePresentNothing int = 0
+	PDUSessionResourceReleasedItemPSAckExtIEsPresentNothing int = 0
 )
 
 type PDUSessionResourceReleasedItemPSAckExtIEsExtensionValue struct {
@@ -4287,7 +4287,7 @@ type PDUSessionResourceReleasedItemPSFailExtIEs struct {
 }
 
 const (
-	PDUSessionResourceReleasedItemPSFailExtIEsExtensionValuePresentNothing int = 0
+	PDUSessionResourceReleasedItemPSFailExtIEsPresentNothing int = 0
 )
 
 type PDUSessionResourceReleasedItemPSFailExtIEsExtensionValue struct {
@@ -4315,7 +4315,7 @@ type PDUSessionResourceReleasedItemRelResExtIEs struct {
 }
 
 const (
-	PDUSessionResourceReleasedItemRelResExtIEsExtensionValuePresentNothing int = 0
+	PDUSessionResourceReleasedItemRelResExtIEsPresentNothing int = 0
 )
 
 type PDUSessionResourceReleasedItemRelResExtIEsExtensionValue struct {
@@ -4337,7 +4337,7 @@ type PDUSessionResourceReleaseResponseTransferExtIEs struct {
 }
 
 const (
-	PDUSessionResourceReleaseResponseTransferExtIEsExtensionValuePresentSecondaryRATUsageInformation int = 0
+	PDUSessionResourceReleaseResponseTransferExtIEsPresentSecondaryRATUsageInformation int = 0
 )
 
 type PDUSessionResourceReleaseResponseTransferExtIEsExtensionValue struct {
@@ -4366,7 +4366,7 @@ type PDUSessionResourceSecondaryRATUsageItemExtIEs struct {
 }
 
 const (
-	PDUSessionResourceSecondaryRATUsageItemExtIEsExtensionValuePresentNothing int = 0
+	PDUSessionResourceSecondaryRATUsageItemExtIEsPresentNothing int = 0
 )
 
 type PDUSessionResourceSecondaryRATUsageItemExtIEsExtensionValue struct {
@@ -4396,7 +4396,7 @@ type PDUSessionResourceSetupItemCxtReqExtIEs struct {
 }
 
 const (
-	PDUSessionResourceSetupItemCxtReqExtIEsExtensionValuePresentNothing int = 0
+	PDUSessionResourceSetupItemCxtReqExtIEsPresentNothing int = 0
 )
 
 type PDUSessionResourceSetupItemCxtReqExtIEsExtensionValue struct {
@@ -4424,7 +4424,7 @@ type PDUSessionResourceSetupItemCxtResExtIEs struct {
 }
 
 const (
-	PDUSessionResourceSetupItemCxtResExtIEsExtensionValuePresentNothing int = 0
+	PDUSessionResourceSetupItemCxtResExtIEsPresentNothing int = 0
 )
 
 type PDUSessionResourceSetupItemCxtResExtIEsExtensionValue struct {
@@ -4453,7 +4453,7 @@ type PDUSessionResourceSetupItemHOReqExtIEs struct {
 }
 
 const (
-	PDUSessionResourceSetupItemHOReqExtIEsExtensionValuePresentNothing int = 0
+	PDUSessionResourceSetupItemHOReqExtIEsPresentNothing int = 0
 )
 
 type PDUSessionResourceSetupItemHOReqExtIEsExtensionValue struct {
@@ -4483,7 +4483,7 @@ type PDUSessionResourceSetupItemSUReqExtIEs struct {
 }
 
 const (
-	PDUSessionResourceSetupItemSUReqExtIEsExtensionValuePresentNothing int = 0
+	PDUSessionResourceSetupItemSUReqExtIEsPresentNothing int = 0
 )
 
 type PDUSessionResourceSetupItemSUReqExtIEsExtensionValue struct {
@@ -4511,7 +4511,7 @@ type PDUSessionResourceSetupItemSUResExtIEs struct {
 }
 
 const (
-	PDUSessionResourceSetupItemSUResExtIEsExtensionValuePresentNothing int = 0
+	PDUSessionResourceSetupItemSUResExtIEsPresentNothing int = 0
 )
 
 type PDUSessionResourceSetupItemSUResExtIEsExtensionValue struct {
@@ -4533,16 +4533,16 @@ type PDUSessionResourceSetupRequestTransferIEs struct {
 }
 
 const (
-	PDUSessionResourceSetupRequestTransferIEsTypeValuePresentPDUSessionAggregateMaximumBitRate int = 0
-	PDUSessionResourceSetupRequestTransferIEsTypeValuePresentULNGUUPTNLInformation             int = 1
-	PDUSessionResourceSetupRequestTransferIEsTypeValuePresentAdditionalULNGUUPTNLInformation   int = 2
-	PDUSessionResourceSetupRequestTransferIEsTypeValuePresentDataForwardingNotPossible         int = 3
-	PDUSessionResourceSetupRequestTransferIEsTypeValuePresentPDUSessionType                    int = 4
-	PDUSessionResourceSetupRequestTransferIEsTypeValuePresentSecurityIndication                int = 5
-	PDUSessionResourceSetupRequestTransferIEsTypeValuePresentNetworkInstance                   int = 6
-	PDUSessionResourceSetupRequestTransferIEsTypeValuePresentQosFlowSetupRequestList           int = 7
-	PDUSessionResourceSetupRequestTransferIEsTypeValuePresentCommonNetworkInstance             int = 8
-	PDUSessionResourceSetupRequestTransferIEsTypeValuePresentDirectForwardingPathAvailability  int = 9
+	PDUSessionResourceSetupRequestTransferIEsPresentPDUSessionAggregateMaximumBitRate int = 0
+	PDUSessionResourceSetupRequestTransferIEsPresentULNGUUPTNLInformation             int = 1
+	PDUSessionResourceSetupRequestTransferIEsPresentAdditionalULNGUUPTNLInformation   int = 2
+	PDUSessionResourceSetupRequestTransferIEsPresentDataForwardingNotPossible         int = 3
+	PDUSessionResourceSetupRequestTransferIEsPresentPDUSessionType                    int = 4
+	PDUSessionResourceSetupRequestTransferIEsPresentSecurityIndication                int = 5
+	PDUSessionResourceSetupRequestTransferIEsPresentNetworkInstance                   int = 6
+	PDUSessionResourceSetupRequestTransferIEsPresentQosFlowSetupRequestList           int = 7
+	PDUSessionResourceSetupRequestTransferIEsPresentCommonNetworkInstance             int = 8
+	PDUSessionResourceSetupRequestTransferIEsPresentDirectForwardingPathAvailability  int = 9
 )
 
 type PDUSessionResourceSetupRequestTransferIEsTypeValue struct {
@@ -4578,7 +4578,7 @@ type PDUSessionResourceSetupResponseTransferExtIEs struct {
 }
 
 const (
-	PDUSessionResourceSetupResponseTransferExtIEsExtensionValuePresentNothing int = 0
+	PDUSessionResourceSetupResponseTransferExtIEsPresentNothing int = 0
 )
 
 type PDUSessionResourceSetupResponseTransferExtIEsExtensionValue struct {
@@ -4602,7 +4602,7 @@ type PDUSessionResourceSetupUnsuccessfulTransferExtIEs struct {
 }
 
 const (
-	PDUSessionResourceSetupUnsuccessfulTransferExtIEsExtensionValuePresentNothing int = 0
+	PDUSessionResourceSetupUnsuccessfulTransferExtIEsPresentNothing int = 0
 )
 
 type PDUSessionResourceSetupUnsuccessfulTransferExtIEsExtensionValue struct {
@@ -4630,7 +4630,7 @@ type PDUSessionResourceSwitchedItemExtIEs struct {
 }
 
 const (
-	PDUSessionResourceSwitchedItemExtIEsExtensionValuePresentNothing int = 0
+	PDUSessionResourceSwitchedItemExtIEsPresentNothing int = 0
 )
 
 type PDUSessionResourceSwitchedItemExtIEsExtensionValue struct {
@@ -4658,7 +4658,7 @@ type PDUSessionResourceToBeSwitchedDLItemExtIEs struct {
 }
 
 const (
-	PDUSessionResourceToBeSwitchedDLItemExtIEsExtensionValuePresentNothing int = 0
+	PDUSessionResourceToBeSwitchedDLItemExtIEsPresentNothing int = 0
 )
 
 type PDUSessionResourceToBeSwitchedDLItemExtIEsExtensionValue struct {
@@ -4686,7 +4686,7 @@ type PDUSessionResourceToReleaseItemHOCmdExtIEs struct {
 }
 
 const (
-	PDUSessionResourceToReleaseItemHOCmdExtIEsExtensionValuePresentNothing int = 0
+	PDUSessionResourceToReleaseItemHOCmdExtIEsPresentNothing int = 0
 )
 
 type PDUSessionResourceToReleaseItemHOCmdExtIEsExtensionValue struct {
@@ -4714,7 +4714,7 @@ type PDUSessionResourceToReleaseItemRelCmdExtIEs struct {
 }
 
 const (
-	PDUSessionResourceToReleaseItemRelCmdExtIEsExtensionValuePresentNothing int = 0
+	PDUSessionResourceToReleaseItemRelCmdExtIEsPresentNothing int = 0
 )
 
 type PDUSessionResourceToReleaseItemRelCmdExtIEsExtensionValue struct {
@@ -4750,7 +4750,7 @@ type PDUSessionUsageReportExtIEs struct {
 }
 
 const (
-	PDUSessionUsageReportExtIEsExtensionValuePresentNothing int = 0
+	PDUSessionUsageReportExtIEsPresentNothing int = 0
 )
 
 type PDUSessionUsageReportExtIEsExtensionValue struct {
@@ -4786,7 +4786,7 @@ type PLMNSupportItemExtIEs struct {
 }
 
 const (
-	PLMNSupportItemExtIEsExtensionValuePresentNothing int = 0
+	PLMNSupportItemExtIEsPresentNothing int = 0
 )
 
 type PLMNSupportItemExtIEsExtensionValue struct {
@@ -4847,7 +4847,7 @@ type PWSFailedCellIDListExtIEs struct {
 }
 
 const (
-	PWSFailedCellIDListExtIEsTypeValuePresentNothing int = 0
+	PWSFailedCellIDListExtIEsPresentNothing int = 0
 )
 
 type PWSFailedCellIDListExtIEsTypeValue struct {
@@ -4878,7 +4878,7 @@ type QosCharacteristicsExtIEs struct {
 }
 
 const (
-	QosCharacteristicsExtIEsTypeValuePresentNothing int = 0
+	QosCharacteristicsExtIEsPresentNothing int = 0
 )
 
 type QosCharacteristicsExtIEsTypeValue struct {
@@ -4905,7 +4905,7 @@ type QosFlowAcceptedItemExtIEs struct {
 }
 
 const (
-	QosFlowAcceptedItemExtIEsExtensionValuePresentNothing int = 0
+	QosFlowAcceptedItemExtIEsPresentNothing int = 0
 )
 
 type QosFlowAcceptedItemExtIEsExtensionValue struct {
@@ -4934,7 +4934,7 @@ type QosFlowAddOrModifyRequestItemExtIEs struct {
 }
 
 const (
-	QosFlowAddOrModifyRequestItemExtIEsExtensionValuePresentNothing int = 0
+	QosFlowAddOrModifyRequestItemExtIEsPresentNothing int = 0
 )
 
 type QosFlowAddOrModifyRequestItemExtIEsExtensionValue struct {
@@ -4961,7 +4961,7 @@ type QosFlowAddOrModifyResponseItemExtIEs struct {
 }
 
 const (
-	QosFlowAddOrModifyResponseItemExtIEsExtensionValuePresentNothing int = 0
+	QosFlowAddOrModifyResponseItemExtIEsPresentNothing int = 0
 )
 
 type QosFlowAddOrModifyResponseItemExtIEsExtensionValue struct {
@@ -4993,7 +4993,7 @@ type QosFlowInformationItemExtIEs struct {
 }
 
 const (
-	QosFlowInformationItemExtIEsExtensionValuePresentULForwarding int = 0
+	QosFlowInformationItemExtIEsPresentULForwarding int = 0
 )
 
 type QosFlowInformationItemExtIEsExtensionValue struct {
@@ -5021,7 +5021,7 @@ type QosFlowLevelQosParametersExtIEs struct {
 }
 
 const (
-	QosFlowLevelQosParametersExtIEsExtensionValuePresentQosMonitoringRequest int = 0
+	QosFlowLevelQosParametersExtIEsPresentQosMonitoringRequest int = 0
 )
 
 type QosFlowLevelQosParametersExtIEsExtensionValue struct {
@@ -5060,7 +5060,7 @@ type QosFlowWithCauseItemExtIEs struct {
 }
 
 const (
-	QosFlowWithCauseItemExtIEsExtensionValuePresentNothing int = 0
+	QosFlowWithCauseItemExtIEsPresentNothing int = 0
 )
 
 type QosFlowWithCauseItemExtIEsExtensionValue struct {
@@ -5087,7 +5087,7 @@ type QosFlowModifyConfirmItemExtIEs struct {
 }
 
 const (
-	QosFlowModifyConfirmItemExtIEsExtensionValuePresentNothing int = 0
+	QosFlowModifyConfirmItemExtIEsPresentNothing int = 0
 )
 
 type QosFlowModifyConfirmItemExtIEsExtensionValue struct {
@@ -5115,7 +5115,7 @@ type QosFlowNotifyItemExtIEs struct {
 }
 
 const (
-	QosFlowNotifyItemExtIEsExtensionValuePresentNothing int = 0
+	QosFlowNotifyItemExtIEsPresentNothing int = 0
 )
 
 type QosFlowNotifyItemExtIEsExtensionValue struct {
@@ -5139,7 +5139,7 @@ type QosFlowPerTNLInformationExtIEs struct {
 }
 
 const (
-	QosFlowPerTNLInformationExtIEsExtensionValuePresentNothing int = 0
+	QosFlowPerTNLInformationExtIEsPresentNothing int = 0
 )
 
 type QosFlowPerTNLInformationExtIEsExtensionValue struct {
@@ -5166,7 +5166,7 @@ type QosFlowPerTNLInformationItemExtIEs struct {
 }
 
 const (
-	QosFlowPerTNLInformationItemExtIEsExtensionValuePresentNothing int = 0
+	QosFlowPerTNLInformationItemExtIEsPresentNothing int = 0
 )
 
 type QosFlowPerTNLInformationItemExtIEsExtensionValue struct {
@@ -5195,7 +5195,7 @@ type QosFlowSetupRequestItemExtIEs struct {
 }
 
 const (
-	QosFlowSetupRequestItemExtIEsExtensionValuePresentNothing int = 0
+	QosFlowSetupRequestItemExtIEsPresentNothing int = 0
 )
 
 type QosFlowSetupRequestItemExtIEsExtensionValue struct {
@@ -5223,7 +5223,7 @@ type QosFlowItemWithDataForwardingExtIEs struct {
 }
 
 const (
-	QosFlowItemWithDataForwardingExtIEsExtensionValuePresentNothing int = 0
+	QosFlowItemWithDataForwardingExtIEsPresentNothing int = 0
 )
 
 type QosFlowItemWithDataForwardingExtIEsExtensionValue struct {
@@ -5250,7 +5250,7 @@ type QosFlowToBeForwardedItemExtIEs struct {
 }
 
 const (
-	QosFlowToBeForwardedItemExtIEsExtensionValuePresentNothing int = 0
+	QosFlowToBeForwardedItemExtIEsPresentNothing int = 0
 )
 
 type QosFlowToBeForwardedItemExtIEsExtensionValue struct {
@@ -5279,7 +5279,7 @@ type QoSFlowsUsageReportItemExtIEs struct {
 }
 
 const (
-	QoSFlowsUsageReportItemExtIEsExtensionValuePresentNothing int = 0
+	QoSFlowsUsageReportItemExtIEsPresentNothing int = 0
 )
 
 type QoSFlowsUsageReportItemExtIEsExtensionValue struct {
@@ -5310,7 +5310,7 @@ type RANStatusTransferTransparentContainerExtIEs struct {
 }
 
 const (
-	RANStatusTransferTransparentContainerExtIEsExtensionValuePresentNothing int = 0
+	RANStatusTransferTransparentContainerExtIEsPresentNothing int = 0
 )
 
 type RANStatusTransferTransparentContainerExtIEsExtensionValue struct {
@@ -5350,7 +5350,7 @@ type RATRestrictionsItemExtIEs struct {
 }
 
 const (
-	RATRestrictionsItemExtIEsExtensionValuePresentExtendedRATRestrictionInformation int = 0
+	RATRestrictionsItemExtIEsPresentExtendedRATRestrictionInformation int = 0
 )
 
 type RATRestrictionsItemExtIEsExtensionValue struct {
@@ -5378,7 +5378,7 @@ type RecommendedCellsForPagingExtIEs struct {
 }
 
 const (
-	RecommendedCellsForPagingExtIEsExtensionValuePresentNothing int = 0
+	RecommendedCellsForPagingExtIEsPresentNothing int = 0
 )
 
 type RecommendedCellsForPagingExtIEsExtensionValue struct {
@@ -5406,7 +5406,7 @@ type RecommendedCellItemExtIEs struct {
 }
 
 const (
-	RecommendedCellItemExtIEsExtensionValuePresentNothing int = 0
+	RecommendedCellItemExtIEsPresentNothing int = 0
 )
 
 type RecommendedCellItemExtIEsExtensionValue struct {
@@ -5429,7 +5429,7 @@ type RecommendedRANNodesForPagingExtIEs struct {
 }
 
 const (
-	RecommendedRANNodesForPagingExtIEsExtensionValuePresentNothing int = 0
+	RecommendedRANNodesForPagingExtIEsPresentNothing int = 0
 )
 
 type RecommendedRANNodesForPagingExtIEsExtensionValue struct {
@@ -5456,7 +5456,7 @@ type RecommendedRANNodeItemExtIEs struct {
 }
 
 const (
-	RecommendedRANNodeItemExtIEsExtensionValuePresentNothing int = 0
+	RecommendedRANNodeItemExtIEsPresentNothing int = 0
 )
 
 type RecommendedRANNodeItemExtIEsExtensionValue struct {
@@ -5528,7 +5528,7 @@ type ResetTypeExtIEs struct {
 }
 
 const (
-	ResetTypeExtIEsTypeValuePresentNothing int = 0
+	ResetTypeExtIEsPresentNothing int = 0
 )
 
 type ResetTypeExtIEsTypeValue struct {
@@ -5602,7 +5602,7 @@ type RIMInformationTransferExtIEs struct {
 }
 
 const (
-	RIMInformationTransferExtIEsExtensionValuePresentNothing int = 0
+	RIMInformationTransferExtIEsPresentNothing int = 0
 )
 
 type RIMInformationTransferExtIEsExtensionValue struct {
@@ -5643,7 +5643,7 @@ type SecondaryRATUsageInformationExtIEs struct {
 }
 
 const (
-	SecondaryRATUsageInformationExtIEsExtensionValuePresentNothing int = 0
+	SecondaryRATUsageInformationExtIEsPresentNothing int = 0
 )
 
 type SecondaryRATUsageInformationExtIEsExtensionValue struct {
@@ -5666,7 +5666,7 @@ type SecondaryRATDataUsageReportTransferExtIEs struct {
 }
 
 const (
-	SecondaryRATDataUsageReportTransferExtIEsExtensionValuePresentNothing int = 0
+	SecondaryRATDataUsageReportTransferExtIEsPresentNothing int = 0
 )
 
 type SecondaryRATDataUsageReportTransferExtIEsExtensionValue struct {
@@ -5690,7 +5690,7 @@ type SecurityContextExtIEs struct {
 }
 
 const (
-	SecurityContextExtIEsExtensionValuePresentNothing int = 0
+	SecurityContextExtIEsPresentNothing int = 0
 )
 
 type SecurityContextExtIEsExtensionValue struct {
@@ -5715,7 +5715,7 @@ type SecurityIndicationExtIEs struct {
 }
 
 const (
-	SecurityIndicationExtIEsExtensionValuePresentMaximumIntegrityProtectedDataRateDL int = 0
+	SecurityIndicationExtIEsPresentMaximumIntegrityProtectedDataRateDL int = 0
 )
 
 type SecurityIndicationExtIEsExtensionValue struct {
@@ -5744,7 +5744,7 @@ type SecurityResultExtIEs struct {
 }
 
 const (
-	SecurityResultExtIEsExtensionValuePresentNothing int = 0
+	SecurityResultExtIEsPresentNothing int = 0
 )
 
 type SecurityResultExtIEsExtensionValue struct {
@@ -5776,7 +5776,7 @@ type ServedGUAMIItemExtIEs struct {
 }
 
 const (
-	ServedGUAMIItemExtIEsExtensionValuePresentGUAMIType int = 0
+	ServedGUAMIItemExtIEsPresentGUAMIType int = 0
 )
 
 type ServedGUAMIItemExtIEsExtensionValue struct {
@@ -5806,7 +5806,7 @@ type ServiceAreaInformationItemExtIEs struct {
 }
 
 const (
-	ServiceAreaInformationItemExtIEsExtensionValuePresentNothing int = 0
+	ServiceAreaInformationItemExtIEsPresentNothing int = 0
 )
 
 type ServiceAreaInformationItemExtIEsExtensionValue struct {
@@ -5837,7 +5837,7 @@ type SliceOverloadItemExtIEs struct {
 }
 
 const (
-	SliceOverloadItemExtIEsExtensionValuePresentNothing int = 0
+	SliceOverloadItemExtIEsPresentNothing int = 0
 )
 
 type SliceOverloadItemExtIEsExtensionValue struct {
@@ -5864,7 +5864,7 @@ type SliceSupportItemExtIEs struct {
 }
 
 const (
-	SliceSupportItemExtIEsExtensionValuePresentNothing int = 0
+	SliceSupportItemExtIEsPresentNothing int = 0
 )
 
 type SliceSupportItemExtIEsExtensionValue struct {
@@ -5888,7 +5888,7 @@ type SNSSAIExtIEs struct {
 }
 
 const (
-	SNSSAIExtIEsExtensionValuePresentNothing int = 0
+	SNSSAIExtIEsPresentNothing int = 0
 )
 
 type SNSSAIExtIEsExtensionValue struct {
@@ -5914,7 +5914,7 @@ type SONConfigurationTransferExtIEs struct {
 }
 
 const (
-	SONConfigurationTransferExtIEsExtensionValuePresentNothing int = 0
+	SONConfigurationTransferExtIEsPresentNothing int = 0
 )
 
 type SONConfigurationTransferExtIEsExtensionValue struct {
@@ -5945,7 +5945,7 @@ type SONInformationExtIEs struct {
 }
 
 const (
-	SONInformationExtIEsTypeValuePresentNothing int = 0
+	SONInformationExtIEsPresentNothing int = 0
 )
 
 type SONInformationExtIEsTypeValue struct {
@@ -5968,7 +5968,7 @@ type SONInformationReplyExtIEs struct {
 }
 
 const (
-	SONInformationReplyExtIEsExtensionValuePresentNothing int = 0
+	SONInformationReplyExtIEsPresentNothing int = 0
 )
 
 type SONInformationReplyExtIEsExtensionValue struct {
@@ -6004,7 +6004,7 @@ type SourceNGRANNodeToTargetNGRANNodeTransparentContainerExtIEs struct {
 }
 
 const (
-	SourceNGRANNodeToTargetNGRANNodeTransparentContainerExtIEsExtensionValuePresentSgNBUEX2APID int = 0
+	SourceNGRANNodeToTargetNGRANNodeTransparentContainerExtIEsPresentSgNBUEX2APID int = 0
 )
 
 type SourceNGRANNodeToTargetNGRANNodeTransparentContainerExtIEsExtensionValue struct {
@@ -6038,7 +6038,7 @@ type SourceRANNodeIDExtIEs struct {
 }
 
 const (
-	SourceRANNodeIDExtIEsExtensionValuePresentNothing int = 0
+	SourceRANNodeIDExtIEsPresentNothing int = 0
 )
 
 type SourceRANNodeIDExtIEsExtensionValue struct {
@@ -6067,7 +6067,7 @@ type SourceToTargetAMFInformationRerouteExtIEs struct {
 }
 
 const (
-	SourceToTargetAMFInformationRerouteExtIEsExtensionValuePresentNothing int = 0
+	SourceToTargetAMFInformationRerouteExtIEsPresentNothing int = 0
 )
 
 type SourceToTargetAMFInformationRerouteExtIEsExtensionValue struct {
@@ -6119,7 +6119,7 @@ type SupportedTAItemExtIEs struct {
 }
 
 const (
-	SupportedTAItemExtIEsExtensionValuePresentRATInformation int = 0
+	SupportedTAItemExtIEsPresentRATInformation int = 0
 )
 
 type SupportedTAItemExtIEsExtensionValue struct {
@@ -6148,7 +6148,7 @@ type TAIExtIEs struct {
 }
 
 const (
-	TAIExtIEsExtensionValuePresentNothing int = 0
+	TAIExtIEsPresentNothing int = 0
 )
 
 type TAIExtIEsExtensionValue struct {
@@ -6176,7 +6176,7 @@ type TAIBroadcastEUTRAItemExtIEs struct {
 }
 
 const (
-	TAIBroadcastEUTRAItemExtIEsExtensionValuePresentNothing int = 0
+	TAIBroadcastEUTRAItemExtIEsPresentNothing int = 0
 )
 
 type TAIBroadcastEUTRAItemExtIEsExtensionValue struct {
@@ -6204,7 +6204,7 @@ type TAIBroadcastNRItemExtIEs struct {
 }
 
 const (
-	TAIBroadcastNRItemExtIEsExtensionValuePresentNothing int = 0
+	TAIBroadcastNRItemExtIEsPresentNothing int = 0
 )
 
 type TAIBroadcastNRItemExtIEsExtensionValue struct {
@@ -6232,7 +6232,7 @@ type TAICancelledEUTRAItemExtIEs struct {
 }
 
 const (
-	TAICancelledEUTRAItemExtIEsExtensionValuePresentNothing int = 0
+	TAICancelledEUTRAItemExtIEsPresentNothing int = 0
 )
 
 type TAICancelledEUTRAItemExtIEsExtensionValue struct {
@@ -6260,7 +6260,7 @@ type TAICancelledNRItemExtIEs struct {
 }
 
 const (
-	TAICancelledNRItemExtIEsExtensionValuePresentNothing int = 0
+	TAICancelledNRItemExtIEsPresentNothing int = 0
 )
 
 type TAICancelledNRItemExtIEsExtensionValue struct {
@@ -6287,7 +6287,7 @@ type TAIListForInactiveItemExtIEs struct {
 }
 
 const (
-	TAIListForInactiveItemExtIEsExtensionValuePresentNothing int = 0
+	TAIListForInactiveItemExtIEsPresentNothing int = 0
 )
 
 type TAIListForInactiveItemExtIEsExtensionValue struct {
@@ -6314,7 +6314,7 @@ type TAIListForPagingItemExtIEs struct {
 }
 
 const (
-	TAIListForPagingItemExtIEsExtensionValuePresentNothing int = 0
+	TAIListForPagingItemExtIEsPresentNothing int = 0
 )
 
 type TAIListForPagingItemExtIEsExtensionValue struct {
@@ -6346,7 +6346,7 @@ type TargeteNBIDExtIEs struct {
 }
 
 const (
-	TargeteNBIDExtIEsExtensionValuePresentNothing int = 0
+	TargeteNBIDExtIEsPresentNothing int = 0
 )
 
 type TargeteNBIDExtIEsExtensionValue struct {
@@ -6377,7 +6377,7 @@ type TargetIDExtIEs struct {
 }
 
 const (
-	TargetIDExtIEsTypeValuePresentTargetRNCID int = 0
+	TargetIDExtIEsPresentTargetRNCID int = 0
 )
 
 type TargetIDExtIEsTypeValue struct {
@@ -6401,7 +6401,7 @@ type TargetNGRANNodeToSourceNGRANNodeTransparentContainerExtIEs struct {
 }
 
 const (
-	TargetNGRANNodeToSourceNGRANNodeTransparentContainerExtIEsExtensionValuePresentNothing int = 0
+	TargetNGRANNodeToSourceNGRANNodeTransparentContainerExtIEsPresentNothing int = 0
 )
 
 type TargetNGRANNodeToSourceNGRANNodeTransparentContainerExtIEsExtensionValue struct {
@@ -6425,7 +6425,7 @@ type TargetRANNodeIDExtIEs struct {
 }
 
 const (
-	TargetRANNodeIDExtIEsExtensionValuePresentNothing int = 0
+	TargetRANNodeIDExtIEsPresentNothing int = 0
 )
 
 type TargetRANNodeIDExtIEsExtensionValue struct {
@@ -6450,7 +6450,7 @@ type TargetRNCIDExtIEs struct {
 }
 
 const (
-	TargetRNCIDExtIEsExtensionValuePresentNothing int = 0
+	TargetRNCIDExtIEsPresentNothing int = 0
 )
 
 type TargetRNCIDExtIEsExtensionValue struct {
@@ -6519,7 +6519,7 @@ type TNLAssociationItemExtIEs struct {
 }
 
 const (
-	TNLAssociationItemExtIEsExtensionValuePresentNothing int = 0
+	TNLAssociationItemExtIEsPresentNothing int = 0
 )
 
 type TNLAssociationItemExtIEsExtensionValue struct {
@@ -6555,7 +6555,7 @@ type TraceActivationExtIEs struct {
 }
 
 const (
-	TraceActivationExtIEsExtensionValuePresentNothing int = 0
+	TraceActivationExtIEsPresentNothing int = 0
 )
 
 type TraceActivationExtIEsExtensionValue struct {
@@ -6609,7 +6609,7 @@ type UEAggregateMaximumBitRateExtIEs struct {
 }
 
 const (
-	UEAggregateMaximumBitRateExtIEsExtensionValuePresentNothing int = 0
+	UEAggregateMaximumBitRateExtIEsPresentNothing int = 0
 )
 
 type UEAggregateMaximumBitRateExtIEsExtensionValue struct {
@@ -6637,7 +6637,7 @@ type UEAssociatedLogicalNGConnectionItemExtIEs struct {
 }
 
 const (
-	UEAssociatedLogicalNGConnectionItemExtIEsExtensionValuePresentNothing int = 0
+	UEAssociatedLogicalNGConnectionItemExtIEsPresentNothing int = 0
 )
 
 type UEAssociatedLogicalNGConnectionItemExtIEsExtensionValue struct {
@@ -6678,7 +6678,7 @@ type UEIdentityIndexValueExtIEs struct {
 }
 
 const (
-	UEIdentityIndexValueExtIEsTypeValuePresentNothing int = 0
+	UEIdentityIndexValueExtIEsPresentNothing int = 0
 )
 
 type UEIdentityIndexValueExtIEsTypeValue struct {
@@ -6709,7 +6709,7 @@ type UENGAPIDsExtIEs struct {
 }
 
 const (
-	UENGAPIDsExtIEsTypeValuePresentNothing int = 0
+	UENGAPIDsExtIEsPresentNothing int = 0
 )
 
 type UENGAPIDsExtIEsTypeValue struct {
@@ -6733,7 +6733,7 @@ type UENGAPIDPairExtIEs struct {
 }
 
 const (
-	UENGAPIDPairExtIEsExtensionValuePresentNothing int = 0
+	UENGAPIDPairExtIEsPresentNothing int = 0
 )
 
 type UENGAPIDPairExtIEsExtensionValue struct {
@@ -6762,7 +6762,7 @@ type UEPagingIdentityExtIEs struct {
 }
 
 const (
-	UEPagingIdentityExtIEsTypeValuePresentNothing int = 0
+	UEPagingIdentityExtIEsPresentNothing int = 0
 )
 
 type UEPagingIdentityExtIEsTypeValue struct {
@@ -6800,7 +6800,7 @@ type UEPresenceInAreaOfInterestItemExtIEs struct {
 }
 
 const (
-	UEPresenceInAreaOfInterestItemExtIEsExtensionValuePresentNothing int = 0
+	UEPresenceInAreaOfInterestItemExtIEsPresentNothing int = 0
 )
 
 type UEPresenceInAreaOfInterestItemExtIEsExtensionValue struct {
@@ -6828,7 +6828,7 @@ type UERadioCapabilityForPagingExtIEs struct {
 }
 
 const (
-	UERadioCapabilityForPagingExtIEsExtensionValuePresentNothing int = 0
+	UERadioCapabilityForPagingExtIEsPresentNothing int = 0
 )
 
 type UERadioCapabilityForPagingExtIEsExtensionValue struct {
@@ -6870,7 +6870,7 @@ type UESecurityCapabilitiesExtIEs struct {
 }
 
 const (
-	UESecurityCapabilitiesExtIEsExtensionValuePresentNothing int = 0
+	UESecurityCapabilitiesExtIEsPresentNothing int = 0
 )
 
 type UESecurityCapabilitiesExtIEsExtensionValue struct {
@@ -6898,7 +6898,7 @@ type ULNGUUPTNLModifyItemExtIEs struct {
 }
 
 const (
-	ULNGUUPTNLModifyItemExtIEsExtensionValuePresentNothing int = 0
+	ULNGUUPTNLModifyItemExtIEsPresentNothing int = 0
 )
 
 type ULNGUUPTNLModifyItemExtIEsExtensionValue struct {
@@ -6927,7 +6927,7 @@ type UnavailableGUAMIItemExtIEs struct {
 }
 
 const (
-	UnavailableGUAMIItemExtIEsExtensionValuePresentNothing int = 0
+	UnavailableGUAMIItemExtIEsPresentNothing int = 0
 )
 
 type UnavailableGUAMIItemExtIEsExtensionValue struct {
@@ -6964,7 +6964,7 @@ type UPTransportLayerInformationExtIEs struct {
 }
 
 const (
-	UPTransportLayerInformationExtIEsTypeValuePresentNothing int = 0
+	UPTransportLayerInformationExtIEsPresentNothing int = 0
 )
 
 type UPTransportLayerInformationExtIEsTypeValue struct {
@@ -6991,7 +6991,7 @@ type UPTransportLayerInformationItemExtIEs struct {
 }
 
 const (
-	UPTransportLayerInformationItemExtIEsExtensionValuePresentNothing int = 0
+	UPTransportLayerInformationItemExtIEsPresentNothing int = 0
 )
 
 type UPTransportLayerInformationItemExtIEsExtensionValue struct {
@@ -7019,7 +7019,7 @@ type UPTransportLayerInformationPairItemExtIEs struct {
 }
 
 const (
-	UPTransportLayerInformationPairItemExtIEsExtensionValuePresentNothing int = 0
+	UPTransportLayerInformationPairItemExtIEsPresentNothing int = 0
 )
 
 type UPTransportLayerInformationPairItemExtIEsExtensionValue struct {
@@ -7052,7 +7052,7 @@ type UserLocationInformationExtIEs struct {
 }
 
 const (
-	UserLocationInformationExtIEsTypeValuePresentNothing int = 0
+	UserLocationInformationExtIEsPresentNothing int = 0
 )
 
 type UserLocationInformationExtIEsTypeValue struct {
@@ -7077,7 +7077,7 @@ type UserLocationInformationEUTRAExtIEs struct {
 }
 
 const (
-	UserLocationInformationEUTRAExtIEsExtensionValuePresentPSCellInformation int = 0
+	UserLocationInformationEUTRAExtIEsPresentPSCellInformation int = 0
 )
 
 type UserLocationInformationEUTRAExtIEsExtensionValue struct {
@@ -7102,7 +7102,7 @@ type UserLocationInformationN3IWFExtIEs struct {
 }
 
 const (
-	UserLocationInformationN3IWFExtIEsExtensionValuePresentNothing int = 0
+	UserLocationInformationN3IWFExtIEsPresentNothing int = 0
 )
 
 type UserLocationInformationN3IWFExtIEsExtensionValue struct {
@@ -7127,7 +7127,7 @@ type UserLocationInformationNRExtIEs struct {
 }
 
 const (
-	UserLocationInformationNRExtIEsExtensionValuePresentPSCellInformation int = 0
+	UserLocationInformationNRExtIEsPresentPSCellInformation int = 0
 )
 
 type UserLocationInformationNRExtIEsExtensionValue struct {
@@ -7152,7 +7152,7 @@ type UserPlaneSecurityInformationExtIEs struct {
 }
 
 const (
-	UserPlaneSecurityInformationExtIEsExtensionValuePresentNothing int = 0
+	UserPlaneSecurityInformationExtIEsPresentNothing int = 0
 )
 
 type UserPlaneSecurityInformationExtIEsExtensionValue struct {
@@ -7182,7 +7182,7 @@ type VolumeTimedReportItemExtIEs struct {
 }
 
 const (
-	VolumeTimedReportItemExtIEsExtensionValuePresentNothing int = 0
+	VolumeTimedReportItemExtIEsPresentNothing int = 0
 )
 
 type VolumeTimedReportItemExtIEsExtensionValue struct {
@@ -7221,7 +7221,7 @@ type WarningAreaListExtIEs struct {
 }
 
 const (
-	WarningAreaListExtIEsTypeValuePresentNothing int = 0
+	WarningAreaListExtIEsPresentNothing int = 0
 )
 
 type WarningAreaListExtIEsTypeValue struct {
@@ -7261,7 +7261,7 @@ type XnExtTLAItemExtIEs struct {
 }
 
 const (
-	XnExtTLAItemExtIEsExtensionValuePresentSCTPTLAs int = 0
+	XnExtTLAItemExtIEsPresentSCTPTLAs int = 0
 )
 
 type XnExtTLAItemExtIEsExtensionValue struct {
@@ -7294,7 +7294,7 @@ type XnTNLConfigurationInfoExtIEs struct {
 }
 
 const (
-	XnTNLConfigurationInfoExtIEsExtensionValuePresentNothing int = 0
+	XnTNLConfigurationInfoExtIEsPresentNothing int = 0
 )
 
 type XnTNLConfigurationInfoExtIEsExtensionValue struct {
