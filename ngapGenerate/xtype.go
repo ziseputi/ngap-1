@@ -24,26 +24,30 @@ func NGAPCommonDataTypes() {
 	datas := strings.Split(string(data), "\n")
 	str := "package ngapType\n"
 	for i := 0; i < len(datas); i++ {
-		dataLine := strings.Fields(datas[i])
-		if len(dataLine) > 2 {
-			if dataLine[1] == "::=" && dataLine[2] == "ENUMERATED" {
+		datai := strings.Fields(datas[i])
+		if len(datai) > 1 {
+			if datai[1] == "--" && datai[2] == "**************************************************************" {
+				str += "\n/*\n * " + datai[i+2] + "\n */\n"
+				i += 5
+			} else
+			if datai[1] == "::=" && datai[2] == "ENUMERATED" {
 				strx, out := ENUMERATED(datas, i)
 				str += strx
 				i = out
-			}
-			if dataLine[1] == "::=" && dataLine[2] == "CHOICE" {
+			} else
+			if datai[1] == "::=" && datai[2] == "CHOICE" {
 				strx, out := CHOICE(datas, i)
 				str += strx
 				i = out
-			}
-			if dataLine[1] == "::=" && dataLine[2] == "INTEGER" {
+			} else
+			if datai[1] == "::=" && datai[2] == "INTEGER" {
 				strx, out := INTEGER(datas, i)
 				str += strx
 				i = out
 			}
 		}
 	}
-	filePointer, _ := os.Create("../CommonDataTypes.go")
+	filePointer, _ := os.Create("../../haodhh/CommonDataTypes.go")
 	filePointer.WriteString(str)
 }
 
@@ -120,196 +124,251 @@ func NGAPIEs() {
 func NGAPPDUDescriptions() {
 	data, _ := ioutil.ReadFile("PDUDescriptions.asn")
 	datas := strings.Split(string(data), "\n")
-	str := "package ngapType\n" +
-		"\nconst (\n\tNGAPPDUPresentInitiatingMessage int = 0\n\tNGAPPDUPresentSuccessfulOutcome int = 1\n" +
-		"\tNGAPPDUPresentUnsuccessfulOutcome int = 2\n\t/* Extensions may appear below */\n)\n" +
-		"\ntype NGAPPDU struct {\n\tPresent int\n\tInitiatingMessage *InitiatingMessage\n" +
-		"\tSuccessfulOutcome *SuccessfulOutcome\n\tUnsuccessfulOutcome *UnsuccessfulOutcome\n}\n" +
-		"\ntype InitiatingMessage struct {\n\tProcedureCode ProcedureCode\n\tCriticality Criticality `vht:" +
-		"\"Reference:ProcedureCode\"`\n\tValue InitiatingMessageValue `vht:\"Reference:ProcedureCode\"`\n}\n" +
-		"\ntype SuccessfulOutcome struct {\n\tProcedureCode ProcedureCode\n\tCriticality Criticality `vht:" +
-		"\"Reference:ProcedureCode\"`\n\tValue SuccessfulOutcomeValue `vht:\"Reference:ProcedureCode\"`\n}\n" +
-		"\ntype UnsuccessfulOutcome struct {\n\tProcedureCode ProcedureCode\n\tCriticality Criticality `vht:" +
-		"\"Reference:ProcedureCode\"`\n\tValue UnsuccessfulOutcomeValue `vht:\"Reference:ProcedureCode\"`\n}\n"
-	// INITIATING MESSAGE
-	str += "\nconst (\n"
-	j := 0
-	for i := 300; i < len(datas)-3; i++ {
-		dataLine := strings.Fields(datas[i])
-		if len(dataLine) > 3 {
-			if dataLine[1] == "NGAP-ELEMENTARY-PROCEDURE" && dataLine[2] == "::=" {
-				dataLine1 := strings.Fields(datas[i+1])
-				if dataLine1[0] == "INITIATING" {
-					str += "\tInitiatingMessageValuePresent" + dataLine1[2] + " int = " + strconv.Itoa(j) + "\n"
-					j++
-				}
-			}
-		}
-	}
-	str += ")\n"
-	str += "\ntype InitiatingMessageValue struct {\n\tPresent int\n"
-	for i := 300; i < len(datas)-3; i++ {
-		dataLine := strings.Fields(datas[i])
-		if len(dataLine) > 3 {
-			if dataLine[1] == "NGAP-ELEMENTARY-PROCEDURE" && dataLine[2] == "::=" {
-				dataLine1 := strings.Fields(datas[i+1])
-				var ProcedureCode string
-				var Criticality string
-				if dataLine1[0] == "INITIATING" {
-					dataLine2 := strings.Fields(datas[i+2])
-					if dataLine2[0] == "SUCCESSFUL" {
-						dataLine3 := strings.Fields(datas[i+3])
-						if dataLine3[0] == "UNSUCCESSFUL" {
-							ProcedureCode = GetStrOutOfDash2(strings.Fields(datas[i+4])[2])
-							Criticality = strings.Title(strings.Fields(datas[i+5])[1])
+	str := "package ngapType\n"
+	str1, str2, str3, str4, str5, str6 := "", "", "", "", "", ""
+	for i := 0; i < len(datas); i++ {
+		datai := strings.Fields(datas[i])
+		if len(datai) > 1 {
+			if datai[0] == "--" && datai[1] == "**************************************************************" {
+				str += "\n/*\n * " + datas[i+2] + "\n */\n"
+				i += 5
+			} else
+			if len(datai) == 4 {
+				if datai[1] == "::=" && datai[2] == "CLASS" {
+				} else
+				if datai[1] == "::=" && datai[2] == "CHOICE" {
+					str1 = "\nconst (\n"
+					str2 = "" +
+						"\ntype " + GetStrOutOfDashT1(datai[0]) + " struct {\n" +
+						"\tPresent int\n"
+					x := 1
+					for {
+						datax := strings.Fields(datas[i+x])
+						if len(datax) == 1 {
+							if datax[0] == "..." {
+								str1 += "\t/* Extensions may appear below */\n"
+							}
+							break
 						} else {
-							ProcedureCode = GetStrOutOfDash2(strings.Fields(datas[i+3])[2])
-							Criticality = strings.Title(strings.Fields(datas[i+4])[1])
+							str1 += "\t" + GetStrOutOfDashT1(datai[0]) + "Present" + GetStrOutOfDashT1(datax[0]) + " int = " + strconv.Itoa(x-1) + "\n"
+							str2 += "\t" + GetStrOutOfDashT1(datax[0]) + " *" + GetStrOutOfDashT1(datax[1]) + "\n"
+							x++
 						}
-					} else if dataLine2[0] == "UNSUCCESSFUL" {
-						ProcedureCode = GetStrOutOfDash2(strings.Fields(datas[i+3])[2])
-						Criticality = strings.Title(strings.Fields(datas[i+4])[1])
-					} else {
-						ProcedureCode = GetStrOutOfDash2(strings.Fields(datas[i+2])[2])
-						Criticality = strings.Title(strings.Fields(datas[i+3])[1])
 					}
-					str += "\t" + dataLine1[2] + " *" + dataLine1[2] + " `vht:\"Presence:PresenceOptional," +
-						"Criticality:Criticality" + Criticality + ",ProcedureCode:ProcedureCode" + ProcedureCode + "\"`\n"
-					j++
-				}
-			}
-		}
-	}
-	str += "}\n"
-	// SUCCESSFUL OUTCOME
-	str += "\nconst (\n"
-	j = 0
-	for i := 300; i < len(datas)-3; i++ {
-		dataLine := strings.Fields(datas[i])
-		if len(dataLine) > 3 {
-			if dataLine[1] == "NGAP-ELEMENTARY-PROCEDURE" && dataLine[2] == "::=" {
-				dataLine1 := strings.Fields(datas[i+1])
-				if dataLine1[0] == "SUCCESSFUL" {
-					str += "\tSuccessfulOutcomeValuePresent" + dataLine1[2] + " int = " + strconv.Itoa(j) + "\n"
-					j++
-				} else {
-					dataLine2 := strings.Fields(datas[i+2])
-					if dataLine2[0] == "SUCCESSFUL" {
-						str += "\tSuccessfulOutcomeValuePresent" + dataLine2[2] + " int = " + strconv.Itoa(j) + "\n"
-						j++
-					}
-				}
-			}
-		}
-	}
-	str += ")\n"
-	str += "\ntype SuccessfulOutcomeValue struct {\n\tPresent int\n"
-	for i := 300; i < len(datas)-3; i++ {
-		dataLine := strings.Fields(datas[i])
-		if len(dataLine) > 3 {
-			if dataLine[1] == "NGAP-ELEMENTARY-PROCEDURE" && dataLine[2] == "::=" {
-				dataLine1 := strings.Fields(datas[i+1])
-				var ProcedureCode string
-				var Criticality string
-				if dataLine1[0] == "SUCCESSFUL" {
-					dataLine2 := strings.Fields(datas[i+2])
-					if dataLine2[0] == "UNSUCCESSFUL" {
-						ProcedureCode = GetStrOutOfDash2(strings.Fields(datas[i+3])[2])
-						Criticality = strings.Title(strings.Fields(datas[i+4])[1])
-					} else {
-						ProcedureCode = GetStrOutOfDash2(strings.Fields(datas[i+2])[2])
-						Criticality = strings.Title(strings.Fields(datas[i+3])[1])
-					}
-					str += "\t" + dataLine1[2] + " *" + dataLine1[2] + " `vht:\"Presence:PresenceOptional," +
-						"Criticality:Criticality" + Criticality + ",ProcedureCode:ProcedureCode" + ProcedureCode + "\"`\n"
-					j++
-				} else {
-					dataLine2 := strings.Fields(datas[i+2])
-					if dataLine2[0] == "SUCCESSFUL" {
-						dataLine3 := strings.Fields(datas[i+3])
-						if dataLine3[0] == "UNSUCCESSFUL" {
-							ProcedureCode = GetStrOutOfDash2(strings.Fields(datas[i+4])[2])
-							Criticality = strings.Title(strings.Fields(datas[i+5])[1])
+					str1 += ")\n"
+					str2 += "}\n"
+					str += str1 + str2
+				} else
+				if datai[1] == "::=" && datai[2] == "SEQUENCE" {
+					str += "type "+ GetStrOutOfDashT1(datai[0]) +" struct {\n"
+					x:=1
+					for {
+						datax := strings.Fields(datas[i+x])
+						if len(datax) == 1 {
+							break
 						} else {
-							ProcedureCode = GetStrOutOfDash2(strings.Fields(datas[i+3])[2])
-							Criticality = strings.Title(strings.Fields(datas[i+4])[1])
+							str += ""
+							x++
 						}
-						str += "\t" + dataLine2[2] + " *" + dataLine2[2] + " `vht:\"Presence:PresenceOptional," +
-							"Criticality:Criticality" + Criticality + ",ProcedureCode:ProcedureCode" + ProcedureCode + "\"`\n"
-						j++
 					}
-				}
-			}
-		}
-	}
-	str += "}\n"
-	// UNSUCCESSFUL OUTCOME
-	str += "\nconst (\n"
-	j = 0
-	for i := 300; i < len(datas)-3; i++ {
-		dataLine := strings.Fields(datas[i])
-		if len(dataLine) > 3 {
-			if dataLine[1] == "NGAP-ELEMENTARY-PROCEDURE" && dataLine[2] == "::=" {
-				dataLine1 := strings.Fields(datas[i+1])
-				if dataLine1[0] == "UNSUCCESSFUL" {
-					str += "\tUnsuccessfulOutcomeValuePresent" + dataLine1[2] + " int = " + strconv.Itoa(j) + "\n"
-					j++
-				} else {
-					dataLine2 := strings.Fields(datas[i+2])
-					if dataLine2[0] == "UNSUCCESSFUL" {
-						str += "\tUnsuccessfulOutcomeValuePresent" + dataLine2[2] + " int = " + strconv.Itoa(j) + "\n"
-						j++
+					str += "}\n"
+				} else
+				if datai[2] == "::=" && datai[1] == "NGAP-ELEMENTARY-PROCEDURE" {
+					str1, str2, str3, str4, str5, str6 = "", "", "", "", "", ""
+					if datai[0] == "NGAP-ELEMENTARY-PROCEDURES" {
+
 					} else {
-						dataLine3 := strings.Fields(datas[i+3])
-						if dataLine3[0] == "UNSUCCESSFUL" {
-							str += "\tUnsuccessfulOutcomeValuePresent" + dataLine3[2] + " int = " + strconv.Itoa(j) + "\n"
-							j++
-						}
+						str += str1 + str2 + str3 + str4 + str5 + str6
 					}
 				}
 			}
 		}
 	}
-	str += ")\n"
-	str += "\ntype UnsuccessfulOutcomeValue struct {\n\tPresent int\n"
-	for i := 300; i < len(datas)-3; i++ {
-		dataLine := strings.Fields(datas[i])
-		if len(dataLine) > 3 {
-			if dataLine[1] == "NGAP-ELEMENTARY-PROCEDURE" && dataLine[2] == "::=" {
-				dataLine1 := strings.Fields(datas[i+1])
-				var ProcedureCode string
-				var Criticality string
-				if dataLine1[0] == "UNSUCCESSFUL" {
-					ProcedureCode = GetStrOutOfDash2(strings.Fields(datas[i+2])[2])
-					Criticality = strings.Title(strings.Fields(datas[i+3])[1])
-					str += "\t" + dataLine1[2] + " *" + dataLine1[2] + " `vht:\"Presence:PresenceOptional," +
-						"Criticality:Criticality" + Criticality + ",ProcedureCode:ProcedureCode" + ProcedureCode + "\"`\n"
-					j++
-				} else {
-					dataLine2 := strings.Fields(datas[i+2])
-					if dataLine2[0] == "UNSUCCESSFUL" {
-						ProcedureCode = GetStrOutOfDash2(strings.Fields(datas[i+3])[2])
-						Criticality = strings.Title(strings.Fields(datas[i+4])[1])
-						str += "\t" + dataLine2[2] + " *" + dataLine2[2] + " `vht:\"Presence:PresenceOptional," +
-							"Criticality:Criticality" + Criticality + ",ProcedureCode:ProcedureCode" + ProcedureCode + "\"`\n"
-						j++
-					} else {
-						dataLine3 := strings.Fields(datas[i+3])
-						if dataLine3[0] == "UNSUCCESSFUL" {
-							ProcedureCode = GetStrOutOfDash2(strings.Fields(datas[i+4])[2])
-							Criticality = strings.Title(strings.Fields(datas[i+5])[1])
-							str += "\t" + dataLine3[2] + " *" + dataLine3[2] + " `vht:\"Presence:PresenceOptional," +
-								"Criticality:Criticality" + Criticality + ",ProcedureCode:ProcedureCode" + ProcedureCode + "\"`\n"
-							j++
-						}
-					}
-				}
-			}
-		}
-	}
-	str += "}\n"
-	filePointer, _ := os.Create("../ngapType/PDUDescriptions.go")
+
+	// // INITIATING MESSAGE
+	// str += "\nconst (\n"
+	// j := 0
+	// for i := 300; i < len(datas)-3; i++ {
+	// 	dataLine := strings.Fields(datas[i])
+	// 	if len(dataLine) > 3 {
+	// 		if dataLine[1] == "NGAP-ELEMENTARY-PROCEDURE" && dataLine[2] == "::=" {
+	// 			dataLine1 := strings.Fields(datas[i+1])
+	// 			if dataLine1[0] == "INITIATING" {
+	// 				str += "\tInitiatingMessageValuePresent" + dataLine1[2] + " int = " + strconv.Itoa(j) + "\n"
+	// 				j++
+	// 			}
+	// 		}
+	// 	}
+	// }
+	// str += ")\n"
+	// str += "\ntype InitiatingMessageValue struct {\n\tPresent int\n"
+	// for i := 300; i < len(datas)-3; i++ {
+	// 	dataLine := strings.Fields(datas[i])
+	// 	if len(dataLine) > 3 {
+	// 		if dataLine[1] == "NGAP-ELEMENTARY-PROCEDURE" && dataLine[2] == "::=" {
+	// 			dataLine1 := strings.Fields(datas[i+1])
+	// 			var ProcedureCode string
+	// 			var Criticality string
+	// 			if dataLine1[0] == "INITIATING" {
+	// 				dataLine2 := strings.Fields(datas[i+2])
+	// 				if dataLine2[0] == "SUCCESSFUL" {
+	// 					dataLine3 := strings.Fields(datas[i+3])
+	// 					if dataLine3[0] == "UNSUCCESSFUL" {
+	// 						ProcedureCode = GetStrOutOfDash2(strings.Fields(datas[i+4])[2])
+	// 						Criticality = strings.Title(strings.Fields(datas[i+5])[1])
+	// 					} else {
+	// 						ProcedureCode = GetStrOutOfDash2(strings.Fields(datas[i+3])[2])
+	// 						Criticality = strings.Title(strings.Fields(datas[i+4])[1])
+	// 					}
+	// 				} else if dataLine2[0] == "UNSUCCESSFUL" {
+	// 					ProcedureCode = GetStrOutOfDash2(strings.Fields(datas[i+3])[2])
+	// 					Criticality = strings.Title(strings.Fields(datas[i+4])[1])
+	// 				} else {
+	// 					ProcedureCode = GetStrOutOfDash2(strings.Fields(datas[i+2])[2])
+	// 					Criticality = strings.Title(strings.Fields(datas[i+3])[1])
+	// 				}
+	// 				str += "\t" + dataLine1[2] + " *" + dataLine1[2] + " `vht:\"Presence:PresenceOptional," +
+	// 					"Criticality:Criticality" + Criticality + ",ProcedureCode:ProcedureCode" + ProcedureCode + "\"`\n"
+	// 				j++
+	// 			}
+	// 		}
+	// 	}
+	// }
+	// str += "}\n"
+	// // SUCCESSFUL OUTCOME
+	// str += "\nconst (\n"
+	// j = 0
+	// for i := 300; i < len(datas)-3; i++ {
+	// 	dataLine := strings.Fields(datas[i])
+	// 	if len(dataLine) > 3 {
+	// 		if dataLine[1] == "NGAP-ELEMENTARY-PROCEDURE" && dataLine[2] == "::=" {
+	// 			dataLine1 := strings.Fields(datas[i+1])
+	// 			if dataLine1[0] == "SUCCESSFUL" {
+	// 				str += "\tSuccessfulOutcomeValuePresent" + dataLine1[2] + " int = " + strconv.Itoa(j) + "\n"
+	// 				j++
+	// 			} else {
+	// 				dataLine2 := strings.Fields(datas[i+2])
+	// 				if dataLine2[0] == "SUCCESSFUL" {
+	// 					str += "\tSuccessfulOutcomeValuePresent" + dataLine2[2] + " int = " + strconv.Itoa(j) + "\n"
+	// 					j++
+	// 				}
+	// 			}
+	// 		}
+	// 	}
+	// }
+	// str += ")\n"
+	// str += "\ntype SuccessfulOutcomeValue struct {\n\tPresent int\n"
+	// for i := 300; i < len(datas)-3; i++ {
+	// 	dataLine := strings.Fields(datas[i])
+	// 	if len(dataLine) > 3 {
+	// 		if dataLine[1] == "NGAP-ELEMENTARY-PROCEDURE" && dataLine[2] == "::=" {
+	// 			dataLine1 := strings.Fields(datas[i+1])
+	// 			var ProcedureCode string
+	// 			var Criticality string
+	// 			if dataLine1[0] == "SUCCESSFUL" {
+	// 				dataLine2 := strings.Fields(datas[i+2])
+	// 				if dataLine2[0] == "UNSUCCESSFUL" {
+	// 					ProcedureCode = GetStrOutOfDash2(strings.Fields(datas[i+3])[2])
+	// 					Criticality = strings.Title(strings.Fields(datas[i+4])[1])
+	// 				} else {
+	// 					ProcedureCode = GetStrOutOfDash2(strings.Fields(datas[i+2])[2])
+	// 					Criticality = strings.Title(strings.Fields(datas[i+3])[1])
+	// 				}
+	// 				str += "\t" + dataLine1[2] + " *" + dataLine1[2] + " `vht:\"Presence:PresenceOptional," +
+	// 					"Criticality:Criticality" + Criticality + ",ProcedureCode:ProcedureCode" + ProcedureCode + "\"`\n"
+	// 				j++
+	// 			} else {
+	// 				dataLine2 := strings.Fields(datas[i+2])
+	// 				if dataLine2[0] == "SUCCESSFUL" {
+	// 					dataLine3 := strings.Fields(datas[i+3])
+	// 					if dataLine3[0] == "UNSUCCESSFUL" {
+	// 						ProcedureCode = GetStrOutOfDash2(strings.Fields(datas[i+4])[2])
+	// 						Criticality = strings.Title(strings.Fields(datas[i+5])[1])
+	// 					} else {
+	// 						ProcedureCode = GetStrOutOfDash2(strings.Fields(datas[i+3])[2])
+	// 						Criticality = strings.Title(strings.Fields(datas[i+4])[1])
+	// 					}
+	// 					str += "\t" + dataLine2[2] + " *" + dataLine2[2] + " `vht:\"Presence:PresenceOptional," +
+	// 						"Criticality:Criticality" + Criticality + ",ProcedureCode:ProcedureCode" + ProcedureCode + "\"`\n"
+	// 					j++
+	// 				}
+	// 			}
+	// 		}
+	// 	}
+	// }
+	// str += "}\n"
+	// // UNSUCCESSFUL OUTCOME
+	// str += "\nconst (\n"
+	// j = 0
+	// for i := 300; i < len(datas)-3; i++ {
+	// 	dataLine := strings.Fields(datas[i])
+	// 	if len(dataLine) > 3 {
+	// 		if dataLine[1] == "NGAP-ELEMENTARY-PROCEDURE" && dataLine[2] == "::=" {
+	// 			dataLine1 := strings.Fields(datas[i+1])
+	// 			if dataLine1[0] == "UNSUCCESSFUL" {
+	// 				str += "\tUnsuccessfulOutcomeValuePresent" + dataLine1[2] + " int = " + strconv.Itoa(j) + "\n"
+	// 				j++
+	// 			} else {
+	// 				dataLine2 := strings.Fields(datas[i+2])
+	// 				if dataLine2[0] == "UNSUCCESSFUL" {
+	// 					str += "\tUnsuccessfulOutcomeValuePresent" + dataLine2[2] + " int = " + strconv.Itoa(j) + "\n"
+	// 					j++
+	// 				} else {
+	// 					dataLine3 := strings.Fields(datas[i+3])
+	// 					if dataLine3[0] == "UNSUCCESSFUL" {
+	// 						str += "\tUnsuccessfulOutcomeValuePresent" + dataLine3[2] + " int = " + strconv.Itoa(j) + "\n"
+	// 						j++
+	// 					}
+	// 				}
+	// 			}
+	// 		}
+	// 	}
+	// }
+	// str += ")\n"
+	// str += "\ntype UnsuccessfulOutcomeValue struct {\n\tPresent int\n"
+	// for i := 300; i < len(datas)-3; i++ {
+	// 	dataLine := strings.Fields(datas[i])
+	// 	if len(dataLine) > 3 {
+	// 		if dataLine[1] == "NGAP-ELEMENTARY-PROCEDURE" && dataLine[2] == "::=" {
+	// 			dataLine1 := strings.Fields(datas[i+1])
+	// 			var ProcedureCode string
+	// 			var Criticality string
+	// 			if dataLine1[0] == "UNSUCCESSFUL" {
+	// 				ProcedureCode = GetStrOutOfDash2(strings.Fields(datas[i+2])[2])
+	// 				Criticality = strings.Title(strings.Fields(datas[i+3])[1])
+	// 				str += "\t" + dataLine1[2] + " *" + dataLine1[2] + " `vht:\"Presence:PresenceOptional," +
+	// 					"Criticality:Criticality" + Criticality + ",ProcedureCode:ProcedureCode" + ProcedureCode + "\"`\n"
+	// 				j++
+	// 			} else {
+	// 				dataLine2 := strings.Fields(datas[i+2])
+	// 				if dataLine2[0] == "UNSUCCESSFUL" {
+	// 					ProcedureCode = GetStrOutOfDash2(strings.Fields(datas[i+3])[2])
+	// 					Criticality = strings.Title(strings.Fields(datas[i+4])[1])
+	// 					str += "\t" + dataLine2[2] + " *" + dataLine2[2] + " `vht:\"Presence:PresenceOptional," +
+	// 						"Criticality:Criticality" + Criticality + ",ProcedureCode:ProcedureCode" + ProcedureCode + "\"`\n"
+	// 					j++
+	// 				} else {
+	// 					dataLine3 := strings.Fields(datas[i+3])
+	// 					if dataLine3[0] == "UNSUCCESSFUL" {
+	// 						ProcedureCode = GetStrOutOfDash2(strings.Fields(datas[i+4])[2])
+	// 						Criticality = strings.Title(strings.Fields(datas[i+5])[1])
+	// 						str += "\t" + dataLine3[2] + " *" + dataLine3[2] + " `vht:\"Presence:PresenceOptional," +
+	// 							"Criticality:Criticality" + Criticality + ",ProcedureCode:ProcedureCode" + ProcedureCode + "\"`\n"
+	// 						j++
+	// 					}
+	// 				}
+	// 			}
+	// 		}
+	// 	}
+	// }
+	// str += "}\n"
+	filePointer, _ := os.Create("../../haodhh/PDUDescriptions.go")
 	filePointer.WriteString(str)
+}
+
+func TypeChoice(datas []string, in int) (str string, out int) {
+	// datai := strings.Fields(datas[in])
+	return
 }
 
 func NGAPPDUContents() {
@@ -425,7 +484,7 @@ func ENUMERATED(datas []string, in int) (str string, out int) {
 		}
 		str += ")\n"
 		str += "\ntype " + GetStrOutOfDash(datax[0]) + " struct {\n"
-		str += "\tValue Enumerated `vht:\""+ext+"valueMin:0,valueMax:" + strconv.Itoa(x-1) + "\"`\n"
+		str += "\tValue Enumerated `vht:\"" + ext + "valueMin:0,valueMax:" + strconv.Itoa(x-1) + "\"`\n"
 		str += "}\n"
 		return str, in + x
 	} else {
@@ -443,7 +502,7 @@ func ENUMERATED(datas []string, in int) (str string, out int) {
 		}
 		str += ")\n"
 		str += "\ntype " + GetStrOutOfDash(datax[0]) + " struct {\n"
-		str += "\tValue Enumerated `vht:\""+ext+"valueMin:0,valueMax:" + strconv.Itoa(x-1) + "\"`\n"
+		str += "\tValue Enumerated `vht:\"" + ext + "valueMin:0,valueMax:" + strconv.Itoa(x-1) + "\"`\n"
 		str += "}\n"
 		return str, in
 	}
@@ -623,9 +682,9 @@ func CHOICE(datas []string, in int) (str string, out int) {
 				fmt.Println(dataxx)
 			}
 		} else if len(dataxx) == 2 {
-			str += "\t" + GetStrOutOfDash(dataxx[0]) + " *" + GetStrOutOfDash(strings.Split(dataxx[1],",")[0]) + "\n"
+			str += "\t" + GetStrOutOfDash(dataxx[0]) + " *" + GetStrOutOfDash(strings.Split(dataxx[1], ",")[0]) + "\n"
 		} else if len(dataxx) == 5 {
-			str += "\t" + GetStrOutOfDash(dataxx[0]) + " *" + GetStrOutOfDash(dataxx[1]) + GetStrOutOfDash(strings.Split(strings.Split(dataxx[3],"}")[0],"{")[1]) + "\n"
+			str += "\t" + GetStrOutOfDash(dataxx[0]) + " *" + GetStrOutOfDash(dataxx[1]) + GetStrOutOfDash(strings.Split(strings.Split(dataxx[3], "}")[0], "{")[1]) + "\n"
 		} else {
 			fmt.Println(dataxx)
 		}
@@ -677,8 +736,8 @@ func SEQUENCE(datas []string, in int) (str string, out int) {
 				} else if dataxx[1] == "OBJECT" && dataxx[2] == "IDENTIFIER," {
 					str += "\t" + GetStrOutOfDash(dataxx[0]) + " ObjectIdentifier\n"
 				} else if dataxx[1] == "INTEGER" {
-					min, max := strings.Split(strings.Split(dataxx[2], "..")[0],"(")[1], strings.Split(strings.Split(dataxx[2], "..")[1],")")[0]
-					str += "\t" + GetStrOutOfDash(dataxx[0]) + " Integer `vht:\"valueMin:"+min+",valueMax:"+max+"\"`\n"
+					min, max := strings.Split(strings.Split(dataxx[2], "..")[0], "(")[1], strings.Split(strings.Split(dataxx[2], "..")[1], ")")[0]
+					str += "\t" + GetStrOutOfDash(dataxx[0]) + " Integer `vht:\"valueMin:" + min + ",valueMax:" + max + "\"`\n"
 				} else {
 					fmt.Println(in+1+x, "-", dataxx)
 				}
@@ -686,17 +745,17 @@ func SEQUENCE(datas []string, in int) (str string, out int) {
 			} else if len(dataxx) == 4 {
 				if dataxx[1] == "INTEGER" {
 					if dataxx[3] == "OPTIONAL," {
-						min, max := strings.Split(strings.Split(dataxx[2], "..")[0],"(")[1], strings.Split(strings.Split(dataxx[2], "..")[1],")")[0]
-						str += "\t" + GetStrOutOfDash(dataxx[0]) + " *Integer `vht:\"valueMin:"+min+",valueMax:"+max+"\"`\n"
+						min, max := strings.Split(strings.Split(dataxx[2], "..")[0], "(")[1], strings.Split(strings.Split(dataxx[2], "..")[1], ")")[0]
+						str += "\t" + GetStrOutOfDash(dataxx[0]) + " *Integer `vht:\"valueMin:" + min + ",valueMax:" + max + "\"`\n"
 					} else if dataxx[3] == "...)," {
-						min, max := strings.Split(strings.Split(dataxx[2], "..")[0],"(")[1], strings.Split(strings.Split(dataxx[2], "..")[1],",")[0]
-						str += "\t" + GetStrOutOfDash(dataxx[0]) + " Integer `vht:\"valueExt,valueMin:"+min+",valueMax:"+max+"\"`\n"
+						min, max := strings.Split(strings.Split(dataxx[2], "..")[0], "(")[1], strings.Split(strings.Split(dataxx[2], "..")[1], ",")[0]
+						str += "\t" + GetStrOutOfDash(dataxx[0]) + " Integer `vht:\"valueExt,valueMin:" + min + ",valueMax:" + max + "\"`\n"
 					} else {
 						fmt.Println(in+1+x, "-", dataxx)
 					}
 				} else if dataxx[1] == "OCTET" && dataxx[2] == "STRING" {
-					mimax := strings.Split(strings.Split(dataxx[3], "(")[2],")")[0]
-					str += "\t" + GetStrOutOfDash(dataxx[0]) + " OctetString `vht:\"sizeMin:"+mimax+",sizeMax:"+mimax+"\"`\n"
+					mimax := strings.Split(strings.Split(dataxx[3], "(")[2], ")")[0]
+					str += "\t" + GetStrOutOfDash(dataxx[0]) + " OctetString `vht:\"sizeMin:" + mimax + ",sizeMax:" + mimax + "\"`\n"
 				} else {
 					fmt.Println(in+1+x, "-", dataxx)
 				}
@@ -704,30 +763,30 @@ func SEQUENCE(datas []string, in int) (str string, out int) {
 			} else if len(dataxx) == 5 {
 				if dataxx[1] == "BIT" && dataxx[2] == "STRING" {
 					if dataxx[4] == "OPTIONAL," {
-						min, max := strings.Split(strings.Split(dataxx[3], "..")[0],"(")[2], strings.Split(strings.Split(dataxx[3], "..")[1],")")[0]
-						str += "\t" + GetStrOutOfDash(dataxx[0]) + " *BitString `vht:\"valueMin:"+min+",valueMax:"+max+"\"`\n"
+						min, max := strings.Split(strings.Split(dataxx[3], "..")[0], "(")[2], strings.Split(strings.Split(dataxx[3], "..")[1], ")")[0]
+						str += "\t" + GetStrOutOfDash(dataxx[0]) + " *BitString `vht:\"valueMin:" + min + ",valueMax:" + max + "\"`\n"
 					} else if dataxx[4] == "...))," {
-						mimax := strings.Split(strings.Split(dataxx[3], "(")[2],",")[0]
-						str += "\t" + GetStrOutOfDash(dataxx[0]) + " BitString `vht:\"valueExt,valueMin:"+mimax+",valueMax:"+mimax+"\"`\n"
+						mimax := strings.Split(strings.Split(dataxx[3], "(")[2], ",")[0]
+						str += "\t" + GetStrOutOfDash(dataxx[0]) + " BitString `vht:\"valueExt,valueMin:" + mimax + ",valueMax:" + mimax + "\"`\n"
 					} else {
 						fmt.Println(in+1+x, "-", dataxx)
 					}
 				} else if dataxx[1] == "OCTET" && dataxx[2] == "STRING" {
 					if dataxx[4] == "OPTIONAL," {
-						min, max := strings.Split(strings.Split(dataxx[3], "..")[0],"(")[2], strings.Split(strings.Split(dataxx[3], "..")[1],")")[0]
-						str += "\t" + GetStrOutOfDash(dataxx[0]) + " *OctetString `vht:\"valueMin:"+min+",valueMax:"+max+"\"`\n"
+						min, max := strings.Split(strings.Split(dataxx[3], "..")[0], "(")[2], strings.Split(strings.Split(dataxx[3], "..")[1], ")")[0]
+						str += "\t" + GetStrOutOfDash(dataxx[0]) + " *OctetString `vht:\"valueMin:" + min + ",valueMax:" + max + "\"`\n"
 					} else if dataxx[4] == "...))," {
-						mimax := strings.Split(strings.Split(dataxx[3], "(")[2],",")[0]
-						str += "\t" + GetStrOutOfDash(dataxx[0]) + " OctetString `vht:\"valueExt,valueMin:"+mimax+",valueMax:"+mimax+"\"`\n"
+						mimax := strings.Split(strings.Split(dataxx[3], "(")[2], ",")[0]
+						str += "\t" + GetStrOutOfDash(dataxx[0]) + " OctetString `vht:\"valueExt,valueMin:" + mimax + ",valueMax:" + mimax + "\"`\n"
 					} else if dataxx[3] == "(CONTAINING" {
-						str += "\t" + GetStrOutOfDash(dataxx[0]) + " OctetString `vht:\"Reference:"+GetStrOutOfDash(strings.Split(dataxx[4],")")[0])+"\"`\n"
+						str += "\t" + GetStrOutOfDash(dataxx[0]) + " OctetString `vht:\"Reference:" + GetStrOutOfDash(strings.Split(dataxx[4], ")")[0]) + "\"`\n"
 					} else {
 						fmt.Println(in+1+x, "-", dataxx)
 					}
 				} else if dataxx[0] == "protocolIEs" && dataxx[1] == "ProtocolIE-Container" {
-					str += "\tProtocolIEs ProtocolIEContainer"+GetStrOutOfDash(strings.Split(strings.Split(dataxx[3],"{")[1], "}")[0])+"\n"
+					str += "\tProtocolIEs ProtocolIEContainer" + GetStrOutOfDash(strings.Split(strings.Split(dataxx[3], "{")[1], "}")[0]) + "\n"
 				} else if dataxx[0] == "privateIEs" && dataxx[1] == "PrivateIE-Container" {
-					str += "\tPrivateIEs PrivateIEContainer"+GetStrOutOfDash(strings.Split(strings.Split(dataxx[3],"{")[1], "}")[0])+"\n"
+					str += "\tPrivateIEs PrivateIEContainer" + GetStrOutOfDash(strings.Split(strings.Split(dataxx[3], "{")[1], "}")[0]) + "\n"
 				} else {
 					fmt.Println(in+1+x, "-", dataxx)
 				}
@@ -741,17 +800,17 @@ func SEQUENCE(datas []string, in int) (str string, out int) {
 				x++
 			} else if dataxx[1] == "ENUMERATED" {
 				if dataxx[len(dataxx)-1] == "OPTIONAL," {
-					str += "\t" + GetStrOutOfDash(dataxx[0]) + " *Enumerated `vht:\"valueExt,valueMin:0,valueMax:"+strconv.Itoa(len(dataxx)-6)+"\"`\n"
+					str += "\t" + GetStrOutOfDash(dataxx[0]) + " *Enumerated `vht:\"valueExt,valueMin:0,valueMax:" + strconv.Itoa(len(dataxx)-6) + "\"`\n"
 					strExt += "\nconst (\n"
-					for xl := 3; xl<len(dataxx)-3; xl++ {
-						strExt += "\t"+GetStrOutOfDash(dataxx[0]) + GetStrOutOfDash(strings.Split(dataxx[xl],",")[0]) + " Enumerated = " + strconv.Itoa(xl-3) + "\n"
+					for xl := 3; xl < len(dataxx)-3; xl++ {
+						strExt += "\t" + GetStrOutOfDash(dataxx[0]) + GetStrOutOfDash(strings.Split(dataxx[xl], ",")[0]) + " Enumerated = " + strconv.Itoa(xl-3) + "\n"
 					}
 					strExt += ")\n"
 				} else {
-					str += "\t" + GetStrOutOfDash(dataxx[0]) + " Enumerated `vht:\"valueExt,valueMin:0,valueMax:"+strconv.Itoa(len(dataxx)-5)+"\"`\n"
+					str += "\t" + GetStrOutOfDash(dataxx[0]) + " Enumerated `vht:\"valueExt,valueMin:0,valueMax:" + strconv.Itoa(len(dataxx)-5) + "\"`\n"
 					strExt += "\nconst (\n"
-					for xl := 3; xl<len(dataxx)-2; xl++ {
-						strExt += "\t"+GetStrOutOfDash(dataxx[0]) + GetStrOutOfDash(strings.Split(dataxx[xl],",")[0]) + " Enumerated = " + strconv.Itoa(xl-3) + "\n"
+					for xl := 3; xl < len(dataxx)-2; xl++ {
+						strExt += "\t" + GetStrOutOfDash(dataxx[0]) + GetStrOutOfDash(strings.Split(dataxx[xl], ",")[0]) + " Enumerated = " + strconv.Itoa(xl-3) + "\n"
 					}
 					strExt += ")\n"
 				}
@@ -765,7 +824,7 @@ func SEQUENCE(datas []string, in int) (str string, out int) {
 	} else {
 		fmt.Println(datax)
 	}
-	return str, in+x
+	return str, in + x
 }
 
 func NGAPPROTOCOLEXTENSION(datas []string, in int) (str string, out int) {
@@ -817,9 +876,9 @@ func NGAPPROTOCOLEXTENSION(datas []string, in int) (str string, out int) {
 			} else if len(dataxx) == 10 {
 				str += "\t" + GetStrOutOfDash2(dataxx[2]) + " *" + GetStrOutOfDash(dataxx[6]) + " `vht:\"Presence:Presence" + strings.Title(dataxx[8]) + ",Criticality:Criticality" + strings.Title(dataxx[4]) + ",ProtocolExtensionID:ProtocolExtensionID" + GetStrOutOfDash2(dataxx[2]) + "\"`\n"
 				x++
-			}  else if len(dataxx) == 13 {
+			} else if len(dataxx) == 13 {
 				if dataxx[6] == "OCTET" && dataxx[7] == "STRING" {
-					str += "\t" + GetStrOutOfDash2(dataxx[2]) + " *OctetString `vht:\"Presence:Presence" + strings.Title(dataxx[11]) + ",Criticality:Criticality" + strings.Title(dataxx[4]) + ",ProtocolExtensionID:ProtocolExtensionID" + GetStrOutOfDash2(dataxx[2]) + ",Reference:" + GetStrOutOfDash(strings.Split(dataxx[9],")")[0]) +"\"`\n"
+					str += "\t" + GetStrOutOfDash2(dataxx[2]) + " *OctetString `vht:\"Presence:Presence" + strings.Title(dataxx[11]) + ",Criticality:Criticality" + strings.Title(dataxx[4]) + ",ProtocolExtensionID:ProtocolExtensionID" + GetStrOutOfDash2(dataxx[2]) + ",Reference:" + GetStrOutOfDash(strings.Split(dataxx[9], ")")[0]) + "\"`\n"
 				} else {
 					fmt.Println(in+1+x, "-", dataxx)
 				}
@@ -833,7 +892,7 @@ func NGAPPROTOCOLEXTENSION(datas []string, in int) (str string, out int) {
 	} else {
 		fmt.Println(in, "-", datax)
 	}
-	return str, in+x
+	return str, in + x
 }
 
 func NGAPPROTOCOLIES(datas []string, in int) (str string, out int) {
@@ -891,7 +950,7 @@ func NGAPPROTOCOLIES(datas []string, in int) (str string, out int) {
 	} else {
 		fmt.Println(datax)
 	}
-	return str, in+x
+	return str, in + x
 }
 
 func NGAPPROTOCOLIES2(datas []string, in int) (str string, out int) {
@@ -965,7 +1024,7 @@ func NGAPPROTOCOLIES2(datas []string, in int) (str string, out int) {
 	} else {
 		fmt.Println(datax)
 	}
-	return str, in+x
+	return str, in + x
 }
 
 func NGAPPRIVATEIES(datas []string, in int) (str string, out int) {
@@ -1023,7 +1082,7 @@ func NGAPPRIVATEIES(datas []string, in int) (str string, out int) {
 	} else {
 		fmt.Println(datax)
 	}
-	return str, in+x
+	return str, in + x
 }
 
 func NGAPELEMENTARYPROCEDURE(datas []string, in int) (str string, out int) {
@@ -1052,4 +1111,59 @@ func GetStrOutOfDash2(str string) (newStr string) {
 		newStr += strs[i]
 	}
 	return
+}
+
+func GetStrOutOfDashT1(str string) (newStr string) {
+	str = strings.Split(str, ",")[0]
+	strs := strings.Split(strings.Title(str), "-")
+	for i := 0; i < len(strs); i++ {
+		newStr += strs[i]
+	}
+	return
+}
+
+func GetStrOutOfDashT2(str string) (newStr string) {
+	str = strings.Split(str, ",")[0]
+	strs := strings.Split(strings.Title(str), "-")
+	for i := 1; i < len(strs); i++ {
+		newStr += strs[i]
+	}
+	return
+}
+
+func GetStrOutOfDashT3(str string) (newStr string) {
+	str = strings.Split(str, "&")[1]
+	strs := strings.Split(strings.Title(str), "-")
+	for i := 0; i < len(strs); i++ {
+		newStr += strs[i]
+	}
+	return
+}
+
+func GetStrOutOfDashT4(str string) (newStr string) {
+	str = strings.Split(str, "&")[1]
+	strs := strings.Split(strings.Title(str), "-")
+	for i := 1; i < len(strs); i++ {
+		newStr += strs[i]
+	}
+	return
+}
+
+func GetStrOutOfDashT(str string, option int) (newStr string) {
+	switch option {
+	case 0:
+		strs := strings.Split(strings.Title(str), "-")
+		for i := 0; i < len(strs); i++ {
+			newStr += strs[i]
+		}
+		return
+	case 1:
+		strs := strings.Split(strings.Title(str), "-")
+		for i := 1; i < len(strs); i++ {
+			newStr += strs[i]
+		}
+		return
+	default:
+		return
+	}
 }
